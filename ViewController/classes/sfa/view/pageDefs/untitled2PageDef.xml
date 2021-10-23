@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.22.48" id="untitled2PageDef"
+                Package="sfa.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="CustomeraccountView1" RangeSize="25" DataControl="AppModuleDataControl"
+              id="CustomeraccountView1Iterator"/>
+    <searchRegion Binds="CustomeraccountView1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="CustomeraccountView1Query"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="CustomeraccountView1Iterator" id="CustomeraccountView1">
+      <nodeDefinition DefName="sfa.model.viewobjects.CustomeraccountView" Name="CustomeraccountView10">
+        <AttrNames>
+          <Item Value="Customeraccountid"/>
+          <Item Value="Type"/>
+          <Item Value="Name"/>
+          <Item Value="Accounturl"/>
+          <Item Value="Ceo"/>
+          <Item Value="Numberofemployees"/>
+          <Item Value="Email"/>
+          <Item Value="Mobilenumber"/>
+        </AttrNames>
+        <Accessors>
+          <Item Value="AddressView"/>
+        </Accessors>
+      </nodeDefinition>
+      <nodeDefinition DefName="sfa.model.viewobjects.AddressView">
+        <AttrNames>
+          <Item Value="Addressid"/>
+          <Item Value="City"/>
+          <Item Value="State"/>
+          <Item Value="Country"/>
+          <Item Value="Accountid"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

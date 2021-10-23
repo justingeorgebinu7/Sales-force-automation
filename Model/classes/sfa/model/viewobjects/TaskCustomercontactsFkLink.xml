@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewLink SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewLink
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="TaskCustomercontactsFkLink"
+  Version="12.2.1.22.48"
+  InheritPersonalization="merge"
+  EntityAssociation="sfa.model.entities.TaskCustomercontactsFkAssoc">
+  <ViewLinkDefEnd
+    Name="CustomercontactsView"
+    Cardinality="1"
+    Source="true"
+    Owner="sfa.model.viewobjects.CustomercontactsView">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="CustomercontactsView"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="sfa.model.viewobjects.CustomercontactsView.Contactid"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ViewLinkDefEnd
+    Name="TaskView"
+    Cardinality="-1"
+    Owner="sfa.model.viewobjects.TaskView">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="TaskView"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="sfa.model.viewobjects.TaskView.Contactid"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+</ViewLink>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="Products"
+  Version="12.2.1.22.48"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="PRODUCTS"
+  AliasName="Products"
+  BindingStyle="OracleName">
+  <Attribute
+    Name="Productid"
+    IsNotNull="true"
+    ColumnName="PRODUCTID"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="PRODUCTS"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="Name"
+    Precision="20"
+    ColumnName="NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="PRODUCTS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Description"
+    Precision="100"
+    ColumnName="DESCRIPTION"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="PRODUCTS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Price"
+    ColumnName="PRICE"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="PRODUCTS"/>
+  <Attribute
+    Name="Category"
+    Precision="20"
+    ColumnName="CATEGORY"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="PRODUCTS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Revenueitem"
+    IsUnique="true"
+    ColumnName="REVENUEITEM"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="PRODUCTS"/>
+  <AccessorAttribute
+    Name="Revenueitem1"
+    Association="sfa.model.entities.ProductsRevenueitemFkAssoc"
+    AssociationEnd="sfa.model.entities.ProductsRevenueitemFkAssoc.Revenueitem1"
+    AssociationOtherEnd="sfa.model.entities.ProductsRevenueitemFkAssoc.Products"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <Key
+    Name="ProductsPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="PRODUCTS_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="sfa.model.entities.Products.Productid"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="ProductsUn">
+    <DesignTime>
+      <Attr Name="_isUnique" Value="true"/>
+      <Attr Name="_DBObjectName" Value="PRODUCTS__UN"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="sfa.model.entities.Products.Revenueitem"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="ProductsRevenueitemFk">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="REVENUEITEM_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="PRODUCTS_REVENUEITEM_FK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="sfa.model.entities.Products.Revenueitem"/>
+    </AttrArray>
+  </Key>
+</Entity>

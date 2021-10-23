@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewLink SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewLink
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="ProductsRevenueitemFkLink"
+  Version="12.2.1.22.48"
+  InheritPersonalization="merge"
+  EntityAssociation="sfa.model.entities.ProductsRevenueitemFkAssoc">
+  <ViewLinkDefEnd
+    Name="RevenueitemView"
+    Cardinality="1"
+    Source="true"
+    Owner="sfa.model.viewobjects.RevenueitemView">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="RevenueitemView"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="sfa.model.viewobjects.RevenueitemView.Revenueitemid"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ViewLinkDefEnd
+    Name="ProductsView"
+    Cardinality="1"
+    Owner="sfa.model.viewobjects.ProductsView">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="ProductsView"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="sfa.model.viewobjects.ProductsView.Revenueitem"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+</ViewLink>
