@@ -69,6 +69,8 @@
       <string v="oracle.toplink.workbench.addin/toplinkContentSet"/>
    </list>
    <value n="defaultPackage" v="sfa.view"/>
+   <value n="jbo.JpxName" v="META-INF.sfa.model.Model"/>
+   <value n="JboProject" v="true"/>
    <hash n="oracle.ide.model.DependencyConfiguration">
       <list n="dependencyList">
          <hash>
@@ -83,6 +85,7 @@
    <hash n="oracle.ide.model.TechnologyScopeConfiguration">
       <list n="technologyScope">
          <string v="ADF_FACES"/>
+         <string v="ADFbc"/>
          <string v="ADFc"/>
          <string v="JSF"/>
          <string v="JSP"/>

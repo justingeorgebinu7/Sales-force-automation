@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewLink SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewLink
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="RevenueitemOpportunityFkLink"
+  Version="12.2.1.22.48"
+  InheritPersonalization="merge"
+  EntityAssociation="sfa.model.entities.RevenueitemOpportunityFkAssoc">
+  <ViewLinkDefEnd
+    Name="OpportunityView"
+    Cardinality="1"
+    Source="true"
+    Owner="sfa.model.viewobjects.OpportunityView">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="OpportunityView"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="sfa.model.viewobjects.OpportunityView.Opportunityid"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ViewLinkDefEnd
+    Name="RevenueitemView"
+    Cardinality="-1"
+    Owner="sfa.model.viewobjects.RevenueitemView">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="RevenueitemView"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="sfa.model.viewobjects.RevenueitemView.Opportunityid"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+</ViewLink>

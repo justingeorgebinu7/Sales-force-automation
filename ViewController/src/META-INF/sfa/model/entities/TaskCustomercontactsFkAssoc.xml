@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Association SYSTEM "jbo_03_01.dtd">
+<!---->
+<Association
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="TaskCustomercontactsFkAssoc"
+  Version="12.2.1.22.48"
+  InheritPersonalization="merge">
+  <DesignTime>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <AssociationEnd
+    Name="Customercontacts"
+    Cardinality="1"
+    Source="true"
+    Owner="sfa.model.entities.Customercontacts">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="Customercontacts"/>
+      <Attr Name="_foreignKey" Value="sfa.model.entities.Customercontacts.CustomercontactsPk"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="sfa.model.entities.Customercontacts.Contactid"/>
+    </AttrArray>
+  </AssociationEnd>
+  <AssociationEnd
+    Name="Task"
+    Cardinality="-1"
+    Owner="sfa.model.entities.Task">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="Task"/>
+      <Attr Name="_foreignKey" Value="sfa.model.entities.Task.TaskCustomercontactsFk"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="sfa.model.entities.Task.Contactid"/>
+    </AttrArray>
+  </AssociationEnd>
+</Association>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="Opportunity"
+  Version="12.2.1.22.48"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="OPPORTUNITY"
+  AliasName="Opportunity"
+  BindingStyle="OracleName">
+  <Attribute
+    Name="Opportunityid"
+    IsNotNull="true"
+    ColumnName="OPPORTUNITYID"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="OPPORTUNITY"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="Accountid"
+    IsNotNull="true"
+    ColumnName="ACCOUNTID"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="OPPORTUNITY"/>
+  <Attribute
+    Name="Description"
+    Precision="100"
+    ColumnName="DESCRIPTION"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="OPPORTUNITY">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Winprobability"
+    ColumnName="WINPROBABILITY"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="OPPORTUNITY"/>
+  <Attribute
+    Name="Closedate"
+    ColumnName="CLOSEDATE"
+    SQLType="DATE"
+    Type="java.sql.Timestamp"
+    ColumnType="DATE"
+    TableName="OPPORTUNITY"/>
+  <Attribute
+    Name="Primarycontact"
+    IsNotNull="true"
+    ColumnName="PRIMARYCONTACT"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="OPPORTUNITY"/>
+  <Attribute
+    Name="Salesstage"
+    Precision="25"
+    ColumnName="SALESSTAGE"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="OPPORTUNITY">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="25"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Salesmethod"
+    Precision="20"
+    ColumnName="SALESMETHOD"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="OPPORTUNITY">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Bestcaserevenue"
+    ColumnName="BESTCASEREVENUE"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="OPPORTUNITY"/>
+  <Attribute
+    Name="Worstcaserevenue"
+    ColumnName="WORSTCASEREVENUE"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="OPPORTUNITY"/>
+  <Attribute
+    Name="Budgetavailable"
+    ColumnName="BUDGETAVAILABLE"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="OPPORTUNITY"/>
+  <Attribute
+    Name="Risklevel"
+    Precision="10"
+    ColumnName="RISKLEVEL"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="OPPORTUNITY">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="10"/>
+    </DesignTime>
+  </Attribute>
+  <AccessorAttribute
+    Name="Note"
+    Association="sfa.model.entities.NoteOpportunityFkAssoc"
+    AssociationEnd="sfa.model.entities.NoteOpportunityFkAssoc.Note"
+    AssociationOtherEnd="sfa.model.entities.NoteOpportunityFkAssoc.Opportunity1"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="Customeraccount"
+    Association="sfa.model.entities.OpportunityAccountFkAssoc"
+    AssociationEnd="sfa.model.entities.OpportunityAccountFkAssoc.Customeraccount"
+    AssociationOtherEnd="sfa.model.entities.OpportunityAccountFkAssoc.Opportunity"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="Customercontacts"
+    Association="sfa.model.entities.OpportunityContactFkAssoc"
+    AssociationEnd="sfa.model.entities.OpportunityContactFkAssoc.Customercontacts"
+    AssociationOtherEnd="sfa.model.entities.OpportunityContactFkAssoc.Opportunity"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="Revenueitem"
+    Association="sfa.model.entities.RevenueitemOpportunityFkAssoc"
+    AssociationEnd="sfa.model.entities.RevenueitemOpportunityFkAssoc.Revenueitem"
+    AssociationOtherEnd="sfa.model.entities.RevenueitemOpportunityFkAssoc.Opportunity"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="Task"
+    Association="sfa.model.entities.Opportunityid1Assoc"
+    AssociationEnd="sfa.model.entities.Opportunityid1Assoc.Task"
+    AssociationOtherEnd="sfa.model.entities.Opportunityid1Assoc.Opportunity"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <Key
+    Name="OpportunityPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="OPPORTUNITY_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="sfa.model.entities.Opportunity.Opportunityid"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="OpportunityAccountFk">
+    <DesignTime>
+      <Attr Name="_isCascadeDelete" Value="true"/>
+      <Attr Name="_referencedKey" Value="CUSTOMERACCOUNT_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="OPPORTUNITY_ACCOUNT_FK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="sfa.model.entities.Opportunity.Accountid"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="OpportunityContactFk">
+    <DesignTime>
+      <Attr Name="_isCascadeDelete" Value="true"/>
+      <Attr Name="_referencedKey" Value="CUSTOMERCONTACTS_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="OPPORTUNITY_CONTACT_FK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="sfa.model.entities.Opportunity.Primarycontact"/>
+    </AttrArray>
+  </Key>
+</Entity>

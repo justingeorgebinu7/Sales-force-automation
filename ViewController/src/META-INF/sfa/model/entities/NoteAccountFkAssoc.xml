@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Association SYSTEM "jbo_03_01.dtd">
+<!---->
+<Association
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="NoteAccountFkAssoc"
+  Version="12.2.1.22.48"
+  InheritPersonalization="merge">
+  <DesignTime>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <AssociationEnd
+    Name="Customeraccount"
+    Cardinality="1"
+    Source="true"
+    Owner="sfa.model.entities.Customeraccount">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="Customeraccount"/>
+      <Attr Name="_foreignKey" Value="sfa.model.entities.Customeraccount.CustomeraccountPk"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="sfa.model.entities.Customeraccount.Customeraccountid"/>
+    </AttrArray>
+  </AssociationEnd>
+  <AssociationEnd
+    Name="Note"
+    Cardinality="-1"
+    Owner="sfa.model.entities.Note">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="Note"/>
+      <Attr Name="_foreignKey" Value="sfa.model.entities.Note.NoteAccountFk"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="sfa.model.entities.Note.Accountid"/>
+    </AttrArray>
+  </AssociationEnd>
+</Association>
