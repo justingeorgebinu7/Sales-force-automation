@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.22.48" id="untitled1PageDef"
+                Package="sfa.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="CustomeraccountView1" RangeSize="25" DataControl="AppModuleDataControl"
+              id="CustomeraccountView1Iterator"/>
+    <searchRegion Binds="CustomeraccountView1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="CustomeraccountView11Query"/>
+    <iterator Binds="CustomercontactsView2" RangeSize="25" DataControl="AppModuleDataControl"
+              id="CustomercontactsView2Iterator"/>
+    <searchRegion Binds="CustomercontactsView2Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="CustomercontactsView2Query"/>
+    <iterator Binds="TaskView3" RangeSize="25" DataControl="AppModuleDataControl" id="TaskView3Iterator"/>
+    <searchRegion Binds="TaskView3Iterator" Criteria="" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  id="TaskView3Query"/>
+    <iterator Binds="NoteView2" RangeSize="25" DataControl="AppModuleDataControl" id="NoteView2Iterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="CustomeraccountView1Iterator" id="CustomeraccountView11">
+      <nodeDefinition DefName="sfa.model.viewobjects.CustomeraccountView" Name="CustomeraccountView110">
+        <AttrNames>
+          <Item Value="Customeraccountid"/>
+          <Item Value="Type"/>
+          <Item Value="Name"/>
+          <Item Value="Accounturl"/>
+          <Item Value="Ceo"/>
+          <Item Value="Numberofemployees"/>
+          <Item Value="Email"/>
+          <Item Value="Mobilenumber"/>
+        </AttrNames>
+        <Accessors>
+          <Item Value="AddressView"/>
+        </Accessors>
+      </nodeDefinition>
+      <nodeDefinition DefName="sfa.model.viewobjects.AddressView">
+        <AttrNames>
+          <Item Value="Addressid"/>
+          <Item Value="City"/>
+          <Item Value="State"/>
+          <Item Value="Country"/>
+          <Item Value="Accountid"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="CustomeraccountView1Iterator" id="CustomeraccountView1">
+      <nodeDefinition DefName="sfa.model.viewobjects.CustomeraccountView" Name="CustomeraccountView10">
+        <AttrNames>
+          <Item Value="Customeraccountid"/>
+          <Item Value="Name"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="CustomercontactsView2Iterator" id="CustomercontactsView2">
+      <nodeDefinition DefName="sfa.model.viewobjects.CustomercontactsView" Name="CustomercontactsView20">
+        <AttrNames>
+          <Item Value="Name"/>
+          <Item Value="Title"/>
+          <Item Value="Department"/>
+          <Item Value="Workphone"/>
+          <Item Value="Email"/>
+          <Item Value="Buyingrole"/>
+          <Item Value="Influencelevel"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="TaskView3Iterator" id="TaskView3">
+      <nodeDefinition DefName="sfa.model.viewobjects.TaskView" Name="TaskView30">
+        <AttrNames>
+          <Item Value="Name"/>
+          <Item Value="Duedate"/>
+          <Item Value="Priority"/>
+          <Item Value="Description"/>
+          <Item Value="Percentageofcompletion"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <attributeValues IterBinding="NoteView2Iterator" id="Content">
+      <AttrNames>
+        <Item Value="Content"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="NoteView2Iterator" id="Datetime">
+      <AttrNames>
+        <Item Value="Datetime"/>
+      </AttrNames>
+    </attributeValues>
+    <action IterBinding="NoteView2Iterator" id="First" RequiresUpdateModel="true" Action="first"/>
+    <action IterBinding="NoteView2Iterator" id="Previous" RequiresUpdateModel="true" Action="previous"/>
+    <action IterBinding="NoteView2Iterator" id="Next" RequiresUpdateModel="true" Action="next"/>
+    <action IterBinding="NoteView2Iterator" id="Last" RequiresUpdateModel="true" Action="last"/>
+  </bindings>
+</pageDefinition>

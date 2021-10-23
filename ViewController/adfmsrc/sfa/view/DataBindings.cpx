@@ -3,9 +3,15 @@
              SeparateXMLFiles="false" Package="sfa.view" ClientType="Generic">
   <pageMap>
     <page path="/untitled2.jsf" usageId="sfa_view_untitled2PageDef"/>
+    <page path="/trialTemplate.jsf" usageId="sfa_view_trialTemplatePageDef"/>
+    <page path="/pagefromtemplate.jsf" usageId="sfa_view_pagefromtemplatePageDef"/>
+    <page path="/untitled1.jsf" usageId="sfa_view_untitled1PageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="sfa_view_untitled2PageDef" path="sfa.view.pageDefs.untitled2PageDef"/>
+    <page id="sfa_view_trialTemplatePageDef" path="sfa.view.pageDefs.trialTemplatePageDef"/>
+    <page id="sfa_view_pagefromtemplatePageDef" path="sfa.view.pageDefs.pagefromtemplatePageDef"/>
+    <page id="sfa_view_untitled1PageDef" path="sfa.view.pageDefs.untitled1PageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="sfa.model.entities"
