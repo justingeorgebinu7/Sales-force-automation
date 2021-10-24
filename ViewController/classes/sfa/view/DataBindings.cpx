@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Application xmlns="http://xmlns.oracle.com/adfm/application" version="12.2.1.22.48" id="DataBindings"
              SeparateXMLFiles="false" Package="sfa.view" ClientType="Generic">
+  <definitionFactories>
+    <factory nameSpace="http://xmlns.oracle.com/adf/controller/binding"
+             className="oracle.adf.controller.internal.binding.TaskFlowBindingDefFactoryImpl"/>
+    <dtfactory className="oracle.adf.controller.internal.dtrt.binding.BindingDTObjectFactory"/>
+  </definitionFactories>
   <pageMap>
     <page path="/untitled2.jsf" usageId="sfa_view_untitled2PageDef"/>
     <page path="/trialTemplate.jsf" usageId="sfa_view_trialTemplatePageDef"/>
@@ -9,6 +14,7 @@
     <page path="/AddContact.jsff" usageId="sfa_view_AddContactPageDef"/>
     <page path="/EditContact.jsff" usageId="sfa_view_EditContactPageDef"/>
     <page path="/SearchContact.jsff" usageId="sfa_view_SearchContactPageDef"/>
+    <page path="/AccountContact.jsff" usageId="sfa_view_AccountContactPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="sfa_view_untitled2PageDef" path="sfa.view.pageDefs.untitled2PageDef"/>
@@ -18,6 +24,7 @@
     <page id="sfa_view_AddContactPageDef" path="sfa.view.pageDefs.AddContactPageDef"/>
     <page id="sfa_view_EditContactPageDef" path="sfa.view.pageDefs.EditContactPageDef"/>
     <page id="sfa_view_SearchContactPageDef" path="sfa.view.pageDefs.SearchContactPageDef"/>
+    <page id="sfa_view_AccountContactPageDef" path="sfa.view.pageDefs.AccountContactPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="sfa.model.entities"

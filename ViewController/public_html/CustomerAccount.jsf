@@ -132,7 +132,9 @@
                         <af:panelBox text="PanelBox3" id="pb3" inlineStyle="margin-right:10px;">
                             <f:facet name="toolbar"/>
                             <af:panelTabbed position="start" id="pt1" verticalTabMode="iconAndText">
-                                <af:showDetailItem id="Create" text="Contacts"/>
+                                <af:showDetailItem id="Create" text="Contacts">
+                                    <af:region value="#{bindings.Account_ContactTF1.regionModel}" id="r1"/>
+                                </af:showDetailItem>
                                 <af:showDetailItem id="View" text="Notes" disclosed="true">
                                     <af:panelFormLayout id="pfl1">
                                         <af:inputText value="#{bindings.Content.inputValue}"
