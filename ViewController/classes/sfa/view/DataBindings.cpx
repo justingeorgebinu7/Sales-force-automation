@@ -5,7 +5,7 @@
     <page path="/untitled2.jsf" usageId="sfa_view_untitled2PageDef"/>
     <page path="/trialTemplate.jsf" usageId="sfa_view_trialTemplatePageDef"/>
     <page path="/pagefromtemplate.jsf" usageId="sfa_view_pagefromtemplatePageDef"/>
-    <page path="/untitled1.jsf" usageId="sfa_view_untitled1PageDef"/>
+    <page path="/CustomerAccount.jsf" usageId="sfa_view_untitled1PageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="sfa_view_untitled2PageDef" path="sfa.view.pageDefs.untitled2PageDef"/>

@@ -12,163 +12,118 @@
                 </af:gridRow>
                 <af:gridRow marginTop="5px" height="auto" id="gr2">
                     <af:gridCell marginStart="5px" width="40%" id="gc3" inlineStyle="width:inherit;">
-                        <af:panelBox text="PanelBox4" id="pb1" showDisclosure="false">
-                            <f:facet name="toolbar"/>
-                            <af:listView value="#{bindings.CustomeraccountView1.collectionModel}" var="item"
-                                         emptyText="#{bindings.CustomeraccountView1.viewable ? 'No data to display.' : 'Access Denied.'}"
-                                         fetchSize="#{bindings.CustomeraccountView1.rangeSize}" id="lv1"
-                                         selection="single"
-                                         selectionListener="#{bindings.CustomeraccountView1.treeModel.makeCurrent}">
-                                <af:listItem id="li1">
-                                    <af:panelGridLayout id="pgl2">
-                                        <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr4">
-                                            <af:gridCell marginStart="5px" width="20%" id="gc6">
-                                                <af:outputFormatted value="#{item.bindings.Customeraccountid.inputValue}"
-                                                                    id="of1">
-                                                    <af:convertNumber groupingUsed="false"
-                                                                      pattern="#{bindings.CustomeraccountView1.hints.Customeraccountid.format}"/>
-                                                </af:outputFormatted>
-                                            </af:gridCell>
-                                            <af:gridCell marginStart="5px" width="80%" marginEnd="5px" id="gc7">
-                                                <af:outputFormatted value="#{item.bindings.Name.inputValue}" id="of2"/>
-                                            </af:gridCell>
-                                        </af:gridRow>
-                                    </af:panelGridLayout>
-                                </af:listItem>
-                            </af:listView>
-                        </af:panelBox>
+                        <af:panelStretchLayout id="psl1" dimensionsFrom="parent">
+                            <f:facet name="start"/>
+                            <f:facet name="end"/>
+                            <f:facet name="top"/>
+                            <f:facet name="bottom"/>
+                            <f:facet name="center">
+                                <af:panelBox text="PanelBox4" id="pb1" showDisclosure="false">
+                                    <f:facet name="toolbar"/>
+                                    <af:listView value="#{bindings.CustomeraccountView1.collectionModel}" var="item"
+                                                 emptyText="#{bindings.CustomeraccountView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                                 fetchSize="#{bindings.CustomeraccountView1.rangeSize}" id="lv1"
+                                                 selection="single"
+                                                 selectionListener="#{bindings.CustomeraccountView1.treeModel.makeCurrent}">
+                                        <af:listItem id="li1">
+                                            <af:panelGridLayout id="pgl2">
+                                                <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr4">
+                                                    <af:gridCell marginStart="5px" width="20%" id="gc6">
+                                                        <af:outputFormatted value="#{item.bindings.Customeraccountid.inputValue}"
+                                                                            id="of1">
+                                                            <af:convertNumber groupingUsed="false"
+                                                                              pattern="#{bindings.CustomeraccountView1.hints.Customeraccountid.format}"/>
+                                                        </af:outputFormatted>
+                                                    </af:gridCell>
+                                                    <af:gridCell marginStart="5px" width="80%" marginEnd="5px" id="gc7">
+                                                        <af:outputFormatted value="#{item.bindings.Name.inputValue}"
+                                                                            id="of2"/>
+                                                    </af:gridCell>
+                                                </af:gridRow>
+                                            </af:panelGridLayout>
+                                        </af:listItem>
+                                    </af:listView>
+                                </af:panelBox>
+                            </f:facet>
+                        </af:panelStretchLayout>
                     </af:gridCell>
                     <af:gridCell marginStart="5px" width="40%" marginEnd="5px" id="gc4">
-                        <af:panelBox text="Accounts" id="pb2">
-                            <f:facet name="toolbar"/>
-                            <af:table value="#{bindings.CustomeraccountView11.collectionModel}" var="row"
-                                      rows="#{bindings.CustomeraccountView11.rangeSize}"
-                                      emptyText="#{bindings.CustomeraccountView11.viewable ? 'No data to display.' : 'Access Denied.'}"
-                                      rowBandingInterval="0"
-                                      selectedRowKeys="#{bindings.CustomeraccountView11.collectionModel.selectedRow}"
-                                      selectionListener="#{bindings.CustomeraccountView11.collectionModel.makeCurrent}"
-                                      rowSelection="single" fetchSize="#{bindings.CustomeraccountView11.rangeSize}"
-                                      filterModel="#{bindings.CustomeraccountView11Query.queryDescriptor}"
-                                      filterVisible="true"
-                                      queryListener="#{bindings.CustomeraccountView11Query.processQuery}" varStatus="vs"
-                                      id="t1">
-                                <af:column sortProperty="#{bindings.CustomeraccountView11.hints.Customeraccountid.name}"
-                                           filterable="true" sortable="true"
-                                           headerText="#{bindings.CustomeraccountView11.hints.Customeraccountid.label}"
-                                           id="c1">
-                                    <af:outputText value="#{row.Customeraccountid}"
-                                                   shortDesc="#{bindings.CustomeraccountView11.hints.Customeraccountid.tooltip}"
-                                                   id="ot1">
-                                        <af:convertNumber groupingUsed="false"
-                                                          pattern="#{bindings.CustomeraccountView11.hints.Customeraccountid.format}"/>
-                                    </af:outputText>
-                                </af:column>
-                                <af:column sortProperty="#{bindings.CustomeraccountView11.hints.Type.name}"
-                                           filterable="true" sortable="true"
-                                           headerText="#{bindings.CustomeraccountView11.hints.Type.label}" id="c2">
-                                    <af:outputText value="#{row.Type}"
-                                                   shortDesc="#{bindings.CustomeraccountView11.hints.Type.tooltip}"
-                                                   id="ot2"/>
-                                </af:column>
-                                <af:column sortProperty="#{bindings.CustomeraccountView11.hints.Name.name}"
-                                           filterable="true" sortable="true"
-                                           headerText="#{bindings.CustomeraccountView11.hints.Name.label}" id="c3">
-                                    <af:outputText value="#{row.Name}"
-                                                   shortDesc="#{bindings.CustomeraccountView11.hints.Name.tooltip}"
-                                                   id="ot3"/>
-                                </af:column>
-                                <af:column sortProperty="#{bindings.CustomeraccountView11.hints.Accounturl.name}"
-                                           filterable="true" sortable="true"
-                                           headerText="#{bindings.CustomeraccountView11.hints.Accounturl.label}"
-                                           id="c4">
-                                    <af:outputText value="#{row.Accounturl}"
-                                                   shortDesc="#{bindings.CustomeraccountView11.hints.Accounturl.tooltip}"
-                                                   id="ot4"/>
-                                </af:column>
-                                <af:column sortProperty="#{bindings.CustomeraccountView11.hints.Ceo.name}"
-                                           filterable="true" sortable="true"
-                                           headerText="#{bindings.CustomeraccountView11.hints.Ceo.label}" id="c5">
-                                    <af:outputText value="#{row.Ceo}"
-                                                   shortDesc="#{bindings.CustomeraccountView11.hints.Ceo.tooltip}"
-                                                   id="ot5"/>
-                                </af:column>
-                                <af:column sortProperty="#{bindings.CustomeraccountView11.hints.Numberofemployees.name}"
-                                           filterable="true" sortable="true"
-                                           headerText="#{bindings.CustomeraccountView11.hints.Numberofemployees.label}"
-                                           id="c6">
-                                    <af:outputText value="#{row.Numberofemployees}"
-                                                   shortDesc="#{bindings.CustomeraccountView11.hints.Numberofemployees.tooltip}"
-                                                   id="ot6">
-                                        <af:convertNumber groupingUsed="false"
-                                                          pattern="#{bindings.CustomeraccountView11.hints.Numberofemployees.format}"/>
-                                    </af:outputText>
-                                </af:column>
-                                <af:column sortProperty="#{bindings.CustomeraccountView11.hints.Email.name}"
-                                           filterable="true" sortable="true"
-                                           headerText="#{bindings.CustomeraccountView11.hints.Email.label}" id="c7">
-                                    <af:outputText value="#{row.Email}"
-                                                   shortDesc="#{bindings.CustomeraccountView11.hints.Email.tooltip}"
-                                                   id="ot7"/>
-                                </af:column>
-                                <af:column sortProperty="#{bindings.CustomeraccountView11.hints.Mobilenumber.name}"
-                                           filterable="true" sortable="true"
-                                           headerText="#{bindings.CustomeraccountView11.hints.Mobilenumber.label}"
-                                           id="c8">
-                                    <af:outputText value="#{row.Mobilenumber}"
-                                                   shortDesc="#{bindings.CustomeraccountView11.hints.Mobilenumber.tooltip}"
-                                                   id="ot8">
-                                        <af:convertNumber groupingUsed="false"
-                                                          pattern="#{bindings.CustomeraccountView11.hints.Mobilenumber.format}"/>
-                                    </af:outputText>
-                                </af:column>
-                                <af:column sortProperty="#{bindings.CustomeraccountView11.hints.AddressView.Addressid.name}"
-                                           filterable="true" sortable="true"
-                                           headerText="#{bindings.CustomeraccountView11.hints.AddressView.Addressid.label}"
-                                           id="c9">
-                                    <af:outputText value="#{row.AddressView.bindings.Addressid.inputValue}"
-                                                   shortDesc="#{bindings.CustomeraccountView11.hints.AddressView.Addressid.tooltip}"
-                                                   rendered="#{row.AddressView != null}" id="ot9">
-                                        <af:convertNumber groupingUsed="false"
-                                                          pattern="#{bindings.CustomeraccountView11.hints.AddressView.Addressid.format}"/>
-                                    </af:outputText>
-                                </af:column>
-                                <af:column sortProperty="#{bindings.CustomeraccountView11.hints.AddressView.City.name}"
-                                           filterable="true" sortable="true"
-                                           headerText="#{bindings.CustomeraccountView11.hints.AddressView.City.label}"
-                                           id="c10">
-                                    <af:outputText value="#{row.AddressView.bindings.City.inputValue}"
-                                                   shortDesc="#{bindings.CustomeraccountView11.hints.AddressView.City.tooltip}"
-                                                   rendered="#{row.AddressView != null}" id="ot10"/>
-                                </af:column>
-                                <af:column sortProperty="#{bindings.CustomeraccountView11.hints.AddressView.State.name}"
-                                           filterable="true" sortable="true"
-                                           headerText="#{bindings.CustomeraccountView11.hints.AddressView.State.label}"
-                                           id="c11">
-                                    <af:outputText value="#{row.AddressView.bindings.State.inputValue}"
-                                                   shortDesc="#{bindings.CustomeraccountView11.hints.AddressView.State.tooltip}"
-                                                   rendered="#{row.AddressView != null}" id="ot11"/>
-                                </af:column>
-                                <af:column sortProperty="#{bindings.CustomeraccountView11.hints.AddressView.Country.name}"
-                                           filterable="true" sortable="true"
-                                           headerText="#{bindings.CustomeraccountView11.hints.AddressView.Country.label}"
-                                           id="c12">
-                                    <af:outputText value="#{row.AddressView.bindings.Country.inputValue}"
-                                                   shortDesc="#{bindings.CustomeraccountView11.hints.AddressView.Country.tooltip}"
-                                                   rendered="#{row.AddressView != null}" id="ot12"/>
-                                </af:column>
-                                <af:column sortProperty="#{bindings.CustomeraccountView11.hints.AddressView.Accountid.name}"
-                                           filterable="true" sortable="true"
-                                           headerText="#{bindings.CustomeraccountView11.hints.AddressView.Accountid.label}"
-                                           id="c13">
-                                    <af:outputText value="#{row.AddressView.bindings.Accountid.inputValue}"
-                                                   shortDesc="#{bindings.CustomeraccountView11.hints.AddressView.Accountid.tooltip}"
-                                                   rendered="#{row.AddressView != null}" id="ot13">
-                                        <af:convertNumber groupingUsed="false"
-                                                          pattern="#{bindings.CustomeraccountView11.hints.AddressView.Accountid.format}"/>
-                                    </af:outputText>
-                                </af:column>
-                            </af:table>
-                        </af:panelBox>
+                        <af:panelStretchLayout id="psl2" dimensionsFrom="parent">
+                            <f:facet name="start"/>
+                            <f:facet name="end"/>
+                            <f:facet name="top"/>
+                            <f:facet name="bottom"/>
+                            <f:facet name="center">
+                                <af:panelBox text="Manage Accounts" id="pb2">
+                                    <f:facet name="toolbar"/>
+                                    <af:panelFormLayout id="pfl2">
+                                        <af:inputText value="#{bindings.Customeraccountid.inputValue}"
+                                                      label="#{bindings.Customeraccountid.hints.label}"
+                                                      required="#{bindings.Customeraccountid.hints.mandatory}"
+                                                      columns="#{bindings.Customeraccountid.hints.displayWidth}"
+                                                      maximumLength="#{bindings.Customeraccountid.hints.precision}"
+                                                      shortDesc="#{bindings.Customeraccountid.hints.tooltip}" id="it2">
+                                            <f:validator binding="#{bindings.Customeraccountid.validator}"/>
+                                            <af:convertNumber groupingUsed="false"
+                                                              pattern="#{bindings.Customeraccountid.format}"/>
+                                        </af:inputText>
+                                        <af:inputText value="#{bindings.Type.inputValue}"
+                                                      label="#{bindings.Type.hints.label}"
+                                                      required="#{bindings.Type.hints.mandatory}"
+                                                      columns="#{bindings.Type.hints.displayWidth}"
+                                                      maximumLength="#{bindings.Type.hints.precision}"
+                                                      shortDesc="#{bindings.Type.hints.tooltip}" id="it3">
+                                            <f:validator binding="#{bindings.Type.validator}"/>
+                                        </af:inputText>
+                                        <af:inputText value="#{bindings.Name.inputValue}"
+                                                      label="#{bindings.Name.hints.label}"
+                                                      required="#{bindings.Name.hints.mandatory}"
+                                                      columns="#{bindings.Name.hints.displayWidth}"
+                                                      maximumLength="#{bindings.Name.hints.precision}"
+                                                      shortDesc="#{bindings.Name.hints.tooltip}" id="it4">
+                                            <f:validator binding="#{bindings.Name.validator}"/>
+                                        </af:inputText>
+                                        <af:inputText value="#{bindings.Accounturl.inputValue}"
+                                                      label="#{bindings.Accounturl.hints.label}"
+                                                      required="#{bindings.Accounturl.hints.mandatory}"
+                                                      columns="#{bindings.Accounturl.hints.displayWidth}"
+                                                      maximumLength="#{bindings.Accounturl.hints.precision}"
+                                                      shortDesc="#{bindings.Accounturl.hints.tooltip}" id="it5">
+                                            <f:validator binding="#{bindings.Accounturl.validator}"/>
+                                        </af:inputText>
+                                        <af:inputText value="#{bindings.Ceo.inputValue}"
+                                                      label="#{bindings.Ceo.hints.label}"
+                                                      required="#{bindings.Ceo.hints.mandatory}"
+                                                      columns="#{bindings.Ceo.hints.displayWidth}"
+                                                      maximumLength="#{bindings.Ceo.hints.precision}"
+                                                      shortDesc="#{bindings.Ceo.hints.tooltip}" id="it6">
+                                            <f:validator binding="#{bindings.Ceo.validator}"/>
+                                        </af:inputText>
+                                        <af:inputText value="#{bindings.Email.inputValue}"
+                                                      label="#{bindings.Email.hints.label}"
+                                                      required="#{bindings.Email.hints.mandatory}"
+                                                      columns="#{bindings.Email.hints.displayWidth}"
+                                                      maximumLength="#{bindings.Email.hints.precision}"
+                                                      shortDesc="#{bindings.Email.hints.tooltip}" id="it7">
+                                            <f:validator binding="#{bindings.Email.validator}"/>
+                                        </af:inputText>
+                                        <af:inputText value="#{bindings.Mobilenumber.inputValue}"
+                                                      label="#{bindings.Mobilenumber.hints.label}"
+                                                      required="#{bindings.Mobilenumber.hints.mandatory}"
+                                                      columns="#{bindings.Mobilenumber.hints.displayWidth}"
+                                                      maximumLength="#{bindings.Mobilenumber.hints.precision}"
+                                                      shortDesc="#{bindings.Mobilenumber.hints.tooltip}" id="it8">
+                                            <f:validator binding="#{bindings.Mobilenumber.validator}"/>
+                                            <af:convertNumber groupingUsed="false"
+                                                              pattern="#{bindings.Mobilenumber.format}"/>
+                                        </af:inputText>
+                                        <f:facet name="footer">
+                                            <af:button text="Submit" id="b6"/>
+                                        </f:facet>
+                                    </af:panelFormLayout>
+                                </af:panelBox>
+                            </f:facet>
+                        </af:panelStretchLayout>
                     </af:gridCell>
                 </af:gridRow>
                 <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr3">

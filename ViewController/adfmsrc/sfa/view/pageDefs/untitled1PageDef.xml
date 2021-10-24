@@ -6,8 +6,6 @@
     <variableIterator id="variables"/>
     <iterator Binds="CustomeraccountView1" RangeSize="25" DataControl="AppModuleDataControl"
               id="CustomeraccountView1Iterator"/>
-    <searchRegion Binds="CustomeraccountView1Iterator" Criteria=""
-                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="CustomeraccountView11Query"/>
     <iterator Binds="CustomercontactsView2" RangeSize="25" DataControl="AppModuleDataControl"
               id="CustomercontactsView2Iterator"/>
     <searchRegion Binds="CustomercontactsView2Iterator" Criteria=""
@@ -18,32 +16,6 @@
     <iterator Binds="NoteView2" RangeSize="25" DataControl="AppModuleDataControl" id="NoteView2Iterator"/>
   </executables>
   <bindings>
-    <tree IterBinding="CustomeraccountView1Iterator" id="CustomeraccountView11">
-      <nodeDefinition DefName="sfa.model.viewobjects.CustomeraccountView" Name="CustomeraccountView110">
-        <AttrNames>
-          <Item Value="Customeraccountid"/>
-          <Item Value="Type"/>
-          <Item Value="Name"/>
-          <Item Value="Accounturl"/>
-          <Item Value="Ceo"/>
-          <Item Value="Numberofemployees"/>
-          <Item Value="Email"/>
-          <Item Value="Mobilenumber"/>
-        </AttrNames>
-        <Accessors>
-          <Item Value="AddressView"/>
-        </Accessors>
-      </nodeDefinition>
-      <nodeDefinition DefName="sfa.model.viewobjects.AddressView">
-        <AttrNames>
-          <Item Value="Addressid"/>
-          <Item Value="City"/>
-          <Item Value="State"/>
-          <Item Value="Country"/>
-          <Item Value="Accountid"/>
-        </AttrNames>
-      </nodeDefinition>
-    </tree>
     <tree IterBinding="CustomeraccountView1Iterator" id="CustomeraccountView1">
       <nodeDefinition DefName="sfa.model.viewobjects.CustomeraccountView" Name="CustomeraccountView10">
         <AttrNames>
@@ -90,5 +62,40 @@
     <action IterBinding="NoteView2Iterator" id="Previous" RequiresUpdateModel="true" Action="previous"/>
     <action IterBinding="NoteView2Iterator" id="Next" RequiresUpdateModel="true" Action="next"/>
     <action IterBinding="NoteView2Iterator" id="Last" RequiresUpdateModel="true" Action="last"/>
+    <attributeValues IterBinding="CustomeraccountView1Iterator" id="Customeraccountid">
+      <AttrNames>
+        <Item Value="Customeraccountid"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomeraccountView1Iterator" id="Type">
+      <AttrNames>
+        <Item Value="Type"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomeraccountView1Iterator" id="Name">
+      <AttrNames>
+        <Item Value="Name"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomeraccountView1Iterator" id="Accounturl">
+      <AttrNames>
+        <Item Value="Accounturl"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomeraccountView1Iterator" id="Ceo">
+      <AttrNames>
+        <Item Value="Ceo"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomeraccountView1Iterator" id="Email">
+      <AttrNames>
+        <Item Value="Email"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomeraccountView1Iterator" id="Mobilenumber">
+      <AttrNames>
+        <Item Value="Mobilenumber"/>
+      </AttrNames>
+    </attributeValues>
   </bindings>
 </pageDefinition>
