@@ -9,5 +9,19 @@
     <searchRegion Criteria="__ImplicitViewCriteria__" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
                   Binds="CustomercontactsView2Iterator" id="ImplicitViewCriteriaQuery"/>
   </executables>
-  <bindings/>
+  <bindings>
+    <tree IterBinding="CustomercontactsView2Iterator" id="CustomercontactsView2">
+      <nodeDefinition DefName="sfa.model.viewobjects.CustomercontactsView" Name="CustomercontactsView20">
+        <AttrNames>
+          <Item Value="Contactid"/>
+          <Item Value="Name"/>
+          <Item Value="Title"/>
+          <Item Value="Customeraccountid"/>
+          <Item Value="Department"/>
+          <Item Value="Workphone"/>
+          <Item Value="Email"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
 </pageDefinition>

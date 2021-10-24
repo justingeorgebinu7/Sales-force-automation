@@ -2,7 +2,7 @@
 <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:f="http://java.sun.com/jsf/core"
                 xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
   <af:panelGroupLayout layout="vertical" id="pgl1">
-    <af:panelHeader text="Search  Contacts" id="ph1">
+    <af:panelHeader text="Customercontacts" id="ph1">
       <af:quickQuery label="Search" searchDesc="Search" id="qryId1"
                      value="#{bindings.ImplicitViewCriteriaQuery.quickQueryDescriptor}"
                      model="#{bindings.ImplicitViewCriteriaQuery.queryModel}"
@@ -11,7 +11,56 @@
           <af:commandLink text="Advanced" rendered="false" id="cl1"/>
         </f:facet>
       </af:quickQuery>
-      <af:button text="Back" id="b1" action="exitFromSearch"/>
     </af:panelHeader>
+    <af:table value="#{bindings.CustomercontactsView2.collectionModel}" var="row"
+              rows="#{bindings.CustomercontactsView2.rangeSize}"
+              emptyText="#{bindings.CustomercontactsView2.viewable ? 'No data to display.' : 'Access Denied.'}"
+              rowBandingInterval="0" selectedRowKeys="#{bindings.CustomercontactsView2.collectionModel.selectedRow}"
+              selectionListener="#{bindings.CustomercontactsView2.collectionModel.makeCurrent}" rowSelection="single"
+              fetchSize="#{bindings.CustomercontactsView2.rangeSize}"
+              filterModel="#{bindings.ImplicitViewCriteriaQuery.quickQueryDescriptor}" filterVisible="true"
+              queryListener="#{bindings.ImplicitViewCriteriaQuery.processQuery}" varStatus="vs"
+              partialTriggers="::qryId1" id="t1">
+      <af:column sortProperty="#{bindings.CustomercontactsView2.hints.Contactid.name}" filterable="true" sortable="true"
+                 headerText="#{bindings.CustomercontactsView2.hints.Contactid.label}" id="c1">
+        <af:outputText value="#{row.Contactid}" shortDesc="#{bindings.CustomercontactsView2.hints.Contactid.tooltip}"
+                       id="ot1">
+          <af:convertNumber groupingUsed="false" pattern="#{bindings.CustomercontactsView2.hints.Contactid.format}"/>
+        </af:outputText>
+      </af:column>
+      <af:column sortProperty="#{bindings.CustomercontactsView2.hints.Name.name}" filterable="true" sortable="true"
+                 headerText="#{bindings.CustomercontactsView2.hints.Name.label}" id="c2">
+        <af:outputText value="#{row.Name}" shortDesc="#{bindings.CustomercontactsView2.hints.Name.tooltip}" id="ot2"/>
+      </af:column>
+      <af:column sortProperty="#{bindings.CustomercontactsView2.hints.Title.name}" filterable="true" sortable="true"
+                 headerText="#{bindings.CustomercontactsView2.hints.Title.label}" id="c3">
+        <af:outputText value="#{row.Title}" shortDesc="#{bindings.CustomercontactsView2.hints.Title.tooltip}" id="ot3"/>
+      </af:column>
+      <af:column sortProperty="#{bindings.CustomercontactsView2.hints.Customeraccountid.name}" filterable="true"
+                 sortable="true" headerText="#{bindings.CustomercontactsView2.hints.Customeraccountid.label}" id="c4">
+        <af:outputText value="#{row.Customeraccountid}"
+                       shortDesc="#{bindings.CustomercontactsView2.hints.Customeraccountid.tooltip}" id="ot4">
+          <af:convertNumber groupingUsed="false"
+                            pattern="#{bindings.CustomercontactsView2.hints.Customeraccountid.format}"/>
+        </af:outputText>
+      </af:column>
+      <af:column sortProperty="#{bindings.CustomercontactsView2.hints.Department.name}" filterable="true"
+                 sortable="true" headerText="#{bindings.CustomercontactsView2.hints.Department.label}" id="c5">
+        <af:outputText value="#{row.Department}" shortDesc="#{bindings.CustomercontactsView2.hints.Department.tooltip}"
+                       id="ot5"/>
+      </af:column>
+      <af:column sortProperty="#{bindings.CustomercontactsView2.hints.Workphone.name}" filterable="true" sortable="true"
+                 headerText="#{bindings.CustomercontactsView2.hints.Workphone.label}" id="c6">
+        <af:outputText value="#{row.Workphone}" shortDesc="#{bindings.CustomercontactsView2.hints.Workphone.tooltip}"
+                       id="ot6">
+          <af:convertNumber groupingUsed="false" pattern="#{bindings.CustomercontactsView2.hints.Workphone.format}"/>
+        </af:outputText>
+      </af:column>
+      <af:column sortProperty="#{bindings.CustomercontactsView2.hints.Email.name}" filterable="true" sortable="true"
+                 headerText="#{bindings.CustomercontactsView2.hints.Email.label}" id="c7">
+        <af:outputText value="#{row.Email}" shortDesc="#{bindings.CustomercontactsView2.hints.Email.tooltip}" id="ot7"/>
+      </af:column>
+    </af:table>
   </af:panelGroupLayout>
+  <af:button text="Back" id="b1" action="exitFromSearch"/>
 </ui:composition>

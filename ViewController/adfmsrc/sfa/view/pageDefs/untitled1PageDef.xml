@@ -82,5 +82,8 @@
         <Item Value="Mobilenumber"/>
       </AttrNames>
     </attributeValues>
+    <action IterBinding="CustomeraccountView1Iterator" id="CreateInsert" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
   </bindings>
 </pageDefinition>

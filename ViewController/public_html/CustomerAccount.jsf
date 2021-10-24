@@ -118,7 +118,12 @@
                                                               pattern="#{bindings.Mobilenumber.format}"/>
                                         </af:inputText>
                                         <f:facet name="footer">
-                                            <af:button text="Submit" id="b6"/>
+                                            <af:button text="Edit" id="b6"/>
+                                            <af:button actionListener="#{bindings.CreateInsert.execute}"
+                                                       text="Add Account" disabled="#{!bindings.CreateInsert.enabled}"
+                                                       id="b7"/>
+                                            <af:button actionListener="#{bindings.Commit.execute}" text="Save"
+                                                       disabled="#{!bindings.Commit.enabled}" id="b8"/>
                                         </f:facet>
                                     </af:panelFormLayout>
                                 </af:panelBox>
