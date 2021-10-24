@@ -43,7 +43,7 @@
 
                 .btn {
                     padding: 15px 60px;
-                    background-color: #77b;
+                    background-color: #046;
                     color: white;
                     border: 0px;
                     border-radius: 20px;
@@ -88,9 +88,9 @@
             <div class="leftdiv">
                 <div class="makecenter">
                     <img class="leftimg" alt="img"
-                         src="https://lh5.googleusercontent.com/proxy/ePIwJKGKgN766HdixXD4awTQguYogfE8teNDfkq-Ds-EX4eeOhsEjYjUZIItEsqE3JWNMEsACpkErE5j4ZV8ygiOJOAz9jvvyMpv_klKzZvkNRdnxMugGiEzgSCVEGOLQCKUPhHt8W_OjrQFi5deViXOmRWv=s0-d"/>
+                         src="https://i.ibb.co/HrRP1ZH/logosq.jpg"/>
                      
-                    <br/><div style="font-size:25px;margin-top:30px;">Welcome to Sales</div>
+                    <br/><div style="font-size:25px;margin-top:30px;color:#026;">Welcome</div>
                 </div>
             </div>
             <div class="rightdiv" style="margin-top:13%;">
@@ -112,7 +112,7 @@
                         </tr>
                          
                         <tr>
-                            <td colspan="2">
+                            <td colspan="2" style="text-align:center">
                                 <input class="btn" type="submit" name="submit" value="Submit"/>
                             </td>
                         </tr>
