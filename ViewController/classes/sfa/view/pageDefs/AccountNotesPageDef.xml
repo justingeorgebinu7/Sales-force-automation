@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.22.48" id="AccountNotesPageDef"
+                Package="sfa.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="NoteView2" RangeSize="25" DataControl="AppModuleDataControl" id="NoteView2Iterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="NoteView2Iterator" id="NoteView2">
+      <nodeDefinition DefName="sfa.model.viewobjects.NoteView" Name="NoteView20">
+        <AttrNames>
+          <Item Value="Noteid"/>
+          <Item Value="Content"/>
+          <Item Value="Datetime"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+  </bindings>
+</pageDefinition>

@@ -1,0 +1,55 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SDM>
+   <OverallProperties
+      id="OverallProperties1"/>
+   <TaskFlowCall
+      id="TaskFlowCall6">
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>createInsert&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
+      <property
+         name="activityId">createInsert</property>
+      <property
+         name="x">433.68164</property>
+      <property
+         name="y">161.24121</property>
+      <property
+         name="documentReference">/WEB-INF/createInsertTF.xml</property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="taskFlowId">createInsertTF</property>
+   </TaskFlowCall>
+   <View
+      id="View7">
+      <property
+         name="activityId">AccountNotes</property>
+      <property
+         name="pageFragment">true</property>
+      <property
+         name="x">161.36133</property>
+      <property
+         name="start">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>AccountNotes&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">165.09766</property>
+      <property
+         name="page">/AccountNotes.jsff</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase8"
+      from="View7"
+      to="TaskFlowCall6">
+      <property
+         name="tosrcid">__2</property>
+      <property
+         name="fromOutcome">addNote</property>
+      <property
+         name="fromsrcid">__1</property>
+      <property
+         name="sdm:polyPoints">R50,202.36133,164.74707,392.68164,160.89062,L50</property>
+   </ControlFlowCase>
+</SDM>

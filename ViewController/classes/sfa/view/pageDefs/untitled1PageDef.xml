@@ -9,9 +9,10 @@
     <iterator Binds="TaskView3" RangeSize="25" DataControl="AppModuleDataControl" id="TaskView3Iterator"/>
     <searchRegion Binds="TaskView3Iterator" Criteria="" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
                   id="TaskView3Query"/>
-    <iterator Binds="NoteView2" RangeSize="25" DataControl="AppModuleDataControl" id="NoteView2Iterator"/>
     <taskFlow id="Account_ContactTF1" taskFlowId="/WEB-INF/Account_ContactTF.xml#Account_ContactTF"
               activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <taskFlow id="notesTrialAddTF1" taskFlowId="/WEB-INF/notesTrialAddTF.xml#notesTrialAddTF" activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
   </executables>
   <bindings>
     <tree IterBinding="CustomeraccountView1Iterator" id="CustomeraccountView1">
@@ -33,20 +34,6 @@
         </AttrNames>
       </nodeDefinition>
     </tree>
-    <attributeValues IterBinding="NoteView2Iterator" id="Content">
-      <AttrNames>
-        <Item Value="Content"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="NoteView2Iterator" id="Datetime">
-      <AttrNames>
-        <Item Value="Datetime"/>
-      </AttrNames>
-    </attributeValues>
-    <action IterBinding="NoteView2Iterator" id="First" RequiresUpdateModel="true" Action="first"/>
-    <action IterBinding="NoteView2Iterator" id="Previous" RequiresUpdateModel="true" Action="previous"/>
-    <action IterBinding="NoteView2Iterator" id="Next" RequiresUpdateModel="true" Action="next"/>
-    <action IterBinding="NoteView2Iterator" id="Last" RequiresUpdateModel="true" Action="last"/>
     <attributeValues IterBinding="CustomeraccountView1Iterator" id="Customeraccountid">
       <AttrNames>
         <Item Value="Customeraccountid"/>

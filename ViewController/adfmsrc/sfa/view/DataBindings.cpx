@@ -17,6 +17,12 @@
     <page path="/AccountContact.jsff" usageId="sfa_view_AccountContactPageDef"/>
     <page path="/login.jsp" usageId="sfa_view_loginPageDef"/>
     <page path="/welcome.jspx" usageId="sfa_view_welcomePageDef"/>
+    <page path="/WEB-INF/createInsertTF.xml#createInsertTF@CreateInsert"
+          usageId="sfa_view_createInsertTF_createInsertTF_CreateInsertPageDef"/>
+    <page path="/WEB-INF/createInsertTF.xml#createInsertTF@Commit"
+          usageId="sfa_view_createInsertTF_createInsertTF_CommitPageDef"/>
+    <page path="/noteAdd.jsff" usageId="sfa_view_noteAddPageDef"/>
+    <page path="/AccountNotes.jsff" usageId="sfa_view_AccountNotesPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="sfa_view_untitled2PageDef" path="sfa.view.pageDefs.untitled2PageDef"/>
@@ -29,6 +35,12 @@
     <page id="sfa_view_AccountContactPageDef" path="sfa.view.pageDefs.AccountContactPageDef"/>
     <page id="sfa_view_loginPageDef" path="sfa.view.pageDefs.loginPageDef"/>
     <page id="sfa_view_welcomePageDef" path="sfa.view.pageDefs.welcomePageDef"/>
+    <page id="sfa_view_createInsertTF_createInsertTF_CreateInsertPageDef"
+          path="sfa.view.pageDefs.createInsertTF_createInsertTF_CreateInsertPageDef"/>
+    <page id="sfa_view_createInsertTF_createInsertTF_CommitPageDef"
+          path="sfa.view.pageDefs.createInsertTF_createInsertTF_CommitPageDef"/>
+    <page id="sfa_view_noteAddPageDef" path="sfa.view.pageDefs.noteAddPageDef"/>
+    <page id="sfa_view_AccountNotesPageDef" path="sfa.view.pageDefs.AccountNotesPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="sfa.model.entities"

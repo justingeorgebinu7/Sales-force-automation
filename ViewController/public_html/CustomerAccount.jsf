@@ -146,7 +146,7 @@
                             <f:facet name="bottom"/>
                             <f:facet name="center">
                                 <af:panelBox id="pb3"
-                                             inlineStyle="margin-right:100px; border-radius:30px 30px 30px 30px;"
+                                             inlineStyle="margin-right:100px;overflow:hidden; border-radius:30px 30px 30px 30px;"
                                              text="Menu" background="default">
                                     <f:facet name="toolbar"/>
                                     <af:panelTabbed position="start" id="pt1" verticalTabMode="iconAndText">
@@ -154,45 +154,7 @@
                                             <af:region value="#{bindings.Account_ContactTF1.regionModel}" id="r1"/>
                                         </af:showDetailItem>
                                         <af:showDetailItem id="View" text="Notes" disclosed="true">
-                                            <af:panelFormLayout id="pfl1">
-                                                <af:inputText value="#{bindings.Content.inputValue}"
-                                                              label="#{bindings.Content.hints.label}"
-                                                              required="#{bindings.Content.hints.mandatory}"
-                                                              columns="#{bindings.Content.hints.displayWidth}"
-                                                              maximumLength="#{bindings.Content.hints.precision}"
-                                                              shortDesc="#{bindings.Content.hints.tooltip}" id="it1">
-                                                    <f:validator binding="#{bindings.Content.validator}"/>
-                                                </af:inputText>
-                                                <af:inputDate value="#{bindings.Datetime.inputValue}"
-                                                              label="#{bindings.Datetime.hints.label}"
-                                                              required="#{bindings.Datetime.hints.mandatory}"
-                                                              columns="#{bindings.Datetime.hints.displayWidth}"
-                                                              shortDesc="#{bindings.Datetime.hints.tooltip}" id="id2">
-                                                    <f:validator binding="#{bindings.Datetime.validator}"/>
-                                                    <af:convertDateTime pattern="#{bindings.Datetime.format}"/>
-                                                </af:inputDate>
-                                                <f:facet name="footer">
-                                                    <af:panelGroupLayout layout="vertical" id="pgl3">
-                                                        <af:panelGroupLayout layout="horizontal" id="pgl4">
-                                                            <af:button actionListener="#{bindings.First.execute}"
-                                                                       text="First"
-                                                                       disabled="#{!bindings.First.enabled}"
-                                                                       partialSubmit="true" id="b1"/>
-                                                            <af:button actionListener="#{bindings.Previous.execute}"
-                                                                       text="Previous"
-                                                                       disabled="#{!bindings.Previous.enabled}"
-                                                                       partialSubmit="true" id="b2"/>
-                                                            <af:button actionListener="#{bindings.Next.execute}"
-                                                                       text="Next" disabled="#{!bindings.Next.enabled}"
-                                                                       partialSubmit="true" id="b3"/>
-                                                            <af:button actionListener="#{bindings.Last.execute}"
-                                                                       text="Last" disabled="#{!bindings.Last.enabled}"
-                                                                       partialSubmit="true" id="b4"/>
-                                                        </af:panelGroupLayout>
-                                                        <af:button text="Submit" id="b5"/>
-                                                    </af:panelGroupLayout>
-                                                </f:facet>
-                                            </af:panelFormLayout>
+                                            <af:region value="#{bindings.notesTrialAddTF1.regionModel}" id="r2"/>
                                         </af:showDetailItem>
                                         <af:showDetailItem id="Search" text="Task">
                                             <af:table value="#{bindings.TaskView3.collectionModel}" var="row"
