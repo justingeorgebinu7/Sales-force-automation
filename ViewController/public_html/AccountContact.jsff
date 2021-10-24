@@ -9,7 +9,7 @@
             rows="#{bindings.CustomercontactsView2.rangeSize}"
             emptyText="#{bindings.CustomercontactsView2.viewable ? 'No data to display.' : 'Access Denied.'}"
             rowBandingInterval="0" selectedRowKeys="#{bindings.CustomercontactsView2.collectionModel.selectedRow}"
-            selectionListener="#{bindings.CustomercontactsView2.collectionModel.makeCurrent}" rowSelection="single"
+            selectionListener="#{bindings.CustomercontactsView2.treeModel.makeCurrent}" rowSelection="single"
             fetchSize="#{bindings.CustomercontactsView2.rangeSize}"
             filterModel="#{bindings.CustomercontactsView2Query.queryDescriptor}" filterVisible="true"
             queryListener="#{bindings.CustomercontactsView2Query.processQuery}" varStatus="vs" id="t1">
@@ -67,5 +67,6 @@
       <af:outputText value="#{row.Isprimarycontact}"
                      shortDesc="#{bindings.CustomercontactsView2.hints.Isprimarycontact.tooltip}" id="ot10"/>
     </af:column>
+    <af:componentDragSource/>
   </af:table>
 </ui:composition>

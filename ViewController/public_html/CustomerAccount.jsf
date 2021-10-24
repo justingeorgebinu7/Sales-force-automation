@@ -7,7 +7,7 @@
         <af:form id="f1">
             <af:panelGridLayout id="pgl1">
                 <af:gridRow marginTop="5px" height="auto" id="gr1">
-                    <af:gridCell marginStart="5px" rowSpan="3" width="20%" id="gc1"/>
+                    <af:gridCell marginStart="5px" rowSpan="3" width="15%" id="gc1"/>
                     <af:gridCell marginStart="5px" columnSpan="2" marginEnd="5px" id="gc2"/>
                 </af:gridRow>
                 <af:gridRow marginTop="5px" height="auto" id="gr2">
@@ -18,7 +18,8 @@
                             <f:facet name="top"/>
                             <f:facet name="bottom"/>
                             <f:facet name="center">
-                                <af:panelBox text="PanelBox4" id="pb1" showDisclosure="false">
+                                <af:panelBox text="Customer Accounts" id="pb1" showDisclosure="false"
+                                             inlineStyle="border-radius:30px 30px 30px 30px / 30px 30px 30px 30px ;">
                                     <f:facet name="toolbar"/>
                                     <af:listView value="#{bindings.CustomeraccountView1.collectionModel}" var="item"
                                                  emptyText="#{bindings.CustomeraccountView1.viewable ? 'No data to display.' : 'Access Denied.'}"
@@ -43,6 +44,7 @@
                                             </af:panelGridLayout>
                                         </af:listItem>
                                     </af:listView>
+                                    <af:componentDragSource/>
                                 </af:panelBox>
                             </f:facet>
                         </af:panelStretchLayout>
@@ -54,7 +56,8 @@
                             <f:facet name="top"/>
                             <f:facet name="bottom"/>
                             <f:facet name="center">
-                                <af:panelBox text="Manage Accounts" id="pb2">
+                                <af:panelBox text="Manage Accounts" id="pb2" background="default"
+                                             inlineStyle="border-radius:30px 30px 30px 30px;">
                                     <f:facet name="toolbar"/>
                                     <af:panelFormLayout id="pfl2">
                                         <af:inputText value="#{bindings.Customeraccountid.inputValue}"
@@ -126,6 +129,7 @@
                                                        disabled="#{!bindings.Commit.enabled}" id="b8"/>
                                         </f:facet>
                                     </af:panelFormLayout>
+                                    <af:componentDragSource/>
                                 </af:panelBox>
                             </f:facet>
                         </af:panelStretchLayout>
@@ -134,116 +138,133 @@
                 <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr3">
                     <af:gridCell marginStart="5px" columnSpan="2" marginEnd="5px" id="gc5" width="80%"
                                  inlineStyle="margin-right:10px;">
-                        <af:panelBox text="PanelBox3" id="pb3" inlineStyle="margin-right:10px;">
-                            <f:facet name="toolbar"/>
-                            <af:panelTabbed position="start" id="pt1" verticalTabMode="iconAndText">
-                                <af:showDetailItem id="Create" text="Contacts">
-                                    <af:region value="#{bindings.Account_ContactTF1.regionModel}" id="r1"/>
-                                </af:showDetailItem>
-                                <af:showDetailItem id="View" text="Notes" disclosed="true">
-                                    <af:panelFormLayout id="pfl1">
-                                        <af:inputText value="#{bindings.Content.inputValue}"
-                                                      label="#{bindings.Content.hints.label}"
-                                                      required="#{bindings.Content.hints.mandatory}"
-                                                      columns="#{bindings.Content.hints.displayWidth}"
-                                                      maximumLength="#{bindings.Content.hints.precision}"
-                                                      shortDesc="#{bindings.Content.hints.tooltip}" id="it1">
-                                            <f:validator binding="#{bindings.Content.validator}"/>
-                                        </af:inputText>
-                                        <af:inputDate value="#{bindings.Datetime.inputValue}"
-                                                      label="#{bindings.Datetime.hints.label}"
-                                                      required="#{bindings.Datetime.hints.mandatory}"
-                                                      columns="#{bindings.Datetime.hints.displayWidth}"
-                                                      shortDesc="#{bindings.Datetime.hints.tooltip}" id="id2">
-                                            <f:validator binding="#{bindings.Datetime.validator}"/>
-                                            <af:convertDateTime pattern="#{bindings.Datetime.format}"/>
-                                        </af:inputDate>
-                                        <f:facet name="footer">
-                                            <af:panelGroupLayout layout="vertical" id="pgl3">
-                                                <af:panelGroupLayout layout="horizontal" id="pgl4">
-                                                    <af:button actionListener="#{bindings.First.execute}" text="First"
-                                                               disabled="#{!bindings.First.enabled}"
-                                                               partialSubmit="true" id="b1"/>
-                                                    <af:button actionListener="#{bindings.Previous.execute}"
-                                                               text="Previous" disabled="#{!bindings.Previous.enabled}"
-                                                               partialSubmit="true" id="b2"/>
-                                                    <af:button actionListener="#{bindings.Next.execute}" text="Next"
-                                                               disabled="#{!bindings.Next.enabled}" partialSubmit="true"
-                                                               id="b3"/>
-                                                    <af:button actionListener="#{bindings.Last.execute}" text="Last"
-                                                               disabled="#{!bindings.Last.enabled}" partialSubmit="true"
-                                                               id="b4"/>
-                                                </af:panelGroupLayout>
-                                                <af:button text="Submit" id="b5"/>
-                                            </af:panelGroupLayout>
-                                        </f:facet>
-                                    </af:panelFormLayout>
-                                </af:showDetailItem>
-                                <af:showDetailItem id="Search" text="Task">
-                                    <af:table value="#{bindings.TaskView3.collectionModel}" var="row"
-                                              rows="#{bindings.TaskView3.rangeSize}"
-                                              emptyText="#{bindings.TaskView3.viewable ? 'No data to display.' : 'Access Denied.'}"
-                                              rowBandingInterval="0"
-                                              selectedRowKeys="#{bindings.TaskView3.collectionModel.selectedRow}"
-                                              selectionListener="#{bindings.TaskView3.collectionModel.makeCurrent}"
-                                              rowSelection="single" fetchSize="#{bindings.TaskView3.rangeSize}"
-                                              filterModel="#{bindings.TaskView3Query.queryDescriptor}"
-                                              filterVisible="true"
-                                              queryListener="#{bindings.TaskView3Query.processQuery}" varStatus="vs"
-                                              id="t3">
-                                        <af:column sortProperty="#{bindings.TaskView3.hints.Name.name}"
-                                                   filterable="true" sortable="true"
-                                                   headerText="#{bindings.TaskView3.hints.Name.label}" id="c21">
-                                            <af:outputText value="#{row.Name}"
-                                                           shortDesc="#{bindings.TaskView3.hints.Name.tooltip}"
-                                                           id="ot21"/>
-                                        </af:column>
-                                        <af:column sortProperty="#{bindings.TaskView3.hints.Duedate.name}"
-                                                   filterable="true" sortable="true"
-                                                   headerText="#{bindings.TaskView3.hints.Duedate.label}" id="c22">
-                                            <f:facet name="filter">
-                                                <af:inputDate value="#{bindings.TaskView3Query.queryDescriptor.filterConjunctionCriterion.criterionMap.Duedate.value}"
-                                                              id="id1">
-                                                    <af:convertDateTime pattern="#{bindings.TaskView3.hints.Duedate.format}"/>
+                        <af:panelStretchLayout id="psl3"
+                                               inlineStyle="border-radius:30px 30px 30px 30px;">
+                            <f:facet name="start"/>
+                            <f:facet name="end"/>
+                            <f:facet name="top"/>
+                            <f:facet name="bottom"/>
+                            <f:facet name="center">
+                                <af:panelBox id="pb3"
+                                             inlineStyle="margin-right:100px; border-radius:30px 30px 30px 30px;"
+                                             text="Menu" background="default">
+                                    <f:facet name="toolbar"/>
+                                    <af:panelTabbed position="start" id="pt1" verticalTabMode="iconAndText">
+                                        <af:showDetailItem id="Create" text="Contacts">
+                                            <af:region value="#{bindings.Account_ContactTF1.regionModel}" id="r1"/>
+                                        </af:showDetailItem>
+                                        <af:showDetailItem id="View" text="Notes" disclosed="true">
+                                            <af:panelFormLayout id="pfl1">
+                                                <af:inputText value="#{bindings.Content.inputValue}"
+                                                              label="#{bindings.Content.hints.label}"
+                                                              required="#{bindings.Content.hints.mandatory}"
+                                                              columns="#{bindings.Content.hints.displayWidth}"
+                                                              maximumLength="#{bindings.Content.hints.precision}"
+                                                              shortDesc="#{bindings.Content.hints.tooltip}" id="it1">
+                                                    <f:validator binding="#{bindings.Content.validator}"/>
+                                                </af:inputText>
+                                                <af:inputDate value="#{bindings.Datetime.inputValue}"
+                                                              label="#{bindings.Datetime.hints.label}"
+                                                              required="#{bindings.Datetime.hints.mandatory}"
+                                                              columns="#{bindings.Datetime.hints.displayWidth}"
+                                                              shortDesc="#{bindings.Datetime.hints.tooltip}" id="id2">
+                                                    <f:validator binding="#{bindings.Datetime.validator}"/>
+                                                    <af:convertDateTime pattern="#{bindings.Datetime.format}"/>
                                                 </af:inputDate>
-                                            </f:facet>
-                                            <af:outputText value="#{row.Duedate}"
-                                                           shortDesc="#{bindings.TaskView3.hints.Duedate.tooltip}"
-                                                           id="ot22">
-                                                <af:convertDateTime pattern="#{bindings.TaskView3.hints.Duedate.format}"/>
-                                            </af:outputText>
-                                        </af:column>
-                                        <af:column sortProperty="#{bindings.TaskView3.hints.Priority.name}"
-                                                   filterable="true" sortable="true"
-                                                   headerText="#{bindings.TaskView3.hints.Priority.label}" id="c23">
-                                            <af:outputText value="#{row.Priority}"
-                                                           shortDesc="#{bindings.TaskView3.hints.Priority.tooltip}"
-                                                           id="ot23"/>
-                                        </af:column>
-                                        <af:column sortProperty="#{bindings.TaskView3.hints.Description.name}"
-                                                   filterable="true" sortable="true"
-                                                   headerText="#{bindings.TaskView3.hints.Description.label}" id="c24">
-                                            <af:outputText value="#{row.Description}"
-                                                           shortDesc="#{bindings.TaskView3.hints.Description.tooltip}"
-                                                           id="ot24"/>
-                                        </af:column>
-                                        <af:column sortProperty="#{bindings.TaskView3.hints.Percentageofcompletion.name}"
-                                                   filterable="true" sortable="true"
-                                                   headerText="#{bindings.TaskView3.hints.Percentageofcompletion.label}"
-                                                   id="c25">
-                                            <af:outputText value="#{row.Percentageofcompletion}"
-                                                           shortDesc="#{bindings.TaskView3.hints.Percentageofcompletion.tooltip}"
-                                                           id="ot25">
-                                                <af:convertNumber groupingUsed="false"
-                                                                  pattern="#{bindings.TaskView3.hints.Percentageofcompletion.format}"/>
-                                            </af:outputText>
-                                        </af:column>
-                                    </af:table>
-                                </af:showDetailItem>
-                                <af:showDetailItem id="Edit" text="Tab Label 4"/>
-                                <af:showDetailItem id="Delete" text="Tab Label 5"/>
-                            </af:panelTabbed>
-                        </af:panelBox>
+                                                <f:facet name="footer">
+                                                    <af:panelGroupLayout layout="vertical" id="pgl3">
+                                                        <af:panelGroupLayout layout="horizontal" id="pgl4">
+                                                            <af:button actionListener="#{bindings.First.execute}"
+                                                                       text="First"
+                                                                       disabled="#{!bindings.First.enabled}"
+                                                                       partialSubmit="true" id="b1"/>
+                                                            <af:button actionListener="#{bindings.Previous.execute}"
+                                                                       text="Previous"
+                                                                       disabled="#{!bindings.Previous.enabled}"
+                                                                       partialSubmit="true" id="b2"/>
+                                                            <af:button actionListener="#{bindings.Next.execute}"
+                                                                       text="Next" disabled="#{!bindings.Next.enabled}"
+                                                                       partialSubmit="true" id="b3"/>
+                                                            <af:button actionListener="#{bindings.Last.execute}"
+                                                                       text="Last" disabled="#{!bindings.Last.enabled}"
+                                                                       partialSubmit="true" id="b4"/>
+                                                        </af:panelGroupLayout>
+                                                        <af:button text="Submit" id="b5"/>
+                                                    </af:panelGroupLayout>
+                                                </f:facet>
+                                            </af:panelFormLayout>
+                                        </af:showDetailItem>
+                                        <af:showDetailItem id="Search" text="Task">
+                                            <af:table value="#{bindings.TaskView3.collectionModel}" var="row"
+                                                      rows="#{bindings.TaskView3.rangeSize}"
+                                                      emptyText="#{bindings.TaskView3.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                                      rowBandingInterval="0"
+                                                      selectedRowKeys="#{bindings.TaskView3.collectionModel.selectedRow}"
+                                                      selectionListener="#{bindings.TaskView3.collectionModel.makeCurrent}"
+                                                      rowSelection="single" fetchSize="#{bindings.TaskView3.rangeSize}"
+                                                      filterModel="#{bindings.TaskView3Query.queryDescriptor}"
+                                                      filterVisible="true"
+                                                      queryListener="#{bindings.TaskView3Query.processQuery}"
+                                                      varStatus="vs" id="t3">
+                                                <af:column sortProperty="#{bindings.TaskView3.hints.Name.name}"
+                                                           filterable="true" sortable="true"
+                                                           headerText="#{bindings.TaskView3.hints.Name.label}" id="c21">
+                                                    <af:outputText value="#{row.Name}"
+                                                                   shortDesc="#{bindings.TaskView3.hints.Name.tooltip}"
+                                                                   id="ot21"/>
+                                                </af:column>
+                                                <af:column sortProperty="#{bindings.TaskView3.hints.Duedate.name}"
+                                                           filterable="true" sortable="true"
+                                                           headerText="#{bindings.TaskView3.hints.Duedate.label}"
+                                                           id="c22">
+                                                    <f:facet name="filter">
+                                                        <af:inputDate value="#{bindings.TaskView3Query.queryDescriptor.filterConjunctionCriterion.criterionMap.Duedate.value}"
+                                                                      id="id1">
+                                                            <af:convertDateTime pattern="#{bindings.TaskView3.hints.Duedate.format}"/>
+                                                        </af:inputDate>
+                                                    </f:facet>
+                                                    <af:outputText value="#{row.Duedate}"
+                                                                   shortDesc="#{bindings.TaskView3.hints.Duedate.tooltip}"
+                                                                   id="ot22">
+                                                        <af:convertDateTime pattern="#{bindings.TaskView3.hints.Duedate.format}"/>
+                                                    </af:outputText>
+                                                </af:column>
+                                                <af:column sortProperty="#{bindings.TaskView3.hints.Priority.name}"
+                                                           filterable="true" sortable="true"
+                                                           headerText="#{bindings.TaskView3.hints.Priority.label}"
+                                                           id="c23">
+                                                    <af:outputText value="#{row.Priority}"
+                                                                   shortDesc="#{bindings.TaskView3.hints.Priority.tooltip}"
+                                                                   id="ot23"/>
+                                                </af:column>
+                                                <af:column sortProperty="#{bindings.TaskView3.hints.Description.name}"
+                                                           filterable="true" sortable="true"
+                                                           headerText="#{bindings.TaskView3.hints.Description.label}"
+                                                           id="c24">
+                                                    <af:outputText value="#{row.Description}"
+                                                                   shortDesc="#{bindings.TaskView3.hints.Description.tooltip}"
+                                                                   id="ot24"/>
+                                                </af:column>
+                                                <af:column sortProperty="#{bindings.TaskView3.hints.Percentageofcompletion.name}"
+                                                           filterable="true" sortable="true"
+                                                           headerText="#{bindings.TaskView3.hints.Percentageofcompletion.label}"
+                                                           id="c25">
+                                                    <af:outputText value="#{row.Percentageofcompletion}"
+                                                                   shortDesc="#{bindings.TaskView3.hints.Percentageofcompletion.tooltip}"
+                                                                   id="ot25">
+                                                        <af:convertNumber groupingUsed="false"
+                                                                          pattern="#{bindings.TaskView3.hints.Percentageofcompletion.format}"/>
+                                                    </af:outputText>
+                                                </af:column>
+                                            </af:table>
+                                        </af:showDetailItem>
+                                        <af:showDetailItem id="Edit" text="Tab Label 4"/>
+                                        <af:showDetailItem id="Delete" text="Tab Label 5"/>
+                                    </af:panelTabbed>
+                                    <af:componentDragSource/>
+                                </af:panelBox>
+                            </f:facet>
+                        </af:panelStretchLayout>
                     </af:gridCell>
                 </af:gridRow>
             </af:panelGridLayout>
