@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <af:menuBar id="mb1">
+    <af:commandMenuItem text="Add" id="cmi1" action="goToAddAccount"/>
+    <af:commandMenuItem text="Edit" id="cmi2" action="goToEdit"/>
+    <af:commandMenuItem text="Search" id="cmi3" action="goToSearch"/>
+  </af:menuBar>
+</ui:composition>

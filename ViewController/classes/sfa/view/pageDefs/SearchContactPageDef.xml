@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.22.48" id="SearchContactPageDef"
+                Package="sfa.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="CustomercontactsView2" RangeSize="25" DataControl="AppModuleDataControl"
+              id="CustomercontactsView2Iterator"/>
+    <searchRegion Criteria="__ImplicitViewCriteria__" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  Binds="CustomercontactsView2Iterator" id="ImplicitViewCriteriaQuery"/>
+  </executables>
+  <bindings/>
+</pageDefinition>

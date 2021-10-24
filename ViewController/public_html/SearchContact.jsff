@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <af:panelGroupLayout layout="vertical" id="pgl1">
+    <af:panelHeader text="Search  Contacts" id="ph1">
+      <af:quickQuery label="Search" searchDesc="Search" id="qryId1"
+                     value="#{bindings.ImplicitViewCriteriaQuery.quickQueryDescriptor}"
+                     model="#{bindings.ImplicitViewCriteriaQuery.queryModel}"
+                     queryListener="#{bindings.ImplicitViewCriteriaQuery.processQuery}">
+        <f:facet name="end">
+          <af:commandLink text="Advanced" rendered="false" id="cl1"/>
+        </f:facet>
+      </af:quickQuery>
+      <af:button text="Back" id="b1" action="exitFromSearch"/>
+    </af:panelHeader>
+  </af:panelGroupLayout>
+</ui:composition>

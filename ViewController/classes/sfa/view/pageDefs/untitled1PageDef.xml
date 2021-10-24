@@ -6,10 +6,6 @@
     <variableIterator id="variables"/>
     <iterator Binds="CustomeraccountView1" RangeSize="25" DataControl="AppModuleDataControl"
               id="CustomeraccountView1Iterator"/>
-    <iterator Binds="CustomercontactsView2" RangeSize="25" DataControl="AppModuleDataControl"
-              id="CustomercontactsView2Iterator"/>
-    <searchRegion Binds="CustomercontactsView2Iterator" Criteria=""
-                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="CustomercontactsView2Query"/>
     <iterator Binds="TaskView3" RangeSize="25" DataControl="AppModuleDataControl" id="TaskView3Iterator"/>
     <searchRegion Binds="TaskView3Iterator" Criteria="" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
                   id="TaskView3Query"/>
@@ -21,19 +17,6 @@
         <AttrNames>
           <Item Value="Customeraccountid"/>
           <Item Value="Name"/>
-        </AttrNames>
-      </nodeDefinition>
-    </tree>
-    <tree IterBinding="CustomercontactsView2Iterator" id="CustomercontactsView2">
-      <nodeDefinition DefName="sfa.model.viewobjects.CustomercontactsView" Name="CustomercontactsView20">
-        <AttrNames>
-          <Item Value="Name"/>
-          <Item Value="Title"/>
-          <Item Value="Department"/>
-          <Item Value="Workphone"/>
-          <Item Value="Email"/>
-          <Item Value="Buyingrole"/>
-          <Item Value="Influencelevel"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

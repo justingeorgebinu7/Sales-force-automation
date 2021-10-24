@@ -6,12 +6,18 @@
     <page path="/trialTemplate.jsf" usageId="sfa_view_trialTemplatePageDef"/>
     <page path="/pagefromtemplate.jsf" usageId="sfa_view_pagefromtemplatePageDef"/>
     <page path="/CustomerAccount.jsf" usageId="sfa_view_untitled1PageDef"/>
+    <page path="/AddContact.jsff" usageId="sfa_view_AddContactPageDef"/>
+    <page path="/EditContact.jsff" usageId="sfa_view_EditContactPageDef"/>
+    <page path="/SearchContact.jsff" usageId="sfa_view_SearchContactPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="sfa_view_untitled2PageDef" path="sfa.view.pageDefs.untitled2PageDef"/>
     <page id="sfa_view_trialTemplatePageDef" path="sfa.view.pageDefs.trialTemplatePageDef"/>
     <page id="sfa_view_pagefromtemplatePageDef" path="sfa.view.pageDefs.pagefromtemplatePageDef"/>
     <page id="sfa_view_untitled1PageDef" path="sfa.view.pageDefs.untitled1PageDef"/>
+    <page id="sfa_view_AddContactPageDef" path="sfa.view.pageDefs.AddContactPageDef"/>
+    <page id="sfa_view_EditContactPageDef" path="sfa.view.pageDefs.EditContactPageDef"/>
+    <page id="sfa_view_SearchContactPageDef" path="sfa.view.pageDefs.SearchContactPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="sfa.model.entities"
