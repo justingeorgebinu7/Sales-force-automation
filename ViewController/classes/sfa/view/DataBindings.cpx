@@ -15,6 +15,8 @@
     <page path="/EditContact.jsff" usageId="sfa_view_EditContactPageDef"/>
     <page path="/SearchContact.jsff" usageId="sfa_view_SearchContactPageDef"/>
     <page path="/AccountContact.jsff" usageId="sfa_view_AccountContactPageDef"/>
+    <page path="/login.jsp" usageId="sfa_view_loginPageDef"/>
+    <page path="/welcome.jspx" usageId="sfa_view_welcomePageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="sfa_view_untitled2PageDef" path="sfa.view.pageDefs.untitled2PageDef"/>
@@ -25,6 +27,8 @@
     <page id="sfa_view_EditContactPageDef" path="sfa.view.pageDefs.EditContactPageDef"/>
     <page id="sfa_view_SearchContactPageDef" path="sfa.view.pageDefs.SearchContactPageDef"/>
     <page id="sfa_view_AccountContactPageDef" path="sfa.view.pageDefs.AccountContactPageDef"/>
+    <page id="sfa_view_loginPageDef" path="sfa.view.pageDefs.loginPageDef"/>
+    <page id="sfa_view_welcomePageDef" path="sfa.view.pageDefs.welcomePageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="sfa.model.entities"
