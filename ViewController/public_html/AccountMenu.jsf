@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="CustAccountHome.jsf" id="d1">
+        <af:messages id="m1"/>
+        <af:form id="f1">
+            <af:panelSplitter orientation="vertical" splitterPosition="100" id="ps2">
+                <f:facet name="first"/>
+                <f:facet name="second">
+                    <af:panelSplitter orientation="horizontal" splitterPosition="100" id="ps1">
+                        <f:facet name="first"/>
+                        <f:facet name="second">
+                            <af:panelSplitter id="ps3" orientation="vertical" splitterPosition="88">
+                                <f:facet name="first">
+                                    <af:menuBar id="mb1">
+                                        <af:commandMenuItem text="Back" id="cmi1" action="back"/>
+                                        <af:commandMenuItem text="Exit" id="cmi2" action="*exit"/>
+                                    </af:menuBar>
+                                </f:facet>
+                                <f:facet name="second">
+                                <af:panelStretchLayout id="psl3"
+                                               inlineStyle="border-radius:30px 30px 30px 30px;">
+                            <f:facet name="start"/>
+                            <f:facet name="end"/>
+                            <f:facet name="top"/>
+                            <f:facet name="bottom"/>
+                            <f:facet name="center">
+                                <af:panelBox id="pb3"
+                                             inlineStyle="margin-right:100px;overflow:hidden; border-radius:30px 30px 30px 30px;"
+                                             text="Menu" background="default">
+                                    <f:facet name="toolbar"/>
+                                    <af:panelTabbed position="start" id="pt1" verticalTabMode="iconAndText">
+                                        <af:showDetailItem id="Create" text="Contacts"/>
+                                        <af:showDetailItem id="View" text="Notes" disclosed="true">
+                                                        <af:region value="#{bindings.notesTrialAddTF1.regionModel}"
+                                                                   id="r1"/>
+                                                    </af:showDetailItem>
+                                        <af:showDetailItem id="Search" text="Task"/>
+                                        <af:showDetailItem id="Edit" text="Tab Label 4"/>
+                                        <af:showDetailItem id="Delete" text="Tab Label 5"/>
+                                    </af:panelTabbed>
+                                    <af:componentDragSource/>
+                                </af:panelBox>
+                            </f:facet>
+                        </af:panelStretchLayout>
+                                </f:facet>
+                            </af:panelSplitter>
+                        </f:facet>
+                    </af:panelSplitter>
+                </f:facet>
+            </af:panelSplitter>
+        </af:form>
+    </af:document>
+</f:view>

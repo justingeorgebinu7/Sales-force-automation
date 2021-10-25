@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.22.48" id="CustomerAccountHomePageDef"
+                Package="CustomerAccountManagement">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="CustomeraccountView1" RangeSize="25" DataControl="AppModuleDataControl"
+              id="CustomeraccountView1Iterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="CustomeraccountView1Iterator" id="CustomeraccountView1">
+      <nodeDefinition DefName="sfa.model.viewobjects.CustomeraccountView" Name="CustomeraccountView10">
+        <AttrNames>
+          <Item Value="Name"/>
+          <Item Value="Type"/>
+          <Item Value="Email"/>
+          <Item Value="Mobilenumber"/>
+          <Item Value="Accounturl"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

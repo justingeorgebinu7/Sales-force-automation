@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="CustAccountHome.jsf" id="d1">
+        <af:messages id="m1"/>
+        <af:form id="f1">
+            <af:panelSplitter orientation="vertical" splitterPosition="100" id="ps2">
+                <f:facet name="first"/>
+                <f:facet name="second">
+                    <af:panelSplitter orientation="horizontal" splitterPosition="100" id="ps1">
+                        <f:facet name="first"/>
+                        <f:facet name="second">
+                            <af:panelSplitter id="ps3" orientation="vertical" splitterPosition="88">
+                                <f:facet name="first"/>
+                                <f:facet name="second">
+                                    <af:panelSplitter id="ps4" splitterPosition="359">
+                                        <f:facet name="first">
+                                            <af:panelStretchLayout id="psl1" dimensionsFrom="parent">
+                                                <f:facet name="start"/>
+                                                <f:facet name="end"/>
+                                                <f:facet name="top"/>
+                                                <f:facet name="bottom"/>
+                                                <f:facet name="center">
+                                                    <af:panelBox text="PanelBox1" id="pb1">
+                                                        <f:facet name="toolbar"/>
+                                                        <af:listView value="#{bindings.CustomeraccountView1.collectionModel}"
+                                                                     var="item"
+                                                                     emptyText="#{bindings.CustomeraccountView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                                                     fetchSize="#{bindings.CustomeraccountView1.rangeSize}"
+                                                                     id="lv1" selection="single"
+                                                                     selectionListener="#{bindings.CustomeraccountView1.treeModel.makeCurrent}">
+                                                            <af:listItem id="li1">
+                                                                <af:panelGridLayout id="pgl1">
+                                                                    <af:gridRow marginTop="5px" height="auto"
+                                                                                marginBottom="5px" id="gr1">
+                                                                        <af:gridCell marginStart="5px" width="34%"
+                                                                                     id="gc1">
+                                                                            <af:outputFormatted value="#{item.bindings.Name.inputValue}"
+                                                                                                id="of1"/>
+                                                                        </af:gridCell>
+                                                                        <af:gridCell marginStart="5px" width="33%"
+                                                                                     id="gc2">
+                                                                            <af:outputFormatted value="#{item.bindings.Type.inputValue}"
+                                                                                                id="of2"/>
+                                                                        </af:gridCell>
+                                                                        <af:gridCell marginStart="5px" width="33%"
+                                                                                     marginEnd="5px" id="gc3">
+                                                                            <af:outputFormatted value="#{item.bindings.Accounturl.inputValue}"
+                                                                                                id="of3"/>
+                                                                        </af:gridCell>
+                                                                    </af:gridRow>
+                                                                </af:panelGridLayout>
+                                                            </af:listItem>
+                                                        </af:listView>
+                                                        <af:spacer id="s2" height="10"/>
+                                                        <af:menuBar id="mb1">
+                                                            <af:commandMenuItem text="Menu" id="cmi1"
+                                                                                action="goToMenu"/>
+                                                            <af:spacer id="s1" width="5"/>
+                                                            <af:commandMenuItem text="Manage Accounts" id="cmi2"/>
+                                                        </af:menuBar>
+                                                    </af:panelBox>
+                                                </f:facet>
+                                            </af:panelStretchLayout>
+                                        </f:facet>
+                                        <f:facet name="second">
+                                            <af:panelStretchLayout id="psl2" dimensionsFrom="parent">
+                                                <f:facet name="start"/>
+                                                <f:facet name="end"/>
+                                                <f:facet name="top"/>
+                                                <f:facet name="bottom"/>
+                                                <f:facet name="center">
+                                                    <af:panelBox text="PanelBox2" id="pb2">
+                                                        <f:facet name="toolbar"/>
+                                                        <af:panelFormLayout id="pfl1">
+                                                            <af:inputText value="#{bindings.Name.inputValue}"
+                                                                          label="#{bindings.Name.hints.label}"
+                                                                          required="#{bindings.Name.hints.mandatory}"
+                                                                          readOnly="true"
+                                                                          columns="#{bindings.Name.hints.displayWidth}"
+                                                                          maximumLength="#{bindings.Name.hints.precision}"
+                                                                          shortDesc="#{bindings.Name.hints.tooltip}"
+                                                                          id="it1">
+                                                                <f:validator binding="#{bindings.Name.validator}"/>
+                                                            </af:inputText>
+                                                            <af:inputText value="#{bindings.Type.inputValue}"
+                                                                          label="#{bindings.Type.hints.label}"
+                                                                          required="#{bindings.Type.hints.mandatory}"
+                                                                          readOnly="true"
+                                                                          columns="#{bindings.Type.hints.displayWidth}"
+                                                                          maximumLength="#{bindings.Type.hints.precision}"
+                                                                          shortDesc="#{bindings.Type.hints.tooltip}"
+                                                                          id="it2">
+                                                                <f:validator binding="#{bindings.Type.validator}"/>
+                                                            </af:inputText>
+                                                            <af:inputText value="#{bindings.Email.inputValue}"
+                                                                          label="#{bindings.Email.hints.label}"
+                                                                          required="#{bindings.Email.hints.mandatory}"
+                                                                          readOnly="true"
+                                                                          columns="#{bindings.Email.hints.displayWidth}"
+                                                                          maximumLength="#{bindings.Email.hints.precision}"
+                                                                          shortDesc="#{bindings.Email.hints.tooltip}"
+                                                                          id="it3">
+                                                                <f:validator binding="#{bindings.Email.validator}"/>
+                                                            </af:inputText>
+                                                            <af:inputText value="#{bindings.Mobilenumber.inputValue}"
+                                                                          label="#{bindings.Mobilenumber.hints.label}"
+                                                                          required="#{bindings.Mobilenumber.hints.mandatory}"
+                                                                          readOnly="true"
+                                                                          columns="#{bindings.Mobilenumber.hints.displayWidth}"
+                                                                          maximumLength="#{bindings.Mobilenumber.hints.precision}"
+                                                                          shortDesc="#{bindings.Mobilenumber.hints.tooltip}"
+                                                                          id="it4">
+                                                                <f:validator binding="#{bindings.Mobilenumber.validator}"/>
+                                                                <af:convertNumber groupingUsed="false"
+                                                                                  pattern="#{bindings.Mobilenumber.format}"/>
+                                                            </af:inputText>
+                                                            <af:inputText value="#{bindings.City.inputValue}"
+                                                                          label="#{bindings.City.hints.label}"
+                                                                          required="#{bindings.City.hints.mandatory}"
+                                                                          readOnly="true"
+                                                                          columns="#{bindings.City.hints.displayWidth}"
+                                                                          maximumLength="#{bindings.City.hints.precision}"
+                                                                          shortDesc="#{bindings.City.hints.tooltip}"
+                                                                          id="it5">
+                                                                <f:validator binding="#{bindings.City.validator}"/>
+                                                            </af:inputText>
+                                                            <af:inputText value="#{bindings.State.inputValue}"
+                                                                          label="#{bindings.State.hints.label}"
+                                                                          required="#{bindings.State.hints.mandatory}"
+                                                                          readOnly="true"
+                                                                          columns="#{bindings.State.hints.displayWidth}"
+                                                                          maximumLength="#{bindings.State.hints.precision}"
+                                                                          shortDesc="#{bindings.State.hints.tooltip}"
+                                                                          id="it6">
+                                                                <f:validator binding="#{bindings.State.validator}"/>
+                                                            </af:inputText>
+                                                            <af:inputText value="#{bindings.Country.inputValue}"
+                                                                          label="#{bindings.Country.hints.label}"
+                                                                          required="#{bindings.Country.hints.mandatory}"
+                                                                          readOnly="true"
+                                                                          columns="#{bindings.Country.hints.displayWidth}"
+                                                                          maximumLength="#{bindings.Country.hints.precision}"
+                                                                          shortDesc="#{bindings.Country.hints.tooltip}"
+                                                                          id="it7">
+                                                                <f:validator binding="#{bindings.Country.validator}"/>
+                                                            </af:inputText>
+                                                        </af:panelFormLayout>
+                                                    </af:panelBox>
+                                                </f:facet>
+                                            </af:panelStretchLayout>
+                                        </f:facet>
+                                    </af:panelSplitter>
+                                </f:facet>
+                            </af:panelSplitter>
+                        </f:facet>
+                    </af:panelSplitter>
+                </f:facet>
+            </af:panelSplitter>
+        </af:form>
+    </af:document>
+</f:view>

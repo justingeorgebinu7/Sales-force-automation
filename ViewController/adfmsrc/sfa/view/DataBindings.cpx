@@ -23,8 +23,13 @@
           usageId="sfa_view_createInsertTF_createInsertTF_CommitPageDef"/>
     <page path="/CustomerAccountManagement/noteAdd.jsff" usageId="sfa_view_noteAddPageDef"/>
     <page path="/CustomerAccountManagement/AccountNotes.jsff" usageId="sfa_view_AccountNotesPageDef"/>
-    <page path="/EditAccountNotes.jsff" usageId="sfa_view_EditAccountNotesPageDef"/>
-    <page path="/SearchAccountNotes.jsff" usageId="sfa_view_SearchAccountNotesPageDef"/>
+    <page path="/CustomerAccountManagement/EditAccountNotes.jsff" usageId="sfa_view_EditAccountNotesPageDef"/>
+    <page path="/CustomerAccountManagement/SearchAccountNotes.jsff" usageId="sfa_view_SearchAccountNotesPageDef"/>
+    <page path="/WEB-INF/createInsertTask.xml#createInsertTask@CreateInsert"
+          usageId="sfa_view_createInsertTask_createInsertTask_CreateInsertPageDef"/>
+    <page path="/CustomerAccountManagement/CustomerAccountHome.jsf" usageId="sfa_view_CustomerAccountHomePageDef"/>
+    <page path="/CustomerAccountManagement/CustAccountHome.jsf" usageId="sfa_view_CustAccountHomePageDef"/>
+    <page path="/AccountMenu.jsf" usageId="sfa_view_AccountMenuPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="sfa_view_untitled2PageDef" path="sfa.view.pageDefs.untitled2PageDef"/>
@@ -45,6 +50,11 @@
     <page id="sfa_view_AccountNotesPageDef" path="sfa.view.pageDefs.AccountNotesPageDef"/>
     <page id="sfa_view_EditAccountNotesPageDef" path="sfa.view.pageDefs.EditAccountNotesPageDef"/>
     <page id="sfa_view_SearchAccountNotesPageDef" path="sfa.view.pageDefs.SearchAccountNotesPageDef"/>
+    <page id="sfa_view_createInsertTask_createInsertTask_CreateInsertPageDef"
+          path="sfa.view.pageDefs.createInsertTask_createInsertTask_CreateInsertPageDef"/>
+    <page id="sfa_view_CustomerAccountHomePageDef" path="CustomerAccountManagement.CustomerAccountHomePageDef"/>
+    <page id="sfa_view_CustAccountHomePageDef" path="CustomerAccountManagement.CustAccountHomePageDef"/>
+    <page id="sfa_view_AccountMenuPageDef" path="sfa.view.pageDefs.AccountMenuPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="sfa.model.entities"

@@ -15,10 +15,10 @@
       </task-flow-reference>
     </task-flow-call>
     <view id="EditAccountNotes">
-      <page>/EditAccountNotes.jsff</page>
+      <page>/CustomerAccountManagement/EditAccountNotes.jsff</page>
     </view>
     <view id="SearchAccountNotes">
-      <page>/SearchAccountNotes.jsff</page>
+      <page>/CustomerAccountManagement/SearchAccountNotes.jsff</page>
     </view>
     <control-flow-rule id="__1">
       <from-activity-id>AccountNotes</from-activity-id>

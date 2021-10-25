@@ -142,6 +142,41 @@
                                 <name>sfa.view.pageDefs.SearchAccountNotesPageDef</name>
                                 <actions>view</actions>
                             </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/WEB-INF/taskCustomerAccount.xml#taskCustomerAccount</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/WEB-INF/createInsertTask.xml#createInsertTask</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.share.security.authorization.RegionPermission</class>
+                                <name>sfa.view.pageDefs.createInsertTask_createInsertTask_CreateInsertPageDef</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.share.security.authorization.RegionPermission</class>
+                                <name>CustomerAccountManagement.CustomerAccountHomePageDef</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.share.security.authorization.RegionPermission</class>
+                                <name>CustomerAccountManagement.CustAccountHomePageDef</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/WEB-INF/CustomerAccountParentTF.xml#CustomerAccountParentTF</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.share.security.authorization.RegionPermission</class>
+                                <name>sfa.view.pageDefs.AccountMenuPageDef</name>
+                                <actions>view</actions>
+                            </permission>
                         </permissions>
                     </grant>
                     <grant>
@@ -157,6 +192,11 @@
                             <permission>
                                 <class>oracle.adf.share.security.authorization.RegionPermission</class>
                                 <name>sfa.view.pageDefs.untitled1PageDef</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/WEB-INF/CustomerAccountParentTF.xml#CustomerAccountParentTF</name>
                                 <actions>view</actions>
                             </permission>
                         </permissions>
@@ -179,6 +219,43 @@
                             <permission>
                                 <class>oracle.adf.share.security.authorization.RegionPermission</class>
                                 <name>sfa.view.pageDefs.welcomePageDef</name>
+                                <actions>view</actions>
+                            </permission>
+                        </permissions>
+                    </grant>
+                    <grant>
+                        <grantee>
+                            <principals>
+                                <principal>
+                                    <class>oracle.security.jps.internal.core.principals.JpsAnonymousRoleImpl</class>
+                                    <name>anonymous-role</name>
+                                </principal>
+                            </principals>
+                        </grantee>
+                        <permissions>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/WEB-INF/createInsertTask.xml#createInsertTask</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/WEB-INF/Account_ContactTF.xml#Account_ContactTF</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/WEB-INF/createInsertTF.xml#createInsertTF</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/WEB-INF/notesTrialAddTF.xml#notesTrialAddTF</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/WEB-INF/taskCustomerAccount.xml#taskCustomerAccount</name>
                                 <actions>view</actions>
                             </permission>
                         </permissions>
