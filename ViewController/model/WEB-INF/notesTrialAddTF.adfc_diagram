@@ -9,9 +9,9 @@
       <property
          name="activityId">createInsert</property>
       <property
-         name="x">433.68164</property>
+         name="x">431.68164</property>
       <property
-         name="y">161.24121</property>
+         name="y">88.54004</property>
       <property
          name="documentReference">/WEB-INF/createInsertTF.xml</property>
       <property
@@ -26,15 +26,15 @@
       <property
          name="pageFragment">true</property>
       <property
-         name="x">161.36133</property>
+         name="x">152.36133</property>
       <property
          name="start">true</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>AccountNotes&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">165.09766</property>
+         name="y">246.39648</property>
       <property
-         name="page">/AccountNotes.jsff</property>
+         name="page">/CustomerAccountManagement/AccountNotes.jsff</property>
       <property
          name="exceptionHandler">false</property>
    </View>
@@ -50,6 +50,80 @@
       <property
          name="fromsrcid">__1</property>
       <property
-         name="sdm:polyPoints">R50,202.36133,164.74707,392.68164,160.89062,L50</property>
+         name="sdm:polyPoints">R50,193.36133,246.0459,390.68164,88.18945,L50</property>
+   </ControlFlowCase>
+   <View
+      id="View6">
+      <property
+         name="activityId">EditAccountNotes</property>
+      <property
+         name="pageFragment">true</property>
+      <property
+         name="x">430.0</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>EditAccountNotes&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">217.89648</property>
+      <property
+         name="page">/EditAccountNotes.jsff</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <View
+      id="View8">
+      <property
+         name="activityId">SearchAccountNotes</property>
+      <property
+         name="pageFragment">true</property>
+      <property
+         name="x">430.0</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>SearchAccountNotes&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">372.24707</property>
+      <property
+         name="page">/SearchAccountNotes.jsff</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase9"
+      from="View7"
+      to="View6">
+      <property
+         name="fromOutcome">edit</property>
+      <property
+         name="sdm:polyPoints">R54,194.85202,249.5459,389.0,217.5459,L50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase10"
+      from="View6"
+      to="View7">
+      <property
+         name="fromOutcome">backFromEdit</property>
+      <property
+         name="sdm:polyPoints">L46,388.4262,214.0459,194.83032,246.0459,R50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase11"
+      from="View7"
+      to="View8">
+      <property
+         name="fromOutcome">search</property>
+      <property
+         name="sdm:polyPoints">R62,193.36133,256.5459,389.0,371.89648,L50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase12"
+      from="View8"
+      to="View7">
+      <property
+         name="fromOutcome">backFromSearch</property>
+      <property
+         name="sdm:polyPoints">L54,387.0819,375.39648,193.36133,260.0459,R66</property>
    </ControlFlowCase>
 </SDM>

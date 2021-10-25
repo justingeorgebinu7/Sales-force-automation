@@ -23,6 +23,8 @@
           usageId="sfa_view_createInsertTF_createInsertTF_CommitPageDef"/>
     <page path="/CustomerAccountManagement/noteAdd.jsff" usageId="sfa_view_noteAddPageDef"/>
     <page path="/CustomerAccountManagement/AccountNotes.jsff" usageId="sfa_view_AccountNotesPageDef"/>
+    <page path="/EditAccountNotes.jsff" usageId="sfa_view_EditAccountNotesPageDef"/>
+    <page path="/SearchAccountNotes.jsff" usageId="sfa_view_SearchAccountNotesPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="sfa_view_untitled2PageDef" path="sfa.view.pageDefs.untitled2PageDef"/>
@@ -41,6 +43,8 @@
           path="sfa.view.pageDefs.createInsertTF_createInsertTF_CommitPageDef"/>
     <page id="sfa_view_noteAddPageDef" path="sfa.view.pageDefs.noteAddPageDef"/>
     <page id="sfa_view_AccountNotesPageDef" path="sfa.view.pageDefs.AccountNotesPageDef"/>
+    <page id="sfa_view_EditAccountNotesPageDef" path="sfa.view.pageDefs.EditAccountNotesPageDef"/>
+    <page id="sfa_view_SearchAccountNotesPageDef" path="sfa.view.pageDefs.SearchAccountNotesPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="sfa.model.entities"

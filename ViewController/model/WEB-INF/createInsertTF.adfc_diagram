@@ -43,7 +43,7 @@
       <property
          name="y">301.39648</property>
       <property
-         name="page">/noteAdd.jsff</property>
+         name="page">/CustomerAccountManagement/noteAdd.jsff</property>
       <property
          name="exceptionHandler">false</property>
    </View>

@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <af:panelGroupLayout layout="vertical" id="pgl1">
+    <af:panelHeader text="Note" id="ph1">
+      <af:quickQuery label="Search" searchDesc="Search" id="qryId1"
+                     value="#{bindings.ImplicitViewCriteriaQuery.quickQueryDescriptor}"
+                     model="#{bindings.ImplicitViewCriteriaQuery.queryModel}"
+                     queryListener="#{bindings.ImplicitViewCriteriaQuery.processQuery}">
+        <f:facet name="end">
+          <af:commandLink text="Advanced" rendered="false" id="cl1"/>
+        </f:facet>
+      </af:quickQuery>
+    </af:panelHeader>
+    <af:table value="#{bindings.NoteView2.collectionModel}" var="row" rows="#{bindings.NoteView2.rangeSize}"
+              emptyText="#{bindings.NoteView2.viewable ? 'No data to display.' : 'Access Denied.'}"
+              rowBandingInterval="0" selectedRowKeys="#{bindings.NoteView2.collectionModel.selectedRow}"
+              selectionListener="#{bindings.NoteView2.collectionModel.makeCurrent}" rowSelection="single"
+              fetchSize="#{bindings.NoteView2.rangeSize}" partialTriggers="::qryId1" id="t1">
+      <af:column sortProperty="#{bindings.NoteView2.hints.Noteid.name}" sortable="true"
+                 headerText="#{bindings.NoteView2.hints.Noteid.label}" id="c1">
+        <af:outputText value="#{row.Noteid}" shortDesc="#{bindings.NoteView2.hints.Noteid.tooltip}" id="ot1">
+          <af:convertNumber groupingUsed="false" pattern="#{bindings.NoteView2.hints.Noteid.format}"/>
+        </af:outputText>
+      </af:column>
+      <af:column sortProperty="#{bindings.NoteView2.hints.Content.name}" sortable="true"
+                 headerText="#{bindings.NoteView2.hints.Content.label}" id="c2">
+        <af:outputText value="#{row.Content}" shortDesc="#{bindings.NoteView2.hints.Content.tooltip}" id="ot2"/>
+      </af:column>
+      <af:column sortProperty="#{bindings.NoteView2.hints.Datetime.name}" sortable="true"
+                 headerText="#{bindings.NoteView2.hints.Datetime.label}" id="c3">
+        <af:outputText value="#{row.Datetime}" shortDesc="#{bindings.NoteView2.hints.Datetime.tooltip}" id="ot3">
+          <af:convertDateTime pattern="#{bindings.NoteView2.hints.Datetime.format}"/>
+        </af:outputText>
+      </af:column>
+    </af:table>
+  </af:panelGroupLayout>
+  <af:button text="Back" id="b1" action="backFromSearch"/>
+</ui:composition>

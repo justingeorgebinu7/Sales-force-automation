@@ -14,11 +14,39 @@
         <id>createInsertTF</id>
       </task-flow-reference>
     </task-flow-call>
+    <view id="EditAccountNotes">
+      <page>/EditAccountNotes.jsff</page>
+    </view>
+    <view id="SearchAccountNotes">
+      <page>/SearchAccountNotes.jsff</page>
+    </view>
     <control-flow-rule id="__1">
       <from-activity-id>AccountNotes</from-activity-id>
       <control-flow-case id="__2">
         <from-outcome>addNote</from-outcome>
         <to-activity-id>createInsert</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__3">
+        <from-outcome>edit</from-outcome>
+        <to-activity-id>EditAccountNotes</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__6">
+        <from-outcome>search</from-outcome>
+        <to-activity-id>SearchAccountNotes</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__4">
+      <from-activity-id>EditAccountNotes</from-activity-id>
+      <control-flow-case id="__5">
+        <from-outcome>backFromEdit</from-outcome>
+        <to-activity-id>AccountNotes</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__7">
+      <from-activity-id>SearchAccountNotes</from-activity-id>
+      <control-flow-case id="__8">
+        <from-outcome>backFromSearch</from-outcome>
+        <to-activity-id>AccountNotes</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <use-page-fragments/>

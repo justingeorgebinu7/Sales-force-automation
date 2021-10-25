@@ -20,5 +20,7 @@
     </af:column>
   </af:table>
   <af:button text="Add" id="b1" action="addNote"/>
+  <af:button text="Edit" id="b3" action="edit"/>
+  <af:button text="Search" id="b4" action="search"/>
   <af:button actionListener="#{bindings.Commit.execute}" text="Commit" disabled="#{!bindings.Commit.enabled}" id="b2"/>
 </ui:composition>
