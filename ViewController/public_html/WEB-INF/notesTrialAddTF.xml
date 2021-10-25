@@ -6,7 +6,7 @@
       <shared/>
     </data-control-scope>
     <view id="AccountNotes">
-      <page>/AccountNotes.jsff</page>
+      <page>/CustomerAccountManagement/AccountNotes.jsff</page>
     </view>
     <task-flow-call id="createInsert">
       <task-flow-reference>

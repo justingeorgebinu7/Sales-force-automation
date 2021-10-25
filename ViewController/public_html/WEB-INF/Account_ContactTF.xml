@@ -6,16 +6,16 @@
       <shared/>
     </data-control-scope>
     <view id="AccountContact">
-      <page>/AccountContact.jsff</page>
+      <page>/CustomerAccountManagement/AccountContact.jsff</page>
     </view>
     <view id="AddContact">
-      <page>/AddContact.jsff</page>
+      <page>/CustomerAccountManagement/AddContact.jsff</page>
     </view>
     <view id="EditContact">
-      <page>/EditContact.jsff</page>
+      <page>/CustomerAccountManagement/EditContact.jsff</page>
     </view>
     <view id="SearchContact">
-      <page>/SearchContact.jsff</page>
+      <page>/CustomerAccountManagement/SearchContact.jsff</page>
     </view>
     <control-flow-rule id="__1">
       <from-activity-id>AccountContact</from-activity-id>

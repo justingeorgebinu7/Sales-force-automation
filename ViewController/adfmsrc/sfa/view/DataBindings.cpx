@@ -10,19 +10,19 @@
     <page path="/untitled2.jsf" usageId="sfa_view_untitled2PageDef"/>
     <page path="/trialTemplate.jsf" usageId="sfa_view_trialTemplatePageDef"/>
     <page path="/pagefromtemplate.jsf" usageId="sfa_view_pagefromtemplatePageDef"/>
-    <page path="/CustomerAccount.jsf" usageId="sfa_view_untitled1PageDef"/>
-    <page path="/AddContact.jsff" usageId="sfa_view_AddContactPageDef"/>
-    <page path="/EditContact.jsff" usageId="sfa_view_EditContactPageDef"/>
-    <page path="/SearchContact.jsff" usageId="sfa_view_SearchContactPageDef"/>
-    <page path="/AccountContact.jsff" usageId="sfa_view_AccountContactPageDef"/>
+    <page path="/CustomerAccountManagement/CustomerAccount.jsf" usageId="sfa_view_untitled1PageDef"/>
+    <page path="/CustomerAccountManagement/AddContact.jsff" usageId="sfa_view_AddContactPageDef"/>
+    <page path="/CustomerAccountManagement/EditContact.jsff" usageId="sfa_view_EditContactPageDef"/>
+    <page path="/CustomerAccountManagement/SearchContact.jsff" usageId="sfa_view_SearchContactPageDef"/>
+    <page path="/CustomerAccountManagement/AccountContact.jsff" usageId="sfa_view_AccountContactPageDef"/>
     <page path="/login.jsp" usageId="sfa_view_loginPageDef"/>
     <page path="/welcome.jspx" usageId="sfa_view_welcomePageDef"/>
     <page path="/WEB-INF/createInsertTF.xml#createInsertTF@CreateInsert"
           usageId="sfa_view_createInsertTF_createInsertTF_CreateInsertPageDef"/>
     <page path="/WEB-INF/createInsertTF.xml#createInsertTF@Commit"
           usageId="sfa_view_createInsertTF_createInsertTF_CommitPageDef"/>
-    <page path="/noteAdd.jsff" usageId="sfa_view_noteAddPageDef"/>
-    <page path="/AccountNotes.jsff" usageId="sfa_view_AccountNotesPageDef"/>
+    <page path="/CustomerAccountManagement/noteAdd.jsff" usageId="sfa_view_noteAddPageDef"/>
+    <page path="/CustomerAccountManagement/AccountNotes.jsff" usageId="sfa_view_AccountNotesPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="sfa_view_untitled2PageDef" path="sfa.view.pageDefs.untitled2PageDef"/>
