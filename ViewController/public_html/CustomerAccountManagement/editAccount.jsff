@@ -46,9 +46,6 @@
       <af:convertNumber groupingUsed="false" pattern="#{bindings.Mobilenumber.format}"/>
     </af:inputText>
   </af:panelFormLayout>
-  <af:menuBar id="mb1">
-    <af:commandMenuItem actionListener="#{bindings.Commit.execute}" text="Save" disabled="#{!bindings.Commit.enabled}"
-                        id="cmi1"/>
-    <af:commandMenuItem text="Back" id="cmi2" action="backFromEdit"/>
-  </af:menuBar>
+  <af:button actionListener="#{bindings.Commit.execute}" text="Save" disabled="#{!bindings.Commit.enabled}" id="b1"/>
+  <af:button text="Back" id="b2" action="backFromEdit"/>
 </ui:composition>

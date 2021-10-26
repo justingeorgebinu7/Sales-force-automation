@@ -51,9 +51,7 @@
       </af:outputText>
     </af:column>
   </af:table>
-  <af:menuBar id="mb1">
-    <af:commandMenuItem text="Add" id="cmi1" action="goToAdd"/>
-    <af:commandMenuItem text="Edit" id="cmi2" action="goToEdit"/>
-    <af:commandMenuItem text="Search" id="cmi3" action="goToSearch"/>
-  </af:menuBar>
+  <af:button text="Add" id="b1" action="goToAdd"/>
+  <af:button text="Edit" id="b2" action="goToEdit"/>
+  <af:button text="Search" id="b3" action="goToSearch"/>
 </ui:composition>

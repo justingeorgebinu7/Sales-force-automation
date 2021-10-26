@@ -30,7 +30,7 @@
       <property
          name="y">120.59766</property>
       <property
-         name="page">/addCustomerAccount.jsff</property>
+         name="page">/CustomerAccountManagement/addCustomerAccount.jsff</property>
       <property
          name="exceptionHandler">false</property>
    </View>

@@ -54,8 +54,6 @@
       <af:convertNumber groupingUsed="false" pattern="#{bindings.Mobilenumber.format}"/>
     </af:inputText>
   </af:panelFormLayout>
-  <af:menuBar id="mb1">
-    <af:commandMenuItem text="Save" id="cmi1" action="toCommit"/>
-    <af:commandMenuItem text="Back" id="cmi2" action="exitAddTF"/>
-  </af:menuBar>
+  <af:button text="Save" id="b1" action="toCommit"/>
+  <af:button text="Back" id="b2" action="exitAddTF"/>
 </ui:composition>

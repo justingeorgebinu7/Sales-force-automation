@@ -17,7 +17,7 @@
       <property
          name="y">199.6377</property>
       <property
-         name="page">/ManageAccount.jsff</property>
+         name="page">/CustomerAccountManagement/ManageAccount.jsff</property>
       <property
          name="exceptionHandler">false</property>
    </View>
@@ -61,7 +61,7 @@
       <property
          name="y">217.59766</property>
       <property
-         name="page">/editAccount.jsff</property>
+         name="page">/CustomerAccountManagement/editAccount.jsff</property>
       <property
          name="exceptionHandler">false</property>
    </View>
@@ -78,7 +78,7 @@
       <property
          name="y">361.59766</property>
       <property
-         name="page">/searchAccount.jsff</property>
+         name="page">/CustomerAccountManagement/searchAccount.jsff</property>
       <property
          name="exceptionHandler">false</property>
    </View>

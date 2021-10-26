@@ -59,9 +59,7 @@
                   shortDesc="#{bindings.Isprimarycontact.hints.tooltip}" id="it9">
       <f:validator binding="#{bindings.Isprimarycontact.validator}"/>
     </af:inputText>
-    <af:menuBar id="mb1">
-      <af:commandMenuItem text="Save" id="cmi1" action="saveContact"/>
-      <af:commandMenuItem text="Back" id="cmi2" action="back"/>
-    </af:menuBar>
   </af:panelFormLayout>
+  <af:button text="Save" id="b1" action="saveContact"/>
+  <af:button text="Back" id="b2" action="back"/>
 </ui:composition>

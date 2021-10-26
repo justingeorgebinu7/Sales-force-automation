@@ -17,7 +17,7 @@
       <property
          name="y">118.143555</property>
       <property
-         name="page">/AccountTasks.jsff</property>
+         name="page">/CustomerAccountManagement/AccountTasks.jsff</property>
       <property
          name="exceptionHandler">false</property>
    </View>
@@ -34,7 +34,7 @@
       <property
          name="y">126.29883</property>
       <property
-         name="page">/editTasks.jsff</property>
+         name="page">/CustomerAccountManagement/editTasks.jsff</property>
       <property
          name="exceptionHandler">false</property>
    </View>
@@ -51,7 +51,7 @@
       <property
          name="y">283.59766</property>
       <property
-         name="page">/searchTasks.jsff</property>
+         name="page">/CustomerAccountManagement/searchTasks.jsff</property>
       <property
          name="exceptionHandler">false</property>
    </View>
@@ -124,23 +124,23 @@
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
-      id="ControlFlowCase20"
-      from="View2">
-      <property
-         name="tosrcid">__2</property>
-      <property
-         name="fromOutcome">goToAddTask</property>
-      <property
-         name="fromsrcid">__1</property>
-   </ControlFlowCase>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase21"
+      id="ControlFlowCase17"
       from="View2">
       <property
          name="tosrcid">__3</property>
       <property
          name="fromOutcome">goToAdd</property>
+      <property
+         name="fromsrcid">__1</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase18"
+      from="View2">
+      <property
+         name="tosrcid">__2</property>
+      <property
+         name="fromOutcome">goToAddTask</property>
       <property
          name="fromsrcid">__1</property>
    </ControlFlowCase>
