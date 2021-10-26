@@ -9,7 +9,8 @@
   DBObjectType="table"
   DBObjectName="CUSTOMERACCOUNT"
   AliasName="Customeraccount"
-  BindingStyle="OracleName">
+  BindingStyle="OracleName"
+  xmlns:validation="http://xmlns.oracle.com/adfm/validation">
   <Attribute
     Name="Customeraccountid"
     IsNotNull="true"
@@ -30,6 +31,13 @@
     <DesignTime>
       <Attr Name="_DisplaySize" Value="20"/>
     </DesignTime>
+    <validation:RegExpValidationBean
+      Name="TypeRule0"
+      ResId="sfa.model.entities.Customeraccount.Type_Rule_0"
+      OnAttribute="Type"
+      Pattern="corporate|government"
+      Flags="CaseInsensitive"
+      Inverse="false"/>
   </Attribute>
   <Attribute
     Name="Name"
@@ -42,6 +50,14 @@
     <DesignTime>
       <Attr Name="_DisplaySize" Value="20"/>
     </DesignTime>
+    <validation:LengthValidationBean
+      Name="NameRule0"
+      ResId="sfa.model.entities.Customeraccount.Name_Rule_0"
+      OnAttribute="Name"
+      CompareType="GREATERTHAN"
+      DataType="CHARACTER"
+      CompareLength="4"
+      Inverse="false"/>
   </Attribute>
   <Attribute
     Name="Accounturl"
@@ -73,7 +89,16 @@
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
-    TableName="CUSTOMERACCOUNT"/>
+    TableName="CUSTOMERACCOUNT">
+    <validation:CompareValidationBean
+      Name="NumberofemployeesRule0"
+      ResId="sfa.model.entities.Customeraccount.Numberofemployees_Rule_0"
+      OnAttribute="Numberofemployees"
+      OperandType="LITERAL"
+      Inverse="false"
+      CompareType="GREATERTHAN"
+      CompareValue="0"/>
+  </Attribute>
   <Attribute
     Name="Email"
     Precision="50"
@@ -85,6 +110,11 @@
     <DesignTime>
       <Attr Name="_DisplaySize" Value="50"/>
     </DesignTime>
+    <validation:RegExpValidationBean
+      Name="EmailRule0"
+      OnAttribute="Email"
+      Pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}"
+      Inverse="false"/>
   </Attribute>
   <Attribute
     Name="Mobilenumber"
@@ -92,7 +122,16 @@
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
-    TableName="CUSTOMERACCOUNT"/>
+    TableName="CUSTOMERACCOUNT">
+    <validation:LengthValidationBean
+      Name="MobilenumberRule0"
+      ResId="sfa.model.entities.Customeraccount.Mobilenumber_Rule_0"
+      OnAttribute="Mobilenumber"
+      CompareType="EQUALTO"
+      DataType="CHARACTER"
+      CompareLength="10"
+      Inverse="false"/>
+  </Attribute>
   <AccessorAttribute
     Name="Address"
     Association="sfa.model.entities.AddressCustomeraccountFkAssoc"
@@ -145,4 +184,8 @@
       <Item Value="sfa.model.entities.Customeraccount.Customeraccountid"/>
     </AttrArray>
   </Key>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="sfa.model.ModelBundle"/>
+  </ResourceBundle>
 </Entity>

@@ -9,7 +9,8 @@
   DBObjectType="table"
   DBObjectName="INVITEES"
   AliasName="Invitees"
-  BindingStyle="OracleName">
+  BindingStyle="OracleName"
+  xmlns:validation="http://xmlns.oracle.com/adfm/validation">
   <Attribute
     Name="Inviteeid"
     IsNotNull="true"
@@ -42,6 +43,13 @@
     <DesignTime>
       <Attr Name="_DisplaySize" Value="20"/>
     </DesignTime>
+    <validation:RegExpValidationBean
+      Name="TypeRule0"
+      ResId="sfa.model.entities.Invitees.Type_Rule_0"
+      OnAttribute="Type"
+      Pattern="internal|external"
+      Flags="CaseInsensitive"
+      Inverse="false"/>
   </Attribute>
   <Attribute
     Name="Appoinmentid"
@@ -80,4 +88,8 @@
       <Item Value="sfa.model.entities.Invitees.Appoinmentid"/>
     </AttrArray>
   </Key>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="sfa.model.ModelBundle"/>
+  </ResourceBundle>
 </Entity>
