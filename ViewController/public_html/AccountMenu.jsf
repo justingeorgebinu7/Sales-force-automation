@@ -30,7 +30,11 @@
                                              text="Menu" background="default">
                                     <f:facet name="toolbar"/>
                                     <af:panelTabbed position="start" id="pt1" verticalTabMode="iconAndText">
-                                        <af:showDetailItem id="Create" text="Contacts">
+                                                    <af:showDetailItem id="Edit" text="Manage Account">
+                                                        <af:region value="#{bindings.ManageCusiomerAccount1.regionModel}"
+                                                                   id="r4"/>
+                                                    </af:showDetailItem>
+                                                    <af:showDetailItem id="Create" text="Contacts">
                                                         <af:region value="#{bindings.CustomerAccountContacts1.regionModel}"
                                                                    id="r3"/>
                                                     </af:showDetailItem>
@@ -42,9 +46,7 @@
                                                         <af:region value="#{bindings.taskCustomerAccount1.regionModel}"
                                                                    id="r2"/>
                                                     </af:showDetailItem>
-                                        <af:showDetailItem id="Edit" text="Tab Label 4"/>
-                                        <af:showDetailItem id="Delete" text="Tab Label 5"/>
-                                    </af:panelTabbed>
+                                                </af:panelTabbed>
                                     <af:componentDragSource/>
                                 </af:panelBox>
                             </f:facet>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.22.48" id="addCustomerAccountPageDef"
+                Package="sfa.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="CustomeraccountView1" RangeSize="25" DataControl="AppModuleDataControl"
+              id="CustomeraccountView1Iterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="CustomeraccountView1Iterator" id="Customeraccountid">
+      <AttrNames>
+        <Item Value="Customeraccountid"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomeraccountView1Iterator" id="Type">
+      <AttrNames>
+        <Item Value="Type"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomeraccountView1Iterator" id="Name">
+      <AttrNames>
+        <Item Value="Name"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomeraccountView1Iterator" id="Accounturl">
+      <AttrNames>
+        <Item Value="Accounturl"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomeraccountView1Iterator" id="Ceo">
+      <AttrNames>
+        <Item Value="Ceo"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomeraccountView1Iterator" id="Numberofemployees">
+      <AttrNames>
+        <Item Value="Numberofemployees"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomeraccountView1Iterator" id="Email">
+      <AttrNames>
+        <Item Value="Email"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomeraccountView1Iterator" id="Mobilenumber">
+      <AttrNames>
+        <Item Value="Mobilenumber"/>
+      </AttrNames>
+    </attributeValues>
+  </bindings>
+</pageDefinition>

@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:f="http://java.sun.com/jsf/core">
+  <af:panelFormLayout id="pfl1">
+    <af:inputText value="#{bindings.Customeraccountid.inputValue}" label="#{bindings.Customeraccountid.hints.label}"
+                  required="#{bindings.Customeraccountid.hints.mandatory}"
+                  columns="#{bindings.Customeraccountid.hints.displayWidth}"
+                  maximumLength="#{bindings.Customeraccountid.hints.precision}"
+                  shortDesc="#{bindings.Customeraccountid.hints.tooltip}" id="it1">
+      <f:validator binding="#{bindings.Customeraccountid.validator}"/>
+      <af:convertNumber groupingUsed="false" pattern="#{bindings.Customeraccountid.format}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Type.inputValue}" label="#{bindings.Type.hints.label}"
+                  required="#{bindings.Type.hints.mandatory}" columns="#{bindings.Type.hints.displayWidth}"
+                  maximumLength="#{bindings.Type.hints.precision}" shortDesc="#{bindings.Type.hints.tooltip}" id="it2">
+      <f:validator binding="#{bindings.Type.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Name.inputValue}" label="#{bindings.Name.hints.label}"
+                  required="#{bindings.Name.hints.mandatory}" columns="#{bindings.Name.hints.displayWidth}"
+                  maximumLength="#{bindings.Name.hints.precision}" shortDesc="#{bindings.Name.hints.tooltip}" id="it3">
+      <f:validator binding="#{bindings.Name.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Accounturl.inputValue}" label="#{bindings.Accounturl.hints.label}"
+                  required="#{bindings.Accounturl.hints.mandatory}" columns="#{bindings.Accounturl.hints.displayWidth}"
+                  maximumLength="#{bindings.Accounturl.hints.precision}"
+                  shortDesc="#{bindings.Accounturl.hints.tooltip}" id="it4">
+      <f:validator binding="#{bindings.Accounturl.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Ceo.inputValue}" label="#{bindings.Ceo.hints.label}"
+                  required="#{bindings.Ceo.hints.mandatory}" columns="#{bindings.Ceo.hints.displayWidth}"
+                  maximumLength="#{bindings.Ceo.hints.precision}" shortDesc="#{bindings.Ceo.hints.tooltip}" id="it5">
+      <f:validator binding="#{bindings.Ceo.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Numberofemployees.inputValue}" label="#{bindings.Numberofemployees.hints.label}"
+                  required="#{bindings.Numberofemployees.hints.mandatory}"
+                  columns="#{bindings.Numberofemployees.hints.displayWidth}"
+                  maximumLength="#{bindings.Numberofemployees.hints.precision}"
+                  shortDesc="#{bindings.Numberofemployees.hints.tooltip}" id="it6">
+      <f:validator binding="#{bindings.Numberofemployees.validator}"/>
+      <af:convertNumber groupingUsed="false" pattern="#{bindings.Numberofemployees.format}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Email.inputValue}" label="#{bindings.Email.hints.label}"
+                  required="#{bindings.Email.hints.mandatory}" columns="#{bindings.Email.hints.displayWidth}"
+                  maximumLength="#{bindings.Email.hints.precision}" shortDesc="#{bindings.Email.hints.tooltip}"
+                  id="it7">
+      <f:validator binding="#{bindings.Email.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Mobilenumber.inputValue}" label="#{bindings.Mobilenumber.hints.label}"
+                  required="#{bindings.Mobilenumber.hints.mandatory}"
+                  columns="#{bindings.Mobilenumber.hints.displayWidth}"
+                  maximumLength="#{bindings.Mobilenumber.hints.precision}"
+                  shortDesc="#{bindings.Mobilenumber.hints.tooltip}" id="it8">
+      <f:validator binding="#{bindings.Mobilenumber.validator}"/>
+      <af:convertNumber groupingUsed="false" pattern="#{bindings.Mobilenumber.format}"/>
+    </af:inputText>
+  </af:panelFormLayout>
+  <af:menuBar id="mb1">
+    <af:commandMenuItem text="Save" id="cmi1" action="toCommit"/>
+    <af:commandMenuItem text="Back" id="cmi2" action="exitAddTF"/>
+  </af:menuBar>
+</ui:composition>

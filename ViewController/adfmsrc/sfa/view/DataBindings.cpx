@@ -56,6 +56,14 @@
     <page path="/addContactForAccount.jsff" usageId="sfa_view_addContactForAccountPageDef"/>
     <page path="/editContact.jsff" usageId="sfa_view_EditContactPageDef"/>
     <page path="/searchContact.jsff" usageId="sfa_view_SearchContactPageDef"/>
+    <page path="/WEB-INF/createInsertAccount.xml#createInsertAccount@CreateInsert"
+          usageId="sfa_view_createInsertAccount_createInsertAccount_CreateInsertPageDef"/>
+    <page path="/WEB-INF/createInsertAccount.xml#createInsertAccount@Commit"
+          usageId="sfa_view_createInsertAccount_createInsertAccount_CommitPageDef"/>
+    <page path="/addCustomerAccount.jsff" usageId="sfa_view_addCustomerAccountPageDef"/>
+    <page path="/ManageAccount.jsff" usageId="sfa_view_ManageAccountPageDef"/>
+    <page path="/editAccount.jsff" usageId="sfa_view_editAccountPageDef"/>
+    <page path="/searchAccount.jsff" usageId="sfa_view_searchAccountPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="sfa_view_untitled2PageDef" path="sfa.view.pageDefs.untitled2PageDef"/>
@@ -105,6 +113,14 @@
           path="sfa.view.pageDefs.createInsertContactForAccountTF_createInsertContactForAccountTF_CommitPageDef"/>
     <page id="sfa_view_AccountContactsPageDef" path="sfa.view.pageDefs.AccountContactsPageDef"/>
     <page id="sfa_view_addContactForAccountPageDef" path="sfa.view.pageDefs.addContactForAccountPageDef"/>
+    <page id="sfa_view_createInsertAccount_createInsertAccount_CreateInsertPageDef"
+          path="sfa.view.pageDefs.createInsertAccount_createInsertAccount_CreateInsertPageDef"/>
+    <page id="sfa_view_createInsertAccount_createInsertAccount_CommitPageDef"
+          path="sfa.view.pageDefs.createInsertAccount_createInsertAccount_CommitPageDef"/>
+    <page id="sfa_view_addCustomerAccountPageDef" path="sfa.view.pageDefs.addCustomerAccountPageDef"/>
+    <page id="sfa_view_ManageAccountPageDef" path="sfa.view.pageDefs.ManageAccountPageDef"/>
+    <page id="sfa_view_editAccountPageDef" path="sfa.view.pageDefs.editAccountPageDef"/>
+    <page id="sfa_view_searchAccountPageDef" path="sfa.view.pageDefs.searchAccountPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="sfa.model.entities"

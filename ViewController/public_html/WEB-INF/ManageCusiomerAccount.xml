@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="ManageCusiomerAccount">
+    <default-activity>ManageAccount</default-activity>
+    <data-control-scope>
+      <shared/>
+    </data-control-scope>
+    <view id="ManageAccount">
+      <page>/ManageAccount.jsff</page>
+    </view>
+    <task-flow-call id="createInsertAccount">
+      <task-flow-reference>
+        <document>/WEB-INF/createInsertAccount.xml</document>
+        <id>createInsertAccount</id>
+      </task-flow-reference>
+    </task-flow-call>
+    <view id="editAccount">
+      <page>/editAccount.jsff</page>
+    </view>
+    <view id="searchAccount">
+      <page>/searchAccount.jsff</page>
+    </view>
+    <control-flow-rule id="__1">
+      <from-activity-id>ManageAccount</from-activity-id>
+      <control-flow-case id="__2">
+        <from-outcome>goToAdd</from-outcome>
+        <to-activity-id>createInsertAccount</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__3">
+        <from-outcome>goToEdit</from-outcome>
+        <to-activity-id>editAccount</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__8">
+        <from-outcome>goToSearch</from-outcome>
+        <to-activity-id>searchAccount</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__4">
+      <from-activity-id>editAccount</from-activity-id>
+      <control-flow-case id="__5">
+        <from-outcome>backFromEdit</from-outcome>
+        <to-activity-id>ManageAccount</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__9">
+      <from-activity-id>searchAccount</from-activity-id>
+      <control-flow-case id="__10">
+        <from-outcome>backFromSearch</from-outcome>
+        <to-activity-id>ManageAccount</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <use-page-fragments/>
+  </task-flow-definition>
+</adfc-config>

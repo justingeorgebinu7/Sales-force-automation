@@ -7,13 +7,13 @@
       <property
          name="activityId">CustAccountHome</property>
       <property
-         name="x">228.02148</property>
+         name="x">185.02148</property>
       <property
          name="start">true</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>CustAccountHome&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">140.5918</property>
+         name="y">249.89062</property>
       <property
          name="page">/CustomerAccountManagement/CustAccountHome.jsf</property>
       <property
@@ -24,11 +24,11 @@
       <property
          name="activityId">AccountMenu</property>
       <property
-         name="x">489.6963</property>
+         name="x">492.6963</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>AccountMenu&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">136.09766</property>
+         name="y">282.39648</property>
       <property
          name="page">/AccountMenu.jsf</property>
       <property
@@ -42,7 +42,7 @@
       <property
          name="fromOutcome">toMenu</property>
       <property
-         name="sdm:polyPoints">R50,269.02148,140.24121,448.6963,135.74707,L50</property>
+         name="sdm:polyPoints">R46,226.52303,246.04004,451.6963,278.5459,L46</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -52,7 +52,7 @@
       <property
          name="fromOutcome">backFromMenu</property>
       <property
-         name="sdm:polyPoints">L54,448.6963,139.24707,269.109,143.74121,R54</property>
+         name="sdm:polyPoints">L54,451.19418,285.5459,226.02148,253.04004,R54</property>
    </ControlFlowCase>
    <TaskFlowReturn
       id="TaskFlowReturn6">
@@ -77,6 +77,6 @@
       <property
          name="fromOutcome">exit</property>
       <property
-         name="sdm:polyPoints">R50,530.6963,135.74707,623.0,160.89648,L50</property>
+         name="sdm:polyPoints">T50,492.6963,228.74707,623.0,160.89648,L50</property>
    </ControlFlowCase>
 </SDM>
