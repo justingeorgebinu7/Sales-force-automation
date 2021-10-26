@@ -55,7 +55,7 @@
                                                         <af:spacer id="s2" height="10"/>
                                                         <af:menuBar id="mb1">
                                                             <af:commandMenuItem text="Menu" id="cmi1"
-                                                                                action="goToMenu"/>
+                                                                                action="toMenu"/>
                                                             <af:spacer id="s1" width="5"/>
                                                             <af:commandMenuItem text="Manage Accounts" id="cmi2"/>
                                                         </af:menuBar>

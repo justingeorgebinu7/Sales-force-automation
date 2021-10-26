@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="windows-1252" ?>
 <adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
-  <task-flow-definition id="CustomerAccountParentTF">
-    <default-activity>AccountMenu</default-activity>
+  <task-flow-definition id="CustomerAccountParent">
+    <default-activity>CustAccountHome</default-activity>
     <data-control-scope>
       <shared/>
     </data-control-scope>
-    <view id="AccountMenu">
-      <page>/AccountMenu.jsf</page>
-    </view>
     <view id="CustAccountHome">
       <page>/CustomerAccountManagement/CustAccountHome.jsf</page>
+    </view>
+    <view id="AccountMenu">
+      <page>/AccountMenu.jsf</page>
     </view>
     <task-flow-return id="taskFlowReturn1">
       <outcome>
@@ -19,18 +19,18 @@
     <control-flow-rule id="__1">
       <from-activity-id>CustAccountHome</from-activity-id>
       <control-flow-case id="__2">
-        <from-outcome>goToMenu</from-outcome>
+        <from-outcome>toMenu</from-outcome>
         <to-activity-id>AccountMenu</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <control-flow-rule id="__3">
       <from-activity-id>AccountMenu</from-activity-id>
       <control-flow-case id="__4">
-        <from-outcome>back</from-outcome>
+        <from-outcome>backFromMenu</from-outcome>
         <to-activity-id>CustAccountHome</to-activity-id>
       </control-flow-case>
-      <control-flow-case id="__6">
-        <from-outcome>*exit</from-outcome>
+      <control-flow-case id="__5">
+        <from-outcome>exit</from-outcome>
         <to-activity-id>taskFlowReturn1</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
