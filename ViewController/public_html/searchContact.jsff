@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <af:panelGroupLayout layout="vertical" id="pgl1">
+    <af:panelHeader text="Customercontacts" id="ph1">
+      <af:quickQuery label="Search" searchDesc="Search" id="qryId1"
+                     value="#{bindings.ImplicitViewCriteriaQuery1.quickQueryDescriptor}"
+                     model="#{bindings.ImplicitViewCriteriaQuery1.queryModel}"
+                     queryListener="#{bindings.ImplicitViewCriteriaQuery1.processQuery}">
+        <f:facet name="end">
+          <af:commandLink text="Advanced" rendered="false" id="cl1"/>
+        </f:facet>
+      </af:quickQuery>
+    </af:panelHeader>
+    <af:table value="#{bindings.CustomercontactsView21.collectionModel}" var="row"
+              rows="#{bindings.CustomercontactsView21.rangeSize}"
+              emptyText="#{bindings.CustomercontactsView21.viewable ? 'No data to display.' : 'Access Denied.'}"
+              rowBandingInterval="0" selectedRowKeys="#{bindings.CustomercontactsView21.collectionModel.selectedRow}"
+              selectionListener="#{bindings.CustomercontactsView21.collectionModel.makeCurrent}" rowSelection="single"
+              fetchSize="#{bindings.CustomercontactsView21.rangeSize}" partialTriggers="::qryId1" id="t1">
+      <af:column sortProperty="#{bindings.CustomercontactsView21.hints.Contactid.name}" sortable="true"
+                 headerText="#{bindings.CustomercontactsView21.hints.Contactid.label}" id="c1">
+        <af:outputText value="#{row.Contactid}" shortDesc="#{bindings.CustomercontactsView21.hints.Contactid.tooltip}"
+                       id="ot1">
+          <af:convertNumber groupingUsed="false" pattern="#{bindings.CustomercontactsView21.hints.Contactid.format}"/>
+        </af:outputText>
+      </af:column>
+      <af:column sortProperty="#{bindings.CustomercontactsView21.hints.Name.name}" sortable="true"
+                 headerText="#{bindings.CustomercontactsView21.hints.Name.label}" id="c2">
+        <af:outputText value="#{row.Name}" shortDesc="#{bindings.CustomercontactsView21.hints.Name.tooltip}" id="ot2"/>
+      </af:column>
+      <af:column sortProperty="#{bindings.CustomercontactsView21.hints.Title.name}" sortable="true"
+                 headerText="#{bindings.CustomercontactsView21.hints.Title.label}" id="c3">
+        <af:outputText value="#{row.Title}" shortDesc="#{bindings.CustomercontactsView21.hints.Title.tooltip}"
+                       id="ot3"/>
+      </af:column>
+      <af:column sortProperty="#{bindings.CustomercontactsView21.hints.Department.name}" sortable="true"
+                 headerText="#{bindings.CustomercontactsView21.hints.Department.label}" id="c4">
+        <af:outputText value="#{row.Department}" shortDesc="#{bindings.CustomercontactsView21.hints.Department.tooltip}"
+                       id="ot4"/>
+      </af:column>
+      <af:column sortProperty="#{bindings.CustomercontactsView21.hints.Workphone.name}" sortable="true"
+                 headerText="#{bindings.CustomercontactsView21.hints.Workphone.label}" id="c5">
+        <af:outputText value="#{row.Workphone}" shortDesc="#{bindings.CustomercontactsView21.hints.Workphone.tooltip}"
+                       id="ot5">
+          <af:convertNumber groupingUsed="false" pattern="#{bindings.CustomercontactsView21.hints.Workphone.format}"/>
+        </af:outputText>
+      </af:column>
+      <af:column sortProperty="#{bindings.CustomercontactsView21.hints.Email.name}" sortable="true"
+                 headerText="#{bindings.CustomercontactsView21.hints.Email.label}" id="c6">
+        <af:outputText value="#{row.Email}" shortDesc="#{bindings.CustomercontactsView21.hints.Email.tooltip}"
+                       id="ot6"/>
+      </af:column>
+      <af:column sortProperty="#{bindings.CustomercontactsView21.hints.Buyingrole.name}" sortable="true"
+                 headerText="#{bindings.CustomercontactsView21.hints.Buyingrole.label}" id="c7">
+        <af:outputText value="#{row.Buyingrole}" shortDesc="#{bindings.CustomercontactsView21.hints.Buyingrole.tooltip}"
+                       id="ot7"/>
+      </af:column>
+      <af:column sortProperty="#{bindings.CustomercontactsView21.hints.Influencelevel.name}" sortable="true"
+                 headerText="#{bindings.CustomercontactsView21.hints.Influencelevel.label}" id="c8">
+        <af:outputText value="#{row.Influencelevel}"
+                       shortDesc="#{bindings.CustomercontactsView21.hints.Influencelevel.tooltip}" id="ot8"/>
+      </af:column>
+      <af:column sortProperty="#{bindings.CustomercontactsView21.hints.Isprimarycontact.name}" sortable="true"
+                 headerText="#{bindings.CustomercontactsView21.hints.Isprimarycontact.label}" id="c9">
+        <af:outputText value="#{row.Isprimarycontact}"
+                       shortDesc="#{bindings.CustomercontactsView21.hints.Isprimarycontact.tooltip}" id="ot9"/>
+      </af:column>
+    </af:table>
+  </af:panelGroupLayout>
+  <af:button text="Back" id="b1" action="backFromSearch"/>
+</ui:composition>

@@ -8,6 +8,8 @@
               id="CustomercontactsView2Iterator"/>
     <searchRegion Criteria="__ImplicitViewCriteria__" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
                   Binds="CustomercontactsView2Iterator" id="ImplicitViewCriteriaQuery"/>
+    <searchRegion Criteria="__ImplicitViewCriteria__" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  Binds="CustomercontactsView2Iterator" id="ImplicitViewCriteriaQuery1"/>
   </executables>
   <bindings>
     <tree IterBinding="CustomercontactsView2Iterator" id="CustomercontactsView2">
@@ -20,6 +22,21 @@
           <Item Value="Department"/>
           <Item Value="Workphone"/>
           <Item Value="Email"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="CustomercontactsView2Iterator" id="CustomercontactsView21">
+      <nodeDefinition DefName="sfa.model.viewobjects.CustomercontactsView" Name="CustomercontactsView210">
+        <AttrNames>
+          <Item Value="Contactid"/>
+          <Item Value="Name"/>
+          <Item Value="Title"/>
+          <Item Value="Department"/>
+          <Item Value="Workphone"/>
+          <Item Value="Email"/>
+          <Item Value="Buyingrole"/>
+          <Item Value="Influencelevel"/>
+          <Item Value="Isprimarycontact"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

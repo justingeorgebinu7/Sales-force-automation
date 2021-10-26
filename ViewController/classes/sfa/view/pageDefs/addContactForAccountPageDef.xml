@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.22.48" id="addContactForAccountPageDef"
+                Package="sfa.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="CustomercontactsView2" RangeSize="25" DataControl="AppModuleDataControl"
+              id="CustomercontactsView2Iterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="CustomercontactsView2Iterator" id="Contactid">
+      <AttrNames>
+        <Item Value="Contactid"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomercontactsView2Iterator" id="Name">
+      <AttrNames>
+        <Item Value="Name"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomercontactsView2Iterator" id="Title">
+      <AttrNames>
+        <Item Value="Title"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomercontactsView2Iterator" id="Department">
+      <AttrNames>
+        <Item Value="Department"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomercontactsView2Iterator" id="Workphone">
+      <AttrNames>
+        <Item Value="Workphone"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomercontactsView2Iterator" id="Email">
+      <AttrNames>
+        <Item Value="Email"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomercontactsView2Iterator" id="Buyingrole">
+      <AttrNames>
+        <Item Value="Buyingrole"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomercontactsView2Iterator" id="Influencelevel">
+      <AttrNames>
+        <Item Value="Influencelevel"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomercontactsView2Iterator" id="Isprimarycontact">
+      <AttrNames>
+        <Item Value="Isprimarycontact"/>
+      </AttrNames>
+    </attributeValues>
+  </bindings>
+</pageDefinition>

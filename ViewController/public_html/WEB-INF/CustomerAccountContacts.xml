@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="CustomerAccountContacts">
+    <default-activity>AccountContacts</default-activity>
+    <data-control-scope>
+      <shared/>
+    </data-control-scope>
+    <view id="AccountContacts">
+      <page>/AccountContacts.jsff</page>
+    </view>
+    <task-flow-call id="createInsertContactForAccountTF">
+      <task-flow-reference>
+        <document>/WEB-INF/createInsertContactForAccountTF.xml</document>
+        <id>createInsertContactForAccountTF</id>
+      </task-flow-reference>
+    </task-flow-call>
+    <view id="editContact">
+      <page>/editContact.jsff</page>
+    </view>
+    <view id="searchContact">
+      <page>/searchContact.jsff</page>
+    </view>
+    <control-flow-rule id="__1">
+      <from-activity-id>AccountContacts</from-activity-id>
+      <control-flow-case id="__2">
+        <to-activity-id>addContactTF</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__3">
+        <from-outcome>addContact</from-outcome>
+        <to-activity-id>createInsertContactForAccountTF</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__4">
+        <from-outcome>toEdit</from-outcome>
+        <to-activity-id>editContact</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__7">
+        <from-outcome>toSearch</from-outcome>
+        <to-activity-id>searchContact</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__5">
+      <from-activity-id>editContact</from-activity-id>
+      <control-flow-case id="__6">
+        <from-outcome>backFromEdit</from-outcome>
+        <to-activity-id>AccountContacts</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__8">
+      <from-activity-id>searchContact</from-activity-id>
+      <control-flow-case id="__9">
+        <from-outcome>backFromSearch</from-outcome>
+        <to-activity-id>AccountContacts</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <use-page-fragments/>
+  </task-flow-definition>
+</adfc-config>

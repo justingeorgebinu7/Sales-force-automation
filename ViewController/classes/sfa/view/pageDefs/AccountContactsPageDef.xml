@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.22.48" id="AccountContactsPageDef"
+                Package="sfa.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="CustomercontactsView2" RangeSize="25" DataControl="AppModuleDataControl"
+              id="CustomercontactsView2Iterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="CustomercontactsView2Iterator" id="CustomercontactsView2">
+      <nodeDefinition DefName="sfa.model.viewobjects.CustomercontactsView" Name="CustomercontactsView20">
+        <AttrNames>
+          <Item Value="Contactid"/>
+          <Item Value="Name"/>
+          <Item Value="Title"/>
+          <Item Value="Department"/>
+          <Item Value="Workphone"/>
+          <Item Value="Email"/>
+          <Item Value="Buyingrole"/>
+          <Item Value="Influencelevel"/>
+          <Item Value="Isprimarycontact"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

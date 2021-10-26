@@ -30,7 +30,10 @@
                                              text="Menu" background="default">
                                     <f:facet name="toolbar"/>
                                     <af:panelTabbed position="start" id="pt1" verticalTabMode="iconAndText">
-                                        <af:showDetailItem id="Create" text="Contacts"/>
+                                        <af:showDetailItem id="Create" text="Contacts">
+                                                        <af:region value="#{bindings.CustomerAccountContacts1.regionModel}"
+                                                                   id="r3"/>
+                                                    </af:showDetailItem>
                                         <af:showDetailItem id="View" text="Notes" disclosed="true">
                                                         <af:region value="#{bindings.notesTrialAddTF1.regionModel}"
                                                                    id="r1"/>
