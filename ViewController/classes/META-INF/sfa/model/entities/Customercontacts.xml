@@ -9,7 +9,8 @@
   DBObjectType="table"
   DBObjectName="CUSTOMERCONTACTS"
   AliasName="Customercontacts"
-  BindingStyle="OracleName">
+  BindingStyle="OracleName"
+  xmlns:validation="http://xmlns.oracle.com/adfm/validation">
   <Attribute
     Name="Contactid"
     IsNotNull="true"
@@ -81,6 +82,12 @@
     <DesignTime>
       <Attr Name="_DisplaySize" Value="50"/>
     </DesignTime>
+    <validation:RegExpValidationBean
+      Name="EmailRule0"
+      ResId="sfa.model.entities.Customercontacts.Email_Rule_0"
+      OnAttribute="Email"
+      Pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}"
+      Inverse="false"/>
   </Attribute>
   <Attribute
     Name="Buyingrole"
@@ -105,6 +112,13 @@
     <DesignTime>
       <Attr Name="_DisplaySize" Value="30"/>
     </DesignTime>
+    <validation:RegExpValidationBean
+      Name="InfluencelevelRule0"
+      ResId="sfa.model.entities.Customercontacts.Influencelevel_Rule_0"
+      OnAttribute="Influencelevel"
+      Pattern="low|mediaum|high"
+      Flags="CaseInsensitive"
+      Inverse="false"/>
   </Attribute>
   <Attribute
     Name="Isprimarycontact"
@@ -191,4 +205,8 @@
       <Item Value="sfa.model.entities.Customercontacts.Customeraccountid"/>
     </AttrArray>
   </Key>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="sfa.model.ModelBundle"/>
+  </ResourceBundle>
 </Entity>

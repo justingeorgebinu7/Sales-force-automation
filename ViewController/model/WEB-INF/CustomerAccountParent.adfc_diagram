@@ -30,7 +30,7 @@
       <property
          name="y">282.39648</property>
       <property
-         name="page">/AccountMenu.jsf</property>
+         name="page">/CustomerAccountManagement/AccountMenu.jsf</property>
       <property
          name="exceptionHandler">false</property>
    </View>
@@ -77,6 +77,6 @@
       <property
          name="fromOutcome">exit</property>
       <property
-         name="sdm:polyPoints">T50,492.6963,228.74707,623.0,160.89648,L50</property>
+         name="sdm:polyPoints">T50,492.6963,228.0459,623.0,160.89648,L50</property>
    </ControlFlowCase>
 </SDM>
