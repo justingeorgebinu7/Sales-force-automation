@@ -7,13 +7,13 @@
       <property
          name="activityId">AccountMenu</property>
       <property
-         name="x">522.6963</property>
+         name="x">517.6963</property>
       <property
          name="start">true</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>AccountMenu&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">198.34473</property>
+         name="y">198.64355</property>
       <property
          name="page">/AccountMenu.jsf</property>
       <property
@@ -42,7 +42,7 @@
       <property
          name="fromOutcome">goToMenu</property>
       <property
-         name="sdm:polyPoints">R46,281.1479,187.24707,481.6963,194.49414,L46</property>
+         name="sdm:polyPoints">R46,281.15646,187.24707,476.6963,194.79297,L46</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -52,7 +52,7 @@
       <property
          name="fromOutcome">back</property>
       <property
-         name="sdm:polyPoints">L54,481.56995,201.49414,281.02148,194.24707,R54</property>
+         name="sdm:polyPoints">L54,476.56137,201.79297,281.02148,194.24707,R54</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -62,7 +62,7 @@
       <property
          name="fromOutcome">*exit</property>
       <property
-         name="sdm:polyPoints">R50,563.6963,197.99414,685.0,239.19531,L50</property>
+         name="sdm:polyPoints">R50,558.6963,198.29297,685.0,239.19531,L50</property>
    </ControlFlowCase>
    <TaskFlowReturn
       id="TaskFlowReturn8">

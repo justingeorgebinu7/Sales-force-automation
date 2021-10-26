@@ -6,6 +6,8 @@
     <variableIterator id="variables"/>
     <taskFlow id="notesTrialAddTF1" taskFlowId="/WEB-INF/notesTrialAddTF.xml#notesTrialAddTF" activation="deferred"
               xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <taskFlow id="taskCustomerAccount1" taskFlowId="/WEB-INF/taskCustomerAccount.xml#taskCustomerAccount"
+              activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
   </executables>
   <bindings/>
 </pageDefinition>

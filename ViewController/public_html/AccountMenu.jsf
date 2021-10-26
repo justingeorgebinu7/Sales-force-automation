@@ -35,7 +35,10 @@
                                                         <af:region value="#{bindings.notesTrialAddTF1.regionModel}"
                                                                    id="r1"/>
                                                     </af:showDetailItem>
-                                        <af:showDetailItem id="Search" text="Task"/>
+                                        <af:showDetailItem id="Search" text="Task">
+                                                        <af:region value="#{bindings.taskCustomerAccount1.regionModel}"
+                                                                   id="r2"/>
+                                                    </af:showDetailItem>
                                         <af:showDetailItem id="Edit" text="Tab Label 4"/>
                                         <af:showDetailItem id="Delete" text="Tab Label 5"/>
                                     </af:panelTabbed>

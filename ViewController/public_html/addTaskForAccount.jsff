@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:f="http://java.sun.com/jsf/core">
+  <af:panelFormLayout id="pfl1">
+    <af:inputText value="#{bindings.Taskid.inputValue}" label="#{bindings.Taskid.hints.label}"
+                  required="#{bindings.Taskid.hints.mandatory}" columns="#{bindings.Taskid.hints.displayWidth}"
+                  maximumLength="#{bindings.Taskid.hints.precision}" shortDesc="#{bindings.Taskid.hints.tooltip}"
+                  id="it1">
+      <f:validator binding="#{bindings.Taskid.validator}"/>
+      <af:convertNumber groupingUsed="false" pattern="#{bindings.Taskid.format}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Name.inputValue}" label="#{bindings.Name.hints.label}"
+                  required="#{bindings.Name.hints.mandatory}" columns="#{bindings.Name.hints.displayWidth}"
+                  maximumLength="#{bindings.Name.hints.precision}" shortDesc="#{bindings.Name.hints.tooltip}" id="it2">
+      <f:validator binding="#{bindings.Name.validator}"/>
+    </af:inputText>
+    <af:inputDate value="#{bindings.Duedate.inputValue}" label="#{bindings.Duedate.hints.label}"
+                  required="#{bindings.Duedate.hints.mandatory}" columns="#{bindings.Duedate.hints.displayWidth}"
+                  shortDesc="#{bindings.Duedate.hints.tooltip}" id="id1">
+      <f:validator binding="#{bindings.Duedate.validator}"/>
+      <af:convertDateTime pattern="#{bindings.Duedate.format}"/>
+    </af:inputDate>
+    <af:inputText value="#{bindings.Priority.inputValue}" label="#{bindings.Priority.hints.label}"
+                  required="#{bindings.Priority.hints.mandatory}" columns="#{bindings.Priority.hints.displayWidth}"
+                  maximumLength="#{bindings.Priority.hints.precision}" shortDesc="#{bindings.Priority.hints.tooltip}"
+                  id="it3">
+      <f:validator binding="#{bindings.Priority.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Description.inputValue}" label="#{bindings.Description.hints.label}"
+                  required="#{bindings.Description.hints.mandatory}"
+                  columns="#{bindings.Description.hints.displayWidth}"
+                  maximumLength="#{bindings.Description.hints.precision}"
+                  shortDesc="#{bindings.Description.hints.tooltip}" id="it4">
+      <f:validator binding="#{bindings.Description.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Percentageofcompletion.inputValue}"
+                  label="#{bindings.Percentageofcompletion.hints.label}"
+                  required="#{bindings.Percentageofcompletion.hints.mandatory}"
+                  columns="#{bindings.Percentageofcompletion.hints.displayWidth}"
+                  maximumLength="#{bindings.Percentageofcompletion.hints.precision}"
+                  shortDesc="#{bindings.Percentageofcompletion.hints.tooltip}" id="it5">
+      <f:validator binding="#{bindings.Percentageofcompletion.validator}"/>
+      <af:convertNumber groupingUsed="false" pattern="#{bindings.Percentageofcompletion.format}"/>
+    </af:inputText>
+  </af:panelFormLayout>
+  <af:button text="Save" id="b2" action="commit"/>
+  <af:button text="Back" id="b1" action="exitFromAddTask"/>
+</ui:composition>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.22.48" id="editTasksPageDef"
+                Package="sfa.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="TaskView3" RangeSize="25" DataControl="AppModuleDataControl" id="TaskView3Iterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="TaskView3Iterator" id="Taskid">
+      <AttrNames>
+        <Item Value="Taskid"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TaskView3Iterator" id="Name">
+      <AttrNames>
+        <Item Value="Name"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TaskView3Iterator" id="Duedate">
+      <AttrNames>
+        <Item Value="Duedate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TaskView3Iterator" id="Priority">
+      <AttrNames>
+        <Item Value="Priority"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TaskView3Iterator" id="Description">
+      <AttrNames>
+        <Item Value="Description"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TaskView3Iterator" id="Percentageofcompletion">
+      <AttrNames>
+        <Item Value="Percentageofcompletion"/>
+      </AttrNames>
+    </attributeValues>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+  </bindings>
+</pageDefinition>

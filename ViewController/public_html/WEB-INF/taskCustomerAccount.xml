@@ -1,9 +1,62 @@
 <?xml version="1.0" encoding="windows-1252" ?>
 <adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
   <task-flow-definition id="taskCustomerAccount">
+    <default-activity>AccountTasks</default-activity>
     <data-control-scope>
       <shared/>
     </data-control-scope>
+    <view id="AccountTasks">
+      <page>/AccountTasks.jsff</page>
+    </view>
+    <view id="editTasks">
+      <page>/editTasks.jsff</page>
+    </view>
+    <view id="searchTasks">
+      <page>/searchTasks.jsff</page>
+    </view>
+    <task-flow-call id="addTaskForAccount">
+      <task-flow-reference>
+        <document>/WEB-INF/addTaskForAccount.xml</document>
+        <id>addTaskForAccount</id>
+      </task-flow-reference>
+    </task-flow-call>
+    <control-flow-rule id="__1">
+      <from-activity-id>AccountTasks</from-activity-id>
+      <control-flow-case id="__2">
+        <from-outcome>goToAddTask</from-outcome>
+        <to-activity-id>addTask</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__3">
+        <from-outcome>goToAdd</from-outcome>
+        <to-activity-id>createInsertTask</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__4">
+        <from-outcome>goToEdit</from-outcome>
+        <to-activity-id>editTasks</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__7">
+        <from-outcome>goToSearch</from-outcome>
+        <to-activity-id>searchTasks</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__10">
+        <from-outcome>goToAddTask</from-outcome>
+        <to-activity-id>addTaskForAccount</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__5">
+      <from-activity-id>editTasks</from-activity-id>
+      <control-flow-case id="__6">
+        <from-outcome>backFromEdit</from-outcome>
+        <to-activity-id>AccountTasks</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__8">
+      <from-activity-id>searchTasks</from-activity-id>
+      <control-flow-case id="__9">
+        <from-outcome>backFromSearch</from-outcome>
+        <to-activity-id>AccountTasks</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
     <use-page-fragments/>
   </task-flow-definition>
 </adfc-config>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.22.48"
-                id="createInsertTask_createInsertTask_CreateInsertPageDef" Package="sfa.view.pageDefs"
+                id="addTaskForAccount_addTaskForAccount_CreateInsertPageDef" Package="sfa.view.pageDefs"
                 SkipValidation="true">
   <parameters/>
   <executables>

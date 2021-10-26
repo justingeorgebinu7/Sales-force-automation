@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.22.48"
-                id="createInsertTask_createInsertTask_CreateInsertPageDef" Package="sfa.view.pageDefs"
-                SkipValidation="true">
+                id="createInsertTask_createInsertTask_CreatePageDef" Package="sfa.view.pageDefs" SkipValidation="true">
   <parameters/>
   <executables>
     <iterator Binds="TaskView3" RangeSize="25" DataControl="AppModuleDataControl" id="TaskView3Iterator"/>
   </executables>
   <bindings>
-    <action IterBinding="TaskView3Iterator" id="CreateInsert" RequiresUpdateModel="true" Action="createInsertRow"/>
+    <action IterBinding="TaskView3Iterator" id="Create" RequiresUpdateModel="true" Action="createRow"/>
   </bindings>
 </pageDefinition>

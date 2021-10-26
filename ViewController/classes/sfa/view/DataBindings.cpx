@@ -30,6 +30,24 @@
     <page path="/CustomerAccountManagement/CustomerAccountHome.jsf" usageId="sfa_view_CustomerAccountHomePageDef"/>
     <page path="/CustomerAccountManagement/CustAccountHome.jsf" usageId="sfa_view_CustAccountHomePageDef"/>
     <page path="/AccountMenu.jsf" usageId="sfa_view_AccountMenuPageDef"/>
+    <page path="/WEB-INF/createInsertTask.xml#createInsertTask@Commit"
+          usageId="sfa_view_createInsertTask_createInsertTask_CommitPageDef"/>
+    <page path="/CustomerAccountManagement/taskCreateInsert.jsff" usageId="sfa_view_taskCreateInsertPageDef"/>
+    <page path="/editTasks.jsff" usageId="sfa_view_editTasksPageDef"/>
+    <page path="/AccountTasks.jsff" usageId="sfa_view_AccountTasksPageDef"/>
+    <page path="/searchTasks.jsff" usageId="sfa_view_searchTasksPageDef"/>
+    <page path="/WEB-INF/createInsertTask.xml#createInsertTask@Create"
+          usageId="sfa_view_createInsertTask_createInsertTask_CreatePageDef"/>
+    <page path="/WEB-INF/addAccountTasksTF.xml#addAccountTasksTF@CreateInsert"
+          usageId="sfa_view_addAccountTasksTF_addAccountTasksTF_CreateInsertPageDef"/>
+    <page path="/WEB-INF/addAccountTasksTF.xml#addAccountTasksTF@Commit"
+          usageId="sfa_view_addAccountTasksTF_addAccountTasksTF_CommitPageDef"/>
+    <page path="/addAccountTask.jsff" usageId="sfa_view_addAccountTaskPageDef"/>
+    <page path="/WEB-INF/addTaskForAccount.xml#addTaskForAccount@CreateInsert"
+          usageId="sfa_view_addTaskForAccount_addTaskForAccount_CreateInsertPageDef"/>
+    <page path="/addTaskForAccount.jsff" usageId="sfa_view_addTaskForAccountPageDef"/>
+    <page path="/WEB-INF/addTaskForAccount.xml#addTaskForAccount@Commit"
+          usageId="sfa_view_addTaskForAccount_addTaskForAccount_CommitPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="sfa_view_untitled2PageDef" path="sfa.view.pageDefs.untitled2PageDef"/>
@@ -55,6 +73,24 @@
     <page id="sfa_view_CustomerAccountHomePageDef" path="CustomerAccountManagement.CustomerAccountHomePageDef"/>
     <page id="sfa_view_CustAccountHomePageDef" path="CustomerAccountManagement.CustAccountHomePageDef"/>
     <page id="sfa_view_AccountMenuPageDef" path="sfa.view.pageDefs.AccountMenuPageDef"/>
+    <page id="sfa_view_createInsertTask_createInsertTask_CommitPageDef"
+          path="sfa.view.pageDefs.createInsertTask_createInsertTask_CommitPageDef"/>
+    <page id="sfa_view_taskCreateInsertPageDef" path="CustomerAccountManagement.taskCreateInsertPageDef"/>
+    <page id="sfa_view_editTasksPageDef" path="sfa.view.pageDefs.editTasksPageDef"/>
+    <page id="sfa_view_AccountTasksPageDef" path="sfa.view.pageDefs.AccountTasksPageDef"/>
+    <page id="sfa_view_searchTasksPageDef" path="sfa.view.pageDefs.searchTasksPageDef"/>
+    <page id="sfa_view_createInsertTask_createInsertTask_CreatePageDef"
+          path="sfa.view.pageDefs.createInsertTask_createInsertTask_CreatePageDef"/>
+    <page id="sfa_view_addAccountTasksTF_addAccountTasksTF_CreateInsertPageDef"
+          path="sfa.view.pageDefs.addAccountTasksTF_addAccountTasksTF_CreateInsertPageDef"/>
+    <page id="sfa_view_addAccountTasksTF_addAccountTasksTF_CommitPageDef"
+          path="sfa.view.pageDefs.addAccountTasksTF_addAccountTasksTF_CommitPageDef"/>
+    <page id="sfa_view_addAccountTaskPageDef" path="sfa.view.pageDefs.addAccountTaskPageDef"/>
+    <page id="sfa_view_addTaskForAccount_addTaskForAccount_CreateInsertPageDef"
+          path="sfa.view.pageDefs.addTaskForAccount_addTaskForAccount_CreateInsertPageDef"/>
+    <page id="sfa_view_addTaskForAccountPageDef" path="sfa.view.pageDefs.addTaskForAccountPageDef"/>
+    <page id="sfa_view_addTaskForAccount_addTaskForAccount_CommitPageDef"
+          path="sfa.view.pageDefs.addTaskForAccount_addTaskForAccount_CommitPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="sfa.model.entities"

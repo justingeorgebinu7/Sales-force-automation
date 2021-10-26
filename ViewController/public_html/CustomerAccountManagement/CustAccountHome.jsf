@@ -13,7 +13,7 @@
                             <af:panelSplitter id="ps3" orientation="vertical" splitterPosition="88">
                                 <f:facet name="first"/>
                                 <f:facet name="second">
-                                    <af:panelSplitter id="ps4" splitterPosition="359">
+                                    <af:panelSplitter id="ps4" splitterPosition="367">
                                         <f:facet name="first">
                                             <af:panelStretchLayout id="psl1" dimensionsFrom="parent">
                                                 <f:facet name="start"/>

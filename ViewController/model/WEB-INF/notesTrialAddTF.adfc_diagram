@@ -65,7 +65,7 @@
       <property
          name="y">217.89648</property>
       <property
-         name="page">/EditAccountNotes.jsff</property>
+         name="page">/CustomerAccountManagement/EditAccountNotes.jsff</property>
       <property
          name="exceptionHandler">false</property>
    </View>
@@ -82,7 +82,7 @@
       <property
          name="y">372.24707</property>
       <property
-         name="page">/SearchAccountNotes.jsff</property>
+         name="page">/CustomerAccountManagement/SearchAccountNotes.jsff</property>
       <property
          name="exceptionHandler">false</property>
    </View>

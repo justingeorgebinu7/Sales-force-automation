@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.22.48" id="AccountTasksPageDef"
+                Package="sfa.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="TaskView3" RangeSize="25" DataControl="AppModuleDataControl" id="TaskView3Iterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="TaskView3Iterator" id="TaskView3">
+      <nodeDefinition DefName="sfa.model.viewobjects.TaskView" Name="TaskView30">
+        <AttrNames>
+          <Item Value="Taskid"/>
+          <Item Value="Name"/>
+          <Item Value="Duedate"/>
+          <Item Value="Priority"/>
+          <Item Value="Description"/>
+          <Item Value="Percentageofcompletion"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>
