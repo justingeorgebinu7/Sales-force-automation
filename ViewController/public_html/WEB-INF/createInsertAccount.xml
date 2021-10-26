@@ -12,7 +12,7 @@
       </outcome>
     </method-call>
     <view id="addCustomerAccount">
-      <page>/addCustomerAccount.jsff</page>
+      <page>/CustomerAccountManagement/addCustomerAccount.jsff</page>
     </view>
     <task-flow-return id="taskFlowReturn1">
       <outcome>

@@ -6,7 +6,7 @@
       <shared/>
     </data-control-scope>
     <view id="AccountContacts">
-      <page>/AccountContacts.jsff</page>
+      <page>/CustomerAccountManagement/AccountContacts.jsff</page>
     </view>
     <task-flow-call id="createInsertContactForAccountTF">
       <task-flow-reference>
@@ -15,10 +15,10 @@
       </task-flow-reference>
     </task-flow-call>
     <view id="editContact">
-      <page>/editContact.jsff</page>
+      <page>/CustomerAccountManagement/editContact.jsff</page>
     </view>
     <view id="searchContact">
-      <page>/searchContact.jsff</page>
+      <page>/CustomerAccountManagement/searchContact.jsff</page>
     </view>
     <control-flow-rule id="__1">
       <from-activity-id>AccountContacts</from-activity-id>

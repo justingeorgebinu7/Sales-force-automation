@@ -9,7 +9,7 @@
       <page>/CustomerAccountManagement/CustAccountHome.jsf</page>
     </view>
     <view id="AccountMenu">
-      <page>/AccountMenu.jsf</page>
+      <page>/CustomerAccountManagement/AccountMenu.jsf</page>
     </view>
     <task-flow-return id="taskFlowReturn1">
       <outcome>

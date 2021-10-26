@@ -6,13 +6,13 @@
       <shared/>
     </data-control-scope>
     <view id="AccountTasks">
-      <page>/AccountTasks.jsff</page>
+      <page>/CustomerAccountManagement/AccountTasks.jsff</page>
     </view>
     <view id="editTasks">
-      <page>/editTasks.jsff</page>
+      <page>/CustomerAccountManagement/editTasks.jsff</page>
     </view>
     <view id="searchTasks">
-      <page>/searchTasks.jsff</page>
+      <page>/CustomerAccountManagement/searchTasks.jsff</page>
     </view>
     <task-flow-call id="addTaskForAccount">
       <task-flow-reference>
