@@ -46,7 +46,7 @@
       <property
          name="fromOutcome">addContact</property>
       <property
-         name="sdm:polyPoints">R50,199.0,244.5459,436.0,110.5459,L50</property>
+         name="sdm:polyPoints">R29,200.10501,226.12582,434.895,110.5459,L50</property>
    </ControlFlowCase>
    <View
       id="View7">
@@ -90,7 +90,7 @@
       <property
          name="fromOutcome">toEdit</property>
       <property
-         name="sdm:polyPoints">R42,201.9313,237.5459,440.0,253.0459,L46</property>
+         name="sdm:polyPoints">R39,203.94734,235.33588,438.895,251.94089,L45</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -100,7 +100,7 @@
       <property
          name="fromOutcome">backFromEdit</property>
       <property
-         name="sdm:polyPoints">L54,439.87656,260.0459,199.0,251.5459,R58</property>
+         name="sdm:polyPoints">L55,438.57016,261.1509,203.6275,244.5459,R50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -110,7 +110,7 @@
       <property
          name="fromOutcome">toSearch</property>
       <property
-         name="sdm:polyPoints">R62,199.0,255.0459,447.0,385.5459,L50</property>
+         name="sdm:polyPoints">R71,200.10501,262.96597,443.64417,390.15088,L55</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -120,7 +120,7 @@
       <property
          name="fromOutcome">backFromSearch</property>
       <property
-         name="sdm:polyPoints">L46,447.0,382.0459,200.72932,251.5459,R58</property>
+         name="sdm:polyPoints">L45,445.89502,380.94086,202.34673,253.75595,R61</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"

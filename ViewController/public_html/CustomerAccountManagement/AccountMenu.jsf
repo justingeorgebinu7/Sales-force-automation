@@ -56,17 +56,18 @@
                         </f:facet>
                         <f:facet name="second">
                             <af:panelSplitter id="ps3" orientation="vertical" splitterPosition="88">
-                                <f:facet name="first">
-                                    <af:menuBar id="mb1">
-                                        <af:commandMenuItem text="Back" id="cmi1" action="backFromMenu"/>
-                                        <af:commandMenuItem text="Exit" id="cmi2" action="*exit"/>
-                                    </af:menuBar>
-                                </f:facet>
+                                <f:facet name="first"/>
                                 <f:facet name="second">
-                                    <af:panelStretchLayout id="psl3" inlineStyle="border-radius:30px 30px 30px 30px;">
+                                    <af:panelStretchLayout id="psl3" inlineStyle="border-radius:30px 30px 30px 30px;"
+                                                           topHeight="30px">
                                         <f:facet name="start"/>
                                         <f:facet name="end"/>
-                                        <f:facet name="top"/>
+                                        <f:facet name="top">
+                                            <af:menuBar id="mb1">
+                                                <af:commandMenuItem text="Back" id="cmi1" action="backFromMenu"/>
+                                                <af:commandMenuItem text="Exit" id="cmi2" action="*exit"/>
+                                            </af:menuBar>
+                                        </f:facet>
                                         <f:facet name="bottom"/>
                                         <f:facet name="center">
                                             <af:panelBox id="pb3"

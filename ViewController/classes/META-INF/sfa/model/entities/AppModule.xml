@@ -109,6 +109,9 @@
   <ViewUsage
     Name="UserroleView3"
     ViewObjectName="sfa.model.viewobjects.UserroleView"/>
+  <ViewUsage
+    Name="AppointmentsView3"
+    ViewObjectName="sfa.model.viewobjects.AppointmentsView"/>
   <ViewLinkUsage
     Name="AddressCustomeraccountFkLink1"
     ViewLinkObjectName="sfa.model.viewobjects.AddressCustomeraccountFkLink"
@@ -222,5 +225,11 @@
     ViewLinkObjectName="sfa.model.viewobjects.UserroleUseraccountFkLink"
     SrcViewUsageName="sfa.model.entities.AppModule.UseraccountView1"
     DstViewUsageName="sfa.model.entities.AppModule.UserroleView3"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="AppointmentsContactsFkLink2"
+    ViewLinkObjectName="sfa.model.viewobjects.AppointmentsContactsFkLink"
+    SrcViewUsageName="sfa.model.entities.AppModule.CustomercontactsView2"
+    DstViewUsageName="sfa.model.entities.AppModule.AppointmentsView3"
     Reversed="false"/>
 </AppModule>
