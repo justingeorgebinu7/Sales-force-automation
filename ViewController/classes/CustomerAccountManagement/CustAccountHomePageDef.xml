@@ -6,7 +6,11 @@
     <variableIterator id="variables"/>
     <iterator Binds="CustomeraccountView1" RangeSize="25" DataControl="AppModuleDataControl"
               id="CustomeraccountView1Iterator"/>
-    <iterator Binds="AddressView2" RangeSize="25" DataControl="AppModuleDataControl" id="AddressView2Iterator"/>
+    <searchRegion Criteria="__ImplicitViewCriteria__" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  Binds="CustomeraccountView1Iterator" id="ImplicitViewCriteriaQuery"/>
+    <taskFlow id="CustomerAccountHomePageAddTF1"
+              taskFlowId="/WEB-INF/CustomerAccountHomePageAddTF.xml#CustomerAccountHomePageAddTF" activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
   </executables>
   <bindings>
     <tree IterBinding="CustomeraccountView1Iterator" id="CustomeraccountView1">
@@ -15,43 +19,12 @@
           <Item Value="Name"/>
           <Item Value="Type"/>
           <Item Value="Accounturl"/>
+          <Item Value="Ceo"/>
+          <Item Value="Numberofemployees"/>
+          <Item Value="Email"/>
+          <Item Value="Mobilenumber"/>
         </AttrNames>
       </nodeDefinition>
     </tree>
-    <attributeValues IterBinding="CustomeraccountView1Iterator" id="Name">
-      <AttrNames>
-        <Item Value="Name"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="CustomeraccountView1Iterator" id="Type">
-      <AttrNames>
-        <Item Value="Type"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="CustomeraccountView1Iterator" id="Email">
-      <AttrNames>
-        <Item Value="Email"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="CustomeraccountView1Iterator" id="Mobilenumber">
-      <AttrNames>
-        <Item Value="Mobilenumber"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="AddressView2Iterator" id="City">
-      <AttrNames>
-        <Item Value="City"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="AddressView2Iterator" id="State">
-      <AttrNames>
-        <Item Value="State"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="AddressView2Iterator" id="Country">
-      <AttrNames>
-        <Item Value="Country"/>
-      </AttrNames>
-    </attributeValues>
   </bindings>
 </pageDefinition>

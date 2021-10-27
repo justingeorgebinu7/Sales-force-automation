@@ -8,9 +8,6 @@
     <view id="CustAccountHome">
       <page>/CustomerAccountManagement/CustAccountHome.jsf</page>
     </view>
-    <view id="AccountMenu">
-      <page>/CustomerAccountManagement/AccountMenu.jsf</page>
-    </view>
     <task-flow-return id="taskFlowReturn1">
       <outcome>
         <name>taskFlowReturn1</name>
@@ -19,17 +16,6 @@
     <control-flow-rule id="__1">
       <from-activity-id>CustAccountHome</from-activity-id>
       <control-flow-case id="__2">
-        <from-outcome>toMenu</from-outcome>
-        <to-activity-id>AccountMenu</to-activity-id>
-      </control-flow-case>
-    </control-flow-rule>
-    <control-flow-rule id="__3">
-      <from-activity-id>AccountMenu</from-activity-id>
-      <control-flow-case id="__4">
-        <from-outcome>backFromMenu</from-outcome>
-        <to-activity-id>CustAccountHome</to-activity-id>
-      </control-flow-case>
-      <control-flow-case id="__5">
         <from-outcome>exit</from-outcome>
         <to-activity-id>taskFlowReturn1</to-activity-id>
       </control-flow-case>

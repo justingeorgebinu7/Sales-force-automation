@@ -79,7 +79,10 @@
                                                                    id="r1"/>
                                                     </af:showDetailItem>
                                                     <af:showDetailItem id="Create" text="Contacts"/>
-                                                    <af:showDetailItem id="View" text="Notes" disclosed="true"/>
+                                                    <af:showDetailItem id="View" text="Notes" disclosed="true">
+                                                        <af:region value="#{bindings.OM_OpportunityNotes1.regionModel}"
+                                                                   id="r2"/>
+                                                    </af:showDetailItem>
                                                     <af:showDetailItem id="Search" text="Task"/>
                                                 </af:panelTabbed>
                                                 <af:componentDragSource/>

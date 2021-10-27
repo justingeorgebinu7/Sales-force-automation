@@ -19,41 +19,6 @@
       <property
          name="exceptionHandler">false</property>
    </View>
-   <View
-      id="View3">
-      <property
-         name="activityId">AccountMenu</property>
-      <property
-         name="x">492.6963</property>
-      <property
-         name="description">&lt;html>&lt;p>&lt;b>AccountMenu&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
-      <property
-         name="y">282.39648</property>
-      <property
-         name="page">/CustomerAccountManagement/AccountMenu.jsf</property>
-      <property
-         name="exceptionHandler">false</property>
-   </View>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase4"
-      from="View2"
-      to="View3">
-      <property
-         name="fromOutcome">toMenu</property>
-      <property
-         name="sdm:polyPoints">R46,226.52303,246.04004,451.6963,278.5459,L46</property>
-   </ControlFlowCase>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase5"
-      from="View3"
-      to="View2">
-      <property
-         name="fromOutcome">backFromMenu</property>
-      <property
-         name="sdm:polyPoints">L54,451.19418,285.5459,226.02148,253.04004,R54</property>
-   </ControlFlowCase>
    <TaskFlowReturn
       id="TaskFlowReturn6">
       <property
@@ -71,12 +36,12 @@
    </TaskFlowReturn>
    <ControlFlowCase
       islink="true"
-      id="ControlFlowCase7"
-      from="View3"
+      id="ControlFlowCase8"
+      from="View2"
       to="TaskFlowReturn6">
       <property
          name="fromOutcome">exit</property>
       <property
-         name="sdm:polyPoints">T50,492.6963,228.0459,623.0,160.89648,L50</property>
+         name="sdm:polyPoints">R50,226.02148,249.54004,623.0,160.89648,L50</property>
    </ControlFlowCase>
 </SDM>

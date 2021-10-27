@@ -6,6 +6,8 @@
     <variableIterator id="variables"/>
     <taskFlow id="OM_manageOpportunity1" taskFlowId="/WEB-INF/OM_manageOpportunity.xml#OM_manageOpportunity"
               activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <taskFlow id="OM_OpportunityNotes1" taskFlowId="/WEB-INF/OM_OpportunityNotes.xml#OM_OpportunityNotes"
+              activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
   </executables>
   <bindings/>
 </pageDefinition>

@@ -1,56 +1,63 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
-  <af:table value="#{bindings.CustomeraccountView1.collectionModel}" var="row"
-            rows="#{bindings.CustomeraccountView1.rangeSize}"
-            emptyText="#{bindings.CustomeraccountView1.viewable ? 'No data to display.' : 'Access Denied.'}"
-            rowBandingInterval="0" selectedRowKeys="#{bindings.CustomeraccountView1.collectionModel.selectedRow}"
-            selectionListener="#{bindings.CustomeraccountView1.collectionModel.makeCurrent}" rowSelection="single"
-            fetchSize="#{bindings.CustomeraccountView1.rangeSize}" id="t1">
-    <af:column sortProperty="#{bindings.CustomeraccountView1.hints.Customeraccountid.name}" sortable="true"
-               headerText="#{bindings.CustomeraccountView1.hints.Customeraccountid.label}" id="c1">
-      <af:outputText value="#{row.Customeraccountid}"
-                     shortDesc="#{bindings.CustomeraccountView1.hints.Customeraccountid.tooltip}" id="ot1">
-        <af:convertNumber groupingUsed="false"
-                          pattern="#{bindings.CustomeraccountView1.hints.Customeraccountid.format}"/>
-      </af:outputText>
-    </af:column>
-    <af:column sortProperty="#{bindings.CustomeraccountView1.hints.Type.name}" sortable="true"
-               headerText="#{bindings.CustomeraccountView1.hints.Type.label}" id="c2">
-      <af:outputText value="#{row.Type}" shortDesc="#{bindings.CustomeraccountView1.hints.Type.tooltip}" id="ot2"/>
-    </af:column>
-    <af:column sortProperty="#{bindings.CustomeraccountView1.hints.Name.name}" sortable="true"
-               headerText="#{bindings.CustomeraccountView1.hints.Name.label}" id="c3">
-      <af:outputText value="#{row.Name}" shortDesc="#{bindings.CustomeraccountView1.hints.Name.tooltip}" id="ot3"/>
-    </af:column>
-    <af:column sortProperty="#{bindings.CustomeraccountView1.hints.Accounturl.name}" sortable="true"
-               headerText="#{bindings.CustomeraccountView1.hints.Accounturl.label}" id="c4">
-      <af:outputText value="#{row.Accounturl}" shortDesc="#{bindings.CustomeraccountView1.hints.Accounturl.tooltip}"
-                     id="ot4"/>
-    </af:column>
-    <af:column sortProperty="#{bindings.CustomeraccountView1.hints.Ceo.name}" sortable="true"
-               headerText="#{bindings.CustomeraccountView1.hints.Ceo.label}" id="c5">
-      <af:outputText value="#{row.Ceo}" shortDesc="#{bindings.CustomeraccountView1.hints.Ceo.tooltip}" id="ot5"/>
-    </af:column>
-    <af:column sortProperty="#{bindings.CustomeraccountView1.hints.Numberofemployees.name}" sortable="true"
-               headerText="#{bindings.CustomeraccountView1.hints.Numberofemployees.label}" id="c6">
-      <af:outputText value="#{row.Numberofemployees}"
-                     shortDesc="#{bindings.CustomeraccountView1.hints.Numberofemployees.tooltip}" id="ot6">
-        <af:convertNumber groupingUsed="false"
-                          pattern="#{bindings.CustomeraccountView1.hints.Numberofemployees.format}"/>
-      </af:outputText>
-    </af:column>
-    <af:column sortProperty="#{bindings.CustomeraccountView1.hints.Email.name}" sortable="true"
-               headerText="#{bindings.CustomeraccountView1.hints.Email.label}" id="c7">
-      <af:outputText value="#{row.Email}" shortDesc="#{bindings.CustomeraccountView1.hints.Email.tooltip}" id="ot7"/>
-    </af:column>
-    <af:column sortProperty="#{bindings.CustomeraccountView1.hints.Mobilenumber.name}" sortable="true"
-               headerText="#{bindings.CustomeraccountView1.hints.Mobilenumber.label}" id="c8">
-      <af:outputText value="#{row.Mobilenumber}" shortDesc="#{bindings.CustomeraccountView1.hints.Mobilenumber.tooltip}"
-                     id="ot8">
-        <af:convertNumber groupingUsed="false" pattern="#{bindings.CustomeraccountView1.hints.Mobilenumber.format}"/>
-      </af:outputText>
-    </af:column>
-  </af:table>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:f="http://java.sun.com/jsf/core">
+  <af:panelFormLayout id="pfl1">
+    <af:inputText value="#{bindings.Customeraccountid.inputValue}" label="#{bindings.Customeraccountid.hints.label}"
+                  required="#{bindings.Customeraccountid.hints.mandatory}" readOnly="true"
+                  columns="#{bindings.Customeraccountid.hints.displayWidth}"
+                  maximumLength="#{bindings.Customeraccountid.hints.precision}"
+                  shortDesc="#{bindings.Customeraccountid.hints.tooltip}" id="it1">
+      <f:validator binding="#{bindings.Customeraccountid.validator}"/>
+      <af:convertNumber groupingUsed="false" pattern="#{bindings.Customeraccountid.format}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Type.inputValue}" label="#{bindings.Type.hints.label}"
+                  required="#{bindings.Type.hints.mandatory}" readOnly="true"
+                  columns="#{bindings.Type.hints.displayWidth}" maximumLength="#{bindings.Type.hints.precision}"
+                  shortDesc="#{bindings.Type.hints.tooltip}" id="it2">
+      <f:validator binding="#{bindings.Type.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Name.inputValue}" label="#{bindings.Name.hints.label}"
+                  required="#{bindings.Name.hints.mandatory}" readOnly="true"
+                  columns="#{bindings.Name.hints.displayWidth}" maximumLength="#{bindings.Name.hints.precision}"
+                  shortDesc="#{bindings.Name.hints.tooltip}" id="it3">
+      <f:validator binding="#{bindings.Name.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Accounturl.inputValue}" label="#{bindings.Accounturl.hints.label}"
+                  required="#{bindings.Accounturl.hints.mandatory}" readOnly="true"
+                  columns="#{bindings.Accounturl.hints.displayWidth}"
+                  maximumLength="#{bindings.Accounturl.hints.precision}"
+                  shortDesc="#{bindings.Accounturl.hints.tooltip}" id="it4">
+      <f:validator binding="#{bindings.Accounturl.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Ceo.inputValue}" label="#{bindings.Ceo.hints.label}"
+                  required="#{bindings.Ceo.hints.mandatory}" readOnly="true"
+                  columns="#{bindings.Ceo.hints.displayWidth}" maximumLength="#{bindings.Ceo.hints.precision}"
+                  shortDesc="#{bindings.Ceo.hints.tooltip}" id="it5">
+      <f:validator binding="#{bindings.Ceo.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Numberofemployees.inputValue}" label="#{bindings.Numberofemployees.hints.label}"
+                  required="#{bindings.Numberofemployees.hints.mandatory}" readOnly="true"
+                  columns="#{bindings.Numberofemployees.hints.displayWidth}"
+                  maximumLength="#{bindings.Numberofemployees.hints.precision}"
+                  shortDesc="#{bindings.Numberofemployees.hints.tooltip}" id="it6">
+      <f:validator binding="#{bindings.Numberofemployees.validator}"/>
+      <af:convertNumber groupingUsed="false" pattern="#{bindings.Numberofemployees.format}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Email.inputValue}" label="#{bindings.Email.hints.label}"
+                  required="#{bindings.Email.hints.mandatory}" readOnly="true"
+                  columns="#{bindings.Email.hints.displayWidth}" maximumLength="#{bindings.Email.hints.precision}"
+                  shortDesc="#{bindings.Email.hints.tooltip}" id="it7">
+      <f:validator binding="#{bindings.Email.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Mobilenumber.inputValue}" label="#{bindings.Mobilenumber.hints.label}"
+                  required="#{bindings.Mobilenumber.hints.mandatory}" readOnly="true"
+                  columns="#{bindings.Mobilenumber.hints.displayWidth}"
+                  maximumLength="#{bindings.Mobilenumber.hints.precision}"
+                  shortDesc="#{bindings.Mobilenumber.hints.tooltip}" id="it8">
+      <f:validator binding="#{bindings.Mobilenumber.validator}"/>
+      <af:convertNumber groupingUsed="false" pattern="#{bindings.Mobilenumber.format}"/>
+    </af:inputText>
+  </af:panelFormLayout>
   <af:button text="Add" id="b1" action="goToAdd"/>
   <af:button text="Edit" id="b2" action="goToEdit"/>
   <af:button text="Search" id="b3" action="goToSearch"/>

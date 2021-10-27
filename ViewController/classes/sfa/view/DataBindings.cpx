@@ -75,6 +75,13 @@
     <page path="/OM_opportunityDetais.jsff" usageId="sfa_view_OM_opportunityDetaisPageDef"/>
     <page path="/OpportunityManagement/OM_opportunityEdit.jsff" usageId="sfa_view_OM_opportunityEditPageDef"/>
     <page path="/OM_opportunitySearch.jsff" usageId="sfa_view_OM_opportunitySearchPageDef"/>
+    <page path="/WEB-INF/OM_addNoteTF.xml#OM_addNoteTF@CreateInsert"
+          usageId="sfa_view_OM_addNoteTF_OM_addNoteTF_CreateInsertPageDef"/>
+    <page path="/WEB-INF/OM_addNoteTF.xml#OM_addNoteTF@Commit"
+          usageId="sfa_view_OM_addNoteTF_OM_addNoteTF_CommitPageDef"/>
+    <page path="/OM_addNote.jsff" usageId="sfa_view_OM_addNotePageDef"/>
+    <page path="/OpportunityManagement/OM_notes.jsff" usageId="sfa_view_OM_notesPageDef"/>
+    <page path="/CustomerAccountHomePageMenu.jsff" usageId="sfa_view_CustomerAccountHomePageMenuPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="sfa_view_untitled2PageDef" path="sfa.view.pageDefs.untitled2PageDef"/>
@@ -143,6 +150,13 @@
     <page id="sfa_view_OM_opportunityDetaisPageDef" path="sfa.view.pageDefs.OM_opportunityDetaisPageDef"/>
     <page id="sfa_view_OM_opportunityEditPageDef" path="OpportunityManagement.OM_opportunityEditPageDef"/>
     <page id="sfa_view_OM_opportunitySearchPageDef" path="sfa.view.pageDefs.OM_opportunitySearchPageDef"/>
+    <page id="sfa_view_OM_addNoteTF_OM_addNoteTF_CreateInsertPageDef"
+          path="sfa.view.pageDefs.OM_addNoteTF_OM_addNoteTF_CreateInsertPageDef"/>
+    <page id="sfa_view_OM_addNoteTF_OM_addNoteTF_CommitPageDef"
+          path="sfa.view.pageDefs.OM_addNoteTF_OM_addNoteTF_CommitPageDef"/>
+    <page id="sfa_view_OM_addNotePageDef" path="sfa.view.pageDefs.OM_addNotePageDef"/>
+    <page id="sfa_view_OM_notesPageDef" path="OpportunityManagement.OM_notesPageDef"/>
+    <page id="sfa_view_CustomerAccountHomePageMenuPageDef" path="sfa.view.pageDefs.CustomerAccountHomePageMenuPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="sfa.model.entities"

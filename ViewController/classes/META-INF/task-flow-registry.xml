@@ -1,15 +1,4 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <task-flow-registry xmlns="http://xmlns.oracle.com/adf/controller/rc">
-   <task-flow-descriptor path="WEB-INF/CustomerAccountContacts.xml" id="CustomerAccountContacts" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="facelets"/>
    <task-flow-descriptor path="WEB-INF/CustomerAccountParent.xml" id="CustomerAccountParent" type="task-flow-definition" uses-page-fragments="false" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="facelets"/>
-   <task-flow-descriptor path="WEB-INF/ManageCusiomerAccount.xml" id="ManageCusiomerAccount" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="facelets"/>
-   <task-flow-descriptor path="WEB-INF/OM_createInsertOpp.xml" id="OM_createInsertOpp" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="facelets"/>
-   <task-flow-descriptor path="WEB-INF/OM_manageOpportunity.xml" id="OM_manageOpportunity" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="facelets"/>
-   <task-flow-descriptor path="WEB-INF/OpportunityManagementParent.xml" id="OpportunityManagementParent" type="task-flow-definition" uses-page-fragments="false" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="facelets"/>
-   <task-flow-descriptor path="WEB-INF/addTaskForAccount.xml" id="addTaskForAccount" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="facelets"/>
-   <task-flow-descriptor path="WEB-INF/createInsertAccount.xml" id="createInsertAccount" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="facelets"/>
-   <task-flow-descriptor path="WEB-INF/createInsertContactForAccountTF.xml" id="createInsertContactForAccountTF" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="facelets"/>
-   <task-flow-descriptor path="WEB-INF/createInsertTF.xml" id="createInsertTF" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="facelets"/>
-   <task-flow-descriptor path="WEB-INF/notesTrialAddTF.xml" id="notesTrialAddTF" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="facelets"/>
-   <task-flow-descriptor path="WEB-INF/taskCustomerAccount.xml" id="taskCustomerAccount" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="facelets"/>
 </task-flow-registry>

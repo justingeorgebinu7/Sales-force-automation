@@ -8,19 +8,45 @@
               id="CustomeraccountView1Iterator"/>
   </executables>
   <bindings>
-    <tree IterBinding="CustomeraccountView1Iterator" id="CustomeraccountView1">
-      <nodeDefinition DefName="sfa.model.viewobjects.CustomeraccountView" Name="CustomeraccountView10">
-        <AttrNames>
-          <Item Value="Customeraccountid"/>
-          <Item Value="Type"/>
-          <Item Value="Name"/>
-          <Item Value="Accounturl"/>
-          <Item Value="Ceo"/>
-          <Item Value="Numberofemployees"/>
-          <Item Value="Email"/>
-          <Item Value="Mobilenumber"/>
-        </AttrNames>
-      </nodeDefinition>
-    </tree>
+    <attributeValues IterBinding="CustomeraccountView1Iterator" id="Customeraccountid">
+      <AttrNames>
+        <Item Value="Customeraccountid"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomeraccountView1Iterator" id="Type">
+      <AttrNames>
+        <Item Value="Type"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomeraccountView1Iterator" id="Name">
+      <AttrNames>
+        <Item Value="Name"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomeraccountView1Iterator" id="Accounturl">
+      <AttrNames>
+        <Item Value="Accounturl"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomeraccountView1Iterator" id="Ceo">
+      <AttrNames>
+        <Item Value="Ceo"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomeraccountView1Iterator" id="Numberofemployees">
+      <AttrNames>
+        <Item Value="Numberofemployees"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomeraccountView1Iterator" id="Email">
+      <AttrNames>
+        <Item Value="Email"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomeraccountView1Iterator" id="Mobilenumber">
+      <AttrNames>
+        <Item Value="Mobilenumber"/>
+      </AttrNames>
+    </attributeValues>
   </bindings>
 </pageDefinition>

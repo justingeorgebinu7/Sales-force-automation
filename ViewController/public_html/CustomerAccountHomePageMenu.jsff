@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:f="http://java.sun.com/jsf/core">
+  <af:panelStretchLayout id="psl1" inlineStyle="border-radius:30px 30px 30px 30px;" topHeight="30px">
+    <f:facet name="start"/>
+    <f:facet name="end"/>
+    <f:facet name="top">
+      <af:menuBar id="mb2">
+        <af:commandMenuItem text="Back" id="cmi3" action="backFromMenu"/>
+      </af:menuBar>
+    </f:facet>
+    <f:facet name="bottom"/>
+    <f:facet name="center">
+      <af:panelBox id="pb2" inlineStyle="margin-right:100px;overflow:hidden; border-radius:30px 30px 30px 30px;"
+                   text="Menu" background="default">
+        <f:facet name="toolbar"/>
+        <af:panelTabbed position="start" id="pt2" verticalTabMode="iconAndText">
+          <af:showDetailItem id="sdi1" text="Manage Account" disclosed="true">
+            <af:region value="#{bindings.ManageCusiomerAccount1.regionModel}" id="r1"/>
+          </af:showDetailItem>
+          <af:showDetailItem id="sdi2" text="Notes">
+            <af:region value="#{bindings.notesTrialAddTF1.regionModel}" id="r6"/>
+          </af:showDetailItem>
+          <af:showDetailItem id="sdi3" text="Contacts">
+            <af:region value="#{bindings.CustomerAccountContacts1.regionModel}" id="r7"/>
+          </af:showDetailItem>
+          <af:showDetailItem id="sdi4" text="Task">
+            <af:region value="#{bindings.taskCustomerAccount1.regionModel}" id="r8"/>
+          </af:showDetailItem>
+        </af:panelTabbed>
+        <af:componentDragSource/>
+      </af:panelBox>
+    </f:facet>
+  </af:panelStretchLayout>
+</ui:composition>

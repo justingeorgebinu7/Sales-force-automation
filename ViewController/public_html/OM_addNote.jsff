@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:f="http://java.sun.com/jsf/core">
+  <af:panelFormLayout id="pfl1">
+    <af:inputText value="#{bindings.Noteid.inputValue}" label="#{bindings.Noteid.hints.label}"
+                  required="#{bindings.Noteid.hints.mandatory}" columns="#{bindings.Noteid.hints.displayWidth}"
+                  maximumLength="#{bindings.Noteid.hints.precision}" shortDesc="#{bindings.Noteid.hints.tooltip}"
+                  id="it1">
+      <f:validator binding="#{bindings.Noteid.validator}"/>
+      <af:convertNumber groupingUsed="false" pattern="#{bindings.Noteid.format}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Content.inputValue}" label="#{bindings.Content.hints.label}"
+                  required="#{bindings.Content.hints.mandatory}" columns="#{bindings.Content.hints.displayWidth}"
+                  maximumLength="#{bindings.Content.hints.precision}" shortDesc="#{bindings.Content.hints.tooltip}"
+                  id="it2">
+      <f:validator binding="#{bindings.Content.validator}"/>
+    </af:inputText>
+    <af:inputDate value="#{bindings.Datetime.inputValue}" label="#{bindings.Datetime.hints.label}"
+                  required="#{bindings.Datetime.hints.mandatory}" columns="#{bindings.Datetime.hints.displayWidth}"
+                  shortDesc="#{bindings.Datetime.hints.tooltip}" id="id1">
+      <f:validator binding="#{bindings.Datetime.validator}"/>
+      <af:convertDateTime pattern="#{bindings.Datetime.format}"/>
+    </af:inputDate>
+  </af:panelFormLayout>
+  <af:button text="Save" id="b1" action="toCommit"/>
+  <af:button text="Back" id="b2" action="exitAddNote"/>
+</ui:composition>
