@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.22.48" id="OM_opportunityDetaisPageDef"
+                Package="sfa.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="OpportunityView4" RangeSize="25" DataControl="AppModuleDataControl" id="OpportunityView4Iterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="OpportunityView4Iterator" id="Opportunityid">
+      <AttrNames>
+        <Item Value="Opportunityid"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunityView4Iterator" id="Accountid">
+      <AttrNames>
+        <Item Value="Accountid"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunityView4Iterator" id="Description">
+      <AttrNames>
+        <Item Value="Description"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunityView4Iterator" id="Winprobability">
+      <AttrNames>
+        <Item Value="Winprobability"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunityView4Iterator" id="Closedate">
+      <AttrNames>
+        <Item Value="Closedate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunityView4Iterator" id="Primarycontact">
+      <AttrNames>
+        <Item Value="Primarycontact"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunityView4Iterator" id="Salesstage">
+      <AttrNames>
+        <Item Value="Salesstage"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunityView4Iterator" id="Salesmethod">
+      <AttrNames>
+        <Item Value="Salesmethod"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunityView4Iterator" id="Bestcaserevenue">
+      <AttrNames>
+        <Item Value="Bestcaserevenue"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunityView4Iterator" id="Worstcaserevenue">
+      <AttrNames>
+        <Item Value="Worstcaserevenue"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunityView4Iterator" id="Budgetavailable">
+      <AttrNames>
+        <Item Value="Budgetavailable"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunityView4Iterator" id="Risklevel">
+      <AttrNames>
+        <Item Value="Risklevel"/>
+      </AttrNames>
+    </attributeValues>
+  </bindings>
+</pageDefinition>

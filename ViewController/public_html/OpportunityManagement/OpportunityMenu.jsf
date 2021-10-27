@@ -74,7 +74,10 @@
                                                          text="Menu" background="default">
                                                 <f:facet name="toolbar"/>
                                                 <af:panelTabbed position="start" id="pt1" verticalTabMode="iconAndText">
-                                                    <af:showDetailItem id="Edit" text="Manage Account"/>
+                                                    <af:showDetailItem id="Edit" text="Manage Opportunity">
+                                                        <af:region value="#{bindings.OM_manageOpportunity1.regionModel}"
+                                                                   id="r1"/>
+                                                    </af:showDetailItem>
                                                     <af:showDetailItem id="Create" text="Contacts"/>
                                                     <af:showDetailItem id="View" text="Notes" disclosed="true"/>
                                                     <af:showDetailItem id="Search" text="Task"/>

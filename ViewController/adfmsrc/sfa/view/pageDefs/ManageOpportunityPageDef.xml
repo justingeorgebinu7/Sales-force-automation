@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.22.48" id="ManageOpportunityPageDef"
+                Package="sfa.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="OpportunityView4" RangeSize="25" DataControl="AppModuleDataControl" id="OpportunityView4Iterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="OpportunityView4Iterator" id="OpportunityView4">
+      <nodeDefinition DefName="sfa.model.viewobjects.OpportunityView" Name="OpportunityView40">
+        <AttrNames>
+          <Item Value="Opportunityid"/>
+          <Item Value="Accountid"/>
+          <Item Value="Description"/>
+          <Item Value="Winprobability"/>
+          <Item Value="Closedate"/>
+          <Item Value="Salesstage"/>
+          <Item Value="Salesmethod"/>
+          <Item Value="Risklevel"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

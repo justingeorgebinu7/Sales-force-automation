@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="OM_manageOpportunity">
+    <default-activity>ManageOpportunity</default-activity>
+    <data-control-scope>
+      <shared/>
+    </data-control-scope>
+    <view id="ManageOpportunity">
+      <page>/ManageOpportunity.jsff</page>
+    </view>
+    <task-flow-call id="OM_createInsertOpp">
+      <task-flow-reference>
+        <document>/WEB-INF/OM_createInsertOpp.xml</document>
+        <id>OM_createInsertOpp</id>
+      </task-flow-reference>
+    </task-flow-call>
+    <view id="OM_opportunityDetais">
+      <page>/OM_opportunityDetais.jsff</page>
+    </view>
+    <view id="OM_opportunityEdit">
+      <page>/OpportunityManagement/OM_opportunityEdit.jsff</page>
+    </view>
+    <view id="OM_opportunitySearch">
+      <page>/OM_opportunitySearch.jsff</page>
+    </view>
+    <control-flow-rule id="__1">
+      <from-activity-id>ManageOpportunity</from-activity-id>
+      <control-flow-case id="__2">
+        <from-outcome>toAdd</from-outcome>
+        <to-activity-id>OM_createInsertOpp</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__3">
+        <from-outcome>viewDetails</from-outcome>
+        <to-activity-id>OM_opportunityDetais</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__6">
+        <from-outcome>goToEdit</from-outcome>
+        <to-activity-id>OM_opportunityEdit</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__9">
+        <from-outcome>goToSearch</from-outcome>
+        <to-activity-id>OM_opportunitySearch</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__4">
+      <from-activity-id>OM_opportunityDetais</from-activity-id>
+      <control-flow-case id="__5">
+        <from-outcome>backFromDetails</from-outcome>
+        <to-activity-id>ManageOpportunity</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__7">
+      <from-activity-id>OM_opportunityEdit</from-activity-id>
+      <control-flow-case id="__8">
+        <from-outcome>backFromEdit</from-outcome>
+        <to-activity-id>ManageOpportunity</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__10">
+      <from-activity-id>OM_opportunitySearch</from-activity-id>
+      <control-flow-case id="__11">
+        <from-outcome>backFromSearch</from-outcome>
+        <to-activity-id>ManageOpportunity</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <use-page-fragments/>
+  </task-flow-definition>
+</adfc-config>

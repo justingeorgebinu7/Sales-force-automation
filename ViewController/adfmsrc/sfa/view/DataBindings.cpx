@@ -65,6 +65,16 @@
     <page path="/CustomerAccountManagement/editAccount.jsff" usageId="sfa_view_editAccountPageDef"/>
     <page path="/CustomerAccountManagement/searchAccount.jsff" usageId="sfa_view_searchAccountPageDef"/>
     <page path="/OpportunityManagement/OpportunityHome.jsf" usageId="sfa_view_OpportunityHomePageDef"/>
+    <page path="/WEB-INF/OM_createInsertOpp.xml#OM_createInsertOpp@CreateInsert"
+          usageId="sfa_view_OM_createInsertOpp_OM_createInsertOpp_CreateInsertPageDef"/>
+    <page path="/OM_addOpportunity.jsff" usageId="sfa_view_OM_addOpportunityPageDef"/>
+    <page path="/WEB-INF/OM_createInsertOpp.xml#OM_createInsertOpp@Commit"
+          usageId="sfa_view_OM_createInsertOpp_OM_createInsertOpp_CommitPageDef"/>
+    <page path="/ManageOpportunity.jsff" usageId="sfa_view_ManageOpportunityPageDef"/>
+    <page path="/OpportunityManagement/OpportunityMenu.jsf" usageId="sfa_view_OpportunityMenuPageDef"/>
+    <page path="/OM_opportunityDetais.jsff" usageId="sfa_view_OM_opportunityDetaisPageDef"/>
+    <page path="/OpportunityManagement/OM_opportunityEdit.jsff" usageId="sfa_view_OM_opportunityEditPageDef"/>
+    <page path="/OM_opportunitySearch.jsff" usageId="sfa_view_OM_opportunitySearchPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="sfa_view_untitled2PageDef" path="sfa.view.pageDefs.untitled2PageDef"/>
@@ -123,6 +133,16 @@
     <page id="sfa_view_editAccountPageDef" path="sfa.view.pageDefs.editAccountPageDef"/>
     <page id="sfa_view_searchAccountPageDef" path="sfa.view.pageDefs.searchAccountPageDef"/>
     <page id="sfa_view_OpportunityHomePageDef" path="OpportunityManagement.OpportunityHomePageDef"/>
+    <page id="sfa_view_OM_createInsertOpp_OM_createInsertOpp_CreateInsertPageDef"
+          path="sfa.view.pageDefs.OM_createInsertOpp_OM_createInsertOpp_CreateInsertPageDef"/>
+    <page id="sfa_view_OM_addOpportunityPageDef" path="sfa.view.pageDefs.OM_addOpportunityPageDef"/>
+    <page id="sfa_view_OM_createInsertOpp_OM_createInsertOpp_CommitPageDef"
+          path="sfa.view.pageDefs.OM_createInsertOpp_OM_createInsertOpp_CommitPageDef"/>
+    <page id="sfa_view_ManageOpportunityPageDef" path="sfa.view.pageDefs.ManageOpportunityPageDef"/>
+    <page id="sfa_view_OpportunityMenuPageDef" path="OpportunityManagement.OpportunityMenuPageDef"/>
+    <page id="sfa_view_OM_opportunityDetaisPageDef" path="sfa.view.pageDefs.OM_opportunityDetaisPageDef"/>
+    <page id="sfa_view_OM_opportunityEditPageDef" path="OpportunityManagement.OM_opportunityEditPageDef"/>
+    <page id="sfa_view_OM_opportunitySearchPageDef" path="sfa.view.pageDefs.OM_opportunitySearchPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="sfa.model.entities"
