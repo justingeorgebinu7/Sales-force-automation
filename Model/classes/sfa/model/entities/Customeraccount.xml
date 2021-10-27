@@ -131,6 +131,12 @@
       DataType="CHARACTER"
       CompareLength="10"
       Inverse="false"/>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="sfa.model.entities.Customeraccount.Mobilenumber_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
   </Attribute>
   <AccessorAttribute
     Name="Address"

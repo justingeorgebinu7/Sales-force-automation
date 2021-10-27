@@ -67,6 +67,7 @@
                                                 <f:facet name="center">
                                                     <af:panelBox text="Customer Accounts" id="pb1">
                                                         <f:facet name="toolbar"/>
+                                                        <af:spacer id="s2" height="30px"/>
                                                         <af:listView value="#{bindings.CustomeraccountView1.collectionModel}"
                                                                      var="item"
                                                                      emptyText="#{bindings.CustomeraccountView1.viewable ? 'No data to display.' : 'Access Denied.'}"
@@ -113,6 +114,7 @@
                                                 <f:facet name="center">
                                                     <af:panelBox text="Account Details" id="pb2">
                                                         <f:facet name="toolbar"/>
+                                                        <af:spacer id="s4" height="30px"/>
                                                         <af:panelFormLayout id="pfl1">
                                                             <af:inputText value="#{bindings.Name.inputValue}"
                                                                           label="#{bindings.Name.hints.label}"
