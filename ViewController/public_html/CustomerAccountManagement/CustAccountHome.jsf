@@ -57,7 +57,7 @@
                             <af:panelSplitter id="ps3" orientation="vertical" splitterPosition="88">
                                 <f:facet name="first"/>
                                 <f:facet name="second">
-                                    <af:panelSplitter id="ps4" splitterPosition="367">
+                                    <af:panelSplitter id="ps4" splitterPosition="525">
                                         <f:facet name="first">
                                             <af:panelStretchLayout id="psl1" dimensionsFrom="parent">
                                                 <f:facet name="start"/>
@@ -99,8 +99,6 @@
                                                         <af:spacer id="spacer2" height="10"/>
                                                         <af:menuBar id="mb1">
                                                             <af:commandMenuItem text="Menu" id="cmi1" action="toMenu"/>
-                                                            <af:spacer id="spacer1" width="5"/>
-                                                            <af:commandMenuItem text="Manage Accounts" id="cmi2"/>
                                                         </af:menuBar>
                                                     </af:panelBox>
                                                 </f:facet>
