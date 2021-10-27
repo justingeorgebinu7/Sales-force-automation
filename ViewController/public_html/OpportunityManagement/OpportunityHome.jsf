@@ -69,10 +69,32 @@
                                                 <f:facet name="top"/>
                                                 <f:facet name="bottom"/>
                                                 <f:facet name="center">
-                                                    <af:panelBox text="Customer Accounts" id="pb1">
+                                                    <af:panelBox text="Select Account" id="pb1">
                                                         <f:facet name="toolbar"/>
-                                                        <af:spacer id="s2" height="30px"/>
-                                                        <af:spacer id="spacer2" height="10"/>
+                                                        <af:listView value="#{bindings.OpportunityManagement_CustomerAccount.collectionModel}"
+                                                                     var="item"
+                                                                     emptyText="#{bindings.OpportunityManagement_CustomerAccount.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                                                     fetchSize="#{bindings.OpportunityManagement_CustomerAccount.rangeSize}"
+                                                                     id="lv1" selection="single"
+                                                                     selectionListener="#{bindings.OpportunityManagement_CustomerAccount.treeModel.makeCurrent}">
+                                                            <af:listItem id="li1">
+                                                                <af:panelGridLayout id="pgl1">
+                                                                    <af:gridRow marginTop="5px" height="auto"
+                                                                                marginBottom="5px" id="gr1">
+                                                                        <af:gridCell marginStart="5px" width="50%"
+                                                                                     id="gc2">
+                                                                            <af:outputFormatted value="#{item.bindings.Name.inputValue}"
+                                                                                                id="of1"/>
+                                                                        </af:gridCell>
+                                                                        <af:gridCell marginStart="5px" width="50%"
+                                                                                     marginEnd="5px" id="gc3">
+                                                                            <af:outputFormatted value="#{item.bindings.Type.inputValue}"
+                                                                                                id="of2"/>
+                                                                        </af:gridCell>
+                                                                    </af:gridRow>
+                                                                </af:panelGridLayout>
+                                                            </af:listItem>
+                                                        </af:listView>
                                                     </af:panelBox>
                                                 </f:facet>
                                             </af:panelStretchLayout>
@@ -84,9 +106,64 @@
                                                 <f:facet name="top"/>
                                                 <f:facet name="bottom"/>
                                                 <f:facet name="center">
-                                                    <af:panelBox text="Account Details" id="pb2">
+                                                    <af:panelBox text="Select Opportunity" id="pb2">
                                                         <f:facet name="toolbar"/>
-                                                        <af:spacer id="s4" height="30px"/>
+                                                        <af:table value="#{bindings.OpportunityView4.collectionModel}"
+                                                                  var="row"
+                                                                  rows="#{bindings.OpportunityView4.rangeSize}"
+                                                                  emptyText="#{bindings.OpportunityView4.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                                                  rowBandingInterval="0"
+                                                                  selectedRowKeys="#{bindings.OpportunityView4.collectionModel.selectedRow}"
+                                                                  selectionListener="#{bindings.OpportunityView4.collectionModel.makeCurrent}"
+                                                                  rowSelection="single"
+                                                                  fetchSize="#{bindings.OpportunityView4.rangeSize}"
+                                                                  id="t1">
+                                                            <af:column sortProperty="#{bindings.OpportunityView4.hints.Description.name}"
+                                                                       sortable="true"
+                                                                       headerText="#{bindings.OpportunityView4.hints.Description.label}"
+                                                                       id="c1">
+                                                                <af:outputText value="#{row.Description}"
+                                                                               shortDesc="#{bindings.OpportunityView4.hints.Description.tooltip}"
+                                                                               id="ot1"/>
+                                                            </af:column>
+                                                            <af:column sortProperty="#{bindings.OpportunityView4.hints.Salesmethod.name}"
+                                                                       sortable="true"
+                                                                       headerText="#{bindings.OpportunityView4.hints.Salesmethod.label}"
+                                                                       id="c2">
+                                                                <af:outputText value="#{row.Salesmethod}"
+                                                                               shortDesc="#{bindings.OpportunityView4.hints.Salesmethod.tooltip}"
+                                                                               id="ot2"/>
+                                                            </af:column>
+                                                            <af:column sortProperty="#{bindings.OpportunityView4.hints.Salesstage.name}"
+                                                                       sortable="true"
+                                                                       headerText="#{bindings.OpportunityView4.hints.Salesstage.label}"
+                                                                       id="c3">
+                                                                <af:outputText value="#{row.Salesstage}"
+                                                                               shortDesc="#{bindings.OpportunityView4.hints.Salesstage.tooltip}"
+                                                                               id="ot3"/>
+                                                            </af:column>
+                                                            <af:column sortProperty="#{bindings.OpportunityView4.hints.Primarycontact.name}"
+                                                                       sortable="true"
+                                                                       headerText="#{bindings.OpportunityView4.hints.Primarycontact.label}"
+                                                                       id="c4">
+                                                                <af:outputText value="#{row.Primarycontact}"
+                                                                               shortDesc="#{bindings.OpportunityView4.hints.Primarycontact.tooltip}"
+                                                                               id="ot4">
+                                                                    <af:convertNumber groupingUsed="false"
+                                                                                      pattern="#{bindings.OpportunityView4.hints.Primarycontact.format}"/>
+                                                                </af:outputText>
+                                                            </af:column>
+                                                            <af:column sortProperty="#{bindings.OpportunityView4.hints.Closedate.name}"
+                                                                       sortable="true"
+                                                                       headerText="#{bindings.OpportunityView4.hints.Closedate.label}"
+                                                                       id="c5">
+                                                                <af:outputText value="#{row.Closedate}"
+                                                                               shortDesc="#{bindings.OpportunityView4.hints.Closedate.tooltip}"
+                                                                               id="ot5">
+                                                                    <af:convertDateTime pattern="#{bindings.OpportunityView4.hints.Closedate.format}"/>
+                                                                </af:outputText>
+                                                            </af:column>
+                                                        </af:table>
                                                     </af:panelBox>
                                                 </f:facet>
                                             </af:panelStretchLayout>

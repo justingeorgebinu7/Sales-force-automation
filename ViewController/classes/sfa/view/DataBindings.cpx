@@ -64,6 +64,7 @@
     <page path="/CustomerAccountManagement/ManageAccount.jsff" usageId="sfa_view_ManageAccountPageDef"/>
     <page path="/CustomerAccountManagement/editAccount.jsff" usageId="sfa_view_editAccountPageDef"/>
     <page path="/CustomerAccountManagement/searchAccount.jsff" usageId="sfa_view_searchAccountPageDef"/>
+    <page path="/OpportunityManagement/OpportunityHome.jsf" usageId="sfa_view_OpportunityHomePageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="sfa_view_untitled2PageDef" path="sfa.view.pageDefs.untitled2PageDef"/>
@@ -121,6 +122,7 @@
     <page id="sfa_view_ManageAccountPageDef" path="sfa.view.pageDefs.ManageAccountPageDef"/>
     <page id="sfa_view_editAccountPageDef" path="sfa.view.pageDefs.editAccountPageDef"/>
     <page id="sfa_view_searchAccountPageDef" path="sfa.view.pageDefs.searchAccountPageDef"/>
+    <page id="sfa_view_OpportunityHomePageDef" path="OpportunityManagement.OpportunityHomePageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="sfa.model.entities"

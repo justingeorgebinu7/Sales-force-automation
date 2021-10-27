@@ -112,6 +112,24 @@
   <ViewUsage
     Name="AppointmentsView3"
     ViewObjectName="sfa.model.viewobjects.AppointmentsView"/>
+  <ViewUsage
+    Name="OpportunityManagement_CustomerAccount"
+    ViewObjectName="sfa.model.viewobjects.CustomeraccountView"/>
+  <ViewUsage
+    Name="OpportunityView4"
+    ViewObjectName="sfa.model.viewobjects.OpportunityView"/>
+  <ViewUsage
+    Name="NoteView5"
+    ViewObjectName="sfa.model.viewobjects.NoteView"/>
+  <ViewUsage
+    Name="TaskView5"
+    ViewObjectName="sfa.model.viewobjects.TaskView"/>
+  <ViewUsage
+    Name="RevenueitemView3"
+    ViewObjectName="sfa.model.viewobjects.RevenueitemView"/>
+  <ViewUsage
+    Name="ProductsView3"
+    ViewObjectName="sfa.model.viewobjects.ProductsView"/>
   <ViewLinkUsage
     Name="AddressCustomeraccountFkLink1"
     ViewLinkObjectName="sfa.model.viewobjects.AddressCustomeraccountFkLink"
@@ -231,5 +249,35 @@
     ViewLinkObjectName="sfa.model.viewobjects.AppointmentsContactsFkLink"
     SrcViewUsageName="sfa.model.entities.AppModule.CustomercontactsView2"
     DstViewUsageName="sfa.model.entities.AppModule.AppointmentsView3"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="OpportunityAccountFkLink2"
+    ViewLinkObjectName="sfa.model.viewobjects.OpportunityAccountFkLink"
+    SrcViewUsageName="sfa.model.entities.AppModule.OpportunityManagement_CustomerAccount"
+    DstViewUsageName="sfa.model.entities.AppModule.OpportunityView4"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="NoteOpportunityFkLink2"
+    ViewLinkObjectName="sfa.model.viewobjects.NoteOpportunityFkLink"
+    SrcViewUsageName="sfa.model.entities.AppModule.OpportunityView4"
+    DstViewUsageName="sfa.model.entities.AppModule.NoteView5"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="Opportunityid1Link2"
+    ViewLinkObjectName="sfa.model.viewobjects.Opportunityid1Link"
+    SrcViewUsageName="sfa.model.entities.AppModule.OpportunityView4"
+    DstViewUsageName="sfa.model.entities.AppModule.TaskView5"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="RevenueitemOpportunityFkLink2"
+    ViewLinkObjectName="sfa.model.viewobjects.RevenueitemOpportunityFkLink"
+    SrcViewUsageName="sfa.model.entities.AppModule.OpportunityView4"
+    DstViewUsageName="sfa.model.entities.AppModule.RevenueitemView3"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="ProductsRevenueitemFkLink2"
+    ViewLinkObjectName="sfa.model.viewobjects.ProductsRevenueitemFkLink"
+    SrcViewUsageName="sfa.model.entities.AppModule.RevenueitemView3"
+    DstViewUsageName="sfa.model.entities.AppModule.ProductsView3"
     Reversed="false"/>
 </AppModule>
