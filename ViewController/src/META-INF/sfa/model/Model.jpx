@@ -8,7 +8,6 @@
   SeparateXMLFiles="true"
   PackageName="sfa.model">
   <DesignTime>
-    <Attr Name="_DTExpressionTypeChecking" Value="true"/>
     <Attr Name="_jbo.TypeMapEntries" Value="OracleApps"/>
     <Attr Name="_jprName" Value="../../../../../Model/Model.jpr"/>
     <Attr Name="_NamedConnection" Value="demoproject"/>

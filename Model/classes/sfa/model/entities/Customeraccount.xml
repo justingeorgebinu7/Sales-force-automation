@@ -19,7 +19,12 @@
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
     TableName="CUSTOMERACCOUNT"
-    PrimaryKey="true"/>
+    PrimaryKey="true">
+    <TransientExpression
+      Name="ExpressionScript"
+      trustMode="trusted"
+      CodeSourceName="CustomeraccountRow"/>
+  </Attribute>
   <Attribute
     Name="Type"
     Precision="20"

@@ -209,7 +209,6 @@
       <hash n="javaContentSet">
          <list n="constituent-sets">
             <hash>
-               <url n="content-folder-url" path="../ViewController/src/META-INF/"/>
                <list n="pattern-filters">
                   <string v="+**"/>
                </list>
