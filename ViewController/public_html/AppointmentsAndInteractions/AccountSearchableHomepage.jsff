@@ -59,4 +59,5 @@
     </af:table>
   </af:panelGroupLayout>
   <af:button text="Add" id="b1" action="toAdd"/>
+  <af:button text="Delete" id="b2" action="toDelete"/>
 </ui:composition>

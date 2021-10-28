@@ -101,6 +101,11 @@
     <page path="/WEB-INF/AppointmentsAndInteraction/createInteractionTF.xml#createInteractionTF@Commit"
           usageId="sfa_view_createInteractionTF_createInteractionTF_CommitPageDef"/>
     <page path="/AppointmentsAndInteractions/createInteraction.jsff" usageId="sfa_view_createInteractionPageDef"/>
+    <page path="/WEB-INF/deleteCustomerAccountTF.xml#deleteCustomerAccountTF@Delete"
+          usageId="sfa_view_deleteCustomerAccountTF_deleteCustomerAccountTF_DeletePageDef"/>
+    <page path="/WEB-INF/deleteCustomerAccountTF.xml#deleteCustomerAccountTF@Commit"
+          usageId="sfa_view_deleteCustomerAccountTF_deleteCustomerAccountTF_CommitPageDef"/>
+    <page path="/CustomerAccountManagement/deleteCustomerAccount.jsff" usageId="sfa_view_deleteCustomerAccountPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="sfa_view_untitled2PageDef" path="sfa.view.pageDefs.untitled2PageDef"/>
@@ -195,6 +200,11 @@
     <page id="sfa_view_createInteractionTF_createInteractionTF_CommitPageDef"
           path="sfa.view.pageDefs.createInteractionTF_createInteractionTF_CommitPageDef"/>
     <page id="sfa_view_createInteractionPageDef" path="sfa.view.pageDefs.createInteractionPageDef"/>
+    <page id="sfa_view_deleteCustomerAccountTF_deleteCustomerAccountTF_DeletePageDef"
+          path="sfa.view.pageDefs.deleteCustomerAccountTF_deleteCustomerAccountTF_DeletePageDef"/>
+    <page id="sfa_view_deleteCustomerAccountTF_deleteCustomerAccountTF_CommitPageDef"
+          path="sfa.view.pageDefs.deleteCustomerAccountTF_deleteCustomerAccountTF_CommitPageDef"/>
+    <page id="sfa_view_deleteCustomerAccountPageDef" path="CustomerAccountManagement.deleteCustomerAccountPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="sfa.model.entities"

@@ -46,7 +46,7 @@
       <property
          name="fromOutcome">toAdd</property>
       <property
-         name="sdm:polyPoints">R50,237.0,214.49414,503.36133,225.79883,L50</property>
+         name="sdm:polyPoints">R54,238.37288,217.99414,503.36133,225.79883,L50</property>
    </ControlFlowCase>
    <View
       id="View5">
@@ -73,7 +73,7 @@
       <property
          name="fromOutcome">toMenu</property>
       <property
-         name="sdm:polyPoints">R46,237.0,210.99414,481.0,71.896484,L50</property>
+         name="sdm:polyPoints">R38,237.0,203.99414,479.1797,68.396484,L46</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -83,6 +83,33 @@
       <property
          name="fromOutcome">backFromMenu</property>
       <property
-         name="sdm:polyPoints">L54,481.0,75.396484,238.85512,214.49414,R50</property>
+         name="sdm:polyPoints">L54,481.0,75.396484,238.81438,210.99414,R46</property>
+   </ControlFlowCase>
+   <TaskFlowCall
+      id="TaskFlowCall11">
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>deleteCustomerAccountTF&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
+      <property
+         name="activityId">deleteCustomerAccountTF</property>
+      <property
+         name="x">534.36426</property>
+      <property
+         name="y">451.1494</property>
+      <property
+         name="documentReference">/WEB-INF/deleteCustomerAccountTF.xml</property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="taskFlowId">deleteCustomerAccountTF</property>
+   </TaskFlowCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase12"
+      from="View2"
+      to="TaskFlowCall11">
+      <property
+         name="fromOutcome">toDelete</property>
+      <property
+         name="sdm:polyPoints">R62,237.0,224.99414,493.36426,450.79883,L50</property>
    </ControlFlowCase>
 </SDM>

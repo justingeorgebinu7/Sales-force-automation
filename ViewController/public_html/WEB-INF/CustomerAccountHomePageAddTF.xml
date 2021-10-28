@@ -17,6 +17,12 @@
     <view id="CustomerAccountHomePageMenu">
       <page>/CustomerAccountHomePageMenu.jsff</page>
     </view>
+    <task-flow-call id="deleteCustomerAccountTF">
+      <task-flow-reference>
+        <document>/WEB-INF/deleteCustomerAccountTF.xml</document>
+        <id>deleteCustomerAccountTF</id>
+      </task-flow-reference>
+    </task-flow-call>
     <control-flow-rule id="__5">
       <from-activity-id>AccountSearchableHomepagw</from-activity-id>
       <control-flow-case id="__6">
@@ -26,6 +32,10 @@
       <control-flow-case id="__1">
         <from-outcome>toMenu</from-outcome>
         <to-activity-id>CustomerAccountHomePageMenu</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__7">
+        <from-outcome>toDelete</from-outcome>
+        <to-activity-id>deleteCustomerAccountTF</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <control-flow-rule id="__2">
