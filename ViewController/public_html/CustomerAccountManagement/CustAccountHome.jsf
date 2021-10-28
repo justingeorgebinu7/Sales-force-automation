@@ -71,24 +71,13 @@
                                                     <af:panelBox id="pb1">
                                                         <f:facet name="toolbar"/>
                                                         <af:spacer id="s2" height="30px"/>
+                                                        <af:region value="#{bindings.CustomerAccountHomePageAddTF1.regionModel}"
+                                                                   id="r2"/>
                                                     </af:panelBox>
                                                 </f:facet>
                                             </af:panelStretchLayout>
                                         </f:facet>
-                                        <f:facet name="second">
-                                            <af:panelStretchLayout id="psl2" dimensionsFrom="parent">
-                                                <f:facet name="start"/>
-                                                <f:facet name="end"/>
-                                                <f:facet name="top"/>
-                                                <f:facet name="bottom"/>
-                                                <f:facet name="center">
-                                                    <af:panelBox id="pb2">
-                                                        <f:facet name="toolbar"/>
-                                                        <af:spacer id="s4" height="30px"/>
-                                                    </af:panelBox>
-                                                </f:facet>
-                                            </af:panelStretchLayout>
-                                        </f:facet>
+                                        <f:facet name="second"/>
                                     </af:panelSplitter>
                                 </f:facet>
                             </af:panelSplitter>
