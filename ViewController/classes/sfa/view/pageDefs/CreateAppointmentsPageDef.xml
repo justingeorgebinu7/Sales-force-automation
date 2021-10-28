@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.22.48" id="CreateAppointmentsPageDef"
+                Package="sfa.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="AppointmentsView3" RangeSize="25" DataControl="AppModuleDataControl"
+              id="AppointmentsView3Iterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="AppointmentsView3Iterator" id="Appointmentid">
+      <AttrNames>
+        <Item Value="Appointmentid"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AppointmentsView3Iterator" id="Name">
+      <AttrNames>
+        <Item Value="Name"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AppointmentsView3Iterator" id="Startdate">
+      <AttrNames>
+        <Item Value="Startdate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AppointmentsView3Iterator" id="Enddate">
+      <AttrNames>
+        <Item Value="Enddate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AppointmentsView3Iterator" id="Description">
+      <AttrNames>
+        <Item Value="Description"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AppointmentsView3Iterator" id="Location">
+      <AttrNames>
+        <Item Value="Location"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AppointmentsView3Iterator" id="Contactid">
+      <AttrNames>
+        <Item Value="Contactid"/>
+      </AttrNames>
+    </attributeValues>
+  </bindings>
+</pageDefinition>

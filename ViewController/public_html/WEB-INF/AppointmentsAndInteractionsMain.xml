@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="AppointmentsAndInteractionsMain">
+    <default-activity>AppointmentsAndInteractions</default-activity>
+    <data-control-scope>
+      <shared/>
+    </data-control-scope>
+    <view id="AppointmentsAndInteractions">
+      <page>/AppointmentsAndInteractions.jsf</page>
+    </view>
+    <view id="AppointmentAndInteractionsManagement">
+      <page>/AppointmentAndInteractionsManagement.jsf</page>
+    </view>
+    <control-flow-rule id="__1">
+      <from-activity-id>AppointmentsAndInteractions</from-activity-id>
+      <control-flow-case id="__2">
+        <from-outcome>gotoManagePage</from-outcome>
+        <to-activity-id>AppointmentAndInteractionsManagement</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__3">
+      <from-activity-id>AppointmentAndInteractionsManagement</from-activity-id>
+      <control-flow-case id="__4">
+        <from-outcome>gotoBackToAppointmentsPage</from-outcome>
+        <to-activity-id>AppointmentsAndInteractions</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+  </task-flow-definition>
+</adfc-config>

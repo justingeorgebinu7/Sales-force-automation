@@ -8,9 +8,6 @@
               id="CustomeraccountView1Iterator"/>
     <searchRegion Criteria="__ImplicitViewCriteria__" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
                   Binds="CustomeraccountView1Iterator" id="ImplicitViewCriteriaQuery"/>
-    <taskFlow id="CustomerAccountHomePageAddTF1"
-              taskFlowId="/WEB-INF/CustomerAccountHomePageAddTF.xml#CustomerAccountHomePageAddTF" activation="deferred"
-              xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
   </executables>
   <bindings>
     <tree IterBinding="CustomeraccountView1Iterator" id="CustomeraccountView1">

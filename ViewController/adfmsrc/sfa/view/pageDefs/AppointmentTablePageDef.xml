@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.22.48" id="AppointmentTablePageDef"
+                Package="sfa.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="AppointmentsView3" RangeSize="25" DataControl="AppModuleDataControl"
+              id="AppointmentsView3Iterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="AppointmentsView3Iterator" id="AppointmentsView3">
+      <nodeDefinition DefName="sfa.model.viewobjects.AppointmentsView" Name="AppointmentsView30">
+        <AttrNames>
+          <Item Value="Name"/>
+          <Item Value="Description"/>
+          <Item Value="Startdate"/>
+          <Item Value="Enddate"/>
+          <Item Value="Location"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="appointmentManagement">
+    <default-activity>AppointmentTable</default-activity>
+    <data-control-scope>
+      <shared/>
+    </data-control-scope>
+    <view id="AppointmentTable">
+      <page>/AppointmentTable.jsff</page>
+    </view>
+    <view id="EditAppointments">
+      <page>/EditAppointments.jsff</page>
+    </view>
+    <view id="SearchAppointments">
+      <page>/SearchAppointments.jsff</page>
+    </view>
+    <task-flow-call id="createAppointmentTF">
+      <task-flow-reference>
+        <document>/WEB-INF/createAppointmentTF.xml</document>
+        <id>createAppointmentTF</id>
+      </task-flow-reference>
+    </task-flow-call>
+    <control-flow-rule id="__1">
+      <from-activity-id>AppointmentTable</from-activity-id>
+      <control-flow-case id="__2">
+        <from-outcome>editAppointments</from-outcome>
+        <to-activity-id>EditAppointments</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__3">
+        <from-outcome>searchAppointments</from-outcome>
+        <to-activity-id>SearchAppointments</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__8">
+        <from-outcome>createAppointment</from-outcome>
+        <to-activity-id>createAppointmentTF</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__4">
+      <from-activity-id>EditAppointments</from-activity-id>
+      <control-flow-case id="__5">
+        <from-outcome>backFromEdit</from-outcome>
+        <to-activity-id>AppointmentTable</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__6">
+      <from-activity-id>SearchAppointments</from-activity-id>
+      <control-flow-case id="__7">
+        <from-outcome>backFromSearch</from-outcome>
+        <to-activity-id>AppointmentTable</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <use-page-fragments/>
+  </task-flow-definition>
+</adfc-config>

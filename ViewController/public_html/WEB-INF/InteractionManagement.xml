@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="InteractionManagement">
+    <default-activity>InteractionView</default-activity>
+    <data-control-scope>
+      <shared/>
+    </data-control-scope>
+    <view id="InteractionView">
+      <page>/InteractionView.jsff</page>
+    </view>
+    <view id="EditInteractions">
+      <page>/EditInteractions.jsff</page>
+    </view>
+    <view id="SearchInteraction">
+      <page>/SearchInteraction.jsff</page>
+    </view>
+    <task-flow-call id="createInteractionTF">
+      <task-flow-reference>
+        <document>/WEB-INF/createInteractionTF.xml</document>
+        <id>createInteractionTF</id>
+      </task-flow-reference>
+    </task-flow-call>
+    <control-flow-rule id="__1">
+      <from-activity-id>InteractionView</from-activity-id>
+      <control-flow-case id="__2">
+        <from-outcome>editInteraction</from-outcome>
+        <to-activity-id>EditInteractions</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__3">
+        <from-outcome>searchInteraction</from-outcome>
+        <to-activity-id>SearchInteraction</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__8">
+        <from-outcome>createInteraction</from-outcome>
+        <to-activity-id>createInteractionTF</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__4">
+      <from-activity-id>EditInteractions</from-activity-id>
+      <control-flow-case id="__5">
+        <from-outcome>backFromEdit</from-outcome>
+        <to-activity-id>InteractionView</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__6">
+      <from-activity-id>SearchInteraction</from-activity-id>
+      <control-flow-case id="__7">
+        <from-outcome>backFromSearch</from-outcome>
+        <to-activity-id>InteractionView</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <use-page-fragments/>
+  </task-flow-definition>
+</adfc-config>

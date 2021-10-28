@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:f="http://java.sun.com/jsf/core">
+  <af:panelFormLayout id="pfl1">
+    <af:inputText value="#{bindings.Appointmentid.inputValue}" label="#{bindings.Appointmentid.hints.label}"
+                  required="#{bindings.Appointmentid.hints.mandatory}"
+                  columns="#{bindings.Appointmentid.hints.displayWidth}"
+                  maximumLength="#{bindings.Appointmentid.hints.precision}"
+                  shortDesc="#{bindings.Appointmentid.hints.tooltip}" id="it1">
+      <f:validator binding="#{bindings.Appointmentid.validator}"/>
+      <af:convertNumber groupingUsed="false" pattern="#{bindings.Appointmentid.format}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Name.inputValue}" label="#{bindings.Name.hints.label}"
+                  required="#{bindings.Name.hints.mandatory}" columns="#{bindings.Name.hints.displayWidth}"
+                  maximumLength="#{bindings.Name.hints.precision}" shortDesc="#{bindings.Name.hints.tooltip}" id="it2">
+      <f:validator binding="#{bindings.Name.validator}"/>
+    </af:inputText>
+    <af:inputDate value="#{bindings.Startdate.inputValue}" label="#{bindings.Startdate.hints.label}"
+                  required="#{bindings.Startdate.hints.mandatory}" columns="#{bindings.Startdate.hints.displayWidth}"
+                  shortDesc="#{bindings.Startdate.hints.tooltip}" id="id1">
+      <f:validator binding="#{bindings.Startdate.validator}"/>
+      <af:convertDateTime pattern="#{bindings.Startdate.format}"/>
+    </af:inputDate>
+    <af:inputDate value="#{bindings.Enddate.inputValue}" label="#{bindings.Enddate.hints.label}"
+                  required="#{bindings.Enddate.hints.mandatory}" columns="#{bindings.Enddate.hints.displayWidth}"
+                  shortDesc="#{bindings.Enddate.hints.tooltip}" id="id2">
+      <f:validator binding="#{bindings.Enddate.validator}"/>
+      <af:convertDateTime pattern="#{bindings.Enddate.format}"/>
+    </af:inputDate>
+    <af:inputText value="#{bindings.Description.inputValue}" label="#{bindings.Description.hints.label}"
+                  required="#{bindings.Description.hints.mandatory}"
+                  columns="#{bindings.Description.hints.displayWidth}"
+                  maximumLength="#{bindings.Description.hints.precision}"
+                  shortDesc="#{bindings.Description.hints.tooltip}" id="it3">
+      <f:validator binding="#{bindings.Description.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Location.inputValue}" label="#{bindings.Location.hints.label}"
+                  required="#{bindings.Location.hints.mandatory}" columns="#{bindings.Location.hints.displayWidth}"
+                  maximumLength="#{bindings.Location.hints.precision}" shortDesc="#{bindings.Location.hints.tooltip}"
+                  id="it4">
+      <f:validator binding="#{bindings.Location.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Contactid.inputValue}" label="#{bindings.Contactid.hints.label}"
+                  required="#{bindings.Contactid.hints.mandatory}" columns="#{bindings.Contactid.hints.displayWidth}"
+                  maximumLength="#{bindings.Contactid.hints.precision}" shortDesc="#{bindings.Contactid.hints.tooltip}"
+                  id="it5">
+      <f:validator binding="#{bindings.Contactid.validator}"/>
+      <af:convertNumber groupingUsed="false" pattern="#{bindings.Contactid.format}"/>
+    </af:inputText>
+    <f:facet name="footer">
+      <af:button text="Save" id="b1"/>
+      <af:button text="Back" id="b2" action="backFromEdit"/>
+    </f:facet>
+  </af:panelFormLayout>
+</ui:composition>

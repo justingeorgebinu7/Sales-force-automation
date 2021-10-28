@@ -1,0 +1,165 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <af:document title="AppointmentsAndInteractions.jsf" id="d1">
+        <af:messages id="m1"/>
+        <af:form id="f1">
+    <af:panelSplitter orientation="vertical" splitterPosition="166" id="ps2">
+                <f:facet name="first">
+                    <af:panelGridLayout id="pgl2">
+                        <af:gridRow marginTop="0px" height="auto" id="gr2">
+                            <af:gridCell marginStart="0px" columnSpan="3" marginEnd="0px" id="gc1">
+                                <div style="box-shadow: 0 5px 10px -2px rgba(0,0,0,.2);overflow:hidden;padding-bottom:20px;background-color:white; font-size:17px; width:100vw;">
+                                    <img alt="img" src="https://i.ibb.co/HrRP1ZH/logosq.jpg"
+                                         style="height:140px;float:left;"/>
+                                    <div style="margin-top:60px;margin-left:20px">
+                                        Welcome,
+                                        <br/>You are logged in as 
+                                        #{securityContext.userName}
+                                    </div>
+                                </div>
+                            </af:gridCell>
+                        </af:gridRow>
+                        <af:gridRow marginTop="0px" height="auto" marginBottom="0px" id="gr3">
+                            <af:gridCell marginStart="0px" rowSpan="2" width="20%" id="gc5"/>
+                            <af:gridCell marginStart="0px" rowSpan="2" columnSpan="2" marginEnd="0px" id="gc6"/>
+                        </af:gridRow>
+                    </af:panelGridLayout>
+                </f:facet>
+                <f:facet name="second">
+                    <af:panelSplitter orientation="horizontal" splitterPosition="303" id="ps1">
+                        <f:facet name="first">
+                            <af:panelGridLayout id="pgl3">
+                                <af:gridRow marginTop="0px" height="auto" id="gr4">
+                                    <af:gridCell marginStart="0px" columnSpan="3" marginEnd="0px" id="gc4">
+                                        <div style="background-color:white; margin-top:-2px;padding:30px 30px;padding-top:80px;overflow:hidden; height:80vh; box-shadow:  2px 10px 15px -2px rgba(0,0,0,.2);"
+                                             id="sidebar">
+                                            <af:button text="Customer Accounts" id="b4" styleClass="navBtn"
+                                                       icon="https://i.ibb.co/hY6Kk88/icon.png" iconPosition="leading"
+                                                       type="default"/><af:spacer id="s1" height="10px"/><af:button text="Appointments"
+                                                                                                                    id="b1"
+                                                                                                                    styleClass="navBtn"
+                                                                                                                    icon="https://i.ibb.co/fFVLNvF/appointments.png"/><af:spacer id="s3"
+                                                                                                                                                                                 height="10px"/><af:button text="Logout"
+                                                                                                                                                                                                           id="b3"
+                                                                                                                                                                                                           styleClass="navBtn"
+                                                                                                                                                                                                           icon="https://i.ibb.co/9GXZypr/logout.png"/>
+                                        </div>
+                                    </af:gridCell>
+                                </af:gridRow>
+                                <af:gridRow marginTop="0px" height="auto" marginBottom="0px" id="gr5">
+                                    <af:gridCell marginStart="0px" rowSpan="2" width="20%" id="gc7"/>
+                                    <af:gridCell marginStart="0px" rowSpan="2" columnSpan="2" marginEnd="0px" id="gc8"/>
+                                </af:gridRow>
+                            </af:panelGridLayout>
+                        </f:facet>
+                        <f:facet name="second">
+                            <af:panelSplitter id="ps3" orientation="vertical" splitterPosition="88">
+                                <f:facet name="first"/>
+                                <f:facet name="second">
+                                    <af:panelSplitter id="ps4" splitterPosition="525">
+                                        <f:facet name="first">
+                                            <af:panelStretchLayout id="psl1" dimensionsFrom="parent">
+                                                <f:facet name="start"/>
+                                                <f:facet name="end"/>
+                                                <f:facet name="top"/>
+                                                <f:facet name="bottom"/>
+                                                <f:facet name="center">
+                                                    <af:panelBox text="Customer Accounts" id="pb1">
+                                                        <f:facet name="toolbar"/>
+                                                        <af:spacer id="s2" height="30px"/>
+                                                        <af:listView value="#{bindings.CustomeraccountView1.collectionModel}"
+                                                                     var="item"
+                                                                     emptyText="#{bindings.CustomeraccountView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                                                     fetchSize="#{bindings.CustomeraccountView1.rangeSize}"
+                                                                     id="lv1" selection="single"
+                                                                     selectionListener="#{bindings.CustomeraccountView1.treeModel.makeCurrent}">
+                                                            <af:listItem id="li1">
+                                                                <af:panelGridLayout id="pgl1">
+                                                                    <af:gridRow marginTop="5px" height="auto"
+                                                                                marginBottom="5px" id="gr1">
+                                                                        <af:gridCell marginStart="5px" width="34%"
+                                                                                     id="gc2">
+                                                                            <af:outputFormatted value="#{item.bindings.Name.inputValue}"
+                                                                                                id="of1"/>
+                                                                        </af:gridCell>
+                                                                        <af:gridCell marginStart="5px" width="33%"
+                                                                                     id="gc3">
+                                                                            <af:outputFormatted value="#{item.bindings.Type.inputValue}"
+                                                                                                id="of2"/>
+                                                                        </af:gridCell>
+                                                                        <af:gridCell marginStart="5px" width="33%"
+                                                                                     marginEnd="5px" id="gc9">
+                                                                            <af:outputFormatted value="#{item.bindings.Accounturl.inputValue}"
+                                                                                                id="of3"/>
+                                                                        </af:gridCell>
+                                                                    </af:gridRow>
+                                                                </af:panelGridLayout>
+                                                            </af:listItem>
+                                                        </af:listView>
+                                                        <af:spacer id="spacer2" height="10"/>
+                                                    </af:panelBox>
+                                                </f:facet>
+                                            </af:panelStretchLayout>
+                                        </f:facet>
+                                        <f:facet name="second">
+                                            <af:panelStretchLayout id="psl2" dimensionsFrom="parent">
+                                                <f:facet name="start"/>
+                                                <f:facet name="end"/>
+                                                <f:facet name="top"/>
+                                                <f:facet name="bottom"/>
+                                                <f:facet name="center">
+                                                    <af:panelBox text="Contact  Details" id="pb2">
+                                                        <f:facet name="toolbar"/>
+                                                        <af:spacer id="s4" height="30px"/>
+                                                        <af:table value="#{bindings.CustomercontactsView2.collectionModel}"
+                                                                  var="row"
+                                                                  rows="#{bindings.CustomercontactsView2.rangeSize}"
+                                                                  emptyText="#{bindings.CustomercontactsView2.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                                                  rowBandingInterval="0"
+                                                                  selectedRowKeys="#{bindings.CustomercontactsView2.collectionModel.selectedRow}"
+                                                                  selectionListener="#{bindings.CustomercontactsView2.collectionModel.makeCurrent}"
+                                                                  rowSelection="single"
+                                                                  fetchSize="#{bindings.CustomercontactsView2.rangeSize}"
+                                                                  id="t1">
+                                                            <af:column headerText="#{bindings.CustomercontactsView2.hints.Name.label}"
+                                                                       id="c1">
+                                                                <af:outputText value="#{row.Name}"
+                                                                               shortDesc="#{bindings.CustomercontactsView2.hints.Name.tooltip}"
+                                                                               id="ot1"/>
+                                                            </af:column>
+                                                            <af:column headerText="#{bindings.CustomercontactsView2.hints.Title.label}"
+                                                                       id="c2">
+                                                                <af:outputText value="#{row.Title}"
+                                                                               shortDesc="#{bindings.CustomercontactsView2.hints.Title.tooltip}"
+                                                                               id="ot2"/>
+                                                            </af:column>
+                                                            <af:column headerText="#{bindings.CustomercontactsView2.hints.Department.label}"
+                                                                       id="c3">
+                                                                <af:outputText value="#{row.Department}"
+                                                                               shortDesc="#{bindings.CustomercontactsView2.hints.Department.tooltip}"
+                                                                               id="ot3"/>
+                                                            </af:column>
+                                                            <af:column headerText="#{bindings.CustomercontactsView2.hints.Influencelevel.label}"
+                                                                       id="c4">
+                                                                <af:outputText value="#{row.Influencelevel}"
+                                                                               shortDesc="#{bindings.CustomercontactsView2.hints.Influencelevel.tooltip}"
+                                                                               id="ot4"/>
+                                                            </af:column>
+                                                        </af:table>
+                                                        <af:button text="Manage Appointments and Interactions" id="b2"
+                                                                   action="gotoManagePage"/>
+                                                    </af:panelBox>
+                                                </f:facet>
+                                            </af:panelStretchLayout>
+                                        </f:facet>
+                                    </af:panelSplitter>
+                                </f:facet>
+                            </af:panelSplitter>
+                        </f:facet>
+                    </af:panelSplitter>
+                </f:facet>
+            </af:panelSplitter>
+    </af:form>
+  </af:document>
+</f:view>

@@ -82,6 +82,25 @@
     <page path="/OM_addNote.jsff" usageId="sfa_view_OM_addNotePageDef"/>
     <page path="/OpportunityManagement/OM_notes.jsff" usageId="sfa_view_OM_notesPageDef"/>
     <page path="/CustomerAccountHomePageMenu.jsff" usageId="sfa_view_CustomerAccountHomePageMenuPageDef"/>
+    <page path="/AppointmentsAndInteractions.jsf" usageId="sfa_view_AppointmentsAndInteractionsPageDef"/>
+    <page path="/AppointmentTable.jsff" usageId="sfa_view_AppointmentTablePageDef"/>
+    <page path="/EditAppointments.jsff" usageId="sfa_view_EditAppointmentsPageDef"/>
+    <page path="/SearchAppointments.jsff" usageId="sfa_view_SearchAppointmentsPageDef"/>
+    <page path="/WEB-INF/createAppointmentTF.xml#createAppointmentTF@CreateInsert"
+          usageId="sfa_view_createAppointmentTF_createAppointmentTF_CreateInsertPageDef"/>
+    <page path="/AppointmentAndInteractionsManagement.jsf"
+          usageId="sfa_view_AppointmentAndInteractionsManagementPageDef"/>
+    <page path="/WEB-INF/createAppointmentTF.xml#createAppointmentTF@Commit"
+          usageId="sfa_view_createAppointmentTF_createAppointmentTF_CommitPageDef"/>
+    <page path="/CreateAppointments.jsff" usageId="sfa_view_CreateAppointmentsPageDef"/>
+    <page path="/InteractionView.jsff" usageId="sfa_view_InteractionViewPageDef"/>
+    <page path="/EditInteractions.jsff" usageId="sfa_view_EditInteractionsPageDef"/>
+    <page path="/SearchInteraction.jsff" usageId="sfa_view_SearchInteractionPageDef"/>
+    <page path="/WEB-INF/createInteractionTF.xml#createInteractionTF@CreateInsert"
+          usageId="sfa_view_createInteractionTF_createInteractionTF_CreateInsertPageDef"/>
+    <page path="/WEB-INF/createInteractionTF.xml#createInteractionTF@Commit"
+          usageId="sfa_view_createInteractionTF_createInteractionTF_CommitPageDef"/>
+    <page path="/createInteraction.jsff" usageId="sfa_view_createInteractionPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="sfa_view_untitled2PageDef" path="sfa.view.pageDefs.untitled2PageDef"/>
@@ -157,6 +176,25 @@
     <page id="sfa_view_OM_addNotePageDef" path="sfa.view.pageDefs.OM_addNotePageDef"/>
     <page id="sfa_view_OM_notesPageDef" path="OpportunityManagement.OM_notesPageDef"/>
     <page id="sfa_view_CustomerAccountHomePageMenuPageDef" path="sfa.view.pageDefs.CustomerAccountHomePageMenuPageDef"/>
+    <page id="sfa_view_AppointmentsAndInteractionsPageDef" path="sfa.view.pageDefs.AppointmentsAndInteractionsPageDef"/>
+    <page id="sfa_view_AppointmentTablePageDef" path="sfa.view.pageDefs.AppointmentTablePageDef"/>
+    <page id="sfa_view_EditAppointmentsPageDef" path="sfa.view.pageDefs.EditAppointmentsPageDef"/>
+    <page id="sfa_view_SearchAppointmentsPageDef" path="sfa.view.pageDefs.SearchAppointmentsPageDef"/>
+    <page id="sfa_view_createAppointmentTF_createAppointmentTF_CreateInsertPageDef"
+          path="sfa.view.pageDefs.createAppointmentTF_createAppointmentTF_CreateInsertPageDef"/>
+    <page id="sfa_view_AppointmentAndInteractionsManagementPageDef"
+          path="sfa.view.pageDefs.AppointmentAndInteractionsManagementPageDef"/>
+    <page id="sfa_view_createAppointmentTF_createAppointmentTF_CommitPageDef"
+          path="sfa.view.pageDefs.createAppointmentTF_createAppointmentTF_CommitPageDef"/>
+    <page id="sfa_view_CreateAppointmentsPageDef" path="sfa.view.pageDefs.CreateAppointmentsPageDef"/>
+    <page id="sfa_view_InteractionViewPageDef" path="sfa.view.pageDefs.InteractionViewPageDef"/>
+    <page id="sfa_view_EditInteractionsPageDef" path="sfa.view.pageDefs.EditInteractionsPageDef"/>
+    <page id="sfa_view_SearchInteractionPageDef" path="sfa.view.pageDefs.SearchInteractionPageDef"/>
+    <page id="sfa_view_createInteractionTF_createInteractionTF_CreateInsertPageDef"
+          path="sfa.view.pageDefs.createInteractionTF_createInteractionTF_CreateInsertPageDef"/>
+    <page id="sfa_view_createInteractionTF_createInteractionTF_CommitPageDef"
+          path="sfa.view.pageDefs.createInteractionTF_createInteractionTF_CommitPageDef"/>
+    <page id="sfa_view_createInteractionPageDef" path="sfa.view.pageDefs.createInteractionPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="sfa.model.entities"

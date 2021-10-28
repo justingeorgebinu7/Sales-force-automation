@@ -1,0 +1,57 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SDM>
+   <OverallProperties
+      id="OverallProperties1"/>
+   <View
+      id="View2">
+      <property
+         name="activityId">AppointmentsAndInteractions</property>
+      <property
+         name="x">266.38867</property>
+      <property
+         name="start">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>AppointmentsAndInteractions&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">348.54004</property>
+      <property
+         name="page">/AppointmentsAndInteractions.jsf</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <View
+      id="View3">
+      <property
+         name="activityId">AppointmentAndInteractionsManagement</property>
+      <property
+         name="x">766.41016</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>AppointmentAndInteractionsManagement&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">399.79883</property>
+      <property
+         name="page">/AppointmentAndInteractionsManagement.jsf</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase4"
+      from="View2"
+      to="View3">
+      <property
+         name="fromOutcome">gotoManagePage</property>
+      <property
+         name="sdm:polyPoints">R50,308.1245,348.18948,724.6743,399.44824,L50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase5"
+      from="View3"
+      to="View2">
+      <property
+         name="fromOutcome">gotoBackToAppointmentsPage</property>
+      <property
+         name="sdm:polyPoints">L54,724.98236,402.94824,307.38867,351.68945,R54</property>
+   </ControlFlowCase>
+</SDM>

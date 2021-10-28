@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.22.48" id="SearchInteractionPageDef"
+                Package="sfa.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="InteractionView3" RangeSize="25" DataControl="AppModuleDataControl" id="InteractionView3Iterator"/>
+    <searchRegion Criteria="__ImplicitViewCriteria__" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  Binds="InteractionView3Iterator" id="ImplicitViewCriteriaQuery"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="InteractionView3Iterator" id="InteractionView3">
+      <nodeDefinition DefName="sfa.model.viewobjects.InteractionView" Name="InteractionView30">
+        <AttrNames>
+          <Item Value="Type"/>
+          <Item Value="Description"/>
+          <Item Value="Resolution"/>
+          <Item Value="Direction"/>
+          <Item Value="Startdate"/>
+          <Item Value="Enddate"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>
