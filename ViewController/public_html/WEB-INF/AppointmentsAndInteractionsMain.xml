@@ -6,10 +6,10 @@
       <shared/>
     </data-control-scope>
     <view id="AppointmentsAndInteractions">
-      <page>/AppointmentsAndInteractions.jsf</page>
+      <page>/AppointmentsAndInteractions/AppointmentsAndInteractions.jsf</page>
     </view>
     <view id="AppointmentAndInteractionsManagement">
-      <page>/AppointmentAndInteractionsManagement.jsf</page>
+      <page>/AppointmentsAndInteractions/AppointmentAndInteractionsManagement.jsf</page>
     </view>
     <control-flow-rule id="__1">
       <from-activity-id>AppointmentsAndInteractions</from-activity-id>

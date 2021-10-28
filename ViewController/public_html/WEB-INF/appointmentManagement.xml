@@ -6,13 +6,13 @@
       <shared/>
     </data-control-scope>
     <view id="AppointmentTable">
-      <page>/AppointmentTable.jsff</page>
+      <page>/AppointmentsAndInteractions/AppointmentTable.jsff</page>
     </view>
     <view id="EditAppointments">
-      <page>/EditAppointments.jsff</page>
+      <page>/AppointmentsAndInteractions/EditAppointments.jsff</page>
     </view>
     <view id="SearchAppointments">
-      <page>/SearchAppointments.jsff</page>
+      <page>/AppointmentsAndInteractions/SearchAppointments.jsff</page>
     </view>
     <task-flow-call id="createAppointmentTF">
       <task-flow-reference>

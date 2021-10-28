@@ -12,7 +12,7 @@
       </outcome>
     </method-call>
     <view id="CreateAppointments">
-      <page>/CreateAppointments.jsff</page>
+      <page>/AppointmentsAndInteractions/CreateAppointments.jsff</page>
     </view>
     <method-call id="Commit">
       <method>#{bindings.Commit.execute}</method>

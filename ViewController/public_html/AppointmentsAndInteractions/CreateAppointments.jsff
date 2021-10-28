@@ -48,7 +48,7 @@
       <af:convertNumber groupingUsed="false" pattern="#{bindings.Contactid.format}"/>
     </af:inputText>
     <f:facet name="footer">
-      <af:button text="Submit" id="b1"/>
+      <af:button text="Save" id="b1" action="commit"/>
     </f:facet>
   </af:panelFormLayout>
   <af:button text="Back" id="b2" action="back"/>

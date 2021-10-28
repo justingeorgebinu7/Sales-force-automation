@@ -4,7 +4,7 @@
             emptyText="#{bindings.InteractionView3.viewable ? 'No data to display.' : 'Access Denied.'}"
             rowBandingInterval="0" selectedRowKeys="#{bindings.InteractionView3.collectionModel.selectedRow}"
             selectionListener="#{bindings.InteractionView3.collectionModel.makeCurrent}" rowSelection="single"
-            fetchSize="#{bindings.InteractionView3.rangeSize}" id="t1">
+            fetchSize="#{bindings.InteractionView3.rangeSize}" id="t1" partialTriggers="::b4">
     <af:column sortProperty="#{bindings.InteractionView3.hints.Type.name}" sortable="true"
                headerText="#{bindings.InteractionView3.hints.Type.label}" id="c1">
       <af:outputText value="#{row.Type}" shortDesc="#{bindings.InteractionView3.hints.Type.tooltip}" id="ot1"/>
@@ -40,5 +40,5 @@
   <af:button text="Search" id="b1" action="searchInteraction"/>
   <af:button text="Edit" id="b2" action="editInteraction"/>
   <af:button text="Create" id="b3" action="createInteraction"/>
-  <af:button text="Delete" id="b4"/>
+  <af:button text="Delete" id="b4" actionListener="#{bindings.Delete.execute}" disabled="#{!bindings.Delete.enabled}"/>
 </ui:composition>

@@ -17,7 +17,7 @@
       <property
          name="y">364.89648</property>
       <property
-         name="page">/InteractionView.jsff</property>
+         name="page">/AppointmentsAndInteractions/InteractionView.jsff</property>
       <property
          name="exceptionHandler">false</property>
    </View>
@@ -34,7 +34,7 @@
       <property
          name="y">131.59766</property>
       <property
-         name="page">/EditInteractions.jsff</property>
+         name="page">/AppointmentsAndInteractions/EditInteractions.jsff</property>
       <property
          name="exceptionHandler">false</property>
    </View>
@@ -51,7 +51,7 @@
       <property
          name="y">246.29883</property>
       <property
-         name="page">/SearchInteraction.jsff</property>
+         name="page">/AppointmentsAndInteractions/SearchInteraction.jsff</property>
       <property
          name="exceptionHandler">false</property>
    </View>

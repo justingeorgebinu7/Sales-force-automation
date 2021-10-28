@@ -6,7 +6,7 @@
       <shared/>
     </data-control-scope>
     <view id="AccountSearchableHomepagw">
-      <page>/AccountSearchableHomepage.jsff</page>
+      <page>/AppointmentsAndInteractions/AccountSearchableHomepage.jsff</page>
     </view>
     <task-flow-call id="createInsertAccount">
       <task-flow-reference>

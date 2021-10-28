@@ -30,7 +30,7 @@
       <property
          name="y">224.89648</property>
       <property
-         name="page">/CreateAppointments.jsff</property>
+         name="page">/AppointmentsAndInteractions/CreateAppointments.jsff</property>
       <property
          name="exceptionHandler">false</property>
    </View>
