@@ -106,7 +106,7 @@
       <property
          name="y">464.1494</property>
       <property
-         name="documentReference">/WEB-INF/createInteractionTF.xml</property>
+         name="documentReference">/WEB-INF/AppointmentsAndInteraction/createInteractionTF.xml</property>
       <property
          name="exceptionHandler">false</property>
       <property

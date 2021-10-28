@@ -16,7 +16,7 @@
     </view>
     <task-flow-call id="createAppointmentTF">
       <task-flow-reference>
-        <document>/WEB-INF/createAppointmentTF.xml</document>
+        <document>/WEB-INF/AppointmentsAndInteraction/createAppointmentTF.xml</document>
         <id>createAppointmentTF</id>
       </task-flow-reference>
     </task-flow-call>

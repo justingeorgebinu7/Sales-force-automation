@@ -86,19 +86,19 @@
     <page path="/AppointmentsAndInteractions/AppointmentTable.jsff" usageId="sfa_view_AppointmentTablePageDef"/>
     <page path="/AppointmentsAndInteractions/EditAppointments.jsff" usageId="sfa_view_EditAppointmentsPageDef"/>
     <page path="/AppointmentsAndInteractions/SearchAppointments.jsff" usageId="sfa_view_SearchAppointmentsPageDef"/>
-    <page path="/WEB-INF/createAppointmentTF.xml#createAppointmentTF@CreateInsert"
+    <page path="/WEB-INF/AppointmentsAndInteraction/createAppointmentTF.xml#createAppointmentTF@CreateInsert"
           usageId="sfa_view_createAppointmentTF_createAppointmentTF_CreateInsertPageDef"/>
     <page path="/AppointmentsAndInteractions/AppointmentAndInteractionsManagement.jsf"
           usageId="sfa_view_AppointmentAndInteractionsManagementPageDef"/>
-    <page path="/WEB-INF/createAppointmentTF.xml#createAppointmentTF@Commit"
+    <page path="/WEB-INF/AppointmentsAndInteraction/createAppointmentTF.xml#createAppointmentTF@Commit"
           usageId="sfa_view_createAppointmentTF_createAppointmentTF_CommitPageDef"/>
     <page path="/AppointmentsAndInteractions/CreateAppointments.jsff" usageId="sfa_view_CreateAppointmentsPageDef"/>
     <page path="/AppointmentsAndInteractions/InteractionView.jsff" usageId="sfa_view_InteractionViewPageDef"/>
     <page path="/AppointmentsAndInteractions/EditInteractions.jsff" usageId="sfa_view_EditInteractionsPageDef"/>
     <page path="/AppointmentsAndInteractions/SearchInteraction.jsff" usageId="sfa_view_SearchInteractionPageDef"/>
-    <page path="/WEB-INF/createInteractionTF.xml#createInteractionTF@CreateInsert"
+    <page path="/WEB-INF/AppointmentsAndInteraction/createInteractionTF.xml#createInteractionTF@CreateInsert"
           usageId="sfa_view_createInteractionTF_createInteractionTF_CreateInsertPageDef"/>
-    <page path="/WEB-INF/createInteractionTF.xml#createInteractionTF@Commit"
+    <page path="/WEB-INF/AppointmentsAndInteraction/createInteractionTF.xml#createInteractionTF@Commit"
           usageId="sfa_view_createInteractionTF_createInteractionTF_CommitPageDef"/>
     <page path="/AppointmentsAndInteractions/createInteraction.jsff" usageId="sfa_view_createInteractionPageDef"/>
   </pageMap>

@@ -4,9 +4,11 @@
   <parameters/>
   <executables>
     <variableIterator id="variables"/>
-    <taskFlow id="appointmentManagement1" taskFlowId="/WEB-INF/appointmentManagement.xml#appointmentManagement"
+    <taskFlow id="appointmentManagement1"
+              taskFlowId="/WEB-INF/AppointmentsAndInteraction/appointmentManagement.xml#appointmentManagement"
               activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
-    <taskFlow id="InteractionManagement1" taskFlowId="/WEB-INF/InteractionManagement.xml#InteractionManagement"
+    <taskFlow id="InteractionManagement1"
+              taskFlowId="/WEB-INF/AppointmentsAndInteraction/InteractionManagement.xml#InteractionManagement"
               activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
   </executables>
   <bindings/>
