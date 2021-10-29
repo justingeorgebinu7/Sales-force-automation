@@ -13,8 +13,6 @@
           <Item Value="Noteid"/>
           <Item Value="Content"/>
           <Item Value="Datetime"/>
-          <Item Value="Subject"/>
-          <Item Value="Createdby"/>
         </AttrNames>
       </nodeDefinition>
     </tree>
