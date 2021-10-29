@@ -1,0 +1,12 @@
+//Groovy Scripts for sfa.model.viewobjects.NoteView
+
+package sfa.model.viewobjects
+
+import oracle.jbo.script.annotation.TransientValueExpression;
+
+@TransientValueExpression(attributeName="Datetime")
+def Datetime_ExpressionScript_Expression()
+{
+adf.currentDateTime
+}
+
