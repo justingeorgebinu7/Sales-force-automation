@@ -30,7 +30,7 @@
       <property
          name="y">159.84473</property>
       <property
-         name="page">/addTaskForAccount.jsff</property>
+         name="page">/CustomerAccountManagement/addTaskForAccount.jsff</property>
       <property
          name="exceptionHandler">false</property>
    </View>
