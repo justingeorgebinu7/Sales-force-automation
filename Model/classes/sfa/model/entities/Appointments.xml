@@ -21,7 +21,6 @@
     PrimaryKey="true">
     <TransientExpression
       Name="ExpressionScript"
-      trustMode="trusted"
       CodeSourceName="AppointmentsRow"/>
   </Attribute>
   <Attribute
@@ -42,14 +41,28 @@
     SQLType="DATE"
     Type="java.sql.Timestamp"
     ColumnType="DATE"
-    TableName="APPOINTMENTS"/>
+    TableName="APPOINTMENTS">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="sfa.model.entities.Appointments.Startdate_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <Attribute
     Name="Enddate"
     ColumnName="ENDDATE"
     SQLType="DATE"
     Type="java.sql.Timestamp"
     ColumnType="DATE"
-    TableName="APPOINTMENTS"/>
+    TableName="APPOINTMENTS">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="sfa.model.entities.Appointments.Enddate_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <Attribute
     Name="Description"
     Precision="100"
@@ -81,7 +94,14 @@
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
-    TableName="APPOINTMENTS"/>
+    TableName="APPOINTMENTS">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="sfa.model.entities.Appointments.Contactid_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <AccessorAttribute
     Name="Customercontacts"
     Association="sfa.model.entities.AppointmentsContactsFkAssoc"
@@ -118,4 +138,8 @@
       <Item Value="sfa.model.entities.Appointments.Contactid"/>
     </AttrArray>
   </Key>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="sfa.model.ModelBundle"/>
+  </ResourceBundle>
 </Entity>

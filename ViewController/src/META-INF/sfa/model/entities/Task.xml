@@ -21,7 +21,6 @@
     PrimaryKey="true">
     <TransientExpression
       Name="ExpressionScript"
-      trustMode="trusted"
       CodeSourceName="TaskRow"/>
   </Attribute>
   <Attribute
@@ -42,7 +41,14 @@
     SQLType="DATE"
     Type="java.sql.Timestamp"
     ColumnType="DATE"
-    TableName="TASK"/>
+    TableName="TASK">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="sfa.model.entities.Task.Duedate_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <Attribute
     Name="Priority"
     Precision="20"
@@ -73,28 +79,56 @@
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
-    TableName="TASK"/>
+    TableName="TASK">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="sfa.model.entities.Task.Percentageofcompletion_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <Attribute
     Name="Opportunityid"
     ColumnName="OPPORTUNITYID"
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
-    TableName="TASK"/>
+    TableName="TASK">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="sfa.model.entities.Task.Opportunityid_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <Attribute
     Name="Contactid"
     ColumnName="CONTACTID"
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
-    TableName="TASK"/>
+    TableName="TASK">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="sfa.model.entities.Task.Contactid_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <Attribute
     Name="Customeraccount"
     ColumnName="CUSTOMERACCOUNT"
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
-    TableName="TASK"/>
+    TableName="TASK">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="sfa.model.entities.Task.Customeraccount_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <AccessorAttribute
     Name="Opportunity"
     Association="sfa.model.entities.Opportunityid1Assoc"
@@ -162,4 +196,8 @@
       <Item Value="sfa.model.entities.Task.Contactid"/>
     </AttrArray>
   </Key>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="sfa.model.ModelBundle"/>
+  </ResourceBundle>
 </Entity>

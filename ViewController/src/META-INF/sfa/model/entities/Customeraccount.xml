@@ -22,7 +22,6 @@
     PrimaryKey="true">
     <TransientExpression
       Name="ExpressionScript"
-      trustMode="trusted"
       CodeSourceName="CustomeraccountRow"/>
   </Attribute>
   <Attribute
@@ -75,6 +74,12 @@
     <DesignTime>
       <Attr Name="_DisplaySize" Value="50"/>
     </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="sfa.model.entities.Customeraccount.Accounturl_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
   </Attribute>
   <Attribute
     Name="Ceo"
@@ -103,6 +108,12 @@
       Inverse="false"
       CompareType="GREATERTHAN"
       CompareValue="0"/>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="sfa.model.entities.Customeraccount.Numberofemployees_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
   </Attribute>
   <Attribute
     Name="Email"
