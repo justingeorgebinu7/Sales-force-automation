@@ -9,115 +9,62 @@
       <property
          name="pageFragment">true</property>
       <property
-         name="x">158.0</property>
+         name="x">166.0</property>
       <property
          name="start">true</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>AccountContacts&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">244.89648</property>
+         name="y">283.3789</property>
       <property
          name="page">/CustomerAccountManagement/AccountContacts.jsff</property>
       <property
          name="exceptionHandler">false</property>
    </View>
    <View
-      id="View14">
+      id="View12">
       <property
-         name="activityId">SearchContact</property>
+         name="activityId">searchContact</property>
       <property
          name="pageFragment">true</property>
       <property
-         name="x">471.68848</property>
+         name="x">470.68652</property>
       <property
-         name="description">&lt;html>&lt;p>&lt;b>SearchContact&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+         name="description">&lt;html>&lt;p>&lt;b>searchContact&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">477.79883</property>
+         name="y">470.39648</property>
       <property
-         name="page">/CustomerAccountManagement/SearchContact.jsff</property>
+         name="page">/CustomerAccountManagement/searchContact.jsff</property>
       <property
          name="exceptionHandler">false</property>
-      <property
-         name="thumbnailExpanded">false</property>
    </View>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase15"
-      from="View2"
-      to="View14">
-      <property
-         name="fromOutcome">toSearch</property>
-      <property
-         name="sdm:polyPoints">B44,154.5,302.32565,428.61563,480.94824,L54</property>
-   </ControlFlowCase>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase16"
-      from="View14"
-      to="View2">
-      <property
-         name="fromOutcome">backFromSearch</property>
-      <property
-         name="sdm:polyPoints">L46,430.68848,473.94824,161.5,298.5459,B56</property>
-   </ControlFlowCase>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase23"
-      from="View2">
-      <property
-         name="tosrcid">__2</property>
-      <property
-         name="fromOutcome">*</property>
-      <property
-         name="fromsrcid">__1</property>
-   </ControlFlowCase>
    <View
-      id="View20">
+      id="View13">
       <property
-         name="activityId">EditContact</property>
+         name="activityId">editContact</property>
       <property
          name="pageFragment">true</property>
       <property
-         name="x">503.0166</property>
+         name="x">476.5</property>
       <property
-         name="description">&lt;html>&lt;p>&lt;b>EditContact&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+         name="description">&lt;html>&lt;p>&lt;b>editContact&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
          name="y">337.79883</property>
       <property
-         name="page">/CustomerAccountManagement/EditContact.jsff</property>
+         name="page">/CustomerAccountManagement/editContact.jsff</property>
       <property
          name="exceptionHandler">false</property>
    </View>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase21"
-      from="View2"
-      to="View20">
-      <property
-         name="fromOutcome">toEdit</property>
-      <property
-         name="sdm:polyPoints">R46,200.19994,241.0459,462.0166,333.94824,L46</property>
-   </ControlFlowCase>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase22"
-      from="View20"
-      to="View2">
-      <property
-         name="fromOutcome">backFromEdit</property>
-      <property
-         name="sdm:polyPoints">L54,460.8141,340.94824,199.0,248.0459,R54</property>
-   </ControlFlowCase>
    <TaskFlowCall
-      id="TaskFlowCall24">
+      id="TaskFlowCall14">
       <property
          name="description">&lt;html>&lt;p>&lt;b>createInsertContactForAccountTF&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
       <property
          name="activityId">createInsertContactForAccountTF</property>
       <property
-         name="x">538.36914</property>
+         name="x">536.36914</property>
       <property
-         name="y">154.14941</property>
+         name="y">215.14941</property>
       <property
          name="documentReference">/WEB-INF/createInsertContactForAccountTF.xml</property>
       <property
@@ -127,12 +74,63 @@
    </TaskFlowCall>
    <ControlFlowCase
       islink="true"
-      id="ControlFlowCase25"
+      id="ControlFlowCase15"
       from="View2"
-      to="TaskFlowCall24">
+      to="TaskFlowCall14">
       <property
-         name="fromOutcome">createAccountContact</property>
+         name="fromOutcome">toAddCon</property>
       <property
-         name="sdm:polyPoints">R42,199.0,237.5459,497.36914,153.79883,L50</property>
+         name="sdm:polyPoints">R34,207.0,269.02832,495.36914,214.79883,L50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase16"
+      from="View2"
+      to="View13">
+      <property
+         name="fromOutcome">toedit</property>
+      <property
+         name="sdm:polyPoints">R42,211.96683,276.02832,435.5,333.94824,L46</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase17"
+      from="View13"
+      to="View2">
+      <property
+         name="fromOutcome">backfromedit</property>
+      <property
+         name="sdm:polyPoints">L54,434.60953,340.94824,211.09348,283.02832,R50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase18"
+      from="View2"
+      to="View12">
+      <property
+         name="fromOutcome">tosearch</property>
+      <property
+         name="sdm:polyPoints">R66,207.0,297.02832,427.23813,473.5459,L54</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase19"
+      from="View12"
+      to="View2">
+      <property
+         name="fromOutcome">backfromsearch</property>
+      <property
+         name="sdm:polyPoints">L46,429.68652,466.5459,209.43785,290.02832,R58</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase12"
+      from="View2">
+      <property
+         name="tosrcid">__2</property>
+      <property
+         name="fromOutcome">*</property>
+      <property
+         name="fromsrcid">__1</property>
    </ControlFlowCase>
 </SDM>

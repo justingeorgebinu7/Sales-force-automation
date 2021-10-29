@@ -7,11 +7,6 @@
     <iterator Binds="InteractionView3" RangeSize="25" DataControl="AppModuleDataControl" id="InteractionView3Iterator"/>
   </executables>
   <bindings>
-    <attributeValues IterBinding="InteractionView3Iterator" id="Interactionid">
-      <AttrNames>
-        <Item Value="Interactionid"/>
-      </AttrNames>
-    </attributeValues>
     <attributeValues IterBinding="InteractionView3Iterator" id="Type">
       <AttrNames>
         <Item Value="Type"/>

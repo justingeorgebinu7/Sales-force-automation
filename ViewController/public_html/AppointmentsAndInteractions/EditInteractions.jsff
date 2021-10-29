@@ -2,14 +2,6 @@
 <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
                 xmlns:f="http://java.sun.com/jsf/core">
   <af:panelFormLayout id="pfl1">
-    <af:inputText value="#{bindings.Interactionid.inputValue}" label="#{bindings.Interactionid.hints.label}"
-                  required="#{bindings.Interactionid.hints.mandatory}"
-                  columns="#{bindings.Interactionid.hints.displayWidth}"
-                  maximumLength="#{bindings.Interactionid.hints.precision}"
-                  shortDesc="#{bindings.Interactionid.hints.tooltip}" id="it1">
-      <f:validator binding="#{bindings.Interactionid.validator}"/>
-      <af:convertNumber groupingUsed="false" pattern="#{bindings.Interactionid.format}"/>
-    </af:inputText>
     <af:inputText value="#{bindings.Type.inputValue}" label="#{bindings.Type.hints.label}"
                   required="#{bindings.Type.hints.mandatory}" columns="#{bindings.Type.hints.displayWidth}"
                   maximumLength="#{bindings.Type.hints.precision}" shortDesc="#{bindings.Type.hints.tooltip}" id="it2">

@@ -68,5 +68,5 @@
       </af:column>
     </af:table>
   </af:panelGroupLayout>
-  <af:button text="Back" id="b1" action="backFromSearch"/>
+  <af:button text="Back" id="b1" action="backfromsearch"/>
 </ui:composition>

@@ -8,11 +8,11 @@
     <view id="AccountContacts">
       <page>/CustomerAccountManagement/AccountContacts.jsff</page>
     </view>
-    <view id="SearchContact">
-      <page>/CustomerAccountManagement/SearchContact.jsff</page>
+    <view id="searchContact">
+      <page>/CustomerAccountManagement/searchContact.jsff</page>
     </view>
-    <view id="EditContact">
-      <page>/CustomerAccountManagement/EditContact.jsff</page>
+    <view id="editContact">
+      <page>/CustomerAccountManagement/editContact.jsff</page>
     </view>
     <task-flow-call id="createInsertContactForAccountTF">
       <task-flow-reference>
@@ -25,30 +25,30 @@
       <control-flow-case id="__2">
         <to-activity-id>addContactTF</to-activity-id>
       </control-flow-case>
-      <control-flow-case id="__7">
-        <from-outcome>toSearch</from-outcome>
-        <to-activity-id>SearchContact</to-activity-id>
-      </control-flow-case>
-      <control-flow-case id="__10">
-        <from-outcome>toEdit</from-outcome>
-        <to-activity-id>EditContact</to-activity-id>
-      </control-flow-case>
-      <control-flow-case id="__13">
-        <from-outcome>createAccountContact</from-outcome>
+      <control-flow-case id="__3">
+        <from-outcome>toAddCon</from-outcome>
         <to-activity-id>createInsertContactForAccountTF</to-activity-id>
       </control-flow-case>
+      <control-flow-case id="__4">
+        <from-outcome>toedit</from-outcome>
+        <to-activity-id>editContact</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__7">
+        <from-outcome>tosearch</from-outcome>
+        <to-activity-id>searchContact</to-activity-id>
+      </control-flow-case>
     </control-flow-rule>
-    <control-flow-rule id="__8">
-      <from-activity-id>SearchContact</from-activity-id>
-      <control-flow-case id="__9">
-        <from-outcome>backFromSearch</from-outcome>
+    <control-flow-rule id="__5">
+      <from-activity-id>editContact</from-activity-id>
+      <control-flow-case id="__6">
+        <from-outcome>backfromedit</from-outcome>
         <to-activity-id>AccountContacts</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
-    <control-flow-rule id="__11">
-      <from-activity-id>EditContact</from-activity-id>
-      <control-flow-case id="__12">
-        <from-outcome>backFromEdit</from-outcome>
+    <control-flow-rule id="__8">
+      <from-activity-id>searchContact</from-activity-id>
+      <control-flow-case id="__9">
+        <from-outcome>backfromsearch</from-outcome>
         <to-activity-id>AccountContacts</to-activity-id>
       </control-flow-case>
     </control-flow-rule>

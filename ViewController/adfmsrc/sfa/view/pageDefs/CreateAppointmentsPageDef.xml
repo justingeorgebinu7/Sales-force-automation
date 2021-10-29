@@ -8,11 +8,6 @@
               id="AppointmentsView3Iterator"/>
   </executables>
   <bindings>
-    <attributeValues IterBinding="AppointmentsView3Iterator" id="Appointmentid">
-      <AttrNames>
-        <Item Value="Appointmentid"/>
-      </AttrNames>
-    </attributeValues>
     <attributeValues IterBinding="AppointmentsView3Iterator" id="Name">
       <AttrNames>
         <Item Value="Name"/>

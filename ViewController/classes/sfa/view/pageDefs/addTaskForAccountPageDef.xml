@@ -7,11 +7,6 @@
     <iterator Binds="TaskView3" RangeSize="25" DataControl="AppModuleDataControl" id="TaskView3Iterator"/>
   </executables>
   <bindings>
-    <attributeValues IterBinding="TaskView3Iterator" id="Taskid">
-      <AttrNames>
-        <Item Value="Taskid"/>
-      </AttrNames>
-    </attributeValues>
     <attributeValues IterBinding="TaskView3Iterator" id="Name">
       <AttrNames>
         <Item Value="Name"/>

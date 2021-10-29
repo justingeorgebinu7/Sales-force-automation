@@ -7,11 +7,6 @@
     <iterator Binds="NoteView2" RangeSize="25" DataControl="AppModuleDataControl" id="NoteView2Iterator"/>
   </executables>
   <bindings>
-    <attributeValues IterBinding="NoteView2Iterator" id="Noteid">
-      <AttrNames>
-        <Item Value="Noteid"/>
-      </AttrNames>
-    </attributeValues>
     <attributeValues IterBinding="NoteView2Iterator" id="Content">
       <AttrNames>
         <Item Value="Content"/>
@@ -23,5 +18,10 @@
       </AttrNames>
     </attributeValues>
     <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+    <attributeValues IterBinding="NoteView2Iterator" id="Subject">
+      <AttrNames>
+        <Item Value="Subject"/>
+      </AttrNames>
+    </attributeValues>
   </bindings>
 </pageDefinition>

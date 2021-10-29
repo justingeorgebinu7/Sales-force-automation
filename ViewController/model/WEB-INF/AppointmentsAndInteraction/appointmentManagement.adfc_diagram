@@ -149,7 +149,7 @@
       <property
          name="fromOutcome">options</property>
       <property
-         name="sdm:polyPoints">R50,148.0,329.89648,250.0,327.7412,L50</property>
+         name="sdm:polyPoints">R46,148.0,326.39648,249.92606,324.2412,L46</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"

@@ -5,12 +5,6 @@
             selectedRowKeys="#{bindings.TaskView3.collectionModel.selectedRow}"
             selectionListener="#{bindings.TaskView3.collectionModel.makeCurrent}" rowSelection="single"
             fetchSize="#{bindings.TaskView3.rangeSize}" id="t1">
-    <af:column sortProperty="#{bindings.TaskView3.hints.Taskid.name}" sortable="true"
-               headerText="#{bindings.TaskView3.hints.Taskid.label}" id="c1">
-      <af:outputText value="#{row.Taskid}" shortDesc="#{bindings.TaskView3.hints.Taskid.tooltip}" id="ot1">
-        <af:convertNumber groupingUsed="false" pattern="#{bindings.TaskView3.hints.Taskid.format}"/>
-      </af:outputText>
-    </af:column>
     <af:column sortProperty="#{bindings.TaskView3.hints.Name.name}" sortable="true"
                headerText="#{bindings.TaskView3.hints.Name.label}" id="c2">
       <af:outputText value="#{row.Name}" shortDesc="#{bindings.TaskView3.hints.Name.tooltip}" id="ot2"/>

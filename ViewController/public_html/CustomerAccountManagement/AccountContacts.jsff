@@ -6,13 +6,6 @@
             rowBandingInterval="0" selectedRowKeys="#{bindings.CustomercontactsView2.collectionModel.selectedRow}"
             selectionListener="#{bindings.CustomercontactsView2.treeModel.makeCurrent}" rowSelection="single"
             fetchSize="#{bindings.CustomercontactsView2.rangeSize}" id="t1">
-    <af:column sortProperty="#{bindings.CustomercontactsView2.hints.Contactid.name}" sortable="true"
-               headerText="#{bindings.CustomercontactsView2.hints.Contactid.label}" id="c1">
-      <af:outputText value="#{row.Contactid}" shortDesc="#{bindings.CustomercontactsView2.hints.Contactid.tooltip}"
-                     id="ot1">
-        <af:convertNumber groupingUsed="false" pattern="#{bindings.CustomercontactsView2.hints.Contactid.format}"/>
-      </af:outputText>
-    </af:column>
     <af:column sortProperty="#{bindings.CustomercontactsView2.hints.Name.name}" sortable="true"
                headerText="#{bindings.CustomercontactsView2.hints.Name.label}" id="c2">
       <af:outputText value="#{row.Name}" shortDesc="#{bindings.CustomercontactsView2.hints.Name.tooltip}" id="ot2"/>
@@ -53,7 +46,7 @@
                      shortDesc="#{bindings.CustomercontactsView2.hints.Isprimarycontact.tooltip}" id="ot9"/>
     </af:column>
   </af:table>
-  <af:button text="Add" id="b1" action="createAccountContact"/>
-  <af:button text="Edit" id="b2" action="toEdit"/>
-  <af:button text="Search" id="b3" action="toSearch"/>
+  <af:button text="Add" id="b1" action="toAddCon"/>
+  <af:button text="Edit" id="b2" action="toedit"/>
+  <af:button text="Search" id="b3" action="tosearch"/>
 </ui:composition>
