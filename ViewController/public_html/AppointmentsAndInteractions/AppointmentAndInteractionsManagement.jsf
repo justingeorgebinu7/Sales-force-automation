@@ -36,7 +36,7 @@
                                              id="sidebar">
                                             <af:button text="Customer Accounts" id="b4" styleClass="navBtn"
                                                        icon="https://i.ibb.co/hY6Kk88/icon.png" iconPosition="leading"
-                                                       type="default"/><af:spacer id="s1" height="10px"/><af:button text="Appointments"
+                                                       type="default" action="exit"/><af:spacer id="s1" height="10px"/><af:button text="Appointments"
                                                                                                                     id="b1"
                                                                                                                     styleClass="navBtn"
                                                                                                                     icon="https://i.ibb.co/fFVLNvF/appointments.png"/><af:spacer id="s3"

@@ -11,11 +11,20 @@
     <view id="AppointmentAndInteractionsManagement">
       <page>/AppointmentsAndInteractions/AppointmentAndInteractionsManagement.jsf</page>
     </view>
+    <task-flow-return id="taskFlowReturn1">
+      <outcome>
+        <name>taskFlowReturn1</name>
+      </outcome>
+    </task-flow-return>
     <control-flow-rule id="__1">
       <from-activity-id>AppointmentsAndInteractions</from-activity-id>
       <control-flow-case id="__2">
         <from-outcome>gotoManagePage</from-outcome>
         <to-activity-id>AppointmentAndInteractionsManagement</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__6">
+        <from-outcome>exit</from-outcome>
+        <to-activity-id>taskFlowReturn1</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <control-flow-rule id="__3">
@@ -23,6 +32,10 @@
       <control-flow-case id="__4">
         <from-outcome>gotoBackToAppointmentsPage</from-outcome>
         <to-activity-id>AppointmentsAndInteractions</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__5">
+        <from-outcome>exit</from-outcome>
+        <to-activity-id>taskFlowReturn1</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
   </task-flow-definition>

@@ -15,7 +15,7 @@
       <property
          name="y">348.54004</property>
       <property
-         name="page">/AppointmentsAndInteractions.jsf</property>
+         name="page">/AppointmentsAndInteractions/AppointmentsAndInteractions.jsf</property>
       <property
          name="exceptionHandler">false</property>
    </View>
@@ -24,13 +24,13 @@
       <property
          name="activityId">AppointmentAndInteractionsManagement</property>
       <property
-         name="x">766.41016</property>
+         name="x">702.41016</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>AppointmentAndInteractionsManagement&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">399.79883</property>
+         name="y">118.09766</property>
       <property
-         name="page">/AppointmentAndInteractionsManagement.jsf</property>
+         name="page">/AppointmentsAndInteractions/AppointmentAndInteractionsManagement.jsf</property>
       <property
          name="exceptionHandler">false</property>
    </View>
@@ -42,7 +42,7 @@
       <property
          name="fromOutcome">gotoManagePage</property>
       <property
-         name="sdm:polyPoints">R50,308.1245,348.18948,724.6743,399.44824,L50</property>
+         name="sdm:polyPoints">R42,307.38867,341.18945,659.3541,114.24707,L46</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -52,6 +52,41 @@
       <property
          name="fromOutcome">gotoBackToAppointmentsPage</property>
       <property
-         name="sdm:polyPoints">L54,724.98236,402.94824,307.38867,351.68945,R54</property>
+         name="sdm:polyPoints">L54,661.41016,121.24707,309.4397,348.18945,R50</property>
+   </ControlFlowCase>
+   <TaskFlowReturn
+      id="TaskFlowReturn6">
+      <property
+         name="activityId">taskFlowReturn1</property>
+      <property
+         name="x">695.0</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>taskFlowReturn1&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Return&lt;/p>&lt;p>Outcome:  taskFlowReturn1&lt;/p></property>
+      <property
+         name="y">364.24707</property>
+      <property
+         name="finish">true</property>
+      <property
+         name="exceptionHandler">false</property>
+   </TaskFlowReturn>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase7"
+      from="View3"
+      to="TaskFlowReturn6">
+      <property
+         name="fromOutcome">exit</property>
+      <property
+         name="sdm:polyPoints">B50,702.41016,171.74707,695.0,309.89648,T50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase8"
+      from="View2"
+      to="TaskFlowReturn6">
+      <property
+         name="fromOutcome">exit</property>
+      <property
+         name="sdm:polyPoints">R58,307.38867,355.18945,654.0,363.89648,L50</property>
    </ControlFlowCase>
 </SDM>
