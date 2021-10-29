@@ -13,6 +13,9 @@
     <taskFlow id="appointmentManagement1"
               taskFlowId="/WEB-INF/AppointmentsAndInteraction/appointmentManagement.xml#appointmentManagement"
               activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <taskFlow id="InteractionManagement1"
+              taskFlowId="/WEB-INF/AppointmentsAndInteraction/InteractionManagement.xml#InteractionManagement"
+              activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
   </executables>
   <bindings/>
 </pageDefinition>

@@ -28,6 +28,9 @@
           <af:showDetailItem id="sdi5" text="Appoinments">
             <af:region value="#{bindings.appointmentManagement1.regionModel}" id="r4"/>
           </af:showDetailItem>
+          <af:showDetailItem id="sdi6" text="Interaction">
+            <af:region value="#{bindings.InteractionManagement1.regionModel}" id="r5"/>
+          </af:showDetailItem>
         </af:panelTabbed>
         <af:componentDragSource/>
       </af:panelBox>

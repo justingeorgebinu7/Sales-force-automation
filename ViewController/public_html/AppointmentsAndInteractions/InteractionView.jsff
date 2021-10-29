@@ -40,5 +40,5 @@
   <af:button text="Search" id="b1" action="searchInteraction"/>
   <af:button text="Edit" id="b2" action="editInteraction"/>
   <af:button text="Create" id="b3" action="createInteraction"/>
-  <af:button text="Delete" id="b4" actionListener="#{bindings.Delete.execute}" disabled="#{!bindings.Delete.enabled}"/>
+  <af:button text="Back" id="b4" action="backToContack"/>
 </ui:composition>

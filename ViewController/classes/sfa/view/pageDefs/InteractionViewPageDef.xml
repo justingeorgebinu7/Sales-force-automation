@@ -19,6 +19,5 @@
         </AttrNames>
       </nodeDefinition>
     </tree>
-    <action IterBinding="InteractionView3Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
   </bindings>
 </pageDefinition>
