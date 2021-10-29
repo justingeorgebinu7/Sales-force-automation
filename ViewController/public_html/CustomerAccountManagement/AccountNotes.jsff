@@ -5,13 +5,14 @@
             selectedRowKeys="#{bindings.NoteView2.collectionModel.selectedRow}"
             selectionListener="#{bindings.NoteView2.collectionModel.makeCurrent}" rowSelection="single"
             fetchSize="#{bindings.NoteView2.rangeSize}" id="t1">
-    <af:column headerText="#{bindings.NoteView2.hints.Noteid.label}" id="c1">
-      <af:outputText value="#{row.Noteid}" shortDesc="#{bindings.NoteView2.hints.Noteid.tooltip}" id="ot1">
-        <af:convertNumber groupingUsed="false" pattern="#{bindings.NoteView2.hints.Noteid.format}"/>
-      </af:outputText>
+    <af:column headerText="#{bindings.NoteView2.hints.Subject.label}" id="c1">
+      <af:outputText value="#{row.Subject}" shortDesc="#{bindings.NoteView2.hints.Subject.tooltip}" id="ot1"/>
     </af:column>
     <af:column headerText="#{bindings.NoteView2.hints.Content.label}" id="c2">
       <af:outputText value="#{row.Content}" shortDesc="#{bindings.NoteView2.hints.Content.tooltip}" id="ot2"/>
+    </af:column>
+    <af:column headerText="#{bindings.NoteView2.hints.Createdby.label}" id="c4">
+      <af:outputText value="#{row.Createdby}" shortDesc="#{bindings.NoteView2.hints.Createdby.tooltip}" id="ot4"/>
     </af:column>
     <af:column headerText="#{bindings.NoteView2.hints.Datetime.label}" id="c3">
       <af:outputText value="#{row.Datetime}" shortDesc="#{bindings.NoteView2.hints.Datetime.tooltip}" id="ot3">

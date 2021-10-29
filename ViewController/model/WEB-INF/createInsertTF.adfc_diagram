@@ -98,6 +98,6 @@
       <property
          name="fromOutcome">*exit</property>
       <property
-         name="sdm:polyPoints">R54,355.5,304.5459,513.0,378.44238,L50</property>
+         name="sdm:polyPoints">R54,355.5,304.5459,513.0,378.0918,L50</property>
    </ControlFlowCase>
 </SDM>

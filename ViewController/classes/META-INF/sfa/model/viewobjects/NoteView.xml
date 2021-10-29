@@ -12,7 +12,8 @@
   BindingStyle="OracleName"
   CustomQuery="false"
   SelectAllAttributes="false"
-  PageIterMode="Full">
+  PageIterMode="Full"
+  AccessMode="DEFAULT">
   <EntityUsage
     Name="Note"
     Entity="sfa.model.entities.Note"/>
@@ -53,4 +54,16 @@
     EntityAttrName="Opportunity"
     EntityUsage="Note"
     AliasName="OPPORTUNITY"/>
+  <ViewAttribute
+    Name="Subject"
+    PrecisionRule="true"
+    EntityAttrName="Subject"
+    EntityUsage="Note"
+    AliasName="SUBJECT"/>
+  <ViewAttribute
+    Name="Createdby"
+    PrecisionRule="true"
+    EntityAttrName="Createdby"
+    EntityUsage="Note"
+    AliasName="CREATEDBY"/>
 </ViewObject>
