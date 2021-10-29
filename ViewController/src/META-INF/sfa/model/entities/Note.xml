@@ -18,7 +18,12 @@
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
     TableName="NOTE"
-    PrimaryKey="true"/>
+    PrimaryKey="true">
+    <TransientExpression
+      Name="ExpressionScript"
+      trustMode="trusted"
+      CodeSourceName="NoteRow"/>
+  </Attribute>
   <Attribute
     Name="Content"
     Precision="100"

@@ -18,7 +18,12 @@
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
     TableName="APPOINTMENTS"
-    PrimaryKey="true"/>
+    PrimaryKey="true">
+    <TransientExpression
+      Name="ExpressionScript"
+      trustMode="trusted"
+      CodeSourceName="AppointmentsRow"/>
+  </Attribute>
   <Attribute
     Name="Name"
     Precision="20"

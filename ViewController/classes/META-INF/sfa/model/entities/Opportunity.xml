@@ -18,7 +18,12 @@
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
     TableName="OPPORTUNITY"
-    PrimaryKey="true"/>
+    PrimaryKey="true">
+    <TransientExpression
+      Name="ExpressionScript"
+      trustMode="trusted"
+      CodeSourceName="OpportunityRow"/>
+  </Attribute>
   <Attribute
     Name="Accountid"
     IsNotNull="true"

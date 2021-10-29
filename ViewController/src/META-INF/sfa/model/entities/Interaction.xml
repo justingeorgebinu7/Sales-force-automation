@@ -19,7 +19,12 @@
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
     TableName="INTERACTION"
-    PrimaryKey="true"/>
+    PrimaryKey="true">
+    <TransientExpression
+      Name="ExpressionScript"
+      trustMode="trusted"
+      CodeSourceName="InteractionRow"/>
+  </Attribute>
   <Attribute
     Name="Type"
     Precision="20"
