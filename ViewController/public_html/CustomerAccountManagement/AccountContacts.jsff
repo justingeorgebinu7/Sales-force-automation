@@ -53,7 +53,7 @@
                      shortDesc="#{bindings.CustomercontactsView2.hints.Isprimarycontact.tooltip}" id="ot9"/>
     </af:column>
   </af:table>
-  <af:button text="Add" id="b1" action="addContact"/>
+  <af:button text="Add" id="b1" action="createAccountContact"/>
   <af:button text="Edit" id="b2" action="toEdit"/>
   <af:button text="Search" id="b3" action="toSearch"/>
 </ui:composition>
