@@ -36,5 +36,5 @@
   <af:button text="Search" id="b1" action="searchAppointments"/>
   <af:button text="Edit" id="b2" action="editAppointments"/>
   <af:button text="Create" id="b3" action="createAppointment"/>
-  <af:button text="Delete" id="b4"/>
+  <af:button text="Back" id="b5" action="*backToContacts"/>
 </ui:composition>

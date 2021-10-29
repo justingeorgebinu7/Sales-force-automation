@@ -25,6 +25,9 @@
             <af:region value="#{bindings.taskCustomerAccount1.regionModel}" id="r2"/>
           </af:showDetailItem>
           <af:showDetailItem id="sdi2" text="Notes"/>
+          <af:showDetailItem id="sdi5" text="Appoinments">
+            <af:region value="#{bindings.appointmentManagement1.regionModel}" id="r4"/>
+          </af:showDetailItem>
         </af:panelTabbed>
         <af:componentDragSource/>
       </af:panelBox>

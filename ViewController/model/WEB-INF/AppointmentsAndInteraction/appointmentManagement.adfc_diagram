@@ -9,15 +9,15 @@
       <property
          name="pageFragment">true</property>
       <property
-         name="x">172.0</property>
+         name="x">291.0</property>
       <property
-         name="start">true</property>
+         name="start">false</property>
       <property
-         name="description">&lt;html>&lt;p>&lt;b>AppointmentTable&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+         name="description">&lt;html>&lt;p>&lt;b>AppointmentTable&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">359.49414</property>
+         name="y">328.0918</property>
       <property
-         name="page">/AppointmentTable.jsff</property>
+         name="page">/AppointmentsAndInteractions/AppointmentTable.jsff</property>
       <property
          name="exceptionHandler">false</property>
    </View>
@@ -28,13 +28,13 @@
       <property
          name="pageFragment">true</property>
       <property
-         name="x">342.0</property>
+         name="x">583.0</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>EditAppointments&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">137.59766</property>
+         name="y">223.19531</property>
       <property
-         name="page">/EditAppointments.jsff</property>
+         name="page">/AppointmentsAndInteractions/EditAppointments.jsff</property>
       <property
          name="exceptionHandler">false</property>
    </View>
@@ -45,13 +45,13 @@
       <property
          name="pageFragment">true</property>
       <property
-         name="x">480.0</property>
+         name="x">648.0</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>SearchAppointments&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">308.89648</property>
+         name="y">348.49414</property>
       <property
-         name="page">/SearchAppointments.jsff</property>
+         name="page">/AppointmentsAndInteractions/SearchAppointments.jsff</property>
       <property
          name="exceptionHandler">false</property>
    </View>
@@ -63,7 +63,7 @@
       <property
          name="fromOutcome">editAppointments</property>
       <property
-         name="sdm:polyPoints">T44,168.5,301.40756,338.5,191.24707,B44</property>
+         name="sdm:polyPoints">R38,332.0,317.2412,540.4433,219.34473,L46</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -73,7 +73,7 @@
       <property
          name="fromOutcome">searchAppointments</property>
       <property
-         name="sdm:polyPoints">R42,213.0,352.14355,438.27722,305.0459,L46</property>
+         name="sdm:polyPoints">R54,332.17047,331.2412,607.0,344.64355,L46</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -83,7 +83,7 @@
       <property
          name="fromOutcome">backFromEdit</property>
       <property
-         name="sdm:polyPoints">B56,345.5,195.01765,175.5,305.14355,T56</property>
+         name="sdm:polyPoints">L54,542.0,226.34473,333.55145,324.2412,R46</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -93,7 +93,7 @@
       <property
          name="fromOutcome">backFromSearch</property>
       <property
-         name="sdm:polyPoints">L54,439.0,312.0459,213.72163,359.14355,R50</property>
+         name="sdm:polyPoints">L54,606.82947,351.64355,332.0,338.2412,R62</property>
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall11">
@@ -106,7 +106,7 @@
       <property
          name="y">510.1494</property>
       <property
-         name="documentReference">/WEB-INF/createAppointmentTF.xml</property>
+         name="documentReference">/WEB-INF/AppointmentsAndInteraction/createAppointmentTF.xml</property>
       <property
          name="exceptionHandler">false</property>
       <property
@@ -120,6 +120,45 @@
       <property
          name="fromOutcome">createAppointment</property>
       <property
-         name="sdm:polyPoints">R58,213.0,366.14355,430.69434,509.79883,L50</property>
+         name="sdm:polyPoints">B50,291.0,381.7412,430.69434,509.79883,L50</property>
+   </ControlFlowCase>
+   <View
+      id="View11">
+      <property
+         name="activityId">view1</property>
+      <property
+         name="pageFragment">true</property>
+      <property
+         name="x">107.0</property>
+      <property
+         name="start">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>view1&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">330.24707</property>
+      <property
+         name="page">/AppointmentsAndInteractions/selectContactForApp.jsff</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase13"
+      from="View11"
+      to="View2">
+      <property
+         name="fromOutcome">options</property>
+      <property
+         name="sdm:polyPoints">R50,148.0,329.89648,250.0,327.7412,L50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase14"
+      from="View2"
+      to="View11">
+      <property
+         name="fromOutcome">*backToContacts</property>
+      <property
+         name="sdm:polyPoints">L54,250.0,331.2412,148.07397,333.39648,R54</property>
    </ControlFlowCase>
 </SDM>

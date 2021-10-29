@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <af:outputFormatted value="Select the customer contact to manage appoinments" id="of3"
+                      inlineStyle="font-weight:bold;font-size:15px;"/>
+  <af:spacer id="s1" height="20px"/>
+  <af:table value="#{bindings.CustomercontactsView2.collectionModel}" var="row"
+            rows="#{bindings.CustomercontactsView2.rangeSize}"
+            emptyText="#{bindings.CustomercontactsView2.viewable ? 'No data to display.' : 'Access Denied.'}"
+            rowBandingInterval="0" selectedRowKeys="#{bindings.CustomercontactsView2.collectionModel.selectedRow}"
+            selectionListener="#{bindings.CustomercontactsView2.collectionModel.makeCurrent}" rowSelection="single"
+            fetchSize="#{bindings.CustomercontactsView2.rangeSize}" id="t1">
+    <af:column sortProperty="#{bindings.CustomercontactsView2.hints.Name.name}" sortable="true"
+               headerText="#{bindings.CustomercontactsView2.hints.Name.label}" id="c1">
+      <af:outputText value="#{row.Name}" shortDesc="#{bindings.CustomercontactsView2.hints.Name.tooltip}" id="ot1"/>
+    </af:column>
+    <af:column sortProperty="#{bindings.CustomercontactsView2.hints.Title.name}" sortable="true"
+               headerText="#{bindings.CustomercontactsView2.hints.Title.label}" id="c2">
+      <af:outputText value="#{row.Title}" shortDesc="#{bindings.CustomercontactsView2.hints.Title.tooltip}" id="ot2"/>
+    </af:column>
+    <af:column sortProperty="#{bindings.CustomercontactsView2.hints.Department.name}" sortable="true"
+               headerText="#{bindings.CustomercontactsView2.hints.Department.label}" id="c3">
+      <af:outputText value="#{row.Department}" shortDesc="#{bindings.CustomercontactsView2.hints.Department.tooltip}"
+                     id="ot3"/>
+    </af:column>
+  </af:table>
+  <af:button text="Manage Appoinments" id="b1" action="options"/>
+</ui:composition>

@@ -42,7 +42,7 @@
       <property
          name="fromOutcome">exit</property>
       <property
-         name="sdm:polyPoints">R55,227.1816,254.20013,620.8399,280.49414,L50</property>
+         name="sdm:polyPoints">R54,226.02148,253.04004,622.0,280.49414,L50</property>
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall5">
@@ -53,7 +53,7 @@
       <property
          name="x">478.39355</property>
       <property
-         name="y">109.79883</property>
+         name="y">109.44824</property>
       <property
          name="documentReference">/WEB-INF/AppointmentsAndInteraction/AppointmentsAndInteractionsMain.xml</property>
       <property
@@ -69,6 +69,6 @@
       <property
          name="fromOutcome">toApp</property>
       <property
-         name="sdm:polyPoints">R45,227.1816,244.87991,436.23343,109.79883,L50</property>
+         name="sdm:polyPoints">R46,226.02148,246.04004,437.39355,109.09766,L50</property>
    </ControlFlowCase>
 </SDM>

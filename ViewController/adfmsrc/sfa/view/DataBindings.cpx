@@ -106,6 +106,7 @@
     <page path="/WEB-INF/deleteCustomerAccountTF.xml#deleteCustomerAccountTF@Commit"
           usageId="sfa_view_deleteCustomerAccountTF_deleteCustomerAccountTF_CommitPageDef"/>
     <page path="/CustomerAccountManagement/deleteCustomerAccount.jsff" usageId="sfa_view_deleteCustomerAccountPageDef"/>
+    <page path="/AppointmentsAndInteractions/selectContactForApp.jsff" usageId="sfa_view_selectContactForAppPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="sfa_view_untitled2PageDef" path="sfa.view.pageDefs.untitled2PageDef"/>
@@ -205,6 +206,7 @@
     <page id="sfa_view_deleteCustomerAccountTF_deleteCustomerAccountTF_CommitPageDef"
           path="sfa.view.pageDefs.deleteCustomerAccountTF_deleteCustomerAccountTF_CommitPageDef"/>
     <page id="sfa_view_deleteCustomerAccountPageDef" path="CustomerAccountManagement.deleteCustomerAccountPageDef"/>
+    <page id="sfa_view_selectContactForAppPageDef" path="AppointmentsAndInteractions.selectContactForAppPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="sfa.model.entities"
