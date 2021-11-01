@@ -5,12 +5,13 @@
   <executables>
     <variableIterator id="variables"/>
     <iterator Binds="TaskView3" RangeSize="25" DataControl="AppModuleDataControl" id="TaskView3Iterator"/>
+    <searchRegion Binds="TaskView3Iterator" Criteria="" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  id="TaskView3Query"/>
   </executables>
   <bindings>
     <tree IterBinding="TaskView3Iterator" id="TaskView3">
       <nodeDefinition DefName="sfa.model.viewobjects.TaskView" Name="TaskView30">
         <AttrNames>
-          <Item Value="Taskid"/>
           <Item Value="Name"/>
           <Item Value="Duedate"/>
           <Item Value="Priority"/>

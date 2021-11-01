@@ -38,23 +38,6 @@
       <property
          name="exceptionHandler">false</property>
    </View>
-   <View
-      id="View8">
-      <property
-         name="activityId">searchTasks</property>
-      <property
-         name="pageFragment">true</property>
-      <property
-         name="x">411.0</property>
-      <property
-         name="description">&lt;html>&lt;p>&lt;b>searchTasks&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
-      <property
-         name="y">283.59766</property>
-      <property
-         name="page">/CustomerAccountManagement/searchTasks.jsff</property>
-      <property
-         name="exceptionHandler">false</property>
-   </View>
    <ControlFlowCase
       islink="true"
       id="ControlFlowCase9"
@@ -63,7 +46,7 @@
       <property
          name="fromOutcome">goToEdit</property>
       <property
-         name="sdm:polyPoints">R42,170.85982,110.79297,364.0,122.44824,L46</property>
+         name="sdm:polyPoints">R50,167.0827,117.79297,364.0,122.44824,L46</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -73,27 +56,7 @@
       <property
          name="fromOutcome">backFromEdit</property>
       <property
-         name="sdm:polyPoints">L54,363.7891,129.44824,170.65292,117.79297,R50</property>
-   </ControlFlowCase>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase11"
-      from="View2"
-      to="View8">
-      <property
-         name="fromOutcome">goToSearch</property>
-      <property
-         name="sdm:polyPoints">R66,167.0,131.79297,367.62262,286.74707,L54</property>
-   </ControlFlowCase>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase12"
-      from="View8"
-      to="View2">
-      <property
-         name="fromOutcome">backFromSearch</property>
-      <property
-         name="sdm:polyPoints">L46,370.0,279.74707,169.36632,124.79297,R58</property>
+         name="sdm:polyPoints">L54,363.9173,129.44824,167.0,124.79297,R58</property>
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall14">
@@ -120,16 +83,16 @@
       <property
          name="fromOutcome">goToAddTask</property>
       <property
-         name="sdm:polyPoints">R34,167.0,103.79297,406.69238,-5.201172,L50</property>
+         name="sdm:polyPoints">R42,167.0,110.79297,406.69238,-5.201172,L50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
       id="ControlFlowCase17"
       from="View2">
       <property
-         name="tosrcid">__3</property>
+         name="tosrcid">__2</property>
       <property
-         name="fromOutcome">goToAdd</property>
+         name="fromOutcome">goToAddTask</property>
       <property
          name="fromsrcid">__1</property>
    </ControlFlowCase>
@@ -138,9 +101,9 @@
       id="ControlFlowCase18"
       from="View2">
       <property
-         name="tosrcid">__2</property>
+         name="tosrcid">__3</property>
       <property
-         name="fromOutcome">goToAddTask</property>
+         name="fromOutcome">goToAdd</property>
       <property
          name="fromsrcid">__1</property>
    </ControlFlowCase>

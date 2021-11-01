@@ -17,9 +17,6 @@
     <view id="EditAccountNotes">
       <page>/CustomerAccountManagement/EditAccountNotes.jsff</page>
     </view>
-    <view id="SearchAccountNotes">
-      <page>/CustomerAccountManagement/SearchAccountNotes.jsff</page>
-    </view>
     <control-flow-rule id="__1">
       <from-activity-id>AccountNotes</from-activity-id>
       <control-flow-case id="__2">
@@ -30,22 +27,11 @@
         <from-outcome>edit</from-outcome>
         <to-activity-id>EditAccountNotes</to-activity-id>
       </control-flow-case>
-      <control-flow-case id="__6">
-        <from-outcome>search</from-outcome>
-        <to-activity-id>SearchAccountNotes</to-activity-id>
-      </control-flow-case>
     </control-flow-rule>
     <control-flow-rule id="__4">
       <from-activity-id>EditAccountNotes</from-activity-id>
       <control-flow-case id="__5">
         <from-outcome>backFromEdit</from-outcome>
-        <to-activity-id>AccountNotes</to-activity-id>
-      </control-flow-case>
-    </control-flow-rule>
-    <control-flow-rule id="__7">
-      <from-activity-id>SearchAccountNotes</from-activity-id>
-      <control-flow-case id="__8">
-        <from-outcome>backFromSearch</from-outcome>
         <to-activity-id>AccountNotes</to-activity-id>
       </control-flow-case>
     </control-flow-rule>

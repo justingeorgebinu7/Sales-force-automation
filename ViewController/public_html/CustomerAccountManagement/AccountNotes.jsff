@@ -1,27 +1,38 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:f="http://java.sun.com/jsf/core">
   <af:table value="#{bindings.NoteView2.collectionModel}" var="row" rows="#{bindings.NoteView2.rangeSize}"
             emptyText="#{bindings.NoteView2.viewable ? 'No data to display.' : 'Access Denied.'}" rowBandingInterval="0"
             selectedRowKeys="#{bindings.NoteView2.collectionModel.selectedRow}"
             selectionListener="#{bindings.NoteView2.collectionModel.makeCurrent}" rowSelection="single"
-            fetchSize="#{bindings.NoteView2.rangeSize}" id="t1">
-    <af:column headerText="#{bindings.NoteView2.hints.Subject.label}" id="c1">
+            fetchSize="#{bindings.NoteView2.rangeSize}" filterModel="#{bindings.NoteView2Query.queryDescriptor}"
+            filterVisible="true" queryListener="#{bindings.NoteView2Query.processQuery}" varStatus="vs" id="t1">
+    <af:column sortProperty="#{bindings.NoteView2.hints.Subject.name}" filterable="true" sortable="true"
+               headerText="#{bindings.NoteView2.hints.Subject.label}" id="c1">
       <af:outputText value="#{row.Subject}" shortDesc="#{bindings.NoteView2.hints.Subject.tooltip}" id="ot1"/>
     </af:column>
-    <af:column headerText="#{bindings.NoteView2.hints.Content.label}" id="c2">
+    <af:column sortProperty="#{bindings.NoteView2.hints.Content.name}" filterable="true" sortable="true"
+               headerText="#{bindings.NoteView2.hints.Content.label}" id="c2">
       <af:outputText value="#{row.Content}" shortDesc="#{bindings.NoteView2.hints.Content.tooltip}" id="ot2"/>
     </af:column>
-    <af:column headerText="#{bindings.NoteView2.hints.Createdby.label}" id="c4">
-      <af:outputText value="#{row.Createdby}" shortDesc="#{bindings.NoteView2.hints.Createdby.tooltip}" id="ot4"/>
-    </af:column>
-    <af:column headerText="#{bindings.NoteView2.hints.Datetime.label}" id="c3">
+    <af:column sortProperty="#{bindings.NoteView2.hints.Datetime.name}" filterable="true" sortable="true"
+               headerText="#{bindings.NoteView2.hints.Datetime.label}" id="c3">
+      <f:facet name="filter">
+        <af:inputDate value="#{bindings.NoteView2Query.queryDescriptor.filterConjunctionCriterion.criterionMap.Datetime.value}"
+                      id="id1">
+          <af:convertDateTime pattern="#{bindings.NoteView2.hints.Datetime.format}"/>
+        </af:inputDate>
+      </f:facet>
       <af:outputText value="#{row.Datetime}" shortDesc="#{bindings.NoteView2.hints.Datetime.tooltip}" id="ot3">
         <af:convertDateTime pattern="#{bindings.NoteView2.hints.Datetime.format}"/>
       </af:outputText>
     </af:column>
+    <af:column sortProperty="#{bindings.NoteView2.hints.Createdby.name}" filterable="true" sortable="true"
+               headerText="#{bindings.NoteView2.hints.Createdby.label}" id="c4">
+      <af:outputText value="#{row.Createdby}" shortDesc="#{bindings.NoteView2.hints.Createdby.tooltip}" id="ot4"/>
+    </af:column>
   </af:table>
   <af:button text="Add" id="b1" action="addNote"/>
   <af:button text="Edit" id="b3" action="edit"/>
-  <af:button text="Search" id="b4" action="search"/>
   <af:button actionListener="#{bindings.Commit.execute}" text="Commit" disabled="#{!bindings.Commit.enabled}" id="b2"/>
 </ui:composition>

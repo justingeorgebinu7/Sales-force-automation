@@ -50,7 +50,7 @@
       <property
          name="fromsrcid">__1</property>
       <property
-         name="sdm:polyPoints">R50,193.36133,246.0459,390.68164,88.18945,L50</property>
+         name="sdm:polyPoints">R42,193.36133,239.0459,390.68164,88.18945,L50</property>
    </ControlFlowCase>
    <View
       id="View6">
@@ -69,23 +69,6 @@
       <property
          name="exceptionHandler">false</property>
    </View>
-   <View
-      id="View8">
-      <property
-         name="activityId">SearchAccountNotes</property>
-      <property
-         name="pageFragment">true</property>
-      <property
-         name="x">430.0</property>
-      <property
-         name="description">&lt;html>&lt;p>&lt;b>SearchAccountNotes&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
-      <property
-         name="y">372.24707</property>
-      <property
-         name="page">/CustomerAccountManagement/SearchAccountNotes.jsff</property>
-      <property
-         name="exceptionHandler">false</property>
-   </View>
    <ControlFlowCase
       islink="true"
       id="ControlFlowCase9"
@@ -94,7 +77,7 @@
       <property
          name="fromOutcome">edit</property>
       <property
-         name="sdm:polyPoints">R54,194.85202,249.5459,389.0,217.5459,L50</property>
+         name="sdm:polyPoints">R58,195.39903,253.0459,389.0,221.0459,L54</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -105,25 +88,5 @@
          name="fromOutcome">backFromEdit</property>
       <property
          name="sdm:polyPoints">L46,388.4262,214.0459,194.83032,246.0459,R50</property>
-   </ControlFlowCase>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase11"
-      from="View7"
-      to="View8">
-      <property
-         name="fromOutcome">search</property>
-      <property
-         name="sdm:polyPoints">R62,193.36133,256.5459,389.0,371.89648,L50</property>
-   </ControlFlowCase>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase12"
-      from="View8"
-      to="View7">
-      <property
-         name="fromOutcome">backFromSearch</property>
-      <property
-         name="sdm:polyPoints">L54,387.0819,375.39648,193.36133,260.0459,R66</property>
    </ControlFlowCase>
 </SDM>

@@ -5,19 +5,20 @@
   <executables>
     <variableIterator id="variables"/>
     <iterator Binds="NoteView2" RangeSize="25" DataControl="AppModuleDataControl" id="NoteView2Iterator"/>
+    <searchRegion Binds="NoteView2Iterator" Criteria="" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  id="NoteView2Query"/>
   </executables>
   <bindings>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
     <tree IterBinding="NoteView2Iterator" id="NoteView2">
       <nodeDefinition DefName="sfa.model.viewobjects.NoteView" Name="NoteView20">
         <AttrNames>
-          <Item Value="Noteid"/>
+          <Item Value="Subject"/>
           <Item Value="Content"/>
           <Item Value="Datetime"/>
-          <Item Value="Subject"/>
           <Item Value="Createdby"/>
         </AttrNames>
       </nodeDefinition>
     </tree>
-    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
   </bindings>
 </pageDefinition>

@@ -1,37 +1,44 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:f="http://java.sun.com/jsf/core">
   <af:table value="#{bindings.TaskView3.collectionModel}" var="row" rows="#{bindings.TaskView3.rangeSize}"
             emptyText="#{bindings.TaskView3.viewable ? 'No data to display.' : 'Access Denied.'}" rowBandingInterval="0"
             selectedRowKeys="#{bindings.TaskView3.collectionModel.selectedRow}"
             selectionListener="#{bindings.TaskView3.collectionModel.makeCurrent}" rowSelection="single"
-            fetchSize="#{bindings.TaskView3.rangeSize}" id="t1">
-    <af:column sortProperty="#{bindings.TaskView3.hints.Name.name}" sortable="true"
-               headerText="#{bindings.TaskView3.hints.Name.label}" id="c2">
-      <af:outputText value="#{row.Name}" shortDesc="#{bindings.TaskView3.hints.Name.tooltip}" id="ot2"/>
+            fetchSize="#{bindings.TaskView3.rangeSize}" filterModel="#{bindings.TaskView3Query.queryDescriptor}"
+            filterVisible="true" queryListener="#{bindings.TaskView3Query.processQuery}" varStatus="vs" id="t1">
+    <af:column sortProperty="#{bindings.TaskView3.hints.Name.name}" filterable="true" sortable="true"
+               headerText="#{bindings.TaskView3.hints.Name.label}" id="c1">
+      <af:outputText value="#{row.Name}" shortDesc="#{bindings.TaskView3.hints.Name.tooltip}" id="ot1"/>
     </af:column>
-    <af:column sortProperty="#{bindings.TaskView3.hints.Duedate.name}" sortable="true"
-               headerText="#{bindings.TaskView3.hints.Duedate.label}" id="c3">
-      <af:outputText value="#{row.Duedate}" shortDesc="#{bindings.TaskView3.hints.Duedate.tooltip}" id="ot3">
+    <af:column sortProperty="#{bindings.TaskView3.hints.Duedate.name}" filterable="true" sortable="true"
+               headerText="#{bindings.TaskView3.hints.Duedate.label}" id="c2">
+      <f:facet name="filter">
+        <af:inputDate value="#{bindings.TaskView3Query.queryDescriptor.filterConjunctionCriterion.criterionMap.Duedate.value}"
+                      id="id1">
+          <af:convertDateTime pattern="#{bindings.TaskView3.hints.Duedate.format}"/>
+        </af:inputDate>
+      </f:facet>
+      <af:outputText value="#{row.Duedate}" shortDesc="#{bindings.TaskView3.hints.Duedate.tooltip}" id="ot2">
         <af:convertDateTime pattern="#{bindings.TaskView3.hints.Duedate.format}"/>
       </af:outputText>
     </af:column>
-    <af:column sortProperty="#{bindings.TaskView3.hints.Priority.name}" sortable="true"
-               headerText="#{bindings.TaskView3.hints.Priority.label}" id="c4">
-      <af:outputText value="#{row.Priority}" shortDesc="#{bindings.TaskView3.hints.Priority.tooltip}" id="ot4"/>
+    <af:column sortProperty="#{bindings.TaskView3.hints.Priority.name}" filterable="true" sortable="true"
+               headerText="#{bindings.TaskView3.hints.Priority.label}" id="c3">
+      <af:outputText value="#{row.Priority}" shortDesc="#{bindings.TaskView3.hints.Priority.tooltip}" id="ot3"/>
     </af:column>
-    <af:column sortProperty="#{bindings.TaskView3.hints.Description.name}" sortable="true"
-               headerText="#{bindings.TaskView3.hints.Description.label}" id="c5">
-      <af:outputText value="#{row.Description}" shortDesc="#{bindings.TaskView3.hints.Description.tooltip}" id="ot5"/>
+    <af:column sortProperty="#{bindings.TaskView3.hints.Description.name}" filterable="true" sortable="true"
+               headerText="#{bindings.TaskView3.hints.Description.label}" id="c4">
+      <af:outputText value="#{row.Description}" shortDesc="#{bindings.TaskView3.hints.Description.tooltip}" id="ot4"/>
     </af:column>
-    <af:column sortProperty="#{bindings.TaskView3.hints.Percentageofcompletion.name}" sortable="true"
-               headerText="#{bindings.TaskView3.hints.Percentageofcompletion.label}" id="c6">
+    <af:column sortProperty="#{bindings.TaskView3.hints.Percentageofcompletion.name}" filterable="true" sortable="true"
+               headerText="#{bindings.TaskView3.hints.Percentageofcompletion.label}" id="c5">
       <af:outputText value="#{row.Percentageofcompletion}"
-                     shortDesc="#{bindings.TaskView3.hints.Percentageofcompletion.tooltip}" id="ot6">
+                     shortDesc="#{bindings.TaskView3.hints.Percentageofcompletion.tooltip}" id="ot5">
         <af:convertNumber groupingUsed="false" pattern="#{bindings.TaskView3.hints.Percentageofcompletion.format}"/>
       </af:outputText>
     </af:column>
   </af:table>
   <af:button text="Add" id="b1" action="goToAddTask"/>
   <af:button text="Edit" id="b2" action="goToEdit"/>
-  <af:button text="Search" id="b3" action="goToSearch"/>
 </ui:composition>
