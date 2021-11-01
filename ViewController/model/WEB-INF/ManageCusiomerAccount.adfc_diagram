@@ -3,25 +3,6 @@
    <OverallProperties
       id="OverallProperties1"/>
    <View
-      id="View2">
-      <property
-         name="activityId">ManageAccount</property>
-      <property
-         name="pageFragment">true</property>
-      <property
-         name="x">175.0</property>
-      <property
-         name="start">true</property>
-      <property
-         name="description">&lt;html>&lt;p>&lt;b>ManageAccount&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
-      <property
-         name="y">199.6377</property>
-      <property
-         name="page">/CustomerAccountManagement/ManageAccount.jsff</property>
-      <property
-         name="exceptionHandler">false</property>
-   </View>
-   <View
       id="View5">
       <property
          name="activityId">editAccount</property>
@@ -30,7 +11,9 @@
       <property
          name="x">518.0</property>
       <property
-         name="description">&lt;html>&lt;p>&lt;b>editAccount&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+         name="start">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>editAccount&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
          name="y">217.59766</property>
       <property
@@ -38,24 +21,4 @@
       <property
          name="exceptionHandler">false</property>
    </View>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase7"
-      from="View2"
-      to="View5">
-      <property
-         name="fromOutcome">goToEdit</property>
-      <property
-         name="sdm:polyPoints">R46,216.24055,195.78711,477.0,213.74707,L46</property>
-   </ControlFlowCase>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase8"
-      from="View5"
-      to="View2">
-      <property
-         name="fromOutcome">backFromEdit</property>
-      <property
-         name="sdm:polyPoints">L54,476.75934,220.74707,216.0,202.78711,R54</property>
-   </ControlFlowCase>
 </SDM>

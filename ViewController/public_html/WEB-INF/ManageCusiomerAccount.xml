@@ -1,30 +1,13 @@
 <?xml version="1.0" encoding="windows-1252" ?>
 <adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
   <task-flow-definition id="ManageCusiomerAccount">
-    <default-activity>ManageAccount</default-activity>
+    <default-activity>editAccount</default-activity>
     <data-control-scope>
       <shared/>
     </data-control-scope>
-    <view id="ManageAccount">
-      <page>/CustomerAccountManagement/ManageAccount.jsff</page>
-    </view>
     <view id="editAccount">
       <page>/CustomerAccountManagement/editAccount.jsff</page>
     </view>
-    <control-flow-rule id="__1">
-      <from-activity-id>ManageAccount</from-activity-id>
-      <control-flow-case id="__3">
-        <from-outcome>goToEdit</from-outcome>
-        <to-activity-id>editAccount</to-activity-id>
-      </control-flow-case>
-    </control-flow-rule>
-    <control-flow-rule id="__4">
-      <from-activity-id>editAccount</from-activity-id>
-      <control-flow-case id="__5">
-        <from-outcome>backFromEdit</from-outcome>
-        <to-activity-id>ManageAccount</to-activity-id>
-      </control-flow-case>
-    </control-flow-rule>
     <use-page-fragments/>
   </task-flow-definition>
 </adfc-config>

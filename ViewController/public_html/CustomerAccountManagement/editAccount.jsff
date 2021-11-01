@@ -45,7 +45,8 @@
       <f:validator binding="#{bindings.Mobilenumber.validator}"/>
       <af:convertNumber groupingUsed="false" pattern="#{bindings.Mobilenumber.format}"/>
     </af:inputText>
+    <f:facet name="footer">
+      <af:button text="Save" id="b1" actionListener="#{bindings.Commit.execute}"/>
+    </f:facet>
   </af:panelFormLayout>
-  <af:button actionListener="#{bindings.Commit.execute}" text="Save" disabled="#{!bindings.Commit.enabled}" id="b1"/>
-  <af:button text="Back" id="b2" action="backFromEdit"/>
 </ui:composition>
