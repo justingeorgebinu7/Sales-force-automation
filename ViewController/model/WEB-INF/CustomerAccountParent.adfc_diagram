@@ -13,7 +13,7 @@
       <property
          name="description">&lt;html>&lt;p>&lt;b>CustAccountHome&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">249.89062</property>
+         name="y">249.54004</property>
       <property
          name="page">/CustomerAccountManagement/CustAccountHome.jsf</property>
       <property
@@ -42,7 +42,7 @@
       <property
          name="fromOutcome">exit</property>
       <property
-         name="sdm:polyPoints">R54,226.02148,253.04004,622.0,280.49414,L50</property>
+         name="sdm:polyPoints">R54,226.02148,252.68945,622.0,280.49414,L50</property>
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall5">
@@ -69,6 +69,6 @@
       <property
          name="fromOutcome">toApp</property>
       <property
-         name="sdm:polyPoints">R46,226.02148,246.04004,437.39355,109.09766,L50</property>
+         name="sdm:polyPoints">R46,226.02148,245.68945,437.39355,109.09766,L50</property>
    </ControlFlowCase>
 </SDM>

@@ -108,6 +108,8 @@
     <page path="/CustomerAccountManagement/deleteCustomerAccount.jsff" usageId="sfa_view_deleteCustomerAccountPageDef"/>
     <page path="/AppointmentsAndInteractions/selectContactForApp.jsff" usageId="sfa_view_selectContactForAppPageDef"/>
     <page path="/contactSelection.jsff" usageId="sfa_view_contactSelectionPageDef"/>
+    <page path="/AppointmentsAndInteractions/AccountSearchableHomepage.jsff"
+          usageId="sfa_view_AccountSearchableHomepagePageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="sfa_view_untitled2PageDef" path="sfa.view.pageDefs.untitled2PageDef"/>
@@ -209,6 +211,8 @@
     <page id="sfa_view_deleteCustomerAccountPageDef" path="CustomerAccountManagement.deleteCustomerAccountPageDef"/>
     <page id="sfa_view_selectContactForAppPageDef" path="AppointmentsAndInteractions.selectContactForAppPageDef"/>
     <page id="sfa_view_contactSelectionPageDef" path="sfa.view.pageDefs.contactSelectionPageDef"/>
+    <page id="sfa_view_AccountSearchableHomepagePageDef"
+          path="AppointmentsAndInteractions.AccountSearchableHomepagePageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="sfa.model.entities"
