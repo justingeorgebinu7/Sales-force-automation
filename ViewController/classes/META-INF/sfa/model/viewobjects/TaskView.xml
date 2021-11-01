@@ -28,19 +28,40 @@
     PrecisionRule="true"
     EntityAttrName="Name"
     EntityUsage="Task"
-    AliasName="NAME"/>
+    AliasName="NAME">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Duedate"
     PrecisionRule="true"
     EntityAttrName="Duedate"
     EntityUsage="Task"
-    AliasName="DUEDATE"/>
+    AliasName="DUEDATE">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="10"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Priority"
     PrecisionRule="true"
     EntityAttrName="Priority"
     EntityUsage="Task"
-    AliasName="PRIORITY"/>
+    AliasName="PRIORITY">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="10"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Description"
     PrecisionRule="true"
@@ -52,7 +73,14 @@
     PrecisionRule="true"
     EntityAttrName="Percentageofcompletion"
     EntityUsage="Task"
-    AliasName="PERCENTAGEOFCOMPLETION"/>
+    AliasName="PERCENTAGEOFCOMPLETION">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="3"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Opportunityid"
     PrecisionRule="true"

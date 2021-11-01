@@ -28,19 +28,40 @@
     PrecisionRule="true"
     EntityAttrName="Name"
     EntityUsage="Appointments"
-    AliasName="NAME"/>
+    AliasName="NAME">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Startdate"
     PrecisionRule="true"
     EntityAttrName="Startdate"
     EntityUsage="Appointments"
-    AliasName="STARTDATE"/>
+    AliasName="STARTDATE">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="10"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Enddate"
     PrecisionRule="true"
     EntityAttrName="Enddate"
     EntityUsage="Appointments"
-    AliasName="ENDDATE"/>
+    AliasName="ENDDATE">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="10"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Description"
     PrecisionRule="true"
@@ -52,7 +73,16 @@
     PrecisionRule="true"
     EntityAttrName="Location"
     EntityUsage="Appointments"
-    AliasName="LOCATION"/>
+    AliasName="LOCATION">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="20"/>
+        <DISPLAYHEIGHT
+          Value="5"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Contactid"
     IsNotNull="true"

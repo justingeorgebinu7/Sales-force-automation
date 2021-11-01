@@ -28,31 +28,66 @@
     PrecisionRule="true"
     EntityAttrName="Type"
     EntityUsage="Interaction"
-    AliasName="TYPE"/>
+    AliasName="TYPE">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Direction"
     PrecisionRule="true"
     EntityAttrName="Direction"
     EntityUsage="Interaction"
-    AliasName="DIRECTION"/>
+    AliasName="DIRECTION">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="10"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Startdate"
     PrecisionRule="true"
     EntityAttrName="Startdate"
     EntityUsage="Interaction"
-    AliasName="STARTDATE"/>
+    AliasName="STARTDATE">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="10"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Enddate"
     PrecisionRule="true"
     EntityAttrName="Enddate"
     EntityUsage="Interaction"
-    AliasName="ENDDATE"/>
+    AliasName="ENDDATE">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="10"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Description"
     PrecisionRule="true"
     EntityAttrName="Description"
     EntityUsage="Interaction"
-    AliasName="DESCRIPTION"/>
+    AliasName="DESCRIPTION">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYHEIGHT
+          Value="5"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Resolution"
     PrecisionRule="true"

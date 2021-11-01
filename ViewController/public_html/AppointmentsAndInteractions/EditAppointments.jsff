@@ -23,7 +23,7 @@
                   required="#{bindings.Description.hints.mandatory}"
                   columns="#{bindings.Description.hints.displayWidth}"
                   maximumLength="#{bindings.Description.hints.precision}"
-                  shortDesc="#{bindings.Description.hints.tooltip}" id="it3">
+                  shortDesc="#{bindings.Description.hints.tooltip}" id="it3" rows="5">
       <f:validator binding="#{bindings.Description.validator}"/>
     </af:inputText>
     <af:inputText value="#{bindings.Location.inputValue}" label="#{bindings.Location.hints.label}"
@@ -31,13 +31,6 @@
                   maximumLength="#{bindings.Location.hints.precision}" shortDesc="#{bindings.Location.hints.tooltip}"
                   id="it4">
       <f:validator binding="#{bindings.Location.validator}"/>
-    </af:inputText>
-    <af:inputText value="#{bindings.Contactid.inputValue}" label="#{bindings.Contactid.hints.label}"
-                  required="#{bindings.Contactid.hints.mandatory}" columns="#{bindings.Contactid.hints.displayWidth}"
-                  maximumLength="#{bindings.Contactid.hints.precision}" shortDesc="#{bindings.Contactid.hints.tooltip}"
-                  id="it5">
-      <f:validator binding="#{bindings.Contactid.validator}"/>
-      <af:convertNumber groupingUsed="false" pattern="#{bindings.Contactid.format}"/>
     </af:inputText>
     <f:facet name="footer">
       <af:button text="Save" id="b1"/>

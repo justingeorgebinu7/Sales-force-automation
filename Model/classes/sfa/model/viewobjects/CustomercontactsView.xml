@@ -28,13 +28,27 @@
     PrecisionRule="true"
     EntityAttrName="Name"
     EntityUsage="Customercontacts"
-    AliasName="NAME"/>
+    AliasName="NAME">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Title"
     PrecisionRule="true"
     EntityAttrName="Title"
     EntityUsage="Customercontacts"
-    AliasName="TITLE"/>
+    AliasName="TITLE">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Customeraccountid"
     IsNotNull="true"
@@ -47,37 +61,79 @@
     PrecisionRule="true"
     EntityAttrName="Department"
     EntityUsage="Customercontacts"
-    AliasName="DEPARTMENT"/>
+    AliasName="DEPARTMENT">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Workphone"
     PrecisionRule="true"
     EntityAttrName="Workphone"
     EntityUsage="Customercontacts"
-    AliasName="WORKPHONE"/>
+    AliasName="WORKPHONE">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="10"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Email"
     PrecisionRule="true"
     EntityAttrName="Email"
     EntityUsage="Customercontacts"
-    AliasName="EMAIL"/>
+    AliasName="EMAIL">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="30"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Buyingrole"
     PrecisionRule="true"
     EntityAttrName="Buyingrole"
     EntityUsage="Customercontacts"
-    AliasName="BUYINGROLE"/>
+    AliasName="BUYINGROLE">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="15"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Influencelevel"
     PrecisionRule="true"
     EntityAttrName="Influencelevel"
     EntityUsage="Customercontacts"
-    AliasName="INFLUENCELEVEL"/>
+    AliasName="INFLUENCELEVEL">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="15"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Isprimarycontact"
     PrecisionRule="true"
     EntityAttrName="Isprimarycontact"
     EntityUsage="Customercontacts"
-    AliasName="ISPRIMARYCONTACT"/>
+    AliasName="ISPRIMARYCONTACT">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="1"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewLinkAccessor
     Name="ContactaddressView"
     ViewLink="sfa.model.viewobjects.CaddressCustomercontactsFkLink"

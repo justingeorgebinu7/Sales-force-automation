@@ -28,7 +28,14 @@
     PrecisionRule="true"
     EntityAttrName="Type"
     EntityUsage="Customeraccount"
-    AliasName="TYPE"/>
+    AliasName="TYPE">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Name"
     PrecisionRule="true"
@@ -40,7 +47,14 @@
     PrecisionRule="true"
     EntityAttrName="Accounturl"
     EntityUsage="Customeraccount"
-    AliasName="ACCOUNTURL"/>
+    AliasName="ACCOUNTURL">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="30"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Ceo"
     PrecisionRule="true"
@@ -52,19 +66,40 @@
     PrecisionRule="true"
     EntityAttrName="Numberofemployees"
     EntityUsage="Customeraccount"
-    AliasName="NUMBEROFEMPLOYEES"/>
+    AliasName="NUMBEROFEMPLOYEES">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="7"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Email"
     PrecisionRule="true"
     EntityAttrName="Email"
     EntityUsage="Customeraccount"
-    AliasName="EMAIL"/>
+    AliasName="EMAIL">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="30"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Mobilenumber"
     PrecisionRule="true"
     EntityAttrName="Mobilenumber"
     EntityUsage="Customeraccount"
-    AliasName="MOBILENUMBER"/>
+    AliasName="MOBILENUMBER">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="10"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewLinkAccessor
     Name="AddressView"
     ViewLink="sfa.model.viewobjects.AddressCustomeraccountFkLink"

@@ -2,23 +2,15 @@
 <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
                 xmlns:f="http://java.sun.com/jsf/core">
   <af:panelFormLayout id="pfl1">
-    <af:inputText value="#{bindings.Customeraccountid.inputValue}" label="#{bindings.Customeraccountid.hints.label}"
-                  required="#{bindings.Customeraccountid.hints.mandatory}"
-                  columns="#{bindings.Customeraccountid.hints.displayWidth}"
-                  maximumLength="#{bindings.Customeraccountid.hints.precision}"
-                  shortDesc="#{bindings.Customeraccountid.hints.tooltip}" id="it1">
-      <f:validator binding="#{bindings.Customeraccountid.validator}"/>
-      <af:convertNumber groupingUsed="false" pattern="#{bindings.Customeraccountid.format}"/>
+    <af:inputText value="#{bindings.Name.inputValue}" label="#{bindings.Name.hints.label}"
+                  required="#{bindings.Name.hints.mandatory}" columns="#{bindings.Name.hints.displayWidth}"
+                  maximumLength="#{bindings.Name.hints.precision}" shortDesc="#{bindings.Name.hints.tooltip}" id="it3">
+      <f:validator binding="#{bindings.Name.validator}"/>
     </af:inputText>
     <af:inputText value="#{bindings.Type.inputValue}" label="#{bindings.Type.hints.label}"
                   required="#{bindings.Type.hints.mandatory}" columns="#{bindings.Type.hints.displayWidth}"
                   maximumLength="#{bindings.Type.hints.precision}" shortDesc="#{bindings.Type.hints.tooltip}" id="it2">
       <f:validator binding="#{bindings.Type.validator}"/>
-    </af:inputText>
-    <af:inputText value="#{bindings.Name.inputValue}" label="#{bindings.Name.hints.label}"
-                  required="#{bindings.Name.hints.mandatory}" columns="#{bindings.Name.hints.displayWidth}"
-                  maximumLength="#{bindings.Name.hints.precision}" shortDesc="#{bindings.Name.hints.tooltip}" id="it3">
-      <f:validator binding="#{bindings.Name.validator}"/>
     </af:inputText>
     <af:inputText value="#{bindings.Accounturl.inputValue}" label="#{bindings.Accounturl.hints.label}"
                   required="#{bindings.Accounturl.hints.mandatory}" columns="#{bindings.Accounturl.hints.displayWidth}"

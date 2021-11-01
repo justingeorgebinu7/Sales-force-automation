@@ -64,7 +64,14 @@
     PrecisionRule="true"
     EntityAttrName="Subject"
     EntityUsage="Note"
-    AliasName="SUBJECT"/>
+    AliasName="SUBJECT">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Createdby"
     PrecisionRule="true"

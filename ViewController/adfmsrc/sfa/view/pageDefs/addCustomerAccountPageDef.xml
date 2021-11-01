@@ -8,11 +8,6 @@
               id="CustomeraccountView1Iterator"/>
   </executables>
   <bindings>
-    <attributeValues IterBinding="CustomeraccountView1Iterator" id="Customeraccountid">
-      <AttrNames>
-        <Item Value="Customeraccountid"/>
-      </AttrNames>
-    </attributeValues>
     <attributeValues IterBinding="CustomeraccountView1Iterator" id="Type">
       <AttrNames>
         <Item Value="Type"/>
