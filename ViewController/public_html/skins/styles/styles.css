@@ -9,18 +9,41 @@ af|button {
     border-bottom: 2px solid #149;
     background-image: none;
     border-radius: 5px;
-    margin:5px;
-    margin-top:10px;
-    padding:5px 10px;
-    background-color:#fff;
+    margin: 5px;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #fff;
 }
 
 .navBtn {
-     width: 220px;
+    width: 220px;
     padding: 10px 5px;
     margin-bottom: 10px;
-    border-radius:15px;
+    border-radius: 15px;
     outline: 0;
-    background-color:white;
-    color:#149;
+    background-color: white;
+    color: #149;
+}
+
+af|table{
+border-radius:10px;
+overflow:hidden;
+}
+
+af|column::data-cell {
+    color: black;
+    background-color: #fff;
+    padding: 13px 10px;
+}
+
+af|column::banded-data-cell {
+    color: maroon;
+    background-color: red;
+}
+
+af|column::column-header-cell {
+    background-color: #789;
+    padding: 10px 5px;
+    text-align: center;
+    color: #fff;
 }
