@@ -49,7 +49,7 @@
       <property
          name="y">215.14941</property>
       <property
-         name="documentReference">/WEB-INF/createInsertContactForAccountTF.xml</property>
+         name="documentReference">/WEB-INF/customerAccountTaskFlows/createInsertContactForAccountTF.xml</property>
       <property
          name="exceptionHandler">false</property>
       <property
@@ -87,7 +87,7 @@
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
-      id="ControlFlowCase12"
+      id="ControlFlowCase9"
       from="View2">
       <property
          name="tosrcid">__2</property>
@@ -95,5 +95,36 @@
          name="fromOutcome">*</property>
       <property
          name="fromsrcid">__1</property>
+   </ControlFlowCase>
+   <TaskFlowCall
+      id="TaskFlowCall15">
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>deleteContactTF1&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
+      <property
+         name="activityId">deleteContactTF1</property>
+      <property
+         name="x">61.692383</property>
+      <property
+         name="y">59.0459</property>
+      <property
+         name="documentReference">/WEB-INF/customerAccountTaskFlows/deleteContactTF.xml</property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="taskFlowId">deleteContactTF</property>
+   </TaskFlowCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase18"
+      from="View2"
+      to="TaskFlowCall15">
+      <property
+         name="tosrcid">__12</property>
+      <property
+         name="fromOutcome">deleteContactTF1</property>
+      <property
+         name="fromsrcid">__11</property>
+      <property
+         name="sdm:polyPoints">T50,166.0,229.02832,61.692383,113.0459,B50</property>
    </ControlFlowCase>
 </SDM>

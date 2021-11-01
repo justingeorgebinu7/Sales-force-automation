@@ -37,5 +37,5 @@
     </af:column>
   </af:table>
   <af:button text="Add" id="b1" action="toAdd"/>
-  <af:button text="Delete" id="b2" action="toDelete"/>
+  <af:button text="Delete" action="deleteCustomerAccountTF1" id="b2"/>
 </ui:composition>

@@ -9,7 +9,6 @@
                   id="NoteView2Query"/>
   </executables>
   <bindings>
-    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
     <tree IterBinding="NoteView2Iterator" id="NoteView2">
       <nodeDefinition DefName="sfa.model.viewobjects.NoteView" Name="NoteView20">
         <AttrNames>

@@ -69,7 +69,7 @@
       <property
          name="y">-4.850586</property>
       <property
-         name="documentReference">/WEB-INF/addTaskForAccount.xml</property>
+         name="documentReference">/WEB-INF/customerAccountTaskFlows/addTaskForAccount.xml</property>
       <property
          name="exceptionHandler">false</property>
       <property
@@ -87,7 +87,18 @@
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
-      id="ControlFlowCase17"
+      id="ControlFlowCase12"
+      from="View2">
+      <property
+         name="tosrcid">__3</property>
+      <property
+         name="fromOutcome">goToAdd</property>
+      <property
+         name="fromsrcid">__1</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase13"
       from="View2">
       <property
          name="tosrcid">__2</property>
@@ -96,15 +107,35 @@
       <property
          name="fromsrcid">__1</property>
    </ControlFlowCase>
+   <TaskFlowCall
+      id="TaskFlowCall15">
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>deleteTasksTF1&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
+      <property
+         name="activityId">deleteTasksTF1</property>
+      <property
+         name="x">68.0166</property>
+      <property
+         name="y">226.09766</property>
+      <property
+         name="documentReference">/WEB-INF/customerAccountTaskFlows/deleteTasksTF.xml</property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="taskFlowId">deleteTasksTF</property>
+   </TaskFlowCall>
    <ControlFlowCase
       islink="true"
-      id="ControlFlowCase18"
-      from="View2">
+      id="ControlFlowCase16"
+      from="View2"
+      to="TaskFlowCall15">
       <property
-         name="tosrcid">__3</property>
+         name="tosrcid">__8</property>
       <property
-         name="fromOutcome">goToAdd</property>
+         name="fromOutcome">deleteTasksTF1</property>
       <property
-         name="fromsrcid">__1</property>
+         name="fromsrcid">__7</property>
+      <property
+         name="sdm:polyPoints">B50,126.0,171.79297,68.0166,172.09766,T50</property>
    </ControlFlowCase>
 </SDM>

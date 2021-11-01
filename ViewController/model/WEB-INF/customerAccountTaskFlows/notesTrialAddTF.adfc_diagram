@@ -13,7 +13,7 @@
       <property
          name="y">88.54004</property>
       <property
-         name="documentReference">/WEB-INF/createInsertTF.xml</property>
+         name="documentReference">/WEB-INF/customerAccountTaskFlows/createInsertTF.xml</property>
       <property
          name="exceptionHandler">false</property>
       <property
@@ -88,5 +88,36 @@
          name="fromOutcome">backFromEdit</property>
       <property
          name="sdm:polyPoints">L46,388.4262,214.0459,194.83032,246.0459,R50</property>
+   </ControlFlowCase>
+   <TaskFlowCall
+      id="TaskFlowCall8">
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>deleteNotesTF1&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
+      <property
+         name="activityId">deleteNotesTF1</property>
+      <property
+         name="x">67.68848</property>
+      <property
+         name="y">70.0459</property>
+      <property
+         name="documentReference">/WEB-INF/customerAccountTaskFlows/deleteNotesTF.xml</property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="taskFlowId">deleteNotesTF</property>
+   </TaskFlowCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase11"
+      from="View7"
+      to="TaskFlowCall8">
+      <property
+         name="tosrcid">__7</property>
+      <property
+         name="fromOutcome">deleteNotesTF1</property>
+      <property
+         name="fromsrcid">__6</property>
+      <property
+         name="sdm:polyPoints">T50,152.36133,192.0459,67.68848,124.0459,B50</property>
    </ControlFlowCase>
 </SDM>

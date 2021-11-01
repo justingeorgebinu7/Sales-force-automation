@@ -33,10 +33,5 @@
         <Item Value="Location"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="AppointmentsView3Iterator" id="Contactid">
-      <AttrNames>
-        <Item Value="Contactid"/>
-      </AttrNames>
-    </attributeValues>
   </bindings>
 </pageDefinition>

@@ -34,5 +34,5 @@
   </af:table>
   <af:button text="Add" id="b1" action="addNote"/>
   <af:button text="Edit" id="b3" action="edit"/>
-  <af:button actionListener="#{bindings.Commit.execute}" text="Commit" disabled="#{!bindings.Commit.enabled}" id="b2"/>
+  <af:button text="Delete" action="deleteNotesTF1" id="b2"/>
 </ui:composition>

@@ -17,6 +17,12 @@
         <id>createInsertContactForAccountTF</id>
       </task-flow-reference>
     </task-flow-call>
+    <task-flow-call id="deleteContactTF1">
+      <task-flow-reference>
+        <document>/WEB-INF/customerAccountTaskFlows/deleteContactTF.xml</document>
+        <id>deleteContactTF</id>
+      </task-flow-reference>
+    </task-flow-call>
     <control-flow-rule id="__1">
       <from-activity-id>AccountContacts</from-activity-id>
       <control-flow-case id="__2">
@@ -36,6 +42,13 @@
       <control-flow-case id="__6">
         <from-outcome>backfromedit</from-outcome>
         <to-activity-id>AccountContacts</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__11">
+      <from-activity-id>AccountContacts</from-activity-id>
+      <control-flow-case id="__12">
+        <from-outcome>deleteContactTF1</from-outcome>
+        <to-activity-id>deleteContactTF1</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <use-page-fragments/>

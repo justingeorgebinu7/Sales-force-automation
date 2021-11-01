@@ -41,4 +41,5 @@
   </af:table>
   <af:button text="Add" id="b1" action="goToAddTask"/>
   <af:button text="Edit" id="b2" action="goToEdit"/>
+  <af:button text="Delete" action="deleteTasksTF1" id="b3"/>
 </ui:composition>

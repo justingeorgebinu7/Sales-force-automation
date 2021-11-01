@@ -17,6 +17,12 @@
         <id>addTaskForAccount</id>
       </task-flow-reference>
     </task-flow-call>
+    <task-flow-call id="deleteTasksTF1">
+      <task-flow-reference>
+        <document>/WEB-INF/customerAccountTaskFlows/deleteTasksTF.xml</document>
+        <id>deleteTasksTF</id>
+      </task-flow-reference>
+    </task-flow-call>
     <control-flow-rule id="__1">
       <from-activity-id>AccountTasks</from-activity-id>
       <control-flow-case id="__2">
@@ -41,6 +47,13 @@
       <control-flow-case id="__6">
         <from-outcome>backFromEdit</from-outcome>
         <to-activity-id>AccountTasks</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__7">
+      <from-activity-id>AccountTasks</from-activity-id>
+      <control-flow-case id="__8">
+        <from-outcome>deleteTasksTF1</from-outcome>
+        <to-activity-id>deleteTasksTF1</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <use-page-fragments/>

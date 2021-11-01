@@ -17,6 +17,12 @@
     <view id="EditAccountNotes">
       <page>/CustomerAccountManagement/EditAccountNotes.jsff</page>
     </view>
+    <task-flow-call id="deleteNotesTF1">
+      <task-flow-reference>
+        <document>/WEB-INF/customerAccountTaskFlows/deleteNotesTF.xml</document>
+        <id>deleteNotesTF</id>
+      </task-flow-reference>
+    </task-flow-call>
     <control-flow-rule id="__1">
       <from-activity-id>AccountNotes</from-activity-id>
       <control-flow-case id="__2">
@@ -33,6 +39,13 @@
       <control-flow-case id="__5">
         <from-outcome>backFromEdit</from-outcome>
         <to-activity-id>AccountNotes</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__6">
+      <from-activity-id>AccountNotes</from-activity-id>
+      <control-flow-case id="__7">
+        <from-outcome>deleteNotesTF1</from-outcome>
+        <to-activity-id>deleteNotesTF1</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <use-page-fragments/>
