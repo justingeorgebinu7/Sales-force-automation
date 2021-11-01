@@ -114,6 +114,14 @@
           usageId="sfa_view_deleteContactTF_deleteContactTF_DeletePageDef"/>
     <page path="/WEB-INF/customerAccountTaskFlows/deleteContactTF.xml#deleteContactTF@Commit"
           usageId="sfa_view_deleteContactTF_deleteContactTF_CommitPageDef"/>
+    <page path="/WEB-INF/customerAccountTaskFlows/deleteNotesTF.xml#deleteNotesTF@Delete"
+          usageId="sfa_view_deleteNotesTF_deleteNotesTF_DeletePageDef"/>
+    <page path="/WEB-INF/customerAccountTaskFlows/deleteNotesTF.xml#deleteNotesTF@Commit"
+          usageId="sfa_view_deleteNotesTF_deleteNotesTF_CommitPageDef"/>
+    <page path="/WEB-INF/customerAccountTaskFlows/deleteTasksTF.xml#deleteTasksTF@Delete"
+          usageId="sfa_view_deleteTasksTF_deleteTasksTF_DeletePageDef"/>
+    <page path="/WEB-INF/customerAccountTaskFlows/deleteTasksTF.xml#deleteTasksTF@Commit"
+          usageId="sfa_view_deleteTasksTF_deleteTasksTF_CommitPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="sfa_view_untitled2PageDef" path="sfa.view.pageDefs.untitled2PageDef"/>
@@ -221,6 +229,14 @@
           path="customerAccountTaskFlows.deleteContactTF_deleteContactTF_DeletePageDef"/>
     <page id="sfa_view_deleteContactTF_deleteContactTF_CommitPageDef"
           path="customerAccountTaskFlows.deleteContactTF_deleteContactTF_CommitPageDef"/>
+    <page id="sfa_view_deleteNotesTF_deleteNotesTF_DeletePageDef"
+          path="customerAccountTaskFlows.deleteNotesTF_deleteNotesTF_DeletePageDef"/>
+    <page id="sfa_view_deleteNotesTF_deleteNotesTF_CommitPageDef"
+          path="customerAccountTaskFlows.deleteNotesTF_deleteNotesTF_CommitPageDef"/>
+    <page id="sfa_view_deleteTasksTF_deleteTasksTF_DeletePageDef"
+          path="customerAccountTaskFlows.deleteTasksTF_deleteTasksTF_DeletePageDef"/>
+    <page id="sfa_view_deleteTasksTF_deleteTasksTF_CommitPageDef"
+          path="customerAccountTaskFlows.deleteTasksTF_deleteTasksTF_CommitPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="sfa.model.entities"

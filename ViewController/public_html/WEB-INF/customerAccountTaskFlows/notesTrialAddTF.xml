@@ -22,6 +22,7 @@
         <document>/WEB-INF/customerAccountTaskFlows/deleteNotesTF.xml</document>
         <id>deleteNotesTF</id>
       </task-flow-reference>
+      <run-as-dialog/>
     </task-flow-call>
     <control-flow-rule id="__1">
       <from-activity-id>AccountNotes</from-activity-id>
