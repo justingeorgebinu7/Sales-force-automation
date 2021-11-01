@@ -2,4 +2,19 @@
 <SDM>
    <OverallProperties
       id="OverallProperties1"/>
+   <View
+      id="View2">
+      <property
+         name="activityId">LandingPage</property>
+      <property
+         name="x">177.0</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>LandingPage&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">224.89648</property>
+      <property
+         name="page">/LandingPage.jsf</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
 </SDM>

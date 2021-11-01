@@ -122,6 +122,7 @@
           usageId="sfa_view_deleteTasksTF_deleteTasksTF_DeletePageDef"/>
     <page path="/WEB-INF/customerAccountTaskFlows/deleteTasksTF.xml#deleteTasksTF@Commit"
           usageId="sfa_view_deleteTasksTF_deleteTasksTF_CommitPageDef"/>
+    <page path="/LandingPage.jsf" usageId="sfa_view_LandingPagePageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="sfa_view_untitled2PageDef" path="sfa.view.pageDefs.untitled2PageDef"/>
@@ -237,6 +238,7 @@
           path="customerAccountTaskFlows.deleteTasksTF_deleteTasksTF_DeletePageDef"/>
     <page id="sfa_view_deleteTasksTF_deleteTasksTF_CommitPageDef"
           path="customerAccountTaskFlows.deleteTasksTF_deleteTasksTF_CommitPageDef"/>
+    <page id="sfa_view_LandingPagePageDef" path="sfa.view.pageDefs.LandingPagePageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="sfa.model.entities"

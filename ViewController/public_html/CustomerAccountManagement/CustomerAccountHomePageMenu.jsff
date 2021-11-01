@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
                 xmlns:f="http://java.sun.com/jsf/core">
-  <af:panelStretchLayout id="psl1" inlineStyle="border-radius:30px 30px 30px 30px;" topHeight="30px">
+  <af:panelStretchLayout id="psl1" inlineStyle="border-radius:30px 30px 30px 30px;" topHeight="30px" startWidth="50px">
     <f:facet name="start"/>
     <f:facet name="end"/>
     <f:facet name="top">
@@ -38,4 +38,5 @@
       </af:panelBox>
     </f:facet>
   </af:panelStretchLayout>
+  <af:spacer id="s1"/>
 </ui:composition>

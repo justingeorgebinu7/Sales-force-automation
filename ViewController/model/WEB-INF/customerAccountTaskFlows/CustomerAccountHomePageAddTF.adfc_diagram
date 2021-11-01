@@ -17,7 +17,7 @@
       <property
          name="y">214.84473</property>
       <property
-         name="page">/AppointmentsAndInteractions/AccountSearchableHomepage.jsff</property>
+         name="page">/CustomerAccountManagement/AccountSearchableHomepage.jsff</property>
       <property
          name="exceptionHandler">false</property>
    </View>
@@ -32,7 +32,7 @@
       <property
          name="y">226.14941</property>
       <property
-         name="documentReference">/WEB-INF/createInsertAccount.xml</property>
+         name="documentReference">/WEB-INF/customerAccountTaskFlows/createInsertAccount.xml</property>
       <property
          name="exceptionHandler">false</property>
       <property
@@ -61,7 +61,7 @@
       <property
          name="y">72.24707</property>
       <property
-         name="page">/CustomerAccountHomePageMenu.jsff</property>
+         name="page">/CustomerAccountManagement/CustomerAccountHomePageMenu.jsff</property>
       <property
          name="exceptionHandler">false</property>
    </View>
@@ -96,7 +96,7 @@
       <property
          name="y">451.1494</property>
       <property
-         name="documentReference">/WEB-INF/deleteCustomerAccountTF.xml</property>
+         name="documentReference">/WEB-INF/customerAccountTaskFlows/deleteCustomerAccountTF.xml</property>
       <property
          name="exceptionHandler">false</property>
       <property
@@ -111,5 +111,38 @@
          name="fromOutcome">toDelete</property>
       <property
          name="sdm:polyPoints">R62,237.0,224.99414,493.36426,450.79883,L50</property>
+   </ControlFlowCase>
+   <TaskFlowCall
+      id="TaskFlowCall12">
+      <property
+         name="runAsDialog">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>deleteCustomerAccountTF1&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
+      <property
+         name="activityId">deleteCustomerAccountTF1</property>
+      <property
+         name="x">44.70117</property>
+      <property
+         name="y">58.695312</property>
+      <property
+         name="documentReference">/WEB-INF/customerAccountTaskFlows/deleteCustomerAccountTF.xml</property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="taskFlowId">deleteCustomerAccountTF</property>
+   </TaskFlowCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase13"
+      from="View2"
+      to="TaskFlowCall12">
+      <property
+         name="tosrcid">__8</property>
+      <property
+         name="fromOutcome">deleteCustomerAccountTF1</property>
+      <property
+         name="fromsrcid">__4</property>
+      <property
+         name="sdm:polyPoints">L50,155.0,214.49414,44.70117,112.34473,B50</property>
    </ControlFlowCase>
 </SDM>

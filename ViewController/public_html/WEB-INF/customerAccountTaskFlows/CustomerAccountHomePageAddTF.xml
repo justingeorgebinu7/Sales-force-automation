@@ -28,6 +28,7 @@
         <document>/WEB-INF/customerAccountTaskFlows/deleteCustomerAccountTF.xml</document>
         <id>deleteCustomerAccountTF</id>
       </task-flow-reference>
+      <run-as-dialog/>
     </task-flow-call>
     <control-flow-rule id="__5">
       <from-activity-id>AccountSearchableHomepagw</from-activity-id>
