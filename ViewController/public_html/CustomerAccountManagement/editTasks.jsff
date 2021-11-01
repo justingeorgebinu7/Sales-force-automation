@@ -23,7 +23,7 @@
                   required="#{bindings.Description.hints.mandatory}"
                   columns="#{bindings.Description.hints.displayWidth}"
                   maximumLength="#{bindings.Description.hints.precision}"
-                  shortDesc="#{bindings.Description.hints.tooltip}" id="it4">
+                  shortDesc="#{bindings.Description.hints.tooltip}" id="it4" rows="5">
       <f:validator binding="#{bindings.Description.validator}"/>
     </af:inputText>
     <af:inputText value="#{bindings.Percentageofcompletion.inputValue}"

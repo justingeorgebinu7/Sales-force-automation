@@ -11,20 +11,8 @@
     <af:inputText value="#{bindings.Content.inputValue}" label="#{bindings.Content.hints.label}"
                   required="#{bindings.Content.hints.mandatory}" columns="#{bindings.Content.hints.displayWidth}"
                   maximumLength="#{bindings.Content.hints.precision}" shortDesc="#{bindings.Content.hints.tooltip}"
-                  id="it2">
+                  id="it2" rows="5">
       <f:validator binding="#{bindings.Content.validator}"/>
-    </af:inputText>
-    <af:inputDate value="#{bindings.Datetime.inputValue}" label="#{bindings.Datetime.hints.label}"
-                  required="#{bindings.Datetime.hints.mandatory}" columns="#{bindings.Datetime.hints.displayWidth}"
-                  shortDesc="#{bindings.Datetime.hints.tooltip}" id="id1">
-      <f:validator binding="#{bindings.Datetime.validator}"/>
-      <af:convertDateTime pattern="#{bindings.Datetime.format}"/>
-    </af:inputDate>
-    <af:inputText value="#{bindings.Createdby.inputValue}" label="#{bindings.Createdby.hints.label}"
-                  required="#{bindings.Createdby.hints.mandatory}" columns="#{bindings.Createdby.hints.displayWidth}"
-                  maximumLength="#{bindings.Createdby.hints.precision}" shortDesc="#{bindings.Createdby.hints.tooltip}"
-                  id="it3">
-      <f:validator binding="#{bindings.Createdby.validator}"/>
     </af:inputText>
   </af:panelFormLayout>
   <af:button text="Save" id="b1" action="*commit"/>

@@ -12,11 +12,6 @@
         <Item Value="Content"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="NoteView2Iterator" id="Datetime">
-      <AttrNames>
-        <Item Value="Datetime"/>
-      </AttrNames>
-    </attributeValues>
     <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
     <attributeValues IterBinding="NoteView2Iterator" id="Subject">
       <AttrNames>

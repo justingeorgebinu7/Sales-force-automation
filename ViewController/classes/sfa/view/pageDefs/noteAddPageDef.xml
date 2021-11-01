@@ -17,15 +17,5 @@
         <Item Value="Content"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="NoteView2Iterator" id="Datetime">
-      <AttrNames>
-        <Item Value="Datetime"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="NoteView2Iterator" id="Createdby">
-      <AttrNames>
-        <Item Value="Createdby"/>
-      </AttrNames>
-    </attributeValues>
   </bindings>
 </pageDefinition>

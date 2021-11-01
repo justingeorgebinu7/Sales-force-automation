@@ -6,7 +6,7 @@
     <f:facet name="end"/>
     <f:facet name="top">
       <af:menuBar id="mb2">
-        <af:commandMenuItem text="Back" id="cmi3" action="backFromMenu"/>
+        <af:commandMenuItem text="Back to home" id="cmi3" action="backFromMenu"/>
       </af:menuBar>
     </f:facet>
     <f:facet name="bottom"/>
