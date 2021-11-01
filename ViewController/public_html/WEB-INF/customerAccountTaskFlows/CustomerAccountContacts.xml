@@ -13,7 +13,7 @@
     </view>
     <task-flow-call id="createInsertContactForAccountTF">
       <task-flow-reference>
-        <document>/WEB-INF/createInsertContactForAccountTF.xml</document>
+        <document>/WEB-INF/customerAccountTaskFlows/createInsertContactForAccountTF.xml</document>
         <id>createInsertContactForAccountTF</id>
       </task-flow-reference>
     </task-flow-call>

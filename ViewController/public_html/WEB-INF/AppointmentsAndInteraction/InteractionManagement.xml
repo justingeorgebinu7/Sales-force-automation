@@ -21,7 +21,7 @@
       </task-flow-reference>
     </task-flow-call>
     <view id="contactSelection">
-      <page>/contactSelection.jsff</page>
+      <page>/AppointmentsAndInteractions/contactSelection.jsff</page>
     </view>
     <control-flow-rule id="__1">
       <from-activity-id>InteractionView</from-activity-id>

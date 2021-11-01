@@ -11,7 +11,7 @@
                   id="TaskView3Query"/>
     <taskFlow id="Account_ContactTF1" taskFlowId="/WEB-INF/Account_ContactTF.xml#Account_ContactTF"
               activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
-    <taskFlow id="notesTrialAddTF1" taskFlowId="/WEB-INF/notesTrialAddTF.xml#notesTrialAddTF" activation="deferred"
+    <taskFlow id="notesTrialAddTF1" taskFlowId="/WEB-INF/customerAccountTaskFlows/notesTrialAddTF.xml#notesTrialAddTF" activation="deferred"
               xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
   </executables>
   <bindings>

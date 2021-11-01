@@ -4,9 +4,11 @@
   <parameters/>
   <executables>
     <variableIterator id="variables"/>
-    <taskFlow id="taskCustomerAccount1" taskFlowId="/WEB-INF/taskCustomerAccount.xml#taskCustomerAccount"
+    <taskFlow id="taskCustomerAccount1"
+              taskFlowId="/WEB-INF/customerAccountTaskFlows/taskCustomerAccount.xml#taskCustomerAccount"
               activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
-    <taskFlow id="CustomerAccountContacts1" taskFlowId="/WEB-INF/CustomerAccountContacts.xml#CustomerAccountContacts"
+    <taskFlow id="CustomerAccountContacts1"
+              taskFlowId="/WEB-INF/customerAccountTaskFlows/CustomerAccountContacts.xml#CustomerAccountContacts"
               activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
     <taskFlow id="appointmentManagement1"
               taskFlowId="/WEB-INF/AppointmentsAndInteraction/appointmentManagement.xml#appointmentManagement"
@@ -14,9 +16,10 @@
     <taskFlow id="InteractionManagement1"
               taskFlowId="/WEB-INF/AppointmentsAndInteraction/InteractionManagement.xml#InteractionManagement"
               activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
-    <taskFlow id="notesTrialAddTF1" taskFlowId="/WEB-INF/notesTrialAddTF.xml#notesTrialAddTF" activation="deferred"
+    <taskFlow id="notesTrialAddTF1" taskFlowId="/WEB-INF/customerAccountTaskFlows/notesTrialAddTF.xml#notesTrialAddTF" activation="deferred"
               xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
-    <taskFlow id="ManageCusiomerAccount1" taskFlowId="/WEB-INF/ManageCusiomerAccount.xml#ManageCusiomerAccount"
+    <taskFlow id="ManageCusiomerAccount1"
+              taskFlowId="/WEB-INF/customerAccountTaskFlows/ManageCusiomerAccount.xml#ManageCusiomerAccount"
               activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
   </executables>
   <bindings/>

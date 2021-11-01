@@ -10,7 +10,7 @@
     </view>
     <task-flow-call id="createInsert">
       <task-flow-reference>
-        <document>/WEB-INF/createInsertTF.xml</document>
+        <document>/WEB-INF/customerAccountTaskFlows/createInsertTF.xml</document>
         <id>createInsertTF</id>
       </task-flow-reference>
     </task-flow-call>

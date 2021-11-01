@@ -6,20 +6,20 @@
       <shared/>
     </data-control-scope>
     <view id="AccountSearchableHomepagw">
-      <page>/AppointmentsAndInteractions/AccountSearchableHomepage.jsff</page>
+      <page>/CustomerAccountManagement/AccountSearchableHomepage.jsff</page>
     </view>
     <task-flow-call id="createInsertAccount">
       <task-flow-reference>
-        <document>/WEB-INF/createInsertAccount.xml</document>
+        <document>/WEB-INF/customerAccountTaskFlows/createInsertAccount.xml</document>
         <id>createInsertAccount</id>
       </task-flow-reference>
     </task-flow-call>
     <view id="CustomerAccountHomePageMenu">
-      <page>/CustomerAccountHomePageMenu.jsff</page>
+      <page>/CustomerAccountManagement/CustomerAccountHomePageMenu.jsff</page>
     </view>
     <task-flow-call id="deleteCustomerAccountTF">
       <task-flow-reference>
-        <document>/WEB-INF/deleteCustomerAccountTF.xml</document>
+        <document>/WEB-INF/customerAccountTaskFlows/deleteCustomerAccountTF.xml</document>
         <id>deleteCustomerAccountTF</id>
       </task-flow-reference>
     </task-flow-call>

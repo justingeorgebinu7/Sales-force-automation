@@ -17,9 +17,9 @@
     <page path="/CustomerAccountManagement/AccountContact.jsff" usageId="sfa_view_AccountContactPageDef"/>
     <page path="/login.jsp" usageId="sfa_view_loginPageDef"/>
     <page path="/welcome.jspx" usageId="sfa_view_welcomePageDef"/>
-    <page path="/WEB-INF/createInsertTF.xml#createInsertTF@CreateInsert"
+    <page path="/WEB-INF/customerAccountTaskFlows/createInsertTF.xml#createInsertTF@CreateInsert"
           usageId="sfa_view_createInsertTF_createInsertTF_CreateInsertPageDef"/>
-    <page path="/WEB-INF/createInsertTF.xml#createInsertTF@Commit"
+    <page path="/WEB-INF/customerAccountTaskFlows/createInsertTF.xml#createInsertTF@Commit"
           usageId="sfa_view_createInsertTF_createInsertTF_CommitPageDef"/>
     <page path="/CustomerAccountManagement/noteAdd.jsff" usageId="sfa_view_noteAddPageDef"/>
     <page path="/CustomerAccountManagement/AccountNotes.jsff" usageId="sfa_view_AccountNotesPageDef"/>
@@ -43,22 +43,22 @@
     <page path="/WEB-INF/addAccountTasksTF.xml#addAccountTasksTF@Commit"
           usageId="sfa_view_addAccountTasksTF_addAccountTasksTF_CommitPageDef"/>
     <page path="/addAccountTask.jsff" usageId="sfa_view_addAccountTaskPageDef"/>
-    <page path="/WEB-INF/addTaskForAccount.xml#addTaskForAccount@CreateInsert"
+    <page path="/WEB-INF/customerAccountTaskFlows/addTaskForAccount.xml#addTaskForAccount@CreateInsert"
           usageId="sfa_view_addTaskForAccount_addTaskForAccount_CreateInsertPageDef"/>
     <page path="/CustomerAccountManagement/addTaskForAccount.jsff" usageId="sfa_view_addTaskForAccountPageDef"/>
-    <page path="/WEB-INF/addTaskForAccount.xml#addTaskForAccount@Commit"
+    <page path="/WEB-INF/customerAccountTaskFlows/addTaskForAccount.xml#addTaskForAccount@Commit"
           usageId="sfa_view_addTaskForAccount_addTaskForAccount_CommitPageDef"/>
-    <page path="/WEB-INF/createInsertContactForAccountTF.xml#createInsertContactForAccountTF@CreateInsert"
+    <page path="/WEB-INF/customerAccountTaskFlows/createInsertContactForAccountTF.xml#createInsertContactForAccountTF@CreateInsert"
           usageId="sfa_view_createInsertContactForAccountTF_createInsertContactForAccountTF_CreateInsertPageDef"/>
-    <page path="/WEB-INF/createInsertContactForAccountTF.xml#createInsertContactForAccountTF@Commit"
+    <page path="/WEB-INF/customerAccountTaskFlows/createInsertContactForAccountTF.xml#createInsertContactForAccountTF@Commit"
           usageId="sfa_view_createInsertContactForAccountTF_createInsertContactForAccountTF_CommitPageDef"/>
     <page path="/CustomerAccountManagement/AccountContacts.jsff" usageId="sfa_view_AccountContactsPageDef"/>
     <page path="/CustomerAccountManagement/addContactForAccount.jsff" usageId="sfa_view_addContactForAccountPageDef"/>
     <page path="/CustomerAccountManagement/editContact.jsff" usageId="sfa_view_EditContactPageDef"/>
     <page path="/CustomerAccountManagement/searchContact.jsff" usageId="sfa_view_SearchContactPageDef"/>
-    <page path="/WEB-INF/createInsertAccount.xml#createInsertAccount@CreateInsert"
+    <page path="/WEB-INF/customerAccountTaskFlows/createInsertAccount.xml#createInsertAccount@CreateInsert"
           usageId="sfa_view_createInsertAccount_createInsertAccount_CreateInsertPageDef"/>
-    <page path="/WEB-INF/createInsertAccount.xml#createInsertAccount@Commit"
+    <page path="/WEB-INF/customerAccountTaskFlows/createInsertAccount.xml#createInsertAccount@Commit"
           usageId="sfa_view_createInsertAccount_createInsertAccount_CommitPageDef"/>
     <page path="/CustomerAccountManagement/addCustomerAccount.jsff" usageId="sfa_view_addCustomerAccountPageDef"/>
     <page path="/CustomerAccountManagement/ManageAccount.jsff" usageId="sfa_view_ManageAccountPageDef"/>
@@ -81,7 +81,7 @@
           usageId="sfa_view_OM_addNoteTF_OM_addNoteTF_CommitPageDef"/>
     <page path="/OM_addNote.jsff" usageId="sfa_view_OM_addNotePageDef"/>
     <page path="/OpportunityManagement/OM_notes.jsff" usageId="sfa_view_OM_notesPageDef"/>
-    <page path="/CustomerAccountHomePageMenu.jsff" usageId="sfa_view_CustomerAccountHomePageMenuPageDef"/>
+    <page path="/CustomerAccountManagement/CustomerAccountHomePageMenu.jsff" usageId="sfa_view_CustomerAccountHomePageMenuPageDef"/>
     <page path="/AppointmentsAndInteractions/AppointmentsAndInteractions.jsf" usageId="sfa_view_AppointmentsAndInteractionsPageDef"/>
     <page path="/AppointmentsAndInteractions/AppointmentTable.jsff" usageId="sfa_view_AppointmentTablePageDef"/>
     <page path="/AppointmentsAndInteractions/EditAppointments.jsff" usageId="sfa_view_EditAppointmentsPageDef"/>
@@ -101,14 +101,14 @@
     <page path="/WEB-INF/AppointmentsAndInteraction/createInteractionTF.xml#createInteractionTF@Commit"
           usageId="sfa_view_createInteractionTF_createInteractionTF_CommitPageDef"/>
     <page path="/AppointmentsAndInteractions/createInteraction.jsff" usageId="sfa_view_createInteractionPageDef"/>
-    <page path="/WEB-INF/deleteCustomerAccountTF.xml#deleteCustomerAccountTF@Delete"
+    <page path="/WEB-INF/customerAccountTaskFlows/deleteCustomerAccountTF.xml#deleteCustomerAccountTF@Delete"
           usageId="sfa_view_deleteCustomerAccountTF_deleteCustomerAccountTF_DeletePageDef"/>
-    <page path="/WEB-INF/deleteCustomerAccountTF.xml#deleteCustomerAccountTF@Commit"
+    <page path="/WEB-INF/customerAccountTaskFlows/deleteCustomerAccountTF.xml#deleteCustomerAccountTF@Commit"
           usageId="sfa_view_deleteCustomerAccountTF_deleteCustomerAccountTF_CommitPageDef"/>
     <page path="/CustomerAccountManagement/deleteCustomerAccount.jsff" usageId="sfa_view_deleteCustomerAccountPageDef"/>
     <page path="/AppointmentsAndInteractions/selectContactForApp.jsff" usageId="sfa_view_selectContactForAppPageDef"/>
-    <page path="/contactSelection.jsff" usageId="sfa_view_contactSelectionPageDef"/>
-    <page path="/AppointmentsAndInteractions/AccountSearchableHomepage.jsff"
+    <page path="/AppointmentsAndInteractions/contactSelection.jsff" usageId="sfa_view_contactSelectionPageDef"/>
+    <page path="/CustomerAccountManagement/AccountSearchableHomepage.jsff"
           usageId="sfa_view_AccountSearchableHomepagePageDef"/>
   </pageMap>
   <pageDefinitionUsages>
