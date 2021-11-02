@@ -148,6 +148,9 @@
   <ViewUsage
     Name="InviteesView3"
     ViewObjectName="sfa.model.viewobjects.InviteesView"/>
+  <ViewUsage
+    Name="AccountType1"
+    ViewObjectName="sfa.model.viewobjects.staticVo.AccountType"/>
   <ViewLinkUsage
     Name="AddressCustomeraccountFkLink1"
     ViewLinkObjectName="sfa.model.viewobjects.AddressCustomeraccountFkLink"

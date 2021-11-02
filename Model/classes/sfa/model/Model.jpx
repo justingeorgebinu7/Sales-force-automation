@@ -26,6 +26,14 @@
     </DesignTime>
   </Containee>
   <Containee
+    Name="staticVo"
+    PackageName="sfa.model.viewobjects.staticVo"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_VO" Value="true"/>
+    </DesignTime>
+  </Containee>
+  <Containee
     Name="viewobjects"
     PackageName="sfa.model.viewobjects"
     ObjectType="JboPackage">

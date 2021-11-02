@@ -12,7 +12,31 @@
   BindingStyle="OracleName"
   CustomQuery="false"
   SelectAllAttributes="false"
-  PageIterMode="Full">
+  PageIterMode="Full"
+  AccessMode="DEFAULT">
+  <ViewAccessor
+    Name="AccountType1"
+    ViewObjectName="sfa.model.viewobjects.staticVo.AccountType"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_AccountType"
+    ListVOName="AccountType1"
+    ComboRowCountHint="10"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Type"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="TypeAttr"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="TypeAttr"/>
+    </AttrArray>
+    <DisplayCriteria
+      Hint="showAndExecute"/>
+  </ListBinding>
   <EntityUsage
     Name="Customeraccount"
     Entity="sfa.model.entities.Customeraccount"/>
@@ -28,11 +52,14 @@
     PrecisionRule="true"
     EntityAttrName="Type"
     EntityUsage="Customeraccount"
-    AliasName="TYPE">
+    AliasName="TYPE"
+    LOVName="LOV_AccountType">
     <Properties>
       <SchemaBasedProperties>
         <DISPLAYWIDTH
           Value="20"/>
+        <CONTROLTYPE
+          Value="combo_lov"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
