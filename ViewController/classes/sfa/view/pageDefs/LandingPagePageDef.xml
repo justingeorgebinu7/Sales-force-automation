@@ -7,6 +7,9 @@
     <taskFlow id="CustomerAccountHomePageAddTF1"
               taskFlowId="/WEB-INF/customerAccountTaskFlows/CustomerAccountHomePageAddTF.xml#CustomerAccountHomePageAddTF"
               activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <taskFlow id="conactManagementParent1"
+              taskFlowId="/WEB-INF/ContactManagement/conactManagementParent.xml#conactManagementParent"
+              activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
   </executables>
   <bindings/>
 </pageDefinition>

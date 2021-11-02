@@ -131,6 +131,8 @@
           usageId="sfa_view_deleteInteractionTF_deleteInteractionTF_CommitPageDef"/>
     <page path="/WEB-INF/AppointmentsAndInteraction/createInteractionTF.xml#createInteractionTF@CreateInsert"
           usageId="sfa_view_createInteractionTF_createInteractionTF_CreateInsertPageDef"/>
+    <page path="/ContactHome.jsff" usageId="sfa_view_ContactHomePageDef"/>
+    <page path="/Contactmenu.jsff" usageId="sfa_view_ContactmenuPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="sfa_view_untitled2PageDef" path="sfa.view.pageDefs.untitled2PageDef"/>
@@ -255,6 +257,8 @@
           path="AppointmentsAndInteraction.deleteInteractionTF_deleteInteractionTF_CommitPageDef"/>
     <page id="sfa_view_createInteractionTF_createInteractionTF_CreateInsertPageDef"
           path="AppointmentsAndInteraction.createInteractionTF_createInteractionTF_CreateInsertPageDef"/>
+    <page id="sfa_view_ContactHomePageDef" path="sfa.view.pageDefs.ContactHomePageDef"/>
+    <page id="sfa_view_ContactmenuPageDef" path="sfa.view.pageDefs.ContactmenuPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="sfa.model.entities"

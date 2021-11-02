@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:f="http://java.sun.com/jsf/core">
+  <af:panelBox id="pb2" inlineStyle="margin-right:100px;overflow:hidden; border-radius:30px 30px 30px 30px;" text="Menu"
+               background="default">
+    <f:facet name="toolbar"/>
+    <af:panelTabbed position="start" id="pt2" verticalTabMode="iconAndText">
+      <af:showDetailItem id="sdi1" text="Manage Contact" disclosed="true">
+        <af:panelFormLayout id="pfl1">
+          <af:inputText value="#{bindings.Name.inputValue}" label="#{bindings.Name.hints.label}"
+                        required="#{bindings.Name.hints.mandatory}" columns="#{bindings.Name.hints.displayWidth}"
+                        maximumLength="#{bindings.Name.hints.precision}" shortDesc="#{bindings.Name.hints.tooltip}"
+                        id="it1">
+            <f:validator binding="#{bindings.Name.validator}"/>
+          </af:inputText>
+          <af:inputText value="#{bindings.Title.inputValue}" label="#{bindings.Title.hints.label}"
+                        required="#{bindings.Title.hints.mandatory}" columns="#{bindings.Title.hints.displayWidth}"
+                        maximumLength="#{bindings.Title.hints.precision}" shortDesc="#{bindings.Title.hints.tooltip}"
+                        id="it2">
+            <f:validator binding="#{bindings.Title.validator}"/>
+          </af:inputText>
+          <af:inputText value="#{bindings.Department.inputValue}" label="#{bindings.Department.hints.label}"
+                        required="#{bindings.Department.hints.mandatory}"
+                        columns="#{bindings.Department.hints.displayWidth}"
+                        maximumLength="#{bindings.Department.hints.precision}"
+                        shortDesc="#{bindings.Department.hints.tooltip}" id="it3">
+            <f:validator binding="#{bindings.Department.validator}"/>
+          </af:inputText>
+          <af:inputText value="#{bindings.Workphone.inputValue}" label="#{bindings.Workphone.hints.label}"
+                        required="#{bindings.Workphone.hints.mandatory}"
+                        columns="#{bindings.Workphone.hints.displayWidth}"
+                        maximumLength="#{bindings.Workphone.hints.precision}"
+                        shortDesc="#{bindings.Workphone.hints.tooltip}" id="it4">
+            <f:validator binding="#{bindings.Workphone.validator}"/>
+            <af:convertNumber groupingUsed="false" pattern="#{bindings.Workphone.format}"/>
+          </af:inputText>
+          <af:inputText value="#{bindings.Email.inputValue}" label="#{bindings.Email.hints.label}"
+                        required="#{bindings.Email.hints.mandatory}" columns="#{bindings.Email.hints.displayWidth}"
+                        maximumLength="#{bindings.Email.hints.precision}" shortDesc="#{bindings.Email.hints.tooltip}"
+                        id="it5">
+            <f:validator binding="#{bindings.Email.validator}"/>
+          </af:inputText>
+          <af:inputText value="#{bindings.Buyingrole.inputValue}" label="#{bindings.Buyingrole.hints.label}"
+                        required="#{bindings.Buyingrole.hints.mandatory}"
+                        columns="#{bindings.Buyingrole.hints.displayWidth}"
+                        maximumLength="#{bindings.Buyingrole.hints.precision}"
+                        shortDesc="#{bindings.Buyingrole.hints.tooltip}" id="it6">
+            <f:validator binding="#{bindings.Buyingrole.validator}"/>
+          </af:inputText>
+          <af:inputText value="#{bindings.Influencelevel.inputValue}" label="#{bindings.Influencelevel.hints.label}"
+                        required="#{bindings.Influencelevel.hints.mandatory}"
+                        columns="#{bindings.Influencelevel.hints.displayWidth}"
+                        maximumLength="#{bindings.Influencelevel.hints.precision}"
+                        shortDesc="#{bindings.Influencelevel.hints.tooltip}" id="it7">
+            <f:validator binding="#{bindings.Influencelevel.validator}"/>
+          </af:inputText>
+          <af:inputText value="#{bindings.Isprimarycontact.inputValue}" label="#{bindings.Isprimarycontact.hints.label}"
+                        required="#{bindings.Isprimarycontact.hints.mandatory}"
+                        columns="#{bindings.Isprimarycontact.hints.displayWidth}"
+                        maximumLength="#{bindings.Isprimarycontact.hints.precision}"
+                        shortDesc="#{bindings.Isprimarycontact.hints.tooltip}" id="it8">
+            <f:validator binding="#{bindings.Isprimarycontact.validator}"/>
+          </af:inputText>
+          <f:facet name="footer">
+            <af:button text="Save" id="b1" actionListener="#{bindings.Commit.execute}"
+                       disabled="#{!bindings.Commit.enabled}"/>
+          </f:facet>
+        </af:panelFormLayout>
+      </af:showDetailItem>
+      <af:showDetailItem id="sdi4" text="Task"/>
+      <af:showDetailItem id="sdi2" text="Notes"/>
+      <af:showDetailItem id="sdi5" text="Appoinments"/>
+      <af:showDetailItem id="sdi6" text="Interaction"/>
+    </af:panelTabbed>
+    <af:componentDragSource/>
+  </af:panelBox>
+  <af:menuBar id="mb1">
+    <af:commandMenuItem text="Back to home" id="cmi1" action="backToHome"/>
+  </af:menuBar>
+</ui:composition>

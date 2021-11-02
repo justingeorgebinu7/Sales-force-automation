@@ -75,7 +75,10 @@
                                                                             </af:showDetailItem>
                                                                             <af:showDetailItem text="Contact Management"
                                                                                                id="sdi2"
-                                                                                               icon="/contacticon.jpg"/>
+                                                                                               icon="/contacticon.jpg">
+                                                                                <af:region value="#{bindings.conactManagementParent1.regionModel}"
+                                                                                           id="r2"/>
+                                                                            </af:showDetailItem>
                                                                             <af:showDetailItem text="Opportunities"
                                                                                                id="sdi3"
                                                                                                icon="https://icon-library.com/images/opportunity-icon/opportunity-icon-6.jpg"/>

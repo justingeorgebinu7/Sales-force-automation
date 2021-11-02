@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.22.48" id="ContactmenuPageDef"
+                Package="sfa.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="CustomercontactsView1" RangeSize="25" DataControl="AppModuleDataControl"
+              id="CustomercontactsView1Iterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="CustomercontactsView1Iterator" id="Name">
+      <AttrNames>
+        <Item Value="Name"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomercontactsView1Iterator" id="Title">
+      <AttrNames>
+        <Item Value="Title"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomercontactsView1Iterator" id="Department">
+      <AttrNames>
+        <Item Value="Department"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomercontactsView1Iterator" id="Workphone">
+      <AttrNames>
+        <Item Value="Workphone"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomercontactsView1Iterator" id="Email">
+      <AttrNames>
+        <Item Value="Email"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomercontactsView1Iterator" id="Buyingrole">
+      <AttrNames>
+        <Item Value="Buyingrole"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomercontactsView1Iterator" id="Influencelevel">
+      <AttrNames>
+        <Item Value="Influencelevel"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomercontactsView1Iterator" id="Isprimarycontact">
+      <AttrNames>
+        <Item Value="Isprimarycontact"/>
+      </AttrNames>
+    </attributeValues>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+  </bindings>
+</pageDefinition>

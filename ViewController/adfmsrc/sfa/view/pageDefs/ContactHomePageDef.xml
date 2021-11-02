@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.22.48" id="ContactHomePageDef"
+                Package="sfa.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="CustomercontactsView1" RangeSize="25" DataControl="AppModuleDataControl"
+              id="CustomercontactsView1Iterator"/>
+    <searchRegion Binds="CustomercontactsView1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="CustomercontactsView1Query"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="CustomercontactsView1Iterator" id="CustomercontactsView1">
+      <nodeDefinition DefName="sfa.model.viewobjects.CustomercontactsView" Name="CustomercontactsView10">
+        <AttrNames>
+          <Item Value="Name"/>
+          <Item Value="Title"/>
+          <Item Value="Department"/>
+          <Item Value="Workphone"/>
+          <Item Value="Email"/>
+          <Item Value="Buyingrole"/>
+          <Item Value="Influencelevel"/>
+          <Item Value="Isprimarycontact"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>
