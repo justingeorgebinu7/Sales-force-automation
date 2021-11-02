@@ -8,7 +8,7 @@
                 }
 
                 body {
-                    background-image: url('https://wallpaperaccess.com/full/260172.jpg');
+                    background-image: url('https://image.freepik.com/free-vector/white-minimal-background_1393-354.jpg');
                     margin: 0;
                     background-size: cover;
                 }
@@ -36,16 +36,17 @@
 
                 .textfield {
                     padding: 12px 20px;
-                    border-radius: 10px;
+                    border-radius: 8px;
                     text-align: center;
-                    border: 1px solid #666;
+                    border: .5px solid #999;
                 }
 
                 .btn {
-                    padding: 15px 60px;
+                    padding: 12px 50px;
                     background-color: #046;
                     color: white;
                     border: 0px;
+                    font-size:13px;
                     border-radius: 20px;
                     font-weight:bold;
                 }
@@ -61,7 +62,7 @@
                 }
 
                 .leftimg {
-                    width: 50%;
+                    width: 40%;
                 }
 
                 .makecenter {
@@ -72,6 +73,7 @@
                 .text {
                     color: #334;
                     font-weight:600;
+                    font-size:14px;
                 }
             </style>
         <script>
@@ -90,12 +92,12 @@
                     <img class="leftimg" alt="img"
                          src="https://i.ibb.co/HrRP1ZH/logosq.jpg"/>
                      
-                    <br/><div style="font-size:25px;margin-top:30px;color:#026;">Welcome</div>
+                    <br/><div style="font-size:22px;margin-top:30px;color:#026;">Welcome</div>
                 </div>
             </div>
             <div class="rightdiv" style="margin-top:13%;">
                 <form method="POST" action="j_security_check" autocomplete="off">
-                    <table cellspacing="0" cellpadding="15" border="0px"
+                    <table cellspacing="0" cellpadding="15" border="0"
                            style="border:none;border-collapse:collapse;overflow:hidden;">
                         <tr>
                             <td class="text">Username</td>
