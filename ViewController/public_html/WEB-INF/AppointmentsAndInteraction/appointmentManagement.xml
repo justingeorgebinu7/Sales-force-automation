@@ -11,13 +11,16 @@
     <view id="EditAppointments">
       <page>/AppointmentsAndInteractions/EditAppointments.jsff</page>
     </view>
-    <view id="SearchAppointments">
-      <page>/AppointmentsAndInteractions/SearchAppointments.jsff</page>
-    </view>
     <task-flow-call id="createAppointmentTF">
       <task-flow-reference>
         <document>/WEB-INF/AppointmentsAndInteraction/createAppointmentTF.xml</document>
         <id>createAppointmentTF</id>
+      </task-flow-reference>
+    </task-flow-call>
+    <task-flow-call id="deleteAppointmentTF1">
+      <task-flow-reference>
+        <document>/WEB-INF/AppointmentsAndInteraction/deleteAppointmentTF.xml</document>
+        <id>deleteAppointmentTF</id>
       </task-flow-reference>
     </task-flow-call>
     <control-flow-rule id="__1">
@@ -25,10 +28,6 @@
       <control-flow-case id="__2">
         <from-outcome>editAppointments</from-outcome>
         <to-activity-id>EditAppointments</to-activity-id>
-      </control-flow-case>
-      <control-flow-case id="__3">
-        <from-outcome>searchAppointments</from-outcome>
-        <to-activity-id>SearchAppointments</to-activity-id>
       </control-flow-case>
       <control-flow-case id="__8">
         <from-outcome>createAppointment</from-outcome>
@@ -42,11 +41,11 @@
         <to-activity-id>AppointmentTable</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
-    <control-flow-rule id="__6">
-      <from-activity-id>SearchAppointments</from-activity-id>
-      <control-flow-case id="__7">
-        <from-outcome>backFromSearch</from-outcome>
-        <to-activity-id>AppointmentTable</to-activity-id>
+    <control-flow-rule id="__3">
+      <from-activity-id>AppointmentTable</from-activity-id>
+      <control-flow-case id="__6">
+        <from-outcome>deleteAppointmentTF1</from-outcome>
+        <to-activity-id>deleteAppointmentTF1</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <use-page-fragments/>

@@ -48,8 +48,7 @@
       <af:outputText value="#{row.Location}" shortDesc="#{bindings.AppointmentsView4.hints.Location.tooltip}" id="ot5"/>
     </af:column>
   </af:table>
-  <af:button text="Search" id="b1" action="searchAppointments"/>
-  <af:button text="Edit" id="b2" action="editAppointments"/>
   <af:button text="Create" id="b3" action="createAppointment"/>
-  <af:button text="Back" id="b5" action="*backToContacts"/>
+  <af:button text="Edit" id="b2" action="editAppointments"/>
+  <af:button text="Delete" action="deleteAppointmentTF1" id="b1"/>
 </ui:composition>

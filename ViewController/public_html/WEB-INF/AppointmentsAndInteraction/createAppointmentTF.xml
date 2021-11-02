@@ -5,12 +5,6 @@
     <data-control-scope>
       <shared/>
     </data-control-scope>
-    <method-call id="CreateInsert">
-      <method>#{bindings.CreateInsert.execute}</method>
-      <outcome>
-        <fixed-outcome>CreateInsert</fixed-outcome>
-      </outcome>
-    </method-call>
     <view id="CreateAppointments">
       <page>/AppointmentsAndInteractions/CreateAppointments.jsff</page>
     </view>
@@ -25,13 +19,12 @@
         <name>taskFlowReturn1</name>
       </outcome>
     </task-flow-return>
-    <control-flow-rule id="__1">
-      <from-activity-id>CreateInsert</from-activity-id>
-      <control-flow-case id="__2">
-        <from-outcome>CreateInsert</from-outcome>
-        <to-activity-id>CreateAppointments</to-activity-id>
-      </control-flow-case>
-    </control-flow-rule>
+    <method-call id="CreateInsert">
+      <method>#{bindings.CreateInsert.execute}</method>
+      <outcome>
+        <fixed-outcome>CreateInsert</fixed-outcome>
+      </outcome>
+    </method-call>
     <control-flow-rule id="__3">
       <from-activity-id>CreateAppointments</from-activity-id>
       <control-flow-case id="__4">
@@ -41,6 +34,13 @@
       <control-flow-case id="__5">
         <from-outcome>back</from-outcome>
         <to-activity-id>taskFlowReturn1</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__1">
+      <from-activity-id>CreateInsert</from-activity-id>
+      <control-flow-case id="__2">
+        <from-outcome>CreateInsert</from-outcome>
+        <to-activity-id>CreateAppointments</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <use-page-fragments/>

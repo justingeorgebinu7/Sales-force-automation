@@ -4,42 +4,38 @@
   <parameters/>
   <executables>
     <variableIterator id="variables"/>
-    <iterator Binds="InteractionView3" RangeSize="25" DataControl="AppModuleDataControl" id="InteractionView3Iterator"/>
+    <iterator Binds="InteractionView5" RangeSize="25" DataControl="AppModuleDataControl" id="InteractionView5Iterator"/>
   </executables>
   <bindings>
-    <attributeValues IterBinding="InteractionView3Iterator" id="Type">
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+    <attributeValues IterBinding="InteractionView5Iterator" id="Type">
       <AttrNames>
         <Item Value="Type"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="InteractionView3Iterator" id="Direction">
+    <attributeValues IterBinding="InteractionView5Iterator" id="Direction">
       <AttrNames>
         <Item Value="Direction"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="InteractionView3Iterator" id="Startdate">
+    <attributeValues IterBinding="InteractionView5Iterator" id="Startdate">
       <AttrNames>
         <Item Value="Startdate"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="InteractionView3Iterator" id="Enddate">
+    <attributeValues IterBinding="InteractionView5Iterator" id="Enddate">
       <AttrNames>
         <Item Value="Enddate"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="InteractionView3Iterator" id="Description">
+    <attributeValues IterBinding="InteractionView5Iterator" id="Description">
       <AttrNames>
         <Item Value="Description"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="InteractionView3Iterator" id="Resolution">
+    <attributeValues IterBinding="InteractionView5Iterator" id="Resolution">
       <AttrNames>
         <Item Value="Resolution"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="InteractionView3Iterator" id="Contactid">
-      <AttrNames>
-        <Item Value="Contactid"/>
       </AttrNames>
     </attributeValues>
   </bindings>

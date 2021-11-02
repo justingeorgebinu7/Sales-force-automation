@@ -2,21 +2,6 @@
 <SDM>
    <OverallProperties
       id="OverallProperties1"/>
-   <MethodCall
-      id="MethodCall2">
-      <property
-         name="activityId">CreateInsert</property>
-      <property
-         name="x">181.01465</property>
-      <property
-         name="start">true</property>
-      <property
-         name="description">&lt;html>&lt;p>&lt;b>CreateInsert&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
-      <property
-         name="y">351.83887</property>
-      <property
-         name="exceptionHandler">false</property>
-   </MethodCall>
    <View
       id="View3">
       <property
@@ -34,16 +19,6 @@
       <property
          name="exceptionHandler">false</property>
    </View>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase4"
-      from="MethodCall2"
-      to="View3">
-      <property
-         name="fromOutcome">CreateInsert</property>
-      <property
-         name="sdm:polyPoints">R50,222.01465,351.48828,363.0,224.5459,L50</property>
-   </ControlFlowCase>
    <MethodCall
       id="MethodCall5">
       <property
@@ -91,5 +66,30 @@
          name="fromOutcome">back</property>
       <property
          name="sdm:polyPoints">R54,445.0,228.0459,599.0,382.1953,L50</property>
+   </ControlFlowCase>
+   <MethodCall
+      id="MethodCall10">
+      <property
+         name="activityId">CreateInsert</property>
+      <property
+         name="x">139.01465</property>
+      <property
+         name="start">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>CreateInsert&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
+      <property
+         name="y">366.1494</property>
+      <property
+         name="exceptionHandler">false</property>
+   </MethodCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase11"
+      from="MethodCall10"
+      to="View3">
+      <property
+         name="fromOutcome">CreateInsert</property>
+      <property
+         name="sdm:polyPoints">R50,180.01465,365.79883,363.0,224.5459,L50</property>
    </ControlFlowCase>
 </SDM>

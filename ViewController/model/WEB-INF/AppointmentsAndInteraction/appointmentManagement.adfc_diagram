@@ -38,23 +38,6 @@
       <property
          name="exceptionHandler">false</property>
    </View>
-   <View
-      id="View4">
-      <property
-         name="activityId">SearchAppointments</property>
-      <property
-         name="pageFragment">true</property>
-      <property
-         name="x">648.0</property>
-      <property
-         name="description">&lt;html>&lt;p>&lt;b>SearchAppointments&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
-      <property
-         name="y">348.49414</property>
-      <property
-         name="page">/AppointmentsAndInteractions/SearchAppointments.jsff</property>
-      <property
-         name="exceptionHandler">false</property>
-   </View>
    <ControlFlowCase
       islink="true"
       id="ControlFlowCase5"
@@ -63,17 +46,7 @@
       <property
          name="fromOutcome">editAppointments</property>
       <property
-         name="sdm:polyPoints">R38,332.0,317.2412,540.4433,219.34473,L46</property>
-   </ControlFlowCase>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase6"
-      from="View2"
-      to="View4">
-      <property
-         name="fromOutcome">searchAppointments</property>
-      <property
-         name="sdm:polyPoints">R54,332.17047,331.2412,607.0,344.64355,L46</property>
+         name="sdm:polyPoints">R46,332.0,324.2412,540.34314,219.34473,L46</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -83,17 +56,7 @@
       <property
          name="fromOutcome">backFromEdit</property>
       <property
-         name="sdm:polyPoints">L54,542.0,226.34473,333.55145,324.2412,R46</property>
-   </ControlFlowCase>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase8"
-      from="View4"
-      to="View2">
-      <property
-         name="fromOutcome">backFromSearch</property>
-      <property
-         name="sdm:polyPoints">L54,606.82947,351.64355,332.0,338.2412,R62</property>
+         name="sdm:polyPoints">L54,542.0,226.34473,333.65103,331.2412,R54</property>
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall11">
@@ -121,5 +84,36 @@
          name="fromOutcome">createAppointment</property>
       <property
          name="sdm:polyPoints">B50,291.0,381.7412,430.69434,509.79883,L50</property>
+   </ControlFlowCase>
+   <TaskFlowCall
+      id="TaskFlowCall12">
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>deleteAppointmentTF1&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
+      <property
+         name="activityId">deleteAppointmentTF1</property>
+      <property
+         name="x">85.703125</property>
+      <property
+         name="y">70.0459</property>
+      <property
+         name="documentReference">/WEB-INF/AppointmentsAndInteraction/deleteAppointmentTF.xml</property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="taskFlowId">deleteAppointmentTF</property>
+   </TaskFlowCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase13"
+      from="View2"
+      to="TaskFlowCall12">
+      <property
+         name="tosrcid">__6</property>
+      <property
+         name="fromOutcome">deleteAppointmentTF1</property>
+      <property
+         name="fromsrcid">__3</property>
+      <property
+         name="sdm:polyPoints">T50,291.0,273.7412,85.703125,124.0459,B50</property>
    </ControlFlowCase>
 </SDM>

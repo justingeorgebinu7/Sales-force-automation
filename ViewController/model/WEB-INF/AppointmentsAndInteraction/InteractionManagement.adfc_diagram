@@ -38,23 +38,6 @@
       <property
          name="exceptionHandler">false</property>
    </View>
-   <View
-      id="View4">
-      <property
-         name="activityId">SearchInteraction</property>
-      <property
-         name="pageFragment">true</property>
-      <property
-         name="x">482.0</property>
-      <property
-         name="description">&lt;html>&lt;p>&lt;b>SearchInteraction&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
-      <property
-         name="y">246.29883</property>
-      <property
-         name="page">/AppointmentsAndInteractions/SearchInteraction.jsff</property>
-      <property
-         name="exceptionHandler">false</property>
-   </View>
    <ControlFlowCase
       islink="true"
       id="ControlFlowCase5"
@@ -63,17 +46,7 @@
       <property
          name="fromOutcome">editInteraction</property>
       <property
-         name="sdm:polyPoints">T44,210.5,280.70004,276.5,185.24707,B44</property>
-   </ControlFlowCase>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase6"
-      from="View2"
-      to="View4">
-      <property
-         name="fromOutcome">searchInteraction</property>
-      <property
-         name="sdm:polyPoints">R42,255.0,329.84473,439.4314,242.44824,L46</property>
+         name="sdm:polyPoints">T50,214.0,280.79547,276.5,185.24707,B44</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -83,17 +56,7 @@
       <property
          name="fromOutcome">backFromEdit</property>
       <property
-         name="sdm:polyPoints">B56,283.5,187.4116,217.5,282.84473,T56</property>
-   </ControlFlowCase>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase8"
-      from="View4"
-      to="View2">
-      <property
-         name="fromOutcome">backFromSearch</property>
-      <property
-         name="sdm:polyPoints">L54,441.0,249.44824,256.56262,336.84473,R50</property>
+         name="sdm:polyPoints">B56,283.5,187.31474,221.0,282.84473,T61</property>
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall11">
@@ -120,6 +83,37 @@
       <property
          name="fromOutcome">createInteraction</property>
       <property
-         name="sdm:polyPoints">R58,255.0,343.84473,569.02246,463.79883,L50</property>
+         name="sdm:polyPoints">R50,255.0,336.84473,569.02246,463.79883,L50</property>
+   </ControlFlowCase>
+   <TaskFlowCall
+      id="TaskFlowCall12">
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>deleteInteractionTF1&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
+      <property
+         name="activityId">deleteInteractionTF1</property>
+      <property
+         name="x">80.03125</property>
+      <property
+         name="y">70.0459</property>
+      <property
+         name="documentReference">/WEB-INF/AppointmentsAndInteraction/deleteInteractionTF.xml</property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="taskFlowId">deleteInteractionTF</property>
+   </TaskFlowCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase13"
+      from="View2"
+      to="TaskFlowCall12">
+      <property
+         name="tosrcid">__6</property>
+      <property
+         name="fromOutcome">deleteInteractionTF1</property>
+      <property
+         name="fromsrcid">__3</property>
+      <property
+         name="sdm:polyPoints">T39,207.0,282.84473,80.03125,124.0459,B50</property>
    </ControlFlowCase>
 </SDM>

@@ -116,7 +116,6 @@
   </Attribute>
   <Attribute
     Name="Contactid"
-    IsNotNull="true"
     ColumnName="CONTACTID"
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"

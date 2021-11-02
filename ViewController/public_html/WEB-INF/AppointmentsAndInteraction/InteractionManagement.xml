@@ -11,13 +11,16 @@
     <view id="EditInteractions">
       <page>/AppointmentsAndInteractions/EditInteractions.jsff</page>
     </view>
-    <view id="SearchInteraction">
-      <page>/AppointmentsAndInteractions/SearchInteraction.jsff</page>
-    </view>
     <task-flow-call id="createInteractionTF">
       <task-flow-reference>
         <document>/WEB-INF/AppointmentsAndInteraction/createInteractionTF.xml</document>
         <id>createInteractionTF</id>
+      </task-flow-reference>
+    </task-flow-call>
+    <task-flow-call id="deleteInteractionTF1">
+      <task-flow-reference>
+        <document>/WEB-INF/AppointmentsAndInteraction/deleteInteractionTF.xml</document>
+        <id>deleteInteractionTF</id>
       </task-flow-reference>
     </task-flow-call>
     <control-flow-rule id="__1">
@@ -25,10 +28,6 @@
       <control-flow-case id="__2">
         <from-outcome>editInteraction</from-outcome>
         <to-activity-id>EditInteractions</to-activity-id>
-      </control-flow-case>
-      <control-flow-case id="__3">
-        <from-outcome>searchInteraction</from-outcome>
-        <to-activity-id>SearchInteraction</to-activity-id>
       </control-flow-case>
       <control-flow-case id="__8">
         <from-outcome>createInteraction</from-outcome>
@@ -42,11 +41,11 @@
         <to-activity-id>InteractionView</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
-    <control-flow-rule id="__6">
-      <from-activity-id>SearchInteraction</from-activity-id>
-      <control-flow-case id="__7">
-        <from-outcome>backFromSearch</from-outcome>
-        <to-activity-id>InteractionView</to-activity-id>
+    <control-flow-rule id="__3">
+      <from-activity-id>InteractionView</from-activity-id>
+      <control-flow-case id="__6">
+        <from-outcome>deleteInteractionTF1</from-outcome>
+        <to-activity-id>deleteInteractionTF1</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <use-page-fragments/>

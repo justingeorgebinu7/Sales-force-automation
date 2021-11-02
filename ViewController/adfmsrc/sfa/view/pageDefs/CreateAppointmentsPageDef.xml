@@ -4,31 +4,31 @@
   <parameters/>
   <executables>
     <variableIterator id="variables"/>
-    <iterator Binds="AppointmentsView3" RangeSize="25" DataControl="AppModuleDataControl"
-              id="AppointmentsView3Iterator"/>
+    <iterator Binds="AppointmentsView4" RangeSize="25" DataControl="AppModuleDataControl"
+              id="AppointmentsView4Iterator"/>
   </executables>
   <bindings>
-    <attributeValues IterBinding="AppointmentsView3Iterator" id="Name">
+    <attributeValues IterBinding="AppointmentsView4Iterator" id="Name">
       <AttrNames>
         <Item Value="Name"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="AppointmentsView3Iterator" id="Startdate">
+    <attributeValues IterBinding="AppointmentsView4Iterator" id="Startdate">
       <AttrNames>
         <Item Value="Startdate"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="AppointmentsView3Iterator" id="Enddate">
+    <attributeValues IterBinding="AppointmentsView4Iterator" id="Enddate">
       <AttrNames>
         <Item Value="Enddate"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="AppointmentsView3Iterator" id="Description">
+    <attributeValues IterBinding="AppointmentsView4Iterator" id="Description">
       <AttrNames>
         <Item Value="Description"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="AppointmentsView3Iterator" id="Location">
+    <attributeValues IterBinding="AppointmentsView4Iterator" id="Location">
       <AttrNames>
         <Item Value="Location"/>
       </AttrNames>

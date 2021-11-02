@@ -4,13 +4,13 @@
   <af:panelFormLayout id="pfl1">
     <af:inputText value="#{bindings.Type.inputValue}" label="#{bindings.Type.hints.label}"
                   required="#{bindings.Type.hints.mandatory}" columns="#{bindings.Type.hints.displayWidth}"
-                  maximumLength="#{bindings.Type.hints.precision}" shortDesc="#{bindings.Type.hints.tooltip}" id="it2">
+                  maximumLength="#{bindings.Type.hints.precision}" shortDesc="#{bindings.Type.hints.tooltip}" id="it1">
       <f:validator binding="#{bindings.Type.validator}"/>
     </af:inputText>
     <af:inputText value="#{bindings.Direction.inputValue}" label="#{bindings.Direction.hints.label}"
                   required="#{bindings.Direction.hints.mandatory}" columns="#{bindings.Direction.hints.displayWidth}"
                   maximumLength="#{bindings.Direction.hints.precision}" shortDesc="#{bindings.Direction.hints.tooltip}"
-                  id="it3">
+                  id="it2">
       <f:validator binding="#{bindings.Direction.validator}"/>
     </af:inputText>
     <af:inputDate value="#{bindings.Startdate.inputValue}" label="#{bindings.Startdate.hints.label}"
@@ -29,25 +29,17 @@
                   required="#{bindings.Description.hints.mandatory}"
                   columns="#{bindings.Description.hints.displayWidth}"
                   maximumLength="#{bindings.Description.hints.precision}"
-                  shortDesc="#{bindings.Description.hints.tooltip}" id="it4">
+                  shortDesc="#{bindings.Description.hints.tooltip}" id="it3" rows="5">
       <f:validator binding="#{bindings.Description.validator}"/>
     </af:inputText>
     <af:inputText value="#{bindings.Resolution.inputValue}" label="#{bindings.Resolution.hints.label}"
                   required="#{bindings.Resolution.hints.mandatory}" columns="#{bindings.Resolution.hints.displayWidth}"
                   maximumLength="#{bindings.Resolution.hints.precision}"
-                  shortDesc="#{bindings.Resolution.hints.tooltip}" id="it5">
+                  shortDesc="#{bindings.Resolution.hints.tooltip}" id="it4">
       <f:validator binding="#{bindings.Resolution.validator}"/>
     </af:inputText>
-    <af:inputText value="#{bindings.Contactid.inputValue}" label="#{bindings.Contactid.hints.label}"
-                  required="#{bindings.Contactid.hints.mandatory}" columns="#{bindings.Contactid.hints.displayWidth}"
-                  maximumLength="#{bindings.Contactid.hints.precision}" shortDesc="#{bindings.Contactid.hints.tooltip}"
-                  id="it6">
-      <f:validator binding="#{bindings.Contactid.validator}"/>
-      <af:convertNumber groupingUsed="false" pattern="#{bindings.Contactid.format}"/>
-    </af:inputText>
-    <f:facet name="footer">
-      <af:button text="Save" id="b1" action="commit"/>
-      <af:button text="Back" id="b2" action="exit"/>
-    </f:facet>
   </af:panelFormLayout>
+  <af:button actionListener="#{bindings.Commit.execute}" text="Save" disabled="#{!bindings.Commit.enabled}" id="b1"
+             action="exit"/>
+  <af:button text="Cancel" id="b2" action="exit"/>
 </ui:composition>

@@ -4,7 +4,7 @@
   <af:panelFormLayout id="pfl1">
     <af:inputText value="#{bindings.Name.inputValue}" label="#{bindings.Name.hints.label}"
                   required="#{bindings.Name.hints.mandatory}" columns="#{bindings.Name.hints.displayWidth}"
-                  maximumLength="#{bindings.Name.hints.precision}" shortDesc="#{bindings.Name.hints.tooltip}" id="it2">
+                  maximumLength="#{bindings.Name.hints.precision}" shortDesc="#{bindings.Name.hints.tooltip}" id="it1">
       <f:validator binding="#{bindings.Name.validator}"/>
     </af:inputText>
     <af:inputDate value="#{bindings.Startdate.inputValue}" label="#{bindings.Startdate.hints.label}"
@@ -23,18 +23,17 @@
                   required="#{bindings.Description.hints.mandatory}"
                   columns="#{bindings.Description.hints.displayWidth}"
                   maximumLength="#{bindings.Description.hints.precision}"
-                  shortDesc="#{bindings.Description.hints.tooltip}" id="it3" rows="5">
+                  shortDesc="#{bindings.Description.hints.tooltip}" id="it2" rows="5">
       <f:validator binding="#{bindings.Description.validator}"/>
     </af:inputText>
     <af:inputText value="#{bindings.Location.inputValue}" label="#{bindings.Location.hints.label}"
                   required="#{bindings.Location.hints.mandatory}" columns="#{bindings.Location.hints.displayWidth}"
                   maximumLength="#{bindings.Location.hints.precision}" shortDesc="#{bindings.Location.hints.tooltip}"
-                  id="it4">
+                  id="it3">
       <f:validator binding="#{bindings.Location.validator}"/>
     </af:inputText>
-    <f:facet name="footer">
-      <af:button text="Save" id="b1"/>
-      <af:button text="Back" id="b2" action="backFromEdit"/>
-    </f:facet>
+    <f:facet name="footer"/>
   </af:panelFormLayout>
+  <af:button actionListener="#{bindings.Commit.execute}" text="Save" id="b1"/>
+  <af:button text="Cancel" id="b2" action="backFromEdit"/>
 </ui:composition>
