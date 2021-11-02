@@ -49,5 +49,5 @@
     </af:inputText>
   </af:panelFormLayout>
   <af:button text="Save" id="b1" action="toCommit"/>
-  <af:button text="Back" id="b2" action="exitAddTF"/>
+  <af:button text="Cancel" id="b2" action="exitAddTF"/>
 </ui:composition>

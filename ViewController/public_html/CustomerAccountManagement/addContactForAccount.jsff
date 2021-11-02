@@ -19,6 +19,12 @@
                   shortDesc="#{bindings.Department.hints.tooltip}" id="it4">
       <f:validator binding="#{bindings.Department.validator}"/>
     </af:inputText>
+    <af:inputText value="#{bindings.Email.inputValue}" label="#{bindings.Email.hints.label}"
+                  required="#{bindings.Email.hints.mandatory}" columns="#{bindings.Email.hints.displayWidth}"
+                  maximumLength="#{bindings.Email.hints.precision}" shortDesc="#{bindings.Email.hints.tooltip}"
+                  id="it6">
+      <f:validator binding="#{bindings.Email.validator}"/>
+    </af:inputText>
     <af:inputText value="#{bindings.Workphone.inputValue}" label="#{bindings.Workphone.hints.label}"
                   required="#{bindings.Workphone.hints.mandatory}" columns="#{bindings.Workphone.hints.displayWidth}"
                   maximumLength="#{bindings.Workphone.hints.precision}" shortDesc="#{bindings.Workphone.hints.tooltip}"
@@ -26,25 +32,24 @@
       <f:validator binding="#{bindings.Workphone.validator}"/>
       <af:convertNumber groupingUsed="false" pattern="#{bindings.Workphone.format}"/>
     </af:inputText>
-    <af:inputText value="#{bindings.Email.inputValue}" label="#{bindings.Email.hints.label}"
-                  required="#{bindings.Email.hints.mandatory}" columns="#{bindings.Email.hints.displayWidth}"
-                  maximumLength="#{bindings.Email.hints.precision}" shortDesc="#{bindings.Email.hints.tooltip}"
-                  id="it6">
-      <f:validator binding="#{bindings.Email.validator}"/>
-    </af:inputText>
-    <af:inputText value="#{bindings.Buyingrole.inputValue}" label="#{bindings.Buyingrole.hints.label}"
-                  required="#{bindings.Buyingrole.hints.mandatory}" columns="#{bindings.Buyingrole.hints.displayWidth}"
-                  maximumLength="#{bindings.Buyingrole.hints.precision}"
-                  shortDesc="#{bindings.Buyingrole.hints.tooltip}" id="it7">
-      <f:validator binding="#{bindings.Buyingrole.validator}"/>
-    </af:inputText>
-    <af:inputText value="#{bindings.Influencelevel.inputValue}" label="#{bindings.Influencelevel.hints.label}"
-                  required="#{bindings.Influencelevel.hints.mandatory}"
-                  columns="#{bindings.Influencelevel.hints.displayWidth}"
-                  maximumLength="#{bindings.Influencelevel.hints.precision}"
-                  shortDesc="#{bindings.Influencelevel.hints.tooltip}" id="it8">
+    <af:inputComboboxListOfValues id="influencelevelId"
+                                  popupTitle="Search and Select: #{bindings.Influencelevel.hints.label}"
+                                  value="#{bindings.Influencelevel.inputValue}"
+                                  label="#{bindings.Influencelevel.hints.label}"
+                                  model="#{bindings.Influencelevel.listOfValuesModel}"
+                                  required="#{bindings.Influencelevel.hints.mandatory}"
+                                  columns="#{bindings.Influencelevel.hints.displayWidth}"
+                                  shortDesc="#{bindings.Influencelevel.hints.tooltip}">
       <f:validator binding="#{bindings.Influencelevel.validator}"/>
-    </af:inputText>
+    </af:inputComboboxListOfValues>
+    <af:inputComboboxListOfValues id="buyingroleId" popupTitle="Search and Select: #{bindings.Buyingrole.hints.label}"
+                                  value="#{bindings.Buyingrole.inputValue}" label="#{bindings.Buyingrole.hints.label}"
+                                  model="#{bindings.Buyingrole.listOfValuesModel}"
+                                  required="#{bindings.Buyingrole.hints.mandatory}"
+                                  columns="#{bindings.Buyingrole.hints.displayWidth}"
+                                  shortDesc="#{bindings.Buyingrole.hints.tooltip}">
+      <f:validator binding="#{bindings.Buyingrole.validator}"/>
+    </af:inputComboboxListOfValues>
     <af:inputText value="#{bindings.Isprimarycontact.inputValue}" label="#{bindings.Isprimarycontact.hints.label}"
                   required="#{bindings.Isprimarycontact.hints.mandatory}"
                   columns="#{bindings.Isprimarycontact.hints.displayWidth}"

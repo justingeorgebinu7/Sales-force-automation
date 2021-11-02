@@ -85,28 +85,6 @@
       <property
          name="sdm:polyPoints">R42,167.0,110.79297,406.69238,-5.201172,L50</property>
    </ControlFlowCase>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase12"
-      from="View2">
-      <property
-         name="tosrcid">__3</property>
-      <property
-         name="fromOutcome">goToAdd</property>
-      <property
-         name="fromsrcid">__1</property>
-   </ControlFlowCase>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase13"
-      from="View2">
-      <property
-         name="tosrcid">__2</property>
-      <property
-         name="fromOutcome">goToAddTask</property>
-      <property
-         name="fromsrcid">__1</property>
-   </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall15">
       <property
@@ -137,5 +115,27 @@
          name="fromsrcid">__7</property>
       <property
          name="sdm:polyPoints">B50,126.0,171.79297,68.0166,172.09766,T50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase17"
+      from="View2">
+      <property
+         name="tosrcid">__2</property>
+      <property
+         name="fromOutcome">goToAddTask</property>
+      <property
+         name="fromsrcid">__1</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase18"
+      from="View2">
+      <property
+         name="tosrcid">__3</property>
+      <property
+         name="fromOutcome">goToAdd</property>
+      <property
+         name="fromsrcid">__1</property>
    </ControlFlowCase>
 </SDM>

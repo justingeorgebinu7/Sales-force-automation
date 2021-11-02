@@ -16,7 +16,7 @@
     </af:inputText>
     <f:facet name="footer"/>
   </af:panelFormLayout>
-  <af:button actionListener="#{bindings.Commit.execute}" text="Save Changes" disabled="#{!bindings.Commit.enabled}"
+  <af:button actionListener="#{bindings.Commit.execute}" text="Save Changes"
              id="b2"/>
   <af:button text="Back" id="b1" action="backFromEdit"/>
 </ui:composition>

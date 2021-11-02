@@ -33,20 +33,13 @@
         <Item Value="Email"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="CustomercontactsView2Iterator" id="Buyingrole">
-      <AttrNames>
-        <Item Value="Buyingrole"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="CustomercontactsView2Iterator" id="Influencelevel">
-      <AttrNames>
-        <Item Value="Influencelevel"/>
-      </AttrNames>
-    </attributeValues>
     <attributeValues IterBinding="CustomercontactsView2Iterator" id="Isprimarycontact">
       <AttrNames>
         <Item Value="Isprimarycontact"/>
       </AttrNames>
     </attributeValues>
+    <listOfValues IterBinding="CustomercontactsView2Iterator" StaticList="false" Uses="LOV_Buyingrole" id="Buyingrole"/>
+    <listOfValues IterBinding="CustomercontactsView2Iterator" StaticList="false" Uses="LOV_Influencelevel"
+                  id="Influencelevel"/>
   </bindings>
 </pageDefinition>
