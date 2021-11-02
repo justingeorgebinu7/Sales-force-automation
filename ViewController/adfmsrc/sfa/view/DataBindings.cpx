@@ -133,6 +133,7 @@
           usageId="sfa_view_createInteractionTF_createInteractionTF_CreateInsertPageDef"/>
     <page path="/ContactHome.jsff" usageId="sfa_view_ContactHomePageDef"/>
     <page path="/Contactmenu.jsff" usageId="sfa_view_ContactmenuPageDef"/>
+    <page path="/invitees.jsff" usageId="sfa_view_inviteesPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="sfa_view_untitled2PageDef" path="sfa.view.pageDefs.untitled2PageDef"/>
@@ -259,6 +260,7 @@
           path="AppointmentsAndInteraction.createInteractionTF_createInteractionTF_CreateInsertPageDef"/>
     <page id="sfa_view_ContactHomePageDef" path="sfa.view.pageDefs.ContactHomePageDef"/>
     <page id="sfa_view_ContactmenuPageDef" path="sfa.view.pageDefs.ContactmenuPageDef"/>
+    <page id="sfa_view_inviteesPageDef" path="sfa.view.pageDefs.inviteesPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="sfa.model.entities"

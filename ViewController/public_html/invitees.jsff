@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:f="http://java.sun.com/jsf/core">
+  <af:panelSplitter id="ps1" orientation="vertical" splitterPosition="43">
+    <f:facet name="first">
+      <af:menuBar id="mb1">
+        <af:commandMenuItem text="Appoinment Menu" id="cmi1" action="backFromInvitees"/>
+      </af:menuBar>
+    </f:facet>
+    <f:facet name="second">
+      <af:table value="#{bindings.InviteesView3.collectionModel}" var="row" rows="#{bindings.InviteesView3.rangeSize}"
+                emptyText="#{bindings.InviteesView3.viewable ? 'No data to display.' : 'Access Denied.'}"
+                rowBandingInterval="0" selectedRowKeys="#{bindings.InviteesView3.collectionModel.selectedRow}"
+                selectionListener="#{bindings.InviteesView3.collectionModel.makeCurrent}" rowSelection="single"
+                fetchSize="#{bindings.InviteesView3.rangeSize}"
+                filterModel="#{bindings.InviteesView3Query.queryDescriptor}" filterVisible="true"
+                queryListener="#{bindings.InviteesView3Query.processQuery}" varStatus="vs" id="t1">
+        <af:column sortProperty="#{bindings.InviteesView3.hints.Name.name}" filterable="true" sortable="true"
+                   headerText="#{bindings.InviteesView3.hints.Name.label}" id="c1">
+          <af:outputText value="#{row.Name}" shortDesc="#{bindings.InviteesView3.hints.Name.tooltip}" id="ot1"/>
+        </af:column>
+        <af:column sortProperty="#{bindings.InviteesView3.hints.Type.name}" filterable="true" sortable="true"
+                   headerText="#{bindings.InviteesView3.hints.Type.label}" id="c2">
+          <af:outputText value="#{row.Type}" shortDesc="#{bindings.InviteesView3.hints.Type.tooltip}" id="ot2"/>
+        </af:column>
+      </af:table>
+    </f:facet>
+  </af:panelSplitter>
+</ui:composition>

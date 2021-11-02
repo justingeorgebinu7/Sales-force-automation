@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.22.48" id="inviteesPageDef"
+                Package="sfa.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="InviteesView3" RangeSize="25" DataControl="AppModuleDataControl" id="InviteesView3Iterator"/>
+    <searchRegion Binds="InviteesView3Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="InviteesView3Query"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="InviteesView3Iterator" id="InviteesView3">
+      <nodeDefinition DefName="sfa.model.viewobjects.InviteesView" Name="InviteesView30">
+        <AttrNames>
+          <Item Value="Name"/>
+          <Item Value="Type"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

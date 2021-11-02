@@ -23,6 +23,9 @@
         <id>deleteAppointmentTF</id>
       </task-flow-reference>
     </task-flow-call>
+    <view id="invitees">
+      <page>/invitees.jsff</page>
+    </view>
     <control-flow-rule id="__1">
       <from-activity-id>AppointmentTable</from-activity-id>
       <control-flow-case id="__2">
@@ -32,6 +35,10 @@
       <control-flow-case id="__8">
         <from-outcome>createAppointment</from-outcome>
         <to-activity-id>createAppointmentTF</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__7">
+        <from-outcome>viewInvitees</from-outcome>
+        <to-activity-id>invitees</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <control-flow-rule id="__4">
@@ -46,6 +53,13 @@
       <control-flow-case id="__6">
         <from-outcome>deleteAppointmentTF1</from-outcome>
         <to-activity-id>deleteAppointmentTF1</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__9">
+      <from-activity-id>invitees</from-activity-id>
+      <control-flow-case id="__10">
+        <from-outcome>backFromInvitees</from-outcome>
+        <to-activity-id>AppointmentTable</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <use-page-fragments/>

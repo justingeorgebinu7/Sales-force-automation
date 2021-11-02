@@ -92,9 +92,9 @@
       <property
          name="activityId">deleteAppointmentTF1</property>
       <property
-         name="x">85.703125</property>
+         name="x">491.70312</property>
       <property
-         name="y">70.0459</property>
+         name="y">99.34473</property>
       <property
          name="documentReference">/WEB-INF/AppointmentsAndInteraction/deleteAppointmentTF.xml</property>
       <property
@@ -114,6 +114,43 @@
       <property
          name="fromsrcid">__3</property>
       <property
-         name="sdm:polyPoints">T50,291.0,273.7412,85.703125,124.0459,B50</property>
+         name="sdm:polyPoints">T61,298.0,273.7412,491.70312,152.99414,B50</property>
+   </ControlFlowCase>
+   <View
+      id="View11">
+      <property
+         name="activityId">invitees</property>
+      <property
+         name="pageFragment">true</property>
+      <property
+         name="x">214.0</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>invitees&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">84.29883</property>
+      <property
+         name="page">/invitees.jsff</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase14"
+      from="View2"
+      to="View11">
+      <property
+         name="fromOutcome">viewInvitees</property>
+      <property
+         name="sdm:polyPoints">T39,284.0,273.7412,210.5,139.73145,B44</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase15"
+      from="View11"
+      to="View2">
+      <property
+         name="fromOutcome">backFromInvitees</property>
+      <property
+         name="sdm:polyPoints">B56,217.5,137.94824,291.0,271.9683,T50</property>
    </ControlFlowCase>
 </SDM>

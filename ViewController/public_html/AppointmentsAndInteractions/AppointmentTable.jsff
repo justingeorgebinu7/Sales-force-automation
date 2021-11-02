@@ -51,4 +51,5 @@
   <af:button text="Create" id="b3" action="createAppointment"/>
   <af:button text="Edit" id="b2" action="editAppointments"/>
   <af:button text="Delete" action="deleteAppointmentTF1" id="b1"/>
+  <af:button text="Invitees" id="b4" action="viewInvitees"/>
 </ui:composition>

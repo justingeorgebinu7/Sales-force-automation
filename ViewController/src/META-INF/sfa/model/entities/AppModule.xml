@@ -145,6 +145,9 @@
   <ViewUsage
     Name="InteractionView5"
     ViewObjectName="sfa.model.viewobjects.InteractionView"/>
+  <ViewUsage
+    Name="InviteesView3"
+    ViewObjectName="sfa.model.viewobjects.InviteesView"/>
   <ViewLinkUsage
     Name="AddressCustomeraccountFkLink1"
     ViewLinkObjectName="sfa.model.viewobjects.AddressCustomeraccountFkLink"
@@ -318,5 +321,11 @@
     ViewLinkObjectName="sfa.model.entities.InteractionAccountFKLink"
     SrcViewUsageName="sfa.model.entities.AppModule.CustomeraccountView1"
     DstViewUsageName="sfa.model.entities.AppModule.InteractionView5"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="InviteesAppointmentsFkLink2"
+    ViewLinkObjectName="sfa.model.viewobjects.InviteesAppointmentsFkLink"
+    SrcViewUsageName="sfa.model.entities.AppModule.AppointmentsView4"
+    DstViewUsageName="sfa.model.entities.AppModule.InviteesView3"
     Reversed="false"/>
 </AppModule>

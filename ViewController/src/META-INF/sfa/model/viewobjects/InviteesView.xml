@@ -12,7 +12,8 @@
   BindingStyle="OracleName"
   CustomQuery="false"
   SelectAllAttributes="false"
-  PageIterMode="Full">
+  PageIterMode="Full"
+  AccessMode="DEFAULT">
   <EntityUsage
     Name="Invitees"
     Entity="sfa.model.entities.Invitees"/>
@@ -42,4 +43,77 @@
     EntityAttrName="Appoinmentid"
     EntityUsage="Invitees"
     AliasName="APPOINMENTID"/>
+  <ViewCriteria
+    Name="InviteesInternal"
+    ViewObjectName="sfa.model.viewobjects.InviteesView"
+    Conjunction="AND"
+    Mode="3">
+    <Properties Name="_Props">
+      <CustomProperties>
+        <Property
+          Name="autoExecute"
+          Value="false"/>
+        <Property
+          Name="mode"
+          Value="Basic"/>
+        <Property
+          Name="allowConjunctionOverride"
+          Value="true"/>
+        <Property
+          Name="showInList"
+          Value="true"/>
+        <Property
+          Name="displayOperators"
+          Value="InAdvancedMode"/>
+      </CustomProperties>
+    </Properties>
+    <ViewCriteriaRow
+      Name="InviteesViewCriteria_row_0"
+      UpperColumns="1">
+      <ViewCriteriaItem
+        Name="Type"
+        ViewAttribute="Type"
+        Operator="="
+        Conjunction="AND"
+        Value="Internal"
+        UpperColumns="1"
+        Required="Optional"/>
+    </ViewCriteriaRow>
+  </ViewCriteria>
+  <ViewCriteria
+    Name="InviteesExternal"
+    ViewObjectName="sfa.model.viewobjects.InviteesView"
+    Conjunction="AND"
+    Mode="3">
+    <Properties Name="_Props">
+      <CustomProperties>
+        <Property
+          Name="autoExecute"
+          Value="false"/>
+        <Property
+          Name="mode"
+          Value="Basic"/>
+        <Property
+          Name="allowConjunctionOverride"
+          Value="true"/>
+        <Property
+          Name="showInList"
+          Value="true"/>
+        <Property
+          Name="displayOperators"
+          Value="InAdvancedMode"/>
+      </CustomProperties>
+    </Properties>
+    <ViewCriteriaRow
+      Name="InviteesViewCriteria_row_0"
+      UpperColumns="1">
+      <ViewCriteriaItem
+        Name="Type"
+        ViewAttribute="Type"
+        Operator="="
+        Conjunction="AND"
+        Value="External"
+        Required="Optional"/>
+    </ViewCriteriaRow>
+  </ViewCriteria>
 </ViewObject>
