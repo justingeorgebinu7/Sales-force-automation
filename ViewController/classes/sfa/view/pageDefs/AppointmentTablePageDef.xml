@@ -4,17 +4,19 @@
   <parameters/>
   <executables>
     <variableIterator id="variables"/>
-    <iterator Binds="AppointmentsView3" RangeSize="25" DataControl="AppModuleDataControl"
-              id="AppointmentsView3Iterator"/>
+    <iterator Binds="AppointmentsView4" RangeSize="25" DataControl="AppModuleDataControl"
+              id="AppointmentsView4Iterator"/>
+    <searchRegion Binds="AppointmentsView4Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="AppointmentsView4Query"/>
   </executables>
   <bindings>
-    <tree IterBinding="AppointmentsView3Iterator" id="AppointmentsView3">
-      <nodeDefinition DefName="sfa.model.viewobjects.AppointmentsView" Name="AppointmentsView30">
+    <tree IterBinding="AppointmentsView4Iterator" id="AppointmentsView4">
+      <nodeDefinition DefName="sfa.model.viewobjects.AppointmentsView" Name="AppointmentsView40">
         <AttrNames>
           <Item Value="Name"/>
-          <Item Value="Description"/>
           <Item Value="Startdate"/>
           <Item Value="Enddate"/>
+          <Item Value="Description"/>
           <Item Value="Location"/>
         </AttrNames>
       </nodeDefinition>

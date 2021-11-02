@@ -1,36 +1,51 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
-  <af:table value="#{bindings.AppointmentsView3.collectionModel}" var="row"
-            rows="#{bindings.AppointmentsView3.rangeSize}"
-            emptyText="#{bindings.AppointmentsView3.viewable ? 'No data to display.' : 'Access Denied.'}"
-            rowBandingInterval="0" selectedRowKeys="#{bindings.AppointmentsView3.collectionModel.selectedRow}"
-            selectionListener="#{bindings.AppointmentsView3.collectionModel.makeCurrent}" rowSelection="single"
-            fetchSize="#{bindings.AppointmentsView3.rangeSize}" id="t1">
-    <af:column sortProperty="#{bindings.AppointmentsView3.hints.Name.name}" sortable="true"
-               headerText="#{bindings.AppointmentsView3.hints.Name.label}" id="c1">
-      <af:outputText value="#{row.Name}" shortDesc="#{bindings.AppointmentsView3.hints.Name.tooltip}" id="ot1"/>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:f="http://java.sun.com/jsf/core">
+  <af:table value="#{bindings.AppointmentsView4.collectionModel}" var="row"
+            rows="#{bindings.AppointmentsView4.rangeSize}"
+            emptyText="#{bindings.AppointmentsView4.viewable ? 'No data to display.' : 'Access Denied.'}"
+            rowBandingInterval="0" selectedRowKeys="#{bindings.AppointmentsView4.collectionModel.selectedRow}"
+            selectionListener="#{bindings.AppointmentsView4.collectionModel.makeCurrent}" rowSelection="single"
+            fetchSize="#{bindings.AppointmentsView4.rangeSize}"
+            filterModel="#{bindings.AppointmentsView4Query.queryDescriptor}" filterVisible="true"
+            queryListener="#{bindings.AppointmentsView4Query.processQuery}" varStatus="vs" id="t1">
+    <af:column sortProperty="#{bindings.AppointmentsView4.hints.Name.name}" filterable="true" sortable="true"
+               headerText="#{bindings.AppointmentsView4.hints.Name.label}" id="c1">
+      <af:outputText value="#{row.Name}" shortDesc="#{bindings.AppointmentsView4.hints.Name.tooltip}" id="ot1"/>
     </af:column>
-    <af:column sortProperty="#{bindings.AppointmentsView3.hints.Description.name}" sortable="true"
-               headerText="#{bindings.AppointmentsView3.hints.Description.label}" id="c2">
-      <af:outputText value="#{row.Description}" shortDesc="#{bindings.AppointmentsView3.hints.Description.tooltip}"
-                     id="ot2"/>
-    </af:column>
-    <af:column sortProperty="#{bindings.AppointmentsView3.hints.Startdate.name}" sortable="true"
-               headerText="#{bindings.AppointmentsView3.hints.Startdate.label}" id="c3">
-      <af:outputText value="#{row.Startdate}" shortDesc="#{bindings.AppointmentsView3.hints.Startdate.tooltip}"
-                     id="ot3">
-        <af:convertDateTime pattern="#{bindings.AppointmentsView3.hints.Startdate.format}"/>
+    <af:column sortProperty="#{bindings.AppointmentsView4.hints.Startdate.name}" filterable="true" sortable="true"
+               headerText="#{bindings.AppointmentsView4.hints.Startdate.label}" id="c2">
+      <f:facet name="filter">
+        <af:inputDate value="#{bindings.AppointmentsView4Query.queryDescriptor.filterConjunctionCriterion.criterionMap.Startdate.value}"
+                      id="id1">
+          <af:convertDateTime pattern="#{bindings.AppointmentsView4.hints.Startdate.format}"/>
+        </af:inputDate>
+      </f:facet>
+      <af:outputText value="#{row.Startdate}" shortDesc="#{bindings.AppointmentsView4.hints.Startdate.tooltip}"
+                     id="ot2">
+        <af:convertDateTime pattern="#{bindings.AppointmentsView4.hints.Startdate.format}"/>
       </af:outputText>
     </af:column>
-    <af:column sortProperty="#{bindings.AppointmentsView3.hints.Enddate.name}" sortable="true"
-               headerText="#{bindings.AppointmentsView3.hints.Enddate.label}" id="c4">
-      <af:outputText value="#{row.Enddate}" shortDesc="#{bindings.AppointmentsView3.hints.Enddate.tooltip}" id="ot4">
-        <af:convertDateTime pattern="#{bindings.AppointmentsView3.hints.Enddate.format}"/>
+    <af:column sortProperty="#{bindings.AppointmentsView4.hints.Enddate.name}" filterable="true" sortable="true"
+               headerText="#{bindings.AppointmentsView4.hints.Enddate.label}" id="c3">
+      <f:facet name="filter">
+        <af:inputDate value="#{bindings.AppointmentsView4Query.queryDescriptor.filterConjunctionCriterion.criterionMap.Enddate.value}"
+                      id="id2">
+          <af:convertDateTime pattern="#{bindings.AppointmentsView4.hints.Enddate.format}"/>
+        </af:inputDate>
+      </f:facet>
+      <af:outputText value="#{row.Enddate}" shortDesc="#{bindings.AppointmentsView4.hints.Enddate.tooltip}" id="ot3">
+        <af:convertDateTime pattern="#{bindings.AppointmentsView4.hints.Enddate.format}"/>
       </af:outputText>
     </af:column>
-    <af:column sortProperty="#{bindings.AppointmentsView3.hints.Location.name}" sortable="true"
-               headerText="#{bindings.AppointmentsView3.hints.Location.label}" id="c5">
-      <af:outputText value="#{row.Location}" shortDesc="#{bindings.AppointmentsView3.hints.Location.tooltip}" id="ot5"/>
+    <af:column sortProperty="#{bindings.AppointmentsView4.hints.Description.name}" filterable="true" sortable="true"
+               headerText="#{bindings.AppointmentsView4.hints.Description.label}" id="c4">
+      <af:outputText value="#{row.Description}" shortDesc="#{bindings.AppointmentsView4.hints.Description.tooltip}"
+                     id="ot4"/>
+    </af:column>
+    <af:column sortProperty="#{bindings.AppointmentsView4.hints.Location.name}" filterable="true" sortable="true"
+               headerText="#{bindings.AppointmentsView4.hints.Location.label}" id="c5">
+      <af:outputText value="#{row.Location}" shortDesc="#{bindings.AppointmentsView4.hints.Location.tooltip}" id="ot5"/>
     </af:column>
   </af:table>
   <af:button text="Search" id="b1" action="searchAppointments"/>

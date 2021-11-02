@@ -196,6 +196,13 @@
     AssociationOtherEnd="sfa.model.entities.UseraccountAccountFkAssoc.Customeraccount"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="Appointments"
+    Association="sfa.model.entities.AppointmentsAccountAssoc"
+    AssociationEnd="sfa.model.entities.AppointmentsAccountAssoc.Appointments"
+    AssociationOtherEnd="sfa.model.entities.AppointmentsAccountAssoc.Customeraccount"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <Key
     Name="CustomeraccountPk"
     PrimaryKey="true">

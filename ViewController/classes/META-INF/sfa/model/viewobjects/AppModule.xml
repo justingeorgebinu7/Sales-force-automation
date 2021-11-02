@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+<!---->
+<AppModule
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="AppModule"
+  Version="12.2.1.22.48"
+  InheritPersonalization="merge"
+  ClearCacheOnRollback="true">
+  <ViewUsage
+    Name="CustomeraccountView1"
+    ViewObjectName="sfa.model.viewobjects.CustomeraccountView"/>
+  <ViewUsage
+    Name="AppointmentsView1"
+    ViewObjectName="sfa.model.viewobjects.AppointmentsView"/>
+  <ViewLinkUsage
+    Name="AppointmentAccountFkLink"
+    ViewLinkObjectName="sfa.model.viewobjects.AppointmentAccountFkLink"
+    SrcViewUsageName="sfa.model.viewobjects.AppModule.CustomeraccountView1"
+    DstViewUsageName="sfa.model.viewobjects.AppModule.AppointmentsView1"
+    Reversed="false"/>
+</AppModule>

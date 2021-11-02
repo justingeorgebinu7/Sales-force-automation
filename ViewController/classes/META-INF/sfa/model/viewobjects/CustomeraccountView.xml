@@ -130,4 +130,9 @@
     ViewLink="sfa.model.viewobjects.UseraccountAccountFkLink"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="AppointmentsView"
+    ViewLink="sfa.model.viewobjects.AppointmentAccountFkLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
 </ViewObject>

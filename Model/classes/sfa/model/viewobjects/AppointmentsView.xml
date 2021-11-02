@@ -12,7 +12,8 @@
   BindingStyle="OracleName"
   CustomQuery="false"
   SelectAllAttributes="false"
-  PageIterMode="Full">
+  PageIterMode="Full"
+  AccessMode="DEFAULT">
   <EntityUsage
     Name="Appointments"
     Entity="sfa.model.entities.Appointments"/>
@@ -90,9 +91,21 @@
     EntityAttrName="Contactid"
     EntityUsage="Appointments"
     AliasName="CONTACTID"/>
+  <ViewAttribute
+    Name="Accountid"
+    PrecisionRule="true"
+    EntityAttrName="Accountid"
+    EntityUsage="Appointments"
+    AliasName="ACCOUNTID"/>
   <ViewLinkAccessor
     Name="InviteesView"
     ViewLink="sfa.model.viewobjects.InviteesAppointmentsFkLink"
     Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="CustomeraccountView"
+    ViewLink="sfa.model.viewobjects.AppointmentAccountFkLink"
+    Type="oracle.jbo.Row"
+    Reversed="true"
     IsUpdateable="false"/>
 </ViewObject>

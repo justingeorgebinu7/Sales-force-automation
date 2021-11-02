@@ -11,9 +11,9 @@
       <property
          name="x">291.0</property>
       <property
-         name="start">false</property>
+         name="start">true</property>
       <property
-         name="description">&lt;html>&lt;p>&lt;b>AppointmentTable&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+         name="description">&lt;html>&lt;p>&lt;b>AppointmentTable&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
          name="y">328.0918</property>
       <property
@@ -121,44 +121,5 @@
          name="fromOutcome">createAppointment</property>
       <property
          name="sdm:polyPoints">B50,291.0,381.7412,430.69434,509.79883,L50</property>
-   </ControlFlowCase>
-   <View
-      id="View11">
-      <property
-         name="activityId">view1</property>
-      <property
-         name="pageFragment">true</property>
-      <property
-         name="x">107.0</property>
-      <property
-         name="start">true</property>
-      <property
-         name="description">&lt;html>&lt;p>&lt;b>view1&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
-      <property
-         name="y">330.24707</property>
-      <property
-         name="page">/AppointmentsAndInteractions/selectContactForApp.jsff</property>
-      <property
-         name="exceptionHandler">false</property>
-   </View>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase13"
-      from="View11"
-      to="View2">
-      <property
-         name="fromOutcome">options</property>
-      <property
-         name="sdm:polyPoints">R46,148.0,326.39648,249.92606,324.2412,L46</property>
-   </ControlFlowCase>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase14"
-      from="View2"
-      to="View11">
-      <property
-         name="fromOutcome">*backToContacts</property>
-      <property
-         name="sdm:polyPoints">L54,250.0,331.2412,148.07397,333.39648,R54</property>
    </ControlFlowCase>
 </SDM>
