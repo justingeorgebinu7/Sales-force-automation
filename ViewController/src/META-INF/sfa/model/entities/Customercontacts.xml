@@ -88,6 +88,14 @@
           ResId="sfa.model.entities.Customercontacts.Workphone_LABEL"/>
       </SchemaBasedProperties>
     </Properties>
+    <validation:LengthValidationBean
+      Name="WorkphoneRule0"
+      ResId="sfa.model.entities.Customercontacts.Workphone_Rule_0"
+      OnAttribute="Workphone"
+      CompareType="EQUALTO"
+      DataType="CHARACTER"
+      CompareLength="10"
+      Inverse="false"/>
   </Attribute>
   <Attribute
     Name="Email"
@@ -169,6 +177,13 @@
           ResId="sfa.model.entities.Customercontacts.Isprimarycontact_LABEL"/>
       </SchemaBasedProperties>
     </Properties>
+    <validation:RegExpValidationBean
+      Name="IsprimarycontactRule0"
+      ResId="sfa.model.entities.Customercontacts.Isprimarycontact_Rule_0"
+      OnAttribute="Isprimarycontact"
+      Pattern="Y|N"
+      Flags="CaseInsensitive"
+      Inverse="false"/>
   </Attribute>
   <AccessorAttribute
     Name="Contactaddress"

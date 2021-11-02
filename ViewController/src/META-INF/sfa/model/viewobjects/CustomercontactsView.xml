@@ -67,7 +67,14 @@
     PrecisionRule="true"
     EntityAttrName="Contactid"
     EntityUsage="Customercontacts"
-    AliasName="CONTACTID"/>
+    AliasName="CONTACTID">
+    <Properties>
+      <SchemaBasedProperties>
+        <TOOLTIP
+          ResId="sfa.model.viewobjects.CustomercontactsView.Contactid_TOOLTIP"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Name"
     PrecisionRule="true"
@@ -182,6 +189,8 @@
       <SchemaBasedProperties>
         <DISPLAYWIDTH
           Value="1"/>
+        <TOOLTIP
+          ResId="sfa.model.viewobjects.CustomercontactsView.Isprimarycontact_TOOLTIP"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
@@ -215,4 +224,8 @@
     ViewLink="sfa.model.viewobjects.TaskCustomercontactsFkLink"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="sfa.model.ModelBundle"/>
+  </ResourceBundle>
 </ViewObject>
