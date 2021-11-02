@@ -9,7 +9,8 @@
   DBObjectType="table"
   DBObjectName="TASK"
   AliasName="Task"
-  BindingStyle="OracleName">
+  BindingStyle="OracleName"
+  xmlns:validation="http://xmlns.oracle.com/adfm/validation">
   <Attribute
     Name="Taskid"
     IsNotNull="true"
@@ -86,6 +87,14 @@
           ResId="sfa.model.entities.Task.Percentageofcompletion_LABEL"/>
       </SchemaBasedProperties>
     </Properties>
+    <validation:RangeValidationBean
+      Name="PercentageofcompletionRule0"
+      ResId="sfa.model.entities.Task.Percentageofcompletion_Rule_0"
+      OnAttribute="Percentageofcompletion"
+      OperandType="LITERAL"
+      Inverse="false"
+      MinValue="0"
+      MaxValue="100"/>
   </Attribute>
   <Attribute
     Name="Opportunityid"

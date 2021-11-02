@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+<!---->
+<AppModule
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="AppModule"
+  Version="12.2.1.22.48"
+  InheritPersonalization="merge"
+  ClearCacheOnRollback="true">
+  <ViewUsage
+    Name="BuyingRole1"
+    ViewObjectName="sfa.model.viewobjects.staticVo.BuyingRole"/>
+  <ViewUsage
+    Name="InfluenceLevel1"
+    ViewObjectName="sfa.model.viewobjects.staticVo.InfluenceLevel"/>
+  <ViewUsage
+    Name="Priority1"
+    ViewObjectName="sfa.model.viewobjects.staticVo.Priority"/>
+</AppModule>

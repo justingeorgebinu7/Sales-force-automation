@@ -12,7 +12,30 @@
   BindingStyle="OracleName"
   CustomQuery="false"
   SelectAllAttributes="false"
-  PageIterMode="Full">
+  PageIterMode="Full"
+  AccessMode="DEFAULT">
+  <ViewAccessor
+    Name="Priority1"
+    ViewObjectName="sfa.model.viewobjects.staticVo.Priority"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_Priority"
+    ListVOName="Priority1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Priority"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Priority"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Priority"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <EntityUsage
     Name="Task"
     Entity="sfa.model.entities.Task"/>
@@ -54,11 +77,14 @@
     PrecisionRule="true"
     EntityAttrName="Priority"
     EntityUsage="Task"
-    AliasName="PRIORITY">
+    AliasName="PRIORITY"
+    LOVName="LOV_Priority">
     <Properties>
       <SchemaBasedProperties>
         <DISPLAYWIDTH
           Value="10"/>
+        <CONTROLTYPE
+          Value="choice"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>

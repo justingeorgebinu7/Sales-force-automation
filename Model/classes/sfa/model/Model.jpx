@@ -13,6 +13,7 @@
     <Attr Name="_NamedConnection" Value="demoproject"/>
     <Attr Name="_appModuleNames0" Value="sfa.model.entities.AppModule"/>
     <Attr Name="_appModuleNames1" Value="sfa.model.viewobjects.AppModule"/>
+    <Attr Name="_appModuleNames2" Value="sfa.model.viewobjects.staticVo.AppModule"/>
   </DesignTime>
   <Containee
     Name="entities"
@@ -31,6 +32,7 @@
     ObjectType="JboPackage">
     <DesignTime>
       <Attr Name="_VO" Value="true"/>
+      <Attr Name="_AM" Value="true"/>
     </DesignTime>
   </Containee>
   <Containee

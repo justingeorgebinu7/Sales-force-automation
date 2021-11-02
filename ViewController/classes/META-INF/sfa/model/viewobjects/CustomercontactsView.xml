@@ -12,7 +12,52 @@
   BindingStyle="OracleName"
   CustomQuery="false"
   SelectAllAttributes="false"
-  PageIterMode="Full">
+  PageIterMode="Full"
+  AccessMode="DEFAULT">
+  <ViewAccessor
+    Name="BuyingRole1"
+    ViewObjectName="sfa.model.viewobjects.staticVo.BuyingRole"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="InfluenceLevel1"
+    ViewObjectName="sfa.model.viewobjects.staticVo.InfluenceLevel"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_Buyingrole"
+    ListVOName="BuyingRole1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Buyingrole"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Buyingrole"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Buyingrole"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_Influencelevel"
+    ListVOName="InfluenceLevel1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Influencelevel"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="InfluenceLevel"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="InfluenceLevel"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <EntityUsage
     Name="Customercontacts"
     Entity="sfa.model.entities.Customercontacts"/>
@@ -100,11 +145,14 @@
     PrecisionRule="true"
     EntityAttrName="Buyingrole"
     EntityUsage="Customercontacts"
-    AliasName="BUYINGROLE">
+    AliasName="BUYINGROLE"
+    LOVName="LOV_Buyingrole">
     <Properties>
       <SchemaBasedProperties>
         <DISPLAYWIDTH
           Value="15"/>
+        <CONTROLTYPE
+          Value="choice"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
@@ -113,11 +161,14 @@
     PrecisionRule="true"
     EntityAttrName="Influencelevel"
     EntityUsage="Customercontacts"
-    AliasName="INFLUENCELEVEL">
+    AliasName="INFLUENCELEVEL"
+    LOVName="LOV_Influencelevel">
     <Properties>
       <SchemaBasedProperties>
         <DISPLAYWIDTH
           Value="15"/>
+        <CONTROLTYPE
+          Value="choice"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
