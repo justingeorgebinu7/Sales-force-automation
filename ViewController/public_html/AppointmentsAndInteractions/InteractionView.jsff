@@ -1,40 +1,55 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
-  <af:table value="#{bindings.InteractionView3.collectionModel}" var="row" rows="#{bindings.InteractionView3.rangeSize}"
-            emptyText="#{bindings.InteractionView3.viewable ? 'No data to display.' : 'Access Denied.'}"
-            rowBandingInterval="0" selectedRowKeys="#{bindings.InteractionView3.collectionModel.selectedRow}"
-            selectionListener="#{bindings.InteractionView3.collectionModel.makeCurrent}" rowSelection="single"
-            fetchSize="#{bindings.InteractionView3.rangeSize}" id="t1" partialTriggers="::b4">
-    <af:column sortProperty="#{bindings.InteractionView3.hints.Type.name}" sortable="true"
-               headerText="#{bindings.InteractionView3.hints.Type.label}" id="c1">
-      <af:outputText value="#{row.Type}" shortDesc="#{bindings.InteractionView3.hints.Type.tooltip}" id="ot1"/>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:f="http://java.sun.com/jsf/core">
+  <af:table value="#{bindings.InteractionView5.collectionModel}" var="row" rows="#{bindings.InteractionView5.rangeSize}"
+            emptyText="#{bindings.InteractionView5.viewable ? 'No data to display.' : 'Access Denied.'}"
+            rowBandingInterval="0" selectedRowKeys="#{bindings.InteractionView5.collectionModel.selectedRow}"
+            selectionListener="#{bindings.InteractionView5.collectionModel.makeCurrent}" rowSelection="single"
+            fetchSize="#{bindings.InteractionView5.rangeSize}"
+            filterModel="#{bindings.InteractionView5Query.queryDescriptor}" filterVisible="true"
+            queryListener="#{bindings.InteractionView5Query.processQuery}" varStatus="vs" id="t1">
+    <af:column sortProperty="#{bindings.InteractionView5.hints.Type.name}" filterable="true" sortable="true"
+               headerText="#{bindings.InteractionView5.hints.Type.label}" id="c1">
+      <af:outputText value="#{row.Type}" shortDesc="#{bindings.InteractionView5.hints.Type.tooltip}" id="ot1"/>
     </af:column>
-    <af:column sortProperty="#{bindings.InteractionView3.hints.Description.name}" sortable="true"
-               headerText="#{bindings.InteractionView3.hints.Description.label}" id="c2">
-      <af:outputText value="#{row.Description}" shortDesc="#{bindings.InteractionView3.hints.Description.tooltip}"
+    <af:column sortProperty="#{bindings.InteractionView5.hints.Direction.name}" filterable="true" sortable="true"
+               headerText="#{bindings.InteractionView5.hints.Direction.label}" id="c2">
+      <af:outputText value="#{row.Direction}" shortDesc="#{bindings.InteractionView5.hints.Direction.tooltip}"
                      id="ot2"/>
     </af:column>
-    <af:column sortProperty="#{bindings.InteractionView3.hints.Direction.name}" sortable="true"
-               headerText="#{bindings.InteractionView3.hints.Direction.label}" id="c3">
-      <af:outputText value="#{row.Direction}" shortDesc="#{bindings.InteractionView3.hints.Direction.tooltip}"
-                     id="ot3"/>
-    </af:column>
-    <af:column sortProperty="#{bindings.InteractionView3.hints.Resolution.name}" sortable="true"
-               headerText="#{bindings.InteractionView3.hints.Resolution.label}" id="c4">
-      <af:outputText value="#{row.Resolution}" shortDesc="#{bindings.InteractionView3.hints.Resolution.tooltip}"
-                     id="ot4"/>
-    </af:column>
-    <af:column sortProperty="#{bindings.InteractionView3.hints.Startdate.name}" sortable="true"
-               headerText="#{bindings.InteractionView3.hints.Startdate.label}" id="c5">
-      <af:outputText value="#{row.Startdate}" shortDesc="#{bindings.InteractionView3.hints.Startdate.tooltip}" id="ot5">
-        <af:convertDateTime pattern="#{bindings.InteractionView3.hints.Startdate.format}"/>
+    <af:column sortProperty="#{bindings.InteractionView5.hints.Startdate.name}" filterable="true" sortable="true"
+               headerText="#{bindings.InteractionView5.hints.Startdate.label}" id="c3">
+      <f:facet name="filter">
+        <af:inputDate value="#{bindings.InteractionView5Query.queryDescriptor.filterConjunctionCriterion.criterionMap.Startdate.value}"
+                      id="id1">
+          <af:convertDateTime pattern="#{bindings.InteractionView5.hints.Startdate.format}"/>
+        </af:inputDate>
+      </f:facet>
+      <af:outputText value="#{row.Startdate}" shortDesc="#{bindings.InteractionView5.hints.Startdate.tooltip}" id="ot3">
+        <af:convertDateTime pattern="#{bindings.InteractionView5.hints.Startdate.format}"/>
       </af:outputText>
     </af:column>
-    <af:column sortProperty="#{bindings.InteractionView3.hints.Enddate.name}" sortable="true"
-               headerText="#{bindings.InteractionView3.hints.Enddate.label}" id="c6">
-      <af:outputText value="#{row.Enddate}" shortDesc="#{bindings.InteractionView3.hints.Enddate.tooltip}" id="ot6">
-        <af:convertDateTime pattern="#{bindings.InteractionView3.hints.Enddate.format}"/>
+    <af:column sortProperty="#{bindings.InteractionView5.hints.Enddate.name}" filterable="true" sortable="true"
+               headerText="#{bindings.InteractionView5.hints.Enddate.label}" id="c4">
+      <f:facet name="filter">
+        <af:inputDate value="#{bindings.InteractionView5Query.queryDescriptor.filterConjunctionCriterion.criterionMap.Enddate.value}"
+                      id="id2">
+          <af:convertDateTime pattern="#{bindings.InteractionView5.hints.Enddate.format}"/>
+        </af:inputDate>
+      </f:facet>
+      <af:outputText value="#{row.Enddate}" shortDesc="#{bindings.InteractionView5.hints.Enddate.tooltip}" id="ot4">
+        <af:convertDateTime pattern="#{bindings.InteractionView5.hints.Enddate.format}"/>
       </af:outputText>
+    </af:column>
+    <af:column sortProperty="#{bindings.InteractionView5.hints.Description.name}" filterable="true" sortable="true"
+               headerText="#{bindings.InteractionView5.hints.Description.label}" id="c5">
+      <af:outputText value="#{row.Description}" shortDesc="#{bindings.InteractionView5.hints.Description.tooltip}"
+                     id="ot5"/>
+    </af:column>
+    <af:column sortProperty="#{bindings.InteractionView5.hints.Resolution.name}" filterable="true" sortable="true"
+               headerText="#{bindings.InteractionView5.hints.Resolution.label}" id="c6">
+      <af:outputText value="#{row.Resolution}" shortDesc="#{bindings.InteractionView5.hints.Resolution.tooltip}"
+                     id="ot6"/>
     </af:column>
   </af:table>
   <af:button text="Search" id="b1" action="searchInteraction"/>

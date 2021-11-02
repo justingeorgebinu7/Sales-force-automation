@@ -12,7 +12,8 @@
   BindingStyle="OracleName"
   CustomQuery="false"
   SelectAllAttributes="false"
-  PageIterMode="Full">
+  PageIterMode="Full"
+  AccessMode="DEFAULT">
   <EntityUsage
     Name="Interaction"
     Entity="sfa.model.entities.Interaction"/>
@@ -101,4 +102,16 @@
     EntityAttrName="Contactid"
     EntityUsage="Interaction"
     AliasName="CONTACTID"/>
+  <ViewAttribute
+    Name="Accountid"
+    PrecisionRule="true"
+    EntityAttrName="Accountid"
+    EntityUsage="Interaction"
+    AliasName="ACCOUNTID"/>
+  <ViewLinkAccessor
+    Name="CustomeraccountView"
+    ViewLink="sfa.model.entities.InteractionAccountFKLink"
+    Type="oracle.jbo.Row"
+    Reversed="true"
+    IsUpdateable="false"/>
 </ViewObject>

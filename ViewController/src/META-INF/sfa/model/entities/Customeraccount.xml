@@ -203,6 +203,13 @@
     AssociationOtherEnd="sfa.model.entities.AppointmentsAccountAssoc.Customeraccount"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="Interaction"
+    Association="sfa.model.entities.InteractionAccountAssoc"
+    AssociationEnd="sfa.model.entities.InteractionAccountAssoc.Interaction"
+    AssociationOtherEnd="sfa.model.entities.InteractionAccountAssoc.Customeraccount"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <Key
     Name="CustomeraccountPk"
     PrimaryKey="true">

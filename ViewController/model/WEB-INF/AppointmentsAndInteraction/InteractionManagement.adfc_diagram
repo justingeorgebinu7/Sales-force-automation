@@ -11,9 +11,9 @@
       <property
          name="x">214.0</property>
       <property
-         name="start">false</property>
+         name="start">true</property>
       <property
-         name="description">&lt;html>&lt;p>&lt;b>InteractionView&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+         name="description">&lt;html>&lt;p>&lt;b>InteractionView&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
          name="y">337.1953</property>
       <property
@@ -121,44 +121,5 @@
          name="fromOutcome">createInteraction</property>
       <property
          name="sdm:polyPoints">R58,255.0,343.84473,569.02246,463.79883,L50</property>
-   </ControlFlowCase>
-   <View
-      id="View11">
-      <property
-         name="activityId">contactSelection</property>
-      <property
-         name="pageFragment">true</property>
-      <property
-         name="x">46.0</property>
-      <property
-         name="start">true</property>
-      <property
-         name="description">&lt;html>&lt;p>&lt;b>contactSelection&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
-      <property
-         name="y">338.84473</property>
-      <property
-         name="page">/contactSelection.jsff</property>
-      <property
-         name="exceptionHandler">false</property>
-   </View>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase13"
-      from="View11"
-      to="View2">
-      <property
-         name="fromOutcome">toInteract</property>
-      <property
-         name="sdm:polyPoints">R46,87.0,334.99414,172.93288,333.34473,L46</property>
-   </ControlFlowCase>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase14"
-      from="View2"
-      to="View11">
-      <property
-         name="fromOutcome">backToContack</property>
-      <property
-         name="sdm:polyPoints">L54,173.0,340.34473,87.06715,341.99414,R54</property>
    </ControlFlowCase>
 </SDM>

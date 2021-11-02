@@ -4,18 +4,20 @@
   <parameters/>
   <executables>
     <variableIterator id="variables"/>
-    <iterator Binds="InteractionView3" RangeSize="25" DataControl="AppModuleDataControl" id="InteractionView3Iterator"/>
+    <iterator Binds="InteractionView5" RangeSize="25" DataControl="AppModuleDataControl" id="InteractionView5Iterator"/>
+    <searchRegion Binds="InteractionView5Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="InteractionView5Query"/>
   </executables>
   <bindings>
-    <tree IterBinding="InteractionView3Iterator" id="InteractionView3">
-      <nodeDefinition DefName="sfa.model.viewobjects.InteractionView" Name="InteractionView30">
+    <tree IterBinding="InteractionView5Iterator" id="InteractionView5">
+      <nodeDefinition DefName="sfa.model.viewobjects.InteractionView" Name="InteractionView50">
         <AttrNames>
           <Item Value="Type"/>
-          <Item Value="Description"/>
           <Item Value="Direction"/>
-          <Item Value="Resolution"/>
           <Item Value="Startdate"/>
           <Item Value="Enddate"/>
+          <Item Value="Description"/>
+          <Item Value="Resolution"/>
         </AttrNames>
       </nodeDefinition>
     </tree>
