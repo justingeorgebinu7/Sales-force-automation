@@ -25,9 +25,9 @@ af|button {
     color: #149;
 }
 
-af|table{
-border-radius:10px;
-overflow:hidden;
+af|table {
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 af|column::data-cell {
@@ -46,4 +46,25 @@ af|column::column-header-cell {
     padding: 10px 5px;
     text-align: center;
     color: #fff;
+}
+
+af|panelSpringboard::item {
+    background-color: #fafafa;
+    border: .5px solid transparent;
+    border-radius: 10px;
+    margin: 0 5px;
+}
+
+af|panelSpringboard::item {
+}
+
+af|panelSpringboard::item-text {
+    color: #555;
+    margin-top: 5px;
+}
+
+af|panelSpringboard::body {
+    margin-top: 10px;
+    padding: 20px 20px;
+    /*border:none;*/
 }

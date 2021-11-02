@@ -7,15 +7,15 @@
     <af:document title="CustAccountHome.jsf" id="d1">
         <af:messages id="m1"/>
         <af:form id="f1">
-            <af:panelSplitter orientation="vertical" splitterPosition="166" id="ps2">
+            <af:panelSplitter orientation="vertical" splitterPosition="130" id="ps2">
                 <f:facet name="first">
                     <af:panelGridLayout id="pgl2">
                         <af:gridRow marginTop="0px" height="auto" id="gr2">
                             <af:gridCell marginStart="0px" columnSpan="3" marginEnd="0px" id="gc1">
-                                <div style="box-shadow: 0 5px 10px -2px rgba(0,0,0,.2);overflow:hidden;padding-bottom:20px;background-color:white; font-size:17px; width:100vw;">
+                                <div style="box-shadow: 0 5px 5px -2px rgba(0,0,0,.2);overflow:hidden;padding-bottom:10px;background-color:white; font-size:13px; width:100vw;">
                                     <img alt="img" src="https://i.ibb.co/HrRP1ZH/logosq.jpg"
-                                         style="height:140px;float:left;"/>
-                                    <div style="margin-top:60px;margin-left:20px">
+                                         style="height:110px;float:left;"/>
+                                    <div style="margin-top:50px;margin-left:20px">
                                         Welcome,
                                         <br/>You are logged in as 
                                         #{securityContext.userName}
@@ -40,13 +40,13 @@
                             </af:panelGridLayout>
                         </f:facet>
                         <f:facet name="second">
-                            <af:panelSplitter id="ps3" orientation="vertical" splitterPosition="88">
+                            <af:panelSplitter id="ps3" orientation="vertical" splitterPosition="19">
                                 <f:facet name="first"/>
                                 <f:facet name="second">
                                     <af:panelSplitter id="ps4" splitterPosition="1300">
                                         <f:facet name="first">
                                             <af:panelStretchLayout id="psl1" dimensionsFrom="parent" startWidth="0px"
-                                                                   endWidth="0px" topHeight="0px" bottomHeight="0px">
+                                                                   endWidth="0px" topHeight="19px" bottomHeight="0px">
                                                 <f:facet name="start"/>
                                                 <f:facet name="end"/>
                                                 <f:facet name="top"/>
@@ -64,7 +64,8 @@
                                                                                  titleHalign="right">
                                                                         <f:facet name="toolbar"/>
                                                                         <af:panelSpringboard id="ps5"
-                                                                                             displayMode="grid">
+                                                                                             displayMode="grid"
+                                                                                             inlineStyle="border-color:red;">
                                                                             <af:showDetailItem text="Customer Account Management"
                                                                                                id="sdi1"
                                                                                                icon="/accounticon.png">
@@ -75,10 +76,12 @@
                                                                             <af:showDetailItem text="Contact Management"
                                                                                                id="sdi2"
                                                                                                icon="/contacticon.jpg"/>
-                                                                            <af:showDetailItem text="showDetailItem 3"
-                                                                                               id="sdi3"/>
-                                                                            <af:showDetailItem text="showDetailItem 4"
-                                                                                               id="sdi4"/>
+                                                                            <af:showDetailItem text="Opportunities"
+                                                                                               id="sdi3"
+                                                                                               icon="https://icon-library.com/images/opportunity-icon/opportunity-icon-6.jpg"/>
+                                                                            <af:showDetailItem text="Logout"
+                                                                                               id="sdi4"
+                                                                                               icon="https://www.pngkey.com/png/full/242-2424177_exit-assessment-exit-png.png"/>
                                                                         </af:panelSpringboard>
                                                                     </af:panelBox>
                                                                 </f:facet>
