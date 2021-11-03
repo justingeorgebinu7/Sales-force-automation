@@ -131,11 +131,11 @@
           usageId="sfa_view_deleteInteractionTF_deleteInteractionTF_CommitPageDef"/>
     <page path="/WEB-INF/AppointmentsAndInteraction/createInteractionTF.xml#createInteractionTF@CreateInsert"
           usageId="sfa_view_createInteractionTF_createInteractionTF_CreateInsertPageDef"/>
-    <page path="/ContactHome.jsff" usageId="sfa_view_ContactHomePageDef"/>
-    <page path="/Contactmenu.jsff" usageId="sfa_view_ContactmenuPageDef"/>
+    <page path="/ContactManagementPages/ContactHome.jsff" usageId="sfa_view_ContactHomePageDef"/>
+    <page path="/ContactManagementPages/Contactmenu.jsff" usageId="sfa_view_ContactmenuPageDef"/>
     <page path="/invitees.jsff" usageId="sfa_view_inviteesPageDef"/>
-    <page path="/notesForConTAble.jsff" usageId="sfa_view_notesForConTAblePageDef"/>
-    <page path="/editNotesCon.jsff" usageId="sfa_view_editNotesConPageDef"/>
+    <page path="/ContactManagementPages/notesForConTAble.jsff" usageId="sfa_view_notesForConTAblePageDef"/>
+    <page path="/ContactManagementPages/editNotesCon.jsff" usageId="sfa_view_editNotesConPageDef"/>
     <page path="/WEB-INF/ContactManagement/addNoteForCon.xml#addNoteForCon@CreateInsert"
           usageId="sfa_view_addNoteForCon_addNoteForCon_CreateInsertPageDef"/>
     <page path="/WEB-INF/ContactManagement/addNoteForCon.xml#addNoteForCon@Commit"
@@ -145,11 +145,11 @@
           usageId="sfa_view_deleteNotesForCon_deleteNotesForCon_DeletePageDef"/>
     <page path="/WEB-INF/ContactManagement/deleteNotesForCon.xml#deleteNotesForCon@Commit"
           usageId="sfa_view_deleteNotesForCon_deleteNotesForCon_CommitPageDef"/>
-    <page path="/AppTableForContacts.jsff" usageId="sfa_view_AppTableForContactsPageDef"/>
+    <page path="/ContactManagementPages/AppTableForContacts.jsff" usageId="sfa_view_AppTableForContactsPageDef"/>
     <page path="/WEB-INF/ContactManagement/createAppointment.xml#createAppointment@CreateInsert"
           usageId="sfa_view_createAppointment_createAppointment_CreateInsertPageDef"/>
-    <page path="/CreateAppForContact.jsff" usageId="sfa_view_AppTablePageDef"/>
-    <page path="/EditAppForContact.jsff" usageId="sfa_view_EditAppForContactPageDef"/>
+    <page path="/ContactManagementPages/CreateAppForContact.jsff" usageId="sfa_view_AppTablePageDef"/>
+    <page path="/ContactManagementPages/EditAppForContact.jsff" usageId="sfa_view_EditAppForContactPageDef"/>
     <page path="/WEB-INF/ContactManagement/deleteAppForContacts.xml#deleteAppForContacts@Delete"
           usageId="sfa_view_deleteAppForContacts_deleteAppForContacts_DeletePageDef"/>
     <page path="/WEB-INF/ContactManagement/deleteAppForContacts.xml#deleteAppForContacts@Commit"
@@ -158,15 +158,15 @@
           usageId="sfa_view_createAppointment_createAppointment_CommitPageDef"/>
     <page path="/WEB-INF/ContactManagement/createAppointment.xml#createAppointment@Delete"
           usageId="sfa_view_createAppointment_createAppointment_DeletePageDef"/>
-    <page path="/EditInteractionsForContacts.jsff" usageId="sfa_view_EditInteractionsForContactsPageDef"/>
+    <page path="/ContactManagementPages/EditInteractionsForContacts.jsff" usageId="sfa_view_EditInteractionsForContactsPageDef"/>
     <page path="/WEB-INF/ContactManagement/createIntForCon.xml#createIntForCon@CreateInsert"
           usageId="sfa_view_createIntForCon_createIntForCon_CreateInsertPageDef"/>
     <page path="/WEB-INF/ContactManagement/createIntForCon.xml#createIntForCon@Commit"
           usageId="sfa_view_createIntForCon_createIntForCon_CommitPageDef"/>
     <page path="/WEB-INF/ContactManagement/createIntForCon.xml#createIntForCon@Delete"
           usageId="sfa_view_createIntForCon_createIntForCon_DeletePageDef"/>
-    <page path="/CreateIntForContact.jsff" usageId="sfa_view_CreateIntForContactPageDef"/>
-    <page path="/InteractionsForContacts.jsff" usageId="sfa_view_InteractionsForContactsPageDef"/>
+    <page path="/ContactManagementPages/CreateIntForContact.jsff" usageId="sfa_view_CreateIntForContactPageDef"/>
+    <page path="/ContactManagementPages/InteractionsForContacts.jsff" usageId="sfa_view_InteractionsForContactsPageDef"/>
     <page path="/WEB-INF/ContactManagement/deleteInteractionContact.xml#deleteInteractionContact@Delete"
           usageId="sfa_view_deleteInteractionContact_deleteInteractionContact_DeletePageDef"/>
     <page path="/WEB-INF/ContactManagement/deleteInteractionContact.xml#deleteInteractionContact@Commit"

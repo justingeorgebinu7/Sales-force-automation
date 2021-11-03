@@ -6,10 +6,10 @@
       <shared/>
     </data-control-scope>
     <view id="ContactHome">
-      <page>/ContactHome.jsff</page>
+      <page>/ContactManagementPages/ContactHome.jsff</page>
     </view>
     <view id="Contactmenu">
-      <page>/Contactmenu.jsff</page>
+      <page>/ContactManagementPages/Contactmenu.jsff</page>
     </view>
     <control-flow-rule id="__1">
       <from-activity-id>ContactHome</from-activity-id>

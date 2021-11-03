@@ -6,10 +6,10 @@
       <shared/>
     </data-control-scope>
     <view id="notesForConTAble">
-      <page>/notesForConTAble.jsff</page>
+      <page>/ContactManagementPages/notesForConTAble.jsff</page>
     </view>
     <view id="editNotesCon">
-      <page>/editNotesCon.jsff</page>
+      <page>/ContactManagementPages/editNotesCon.jsff</page>
     </view>
     <task-flow-call id="addNoteForCon">
       <task-flow-reference>

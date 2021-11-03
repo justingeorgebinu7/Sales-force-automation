@@ -6,10 +6,10 @@
       <shared/>
     </data-control-scope>
     <view id="InteractionsForContacts">
-      <page>/InteractionsForContacts.jsff</page>
+      <page>/ContactManagementPages/InteractionsForContacts.jsff</page>
     </view>
     <view id="EditInteractionsForContacts">
-      <page>/EditInteractionsForContacts.jsff</page>
+      <page>/ContactManagementPages/EditInteractionsForContacts.jsff</page>
     </view>
     <task-flow-call id="createIntForCon">
       <task-flow-reference>

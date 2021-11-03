@@ -17,7 +17,7 @@
       </outcome>
     </task-flow-return>
     <view id="CreateAppForContact">
-      <page>/CreateAppForContact.jsff</page>
+      <page>/ContactManagementPages/CreateAppForContact.jsff</page>
     </view>
     <method-call id="Commit">
       <method>#{bindings.Commit.execute}</method>

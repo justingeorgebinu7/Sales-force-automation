@@ -6,10 +6,10 @@
       <shared/>
     </data-control-scope>
     <view id="AppTableForContacts">
-      <page>/AppTableForContacts.jsff</page>
+      <page>/ContactManagementPages/AppTableForContacts.jsff</page>
     </view>
     <view id="EditAppForContact">
-      <page>/EditAppForContact.jsff</page>
+      <page>/ContactManagementPages/EditAppForContact.jsff</page>
     </view>
     <task-flow-call id="deleteAppForContacts1">
       <task-flow-reference>
