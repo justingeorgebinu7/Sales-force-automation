@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="interactionsForContact">
+    <default-activity>InteractionsForContacts</default-activity>
+    <data-control-scope>
+      <shared/>
+    </data-control-scope>
+    <view id="InteractionsForContacts">
+      <page>/InteractionsForContacts.jsff</page>
+    </view>
+    <view id="EditInteractionsForContacts">
+      <page>/EditInteractionsForContacts.jsff</page>
+    </view>
+    <task-flow-call id="createIntForCon">
+      <task-flow-reference>
+        <document>/WEB-INF/ContactManagement/createIntForCon.xml</document>
+        <id>createIntForCon</id>
+      </task-flow-reference>
+    </task-flow-call>
+    <task-flow-call id="deleteInteractionContact1">
+      <task-flow-reference>
+        <document>/WEB-INF/ContactManagement/deleteInteractionContact.xml</document>
+        <id>deleteInteractionContact</id>
+      </task-flow-reference>
+    </task-flow-call>
+    <control-flow-rule id="__1">
+      <from-activity-id>InteractionsForContacts</from-activity-id>
+      <control-flow-case id="__2">
+        <from-outcome>edit</from-outcome>
+        <to-activity-id>EditInteractionsForContacts</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__5">
+        <from-outcome>createInteraction</from-outcome>
+        <to-activity-id>createIntForCon</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__3">
+      <from-activity-id>EditInteractionsForContacts</from-activity-id>
+      <control-flow-case id="__4">
+        <from-outcome>back</from-outcome>
+        <to-activity-id>InteractionsForContacts</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__6">
+      <from-activity-id>InteractionsForContacts</from-activity-id>
+      <control-flow-case id="__7">
+        <from-outcome>deleteInteractionContact1</from-outcome>
+        <to-activity-id>deleteInteractionContact1</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <use-page-fragments/>
+  </task-flow-definition>
+</adfc-config>

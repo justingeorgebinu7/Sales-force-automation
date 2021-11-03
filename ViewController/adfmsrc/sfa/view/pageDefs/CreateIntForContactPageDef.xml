@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.22.48" id="CreateIntForContactPageDef"
+                Package="sfa.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="InteractionView2" RangeSize="25" DataControl="AppModuleDataControl" id="InteractionView2Iterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="InteractionView2Iterator" id="Type">
+      <AttrNames>
+        <Item Value="Type"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="InteractionView2Iterator" id="Direction">
+      <AttrNames>
+        <Item Value="Direction"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="InteractionView2Iterator" id="Startdate">
+      <AttrNames>
+        <Item Value="Startdate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="InteractionView2Iterator" id="Enddate">
+      <AttrNames>
+        <Item Value="Enddate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="InteractionView2Iterator" id="Description">
+      <AttrNames>
+        <Item Value="Description"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="InteractionView2Iterator" id="Resolution">
+      <AttrNames>
+        <Item Value="Resolution"/>
+      </AttrNames>
+    </attributeValues>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+  </bindings>
+</pageDefinition>

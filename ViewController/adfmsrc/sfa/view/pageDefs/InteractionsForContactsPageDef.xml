@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.22.48" id="InteractionsForContactsPageDef"
+                Package="sfa.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="InteractionView2" RangeSize="25" DataControl="AppModuleDataControl" id="InteractionView2Iterator"/>
+    <searchRegion Binds="InteractionView2Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="InteractionView2Query"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="InteractionView2Iterator" id="InteractionView2">
+      <nodeDefinition DefName="sfa.model.viewobjects.InteractionView" Name="InteractionView20">
+        <AttrNames>
+          <Item Value="Type"/>
+          <Item Value="Direction"/>
+          <Item Value="Startdate"/>
+          <Item Value="Enddate"/>
+          <Item Value="Description"/>
+          <Item Value="Resolution"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

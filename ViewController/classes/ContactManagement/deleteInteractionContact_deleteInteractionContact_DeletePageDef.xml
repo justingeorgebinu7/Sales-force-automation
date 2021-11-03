@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.22.48"
+                id="deleteInteractionContact_deleteInteractionContact_DeletePageDef" Package="ContactManagement"
+                SkipValidation="true">
+  <parameters/>
+  <executables>
+    <iterator Binds="InteractionView2" RangeSize="25" DataControl="AppModuleDataControl" id="InteractionView2Iterator"/>
+  </executables>
+  <bindings>
+    <action IterBinding="InteractionView2Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+  </bindings>
+</pageDefinition>

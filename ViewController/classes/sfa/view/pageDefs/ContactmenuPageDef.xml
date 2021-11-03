@@ -11,6 +11,9 @@
     <taskFlow id="appointmentsForContact1"
               taskFlowId="/WEB-INF/ContactManagement/appointmentsForContact.xml#appointmentsForContact"
               activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <taskFlow id="interactionsForContact1"
+              taskFlowId="/WEB-INF/ContactManagement/interactionsForContact.xml#interactionsForContact"
+              activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
   </executables>
   <bindings>
     <attributeValues IterBinding="CustomercontactsView1Iterator" id="Name">

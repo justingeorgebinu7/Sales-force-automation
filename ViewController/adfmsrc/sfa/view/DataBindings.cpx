@@ -158,6 +158,19 @@
           usageId="sfa_view_createAppointment_createAppointment_CommitPageDef"/>
     <page path="/WEB-INF/ContactManagement/createAppointment.xml#createAppointment@Delete"
           usageId="sfa_view_createAppointment_createAppointment_DeletePageDef"/>
+    <page path="/EditInteractionsForContacts.jsff" usageId="sfa_view_EditInteractionsForContactsPageDef"/>
+    <page path="/WEB-INF/ContactManagement/createIntForCon.xml#createIntForCon@CreateInsert"
+          usageId="sfa_view_createIntForCon_createIntForCon_CreateInsertPageDef"/>
+    <page path="/WEB-INF/ContactManagement/createIntForCon.xml#createIntForCon@Commit"
+          usageId="sfa_view_createIntForCon_createIntForCon_CommitPageDef"/>
+    <page path="/WEB-INF/ContactManagement/createIntForCon.xml#createIntForCon@Delete"
+          usageId="sfa_view_createIntForCon_createIntForCon_DeletePageDef"/>
+    <page path="/CreateIntForContact.jsff" usageId="sfa_view_CreateIntForContactPageDef"/>
+    <page path="/InteractionsForContacts.jsff" usageId="sfa_view_InteractionsForContactsPageDef"/>
+    <page path="/WEB-INF/ContactManagement/deleteInteractionContact.xml#deleteInteractionContact@Delete"
+          usageId="sfa_view_deleteInteractionContact_deleteInteractionContact_DeletePageDef"/>
+    <page path="/WEB-INF/ContactManagement/deleteInteractionContact.xml#deleteInteractionContact@Commit"
+          usageId="sfa_view_deleteInteractionContact_deleteInteractionContact_CommitPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="sfa_view_untitled2PageDef" path="sfa.view.pageDefs.untitled2PageDef"/>
@@ -309,6 +322,19 @@
           path="ContactManagement.createAppointment_createAppointment_CommitPageDef"/>
     <page id="sfa_view_createAppointment_createAppointment_DeletePageDef"
           path="ContactManagement.createAppointment_createAppointment_DeletePageDef"/>
+    <page id="sfa_view_EditInteractionsForContactsPageDef" path="sfa.view.pageDefs.EditInteractionsForContactsPageDef"/>
+    <page id="sfa_view_createIntForCon_createIntForCon_CreateInsertPageDef"
+          path="ContactManagement.createIntForCon_createIntForCon_CreateInsertPageDef"/>
+    <page id="sfa_view_createIntForCon_createIntForCon_CommitPageDef"
+          path="ContactManagement.createIntForCon_createIntForCon_CommitPageDef"/>
+    <page id="sfa_view_createIntForCon_createIntForCon_DeletePageDef"
+          path="ContactManagement.createIntForCon_createIntForCon_DeletePageDef"/>
+    <page id="sfa_view_CreateIntForContactPageDef" path="sfa.view.pageDefs.CreateIntForContactPageDef"/>
+    <page id="sfa_view_InteractionsForContactsPageDef" path="sfa.view.pageDefs.InteractionsForContactsPageDef"/>
+    <page id="sfa_view_deleteInteractionContact_deleteInteractionContact_DeletePageDef"
+          path="ContactManagement.deleteInteractionContact_deleteInteractionContact_DeletePageDef"/>
+    <page id="sfa_view_deleteInteractionContact_deleteInteractionContact_CommitPageDef"
+          path="ContactManagement.deleteInteractionContact_deleteInteractionContact_CommitPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="sfa.model.entities"
