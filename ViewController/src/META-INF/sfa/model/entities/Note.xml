@@ -9,7 +9,12 @@
   DBObjectType="table"
   DBObjectName="NOTE"
   AliasName="Note"
-  BindingStyle="OracleName">
+  BindingStyle="OracleName"
+  RowClass="sfa.model.entities.NoteImpl">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Init|Access"/>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
   <Attribute
     Name="Noteid"
     IsNotNull="true"
