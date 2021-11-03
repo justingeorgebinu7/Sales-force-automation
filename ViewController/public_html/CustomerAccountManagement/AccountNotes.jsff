@@ -9,7 +9,7 @@
             filterVisible="true" queryListener="#{bindings.NoteView2Query.processQuery}" varStatus="vs" id="t1">
     <af:column sortProperty="#{bindings.NoteView2.hints.Subject.name}" filterable="true" sortable="true"
                headerText="#{bindings.NoteView2.hints.Subject.label}" id="c1">
-      <af:outputText value="#{row.Subject}" shortDesc="#{bindings.NoteView2.hints.Subject.tooltip}" id="ot1"/>
+      <af:link shortDesc="#{bindings.NoteView2.hints.Subject.tooltip}" id="ot1" text="#{row.Subject}" action="edit"/>
     </af:column>
     <af:column sortProperty="#{bindings.NoteView2.hints.Content.name}" filterable="true" sortable="true"
                headerText="#{bindings.NoteView2.hints.Content.label}" id="c2">
@@ -33,6 +33,5 @@
     </af:column>
   </af:table>
   <af:button text="Add" id="b1" action="addNote"/>
-  <af:button text="Edit" id="b3" action="edit"/>
   <af:button text="Delete" action="deleteNotesTF1" id="b2"/>
 </ui:composition>

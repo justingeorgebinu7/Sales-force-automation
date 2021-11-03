@@ -10,7 +10,8 @@
             queryListener="#{bindings.CustomercontactsView2Query.processQuery}" varStatus="vs" id="t1">
     <af:column sortProperty="#{bindings.CustomercontactsView2.hints.Name.name}" filterable="true" sortable="true"
                headerText="#{bindings.CustomercontactsView2.hints.Name.label}" id="c1">
-      <af:outputText value="#{row.Name}" shortDesc="#{bindings.CustomercontactsView2.hints.Name.tooltip}" id="ot1"/>
+      <af:link shortDesc="#{bindings.CustomercontactsView2.hints.Name.tooltip}" id="ot1" text="#{row.Name}"
+               action="toedit"/>
     </af:column>
     <af:column sortProperty="#{bindings.CustomercontactsView2.hints.Title.name}" filterable="true" sortable="true"
                headerText="#{bindings.CustomercontactsView2.hints.Title.label}" id="c2">
@@ -44,6 +45,5 @@
     </af:column>
   </af:table>
   <af:button text="Add" id="b1" action="toAddCon"/>
-  <af:button text="Edit" id="b2" action="toedit"/>
   <af:button text="Delete" action="deleteContactTF1" id="b3"/>
 </ui:composition>

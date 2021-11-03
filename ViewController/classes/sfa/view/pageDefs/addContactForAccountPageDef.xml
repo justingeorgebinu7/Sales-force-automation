@@ -41,5 +41,7 @@
     <listOfValues IterBinding="CustomercontactsView2Iterator" StaticList="false" Uses="LOV_Buyingrole" id="Buyingrole"/>
     <listOfValues IterBinding="CustomercontactsView2Iterator" StaticList="false" Uses="LOV_Influencelevel"
                   id="Influencelevel"/>
+    <action IterBinding="CustomercontactsView2Iterator" id="Delete" RequiresUpdateModel="false"
+            Action="removeCurrentRow"/>
   </bindings>
 </pageDefinition>

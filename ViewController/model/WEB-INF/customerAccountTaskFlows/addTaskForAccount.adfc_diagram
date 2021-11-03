@@ -44,41 +44,16 @@
       <property
          name="sdm:polyPoints">R50,226.01465,216.99414,384.0,159.49414,L50</property>
    </ControlFlowCase>
-   <TaskFlowReturn
-      id="TaskFlowReturn6">
-      <property
-         name="activityId">taskFlowReturn1</property>
-      <property
-         name="x">692.0</property>
-      <property
-         name="description">&lt;html>&lt;p>&lt;b>taskFlowReturn1&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Return&lt;/p>&lt;p>Outcome:  taskFlowReturn1&lt;/p></property>
-      <property
-         name="y">116.24707</property>
-      <property
-         name="finish">true</property>
-      <property
-         name="exceptionHandler">false</property>
-   </TaskFlowReturn>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase7"
-      from="View3"
-      to="TaskFlowReturn6">
-      <property
-         name="fromOutcome">exitFromAddTask</property>
-      <property
-         name="sdm:polyPoints">R50,466.0,159.49414,651.0,115.896484,L50</property>
-   </ControlFlowCase>
    <MethodCall
       id="MethodCall9">
       <property
          name="activityId">Commit</property>
       <property
-         name="x">702.5</property>
+         name="x">591.5</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>Commit&lt;/b>&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
       <property
-         name="y">302.1494</property>
+         name="y">209.44824</property>
       <property
          name="exceptionHandler">false</property>
    </MethodCall>
@@ -90,6 +65,31 @@
       <property
          name="fromOutcome">commit</property>
       <property
-         name="sdm:polyPoints">R66,L28</property>
+         name="sdm:polyPoints">R50,466.0,159.49414,550.5,209.09766,L50</property>
+   </ControlFlowCase>
+   <TaskFlowReturn
+      id="TaskFlowReturn9">
+      <property
+         name="activityId">taskFlowReturn1</property>
+      <property
+         name="x">762.0</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>taskFlowReturn1&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Return&lt;/p>&lt;p>Outcome:  taskFlowReturn1&lt;/p></property>
+      <property
+         name="y">218.24707</property>
+      <property
+         name="finish">true</property>
+      <property
+         name="exceptionHandler">false</property>
+   </TaskFlowReturn>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase11"
+      from="MethodCall9"
+      to="TaskFlowReturn9">
+      <property
+         name="fromOutcome">Commit</property>
+      <property
+         name="sdm:polyPoints">R30,L28</property>
    </ControlFlowCase>
 </SDM>

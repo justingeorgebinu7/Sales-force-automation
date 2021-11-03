@@ -9,7 +9,7 @@
             filterVisible="true" queryListener="#{bindings.TaskView3Query.processQuery}" varStatus="vs" id="t1">
     <af:column sortProperty="#{bindings.TaskView3.hints.Name.name}" filterable="true" sortable="true"
                headerText="#{bindings.TaskView3.hints.Name.label}" id="c1">
-      <af:outputText value="#{row.Name}" shortDesc="#{bindings.TaskView3.hints.Name.tooltip}" id="ot1"/>
+      <af:link shortDesc="#{bindings.TaskView3.hints.Name.tooltip}" id="ot1" text="#{row.Name}" action="goToEdit"/>
     </af:column>
     <af:column sortProperty="#{bindings.TaskView3.hints.Duedate.name}" filterable="true" sortable="true"
                headerText="#{bindings.TaskView3.hints.Duedate.label}" id="c2">
@@ -40,6 +40,5 @@
     </af:column>
   </af:table>
   <af:button text="Add" id="b1" action="goToAddTask"/>
-  <af:button text="Edit" id="b2" action="goToEdit"/>
   <af:button text="Delete" action="deleteTasksTF1" id="b3"/>
 </ui:composition>

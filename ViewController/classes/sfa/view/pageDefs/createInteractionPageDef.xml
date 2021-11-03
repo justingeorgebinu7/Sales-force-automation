@@ -38,5 +38,6 @@
         <Item Value="Resolution"/>
       </AttrNames>
     </attributeValues>
+    <action IterBinding="InteractionView5Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
   </bindings>
 </pageDefinition>

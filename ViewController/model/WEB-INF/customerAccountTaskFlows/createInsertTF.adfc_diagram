@@ -7,13 +7,13 @@
       <property
          name="activityId">CreateInsert</property>
       <property
-         name="x">164.01465</property>
+         name="x">150.01465</property>
       <property
          name="start">true</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>CreateInsert&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
       <property
-         name="y">336.09766</property>
+         name="y">277.39648</property>
       <property
          name="exceptionHandler">false</property>
    </MethodCall>
@@ -22,11 +22,11 @@
       <property
          name="activityId">Commit</property>
       <property
-         name="x">538.5</property>
+         name="x">503.5</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>Commit&lt;/b>&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
       <property
-         name="y">209.34473</property>
+         name="y">250.64355</property>
       <property
          name="exceptionHandler">false</property>
    </MethodCall>
@@ -37,11 +37,11 @@
       <property
          name="pageFragment">true</property>
       <property
-         name="x">314.5</property>
+         name="x">296.5</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>view1&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">301.39648</property>
+         name="y">283.6953</property>
       <property
          name="page">/CustomerAccountManagement/noteAdd.jsff</property>
       <property
@@ -59,7 +59,7 @@
       <property
          name="fromsrcid">__1</property>
       <property
-         name="sdm:polyPoints">R50,205.01465,335.74707,273.5,301.0459,L50</property>
+         name="sdm:polyPoints">R50,191.01465,277.0459,255.5,283.34473,L50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -73,18 +73,18 @@
       <property
          name="fromsrcid">__3</property>
       <property
-         name="sdm:polyPoints">R46,355.5,297.5459,497.5,208.99414,L50</property>
+         name="sdm:polyPoints">R50,337.5,283.34473,462.5,250.29297,L50</property>
    </ControlFlowCase>
    <TaskFlowReturn
-      id="TaskFlowReturn16">
+      id="TaskFlowReturn9">
       <property
          name="activityId">taskFlowReturn1</property>
       <property
-         name="x">554.0</property>
+         name="x">708.0</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>taskFlowReturn1&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Return&lt;/p>&lt;p>Outcome:  taskFlowReturn1&lt;/p></property>
       <property
-         name="y">378.44238</property>
+         name="y">241.24707</property>
       <property
          name="finish">true</property>
       <property
@@ -92,12 +92,12 @@
    </TaskFlowReturn>
    <ControlFlowCase
       islink="true"
-      id="ControlFlowCase17"
-      from="View12"
-      to="TaskFlowReturn16">
+      id="ControlFlowCase10"
+      from="MethodCall11"
+      to="TaskFlowReturn9">
       <property
-         name="fromOutcome">*exit</property>
+         name="fromOutcome">Commit</property>
       <property
-         name="sdm:polyPoints">R54,355.5,304.5459,513.0,378.0918,L50</property>
+         name="sdm:polyPoints">R49,L50</property>
    </ControlFlowCase>
 </SDM>

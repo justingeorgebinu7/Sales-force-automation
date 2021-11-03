@@ -59,5 +59,6 @@
     </af:inputText>
   </af:panelFormLayout>
   <af:button text="Save" id="b1" action="saveContact"/>
-  <af:button text="Back" id="b2" action="back"/>
+  <af:button actionListener="#{bindings.Delete.execute}" text="Cancel" disabled="#{!bindings.Delete.enabled}" id="b2"
+             action="saveContact" immediate="true"/>
 </ui:composition>

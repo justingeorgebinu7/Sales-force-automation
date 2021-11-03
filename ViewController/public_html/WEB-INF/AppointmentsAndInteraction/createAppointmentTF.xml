@@ -14,26 +14,22 @@
         <fixed-outcome>Commit</fixed-outcome>
       </outcome>
     </method-call>
-    <task-flow-return id="taskFlowReturn1">
-      <outcome>
-        <name>taskFlowReturn1</name>
-      </outcome>
-    </task-flow-return>
     <method-call id="CreateInsert">
       <method>#{bindings.CreateInsert.execute}</method>
       <outcome>
         <fixed-outcome>CreateInsert</fixed-outcome>
       </outcome>
     </method-call>
+    <task-flow-return id="taskFlowReturn1">
+      <outcome>
+        <name>taskFlowReturn1</name>
+      </outcome>
+    </task-flow-return>
     <control-flow-rule id="__3">
       <from-activity-id>CreateAppointments</from-activity-id>
       <control-flow-case id="__4">
         <from-outcome>commit</from-outcome>
         <to-activity-id>Commit</to-activity-id>
-      </control-flow-case>
-      <control-flow-case id="__5">
-        <from-outcome>back</from-outcome>
-        <to-activity-id>taskFlowReturn1</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <control-flow-rule id="__1">
@@ -41,6 +37,13 @@
       <control-flow-case id="__2">
         <from-outcome>CreateInsert</from-outcome>
         <to-activity-id>CreateAppointments</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__5">
+      <from-activity-id>Commit</from-activity-id>
+      <control-flow-case id="__6">
+        <from-outcome>Commit</from-outcome>
+        <to-activity-id>taskFlowReturn1</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <use-page-fragments/>

@@ -33,5 +33,6 @@
         <Item Value="Location"/>
       </AttrNames>
     </attributeValues>
+    <action IterBinding="AppointmentsView4Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
   </bindings>
 </pageDefinition>

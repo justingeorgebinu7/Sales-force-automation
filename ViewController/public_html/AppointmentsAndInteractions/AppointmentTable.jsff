@@ -11,7 +11,8 @@
             queryListener="#{bindings.AppointmentsView4Query.processQuery}" varStatus="vs" id="t1">
     <af:column sortProperty="#{bindings.AppointmentsView4.hints.Name.name}" filterable="true" sortable="true"
                headerText="#{bindings.AppointmentsView4.hints.Name.label}" id="c1">
-      <af:outputText value="#{row.Name}" shortDesc="#{bindings.AppointmentsView4.hints.Name.tooltip}" id="ot1"/>
+      <af:link shortDesc="#{bindings.AppointmentsView4.hints.Name.tooltip}" id="ot1" text="#{row.Name}"
+               action="editAppointments"/>
     </af:column>
     <af:column sortProperty="#{bindings.AppointmentsView4.hints.Startdate.name}" filterable="true" sortable="true"
                headerText="#{bindings.AppointmentsView4.hints.Startdate.label}" id="c2">
@@ -49,7 +50,6 @@
     </af:column>
   </af:table>
   <af:button text="Create" id="b3" action="createAppointment"/>
-  <af:button text="Edit" id="b2" action="editAppointments"/>
   <af:button text="Delete" action="deleteAppointmentTF1" id="b1"/>
   <af:button text="Invitees" id="b4" action="viewInvitees"/>
 </ui:composition>

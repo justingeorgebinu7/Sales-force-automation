@@ -39,5 +39,7 @@
       </AttrNames>
     </attributeValues>
     <listOfValues IterBinding="CustomeraccountView1Iterator" StaticList="false" Uses="LOV_AccountType" id="Type"/>
+    <action IterBinding="CustomeraccountView1Iterator" id="Delete" RequiresUpdateModel="false"
+            Action="removeCurrentRow"/>
   </bindings>
 </pageDefinition>
