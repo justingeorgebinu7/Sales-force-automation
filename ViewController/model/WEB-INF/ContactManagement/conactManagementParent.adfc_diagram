@@ -46,7 +46,7 @@
       <property
          name="fromOutcome">toContactMenu</property>
       <property
-         name="sdm:polyPoints">R50,346.0,231.5459,554.0,149.24707,L50</property>
+         name="sdm:polyPoints">R46,346.0,228.0459,552.6615,145.74707,L46</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"

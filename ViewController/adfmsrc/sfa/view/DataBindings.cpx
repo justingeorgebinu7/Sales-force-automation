@@ -145,6 +145,19 @@
           usageId="sfa_view_deleteNotesForCon_deleteNotesForCon_DeletePageDef"/>
     <page path="/WEB-INF/ContactManagement/deleteNotesForCon.xml#deleteNotesForCon@Commit"
           usageId="sfa_view_deleteNotesForCon_deleteNotesForCon_CommitPageDef"/>
+    <page path="/AppTableForContacts.jsff" usageId="sfa_view_AppTableForContactsPageDef"/>
+    <page path="/WEB-INF/ContactManagement/createAppointment.xml#createAppointment@CreateInsert"
+          usageId="sfa_view_createAppointment_createAppointment_CreateInsertPageDef"/>
+    <page path="/CreateAppForContact.jsff" usageId="sfa_view_AppTablePageDef"/>
+    <page path="/EditAppForContact.jsff" usageId="sfa_view_EditAppForContactPageDef"/>
+    <page path="/WEB-INF/ContactManagement/deleteAppForContacts.xml#deleteAppForContacts@Delete"
+          usageId="sfa_view_deleteAppForContacts_deleteAppForContacts_DeletePageDef"/>
+    <page path="/WEB-INF/ContactManagement/deleteAppForContacts.xml#deleteAppForContacts@Commit"
+          usageId="sfa_view_deleteAppForContacts_deleteAppForContacts_CommitPageDef"/>
+    <page path="/WEB-INF/ContactManagement/createAppointment.xml#createAppointment@Commit"
+          usageId="sfa_view_createAppointment_createAppointment_CommitPageDef"/>
+    <page path="/WEB-INF/ContactManagement/createAppointment.xml#createAppointment@Delete"
+          usageId="sfa_view_createAppointment_createAppointment_DeletePageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="sfa_view_untitled2PageDef" path="sfa.view.pageDefs.untitled2PageDef"/>
@@ -283,6 +296,19 @@
           path="ContactManagement.deleteNotesForCon_deleteNotesForCon_DeletePageDef"/>
     <page id="sfa_view_deleteNotesForCon_deleteNotesForCon_CommitPageDef"
           path="ContactManagement.deleteNotesForCon_deleteNotesForCon_CommitPageDef"/>
+    <page id="sfa_view_AppTableForContactsPageDef" path="sfa.view.pageDefs.AppTableForContactsPageDef"/>
+    <page id="sfa_view_createAppointment_createAppointment_CreateInsertPageDef"
+          path="ContactManagement.createAppointment_createAppointment_CreateInsertPageDef"/>
+    <page id="sfa_view_AppTablePageDef" path="sfa.view.pageDefs.AppTablePageDef"/>
+    <page id="sfa_view_EditAppForContactPageDef" path="sfa.view.pageDefs.EditAppForContactPageDef"/>
+    <page id="sfa_view_deleteAppForContacts_deleteAppForContacts_DeletePageDef"
+          path="ContactManagement.deleteAppForContacts_deleteAppForContacts_DeletePageDef"/>
+    <page id="sfa_view_deleteAppForContacts_deleteAppForContacts_CommitPageDef"
+          path="ContactManagement.deleteAppForContacts_deleteAppForContacts_CommitPageDef"/>
+    <page id="sfa_view_createAppointment_createAppointment_CommitPageDef"
+          path="ContactManagement.createAppointment_createAppointment_CommitPageDef"/>
+    <page id="sfa_view_createAppointment_createAppointment_DeletePageDef"
+          path="ContactManagement.createAppointment_createAppointment_DeletePageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="sfa.model.entities"

@@ -3,15 +3,15 @@
    <OverallProperties
       id="OverallProperties1"/>
    <View
-      id="View2">
+      id="View3">
       <property
          name="activityId">LandingPage</property>
       <property
-         name="x">177.0</property>
+         name="x">382.3672</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>LandingPage&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">224.89648</property>
+         name="y">317.09766</property>
       <property
          name="page">/LandingPage.jsf</property>
       <property

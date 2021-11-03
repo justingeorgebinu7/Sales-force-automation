@@ -74,7 +74,9 @@
         <af:region value="#{bindings.notesForContact1.regionModel}" id="r1"/>
       </af:showDetailItem>
       <af:showDetailItem id="sdi4" text="Task"/>
-      <af:showDetailItem id="sdi5" text="Appoinments"/>
+      <af:showDetailItem id="sdi5" text="Appoinments">
+        <af:region value="#{bindings.appointmentsForContact1.regionModel}" id="r2"/>
+      </af:showDetailItem>
       <af:showDetailItem id="sdi6" text="Interaction"/>
     </af:panelTabbed>
     <af:componentDragSource/>

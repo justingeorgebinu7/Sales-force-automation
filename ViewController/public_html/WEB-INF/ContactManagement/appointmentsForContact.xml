@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="appointmentsForContact">
+    <default-activity>AppTableForContacts</default-activity>
+    <data-control-scope>
+      <shared/>
+    </data-control-scope>
+    <view id="AppTableForContacts">
+      <page>/AppTableForContacts.jsff</page>
+    </view>
+    <view id="EditAppForContact">
+      <page>/EditAppForContact.jsff</page>
+    </view>
+    <task-flow-call id="deleteAppForContacts1">
+      <task-flow-reference>
+        <document>/WEB-INF/ContactManagement/deleteAppForContacts.xml</document>
+        <id>deleteAppForContacts</id>
+      </task-flow-reference>
+    </task-flow-call>
+    <task-flow-call id="createAppointment">
+      <task-flow-reference>
+        <document>/WEB-INF/ContactManagement/createAppointment.xml</document>
+        <id>createAppointment</id>
+      </task-flow-reference>
+    </task-flow-call>
+    <control-flow-rule id="__1">
+      <from-activity-id>AppTableForContacts</from-activity-id>
+      <control-flow-case id="__3">
+        <from-outcome>edit</from-outcome>
+        <to-activity-id>EditAppForContact</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__10">
+        <from-outcome>create</from-outcome>
+        <to-activity-id>createAppointment</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__4">
+      <from-activity-id>EditAppForContact</from-activity-id>
+      <control-flow-case id="__5">
+        <from-outcome>exit</from-outcome>
+        <to-activity-id>AppTableForContacts</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__6">
+      <from-activity-id>AppTableForContacts</from-activity-id>
+      <control-flow-case id="__7">
+        <from-outcome>deleteAppForContacts1</from-outcome>
+        <to-activity-id>deleteAppForContacts1</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <use-page-fragments/>
+  </task-flow-definition>
+</adfc-config>
