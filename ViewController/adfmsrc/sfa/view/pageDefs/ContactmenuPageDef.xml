@@ -6,6 +6,8 @@
     <variableIterator id="variables"/>
     <iterator Binds="CustomercontactsView1" RangeSize="25" DataControl="AppModuleDataControl"
               id="CustomercontactsView1Iterator"/>
+    <taskFlow id="notesForContact1" taskFlowId="/WEB-INF/ContactManagement/notesForContact.xml#notesForContact"
+              activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
   </executables>
   <bindings>
     <attributeValues IterBinding="CustomercontactsView1Iterator" id="Name">

@@ -1,6 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
                 xmlns:f="http://java.sun.com/jsf/core">
+  <af:menuBar id="mb1">
+    <af:commandMenuItem text="Back to home" id="cmi1" action="backToHome"/>
+  </af:menuBar>
   <af:panelBox id="pb2" inlineStyle="margin-right:100px;overflow:hidden; border-radius:30px 30px 30px 30px;" text="Menu"
                background="default">
     <f:facet name="toolbar"/>
@@ -67,14 +70,13 @@
           </f:facet>
         </af:panelFormLayout>
       </af:showDetailItem>
+      <af:showDetailItem id="sdi2" text="Notes">
+        <af:region value="#{bindings.notesForContact1.regionModel}" id="r1"/>
+      </af:showDetailItem>
       <af:showDetailItem id="sdi4" text="Task"/>
-      <af:showDetailItem id="sdi2" text="Notes"/>
       <af:showDetailItem id="sdi5" text="Appoinments"/>
       <af:showDetailItem id="sdi6" text="Interaction"/>
     </af:panelTabbed>
     <af:componentDragSource/>
   </af:panelBox>
-  <af:menuBar id="mb1">
-    <af:commandMenuItem text="Back to home" id="cmi1" action="backToHome"/>
-  </af:menuBar>
 </ui:composition>

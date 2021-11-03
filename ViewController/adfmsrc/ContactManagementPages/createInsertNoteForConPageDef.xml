@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.22.48" id="createInsertNoteForConPageDef"
+                Package="ContactManagementPages">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="NoteView3" RangeSize="25" DataControl="AppModuleDataControl" id="NoteView3Iterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="NoteView3Iterator" id="Subject">
+      <AttrNames>
+        <Item Value="Subject"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="NoteView3Iterator" id="Content">
+      <AttrNames>
+        <Item Value="Content"/>
+      </AttrNames>
+    </attributeValues>
+    <action IterBinding="NoteView3Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+  </bindings>
+</pageDefinition>

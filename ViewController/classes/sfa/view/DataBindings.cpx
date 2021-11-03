@@ -134,6 +134,17 @@
     <page path="/ContactHome.jsff" usageId="sfa_view_ContactHomePageDef"/>
     <page path="/Contactmenu.jsff" usageId="sfa_view_ContactmenuPageDef"/>
     <page path="/invitees.jsff" usageId="sfa_view_inviteesPageDef"/>
+    <page path="/notesForConTAble.jsff" usageId="sfa_view_notesForConTAblePageDef"/>
+    <page path="/editNotesCon.jsff" usageId="sfa_view_editNotesConPageDef"/>
+    <page path="/WEB-INF/ContactManagement/addNoteForCon.xml#addNoteForCon@CreateInsert"
+          usageId="sfa_view_addNoteForCon_addNoteForCon_CreateInsertPageDef"/>
+    <page path="/WEB-INF/ContactManagement/addNoteForCon.xml#addNoteForCon@Commit"
+          usageId="sfa_view_addNoteForCon_addNoteForCon_CommitPageDef"/>
+    <page path="/ContactManagementPages/createInsertNoteForCon.jsff" usageId="sfa_view_createInsertNoteForConPageDef"/>
+    <page path="/WEB-INF/ContactManagement/deleteNotesForCon.xml#deleteNotesForCon@Delete"
+          usageId="sfa_view_deleteNotesForCon_deleteNotesForCon_DeletePageDef"/>
+    <page path="/WEB-INF/ContactManagement/deleteNotesForCon.xml#deleteNotesForCon@Commit"
+          usageId="sfa_view_deleteNotesForCon_deleteNotesForCon_CommitPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="sfa_view_untitled2PageDef" path="sfa.view.pageDefs.untitled2PageDef"/>
@@ -261,6 +272,17 @@
     <page id="sfa_view_ContactHomePageDef" path="sfa.view.pageDefs.ContactHomePageDef"/>
     <page id="sfa_view_ContactmenuPageDef" path="sfa.view.pageDefs.ContactmenuPageDef"/>
     <page id="sfa_view_inviteesPageDef" path="sfa.view.pageDefs.inviteesPageDef"/>
+    <page id="sfa_view_notesForConTAblePageDef" path="sfa.view.pageDefs.notesForConTAblePageDef"/>
+    <page id="sfa_view_editNotesConPageDef" path="sfa.view.pageDefs.editNotesConPageDef"/>
+    <page id="sfa_view_addNoteForCon_addNoteForCon_CreateInsertPageDef"
+          path="ContactManagement.addNoteForCon_addNoteForCon_CreateInsertPageDef"/>
+    <page id="sfa_view_addNoteForCon_addNoteForCon_CommitPageDef"
+          path="ContactManagement.addNoteForCon_addNoteForCon_CommitPageDef"/>
+    <page id="sfa_view_createInsertNoteForConPageDef" path="ContactManagementPages.createInsertNoteForConPageDef"/>
+    <page id="sfa_view_deleteNotesForCon_deleteNotesForCon_DeletePageDef"
+          path="ContactManagement.deleteNotesForCon_deleteNotesForCon_DeletePageDef"/>
+    <page id="sfa_view_deleteNotesForCon_deleteNotesForCon_CommitPageDef"
+          path="ContactManagement.deleteNotesForCon_deleteNotesForCon_CommitPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="sfa.model.entities"
