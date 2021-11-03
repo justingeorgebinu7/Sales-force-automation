@@ -9,7 +9,8 @@
   DBObjectType="table"
   DBObjectName="APPOINTMENTS"
   AliasName="Appointments"
-  BindingStyle="OracleName">
+  BindingStyle="OracleName"
+  xmlns:validation="http://xmlns.oracle.com/adfm/validation">
   <Attribute
     Name="Appointmentid"
     IsNotNull="true"
@@ -62,6 +63,14 @@
           ResId="sfa.model.entities.Appointments.Enddate_LABEL"/>
       </SchemaBasedProperties>
     </Properties>
+    <validation:CompareValidationBean
+      Name="EnddateRule0"
+      ResId="sfa.model.entities.Appointments.Enddate_Rule_0"
+      OnAttribute="Enddate"
+      OperandType="JBO"
+      Inverse="false"
+      CompareType="GREATERTHAN"
+      CompareValue="sfa.model.viewobjects.AppointmentsView.Startdate"/>
   </Attribute>
   <Attribute
     Name="Description"
