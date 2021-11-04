@@ -66,14 +66,16 @@
           </af:inputText>
           <f:facet name="footer">
             <af:button text="Save" id="b1" actionListener="#{bindings.Commit.execute}"
-                       disabled="#{!bindings.Commit.enabled}"/>
+                       disabled="false"/>
           </f:facet>
         </af:panelFormLayout>
       </af:showDetailItem>
       <af:showDetailItem id="sdi2" text="Notes">
-        <af:region value="#{bindings.notesForContact1.regionModel}" id="r1"/>
+        <af:region value="#{bindings.notesForContacts1.regionModel}" id="r1"/>
       </af:showDetailItem>
-      <af:showDetailItem id="sdi4" text="Task"/>
+      <af:showDetailItem id="sdi4" text="Task">
+        <af:region value="#{bindings.taskForCon1.regionModel}" id="r4"/>
+      </af:showDetailItem>
       <af:showDetailItem id="sdi5" text="Appoinments">
         <af:region value="#{bindings.appointmentsForContact1.regionModel}" id="r2"/>
       </af:showDetailItem>

@@ -9,15 +9,15 @@
       <property
          name="pageFragment">true</property>
       <property
-         name="x">305.0</property>
+         name="x">237.0</property>
       <property
          name="start">true</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>ContactHome&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">231.89648</property>
+         name="y">265.84473</property>
       <property
-         name="page">/ContactHome.jsff</property>
+         name="page">/ContactManagementPages/ContactHome.jsff</property>
       <property
          name="exceptionHandler">false</property>
    </View>
@@ -28,13 +28,13 @@
       <property
          name="pageFragment">true</property>
       <property
-         name="x">595.0</property>
+         name="x">588.0</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>Contactmenu&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">149.59766</property>
+         name="y">382.49414</property>
       <property
-         name="page">/Contactmenu.jsff</property>
+         name="page">/ContactManagementPages/Contactmenu.jsff</property>
       <property
          name="exceptionHandler">false</property>
    </View>
@@ -46,7 +46,7 @@
       <property
          name="fromOutcome">toContactMenu</property>
       <property
-         name="sdm:polyPoints">R46,346.0,228.0459,552.6615,145.74707,L46</property>
+         name="sdm:polyPoints">R46,279.4524,261.99414,547.0,378.64355,L46</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -56,6 +56,60 @@
       <property
          name="fromOutcome">backToHome</property>
       <property
-         name="sdm:polyPoints">L54,554.0,152.74707,347.3345,235.0459,R54</property>
+         name="sdm:polyPoints">L54,545.544,385.64355,278.0,268.99414,R54</property>
+   </ControlFlowCase>
+   <TaskFlowCall
+      id="TaskFlowCall7">
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>deleteContact_CM&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
+      <property
+         name="activityId">deleteContact_CM</property>
+      <property
+         name="x">372.69336</property>
+      <property
+         name="y">78.149414</property>
+      <property
+         name="documentReference">/WEB-INF/ContactManagement/deleteContact_CM.xml</property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="taskFlowId">deleteContact_CM</property>
+   </TaskFlowCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase8"
+      from="View2"
+      to="TaskFlowCall7">
+      <property
+         name="fromOutcome">deleteCon</property>
+      <property
+         name="sdm:polyPoints">T50,237.0,211.49414,372.69336,131.79883,B50</property>
+   </ControlFlowCase>
+   <TaskFlowCall
+      id="TaskFlowCall9">
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>createContact_cm&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
+      <property
+         name="activityId">createContact_cm</property>
+      <property
+         name="x">587.6885</property>
+      <property
+         name="y">194.14941</property>
+      <property
+         name="documentReference">/WEB-INF/ContactManagement/createContact_cm.xml</property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="taskFlowId">createContact_cm</property>
+   </TaskFlowCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase10"
+      from="View2"
+      to="TaskFlowCall9">
+      <property
+         name="fromOutcome">add</property>
+      <property
+         name="sdm:polyPoints">R42,278.0,258.49414,546.6885,193.79883,L50</property>
    </ControlFlowCase>
 </SDM>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.22.48"
+                id="deleteNoteCon_deleteNoteCon_DeletePageDef" Package="ContactManagement" SkipValidation="true">
+  <parameters/>
+  <executables>
+    <iterator Binds="NoteView3" RangeSize="25" DataControl="AppModuleDataControl" id="NoteView3Iterator"/>
+  </executables>
+  <bindings>
+    <action IterBinding="NoteView3Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+  </bindings>
+</pageDefinition>

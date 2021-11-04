@@ -11,11 +11,31 @@
     <view id="Contactmenu">
       <page>/ContactManagementPages/Contactmenu.jsff</page>
     </view>
+    <task-flow-call id="deleteContact_CM">
+      <task-flow-reference>
+        <document>/WEB-INF/ContactManagement/deleteContact_CM.xml</document>
+        <id>deleteContact_CM</id>
+      </task-flow-reference>
+    </task-flow-call>
+    <task-flow-call id="createContact_cm">
+      <task-flow-reference>
+        <document>/WEB-INF/ContactManagement/createContact_cm.xml</document>
+        <id>createContact_cm</id>
+      </task-flow-reference>
+    </task-flow-call>
     <control-flow-rule id="__1">
       <from-activity-id>ContactHome</from-activity-id>
       <control-flow-case id="__2">
         <from-outcome>toContactMenu</from-outcome>
         <to-activity-id>Contactmenu</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__5">
+        <from-outcome>deleteCon</from-outcome>
+        <to-activity-id>deleteContact_CM</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__6">
+        <from-outcome>add</from-outcome>
+        <to-activity-id>createContact_cm</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <control-flow-rule id="__3">

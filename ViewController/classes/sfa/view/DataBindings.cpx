@@ -136,10 +136,6 @@
     <page path="/invitees.jsff" usageId="sfa_view_inviteesPageDef"/>
     <page path="/ContactManagementPages/notesForConTAble.jsff" usageId="sfa_view_notesForConTAblePageDef"/>
     <page path="/ContactManagementPages/editNotesCon.jsff" usageId="sfa_view_editNotesConPageDef"/>
-    <page path="/WEB-INF/ContactManagement/addNoteForCon.xml#addNoteForCon@CreateInsert"
-          usageId="sfa_view_addNoteForCon_addNoteForCon_CreateInsertPageDef"/>
-    <page path="/WEB-INF/ContactManagement/addNoteForCon.xml#addNoteForCon@Commit"
-          usageId="sfa_view_addNoteForCon_addNoteForCon_CommitPageDef"/>
     <page path="/ContactManagementPages/createInsertNoteForCon.jsff" usageId="sfa_view_createInsertNoteForConPageDef"/>
     <page path="/WEB-INF/ContactManagement/deleteNotesForCon.xml#deleteNotesForCon@Delete"
           usageId="sfa_view_deleteNotesForCon_deleteNotesForCon_DeletePageDef"/>
@@ -171,6 +167,45 @@
           usageId="sfa_view_deleteInteractionContact_deleteInteractionContact_DeletePageDef"/>
     <page path="/WEB-INF/ContactManagement/deleteInteractionContact.xml#deleteInteractionContact@Commit"
           usageId="sfa_view_deleteInteractionContact_deleteInteractionContact_CommitPageDef"/>
+    <page path="/ContactManagementPages/taskForContact.jsff" usageId="sfa_view_taskForContactPageDef"/>
+    <page path="/ContactManagementPages/editTaskForCon.jsff" usageId="sfa_view_editTaskForConPageDef"/>
+    <page path="/WEB-INF/ContactManagement/deleteTaskCon.xml#deleteTaskCon@Delete"
+          usageId="sfa_view_deleteTaskCon_deleteTaskCon_DeletePageDef"/>
+    <page path="/WEB-INF/ContactManagement/deleteTaskCon.xml#deleteTaskCon@Commit"
+          usageId="sfa_view_deleteTaskCon_deleteTaskCon_CommitPageDef"/>
+    <page path="/WEB-INF/ContactManagement/createTaskCon.xml#createTaskCon@CreateInsert"
+          usageId="sfa_view_createTaskCon_createTaskCon_CreateInsertPageDef"/>
+    <page path="/WEB-INF/ContactManagement/createTaskCon.xml#createTaskCon@Commit"
+          usageId="sfa_view_createTaskCon_createTaskCon_CommitPageDef"/>
+    <page path="/ContactManagementPages/addTaskCon.jsff" usageId="sfa_view_addTaskConPageDef"/>
+    <page path="/WEB-INF/ContactManagement/deleteNoteCon.xml#deleteNoteCon@Delete"
+          usageId="sfa_view_deleteNoteCon_deleteNoteCon_DeletePageDef"/>
+    <page path="/WEB-INF/ContactManagement/deleteNoteCon.xml#deleteNoteCon@Commit"
+          usageId="sfa_view_deleteNoteCon_deleteNoteCon_CommitPageDef"/>
+    <page path="/WEB-INF/ContactManagement/deleteContact_CM.xml#deleteContact_CM@Delete"
+          usageId="sfa_view_deleteContact_CM_deleteContact_CM_DeletePageDef"/>
+    <page path="/WEB-INF/ContactManagement/deleteContact_CM.xml#deleteContact_CM@Commit"
+          usageId="sfa_view_deleteContact_CM_deleteContact_CM_CommitPageDef"/>
+    <page path="/WEB-INF/ContactManagement/createContact_cm.xml#createContact_cm@Commit"
+          usageId="sfa_view_createContact_cm_createContact_cm_CommitPageDef"/>
+    <page path="/AddContact_CM.jsff" usageId="sfa_view_AddContact_CMPageDef"/>
+    <page path="/WEB-INF/ContactManagement/createContact_cm.xml#createContact_cm@CreateInsert"
+          usageId="sfa_view_createContact_cm_createContact_cm_CreateInsertPageDef"/>
+    <page path="/WEB-INF/ContactManagement/addNoteForCon.xml#addNoteForCon@Commit"
+          usageId="sfa_view_addNoteForCon_addNoteForCon_CommitPageDef"/>
+    <page path="/WEB-INF/ContactManagement/addNoteForCon.xml#addNoteForCon@CreateInsert"
+          usageId="sfa_view_addNoteForCon_addNoteForCon_CreateInsertPageDef"/>
+    <page path="/ContactManagementPages/notesForContactTable.jsff" usageId="sfa_view_notesForContactTablePageDef"/>
+    <page path="/ContactManagementPages/editNotes.jsff" usageId="sfa_view_editNotesPageDef"/>
+    <page path="/WEB-INF/ContactManagement/addNotesContact.xml#addNotesContact@CreateInsert"
+          usageId="sfa_view_addNotesContact_addNotesContact_CreateInsertPageDef"/>
+    <page path="/WEB-INF/ContactManagement/addNotesContact.xml#addNotesContact@Commit"
+          usageId="sfa_view_addNotesContact_addNotesContact_CommitPageDef"/>
+    <page path="/ContactManagementPages/createNotesCOntact.jsff" usageId="sfa_view_createNotesCOntactPageDef"/>
+    <page path="/WEB-INF/ContactManagement/deleteNotesContact.xml#deleteNotesContact@Delete"
+          usageId="sfa_view_deleteNotesContact_deleteNotesContact_DeletePageDef"/>
+    <page path="/WEB-INF/ContactManagement/deleteNotesContact.xml#deleteNotesContact@Commit"
+          usageId="sfa_view_deleteNotesContact_deleteNotesContact_CommitPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="sfa_view_untitled2PageDef" path="sfa.view.pageDefs.untitled2PageDef"/>
@@ -300,10 +335,6 @@
     <page id="sfa_view_inviteesPageDef" path="sfa.view.pageDefs.inviteesPageDef"/>
     <page id="sfa_view_notesForConTAblePageDef" path="sfa.view.pageDefs.notesForConTAblePageDef"/>
     <page id="sfa_view_editNotesConPageDef" path="sfa.view.pageDefs.editNotesConPageDef"/>
-    <page id="sfa_view_addNoteForCon_addNoteForCon_CreateInsertPageDef"
-          path="ContactManagement.addNoteForCon_addNoteForCon_CreateInsertPageDef"/>
-    <page id="sfa_view_addNoteForCon_addNoteForCon_CommitPageDef"
-          path="ContactManagement.addNoteForCon_addNoteForCon_CommitPageDef"/>
     <page id="sfa_view_createInsertNoteForConPageDef" path="ContactManagementPages.createInsertNoteForConPageDef"/>
     <page id="sfa_view_deleteNotesForCon_deleteNotesForCon_DeletePageDef"
           path="ContactManagement.deleteNotesForCon_deleteNotesForCon_DeletePageDef"/>
@@ -335,6 +366,45 @@
           path="ContactManagement.deleteInteractionContact_deleteInteractionContact_DeletePageDef"/>
     <page id="sfa_view_deleteInteractionContact_deleteInteractionContact_CommitPageDef"
           path="ContactManagement.deleteInteractionContact_deleteInteractionContact_CommitPageDef"/>
+    <page id="sfa_view_taskForContactPageDef" path="ContactManagementPages.taskForContactPageDef"/>
+    <page id="sfa_view_editTaskForConPageDef" path="ContactManagementPages.editTaskForConPageDef"/>
+    <page id="sfa_view_deleteTaskCon_deleteTaskCon_DeletePageDef"
+          path="ContactManagement.deleteTaskCon_deleteTaskCon_DeletePageDef"/>
+    <page id="sfa_view_deleteTaskCon_deleteTaskCon_CommitPageDef"
+          path="ContactManagement.deleteTaskCon_deleteTaskCon_CommitPageDef"/>
+    <page id="sfa_view_createTaskCon_createTaskCon_CreateInsertPageDef"
+          path="ContactManagement.createTaskCon_createTaskCon_CreateInsertPageDef"/>
+    <page id="sfa_view_createTaskCon_createTaskCon_CommitPageDef"
+          path="ContactManagement.createTaskCon_createTaskCon_CommitPageDef"/>
+    <page id="sfa_view_addTaskConPageDef" path="ContactManagementPages.addTaskConPageDef"/>
+    <page id="sfa_view_deleteNoteCon_deleteNoteCon_DeletePageDef"
+          path="ContactManagement.deleteNoteCon_deleteNoteCon_DeletePageDef"/>
+    <page id="sfa_view_deleteNoteCon_deleteNoteCon_CommitPageDef"
+          path="ContactManagement.deleteNoteCon_deleteNoteCon_CommitPageDef"/>
+    <page id="sfa_view_deleteContact_CM_deleteContact_CM_DeletePageDef"
+          path="ContactManagement.deleteContact_CM_deleteContact_CM_DeletePageDef"/>
+    <page id="sfa_view_deleteContact_CM_deleteContact_CM_CommitPageDef"
+          path="ContactManagement.deleteContact_CM_deleteContact_CM_CommitPageDef"/>
+    <page id="sfa_view_createContact_cm_createContact_cm_CommitPageDef"
+          path="ContactManagement.createContact_cm_createContact_cm_CommitPageDef"/>
+    <page id="sfa_view_AddContact_CMPageDef" path="sfa.view.pageDefs.AddContact_CMPageDef"/>
+    <page id="sfa_view_createContact_cm_createContact_cm_CreateInsertPageDef"
+          path="ContactManagement.createContact_cm_createContact_cm_CreateInsertPageDef"/>
+    <page id="sfa_view_addNoteForCon_addNoteForCon_CommitPageDef"
+          path="ContactManagement.addNoteForCon_addNoteForCon_CommitPageDef"/>
+    <page id="sfa_view_addNoteForCon_addNoteForCon_CreateInsertPageDef"
+          path="ContactManagement.addNoteForCon_addNoteForCon_CreateInsertPageDef"/>
+    <page id="sfa_view_notesForContactTablePageDef" path="ContactManagementPages.notesForContactTablePageDef"/>
+    <page id="sfa_view_editNotesPageDef" path="ContactManagementPages.editNotesPageDef"/>
+    <page id="sfa_view_addNotesContact_addNotesContact_CreateInsertPageDef"
+          path="ContactManagement.addNotesContact_addNotesContact_CreateInsertPageDef"/>
+    <page id="sfa_view_addNotesContact_addNotesContact_CommitPageDef"
+          path="ContactManagement.addNotesContact_addNotesContact_CommitPageDef"/>
+    <page id="sfa_view_createNotesCOntactPageDef" path="ContactManagementPages.createNotesCOntactPageDef"/>
+    <page id="sfa_view_deleteNotesContact_deleteNotesContact_DeletePageDef"
+          path="ContactManagement.deleteNotesContact_deleteNotesContact_DeletePageDef"/>
+    <page id="sfa_view_deleteNotesContact_deleteNotesContact_CommitPageDef"
+          path="ContactManagement.deleteNotesContact_deleteNotesContact_CommitPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="sfa.model.entities"

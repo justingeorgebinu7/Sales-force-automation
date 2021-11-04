@@ -6,13 +6,15 @@
     <variableIterator id="variables"/>
     <iterator Binds="CustomercontactsView1" RangeSize="25" DataControl="AppModuleDataControl"
               id="CustomercontactsView1Iterator"/>
-    <taskFlow id="notesForContact1" taskFlowId="/WEB-INF/ContactManagement/notesForContact.xml#notesForContact"
-              activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
     <taskFlow id="appointmentsForContact1"
               taskFlowId="/WEB-INF/ContactManagement/appointmentsForContact.xml#appointmentsForContact"
               activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
     <taskFlow id="interactionsForContact1"
               taskFlowId="/WEB-INF/ContactManagement/interactionsForContact.xml#interactionsForContact"
+              activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <taskFlow id="taskForCon1" taskFlowId="/WEB-INF/ContactManagement/taskForCon.xml#taskForCon" activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <taskFlow id="notesForContacts1" taskFlowId="/WEB-INF/ContactManagement/notesForContacts.xml#notesForContacts"
               activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
   </executables>
   <bindings>

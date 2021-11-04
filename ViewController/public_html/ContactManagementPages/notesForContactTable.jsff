@@ -32,5 +32,6 @@
       <af:outputText value="#{row.Createdby}" shortDesc="#{bindings.NoteView3.hints.Createdby.tooltip}" id="ot4"/>
     </af:column>
   </af:table>
-  <af:button text="Add" id="b1" action="toAdd"/>
+  <af:button text="Add" id="b1" action="toadd"/>
+  <af:button text="Delete" id="b2" action="delete"/>
 </ui:composition>

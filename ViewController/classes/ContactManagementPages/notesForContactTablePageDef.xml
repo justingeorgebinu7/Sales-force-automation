@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.22.48" id="notesForContactTablePageDef"
+                Package="ContactManagementPages">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="NoteView3" RangeSize="25" DataControl="AppModuleDataControl" id="NoteView3Iterator"/>
+    <searchRegion Binds="NoteView3Iterator" Criteria="" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  id="NoteView3Query"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="NoteView3Iterator" id="NoteView3">
+      <nodeDefinition DefName="sfa.model.viewobjects.NoteView" Name="NoteView30">
+        <AttrNames>
+          <Item Value="Subject"/>
+          <Item Value="Content"/>
+          <Item Value="Datetime"/>
+          <Item Value="Createdby"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

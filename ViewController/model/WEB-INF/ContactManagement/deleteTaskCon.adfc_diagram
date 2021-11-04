@@ -7,13 +7,13 @@
       <property
          name="activityId">Delete</property>
       <property
-         name="x">223.5</property>
+         name="x">216.5</property>
       <property
          name="start">true</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>Delete&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
       <property
-         name="y">217.34473</property>
+         name="y">213.29297</property>
       <property
          name="exceptionHandler">false</property>
    </MethodCall>
@@ -22,11 +22,11 @@
       <property
          name="activityId">Commit</property>
       <property
-         name="x">498.5</property>
+         name="x">480.5</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>Commit&lt;/b>&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
       <property
-         name="y">246.14941</property>
+         name="y">243.14941</property>
       <property
          name="exceptionHandler">false</property>
    </MethodCall>
@@ -35,11 +35,11 @@
       <property
          name="activityId">taskFlowReturn1</property>
       <property
-         name="x">739.0</property>
+         name="x">699.0</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>taskFlowReturn1&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Return&lt;/p>&lt;p>Outcome:  taskFlowReturn1&lt;/p></property>
       <property
-         name="y">204.24707</property>
+         name="y">202.24707</property>
       <property
          name="finish">true</property>
       <property
@@ -53,7 +53,7 @@
       <property
          name="fromOutcome">Delete</property>
       <property
-         name="sdm:polyPoints">R50,264.5,216.99414,457.5,245.79883,L50</property>
+         name="sdm:polyPoints">R50,257.5,212.94238,439.5,242.79883,L50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -63,6 +63,6 @@
       <property
          name="fromOutcome">Commit</property>
       <property
-         name="sdm:polyPoints">R40,L47</property>
+         name="sdm:polyPoints">R50,521.5,242.79883,658.0,201.89648,L50</property>
    </ControlFlowCase>
 </SDM>

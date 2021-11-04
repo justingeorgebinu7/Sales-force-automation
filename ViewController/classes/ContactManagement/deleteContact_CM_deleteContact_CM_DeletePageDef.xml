@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.22.48"
+                id="deleteContact_CM_deleteContact_CM_DeletePageDef" Package="ContactManagement" SkipValidation="true">
+  <parameters/>
+  <executables>
+    <iterator Binds="CustomercontactsView1" RangeSize="25" DataControl="AppModuleDataControl"
+              id="CustomercontactsView1Iterator"/>
+  </executables>
+  <bindings>
+    <action IterBinding="CustomercontactsView1Iterator" id="Delete" RequiresUpdateModel="false"
+            Action="removeCurrentRow"/>
+  </bindings>
+</pageDefinition>

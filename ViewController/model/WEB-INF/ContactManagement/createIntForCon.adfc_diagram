@@ -30,7 +30,7 @@
       <property
          name="y">273.59766</property>
       <property
-         name="page">/CreateIntForContact.jsff</property>
+         name="page">/ContactManagementPages/CreateIntForContact.jsff</property>
       <property
          name="exceptionHandler">false</property>
    </View>
@@ -42,7 +42,7 @@
       <property
          name="fromOutcome">CreateInsert</property>
       <property
-         name="sdm:polyPoints">R50,374.6224,308.39645,536.3923,273.24707,L50</property>
+         name="sdm:polyPoints">R50,373.01465,308.39648,538.0,273.24707,L50</property>
    </ControlFlowCase>
    <MethodCall
       id="MethodCall5">
@@ -113,7 +113,7 @@
       <property
          name="fromOutcome">discard</property>
       <property
-         name="sdm:polyPoints">B50,579.0,328.85483,759.5,434.19107,T50</property>
+         name="sdm:polyPoints">B50,579.0,327.24707,759.5,435.79883,T50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"

@@ -17,7 +17,7 @@
       <property
          name="y">358.89648</property>
       <property
-         name="page">/InteractionsForContacts.jsff</property>
+         name="page">/ContactManagementPages/InteractionsForContacts.jsff</property>
       <property
          name="exceptionHandler">false</property>
    </View>
@@ -34,7 +34,7 @@
       <property
          name="y">243.24707</property>
       <property
-         name="page">/EditInteractionsForContacts.jsff</property>
+         name="page">/ContactManagementPages/EditInteractionsForContacts.jsff</property>
       <property
          name="exceptionHandler">false</property>
    </View>
@@ -65,9 +65,9 @@
       <property
          name="activityId">createIntForCon</property>
       <property
-         name="x">254.35352</property>
+         name="x">471.35352</property>
       <property
-         name="y">170.14941</property>
+         name="y">118.79883</property>
       <property
          name="documentReference">/WEB-INF/ContactManagement/createIntForCon.xml</property>
       <property
@@ -83,7 +83,7 @@
       <property
          name="fromOutcome">createInteraction</property>
       <property
-         name="sdm:polyPoints">T56,288.5,302.34396,254.35352,223.79883,B50</property>
+         name="sdm:polyPoints">T56,288.5,304.5459,471.35352,172.79883,B50</property>
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall9">

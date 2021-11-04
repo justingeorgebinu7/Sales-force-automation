@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:f="http://java.sun.com/jsf/core">
+  <af:panelFormLayout id="pfl1">
+    <af:inputText value="#{bindings.Name.inputValue}" label="#{bindings.Name.hints.label}"
+                  required="#{bindings.Name.hints.mandatory}" columns="#{bindings.Name.hints.displayWidth}"
+                  maximumLength="#{bindings.Name.hints.precision}" shortDesc="#{bindings.Name.hints.tooltip}" id="it1">
+      <f:validator binding="#{bindings.Name.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Title.inputValue}" label="#{bindings.Title.hints.label}"
+                  required="#{bindings.Title.hints.mandatory}" columns="#{bindings.Title.hints.displayWidth}"
+                  maximumLength="#{bindings.Title.hints.precision}" shortDesc="#{bindings.Title.hints.tooltip}"
+                  id="it2">
+      <f:validator binding="#{bindings.Title.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Department.inputValue}" label="#{bindings.Department.hints.label}"
+                  required="#{bindings.Department.hints.mandatory}" columns="#{bindings.Department.hints.displayWidth}"
+                  maximumLength="#{bindings.Department.hints.precision}"
+                  shortDesc="#{bindings.Department.hints.tooltip}" id="it3">
+      <f:validator binding="#{bindings.Department.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Workphone.inputValue}" label="#{bindings.Workphone.hints.label}"
+                  required="#{bindings.Workphone.hints.mandatory}" columns="#{bindings.Workphone.hints.displayWidth}"
+                  maximumLength="#{bindings.Workphone.hints.precision}" shortDesc="#{bindings.Workphone.hints.tooltip}"
+                  id="it4">
+      <f:validator binding="#{bindings.Workphone.validator}"/>
+      <af:convertNumber groupingUsed="false" pattern="#{bindings.Workphone.format}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Email.inputValue}" label="#{bindings.Email.hints.label}"
+                  required="#{bindings.Email.hints.mandatory}" columns="#{bindings.Email.hints.displayWidth}"
+                  maximumLength="#{bindings.Email.hints.precision}" shortDesc="#{bindings.Email.hints.tooltip}"
+                  id="it5">
+      <f:validator binding="#{bindings.Email.validator}"/>
+    </af:inputText>
+    <af:selectOneChoice value="#{bindings.Buyingrole.inputValue}" label="#{bindings.Buyingrole.label}"
+                        required="#{bindings.Buyingrole.hints.mandatory}"
+                        shortDesc="#{bindings.Buyingrole.hints.tooltip}" id="soc1">
+      <f:selectItems value="#{bindings.Buyingrole.items}" id="si1"/>
+      <f:validator binding="#{bindings.Buyingrole.validator}"/>
+    </af:selectOneChoice>
+    <af:selectOneChoice value="#{bindings.Influencelevel.inputValue}" label="#{bindings.Influencelevel.label}"
+                        required="#{bindings.Influencelevel.hints.mandatory}"
+                        shortDesc="#{bindings.Influencelevel.hints.tooltip}" id="soc2">
+      <f:selectItems value="#{bindings.Influencelevel.items}" id="si2"/>
+      <f:validator binding="#{bindings.Influencelevel.validator}"/>
+    </af:selectOneChoice>
+    <af:inputText value="#{bindings.Isprimarycontact.inputValue}" label="#{bindings.Isprimarycontact.hints.label}"
+                  required="#{bindings.Isprimarycontact.hints.mandatory}"
+                  columns="#{bindings.Isprimarycontact.hints.displayWidth}"
+                  maximumLength="#{bindings.Isprimarycontact.hints.precision}"
+                  shortDesc="#{bindings.Isprimarycontact.hints.tooltip}" id="it6">
+      <f:validator binding="#{bindings.Isprimarycontact.validator}"/>
+    </af:inputText>
+  </af:panelFormLayout>
+  <af:button text="Save" id="b1" action="tocommit"/>
+  <af:button actionListener="#{bindings.Delete.execute}" text="Cancel" disabled="#{!bindings.Delete.enabled}" id="b2"
+             action="tocommit"/>
+</ui:composition>

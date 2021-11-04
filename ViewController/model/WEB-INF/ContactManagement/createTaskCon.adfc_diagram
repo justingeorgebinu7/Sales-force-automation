@@ -7,76 +7,56 @@
       <property
          name="activityId">CreateInsert</property>
       <property
-         name="x">183.01465</property>
+         name="x">223.01465</property>
       <property
          name="start">true</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>CreateInsert&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
       <property
-         name="y">162.69531</property>
+         name="y">210.29297</property>
       <property
          name="exceptionHandler">false</property>
    </MethodCall>
    <View
       id="View3">
       <property
-         name="activityId">createInsertNoteForCon</property>
+         name="activityId">addTaskCon</property>
       <property
          name="pageFragment">true</property>
       <property
-         name="x">411.0</property>
+         name="x">406.0</property>
       <property
-         name="description">&lt;html>&lt;p>&lt;b>createInsertNoteForCon&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+         name="description">&lt;html>&lt;p>&lt;b>addTaskCon&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">148.59766</property>
+         name="y">180.89648</property>
       <property
-         name="page">/ContactManagementPages/createInsertNoteForCon.jsff</property>
+         name="page">/ContactManagementPages/addTaskCon.jsff</property>
       <property
          name="exceptionHandler">false</property>
    </View>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase4"
-      from="MethodCall2"
-      to="View3">
-      <property
-         name="fromOutcome">CreateInsert</property>
-      <property
-         name="sdm:polyPoints">R50,224.01465,162.69531,370.0,148.24707,L50</property>
-   </ControlFlowCase>
    <MethodCall
-      id="MethodCall5">
+      id="MethodCall4">
       <property
          name="activityId">Commit</property>
       <property
-         name="x">627.5</property>
+         name="x">592.5</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>Commit&lt;/b>&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
       <property
-         name="y">192.14941</property>
+         name="y">191.74707</property>
       <property
          name="exceptionHandler">false</property>
    </MethodCall>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase6"
-      from="View3"
-      to="MethodCall5">
-      <property
-         name="fromOutcome">*toCommit</property>
-      <property
-         name="sdm:polyPoints">R50,452.0,148.24707,586.5,191.79883,L50</property>
-   </ControlFlowCase>
    <TaskFlowReturn
-      id="TaskFlowReturn7">
+      id="TaskFlowReturn5">
       <property
          name="activityId">taskFlowReturn1</property>
       <property
-         name="x">786.0</property>
+         name="x">745.0</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>taskFlowReturn1&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Return&lt;/p>&lt;p>Outcome:  taskFlowReturn1&lt;/p></property>
       <property
-         name="y">187.24707</property>
+         name="y">193.84473</property>
       <property
          name="finish">true</property>
       <property
@@ -84,12 +64,32 @@
    </TaskFlowReturn>
    <ControlFlowCase
       islink="true"
+      id="ControlFlowCase6"
+      from="MethodCall2"
+      to="View3">
+      <property
+         name="fromOutcome">CreateInsert</property>
+      <property
+         name="sdm:polyPoints">R50,264.01465,209.94238,365.0,180.5459,L50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase7"
+      from="View3"
+      to="MethodCall4">
+      <property
+         name="fromOutcome">toCommit</property>
+      <property
+         name="sdm:polyPoints">R50,447.0,180.5459,551.5,191.39648,L50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
       id="ControlFlowCase8"
-      from="MethodCall5"
-      to="TaskFlowReturn7">
+      from="MethodCall4"
+      to="TaskFlowReturn5">
       <property
          name="fromOutcome">Commit</property>
       <property
-         name="sdm:polyPoints">R50,668.5,191.79883,745.0,186.89648,L50</property>
+         name="sdm:polyPoints">R50,633.5,191.39648,704.0,193.49414,L50</property>
    </ControlFlowCase>
 </SDM>

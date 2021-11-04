@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.22.48" id="editTaskForConPageDef"
+                Package="ContactManagementPages">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="TaskView4" RangeSize="25" DataControl="AppModuleDataControl" id="TaskView4Iterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="TaskView4Iterator" id="Name">
+      <AttrNames>
+        <Item Value="Name"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TaskView4Iterator" id="Duedate">
+      <AttrNames>
+        <Item Value="Duedate"/>
+      </AttrNames>
+    </attributeValues>
+    <list IterBinding="TaskView4Iterator" StaticList="false" Uses="LOV_Priority" id="Priority" DTSupportsMRU="false"
+          SelectItemValueMode="ListObject"/>
+    <attributeValues IterBinding="TaskView4Iterator" id="Description">
+      <AttrNames>
+        <Item Value="Description"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TaskView4Iterator" id="Percentageofcompletion">
+      <AttrNames>
+        <Item Value="Percentageofcompletion"/>
+      </AttrNames>
+    </attributeValues>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+  </bindings>
+</pageDefinition>

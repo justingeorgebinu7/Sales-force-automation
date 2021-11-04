@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="notesForContacts">
+    <default-activity>notesForContactTable</default-activity>
+    <data-control-scope>
+      <shared/>
+    </data-control-scope>
+    <view id="notesForContactTable">
+      <page>/ContactManagementPages/notesForContactTable.jsff</page>
+    </view>
+    <view id="editNotes">
+      <page>/ContactManagementPages/editNotes.jsff</page>
+    </view>
+    <task-flow-call id="addNotesContact">
+      <task-flow-reference>
+        <document>/WEB-INF/ContactManagement/addNotesContact.xml</document>
+        <id>addNotesContact</id>
+      </task-flow-reference>
+    </task-flow-call>
+    <task-flow-call id="deleteNotesContact">
+      <task-flow-reference>
+        <document>/WEB-INF/ContactManagement/deleteNotesContact.xml</document>
+        <id>deleteNotesContact</id>
+      </task-flow-reference>
+      <run-as-dialog/>
+    </task-flow-call>
+    <control-flow-rule id="__1">
+      <from-activity-id>notesForContactTable</from-activity-id>
+      <control-flow-case id="__2">
+        <from-outcome>toEdit</from-outcome>
+        <to-activity-id>editNotes</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__5">
+        <from-outcome>toadd</from-outcome>
+        <to-activity-id>addNotesContact</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__6">
+        <from-outcome>delete</from-outcome>
+        <to-activity-id>deleteNotesContact</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__3">
+      <from-activity-id>editNotes</from-activity-id>
+      <control-flow-case id="__4">
+        <from-outcome>backFromEdit</from-outcome>
+        <to-activity-id>notesForContactTable</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <use-page-fragments/>
+  </task-flow-definition>
+</adfc-config>
