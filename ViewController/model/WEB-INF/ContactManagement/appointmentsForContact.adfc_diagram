@@ -17,7 +17,7 @@
       <property
          name="y">354.89648</property>
       <property
-         name="page">/AppTableForContacts.jsff</property>
+         name="page">/ContactManagementPages/AppTableForContacts.jsff</property>
       <property
          name="exceptionHandler">false</property>
    </View>
@@ -28,13 +28,13 @@
       <property
          name="pageFragment">true</property>
       <property
-         name="x">621.0</property>
+         name="x">519.0</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>EditAppForContact&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">239.24707</property>
+         name="y">348.84473</property>
       <property
-         name="page">/EditAppForContact.jsff</property>
+         name="page">/ContactManagementPages/EditAppForContact.jsff</property>
       <property
          name="exceptionHandler">false</property>
    </View>
@@ -46,7 +46,7 @@
       <property
          name="fromOutcome">edit</property>
       <property
-         name="sdm:polyPoints">R46,408.0,351.0459,577.8544,235.39648,L46</property>
+         name="sdm:polyPoints">R46,408.0,351.0459,477.69733,344.99414,L46</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -56,7 +56,7 @@
       <property
          name="fromOutcome">exit</property>
       <property
-         name="sdm:polyPoints">L54,580.0,242.39648,410.13452,358.0459,R54</property>
+         name="sdm:polyPoints">L54,478.0,351.99414,408.30203,358.0459,R54</property>
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall9">
@@ -65,9 +65,9 @@
       <property
          name="activityId">deleteAppForContacts1</property>
       <property
-         name="x">268.0381</property>
+         name="x">208.03809</property>
       <property
-         name="y">67.94238</property>
+         name="y">110.24121</property>
       <property
          name="documentReference">/WEB-INF/ContactManagement/deleteAppForContacts.xml</property>
       <property
@@ -87,7 +87,7 @@
       <property
          name="fromsrcid">__6</property>
       <property
-         name="sdm:polyPoints">T50,367.0,300.5459,268.0381,121.5918,B50</property>
+         name="sdm:polyPoints">T50,367.0,300.5459,208.03809,163.89062,B50</property>
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall13">
@@ -96,9 +96,9 @@
       <property
          name="activityId">createAppointment</property>
       <property
-         name="x">767.36426</property>
+         name="x">162.36426</property>
       <property
-         name="y">500.1494</property>
+         name="y">490.44824</property>
       <property
          name="documentReference">/WEB-INF/ContactManagement/createAppointment.xml</property>
       <property
@@ -114,6 +114,97 @@
       <property
          name="fromOutcome">create</property>
       <property
-         name="sdm:polyPoints">R66,L38</property>
+         name="sdm:polyPoints">L50,326.0,354.5459,203.36426,490.09766,R50</property>
+   </ControlFlowCase>
+   <TaskFlowCall
+      id="TaskFlowCall12">
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>createInviteeInternal_con&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
+      <property
+         name="activityId">createInviteeInternal_con</property>
+      <property
+         name="x">767.37695</property>
+      <property
+         name="y">195.14941</property>
+      <property
+         name="documentReference">/WEB-INF/ContactManagement/createInviteeInternal_con.xml</property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="taskFlowId">createInviteeInternal_con</property>
+   </TaskFlowCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase13"
+      from="View6"
+      to="TaskFlowCall12">
+      <property
+         name="fromOutcome">toAddInviteeInternal</property>
+      <property
+         name="sdm:polyPoints">R50,560.0,348.49414,726.37695,194.79883,L50</property>
+   </ControlFlowCase>
+   <TaskFlowCall
+      id="TaskFlowCall14">
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>deleteInviteeInt_con&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
+      <property
+         name="activityId">deleteInviteeInt_con</property>
+      <property
+         name="x">796.70703</property>
+      <property
+         name="y">295.0459</property>
+      <property
+         name="documentReference">/WEB-INF/ContactManagement/deleteInviteeInt_con.xml</property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="taskFlowId">deleteInviteeInt_con</property>
+   </TaskFlowCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase15"
+      from="View6"
+      to="TaskFlowCall14">
+      <property
+         name="fromOutcome">deleteInternal</property>
+      <property
+         name="sdm:polyPoints">R46,561.74133,344.99414,755.70703,294.6953,L50</property>
+   </ControlFlowCase>
+   <View
+      id="View16">
+      <property
+         name="activityId">editInviteeinternal</property>
+      <property
+         name="pageFragment">true</property>
+      <property
+         name="x">786.0</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>editInviteeinternal&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">400.89648</property>
+      <property
+         name="page">/ContactManagementPages/editInviteeinternal.jsff</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase17"
+      from="View6"
+      to="View16">
+      <property
+         name="fromOutcome">toEditInternal</property>
+      <property
+         name="sdm:polyPoints">R54,560.84,351.99414,745.0,397.0459,L46</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase18"
+      from="View16"
+      to="View6">
+      <property
+         name="fromOutcome">backFromEdit</property>
+      <property
+         name="sdm:polyPoints">L54,744.1581,404.0459,560.0,358.99414,R62</property>
    </ControlFlowCase>
 </SDM>

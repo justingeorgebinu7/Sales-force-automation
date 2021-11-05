@@ -1077,6 +1077,46 @@
                                 <name>AppointmentsAndInteractions.addExternalInviteePageDef</name>
                                 <actions>view</actions>
                             </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/WEB-INF/ContactManagement/createInviteeInternal_con.xml#createInviteeInternal_con</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.share.security.authorization.RegionPermission</class>
+                                <name>ContactManagement.createInviteeInternal_con_createInviteeInternal_con_CreateInsertPageDef</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.share.security.authorization.RegionPermission</class>
+                                <name>ContactManagement.createInviteeInternal_con_createInviteeInternal_con_CommitPageDef</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.share.security.authorization.RegionPermission</class>
+                                <name>ContactManagementPages.addInvInternal_conPageDef</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/WEB-INF/ContactManagement/deleteInviteeInt_con.xml#deleteInviteeInt_con</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.share.security.authorization.RegionPermission</class>
+                                <name>ContactManagement.deleteInviteeInt_con_deleteInviteeInt_con_DeletePageDef</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.share.security.authorization.RegionPermission</class>
+                                <name>ContactManagement.deleteInviteeInt_con_deleteInviteeInt_con_CommitPageDef</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.share.security.authorization.RegionPermission</class>
+                                <name>ContactManagementPages.editInviteeinternalPageDef</name>
+                                <actions>view</actions>
+                            </permission>
                         </permissions>
                     </grant>
                     <grant>

@@ -23,6 +23,21 @@
         <id>createAppointment</id>
       </task-flow-reference>
     </task-flow-call>
+    <task-flow-call id="createInviteeInternal_con">
+      <task-flow-reference>
+        <document>/WEB-INF/ContactManagement/createInviteeInternal_con.xml</document>
+        <id>createInviteeInternal_con</id>
+      </task-flow-reference>
+    </task-flow-call>
+    <task-flow-call id="deleteInviteeInt_con">
+      <task-flow-reference>
+        <document>/WEB-INF/ContactManagement/deleteInviteeInt_con.xml</document>
+        <id>deleteInviteeInt_con</id>
+      </task-flow-reference>
+    </task-flow-call>
+    <view id="editInviteeinternal">
+      <page>/ContactManagementPages/editInviteeinternal.jsff</page>
+    </view>
     <control-flow-rule id="__1">
       <from-activity-id>AppTableForContacts</from-activity-id>
       <control-flow-case id="__3">
@@ -40,12 +55,31 @@
         <from-outcome>exit</from-outcome>
         <to-activity-id>AppTableForContacts</to-activity-id>
       </control-flow-case>
+      <control-flow-case id="__2">
+        <from-outcome>toAddInviteeInternal</from-outcome>
+        <to-activity-id>createInviteeInternal_con</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__8">
+        <from-outcome>deleteInternal</from-outcome>
+        <to-activity-id>deleteInviteeInt_con</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__9">
+        <from-outcome>toEditInternal</from-outcome>
+        <to-activity-id>editInviteeinternal</to-activity-id>
+      </control-flow-case>
     </control-flow-rule>
     <control-flow-rule id="__6">
       <from-activity-id>AppTableForContacts</from-activity-id>
       <control-flow-case id="__7">
         <from-outcome>deleteAppForContacts1</from-outcome>
         <to-activity-id>deleteAppForContacts1</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__11">
+      <from-activity-id>editInviteeinternal</from-activity-id>
+      <control-flow-case id="__12">
+        <from-outcome>backFromEdit</from-outcome>
+        <to-activity-id>EditAppForContact</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <use-page-fragments/>
