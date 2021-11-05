@@ -26,19 +26,20 @@
                                 <f:facet name="toolbar"/>
                                 <af:panelSpringboard id="ps5" displayMode="grid">
                                     <af:showDetailItem text="Customer Account Management" id="sdi1"
-                                                       icon="https://png.pngtree.com/svg/20170609/b512cb6c9c.png">
+                                                       icon="https://i.ibb.co/wJTJHKN/b512cb6c9c-1.png">
                                         <af:region value="#{bindings.CustomerAccountHomePageAddTF1.regionModel}" id="r1"
                                                    inlineStyle="alignment-adjust:middle;"/>
                                     </af:showDetailItem>
-                                    <af:showDetailItem text="Contact Management" id="sdi2" icon="/contacticon.jpg">
+                                    <af:showDetailItem text="Contact Management" id="sdi2"
+                                                       icon="https://i.ibb.co/Fs6RF3H/115-1150092-png-file-person-icon-1.png">
                                         <af:region value="#{bindings.conactManagementParent1.regionModel}" id="r2"/>
                                     </af:showDetailItem>
                                     <af:showDetailItem text="Opportunities" id="sdi3"
-                                                       icon="https://icon-library.com/images/opportunity-icon/opportunity-icon-6.jpg"/>
+                                                       icon="https://i.ibb.co/30FCByC/opportunity-icon-6.png"/>
                                     <af:showDetailItem text="Product Catalog" id="sdi4"
-                                                       icon="https://lh3.googleusercontent.com/proxy/FNOTcDEW8843DUPlcVE3vLtbpjegKX3-w90IVz99ET2F_zq-LXOrf6RMTAphhWO7V8OSH8Q1B6qEhrN4ioxSnwJdCnXKyy7komusd-sPImdgPNUDtp_LBvp1t1k1V9yfbiA"/>
+                                                       icon="https://i.ibb.co/k5JpT8s/unnamed-1.png"/>
                                     <af:showDetailItem text="User Management" id="sd15"
-                                                       icon="https://www.pinclipart.com/picdir/big/41-410871_social-media-management-circle-social-media-marketing-icon.png"/>
+                                                       icon="https://i.ibb.co/0Xfwvzk/41-410871-social-media-management-circle-social-media-marketing-icon-1.png"/>
                                 </af:panelSpringboard>
                             </af:panelBox>
                         </f:facet>

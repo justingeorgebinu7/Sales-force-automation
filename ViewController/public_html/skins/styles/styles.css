@@ -28,8 +28,8 @@ af|button {
 af|table {
     border-radius: 0px;
     overflow: hidden;
-    background-color:white;
-    border:none;
+    background-color: white;
+    border: none;
 }
 
 af|column::data-cell {
@@ -58,7 +58,7 @@ af|panelSpringboard::item {
 }
 
 af|panelSpringboard {
-margin-top:20px;
+    margin-top: 20px;
 }
 
 af|panelSpringboard::item-text {
@@ -72,7 +72,24 @@ af|panelSpringboard::body {
     /*border:none;*/
 }
 
- af|panelTabbed {
- padding-bottom:20px;
- padding-right:20px;
-    }
+af|panelTabbed {
+    padding-bottom: 20px;
+    padding-right: 20px;
+}
+
+af|panelTabbed::tab-text-link, af|panelTabbed::icon-style {
+    /*background-color: #f5ffff;*/
+}
+
+af|panelTabbed::access-key, af|panelTabbed::body, af|panelTabbed::body-end, af|panelTabbed::body-start, af|panelTabbed::bottom-conveyor-belt-indicator, af|panelTabbed::content, af|panelTabbed::content, af|panelTabbed::conveyor-belt-container, af|panelTabbed::disclosed-remove-disabled-icon, af|panelTabbed::disabled-remove-icon-style, af|panelTabbed::droplist-indicator, af|panelTabbed::end-conveyor-belt-indicator, af|panelTabbed::end-overflow-icon, af|panelTabbed::end-overflow-indicator, af|panelTabbed::footer, af|panelTabbed::header, af|panelTabbed::icon-style, af|panelTabbed::remove-disabled-icon, af|panelTabbed::start-conveyor-belt-indicator, af|panelTabbed::start-overflow-icon, af|panelTabbed::start-overflow-indicator, af|panelTabbed::tab, af|panelTabbed::tab-content, af|panelTabbed::tab-text-link, af|panelTabbed::tabs, af|panelTabbed::toggle, af|panelTabbed::toggle-icon-style, af|panelTabbed::top-conveyor-belt-indicator {
+    color: white;
+}
+
+af|inputText::content {
+    color: #555;
+    background-color: white;
+    padding: 18px 5px;
+    margin: 2px 10px;
+    border-radius:5px;
+    border: 2px solid #dde;
+}
