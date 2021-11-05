@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Association SYSTEM "jbo_03_01.dtd">
+<!---->
+<Association
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="InviteesExt_Appoinment_Assoc"
+  Version="12.2.1.22.48"
+  InheritPersonalization="merge">
+  <DesignTime>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <AssociationEnd
+    Name="Appointments"
+    Cardinality="1"
+    Source="true"
+    Owner="sfa.model.entities.Appointments"
+    CascadeDelete="true"
+    LockLevel="NONE">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="Appointments"/>
+      <Attr Name="_foreignKey" Value="sfa.model.entities.Appointments.AppointmentsPk"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="sfa.model.entities.Appointments.Appointmentid"/>
+    </AttrArray>
+  </AssociationEnd>
+  <AssociationEnd
+    Name="Inviteesext"
+    Cardinality="-1"
+    Owner="sfa.model.entities.Inviteesext">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="Inviteesext"/>
+      <Attr Name="_foreignKey" Value="sfa.model.entities.Inviteesext.fk_Inviteesext"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="sfa.model.entities.Inviteesext.Appoinmentid"/>
+    </AttrArray>
+  </AssociationEnd>
+</Association>

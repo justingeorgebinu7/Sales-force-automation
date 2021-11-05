@@ -138,6 +138,13 @@
     AssociationOtherEnd="sfa.model.entities.AppointmentsAccountAssoc.Appointments"
     Type="oracle.jbo.server.EntityImpl"
     IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="Inviteesext"
+    Association="sfa.model.entities.InviteesExt_Appoinment_Assoc"
+    AssociationEnd="sfa.model.entities.InviteesExt_Appoinment_Assoc.Inviteesext"
+    AssociationOtherEnd="sfa.model.entities.InviteesExt_Appoinment_Assoc.Appointments"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <Key
     Name="AppointmentsPk"
     PrimaryKey="true">

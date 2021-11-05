@@ -108,4 +108,9 @@
     Type="oracle.jbo.Row"
     Reversed="true"
     IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="InviteesextView"
+    ViewLink="sfa.model.entities.InviteesExt_AppoinmentFK_Link"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
 </ViewObject>

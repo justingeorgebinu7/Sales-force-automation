@@ -1,39 +1,87 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
                 xmlns:f="http://java.sun.com/jsf/core">
-  <af:panelFormLayout id="pfl1">
-    <af:inputText value="#{bindings.Name.inputValue}" label="#{bindings.Name.hints.label}"
-                  required="#{bindings.Name.hints.mandatory}" columns="#{bindings.Name.hints.displayWidth}"
-                  maximumLength="#{bindings.Name.hints.precision}" shortDesc="#{bindings.Name.hints.tooltip}" id="it1">
-      <f:validator binding="#{bindings.Name.validator}"/>
-    </af:inputText>
-    <af:inputDate value="#{bindings.Startdate.inputValue}" label="#{bindings.Startdate.hints.label}"
-                  required="#{bindings.Startdate.hints.mandatory}" columns="#{bindings.Startdate.hints.displayWidth}"
-                  shortDesc="#{bindings.Startdate.hints.tooltip}" id="id1">
-      <f:validator binding="#{bindings.Startdate.validator}"/>
-      <af:convertDateTime pattern="#{bindings.Startdate.format}"/>
-    </af:inputDate>
-    <af:inputDate value="#{bindings.Enddate.inputValue}" label="#{bindings.Enddate.hints.label}"
-                  required="#{bindings.Enddate.hints.mandatory}" columns="#{bindings.Enddate.hints.displayWidth}"
-                  shortDesc="#{bindings.Enddate.hints.tooltip}" id="id2">
-      <f:validator binding="#{bindings.Enddate.validator}"/>
-      <af:convertDateTime pattern="#{bindings.Enddate.format}"/>
-    </af:inputDate>
-    <af:inputText value="#{bindings.Description.inputValue}" label="#{bindings.Description.hints.label}"
-                  required="#{bindings.Description.hints.mandatory}"
-                  columns="#{bindings.Description.hints.displayWidth}"
-                  maximumLength="#{bindings.Description.hints.precision}"
-                  shortDesc="#{bindings.Description.hints.tooltip}" id="it2" rows="5">
-      <f:validator binding="#{bindings.Description.validator}"/>
-    </af:inputText>
-    <af:inputText value="#{bindings.Location.inputValue}" label="#{bindings.Location.hints.label}"
-                  required="#{bindings.Location.hints.mandatory}" columns="#{bindings.Location.hints.displayWidth}"
-                  maximumLength="#{bindings.Location.hints.precision}" shortDesc="#{bindings.Location.hints.tooltip}"
-                  id="it3">
-      <f:validator binding="#{bindings.Location.validator}"/>
-    </af:inputText>
-    <f:facet name="footer"/>
-  </af:panelFormLayout>
-  <af:button actionListener="#{bindings.Commit.execute}" text="Save" id="b1"/>
-  <af:button text="Cancel" id="b2" action="backFromEdit"/>
+  <af:panelSplitter id="ps1" orientation="vertical">
+    <f:facet name="first">
+      <af:panelFormLayout id="pfl1">
+        <af:inputText value="#{bindings.Name.inputValue}" label="#{bindings.Name.hints.label}"
+                      required="#{bindings.Name.hints.mandatory}" columns="#{bindings.Name.hints.displayWidth}"
+                      maximumLength="#{bindings.Name.hints.precision}" shortDesc="#{bindings.Name.hints.tooltip}"
+                      id="it1">
+          <f:validator binding="#{bindings.Name.validator}"/>
+        </af:inputText>
+        <af:inputDate value="#{bindings.Startdate.inputValue}" label="#{bindings.Startdate.hints.label}"
+                      required="#{bindings.Startdate.hints.mandatory}"
+                      columns="#{bindings.Startdate.hints.displayWidth}" shortDesc="#{bindings.Startdate.hints.tooltip}"
+                      id="id1">
+          <f:validator binding="#{bindings.Startdate.validator}"/>
+          <af:convertDateTime pattern="#{bindings.Startdate.format}"/>
+        </af:inputDate>
+        <af:inputDate value="#{bindings.Enddate.inputValue}" label="#{bindings.Enddate.hints.label}"
+                      required="#{bindings.Enddate.hints.mandatory}" columns="#{bindings.Enddate.hints.displayWidth}"
+                      shortDesc="#{bindings.Enddate.hints.tooltip}" id="id2">
+          <f:validator binding="#{bindings.Enddate.validator}"/>
+          <af:convertDateTime pattern="#{bindings.Enddate.format}"/>
+        </af:inputDate>
+        <af:inputText value="#{bindings.Description.inputValue}" label="#{bindings.Description.hints.label}"
+                      required="#{bindings.Description.hints.mandatory}"
+                      columns="#{bindings.Description.hints.displayWidth}"
+                      maximumLength="#{bindings.Description.hints.precision}"
+                      shortDesc="#{bindings.Description.hints.tooltip}" id="it2" rows="5">
+          <f:validator binding="#{bindings.Description.validator}"/>
+        </af:inputText>
+        <af:inputText value="#{bindings.Location.inputValue}" label="#{bindings.Location.hints.label}"
+                      required="#{bindings.Location.hints.mandatory}" columns="#{bindings.Location.hints.displayWidth}"
+                      maximumLength="#{bindings.Location.hints.precision}"
+                      shortDesc="#{bindings.Location.hints.tooltip}" id="it3">
+          <f:validator binding="#{bindings.Location.validator}"/>
+        </af:inputText>
+        <f:facet name="footer">
+          <af:button actionListener="#{bindings.Commit.execute}" text="Save" id="b1"/>
+          <af:button text="Cancel" id="b2" action="backFromEdit"/>
+        </f:facet>
+      </af:panelFormLayout>
+    </f:facet>
+    <f:facet name="second">
+      <af:panelSplitter id="ps2" splitterPosition="554">
+        <f:facet name="first">
+          <af:panelBox text="Invitees-Contacts" id="pb1">
+            <f:facet name="toolbar"/>
+            <af:table value="#{bindings.InviteesextView3.collectionModel}" var="row"
+                      rows="#{bindings.InviteesextView3.rangeSize}"
+                      emptyText="#{bindings.InviteesextView3.viewable ? 'No data to display.' : 'Access Denied.'}"
+                      rowBandingInterval="0" selectedRowKeys="#{bindings.InviteesextView3.collectionModel.selectedRow}"
+                      selectionListener="#{bindings.InviteesextView3.collectionModel.makeCurrent}" rowSelection="single"
+                      fetchSize="#{bindings.InviteesextView3.rangeSize}"
+                      filterModel="#{bindings.InviteesextView3Query.queryDescriptor}" filterVisible="true"
+                      queryListener="#{bindings.InviteesextView3Query.processQuery}" varStatus="vs" id="t1">
+              <af:column sortProperty="#{bindings.InviteesextView3.hints.Name.name}" filterable="true" sortable="true"
+                         headerText="#{bindings.InviteesextView3.hints.Name.label}" id="c1">
+                <af:outputText value="#{row.Name}" shortDesc="#{bindings.InviteesextView3.hints.Name.tooltip}"
+                               id="ot1"/>
+              </af:column>
+            </af:table>
+          </af:panelBox>
+        </f:facet>
+        <f:facet name="second">
+          <af:panelBox text="Invitees-Users" id="pb2">
+            <f:facet name="toolbar"/>
+            <af:table value="#{bindings.InviteesView3.collectionModel}" var="row"
+                      rows="#{bindings.InviteesView3.rangeSize}"
+                      emptyText="#{bindings.InviteesView3.viewable ? 'No data to display.' : 'Access Denied.'}"
+                      rowBandingInterval="0" selectedRowKeys="#{bindings.InviteesView3.collectionModel.selectedRow}"
+                      selectionListener="#{bindings.InviteesView3.collectionModel.makeCurrent}" rowSelection="single"
+                      fetchSize="#{bindings.InviteesView3.rangeSize}"
+                      filterModel="#{bindings.InviteesView3Query.queryDescriptor}" filterVisible="true"
+                      queryListener="#{bindings.InviteesView3Query.processQuery}" varStatus="vs" id="t2">
+              <af:column sortProperty="#{bindings.InviteesView3.hints.Name.name}" filterable="true" sortable="true"
+                         headerText="#{bindings.InviteesView3.hints.Name.label}" id="c2">
+                <af:outputText value="#{row.Name}" shortDesc="#{bindings.InviteesView3.hints.Name.tooltip}" id="ot2"/>
+              </af:column>
+            </af:table>
+          </af:panelBox>
+        </f:facet>
+      </af:panelSplitter>
+    </f:facet>
+  </af:panelSplitter>
 </ui:composition>
