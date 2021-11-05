@@ -206,6 +206,16 @@
           usageId="sfa_view_deleteNotesContact_deleteNotesContact_DeletePageDef"/>
     <page path="/WEB-INF/ContactManagement/deleteNotesContact.xml#deleteNotesContact@Commit"
           usageId="sfa_view_deleteNotesContact_deleteNotesContact_CommitPageDef"/>
+    <page path="/WEB-INF/AppointmentsAndInteraction/createInviteeInternal.xml#createInviteeInternal@Commit"
+          usageId="sfa_view_createInviteeInternal_createInviteeInternal_CommitPageDef"/>
+    <page path="/AppointmentsAndInteractions/addInviteeInternal.jsff" usageId="sfa_view_addInviteeInternalPageDef"/>
+    <page path="/WEB-INF/AppointmentsAndInteraction/createInviteeInternal.xml#createInviteeInternal@CreateInsert"
+          usageId="sfa_view_createInviteeInternal_createInviteeInternal_CreateInsertPageDef"/>
+    <page path="/WEB-INF/AppointmentsAndInteraction/deleteInviteeInternal.xml#deleteInviteeInternal@Delete"
+          usageId="sfa_view_deleteInviteeInternal_deleteInviteeInternal_DeletePageDef"/>
+    <page path="/WEB-INF/AppointmentsAndInteraction/deleteInviteeInternal.xml#deleteInviteeInternal@Commit"
+          usageId="sfa_view_deleteInviteeInternal_deleteInviteeInternal_CommitPageDef"/>
+    <page path="/AppointmentsAndInteractions/editInviteeInternal.jsff" usageId="sfa_view_editInviteeInternalPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="sfa_view_untitled2PageDef" path="sfa.view.pageDefs.untitled2PageDef"/>
@@ -405,6 +415,16 @@
           path="ContactManagement.deleteNotesContact_deleteNotesContact_DeletePageDef"/>
     <page id="sfa_view_deleteNotesContact_deleteNotesContact_CommitPageDef"
           path="ContactManagement.deleteNotesContact_deleteNotesContact_CommitPageDef"/>
+    <page id="sfa_view_createInviteeInternal_createInviteeInternal_CommitPageDef"
+          path="AppointmentsAndInteraction.createInviteeInternal_createInviteeInternal_CommitPageDef"/>
+    <page id="sfa_view_addInviteeInternalPageDef" path="AppointmentsAndInteractions.addInviteeInternalPageDef"/>
+    <page id="sfa_view_createInviteeInternal_createInviteeInternal_CreateInsertPageDef"
+          path="AppointmentsAndInteraction.createInviteeInternal_createInviteeInternal_CreateInsertPageDef"/>
+    <page id="sfa_view_deleteInviteeInternal_deleteInviteeInternal_DeletePageDef"
+          path="AppointmentsAndInteraction.deleteInviteeInternal_deleteInviteeInternal_DeletePageDef"/>
+    <page id="sfa_view_deleteInviteeInternal_deleteInviteeInternal_CommitPageDef"
+          path="AppointmentsAndInteraction.deleteInviteeInternal_deleteInviteeInternal_CommitPageDef"/>
+    <page id="sfa_view_editInviteeInternalPageDef" path="AppointmentsAndInteractions.editInviteeInternalPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="sfa.model.entities"

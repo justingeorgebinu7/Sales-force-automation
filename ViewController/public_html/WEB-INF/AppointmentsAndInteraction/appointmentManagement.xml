@@ -23,8 +23,21 @@
         <id>deleteAppointmentTF</id>
       </task-flow-reference>
     </task-flow-call>
-    <view id="invitees">
-      <page>/invitees.jsff</page>
+    <task-flow-call id="createInviteeInternal">
+      <task-flow-reference>
+        <document>/WEB-INF/AppointmentsAndInteraction/createInviteeInternal.xml</document>
+        <id>createInviteeInternal</id>
+      </task-flow-reference>
+    </task-flow-call>
+    <task-flow-call id="deleteInviteeInternal">
+      <task-flow-reference>
+        <document>/WEB-INF/AppointmentsAndInteraction/deleteInviteeInternal.xml</document>
+        <id>deleteInviteeInternal</id>
+      </task-flow-reference>
+      <run-as-dialog/>
+    </task-flow-call>
+    <view id="editInviteeInternal">
+      <page>/AppointmentsAndInteractions/editInviteeInternal.jsff</page>
     </view>
     <control-flow-rule id="__1">
       <from-activity-id>AppointmentTable</from-activity-id>
@@ -36,16 +49,24 @@
         <from-outcome>createAppointment</from-outcome>
         <to-activity-id>createAppointmentTF</to-activity-id>
       </control-flow-case>
-      <control-flow-case id="__7">
-        <from-outcome>viewInvitees</from-outcome>
-        <to-activity-id>invitees</to-activity-id>
-      </control-flow-case>
     </control-flow-rule>
     <control-flow-rule id="__4">
       <from-activity-id>EditAppointments</from-activity-id>
       <control-flow-case id="__5">
         <from-outcome>backFromEdit</from-outcome>
         <to-activity-id>AppointmentTable</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__7">
+        <from-outcome>addInviteeInternal</from-outcome>
+        <to-activity-id>createInviteeInternal</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__9">
+        <from-outcome>deleteInviteeInternal</from-outcome>
+        <to-activity-id>deleteInviteeInternal</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__10">
+        <from-outcome>editInviteeInternal</from-outcome>
+        <to-activity-id>editInviteeInternal</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <control-flow-rule id="__3">
@@ -55,11 +76,11 @@
         <to-activity-id>deleteAppointmentTF1</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
-    <control-flow-rule id="__9">
-      <from-activity-id>invitees</from-activity-id>
-      <control-flow-case id="__10">
-        <from-outcome>backFromInvitees</from-outcome>
-        <to-activity-id>AppointmentTable</to-activity-id>
+    <control-flow-rule id="__11">
+      <from-activity-id>editInviteeInternal</from-activity-id>
+      <control-flow-case id="__12">
+        <from-outcome>backFromEditInternal</from-outcome>
+        <to-activity-id>EditAppointments</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <use-page-fragments/>

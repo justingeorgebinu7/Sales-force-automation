@@ -9,13 +9,13 @@
       <property
          name="pageFragment">true</property>
       <property
-         name="x">291.0</property>
+         name="x">219.0</property>
       <property
          name="start">true</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>AppointmentTable&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">328.0918</property>
+         name="y">275.39062</property>
       <property
          name="page">/AppointmentsAndInteractions/AppointmentTable.jsff</property>
       <property
@@ -28,11 +28,11 @@
       <property
          name="pageFragment">true</property>
       <property
-         name="x">583.0</property>
+         name="x">448.0</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>EditAppointments&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">223.19531</property>
+         name="y">253.0918</property>
       <property
          name="page">/AppointmentsAndInteractions/EditAppointments.jsff</property>
       <property
@@ -46,7 +46,7 @@
       <property
          name="fromOutcome">editAppointments</property>
       <property
-         name="sdm:polyPoints">R46,332.0,324.2412,540.34314,219.34473,L46</property>
+         name="sdm:polyPoints">R46,260.0,271.54004,406.47116,249.24121,L46</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -56,7 +56,7 @@
       <property
          name="fromOutcome">backFromEdit</property>
       <property
-         name="sdm:polyPoints">L54,542.0,226.34473,333.65103,331.2412,R54</property>
+         name="sdm:polyPoints">L54,407.0,256.2412,260.5279,278.54004,R54</property>
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall11">
@@ -65,9 +65,9 @@
       <property
          name="activityId">createAppointmentTF</property>
       <property
-         name="x">471.69434</property>
+         name="x">419.69434</property>
       <property
-         name="y">510.1494</property>
+         name="y">428.44824</property>
       <property
          name="documentReference">/WEB-INF/AppointmentsAndInteraction/createAppointmentTF.xml</property>
       <property
@@ -83,7 +83,7 @@
       <property
          name="fromOutcome">createAppointment</property>
       <property
-         name="sdm:polyPoints">B50,291.0,381.7412,430.69434,509.79883,L50</property>
+         name="sdm:polyPoints">B50,219.0,329.04004,378.69434,428.09766,L50</property>
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall12">
@@ -92,9 +92,9 @@
       <property
          name="activityId">deleteAppointmentTF1</property>
       <property
-         name="x">491.70312</property>
+         name="x">298.70312</property>
       <property
-         name="y">99.34473</property>
+         name="y">99.643555</property>
       <property
          name="documentReference">/WEB-INF/AppointmentsAndInteraction/deleteAppointmentTF.xml</property>
       <property
@@ -114,43 +114,99 @@
       <property
          name="fromsrcid">__3</property>
       <property
-         name="sdm:polyPoints">T61,298.0,273.7412,491.70312,152.99414,B50</property>
+         name="sdm:polyPoints">T50,219.0,221.04004,298.70312,153.29297,B50</property>
+   </ControlFlowCase>
+   <TaskFlowCall
+      id="TaskFlowCall16">
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>createInviteeInternal&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
+      <property
+         name="activityId">createInviteeInternal</property>
+      <property
+         name="x">758.3662</property>
+      <property
+         name="y">2.3447266</property>
+      <property
+         name="documentReference">/WEB-INF/AppointmentsAndInteraction/createInviteeInternal.xml</property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="taskFlowId">createInviteeInternal</property>
+   </TaskFlowCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase17"
+      from="View3"
+      to="TaskFlowCall16">
+      <property
+         name="fromOutcome">addInviteeInternal</property>
+      <property
+         name="sdm:polyPoints">T50,448.0,198.74121,717.3662,1.9941406,L50</property>
+   </ControlFlowCase>
+   <TaskFlowCall
+      id="TaskFlowCall15">
+      <property
+         name="runAsDialog">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>deleteInviteeInternal&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
+      <property
+         name="activityId">deleteInviteeInternal</property>
+      <property
+         name="x">802.0381</property>
+      <property
+         name="y">126.74707</property>
+      <property
+         name="documentReference">/WEB-INF/AppointmentsAndInteraction/deleteInviteeInternal.xml</property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="taskFlowId">deleteInviteeInternal</property>
+   </TaskFlowCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase16"
+      from="View3"
+      to="TaskFlowCall15">
+      <property
+         name="fromOutcome">deleteInviteeInternal</property>
+      <property
+         name="sdm:polyPoints">R50,489.0,252.74121,761.0381,126.396484,L50</property>
    </ControlFlowCase>
    <View
-      id="View11">
+      id="View17">
       <property
-         name="activityId">invitees</property>
+         name="activityId">editInviteeInternal</property>
       <property
          name="pageFragment">true</property>
       <property
-         name="x">214.0</property>
+         name="x">791.0</property>
       <property
-         name="description">&lt;html>&lt;p>&lt;b>invitees&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+         name="description">&lt;html>&lt;p>&lt;b>editInviteeInternal&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">84.29883</property>
+         name="y">245.59766</property>
       <property
-         name="page">/invitees.jsff</property>
+         name="page">/AppointmentsAndInteractions/editInviteeInternal.jsff</property>
       <property
          name="exceptionHandler">false</property>
    </View>
    <ControlFlowCase
       islink="true"
-      id="ControlFlowCase14"
-      from="View2"
-      to="View11">
+      id="ControlFlowCase18"
+      from="View3"
+      to="View17">
       <property
-         name="fromOutcome">viewInvitees</property>
+         name="fromOutcome">editInviteeInternal</property>
       <property
-         name="sdm:polyPoints">T39,284.0,273.7412,210.5,139.73145,B44</property>
+         name="sdm:polyPoints">R58,489.95502,259.7412,750.0,248.74707,L54</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
-      id="ControlFlowCase15"
-      from="View11"
-      to="View2">
+      id="ControlFlowCase19"
+      from="View17"
+      to="View3">
       <property
-         name="fromOutcome">backFromInvitees</property>
+         name="fromOutcome">backFromEditInternal</property>
       <property
-         name="sdm:polyPoints">B56,217.5,137.94824,291.0,271.9683,T50</property>
+         name="sdm:polyPoints">L46,749.8521,241.74707,489.80765,252.74121,R50</property>
    </ControlFlowCase>
 </SDM>

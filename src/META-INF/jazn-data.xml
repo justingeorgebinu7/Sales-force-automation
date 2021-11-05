@@ -977,6 +977,51 @@
                                 <name>ContactManagement.deleteNotesContact_deleteNotesContact_CommitPageDef</name>
                                 <actions>view</actions>
                             </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/WEB-INF/AppointmentsAndInteraction/createInviteeInternal.xml#createInviteeInternal</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/WEB-INF/AppointmentsAndInteraction/createInviteeExternal.xml#createInviteeExternal</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.share.security.authorization.RegionPermission</class>
+                                <name>AppointmentsAndInteraction.createInviteeInternal_createInviteeInternal_CreateInsertPageDef</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.share.security.authorization.RegionPermission</class>
+                                <name>AppointmentsAndInteraction.createInviteeInternal_createInviteeInternal_CommitPageDef</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.share.security.authorization.RegionPermission</class>
+                                <name>AppointmentsAndInteractions.addInviteeInternalPageDef</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/WEB-INF/AppointmentsAndInteraction/deleteInviteeInternal.xml#deleteInviteeInternal</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.share.security.authorization.RegionPermission</class>
+                                <name>AppointmentsAndInteraction.deleteInviteeInternal_deleteInviteeInternal_DeletePageDef</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.share.security.authorization.RegionPermission</class>
+                                <name>AppointmentsAndInteraction.deleteInviteeInternal_deleteInviteeInternal_CommitPageDef</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.share.security.authorization.RegionPermission</class>
+                                <name>AppointmentsAndInteractions.editInviteeInternalPageDef</name>
+                                <actions>view</actions>
+                            </permission>
                         </permissions>
                     </grant>
                     <grant>

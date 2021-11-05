@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
-                xmlns:f="http://java.sun.com/jsf/core">
+                xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html">
   <af:panelSplitter id="ps1" orientation="vertical">
     <f:facet name="first">
       <af:panelFormLayout id="pfl1">
@@ -66,7 +66,12 @@
         </f:facet>
         <f:facet name="second">
           <af:panelBox text="Invitees-Users" id="pb2">
-            <f:facet name="toolbar"/>
+            <f:facet name="toolbar">
+              <af:menuBar id="mb1">
+                <af:commandMenuItem text="Add" id="cmi1" action="addInviteeInternal"/>
+                <af:commandMenuItem text="Delete" id="cmi2" action="deleteInviteeInternal"/>
+              </af:menuBar>
+            </f:facet>
             <af:table value="#{bindings.InviteesView3.collectionModel}" var="row"
                       rows="#{bindings.InviteesView3.rangeSize}"
                       emptyText="#{bindings.InviteesView3.viewable ? 'No data to display.' : 'Access Denied.'}"
@@ -78,7 +83,8 @@
                       columnStretching="last">
               <af:column sortProperty="#{bindings.InviteesView3.hints.Name.name}" filterable="true" sortable="true"
                          headerText="#{bindings.InviteesView3.hints.Name.label}" id="c2">
-                <af:outputText value="#{row.Name}" shortDesc="#{bindings.InviteesView3.hints.Name.tooltip}" id="ot2"/>
+                <af:link shortDesc="#{bindings.InviteesView3.hints.Name.tooltip}" id="ot2" text="#{row.Name}"
+                         action="editInviteeInternal"/>
               </af:column>
             </af:table>
           </af:panelBox>

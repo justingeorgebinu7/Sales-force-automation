@@ -10,7 +10,12 @@
   DBObjectName="INVITEES"
   AliasName="Invitees"
   BindingStyle="OracleName"
-  xmlns:validation="http://xmlns.oracle.com/adfm/validation">
+  xmlns:validation="http://xmlns.oracle.com/adfm/validation"
+  RowClass="sfa.model.entities.InviteesImpl">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Init|Access"/>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
   <Attribute
     Name="Inviteeid"
     IsNotNull="true"
