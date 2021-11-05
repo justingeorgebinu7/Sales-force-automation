@@ -43,7 +43,7 @@
       </af:panelFormLayout>
     </f:facet>
     <f:facet name="second">
-      <af:panelSplitter id="ps2" splitterPosition="554">
+      <af:panelSplitter id="ps2" splitterPosition="567">
         <f:facet name="first">
           <af:panelBox text="Invitees-Contacts" id="pb1">
             <f:facet name="toolbar"/>
@@ -54,7 +54,8 @@
                       selectionListener="#{bindings.InviteesextView3.collectionModel.makeCurrent}" rowSelection="single"
                       fetchSize="#{bindings.InviteesextView3.rangeSize}"
                       filterModel="#{bindings.InviteesextView3Query.queryDescriptor}" filterVisible="true"
-                      queryListener="#{bindings.InviteesextView3Query.processQuery}" varStatus="vs" id="t1">
+                      queryListener="#{bindings.InviteesextView3Query.processQuery}" varStatus="vs" id="t1"
+                      columnStretching="last">
               <af:column sortProperty="#{bindings.InviteesextView3.hints.Name.name}" filterable="true" sortable="true"
                          headerText="#{bindings.InviteesextView3.hints.Name.label}" id="c1">
                 <af:outputText value="#{row.Name}" shortDesc="#{bindings.InviteesextView3.hints.Name.tooltip}"
@@ -73,7 +74,8 @@
                       selectionListener="#{bindings.InviteesView3.collectionModel.makeCurrent}" rowSelection="single"
                       fetchSize="#{bindings.InviteesView3.rangeSize}"
                       filterModel="#{bindings.InviteesView3Query.queryDescriptor}" filterVisible="true"
-                      queryListener="#{bindings.InviteesView3Query.processQuery}" varStatus="vs" id="t2">
+                      queryListener="#{bindings.InviteesView3Query.processQuery}" varStatus="vs" id="t2"
+                      columnStretching="last">
               <af:column sortProperty="#{bindings.InviteesView3.hints.Name.name}" filterable="true" sortable="true"
                          headerText="#{bindings.InviteesView3.hints.Name.label}" id="c2">
                 <af:outputText value="#{row.Name}" shortDesc="#{bindings.InviteesView3.hints.Name.tooltip}" id="ot2"/>

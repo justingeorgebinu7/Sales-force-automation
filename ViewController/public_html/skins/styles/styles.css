@@ -26,8 +26,10 @@ af|button {
 }
 
 af|table {
-    border-radius: 10px;
+    border-radius: 0px;
     overflow: hidden;
+    background-color:white;
+    border:none;
 }
 
 af|column::data-cell {
@@ -55,7 +57,8 @@ af|panelSpringboard::item {
     margin: 0 5px;
 }
 
-af|panelSpringboard::item {
+af|panelSpringboard {
+margin-top:20px;
 }
 
 af|panelSpringboard::item-text {
@@ -64,7 +67,12 @@ af|panelSpringboard::item-text {
 }
 
 af|panelSpringboard::body {
-    margin-top: 10px;
+    margin-top: 30px;
     padding: 20px 20px;
     /*border:none;*/
 }
+
+ af|panelTabbed {
+ padding-bottom:20px;
+ padding-right:20px;
+    }

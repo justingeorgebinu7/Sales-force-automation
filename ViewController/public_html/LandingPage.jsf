@@ -7,102 +7,42 @@
     <af:document title="CustAccountHome.jsf" id="d1">
         <af:messages id="m1"/>
         <af:form id="f1">
-            <af:panelSplitter orientation="vertical" splitterPosition="130" id="ps2">
-                <f:facet name="first">
-                    <af:panelGridLayout id="pgl2">
-                        <af:gridRow marginTop="0px" height="auto" id="gr2">
-                            <af:gridCell marginStart="0px" columnSpan="3" marginEnd="0px" id="gc1">
-                                <div style="box-shadow: 0 5px 5px -2px rgba(0,0,0,.2);overflow:hidden;padding-bottom:10px;background-color:white; font-size:13px; width:100vw;">
-                                    <img alt="img" src="https://i.ibb.co/HrRP1ZH/logosq.jpg"
-                                         style="height:110px;float:left;"/>
-                                    <div style="margin-top:50px;margin-left:20px">
-                                        Welcome,
-                                        <br/>You are logged in as 
-                                        #{securityContext.userName}
-                                    </div>
-                                </div>
-                            </af:gridCell>
-                        </af:gridRow>
-                        <af:gridRow marginTop="0px" height="auto" marginBottom="0px" id="gr3">
-                            <af:gridCell marginStart="0px" rowSpan="2" width="20%" id="gc5"/>
-                            <af:gridCell marginStart="0px" rowSpan="2" columnSpan="2" marginEnd="0px" id="gc6"/>
-                        </af:gridRow>
-                    </af:panelGridLayout>
-                </f:facet>
+            <div style="z-index:20;position:fixed;overflow:hidden; top:10px;left:10px;font-size:13px;">
+                <img alt="img" src="https://i.ibb.co/HrRP1ZH/logosq.jpg" style="height:120px;float:left;"/>
+            </div>
+            <div style="z-index:20;position:fixed;overflow:hidden; top:40px;right:30px;font-size:13px;">
+            <button style="color: #149;border:.5px solid #ccc;border-bottom: 2px solid #149;border-radius: 5px;font-weight:bold;padding: 10px 20px;background-color: #fff;">Logout</button>
+            </div>
+            <af:panelSplitter id="ps1" orientation="vertical">
+                <f:facet name="first"/>
                 <f:facet name="second">
-                    <af:panelSplitter orientation="horizontal" splitterPosition="0" id="ps1">
-                        <f:facet name="first">
-                            <af:panelGridLayout id="pgl3">
-                                <af:gridRow marginTop="0px" height="auto" marginBottom="0px" id="gr5">
-                                    <af:gridCell marginStart="0px" rowSpan="2" width="20%" id="gc7"/>
-                                    <af:gridCell marginStart="0px" rowSpan="2" columnSpan="2" marginEnd="0px" id="gc8"/>
-                                </af:gridRow>
-                            </af:panelGridLayout>
+                    <af:panelStretchLayout id="psl1">
+                        <f:facet name="start"/>
+                        <f:facet name="end"/>
+                        <f:facet name="top"/>
+                        <f:facet name="bottom"/>
+                        <f:facet name="center">
+                            <af:panelBox id="pb1">
+                                <f:facet name="toolbar"/>
+                                <af:panelSpringboard id="ps5" displayMode="grid">
+                                    <af:showDetailItem text="Customer Account Management" id="sdi1"
+                                                       icon="https://png.pngtree.com/svg/20170609/b512cb6c9c.png">
+                                        <af:region value="#{bindings.CustomerAccountHomePageAddTF1.regionModel}" id="r1"
+                                                   inlineStyle="alignment-adjust:middle;"/>
+                                    </af:showDetailItem>
+                                    <af:showDetailItem text="Contact Management" id="sdi2" icon="/contacticon.jpg">
+                                        <af:region value="#{bindings.conactManagementParent1.regionModel}" id="r2"/>
+                                    </af:showDetailItem>
+                                    <af:showDetailItem text="Opportunities" id="sdi3"
+                                                       icon="https://icon-library.com/images/opportunity-icon/opportunity-icon-6.jpg"/>
+                                    <af:showDetailItem text="Product Catalog" id="sdi4"
+                                                       icon="https://lh3.googleusercontent.com/proxy/FNOTcDEW8843DUPlcVE3vLtbpjegKX3-w90IVz99ET2F_zq-LXOrf6RMTAphhWO7V8OSH8Q1B6qEhrN4ioxSnwJdCnXKyy7komusd-sPImdgPNUDtp_LBvp1t1k1V9yfbiA"/>
+                                    <af:showDetailItem text="User Management" id="sd15"
+                                                       icon="https://www.pinclipart.com/picdir/big/41-410871_social-media-management-circle-social-media-marketing-icon.png"/>
+                                </af:panelSpringboard>
+                            </af:panelBox>
                         </f:facet>
-                        <f:facet name="second">
-                            <af:panelSplitter id="ps3" orientation="vertical" splitterPosition="19">
-                                <f:facet name="first"/>
-                                <f:facet name="second">
-                                    <af:panelSplitter id="ps4" splitterPosition="1300">
-                                        <f:facet name="first">
-                                            <af:panelStretchLayout id="psl1" dimensionsFrom="parent" startWidth="0px"
-                                                                   endWidth="0px" topHeight="19px" bottomHeight="0px">
-                                                <f:facet name="start"/>
-                                                <f:facet name="end"/>
-                                                <f:facet name="top"/>
-                                                <f:facet name="bottom"/>
-                                                <f:facet name="center">
-                                                    <af:panelSplitter id="ps6" splitterPosition="0">
-                                                        <f:facet name="first">
-                                                            <af:spacer id="s1" width="5px"/>
-                                                        </f:facet>
-                                                        <f:facet name="second">
-                                                            <af:panelSplitter id="ps7" splitterPosition="1400">
-                                                                <f:facet name="first">
-                                                                    <af:panelBox id="pb1"
-                                                                                 inlineStyle="border-radius:25px 25px 25px 25px;"
-                                                                                 titleHalign="right">
-                                                                        <f:facet name="toolbar"/>
-                                                                        <af:panelSpringboard id="ps5"
-                                                                                             displayMode="grid"
-                                                                                             inlineStyle="border-color:red;">
-                                                                            <af:showDetailItem text="Customer Account Management"
-                                                                                               id="sdi1"
-                                                                                               icon="/accounticon.png">
-                                                                                <af:region value="#{bindings.CustomerAccountHomePageAddTF1.regionModel}"
-                                                                                           id="r1"
-                                                                                           inlineStyle="alignment-adjust:middle;"/>
-                                                                            </af:showDetailItem>
-                                                                            <af:showDetailItem text="Contact Management"
-                                                                                               id="sdi2"
-                                                                                               icon="/contacticon.jpg">
-                                                                                <af:region value="#{bindings.conactManagementParent1.regionModel}"
-                                                                                           id="r2"/>
-                                                                            </af:showDetailItem>
-                                                                            <af:showDetailItem text="Opportunities"
-                                                                                               id="sdi3"
-                                                                                               icon="https://icon-library.com/images/opportunity-icon/opportunity-icon-6.jpg"/>
-                                                                            <af:showDetailItem text="Logout"
-                                                                                               id="sdi4"
-                                                                                               icon="https://www.pngkey.com/png/full/242-2424177_exit-assessment-exit-png.png"/>
-                                                                        </af:panelSpringboard>
-                                                                    </af:panelBox>
-                                                                </f:facet>
-                                                                <f:facet name="second">
-                                                                    <af:spacer id="s2" width="5px"/>
-                                                                </f:facet>
-                                                            </af:panelSplitter>
-                                                        </f:facet>
-                                                    </af:panelSplitter>
-                                                </f:facet>
-                                            </af:panelStretchLayout>
-                                        </f:facet>
-                                        <f:facet name="second"/>
-                                    </af:panelSplitter>
-                                </f:facet>
-                            </af:panelSplitter>
-                        </f:facet>
-                    </af:panelSplitter>
+                    </af:panelStretchLayout>
                 </f:facet>
             </af:panelSplitter>
         </af:form>
