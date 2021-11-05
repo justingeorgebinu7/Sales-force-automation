@@ -46,7 +46,12 @@
       <af:panelSplitter id="ps2" splitterPosition="502">
         <f:facet name="first">
           <af:panelBox text="Invitees-Contacts" id="pb1">
-            <f:facet name="toolbar"/>
+            <f:facet name="toolbar">
+              <af:menuBar id="mb2">
+                <af:commandMenuItem text="Add" id="cmi3" action="toAddExt"/>
+                <af:commandMenuItem text="Delete" id="cmi4" action="toDeleteExt"/>
+              </af:menuBar>
+            </f:facet>
             <af:table value="#{bindings.InviteesextView5.collectionModel}" var="row"
                       rows="#{bindings.InviteesextView5.rangeSize}"
                       emptyText="#{bindings.InviteesextView5.viewable ? 'No data to display.' : 'Access Denied.'}"
@@ -58,8 +63,8 @@
                       columnStretching="last">
               <af:column sortProperty="#{bindings.InviteesextView5.hints.Name.name}" filterable="true" sortable="true"
                          headerText="#{bindings.InviteesextView5.hints.Name.label}" id="c1">
-                <af:outputText value="#{row.Name}" shortDesc="#{bindings.InviteesextView5.hints.Name.tooltip}"
-                               id="ot1"/>
+                <af:link shortDesc="#{bindings.InviteesextView5.hints.Name.tooltip}" id="ot1" text="#{row.Name}"
+                         action="toEditExt"/>
               </af:column>
             </af:table>
           </af:panelBox>

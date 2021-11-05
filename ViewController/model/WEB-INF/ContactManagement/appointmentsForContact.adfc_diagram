@@ -123,9 +123,9 @@
       <property
          name="activityId">createInviteeInternal_con</property>
       <property
-         name="x">767.37695</property>
+         name="x">798.37695</property>
       <property
-         name="y">195.14941</property>
+         name="y">139.74707</property>
       <property
          name="documentReference">/WEB-INF/ContactManagement/createInviteeInternal_con.xml</property>
       <property
@@ -141,10 +141,12 @@
       <property
          name="fromOutcome">toAddInviteeInternal</property>
       <property
-         name="sdm:polyPoints">R50,560.0,348.49414,726.37695,194.79883,L50</property>
+         name="sdm:polyPoints">T50,519.0,294.49414,757.37695,139.39648,L50</property>
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall14">
+      <property
+         name="runAsDialog">true</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>deleteInviteeInt_con&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
       <property
@@ -152,7 +154,7 @@
       <property
          name="x">796.70703</property>
       <property
-         name="y">295.0459</property>
+         name="y">259.34473</property>
       <property
          name="documentReference">/WEB-INF/ContactManagement/deleteInviteeInt_con.xml</property>
       <property
@@ -168,7 +170,7 @@
       <property
          name="fromOutcome">deleteInternal</property>
       <property
-         name="sdm:polyPoints">R46,561.74133,344.99414,755.70703,294.6953,L50</property>
+         name="sdm:polyPoints">R38,560.0,337.99414,755.70703,258.99414,L50</property>
    </ControlFlowCase>
    <View
       id="View16">
@@ -177,11 +179,11 @@
       <property
          name="pageFragment">true</property>
       <property
-         name="x">786.0</property>
+         name="x">801.0</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>editInviteeinternal&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">400.89648</property>
+         name="y">359.49414</property>
       <property
          name="page">/ContactManagementPages/editInviteeinternal.jsff</property>
       <property
@@ -195,7 +197,7 @@
       <property
          name="fromOutcome">toEditInternal</property>
       <property
-         name="sdm:polyPoints">R54,560.84,351.99414,745.0,397.0459,L46</property>
+         name="sdm:polyPoints">R46,561.25006,344.99414,760.0,355.64355,L46</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -205,6 +207,99 @@
       <property
          name="fromOutcome">backFromEdit</property>
       <property
-         name="sdm:polyPoints">L54,744.1581,404.0459,560.0,358.99414,R62</property>
+         name="sdm:polyPoints">L54,759.8127,362.64355,561.06384,351.99414,R54</property>
+   </ControlFlowCase>
+   <TaskFlowCall
+      id="TaskFlowCall19">
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>createInviteeExt_con&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
+      <property
+         name="activityId">createInviteeExt_con</property>
+      <property
+         name="x">799.0332</property>
+      <property
+         name="y">478.34473</property>
+      <property
+         name="documentReference">/WEB-INF/ContactManagement/createInviteeExt_con.xml</property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="taskFlowId">createInviteeExt_con</property>
+   </TaskFlowCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase20"
+      from="View6"
+      to="TaskFlowCall19">
+      <property
+         name="fromOutcome">toAddExt</property>
+      <property
+         name="sdm:polyPoints">R62,560.0,358.99414,758.0332,477.99414,L50</property>
+   </ControlFlowCase>
+   <View
+      id="View21">
+      <property
+         name="activityId">editExt</property>
+      <property
+         name="pageFragment">true</property>
+      <property
+         name="x">801.0</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>editExt&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">585.1953</property>
+      <property
+         name="page">/ContactManagementPages/editExt.jsff</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase22"
+      from="View6"
+      to="View21">
+      <property
+         name="fromOutcome">toEditExt</property>
+      <property
+         name="sdm:polyPoints">B50,519.0,405.94504,757.64044,588.3447,L54</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase23"
+      from="View21"
+      to="View6">
+      <property
+         name="fromOutcome">backFromEditEx</property>
+      <property
+         name="sdm:polyPoints">L46,760.0,581.3447,526.0,402.49414,B61</property>
+   </ControlFlowCase>
+   <TaskFlowCall
+      id="TaskFlowCall24">
+      <property
+         name="runAsDialog">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>deleteInvExt_con&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
+      <property
+         name="activityId">deleteInvExt_con</property>
+      <property
+         name="x">799.03125</property>
+      <property
+         name="y">692.7988</property>
+      <property
+         name="documentReference">/WEB-INF/ContactManagement/deleteInvExt_con.xml</property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="taskFlowId">deleteInvExt_con</property>
+   </TaskFlowCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase25"
+      from="View6"
+      to="TaskFlowCall24">
+      <property
+         name="fromOutcome">toDeleteExt</property>
+      <property
+         name="sdm:polyPoints">B39,512.0,408.94943,758.03125,692.7988,L50</property>
    </ControlFlowCase>
 </SDM>

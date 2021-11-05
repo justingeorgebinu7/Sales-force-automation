@@ -241,6 +241,16 @@
     <page path="/WEB-INF/ContactManagement/deleteInviteeInt_con.xml#deleteInviteeInt_con@Commit"
           usageId="sfa_view_deleteInviteeInt_con_deleteInviteeInt_con_CommitPageDef"/>
     <page path="/ContactManagementPages/editInviteeinternal.jsff" usageId="sfa_view_editInviteeinternalPageDef"/>
+    <page path="/WEB-INF/ContactManagement/createInviteeExt_con.xml#createInviteeExt_con@CreateInsert"
+          usageId="sfa_view_createInviteeExt_con_createInviteeExt_con_CreateInsertPageDef"/>
+    <page path="/WEB-INF/ContactManagement/createInviteeExt_con.xml#createInviteeExt_con@Commit"
+          usageId="sfa_view_createInviteeExt_con_createInviteeExt_con_CommitPageDef"/>
+    <page path="/addExtInvitee_con.jsff" usageId="sfa_view_addExtInvitee_conPageDef"/>
+    <page path="/ContactManagementPages/editExt.jsff" usageId="sfa_view_editExtPageDef"/>
+    <page path="/WEB-INF/ContactManagement/deleteInvExt_con.xml#deleteInvExt_con@Commit"
+          usageId="sfa_view_deleteInvExt_con_deleteInvExt_con_CommitPageDef"/>
+    <page path="/WEB-INF/ContactManagement/deleteInvExt_con.xml#deleteInvExt_con@Delete"
+          usageId="sfa_view_deleteInvExt_con_deleteInvExt_con_DeletePageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="sfa_view_untitled2PageDef" path="sfa.view.pageDefs.untitled2PageDef"/>
@@ -475,6 +485,16 @@
     <page id="sfa_view_deleteInviteeInt_con_deleteInviteeInt_con_CommitPageDef"
           path="ContactManagement.deleteInviteeInt_con_deleteInviteeInt_con_CommitPageDef"/>
     <page id="sfa_view_editInviteeinternalPageDef" path="ContactManagementPages.editInviteeinternalPageDef"/>
+    <page id="sfa_view_createInviteeExt_con_createInviteeExt_con_CreateInsertPageDef"
+          path="ContactManagement.createInviteeExt_con_createInviteeExt_con_CreateInsertPageDef"/>
+    <page id="sfa_view_createInviteeExt_con_createInviteeExt_con_CommitPageDef"
+          path="ContactManagement.createInviteeExt_con_createInviteeExt_con_CommitPageDef"/>
+    <page id="sfa_view_addExtInvitee_conPageDef" path="sfa.view.pageDefs.addExtInvitee_conPageDef"/>
+    <page id="sfa_view_editExtPageDef" path="ContactManagementPages.editExtPageDef"/>
+    <page id="sfa_view_deleteInvExt_con_deleteInvExt_con_CommitPageDef"
+          path="ContactManagement.deleteInvExt_con_deleteInvExt_con_CommitPageDef"/>
+    <page id="sfa_view_deleteInvExt_con_deleteInvExt_con_DeletePageDef"
+          path="ContactManagement.deleteInvExt_con_deleteInvExt_con_DeletePageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="sfa.model.entities"
