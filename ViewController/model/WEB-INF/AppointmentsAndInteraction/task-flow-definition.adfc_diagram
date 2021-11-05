@@ -7,30 +7,30 @@
       <property
          name="activityId">CreateInsert</property>
       <property
-         name="x">162.01465</property>
+         name="x">128.01465</property>
       <property
          name="start">true</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>CreateInsert&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
       <property
-         name="y">231.29297</property>
+         name="y">156.34473</property>
       <property
          name="exceptionHandler">false</property>
    </MethodCall>
    <View
       id="View3">
       <property
-         name="activityId">addExternalInvitee</property>
+         name="activityId">addInviteeExternal</property>
       <property
          name="pageFragment">true</property>
       <property
-         name="x">382.0</property>
+         name="x">372.0</property>
       <property
-         name="description">&lt;html>&lt;p>&lt;b>addExternalInvitee&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+         name="description">&lt;html>&lt;p>&lt;b>addInviteeExternal&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">201.89648</property>
+         name="y">150.89648</property>
       <property
-         name="page">/AppointmentsAndInteractions/addExternalInvitee.jsff</property>
+         name="page">/AppointmentsAndInteractions/addInviteeExternal.jsff</property>
       <property
          name="exceptionHandler">false</property>
    </View>
@@ -39,11 +39,11 @@
       <property
          name="activityId">Commit</property>
       <property
-         name="x">620.5</property>
+         name="x">615.5</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>Commit&lt;/b>&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
       <property
-         name="y">229.14941</property>
+         name="y">184.14941</property>
       <property
          name="exceptionHandler">false</property>
    </MethodCall>
@@ -52,11 +52,11 @@
       <property
          name="activityId">taskFlowReturn1</property>
       <property
-         name="x">829.0</property>
+         name="x">774.0</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>taskFlowReturn1&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Return&lt;/p>&lt;p>Outcome:  taskFlowReturn1&lt;/p></property>
       <property
-         name="y">284.24707</property>
+         name="y">194.24707</property>
       <property
          name="finish">true</property>
       <property
@@ -70,26 +70,26 @@
       <property
          name="fromOutcome">Commit</property>
       <property
-         name="sdm:polyPoints">R50,661.5,228.79883,788.0,283.89648,L50</property>
+         name="sdm:polyPoints">R50,656.5,183.79883,733.0,193.89648,L50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
       id="ControlFlowCase7"
-      from="View3"
-      to="MethodCall4">
-      <property
-         name="fromOutcome">toCommit</property>
-      <property
-         name="sdm:polyPoints">R50,423.0,201.5459,579.5,228.79883,L50</property>
-   </ControlFlowCase>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase8"
       from="MethodCall2"
       to="View3">
       <property
          name="fromOutcome">CreateInsert</property>
       <property
-         name="sdm:polyPoints">R50,203.01465,230.94238,341.0,201.5459,L50</property>
+         name="sdm:polyPoints">R50,169.01465,155.99414,331.0,150.5459,L50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase8"
+      from="View3"
+      to="MethodCall4">
+      <property
+         name="fromOutcome">toCommit</property>
+      <property
+         name="sdm:polyPoints">R50,413.0,150.5459,574.5,183.79883,L50</property>
    </ControlFlowCase>
 </SDM>

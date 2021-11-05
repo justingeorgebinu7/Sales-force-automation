@@ -1022,6 +1022,61 @@
                                 <name>AppointmentsAndInteractions.editInviteeInternalPageDef</name>
                                 <actions>view</actions>
                             </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/WEB-INF/AppointmentsAndInteraction/task-flow-definition.xml#task-flow-definition</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.share.security.authorization.RegionPermission</class>
+                                <name>AppointmentsAndInteraction.task_flow_definition_task_flow_definition_CreateInsertPageDef</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.share.security.authorization.RegionPermission</class>
+                                <name>AppointmentsAndInteraction.task_flow_definition_task_flow_definition_CommitPageDef</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.share.security.authorization.RegionPermission</class>
+                                <name>AppointmentsAndInteractions.addInviteeExternalPageDef</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/WEB-INF/AppointmentsAndInteraction/deleteInviteeExternal.xml#deleteInviteeExternal</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.share.security.authorization.RegionPermission</class>
+                                <name>AppointmentsAndInteraction.deleteInviteeExternal_deleteInviteeExternal_DeletePageDef</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.share.security.authorization.RegionPermission</class>
+                                <name>AppointmentsAndInteraction.deleteInviteeExternal_deleteInviteeExternal_CommitPageDef</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.share.security.authorization.RegionPermission</class>
+                                <name>AppointmentsAndInteractions.editInviteeExternalPageDef</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.share.security.authorization.RegionPermission</class>
+                                <name>AppointmentsAndInteraction.createInviteeExternal_createInviteeExternal_CreateInsertPageDef</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.share.security.authorization.RegionPermission</class>
+                                <name>AppointmentsAndInteraction.createInviteeExternal_createInviteeExternal_CommitPageDef</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.share.security.authorization.RegionPermission</class>
+                                <name>AppointmentsAndInteractions.addExternalInviteePageDef</name>
+                                <actions>view</actions>
+                            </permission>
                         </permissions>
                     </grant>
                     <grant>

@@ -216,6 +216,21 @@
     <page path="/WEB-INF/AppointmentsAndInteraction/deleteInviteeInternal.xml#deleteInviteeInternal@Commit"
           usageId="sfa_view_deleteInviteeInternal_deleteInviteeInternal_CommitPageDef"/>
     <page path="/AppointmentsAndInteractions/editInviteeInternal.jsff" usageId="sfa_view_editInviteeInternalPageDef"/>
+    <page path="/WEB-INF/AppointmentsAndInteraction/task-flow-definition.xml#task-flow-definition@CreateInsert"
+          usageId="sfa_view_task_flow_definition_task_flow_definition_CreateInsertPageDef"/>
+    <page path="/WEB-INF/AppointmentsAndInteraction/task-flow-definition.xml#task-flow-definition@Commit"
+          usageId="sfa_view_task_flow_definition_task_flow_definition_CommitPageDef"/>
+    <page path="/AppointmentsAndInteractions/addInviteeExternal.jsff" usageId="sfa_view_addInviteeExternalPageDef"/>
+    <page path="/WEB-INF/AppointmentsAndInteraction/deleteInviteeExternal.xml#deleteInviteeExternal@Delete"
+          usageId="sfa_view_deleteInviteeExternal_deleteInviteeExternal_DeletePageDef"/>
+    <page path="/WEB-INF/AppointmentsAndInteraction/deleteInviteeExternal.xml#deleteInviteeExternal@Commit"
+          usageId="sfa_view_deleteInviteeExternal_deleteInviteeExternal_CommitPageDef"/>
+    <page path="/AppointmentsAndInteractions/editInviteeExternal.jsff" usageId="sfa_view_editInviteeExternalPageDef"/>
+    <page path="/WEB-INF/AppointmentsAndInteraction/createInviteeExternal.xml#createInviteeExternal@CreateInsert"
+          usageId="sfa_view_createInviteeExternal_createInviteeExternal_CreateInsertPageDef"/>
+    <page path="/WEB-INF/AppointmentsAndInteraction/createInviteeExternal.xml#createInviteeExternal@Commit"
+          usageId="sfa_view_createInviteeExternal_createInviteeExternal_CommitPageDef"/>
+    <page path="/AppointmentsAndInteractions/addExternalInvitee.jsff" usageId="sfa_view_addExternalInviteePageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="sfa_view_untitled2PageDef" path="sfa.view.pageDefs.untitled2PageDef"/>
@@ -425,6 +440,21 @@
     <page id="sfa_view_deleteInviteeInternal_deleteInviteeInternal_CommitPageDef"
           path="AppointmentsAndInteraction.deleteInviteeInternal_deleteInviteeInternal_CommitPageDef"/>
     <page id="sfa_view_editInviteeInternalPageDef" path="AppointmentsAndInteractions.editInviteeInternalPageDef"/>
+    <page id="sfa_view_task_flow_definition_task_flow_definition_CreateInsertPageDef"
+          path="AppointmentsAndInteraction.task_flow_definition_task_flow_definition_CreateInsertPageDef"/>
+    <page id="sfa_view_task_flow_definition_task_flow_definition_CommitPageDef"
+          path="AppointmentsAndInteraction.task_flow_definition_task_flow_definition_CommitPageDef"/>
+    <page id="sfa_view_addInviteeExternalPageDef" path="AppointmentsAndInteractions.addInviteeExternalPageDef"/>
+    <page id="sfa_view_deleteInviteeExternal_deleteInviteeExternal_DeletePageDef"
+          path="AppointmentsAndInteraction.deleteInviteeExternal_deleteInviteeExternal_DeletePageDef"/>
+    <page id="sfa_view_deleteInviteeExternal_deleteInviteeExternal_CommitPageDef"
+          path="AppointmentsAndInteraction.deleteInviteeExternal_deleteInviteeExternal_CommitPageDef"/>
+    <page id="sfa_view_editInviteeExternalPageDef" path="AppointmentsAndInteractions.editInviteeExternalPageDef"/>
+    <page id="sfa_view_createInviteeExternal_createInviteeExternal_CreateInsertPageDef"
+          path="AppointmentsAndInteraction.createInviteeExternal_createInviteeExternal_CreateInsertPageDef"/>
+    <page id="sfa_view_createInviteeExternal_createInviteeExternal_CommitPageDef"
+          path="AppointmentsAndInteraction.createInviteeExternal_createInviteeExternal_CommitPageDef"/>
+    <page id="sfa_view_addExternalInviteePageDef" path="AppointmentsAndInteractions.addExternalInviteePageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="sfa.model.entities"
