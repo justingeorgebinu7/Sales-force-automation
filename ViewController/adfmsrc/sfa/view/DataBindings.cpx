@@ -188,7 +188,7 @@
           usageId="sfa_view_deleteContact_CM_deleteContact_CM_CommitPageDef"/>
     <page path="/WEB-INF/ContactManagement/createContact_cm.xml#createContact_cm@Commit"
           usageId="sfa_view_createContact_cm_createContact_cm_CommitPageDef"/>
-    <page path="/AddContact_CM.jsff" usageId="sfa_view_AddContact_CMPageDef"/>
+    <page path="/ContactManagementPages/AddContact_CM.jsff" usageId="sfa_view_AddContact_CMPageDef"/>
     <page path="/WEB-INF/ContactManagement/createContact_cm.xml#createContact_cm@CreateInsert"
           usageId="sfa_view_createContact_cm_createContact_cm_CreateInsertPageDef"/>
     <page path="/WEB-INF/ContactManagement/addNoteForCon.xml#addNoteForCon@Commit"
@@ -245,7 +245,7 @@
           usageId="sfa_view_createInviteeExt_con_createInviteeExt_con_CreateInsertPageDef"/>
     <page path="/WEB-INF/ContactManagement/createInviteeExt_con.xml#createInviteeExt_con@Commit"
           usageId="sfa_view_createInviteeExt_con_createInviteeExt_con_CommitPageDef"/>
-    <page path="/addExtInvitee_con.jsff" usageId="sfa_view_addExtInvitee_conPageDef"/>
+    <page path="/AppointmentsAndInteractions/addExtInvitee_con.jsff" usageId="sfa_view_addExtInvitee_conPageDef"/>
     <page path="/ContactManagementPages/editExt.jsff" usageId="sfa_view_editExtPageDef"/>
     <page path="/WEB-INF/ContactManagement/deleteInvExt_con.xml#deleteInvExt_con@Commit"
           usageId="sfa_view_deleteInvExt_con_deleteInvExt_con_CommitPageDef"/>

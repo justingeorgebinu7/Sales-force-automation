@@ -6,7 +6,7 @@
       <shared/>
     </data-control-scope>
     <view id="view1">
-      <page>/AddContact_CM.jsff</page>
+      <page>/ContactManagementPages/AddContact_CM.jsff</page>
     </view>
     <method-call id="Commit">
       <method>#{bindings.Commit.execute}</method>
