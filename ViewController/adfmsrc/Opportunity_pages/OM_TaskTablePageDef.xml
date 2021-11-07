@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.22.48" id="OM_TaskTablePageDef"
+                Package="Opportunity_pages">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="TaskView2" RangeSize="25" DataControl="AppModuleDataControl" id="TaskView2Iterator"/>
+    <searchRegion Binds="TaskView2Iterator" Criteria="" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  id="TaskView2Query"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="TaskView2Iterator" id="TaskView2">
+      <nodeDefinition DefName="sfa.model.viewobjects.TaskView" Name="TaskView20">
+        <AttrNames>
+          <Item Value="Name"/>
+          <Item Value="Description"/>
+          <Item Value="Priority"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

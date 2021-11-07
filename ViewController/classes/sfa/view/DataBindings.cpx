@@ -274,6 +274,17 @@
           usageId="sfa_view_OM_AddNotes_OM_AddNotes_CommitPageDef"/>
     <page path="/Opportunity_pages/OM_AddNote.jsff" usageId="sfa_view_OM_AddNotePageDef"/>
     <page path="/Opportunity_pages/OM_Menu.jsff" usageId="sfa_view_OM_MenuPageDef"/>
+    <page path="/Opportunity_pages/OM_TaskTable.jsff" usageId="sfa_view_OM_TaskTablePageDef"/>
+    <page path="/Opportunity_pages/OM_EditTasks.jsff" usageId="sfa_view_OM_EditTasksPageDef"/>
+    <page path="/WEB-INF/Opportunity_TaskFLows/OM_DelTasks.xml#OM_DelTasks@Delete"
+          usageId="sfa_view_OM_DelTasks_OM_DelTasks_DeletePageDef"/>
+    <page path="/WEB-INF/Opportunity_TaskFLows/OM_DelTasks.xml#OM_DelTasks@Commit"
+          usageId="sfa_view_OM_DelTasks_OM_DelTasks_CommitPageDef"/>
+    <page path="/WEB-INF/Opportunity_TaskFLows/OM_AddTasks.xml#OM_AddTasks@CreateInsert"
+          usageId="sfa_view_OM_AddTasks_OM_AddTasks_CreateInsertPageDef"/>
+    <page path="/WEB-INF/Opportunity_TaskFLows/OM_AddTasks.xml#OM_AddTasks@Commit"
+          usageId="sfa_view_OM_AddTasks_OM_AddTasks_CommitPageDef"/>
+    <page path="/Opportunity_pages/OM_addTask.jsff" usageId="sfa_view_OM_addTaskPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="sfa_view_untitled2PageDef" path="sfa.view.pageDefs.untitled2PageDef"/>
@@ -541,6 +552,17 @@
           path="Opportunity_TaskFLows.OM_AddNotes_OM_AddNotes_CommitPageDef"/>
     <page id="sfa_view_OM_AddNotePageDef" path="Opportunity_pages.OM_AddNotePageDef"/>
     <page id="sfa_view_OM_MenuPageDef" path="Opportunity_pages.OM_MenuPageDef"/>
+    <page id="sfa_view_OM_TaskTablePageDef" path="Opportunity_pages.OM_TaskTablePageDef"/>
+    <page id="sfa_view_OM_EditTasksPageDef" path="Opportunity_pages.OM_EditTasksPageDef"/>
+    <page id="sfa_view_OM_DelTasks_OM_DelTasks_DeletePageDef"
+          path="Opportunity_TaskFLows.OM_DelTasks_OM_DelTasks_DeletePageDef"/>
+    <page id="sfa_view_OM_DelTasks_OM_DelTasks_CommitPageDef"
+          path="Opportunity_TaskFLows.OM_DelTasks_OM_DelTasks_CommitPageDef"/>
+    <page id="sfa_view_OM_AddTasks_OM_AddTasks_CreateInsertPageDef"
+          path="Opportunity_TaskFLows.OM_AddTasks_OM_AddTasks_CreateInsertPageDef"/>
+    <page id="sfa_view_OM_AddTasks_OM_AddTasks_CommitPageDef"
+          path="Opportunity_TaskFLows.OM_AddTasks_OM_AddTasks_CommitPageDef"/>
+    <page id="sfa_view_OM_addTaskPageDef" path="Opportunity_pages.OM_addTaskPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="sfa.model.entities"

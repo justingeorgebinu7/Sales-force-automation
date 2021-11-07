@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.22.48" id="OM_addTaskPageDef"
+                Package="Opportunity_pages">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="TaskView2" RangeSize="25" DataControl="AppModuleDataControl" id="TaskView2Iterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="TaskView2Iterator" id="Name">
+      <AttrNames>
+        <Item Value="Name"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TaskView2Iterator" id="Duedate">
+      <AttrNames>
+        <Item Value="Duedate"/>
+      </AttrNames>
+    </attributeValues>
+    <list IterBinding="TaskView2Iterator" StaticList="false" Uses="LOV_Priority" id="Priority" DTSupportsMRU="false"
+          SelectItemValueMode="ListObject"/>
+    <attributeValues IterBinding="TaskView2Iterator" id="Description">
+      <AttrNames>
+        <Item Value="Description"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TaskView2Iterator" id="Percentageofcompletion">
+      <AttrNames>
+        <Item Value="Percentageofcompletion"/>
+      </AttrNames>
+    </attributeValues>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+    <action IterBinding="TaskView2Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+  </bindings>
+</pageDefinition>

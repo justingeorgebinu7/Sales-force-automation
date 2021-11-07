@@ -98,7 +98,9 @@
       <af:showDetailItem id="sdi2" text="Notes">
         <af:region value="#{bindings.OM_NotesMain1.regionModel}" id="r1"/>
       </af:showDetailItem>
-      <af:showDetailItem id="sdi4" text="Task"/>
+      <af:showDetailItem id="sdi4" text="Task">
+        <af:region value="#{bindings.OM_TasksMain1.regionModel}" id="r2"/>
+      </af:showDetailItem>
       <af:showDetailItem id="sdi5" text="Appoinments"/>
       <af:showDetailItem id="sdi6" text="Interaction"/>
     </af:panelTabbed>

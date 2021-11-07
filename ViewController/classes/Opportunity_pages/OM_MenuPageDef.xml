@@ -7,6 +7,8 @@
     <iterator Binds="OpportunityView1" RangeSize="25" DataControl="AppModuleDataControl" id="OpportunityView1Iterator"/>
     <taskFlow id="OM_NotesMain1" taskFlowId="/WEB-INF/Opportunity_TaskFLows/OM_NotesMain.xml#OM_NotesMain"
               activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <taskFlow id="OM_TasksMain1" taskFlowId="/WEB-INF/Opportunity_TaskFLows/OM_TasksMain.xml#OM_TasksMain"
+              activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
   </executables>
   <bindings>
     <attributeValues IterBinding="OpportunityView1Iterator" id="Title">

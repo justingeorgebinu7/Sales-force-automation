@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="OM_TasksMain">
+    <default-activity>OM_TaskTable</default-activity>
+    <data-control-scope>
+      <shared/>
+    </data-control-scope>
+    <view id="OM_TaskTable">
+      <page>/Opportunity_pages/OM_TaskTable.jsff</page>
+    </view>
+    <view id="OM_EditTasks">
+      <page>/Opportunity_pages/OM_EditTasks.jsff</page>
+    </view>
+    <task-flow-call id="OM_DelTasks">
+      <task-flow-reference>
+        <document>/WEB-INF/Opportunity_TaskFLows/OM_DelTasks.xml</document>
+        <id>OM_DelTasks</id>
+      </task-flow-reference>
+    </task-flow-call>
+    <task-flow-call id="OM_AddTasks">
+      <task-flow-reference>
+        <document>/WEB-INF/Opportunity_TaskFLows/OM_AddTasks.xml</document>
+        <id>OM_AddTasks</id>
+      </task-flow-reference>
+    </task-flow-call>
+    <control-flow-rule id="__1">
+      <from-activity-id>OM_TaskTable</from-activity-id>
+      <control-flow-case id="__2">
+        <from-outcome>editTask</from-outcome>
+        <to-activity-id>OM_EditTasks</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__5">
+        <from-outcome>deleteTasks</from-outcome>
+        <to-activity-id>OM_DelTasks</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__6">
+        <from-outcome>addTask</from-outcome>
+        <to-activity-id>OM_AddTasks</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__3">
+      <from-activity-id>OM_EditTasks</from-activity-id>
+      <control-flow-case id="__4">
+        <from-outcome>backFromEdit</from-outcome>
+        <to-activity-id>OM_TaskTable</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <use-page-fragments/>
+  </task-flow-definition>
+</adfc-config>
