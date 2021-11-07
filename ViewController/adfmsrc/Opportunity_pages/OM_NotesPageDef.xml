@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.22.48" id="OM_NotesPageDef"
+                Package="Opportunity_pages">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="NoteView4" RangeSize="25" DataControl="AppModuleDataControl" id="NoteView4Iterator"/>
+    <searchRegion Binds="NoteView4Iterator" Criteria="" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  id="NoteView4Query"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="NoteView4Iterator" id="NoteView4">
+      <nodeDefinition DefName="sfa.model.viewobjects.NoteView" Name="NoteView40">
+        <AttrNames>
+          <Item Value="Subject"/>
+          <Item Value="Content"/>
+          <Item Value="Createdby"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

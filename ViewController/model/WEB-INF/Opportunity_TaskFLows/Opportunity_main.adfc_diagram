@@ -28,11 +28,13 @@
       <property
          name="pageFragment">true</property>
       <property
-         name="x">638.0</property>
+         name="x">592.0</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>OM_Menu&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">347.79297</property>
+         name="y">280.7412</property>
+      <property
+         name="page">/Opportunity_pages/OM_Menu.jsff</property>
       <property
          name="exceptionHandler">false</property>
    </View>
@@ -44,7 +46,7 @@
       <property
          name="fromOutcome">toMenu</property>
       <property
-         name="sdm:polyPoints">R46,285.65662,284.89062,597.0,343.94238,L46</property>
+         name="sdm:polyPoints">R46,285.0,284.89062,550.8947,276.89062,L46</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -54,44 +56,7 @@
       <property
          name="fromOutcome">toHome</property>
       <property
-         name="sdm:polyPoints">L54,596.3427,350.94238,285.0,291.89062,R54</property>
-   </ControlFlowCase>
-   <View
-      id="View6">
-      <property
-         name="activityId">editOpp_OM</property>
-      <property
-         name="pageFragment">true</property>
-      <property
-         name="x">575.0</property>
-      <property
-         name="description">&lt;html>&lt;p>&lt;b>editOpp_OM&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
-      <property
-         name="y">36.390625</property>
-      <property
-         name="page">/Opportunity_pages/editOpp_OM.jsff</property>
-      <property
-         name="exceptionHandler">false</property>
-   </View>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase7"
-      from="View2"
-      to="View6">
-      <property
-         name="fromOutcome">toEdit</property>
-      <property
-         name="sdm:polyPoints">T50,244.0,230.72284,531.8299,32.54004,L46</property>
-   </ControlFlowCase>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase8"
-      from="View6"
-      to="View2">
-      <property
-         name="fromOutcome">backFromEdit</property>
-      <property
-         name="sdm:polyPoints">L54,534.0,39.54004,251.0,234.39062,T61</property>
+         name="sdm:polyPoints">L54,551.0,283.89062,285.10522,291.89062,R54</property>
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall9">
@@ -100,9 +65,9 @@
       <property
          name="activityId">deleteOpportunity</property>
       <property
-         name="x">395.36426</property>
+         name="x">106.36426</property>
       <property
-         name="y">-81.25293</property>
+         name="y">-9.954102</property>
       <property
          name="documentReference">/WEB-INF/Opportunity_TaskFLows/deleteOpportunity.xml</property>
       <property
@@ -118,7 +83,7 @@
       <property
          name="fromOutcome">deleteOpp</property>
       <property
-         name="sdm:polyPoints">T39,237.0,227.919,395.36426,-27.603516,B50</property>
+         name="sdm:polyPoints">T44,240.5,234.39062,106.36426,43.695312,B50</property>
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall11">
@@ -127,9 +92,9 @@
       <property
          name="activityId">createOpportunity</property>
       <property
-         name="x">626.6924</property>
+         name="x">400.69238</property>
       <property
-         name="y">199.44824</property>
+         name="y">-0.2529297</property>
       <property
          name="documentReference">/WEB-INF/Opportunity_TaskFLows/createOpportunity.xml</property>
       <property
@@ -145,6 +110,6 @@
       <property
          name="fromOutcome">addOpportunity</property>
       <property
-         name="sdm:polyPoints">R42,285.0,281.39062,585.6924,199.09766,L50</property>
+         name="sdm:polyPoints">T56,247.5,234.39062,400.69238,53.396484,B50</property>
    </ControlFlowCase>
 </SDM>

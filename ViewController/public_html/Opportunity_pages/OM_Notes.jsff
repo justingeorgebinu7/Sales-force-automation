@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <af:table value="#{bindings.NoteView4.collectionModel}" var="row" rows="#{bindings.NoteView4.rangeSize}"
+            emptyText="#{bindings.NoteView4.viewable ? 'No data to display.' : 'Access Denied.'}" rowBandingInterval="0"
+            selectedRowKeys="#{bindings.NoteView4.collectionModel.selectedRow}"
+            selectionListener="#{bindings.NoteView4.collectionModel.makeCurrent}" rowSelection="single"
+            fetchSize="#{bindings.NoteView4.rangeSize}" filterModel="#{bindings.NoteView4Query.queryDescriptor}"
+            filterVisible="true" queryListener="#{bindings.NoteView4Query.processQuery}" varStatus="vs" id="t1">
+    <af:column sortProperty="#{bindings.NoteView4.hints.Subject.name}" filterable="true" sortable="true"
+               headerText="#{bindings.NoteView4.hints.Subject.label}" id="c1">
+      <af:link shortDesc="#{bindings.NoteView4.hints.Subject.tooltip}" id="ot1" text="#{row.Subject}" action="toEdit"/>
+    </af:column>
+    <af:column sortProperty="#{bindings.NoteView4.hints.Content.name}" filterable="true" sortable="true"
+               headerText="#{bindings.NoteView4.hints.Content.label}" id="c2">
+      <af:outputText value="#{row.Content}" shortDesc="#{bindings.NoteView4.hints.Content.tooltip}" id="ot2"/>
+    </af:column>
+    <af:column sortProperty="#{bindings.NoteView4.hints.Createdby.name}" filterable="true" sortable="true"
+               headerText="#{bindings.NoteView4.hints.Createdby.label}" id="c3">
+      <af:outputText value="#{row.Createdby}" shortDesc="#{bindings.NoteView4.hints.Createdby.tooltip}" id="ot3"/>
+    </af:column>
+  </af:table>
+  <af:button text="Add" id="b1" action="addNote"/>
+  <af:button text="Delete" id="b2" action="deleteNotes"/>
+</ui:composition>

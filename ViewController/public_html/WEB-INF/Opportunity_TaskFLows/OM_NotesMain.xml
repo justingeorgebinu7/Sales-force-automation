@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="OM_NotesMain">
+    <default-activity>OM_Notes</default-activity>
+    <data-control-scope>
+      <shared/>
+    </data-control-scope>
+    <view id="OM_Notes">
+      <page>/Opportunity_pages/OM_Notes.jsff</page>
+    </view>
+    <view id="OM_EditNotes">
+      <page>/Opportunity_pages/OM_EditNotes.jsff</page>
+    </view>
+    <task-flow-call id="OM_DeleteNotes">
+      <task-flow-reference>
+        <document>/WEB-INF/Opportunity_TaskFLows/OM_DeleteNotes.xml</document>
+        <id>OM_DeleteNotes</id>
+      </task-flow-reference>
+    </task-flow-call>
+    <task-flow-call id="OM_AddNotes">
+      <task-flow-reference>
+        <document>/WEB-INF/Opportunity_TaskFLows/OM_AddNotes.xml</document>
+        <id>OM_AddNotes</id>
+      </task-flow-reference>
+    </task-flow-call>
+    <control-flow-rule id="__1">
+      <from-activity-id>OM_Notes</from-activity-id>
+      <control-flow-case id="__2">
+        <from-outcome>toEdit</from-outcome>
+        <to-activity-id>OM_EditNotes</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__5">
+        <from-outcome>deleteNotes</from-outcome>
+        <to-activity-id>OM_DeleteNotes</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__6">
+        <from-outcome>addNote</from-outcome>
+        <to-activity-id>OM_AddNotes</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__3">
+      <from-activity-id>OM_EditNotes</from-activity-id>
+      <control-flow-case id="__4">
+        <from-outcome>backFromEdit</from-outcome>
+        <to-activity-id>OM_Notes</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <use-page-fragments/>
+  </task-flow-definition>
+</adfc-config>

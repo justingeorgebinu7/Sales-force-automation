@@ -262,6 +262,18 @@
     <page path="/WEB-INF/Opportunity_TaskFLows/createOpportunity.xml#createOpportunity@Commit"
           usageId="sfa_view_createOpportunity_createOpportunity_CommitPageDef"/>
     <page path="/Opportunity_pages/addOpp_OM.jsff" usageId="sfa_view_addOpp_OMPageDef"/>
+    <page path="/Opportunity_pages/OM_Notes.jsff" usageId="sfa_view_OM_NotesPageDef"/>
+    <page path="/Opportunity_pages/OM_EditNotes.jsff" usageId="sfa_view_OM_EditNotesPageDef"/>
+    <page path="/WEB-INF/Opportunity_TaskFLows/OM_DeleteNotes.xml#OM_DeleteNotes@Delete"
+          usageId="sfa_view_OM_DeleteNotes_OM_DeleteNotes_DeletePageDef"/>
+    <page path="/WEB-INF/Opportunity_TaskFLows/OM_DeleteNotes.xml#OM_DeleteNotes@Commit"
+          usageId="sfa_view_OM_DeleteNotes_OM_DeleteNotes_CommitPageDef"/>
+    <page path="/WEB-INF/Opportunity_TaskFLows/OM_AddNotes.xml#OM_AddNotes@CreateInsert"
+          usageId="sfa_view_OM_AddNotes_OM_AddNotes_CreateInsertPageDef"/>
+    <page path="/WEB-INF/Opportunity_TaskFLows/OM_AddNotes.xml#OM_AddNotes@Commit"
+          usageId="sfa_view_OM_AddNotes_OM_AddNotes_CommitPageDef"/>
+    <page path="/Opportunity_pages/OM_AddNote.jsff" usageId="sfa_view_OM_AddNotePageDef"/>
+    <page path="/Opportunity_pages/OM_Menu.jsff" usageId="sfa_view_OM_MenuPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="sfa_view_untitled2PageDef" path="sfa.view.pageDefs.untitled2PageDef"/>
@@ -517,6 +529,18 @@
     <page id="sfa_view_createOpportunity_createOpportunity_CommitPageDef"
           path="Opportunity_TaskFLows.createOpportunity_createOpportunity_CommitPageDef"/>
     <page id="sfa_view_addOpp_OMPageDef" path="Opportunity_pages.addOpp_OMPageDef"/>
+    <page id="sfa_view_OM_NotesPageDef" path="Opportunity_pages.OM_NotesPageDef"/>
+    <page id="sfa_view_OM_EditNotesPageDef" path="Opportunity_pages.OM_EditNotesPageDef"/>
+    <page id="sfa_view_OM_DeleteNotes_OM_DeleteNotes_DeletePageDef"
+          path="Opportunity_TaskFLows.OM_DeleteNotes_OM_DeleteNotes_DeletePageDef"/>
+    <page id="sfa_view_OM_DeleteNotes_OM_DeleteNotes_CommitPageDef"
+          path="Opportunity_TaskFLows.OM_DeleteNotes_OM_DeleteNotes_CommitPageDef"/>
+    <page id="sfa_view_OM_AddNotes_OM_AddNotes_CreateInsertPageDef"
+          path="Opportunity_TaskFLows.OM_AddNotes_OM_AddNotes_CreateInsertPageDef"/>
+    <page id="sfa_view_OM_AddNotes_OM_AddNotes_CommitPageDef"
+          path="Opportunity_TaskFLows.OM_AddNotes_OM_AddNotes_CommitPageDef"/>
+    <page id="sfa_view_OM_AddNotePageDef" path="Opportunity_pages.OM_AddNotePageDef"/>
+    <page id="sfa_view_OM_MenuPageDef" path="Opportunity_pages.OM_MenuPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="sfa.model.entities"

@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:f="http://java.sun.com/jsf/core">
+  <af:panelFormLayout id="pfl1">
+    <af:inputText value="#{bindings.Subject.inputValue}" label="#{bindings.Subject.hints.label}"
+                  required="#{bindings.Subject.hints.mandatory}" columns="#{bindings.Subject.hints.displayWidth}"
+                  maximumLength="#{bindings.Subject.hints.precision}" shortDesc="#{bindings.Subject.hints.tooltip}"
+                  id="it1">
+      <f:validator binding="#{bindings.Subject.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Content.inputValue}" label="#{bindings.Content.hints.label}"
+                  required="#{bindings.Content.hints.mandatory}" columns="#{bindings.Content.hints.displayWidth}"
+                  maximumLength="#{bindings.Content.hints.precision}" shortDesc="#{bindings.Content.hints.tooltip}"
+                  id="it2">
+      <f:validator binding="#{bindings.Content.validator}"/>
+    </af:inputText>
+  </af:panelFormLayout>
+  <af:button text="Save" id="b1" action="toCommit"/>
+  <af:button actionListener="#{bindings.Delete.execute}" text="Cancel" disabled="#{!bindings.Delete.enabled}" id="b2"
+             action="toCommit"/>
+</ui:composition>

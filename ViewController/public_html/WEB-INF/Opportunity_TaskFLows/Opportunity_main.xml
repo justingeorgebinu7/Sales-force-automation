@@ -8,9 +8,8 @@
     <view id="OM_home">
       <page>/Opportunity_pages/OM_home.jsff</page>
     </view>
-    <view id="OM_Menu"></view>
-    <view id="editOpp_OM">
-      <page>/Opportunity_pages/editOpp_OM.jsff</page>
+    <view id="OM_Menu">
+      <page>/Opportunity_pages/OM_Menu.jsff</page>
     </view>
     <task-flow-call id="deleteOpportunity">
       <task-flow-reference>
@@ -30,10 +29,6 @@
         <from-outcome>toMenu</from-outcome>
         <to-activity-id>OM_Menu</to-activity-id>
       </control-flow-case>
-      <control-flow-case id="__5">
-        <from-outcome>toEdit</from-outcome>
-        <to-activity-id>editOpp_OM</to-activity-id>
-      </control-flow-case>
       <control-flow-case id="__8">
         <from-outcome>deleteOpp</from-outcome>
         <to-activity-id>deleteOpportunity</to-activity-id>
@@ -47,13 +42,6 @@
       <from-activity-id>OM_Menu</from-activity-id>
       <control-flow-case id="__4">
         <from-outcome>toHome</from-outcome>
-        <to-activity-id>OM_home</to-activity-id>
-      </control-flow-case>
-    </control-flow-rule>
-    <control-flow-rule id="__6">
-      <from-activity-id>editOpp_OM</from-activity-id>
-      <control-flow-case id="__7">
-        <from-outcome>backFromEdit</from-outcome>
         <to-activity-id>OM_home</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
