@@ -12,10 +12,17 @@
   BindingStyle="OracleName"
   CustomQuery="false"
   SelectAllAttributes="false"
-  PageIterMode="Full">
+  PageIterMode="Full"
+  AccessMode="DEFAULT">
   <EntityUsage
     Name="Opportunity"
     Entity="sfa.model.entities.Opportunity"/>
+  <ViewAttribute
+    Name="Title"
+    PrecisionRule="true"
+    EntityAttrName="Title"
+    EntityUsage="Opportunity"
+    AliasName="TITLE"/>
   <ViewAttribute
     Name="Opportunityid"
     IsNotNull="true"

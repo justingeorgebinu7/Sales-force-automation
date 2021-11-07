@@ -35,7 +35,9 @@
                                         <af:region value="#{bindings.conactManagementParent1.regionModel}" id="r2"/>
                                     </af:showDetailItem>
                                     <af:showDetailItem text="Opportunities" id="sdi3"
-                                                       icon="https://i.ibb.co/30FCByC/opportunity-icon-6.png"/>
+                                                       icon="https://i.ibb.co/30FCByC/opportunity-icon-6.png">
+                                        <af:region value="#{bindings.Opportunity_main1.regionModel}" id="r3"/>
+                                    </af:showDetailItem>
                                     <af:showDetailItem text="Product Catalog" id="sdi4"
                                                        icon="https://i.ibb.co/k5JpT8s/unnamed-1.png"/>
                                     <af:showDetailItem text="User Management" id="sd15"

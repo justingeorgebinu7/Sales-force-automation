@@ -10,6 +10,8 @@
     <taskFlow id="conactManagementParent1"
               taskFlowId="/WEB-INF/ContactManagement/conactManagementParent.xml#conactManagementParent"
               activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <taskFlow id="Opportunity_main1" taskFlowId="/WEB-INF/Opportunity_TaskFLows/Opportunity_main.xml#Opportunity_main"
+              activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
   </executables>
   <bindings/>
 </pageDefinition>

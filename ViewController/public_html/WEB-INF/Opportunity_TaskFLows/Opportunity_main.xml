@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="Opportunity_main">
+    <default-activity>OM_home</default-activity>
+    <data-control-scope>
+      <shared/>
+    </data-control-scope>
+    <view id="OM_home">
+      <page>/Opportunity_pages/OM_home.jsff</page>
+    </view>
+    <view id="OM_Menu"></view>
+    <view id="editOpp_OM">
+      <page>/Opportunity_pages/editOpp_OM.jsff</page>
+    </view>
+    <task-flow-call id="deleteOpportunity">
+      <task-flow-reference>
+        <document>/WEB-INF/Opportunity_TaskFLows/deleteOpportunity.xml</document>
+        <id>deleteOpportunity</id>
+      </task-flow-reference>
+    </task-flow-call>
+    <task-flow-call id="createOpportunity">
+      <task-flow-reference>
+        <document>/WEB-INF/Opportunity_TaskFLows/createOpportunity.xml</document>
+        <id>createOpportunity</id>
+      </task-flow-reference>
+    </task-flow-call>
+    <control-flow-rule id="__1">
+      <from-activity-id>OM_home</from-activity-id>
+      <control-flow-case id="__2">
+        <from-outcome>toMenu</from-outcome>
+        <to-activity-id>OM_Menu</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__5">
+        <from-outcome>toEdit</from-outcome>
+        <to-activity-id>editOpp_OM</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__8">
+        <from-outcome>deleteOpp</from-outcome>
+        <to-activity-id>deleteOpportunity</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__9">
+        <from-outcome>addOpportunity</from-outcome>
+        <to-activity-id>createOpportunity</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__3">
+      <from-activity-id>OM_Menu</from-activity-id>
+      <control-flow-case id="__4">
+        <from-outcome>toHome</from-outcome>
+        <to-activity-id>OM_home</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__6">
+      <from-activity-id>editOpp_OM</from-activity-id>
+      <control-flow-case id="__7">
+        <from-outcome>backFromEdit</from-outcome>
+        <to-activity-id>OM_home</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <use-page-fragments/>
+  </task-flow-definition>
+</adfc-config>

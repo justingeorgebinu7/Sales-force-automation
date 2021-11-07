@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.22.48" id="addOpp_OMPageDef"
+                Package="Opportunity_pages">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="OpportunityView1" RangeSize="25" DataControl="AppModuleDataControl" id="OpportunityView1Iterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="OpportunityView1Iterator" id="Title">
+      <AttrNames>
+        <Item Value="Title"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunityView1Iterator" id="Description">
+      <AttrNames>
+        <Item Value="Description"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunityView1Iterator" id="Winprobability">
+      <AttrNames>
+        <Item Value="Winprobability"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunityView1Iterator" id="Closedate">
+      <AttrNames>
+        <Item Value="Closedate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunityView1Iterator" id="Salesstage">
+      <AttrNames>
+        <Item Value="Salesstage"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunityView1Iterator" id="Salesmethod">
+      <AttrNames>
+        <Item Value="Salesmethod"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunityView1Iterator" id="Bestcaserevenue">
+      <AttrNames>
+        <Item Value="Bestcaserevenue"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunityView1Iterator" id="Worstcaserevenue">
+      <AttrNames>
+        <Item Value="Worstcaserevenue"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunityView1Iterator" id="Budgetavailable">
+      <AttrNames>
+        <Item Value="Budgetavailable"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunityView1Iterator" id="Risklevel">
+      <AttrNames>
+        <Item Value="Risklevel"/>
+      </AttrNames>
+    </attributeValues>
+    <action IterBinding="OpportunityView1Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+  </bindings>
+</pageDefinition>

@@ -251,6 +251,17 @@
           usageId="sfa_view_deleteInvExt_con_deleteInvExt_con_CommitPageDef"/>
     <page path="/WEB-INF/ContactManagement/deleteInvExt_con.xml#deleteInvExt_con@Delete"
           usageId="sfa_view_deleteInvExt_con_deleteInvExt_con_DeletePageDef"/>
+    <page path="/Opportunity_pages/OM_home.jsff" usageId="sfa_view_OM_homePageDef"/>
+    <page path="/Opportunity_pages/editOpp_OM.jsff" usageId="sfa_view_editOpp_OMPageDef"/>
+    <page path="/WEB-INF/Opportunity_TaskFLows/deleteOpportunity.xml#deleteOpportunity@Delete"
+          usageId="sfa_view_deleteOpportunity_deleteOpportunity_DeletePageDef"/>
+    <page path="/WEB-INF/Opportunity_TaskFLows/deleteOpportunity.xml#deleteOpportunity@Commit"
+          usageId="sfa_view_deleteOpportunity_deleteOpportunity_CommitPageDef"/>
+    <page path="/WEB-INF/Opportunity_TaskFLows/createOpportunity.xml#createOpportunity@CreateInsert"
+          usageId="sfa_view_createOpportunity_createOpportunity_CreateInsertPageDef"/>
+    <page path="/WEB-INF/Opportunity_TaskFLows/createOpportunity.xml#createOpportunity@Commit"
+          usageId="sfa_view_createOpportunity_createOpportunity_CommitPageDef"/>
+    <page path="/Opportunity_pages/addOpp_OM.jsff" usageId="sfa_view_addOpp_OMPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="sfa_view_untitled2PageDef" path="sfa.view.pageDefs.untitled2PageDef"/>
@@ -495,6 +506,17 @@
           path="ContactManagement.deleteInvExt_con_deleteInvExt_con_CommitPageDef"/>
     <page id="sfa_view_deleteInvExt_con_deleteInvExt_con_DeletePageDef"
           path="ContactManagement.deleteInvExt_con_deleteInvExt_con_DeletePageDef"/>
+    <page id="sfa_view_OM_homePageDef" path="Opportunity_pages.OM_homePageDef"/>
+    <page id="sfa_view_editOpp_OMPageDef" path="Opportunity_pages.editOpp_OMPageDef"/>
+    <page id="sfa_view_deleteOpportunity_deleteOpportunity_DeletePageDef"
+          path="Opportunity_TaskFLows.deleteOpportunity_deleteOpportunity_DeletePageDef"/>
+    <page id="sfa_view_deleteOpportunity_deleteOpportunity_CommitPageDef"
+          path="Opportunity_TaskFLows.deleteOpportunity_deleteOpportunity_CommitPageDef"/>
+    <page id="sfa_view_createOpportunity_createOpportunity_CreateInsertPageDef"
+          path="Opportunity_TaskFLows.createOpportunity_createOpportunity_CreateInsertPageDef"/>
+    <page id="sfa_view_createOpportunity_createOpportunity_CommitPageDef"
+          path="Opportunity_TaskFLows.createOpportunity_createOpportunity_CommitPageDef"/>
+    <page id="sfa_view_addOpp_OMPageDef" path="Opportunity_pages.addOpp_OMPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="sfa.model.entities"

@@ -21,12 +21,10 @@
     PrimaryKey="true">
     <TransientExpression
       Name="ExpressionScript"
-      trustMode="trusted"
       CodeSourceName="OpportunityRow"/>
   </Attribute>
   <Attribute
     Name="Accountid"
-    IsNotNull="true"
     ColumnName="ACCOUNTID"
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
@@ -60,7 +58,6 @@
     TableName="OPPORTUNITY"/>
   <Attribute
     Name="Primarycontact"
-    IsNotNull="true"
     ColumnName="PRIMARYCONTACT"
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
@@ -121,6 +118,18 @@
     TableName="OPPORTUNITY">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="10"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Title"
+    Precision="20"
+    ColumnName="TITLE"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="OPPORTUNITY">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
     </DesignTime>
   </Attribute>
   <AccessorAttribute
