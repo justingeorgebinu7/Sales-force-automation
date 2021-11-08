@@ -285,8 +285,8 @@
     <page path="/WEB-INF/Opportunity_TaskFLows/OM_AddTasks.xml#OM_AddTasks@Commit"
           usageId="sfa_view_OM_AddTasks_OM_AddTasks_CommitPageDef"/>
     <page path="/Opportunity_pages/OM_addTask.jsff" usageId="sfa_view_OM_addTaskPageDef"/>
-    <page path="/OM_AppointmentsMain.jsff" usageId="sfa_view_OM_AppointmentsMainPageDef"/>
-    <page path="/OM_EditAppointment.jsff" usageId="sfa_view_OM_EditAppointmentPageDef"/>
+    <page path="/Opportunity_pages/OM_AppointmentsMain.jsff" usageId="sfa_view_OM_AppointmentsMainPageDef"/>
+    <page path="/Opportunity_pages/OM_EditAppointment.jsff" usageId="sfa_view_OM_EditAppointmentPageDef"/>
     <page path="/WEB-INF/Opportunity_TaskFLows/OM_CreateAppointment.xml#OM_CreateAppointment@CreateInsert"
           usageId="sfa_view_OM_CreateAppointment_OM_CreateAppointment_CreateInsertPageDef"/>
     <page path="/OM_CreateAppointmentPage.jsff" usageId="sfa_view_OM_CreateAppointmentPageDef"/>
@@ -294,7 +294,7 @@
           usageId="sfa_view_OM_CreateNewAppointment_OM_CreateNewAppointment_DeletePageDef"/>
     <page path="/WEB-INF/Opportunity_TaskFLows/OM_CreateNewAppointment.xml#OM_CreateNewAppointment@Commit"
           usageId="sfa_view_OM_CreateNewAppointment_OM_CreateNewAppointment_CommitPageDef"/>
-    <page path="/OM_CreateNewAppointment.jsff" usageId="sfa_view_OM_CreateNewAppointmentPageDef"/>
+    <page path="/Opportunity_pages/OM_CreateNewAppointment.jsff" usageId="sfa_view_OM_CreateNewAppointmentPageDef"/>
     <page path="/WEB-INF/Opportunity_TaskFLows/OM_CreateNewAppointment.xml#OM_CreateNewAppointment@CreateInsert"
           usageId="sfa_view_OM_CreateNewAppointment_OM_CreateNewAppointment_CreateInsertPageDef"/>
     <page path="PageFlow#Delete" usageId="sfa_view_OM_delete_appointment___DeletePageDef"/>
@@ -303,26 +303,26 @@
           usageId="sfa_view_OM_deleteAppoinement_OM_deleteAppoinement_CommitPageDef"/>
     <page path="/WEB-INF/Opportunity_TaskFLows/OM_deleteAppoinement.xml#OM_deleteAppoinement@Delete"
           usageId="sfa_view_OM_deleteAppoinement_OM_deleteAppoinement_DeletePageDef"/>
-    <page path="/OM_Interactions_Home.jsff" usageId="sfa_view_OM_Interactions_HomePageDef"/>
+    <page path="/Opportunity_pages/OM_Interactions_Home.jsff" usageId="sfa_view_OM_Interactions_HomePageDef"/>
     <page path="/WEB-INF/Opportunity_TaskFLows/OM_CreateInteraction.xml#OM_CreateInteraction@CreateInsert"
           usageId="sfa_view_OM_CreateInteraction_OM_CreateInteraction_CreateInsertPageDef"/>
     <page path="/WEB-INF/Opportunity_TaskFLows/OM_CreateInteraction.xml#OM_CreateInteraction@Delete"
           usageId="sfa_view_OM_CreateInteraction_OM_CreateInteraction_DeletePageDef"/>
     <page path="/WEB-INF/Opportunity_TaskFLows/OM_CreateInteraction.xml#OM_CreateInteraction@Commit"
           usageId="sfa_view_OM_CreateInteraction_OM_CreateInteraction_CommitPageDef"/>
-    <page path="/OM_CreateInteraction.jsff" usageId="sfa_view_OM_CreateInteractionPageDef"/>
+    <page path="/Opportunity_pages/OM_CreateInteraction.jsff" usageId="sfa_view_OM_CreateInteractionPageDef"/>
     <page path="/WEB-INF/Opportunity_TaskFLows/OM_DeleteInteraction.xml#OM_DeleteInteraction@Commit"
           usageId="sfa_view_OM_DeleteInteraction_OM_DeleteInteraction_CommitPageDef"/>
     <page path="/WEB-INF/Opportunity_TaskFLows/OM_DeleteInteraction.xml#OM_DeleteInteraction@Delete"
           usageId="sfa_view_OM_DeleteInteraction_OM_DeleteInteraction_DeletePageDef"/>
-    <page path="/OM_EditInteraction.jsff" usageId="sfa_view_OM_EditInteractionPageDef"/>
+    <page path="/Opportunity_pages/OM_EditInteraction.jsff" usageId="sfa_view_OM_EditInteractionPageDef"/>
     <page path="/WEB-INF/Opportunity_TaskFLows/addIntInvitee.xml#addIntInvitee@CreateInsert"
           usageId="sfa_view_addIntInvitee_addIntInvitee_CreateInsertPageDef"/>
     <page path="/WEB-INF/Opportunity_TaskFLows/addIntInvitee.xml#addIntInvitee@Delete"
           usageId="sfa_view_addIntInvitee_addIntInvitee_DeletePageDef"/>
     <page path="/WEB-INF/Opportunity_TaskFLows/addIntInvitee.xml#addIntInvitee@Commit"
           usageId="sfa_view_addIntInvitee_addIntInvitee_CommitPageDef"/>
-    <page path="/OM_AddIntInvitee.jsff" usageId="sfa_view_OM_AddIntInviteePageDef"/>
+    <page path="/Opportunity_pages/OM_AddIntInvitee.jsff" usageId="sfa_view_OM_AddIntInviteePageDef"/>
     <page path="/WEB-INF/Opportunity_TaskFLows/deleteIntInvitee.xml#deleteIntInvitee@Commit"
           usageId="sfa_view_deleteIntInvitee_deleteIntInvitee_CommitPageDef"/>
     <page path="/WEB-INF/Opportunity_TaskFLows/deleteIntInvitee.xml#deleteIntInvitee@Delete"
@@ -333,7 +333,7 @@
           usageId="sfa_view_addExtInvitee_addExtInvitee_DeletePageDef"/>
     <page path="/WEB-INF/Opportunity_TaskFLows/addExtInvitee.xml#addExtInvitee@Commit"
           usageId="sfa_view_addExtInvitee_addExtInvitee_CommitPageDef"/>
-    <page path="/OM_AddExtInvitee.jsff" usageId="sfa_view_OM_AddExtInviteePageDef"/>
+    <page path="/Opportunity_pages/OM_AddExtInvitee.jsff" usageId="sfa_view_OM_AddExtInviteePageDef"/>
     <page path="/WEB-INF/Opportunity_TaskFLows/deleteExtInvitee.xml#deleteExtInvitee@Delete"
           usageId="sfa_view_deleteExtInvitee_deleteExtInvitee_DeletePageDef"/>
     <page path="/WEB-INF/Opportunity_TaskFLows/deleteExtInvitee.xml#deleteExtInvitee@Commit"

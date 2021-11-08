@@ -43,7 +43,7 @@
       <property
          name="y">287.59766</property>
       <property
-         name="page">/OM_AddExtInvitee.jsff</property>
+         name="page">/Opportunity_pages/OM_AddExtInvitee.jsff</property>
       <property
          name="exceptionHandler">false</property>
    </View>

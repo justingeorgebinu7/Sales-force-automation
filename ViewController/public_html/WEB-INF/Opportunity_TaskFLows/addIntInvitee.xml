@@ -29,7 +29,7 @@
       </outcome>
     </task-flow-return>
     <view id="OM_AddIntInvitee">
-      <page>/OM_AddIntInvitee.jsff</page>
+      <page>/Opportunity_pages/OM_AddIntInvitee.jsff</page>
     </view>
     <control-flow-rule id="__1">
       <from-activity-id>CreateInsert</from-activity-id>

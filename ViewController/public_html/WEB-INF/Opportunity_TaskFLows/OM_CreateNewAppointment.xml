@@ -23,7 +23,7 @@
       </outcome>
     </task-flow-return>
     <view id="OM_CreateNewAppointment">
-      <page>/OM_CreateNewAppointment.jsff</page>
+      <page>/Opportunity_pages/OM_CreateNewAppointment.jsff</page>
     </view>
     <method-call id="CreateInsert">
       <method>#{bindings.CreateInsert.execute}</method>

@@ -71,7 +71,7 @@
       <property
          name="y">347.59766</property>
       <property
-         name="page">/OM_AddIntInvitee.jsff</property>
+         name="page">/Opportunity_pages/OM_AddIntInvitee.jsff</property>
       <property
          name="exceptionHandler">false</property>
    </View>

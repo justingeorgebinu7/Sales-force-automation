@@ -6,7 +6,7 @@
       <shared/>
     </data-control-scope>
     <view id="OM_Interactions_Home">
-      <page>/OM_Interactions_Home.jsff</page>
+      <page>/Opportunity_pages/OM_Interactions_Home.jsff</page>
     </view>
     <task-flow-call id="OM_DeleteInteraction1">
       <task-flow-reference>
@@ -21,7 +21,7 @@
       </task-flow-reference>
     </task-flow-call>
     <view id="OM_EditInteraction">
-      <page>/OM_EditInteraction.jsff</page>
+      <page>/Opportunity_pages/OM_EditInteraction.jsff</page>
     </view>
     <control-flow-rule id="__1">
       <from-activity-id>OM_Interactions_Home</from-activity-id>

@@ -6,10 +6,10 @@
       <shared/>
     </data-control-scope>
     <view id="OM_AppointmentsMain">
-      <page>/OM_AppointmentsMain.jsff</page>
+      <page>/Opportunity_pages/OM_AppointmentsMain.jsff</page>
     </view>
     <view id="OM_EditAppointment">
-      <page>/OM_EditAppointment.jsff</page>
+      <page>/Opportunity_pages/OM_EditAppointment.jsff</page>
     </view>
     <task-flow-call id="OM_CreateNewAppointment1">
       <task-flow-reference>

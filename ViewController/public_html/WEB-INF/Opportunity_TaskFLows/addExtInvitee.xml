@@ -18,7 +18,7 @@
       </outcome>
     </method-call>
     <view id="OM_AddExtInvitee">
-      <page>/OM_AddExtInvitee.jsff</page>
+      <page>/Opportunity_pages/OM_AddExtInvitee.jsff</page>
     </view>
     <task-flow-return id="taskFlowReturn1">
       <outcome>
