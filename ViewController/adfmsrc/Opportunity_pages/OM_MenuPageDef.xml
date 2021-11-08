@@ -35,11 +35,6 @@
         <Item Value="Closedate"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="OpportunityView1Iterator" id="Primarycontact">
-      <AttrNames>
-        <Item Value="Primarycontact"/>
-      </AttrNames>
-    </attributeValues>
     <attributeValues IterBinding="OpportunityView1Iterator" id="Bestcaserevenue">
       <AttrNames>
         <Item Value="Bestcaserevenue"/>
@@ -59,5 +54,7 @@
     <listOfValues IterBinding="OpportunityView1Iterator" StaticList="false" Uses="LOV_Risklevel" id="Risklevel"/>
     <listOfValues IterBinding="OpportunityView1Iterator" StaticList="false" Uses="LOV_Salesmethod" id="Salesmethod"/>
     <listOfValues IterBinding="OpportunityView1Iterator" StaticList="false" Uses="LOV_Salesstage" id="Salesstage"/>
+    <listOfValues IterBinding="OpportunityView1Iterator" StaticList="false" Uses="LOV_Primarycontact"
+                  id="Primarycontact"/>
   </bindings>
 </pageDefinition>

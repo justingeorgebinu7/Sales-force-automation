@@ -26,6 +26,10 @@
     Name="Priority1"
     ViewObjectName="sfa.model.viewobjects.staticVo.Priority"
     RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="CustomercontactsView1"
+    ViewObjectName="sfa.model.viewobjects.CustomercontactsView"
+    RowLevelBinds="true"/>
   <ListBinding
     Name="LOV_Salesstage"
     ListVOName="SalesStage1"
@@ -77,6 +81,26 @@
     </AttrArray>
     <AttrArray Name="ListDisplayAttrNames">
       <Item Value="Priority"/>
+    </AttrArray>
+    <DisplayCriteria
+      Hint="showAndExecute"/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_Primarycontact"
+    ListVOName="CustomercontactsView1"
+    ComboRowCountHint="10"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Primarycontact"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Contactid"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+      <Item Value="Title"/>
     </AttrArray>
     <DisplayCriteria
       Hint="showAndExecute"/>
@@ -142,7 +166,15 @@
     PrecisionRule="true"
     EntityAttrName="Primarycontact"
     EntityUsage="Opportunity"
-    AliasName="PRIMARYCONTACT"/>
+    AliasName="PRIMARYCONTACT"
+    LOVName="LOV_Primarycontact">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo_lov"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Salesstage"
     PrecisionRule="true"

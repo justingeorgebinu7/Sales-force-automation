@@ -11,19 +11,25 @@
                 <img alt="img" src="https://i.ibb.co/HrRP1ZH/logosq.jpg" style="height:120px;float:left;"/>
             </div>
             <div style="z-index:20;position:fixed;overflow:hidden; top:40px;right:30px;font-size:13px;">
-            <button style="color: #149;border:.5px solid #ccc;border-bottom: 2px solid #149;border-radius: 5px;font-weight:bold;padding: 10px 20px;background-color: #fff;">Logout</button>
+            
             </div>
             <af:panelSplitter id="ps1" orientation="vertical">
                 <f:facet name="first"/>
                 <f:facet name="second">
-                    <af:panelStretchLayout id="psl1">
+                    <af:panelStretchLayout id="psl1" topHeight="51px">
                         <f:facet name="start"/>
                         <f:facet name="end"/>
                         <f:facet name="top"/>
                         <f:facet name="bottom"/>
                         <f:facet name="center">
                             <af:panelBox id="pb1">
-                                <f:facet name="toolbar"/>
+                                <f:facet name="toolbar">
+                                    
+                                        <af:link text="Logout" id="gl2"
+                                                 destination="/adfAuthentication?logout=true&amp;end_url=/faces/LandingPage"
+                                                 accessKey="L" shortDesc="Logs-out current user session."/>
+                                   
+                                </f:facet>
                                 <af:panelSpringboard id="ps5" displayMode="grid">
                                     <af:showDetailItem text="Customer Account Management" id="sdi1"
                                                        icon="https://i.ibb.co/wJTJHKN/b512cb6c9c-1.png">
