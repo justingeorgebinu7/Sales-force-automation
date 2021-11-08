@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.22.48"
+                id="OM_deleteAppoinement_OM_deleteAppoinement_DeletePageDef" Package="Opportunity_TaskFLows"
+                SkipValidation="true">
+  <parameters/>
+  <executables>
+    <iterator Binds="AppointmentsView8" RangeSize="25" DataControl="AppModuleDataControl"
+              id="AppointmentsView8Iterator"/>
+  </executables>
+  <bindings>
+    <action IterBinding="AppointmentsView8Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+  </bindings>
+</pageDefinition>

@@ -167,6 +167,13 @@
     AssociationOtherEnd="sfa.model.entities.Opportunityid1Assoc.Opportunity"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="Appointments"
+    Association="sfa.model.entities.OpportunityAppointmentFkAssoc"
+    AssociationEnd="sfa.model.entities.OpportunityAppointmentFkAssoc.Appointments"
+    AssociationOtherEnd="sfa.model.entities.OpportunityAppointmentFkAssoc.Opportunity"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <Key
     Name="OpportunityPk"
     PrimaryKey="true">

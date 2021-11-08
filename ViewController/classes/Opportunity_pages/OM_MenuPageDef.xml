@@ -9,6 +9,8 @@
               activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
     <taskFlow id="OM_TasksMain1" taskFlowId="/WEB-INF/Opportunity_TaskFLows/OM_TasksMain.xml#OM_TasksMain"
               activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <taskFlow id="OM_Appointments1" taskFlowId="/WEB-INF/Opportunity_TaskFLows/OM_Appointments.xml#OM_Appointments"
+              activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
   </executables>
   <bindings>
     <attributeValues IterBinding="OpportunityView1Iterator" id="Title">

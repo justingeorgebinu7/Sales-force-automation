@@ -59,7 +59,7 @@ af|panelSpringboard::item {
 
 af|panelSpringboard {
     margin-top: 20px;
-    padding-left:20px;
+    padding-left:40px;
 }
 
 af|panelSpringboard::item-text {

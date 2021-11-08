@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.22.48" id="OM_AppointmentsMainPageDef"
+                Package="sfa.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="AppointmentsView8" RangeSize="25" DataControl="AppModuleDataControl"
+              id="AppointmentsView8Iterator"/>
+    <searchRegion Binds="AppointmentsView8Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="AppointmentsView8Query"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="AppointmentsView8Iterator" id="AppointmentsView8">
+      <nodeDefinition DefName="sfa.model.viewobjects.AppointmentsView" Name="AppointmentsView80">
+        <AttrNames>
+          <Item Value="Name"/>
+          <Item Value="Startdate"/>
+          <Item Value="Enddate"/>
+          <Item Value="Description"/>
+          <Item Value="Location"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

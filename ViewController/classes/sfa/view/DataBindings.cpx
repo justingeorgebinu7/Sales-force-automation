@@ -285,6 +285,18 @@
     <page path="/WEB-INF/Opportunity_TaskFLows/OM_AddTasks.xml#OM_AddTasks@Commit"
           usageId="sfa_view_OM_AddTasks_OM_AddTasks_CommitPageDef"/>
     <page path="/Opportunity_pages/OM_addTask.jsff" usageId="sfa_view_OM_addTaskPageDef"/>
+    <page path="/OM_AppointmentsMain.jsff" usageId="sfa_view_OM_AppointmentsMainPageDef"/>
+    <page path="/OM_EditAppointment.jsff" usageId="sfa_view_OM_EditAppointmentPageDef"/>
+    <page path="/WEB-INF/Opportunity_TaskFLows/OM_CreateAppointment.xml#OM_CreateAppointment@CreateInsert"
+          usageId="sfa_view_OM_CreateAppointment_OM_CreateAppointment_CreateInsertPageDef"/>
+    <page path="/OM_CreateAppointmentPage.jsff" usageId="sfa_view_OM_CreateAppointmentPageDef"/>
+    <page path="/WEB-INF/Opportunity_TaskFLows/OM_CreateNewAppointment.xml#OM_CreateNewAppointment@Delete"
+          usageId="sfa_view_OM_CreateNewAppointment_OM_CreateNewAppointment_DeletePageDef"/>
+    <page path="/WEB-INF/Opportunity_TaskFLows/OM_CreateNewAppointment.xml#OM_CreateNewAppointment@Commit"
+          usageId="sfa_view_OM_CreateNewAppointment_OM_CreateNewAppointment_CommitPageDef"/>
+    <page path="/OM_CreateNewAppointment.jsff" usageId="sfa_view_OM_CreateNewAppointmentPageDef"/>
+    <page path="/WEB-INF/Opportunity_TaskFLows/OM_CreateNewAppointment.xml#OM_CreateNewAppointment@CreateInsert"
+          usageId="sfa_view_OM_CreateNewAppointment_OM_CreateNewAppointment_CreateInsertPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="sfa_view_untitled2PageDef" path="sfa.view.pageDefs.untitled2PageDef"/>
@@ -563,6 +575,18 @@
     <page id="sfa_view_OM_AddTasks_OM_AddTasks_CommitPageDef"
           path="Opportunity_TaskFLows.OM_AddTasks_OM_AddTasks_CommitPageDef"/>
     <page id="sfa_view_OM_addTaskPageDef" path="Opportunity_pages.OM_addTaskPageDef"/>
+    <page id="sfa_view_OM_AppointmentsMainPageDef" path="sfa.view.pageDefs.OM_AppointmentsMainPageDef"/>
+    <page id="sfa_view_OM_EditAppointmentPageDef" path="sfa.view.pageDefs.OM_EditAppointmentPageDef"/>
+    <page id="sfa_view_OM_CreateAppointment_OM_CreateAppointment_CreateInsertPageDef"
+          path="Opportunity_TaskFLows.OM_CreateAppointment_OM_CreateAppointment_CreateInsertPageDef"/>
+    <page id="sfa_view_OM_CreateAppointmentPageDef" path="sfa.view.pageDefs.OM_CreateAppointmentPageDef"/>
+    <page id="sfa_view_OM_CreateNewAppointment_OM_CreateNewAppointment_DeletePageDef"
+          path="Opportunity_TaskFLows.OM_CreateNewAppointment_OM_CreateNewAppointment_DeletePageDef"/>
+    <page id="sfa_view_OM_CreateNewAppointment_OM_CreateNewAppointment_CommitPageDef"
+          path="Opportunity_TaskFLows.OM_CreateNewAppointment_OM_CreateNewAppointment_CommitPageDef"/>
+    <page id="sfa_view_OM_CreateNewAppointmentPageDef" path="sfa.view.pageDefs.OM_CreateNewAppointmentPageDef"/>
+    <page id="sfa_view_OM_CreateNewAppointment_OM_CreateNewAppointment_CreateInsertPageDef"
+          path="Opportunity_TaskFLows.OM_CreateNewAppointment_OM_CreateNewAppointment_CreateInsertPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="sfa.model.entities"

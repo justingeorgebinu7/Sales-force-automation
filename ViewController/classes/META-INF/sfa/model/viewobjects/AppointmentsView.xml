@@ -97,6 +97,12 @@
     EntityAttrName="Accountid"
     EntityUsage="Appointments"
     AliasName="ACCOUNTID"/>
+  <ViewAttribute
+    Name="Opportunityid"
+    PrecisionRule="true"
+    EntityAttrName="Opportunityid"
+    EntityUsage="Appointments"
+    AliasName="OPPORTUNITYID"/>
   <ViewLinkAccessor
     Name="InviteesView"
     ViewLink="sfa.model.viewobjects.InviteesAppointmentsFkLink"
@@ -112,5 +118,11 @@
     Name="InviteesextView"
     ViewLink="sfa.model.entities.InviteesExt_AppoinmentFK_Link"
     Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="OpportunityView"
+    ViewLink="sfa.model.entities.OpportunityAppointmentFkLink"
+    Type="oracle.jbo.Row"
+    Reversed="true"
     IsUpdateable="false"/>
 </ViewObject>

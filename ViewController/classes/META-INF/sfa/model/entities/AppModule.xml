@@ -154,6 +154,21 @@
   <ViewUsage
     Name="ProductsView4"
     ViewObjectName="sfa.model.viewobjects.ProductsView"/>
+  <ViewUsage
+    Name="OpportunityView4"
+    ViewObjectName="sfa.model.viewobjects.OpportunityView"/>
+  <ViewUsage
+    Name="AppointmentsView6"
+    ViewObjectName="sfa.model.viewobjects.AppointmentsView"/>
+  <ViewUsage
+    Name="AppointmentsView8"
+    ViewObjectName="sfa.model.viewobjects.AppointmentsView"/>
+  <ViewUsage
+    Name="InviteesextView4"
+    ViewObjectName="sfa.model.viewobjects.InviteesextView"/>
+  <ViewUsage
+    Name="InviteesView5"
+    ViewObjectName="sfa.model.viewobjects.InviteesView"/>
   <ViewLinkUsage
     Name="AddressCustomeraccountFkLink1"
     ViewLinkObjectName="sfa.model.viewobjects.AddressCustomeraccountFkLink"
@@ -333,5 +348,29 @@
     ViewLinkObjectName="sfa.model.viewobjects.ProductsRevenueitemFkLink"
     SrcViewUsageName="sfa.model.entities.AppModule.RevenueitemView2"
     DstViewUsageName="sfa.model.entities.AppModule.ProductsView4"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="OpportunityAppointmentFkLink"
+    ViewLinkObjectName="sfa.model.entities.OpportunityAppointmentFkLink"
+    SrcViewUsageName="sfa.model.entities.AppModule.OpportunityView4"
+    DstViewUsageName="sfa.model.entities.AppModule.AppointmentsView6"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="OpportunityAppointmentFkLink2"
+    ViewLinkObjectName="sfa.model.entities.OpportunityAppointmentFkLink"
+    SrcViewUsageName="sfa.model.entities.AppModule.OpportunityView1"
+    DstViewUsageName="sfa.model.entities.AppModule.AppointmentsView8"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="InviteesExt_AppoinmentFK_Link2"
+    ViewLinkObjectName="sfa.model.entities.InviteesExt_AppoinmentFK_Link"
+    SrcViewUsageName="sfa.model.entities.AppModule.AppointmentsView8"
+    DstViewUsageName="sfa.model.entities.AppModule.InviteesextView4"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="InviteesAppointmentsFkLink4"
+    ViewLinkObjectName="sfa.model.viewobjects.InviteesAppointmentsFkLink"
+    SrcViewUsageName="sfa.model.entities.AppModule.AppointmentsView8"
+    DstViewUsageName="sfa.model.entities.AppModule.InviteesView5"
     Reversed="false"/>
 </AppModule>

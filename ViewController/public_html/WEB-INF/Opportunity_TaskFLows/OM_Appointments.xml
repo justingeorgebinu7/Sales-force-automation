@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="OM_Appointments">
+    <default-activity>OM_AppointmentsMain</default-activity>
+    <data-control-scope>
+      <shared/>
+    </data-control-scope>
+    <view id="OM_AppointmentsMain">
+      <page>/OM_AppointmentsMain.jsff</page>
+    </view>
+    <view id="OM_EditAppointment">
+      <page>/OM_EditAppointment.jsff</page>
+    </view>
+    <task-flow-call id="OM_CreateNewAppointment1">
+      <task-flow-reference>
+        <document>/WEB-INF/Opportunity_TaskFLows/OM_CreateNewAppointment.xml</document>
+        <id>OM_CreateNewAppointment</id>
+      </task-flow-reference>
+    </task-flow-call>
+    <task-flow-call id="OM_deleteAppoinement1">
+      <task-flow-reference>
+        <document>/WEB-INF/Opportunity_TaskFLows/OM_deleteAppoinement.xml</document>
+        <id>OM_deleteAppoinement</id>
+      </task-flow-reference>
+    </task-flow-call>
+    <control-flow-rule id="__1">
+      <from-activity-id>OM_AppointmentsMain</from-activity-id>
+      <control-flow-case id="__2">
+        <from-outcome>editAppointment</from-outcome>
+        <to-activity-id>OM_EditAppointment</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__3">
+      <from-activity-id>OM_EditAppointment</from-activity-id>
+      <control-flow-case id="__4">
+        <from-outcome>back</from-outcome>
+        <to-activity-id>OM_AppointmentsMain</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__6">
+      <from-activity-id>OM_AppointmentsMain</from-activity-id>
+      <control-flow-case id="__7">
+        <from-outcome>OM_CreateNewAppointment1</from-outcome>
+        <to-activity-id>OM_CreateNewAppointment1</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__8">
+      <from-activity-id>OM_AppointmentsMain</from-activity-id>
+      <control-flow-case id="__9">
+        <from-outcome>OM_deleteAppoinement1</from-outcome>
+        <to-activity-id>OM_deleteAppoinement1</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <use-page-fragments/>
+  </task-flow-definition>
+</adfc-config>
