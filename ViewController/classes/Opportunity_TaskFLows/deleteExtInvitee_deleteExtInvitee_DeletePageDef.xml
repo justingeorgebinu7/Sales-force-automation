@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.22.48"
+                id="deleteExtInvitee_deleteExtInvitee_DeletePageDef" Package="Opportunity_TaskFLows"
+                SkipValidation="true">
+  <parameters/>
+  <executables>
+    <iterator Binds="InviteesextView4" RangeSize="25" DataControl="AppModuleDataControl" id="InviteesextView4Iterator"/>
+  </executables>
+  <bindings>
+    <action IterBinding="InviteesextView4Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+  </bindings>
+</pageDefinition>

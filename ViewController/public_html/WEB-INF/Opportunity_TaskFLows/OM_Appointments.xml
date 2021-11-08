@@ -23,6 +23,30 @@
         <id>OM_deleteAppoinement</id>
       </task-flow-reference>
     </task-flow-call>
+    <task-flow-call id="addIntInvitee">
+      <task-flow-reference>
+        <document>/WEB-INF/Opportunity_TaskFLows/addIntInvitee.xml</document>
+        <id>addIntInvitee</id>
+      </task-flow-reference>
+    </task-flow-call>
+    <task-flow-call id="deleteIntInvitee">
+      <task-flow-reference>
+        <document>/WEB-INF/Opportunity_TaskFLows/deleteIntInvitee.xml</document>
+        <id>deleteIntInvitee</id>
+      </task-flow-reference>
+    </task-flow-call>
+    <task-flow-call id="deleteExtInvitee">
+      <task-flow-reference>
+        <document>/WEB-INF/Opportunity_TaskFLows/deleteExtInvitee.xml</document>
+        <id>deleteExtInvitee</id>
+      </task-flow-reference>
+    </task-flow-call>
+    <task-flow-call id="addExtInvitee">
+      <task-flow-reference>
+        <document>/WEB-INF/Opportunity_TaskFLows/addExtInvitee.xml</document>
+        <id>addExtInvitee</id>
+      </task-flow-reference>
+    </task-flow-call>
     <control-flow-rule id="__1">
       <from-activity-id>OM_AppointmentsMain</from-activity-id>
       <control-flow-case id="__2">
@@ -35,6 +59,22 @@
       <control-flow-case id="__4">
         <from-outcome>back</from-outcome>
         <to-activity-id>OM_AppointmentsMain</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__5">
+        <from-outcome>addInternalInvitee</from-outcome>
+        <to-activity-id>addIntInvitee</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__10">
+        <from-outcome>deleteInternalInvitee</from-outcome>
+        <to-activity-id>deleteIntInvitee</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__11">
+        <from-outcome>addExternalInvitee</from-outcome>
+        <to-activity-id>addExtInvitee</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__12">
+        <from-outcome>deleteExternalInvitee</from-outcome>
+        <to-activity-id>deleteExtInvitee</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <control-flow-rule id="__6">

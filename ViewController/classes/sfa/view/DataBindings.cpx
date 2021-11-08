@@ -316,6 +316,28 @@
     <page path="/WEB-INF/Opportunity_TaskFLows/OM_DeleteInteraction.xml#OM_DeleteInteraction@Delete"
           usageId="sfa_view_OM_DeleteInteraction_OM_DeleteInteraction_DeletePageDef"/>
     <page path="/OM_EditInteraction.jsff" usageId="sfa_view_OM_EditInteractionPageDef"/>
+    <page path="/WEB-INF/Opportunity_TaskFLows/addIntInvitee.xml#addIntInvitee@CreateInsert"
+          usageId="sfa_view_addIntInvitee_addIntInvitee_CreateInsertPageDef"/>
+    <page path="/WEB-INF/Opportunity_TaskFLows/addIntInvitee.xml#addIntInvitee@Delete"
+          usageId="sfa_view_addIntInvitee_addIntInvitee_DeletePageDef"/>
+    <page path="/WEB-INF/Opportunity_TaskFLows/addIntInvitee.xml#addIntInvitee@Commit"
+          usageId="sfa_view_addIntInvitee_addIntInvitee_CommitPageDef"/>
+    <page path="/OM_AddIntInvitee.jsff" usageId="sfa_view_OM_AddIntInviteePageDef"/>
+    <page path="/WEB-INF/Opportunity_TaskFLows/deleteIntInvitee.xml#deleteIntInvitee@Commit"
+          usageId="sfa_view_deleteIntInvitee_deleteIntInvitee_CommitPageDef"/>
+    <page path="/WEB-INF/Opportunity_TaskFLows/deleteIntInvitee.xml#deleteIntInvitee@Delete"
+          usageId="sfa_view_deleteIntInvitee_deleteIntInvitee_DeletePageDef"/>
+    <page path="/WEB-INF/Opportunity_TaskFLows/addExtInvitee.xml#addExtInvitee@CreateInsert"
+          usageId="sfa_view_addExtInvitee_addExtInvitee_CreateInsertPageDef"/>
+    <page path="/WEB-INF/Opportunity_TaskFLows/addExtInvitee.xml#addExtInvitee@Delete"
+          usageId="sfa_view_addExtInvitee_addExtInvitee_DeletePageDef"/>
+    <page path="/WEB-INF/Opportunity_TaskFLows/addExtInvitee.xml#addExtInvitee@Commit"
+          usageId="sfa_view_addExtInvitee_addExtInvitee_CommitPageDef"/>
+    <page path="/OM_AddExtInvitee.jsff" usageId="sfa_view_OM_AddExtInviteePageDef"/>
+    <page path="/WEB-INF/Opportunity_TaskFLows/deleteExtInvitee.xml#deleteExtInvitee@Delete"
+          usageId="sfa_view_deleteExtInvitee_deleteExtInvitee_DeletePageDef"/>
+    <page path="/WEB-INF/Opportunity_TaskFLows/deleteExtInvitee.xml#deleteExtInvitee@Commit"
+          usageId="sfa_view_deleteExtInvitee_deleteExtInvitee_CommitPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="sfa_view_untitled2PageDef" path="sfa.view.pageDefs.untitled2PageDef"/>
@@ -627,6 +649,28 @@
     <page id="sfa_view_OM_DeleteInteraction_OM_DeleteInteraction_DeletePageDef"
           path="Opportunity_TaskFLows.OM_DeleteInteraction_OM_DeleteInteraction_DeletePageDef"/>
     <page id="sfa_view_OM_EditInteractionPageDef" path="sfa.view.pageDefs.OM_EditInteractionPageDef"/>
+    <page id="sfa_view_addIntInvitee_addIntInvitee_CreateInsertPageDef"
+          path="Opportunity_TaskFLows.addIntInvitee_addIntInvitee_CreateInsertPageDef"/>
+    <page id="sfa_view_addIntInvitee_addIntInvitee_DeletePageDef"
+          path="Opportunity_TaskFLows.addIntInvitee_addIntInvitee_DeletePageDef"/>
+    <page id="sfa_view_addIntInvitee_addIntInvitee_CommitPageDef"
+          path="Opportunity_TaskFLows.addIntInvitee_addIntInvitee_CommitPageDef"/>
+    <page id="sfa_view_OM_AddIntInviteePageDef" path="sfa.view.pageDefs.OM_AddIntInviteePageDef"/>
+    <page id="sfa_view_deleteIntInvitee_deleteIntInvitee_CommitPageDef"
+          path="Opportunity_TaskFLows.deleteIntInvitee_deleteIntInvitee_CommitPageDef"/>
+    <page id="sfa_view_deleteIntInvitee_deleteIntInvitee_DeletePageDef"
+          path="Opportunity_TaskFLows.deleteIntInvitee_deleteIntInvitee_DeletePageDef"/>
+    <page id="sfa_view_addExtInvitee_addExtInvitee_CreateInsertPageDef"
+          path="Opportunity_TaskFLows.addExtInvitee_addExtInvitee_CreateInsertPageDef"/>
+    <page id="sfa_view_addExtInvitee_addExtInvitee_DeletePageDef"
+          path="Opportunity_TaskFLows.addExtInvitee_addExtInvitee_DeletePageDef"/>
+    <page id="sfa_view_addExtInvitee_addExtInvitee_CommitPageDef"
+          path="Opportunity_TaskFLows.addExtInvitee_addExtInvitee_CommitPageDef"/>
+    <page id="sfa_view_OM_AddExtInviteePageDef" path="sfa.view.pageDefs.OM_AddExtInviteePageDef"/>
+    <page id="sfa_view_deleteExtInvitee_deleteExtInvitee_DeletePageDef"
+          path="Opportunity_TaskFLows.deleteExtInvitee_deleteExtInvitee_DeletePageDef"/>
+    <page id="sfa_view_deleteExtInvitee_deleteExtInvitee_CommitPageDef"
+          path="Opportunity_TaskFLows.deleteExtInvitee_deleteExtInvitee_CommitPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="sfa.model.entities"

@@ -36,7 +36,7 @@
                       shortDesc="#{bindings.Location.hints.tooltip}" id="it3">
           <f:validator binding="#{bindings.Location.validator}"/>
         </af:inputText>
-        <af:button actionListener="#{bindings.Commit.execute}" text="Save" disabled="#{!bindings.Commit.enabled}"
+        <af:button actionListener="#{bindings.Commit.execute}" text="Save"
                    id="b1"/>
         <af:button text="Cancel" id="b2" action="back"/>
         <f:facet name="footer"/>
@@ -48,8 +48,8 @@
           <af:panelBox text="Invitees Internal" id="pb1">
             <f:facet name="toolbar">
               <af:toolbar id="t3">
-                <af:commandMenuItem text="Add" id="cmi1"/>
-                <af:commandMenuItem text="Delete" id="cmi2"/>
+                <af:commandMenuItem text="Add" id="cmi1" action="addInternalInvitee"/>
+                <af:commandMenuItem text="Delete" id="cmi2" action="deleteInternalInvitee"/>
               </af:toolbar>
             </f:facet>
             <af:table value="#{bindings.InviteesView5.collectionModel}" var="row"
@@ -72,8 +72,8 @@
           <af:panelBox text="Invitees External" id="pb2">
             <f:facet name="toolbar">
               <af:toolbar id="t4">
-                <af:commandMenuItem text="Add" id="cmi3"/>
-                <af:commandMenuItem text="Delete" id="cmi4"/>
+                <af:commandMenuItem text="Add" id="cmi3" action="addExternalInvitee"/>
+                <af:commandMenuItem text="Delete" id="cmi4" action="deleteExternalInvitee"/>
               </af:toolbar>
             </f:facet>
             <af:table value="#{bindings.InviteesextView4.collectionModel}" var="row"
