@@ -12,6 +12,8 @@
               activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
     <taskFlow id="Opportunity_main1" taskFlowId="/WEB-INF/Opportunity_TaskFLows/Opportunity_main.xml#Opportunity_main"
               activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <taskFlow id="productCatalog1" taskFlowId="/WEB-INF/Productcatalog/productCatalog.xml#productCatalog"
+              activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
   </executables>
   <bindings/>
 </pageDefinition>

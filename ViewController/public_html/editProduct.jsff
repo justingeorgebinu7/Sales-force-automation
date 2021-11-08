@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:f="http://java.sun.com/jsf/core">
+  <af:panelFormLayout id="pfl1">
+    <af:inputText value="#{bindings.Name.inputValue}" label="#{bindings.Name.hints.label}"
+                  required="#{bindings.Name.hints.mandatory}" columns="#{bindings.Name.hints.displayWidth}"
+                  maximumLength="#{bindings.Name.hints.precision}" shortDesc="#{bindings.Name.hints.tooltip}" id="it1">
+      <f:validator binding="#{bindings.Name.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Description.inputValue}" label="#{bindings.Description.hints.label}"
+                  required="#{bindings.Description.hints.mandatory}"
+                  columns="#{bindings.Description.hints.displayWidth}"
+                  maximumLength="#{bindings.Description.hints.precision}"
+                  shortDesc="#{bindings.Description.hints.tooltip}" id="it2" rows="5">
+      <f:validator binding="#{bindings.Description.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Price.inputValue}" label="#{bindings.Price.hints.label}"
+                  required="#{bindings.Price.hints.mandatory}" columns="#{bindings.Price.hints.displayWidth}"
+                  maximumLength="#{bindings.Price.hints.precision}" shortDesc="#{bindings.Price.hints.tooltip}"
+                  id="it3">
+      <f:validator binding="#{bindings.Price.validator}"/>
+      <af:convertNumber groupingUsed="false" pattern="#{bindings.Price.format}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Category.inputValue}" label="#{bindings.Category.hints.label}"
+                  required="#{bindings.Category.hints.mandatory}" columns="#{bindings.Category.hints.displayWidth}"
+                  maximumLength="#{bindings.Category.hints.precision}" shortDesc="#{bindings.Category.hints.tooltip}"
+                  id="it4">
+      <f:validator binding="#{bindings.Category.validator}"/>
+    </af:inputText>
+  </af:panelFormLayout>
+  <af:button actionListener="#{bindings.Commit.execute}" text="Save" disabled="false" id="b1"
+             action="back"/>
+  <af:button text="Cancel" id="b2" action="back"/>
+</ui:composition>

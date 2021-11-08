@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.22.48" id="productsCatalogPageDef"
+                Package="ProductsCatalog">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="ProductsView1" RangeSize="25" DataControl="AppModuleDataControl" id="ProductsView1Iterator"/>
+    <searchRegion Binds="ProductsView1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="ProductsView1Query"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="ProductsView1Iterator" id="ProductsView1">
+      <nodeDefinition DefName="sfa.model.viewobjects.ProductsView" Name="ProductsView10">
+        <AttrNames>
+          <Item Value="Name"/>
+          <Item Value="Description"/>
+          <Item Value="Price"/>
+          <Item Value="Category"/>
+          <Item Value="Revenueitem"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

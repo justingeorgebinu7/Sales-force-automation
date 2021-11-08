@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="productCatalog">
+    <default-activity>productsCatalog</default-activity>
+    <data-control-scope>
+      <shared/>
+    </data-control-scope>
+    <view id="productsCatalog">
+      <page>/ProductsCatalog/productsCatalog.jsff</page>
+    </view>
+    <task-flow-call id="createProduct">
+      <task-flow-reference>
+        <document>/WEB-INF/Productcatalog/createProduct.xml</document>
+        <id>createProduct</id>
+      </task-flow-reference>
+    </task-flow-call>
+    <task-flow-call id="deleteProduct1">
+      <task-flow-reference>
+        <document>/WEB-INF/Productcatalog/deleteProduct.xml</document>
+        <id>deleteProduct</id>
+      </task-flow-reference>
+    </task-flow-call>
+    <view id="editProduct">
+      <page>/editProduct.jsff</page>
+    </view>
+    <control-flow-rule id="__1">
+      <from-activity-id>productsCatalog</from-activity-id>
+      <control-flow-case id="__2">
+        <from-outcome>create</from-outcome>
+        <to-activity-id>createProduct</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__5">
+        <from-outcome>edit</from-outcome>
+        <to-activity-id>editProduct</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__3">
+      <from-activity-id>productsCatalog</from-activity-id>
+      <control-flow-case id="__4">
+        <from-outcome>deleteProduct1</from-outcome>
+        <to-activity-id>deleteProduct1</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__6">
+      <from-activity-id>editProduct</from-activity-id>
+      <control-flow-case id="__7">
+        <from-outcome>back</from-outcome>
+        <to-activity-id>productsCatalog</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <use-page-fragments/>
+  </task-flow-definition>
+</adfc-config>
