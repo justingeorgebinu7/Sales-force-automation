@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.22.48" id="OM_Interactions_HomePageDef"
+                Package="sfa.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="InteractionView6" RangeSize="25" DataControl="AppModuleDataControl" id="InteractionView6Iterator"/>
+    <searchRegion Binds="InteractionView6Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="InteractionView6Query"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="InteractionView6Iterator" id="InteractionView6">
+      <nodeDefinition DefName="sfa.model.viewobjects.InteractionView" Name="InteractionView60">
+        <AttrNames>
+          <Item Value="Type"/>
+          <Item Value="Direction"/>
+          <Item Value="Description"/>
+          <Item Value="Resolution"/>
+          <Item Value="Startdate"/>
+          <Item Value="Enddate"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

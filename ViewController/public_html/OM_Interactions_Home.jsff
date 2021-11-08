@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:f="http://java.sun.com/jsf/core">
+  <af:table value="#{bindings.InteractionView6.collectionModel}" var="row" rows="#{bindings.InteractionView6.rangeSize}"
+            emptyText="#{bindings.InteractionView6.viewable ? 'No data to display.' : 'Access Denied.'}"
+            rowBandingInterval="0" selectedRowKeys="#{bindings.InteractionView6.collectionModel.selectedRow}"
+            selectionListener="#{bindings.InteractionView6.collectionModel.makeCurrent}" rowSelection="single"
+            fetchSize="#{bindings.InteractionView6.rangeSize}"
+            filterModel="#{bindings.InteractionView6Query.queryDescriptor}" filterVisible="true"
+            queryListener="#{bindings.InteractionView6Query.processQuery}" varStatus="vs" id="t1">
+    <af:column sortProperty="#{bindings.InteractionView6.hints.Description.name}" filterable="true" sortable="true"
+               headerText="#{bindings.InteractionView6.hints.Description.label}" id="c3">
+      <af:link shortDesc="#{bindings.InteractionView6.hints.Description.tooltip}" id="ot3" text="#{row.Description}"
+               action="editInteraction"/>
+    </af:column>
+    <af:column sortProperty="#{bindings.InteractionView6.hints.Type.name}" filterable="true" sortable="true"
+               headerText="#{bindings.InteractionView6.hints.Type.label}" id="c1">
+      <af:outputText value="#{row.Type}" shortDesc="#{bindings.InteractionView6.hints.Type.tooltip}" id="ot1"/>
+    </af:column>
+    <af:column sortProperty="#{bindings.InteractionView6.hints.Direction.name}" filterable="true" sortable="true"
+               headerText="#{bindings.InteractionView6.hints.Direction.label}" id="c2">
+      <af:outputText value="#{row.Direction}" shortDesc="#{bindings.InteractionView6.hints.Direction.tooltip}"
+                     id="ot2"/>
+    </af:column>
+    <af:column sortProperty="#{bindings.InteractionView6.hints.Resolution.name}" filterable="true" sortable="true"
+               headerText="#{bindings.InteractionView6.hints.Resolution.label}" id="c4">
+      <af:outputText value="#{row.Resolution}" shortDesc="#{bindings.InteractionView6.hints.Resolution.tooltip}"
+                     id="ot4"/>
+    </af:column>
+    <af:column sortProperty="#{bindings.InteractionView6.hints.Startdate.name}" filterable="true" sortable="true"
+               headerText="#{bindings.InteractionView6.hints.Startdate.label}" id="c5">
+      <f:facet name="filter">
+        <af:inputDate value="#{bindings.InteractionView6Query.queryDescriptor.filterConjunctionCriterion.criterionMap.Startdate.value}"
+                      id="id1">
+          <af:convertDateTime pattern="#{bindings.InteractionView6.hints.Startdate.format}"/>
+        </af:inputDate>
+      </f:facet>
+      <af:outputText value="#{row.Startdate}" shortDesc="#{bindings.InteractionView6.hints.Startdate.tooltip}" id="ot5">
+        <af:convertDateTime pattern="#{bindings.InteractionView6.hints.Startdate.format}"/>
+      </af:outputText>
+    </af:column>
+    <af:column sortProperty="#{bindings.InteractionView6.hints.Enddate.name}" filterable="true" sortable="true"
+               headerText="#{bindings.InteractionView6.hints.Enddate.label}" id="c6">
+      <f:facet name="filter">
+        <af:inputDate value="#{bindings.InteractionView6Query.queryDescriptor.filterConjunctionCriterion.criterionMap.Enddate.value}"
+                      id="id2">
+          <af:convertDateTime pattern="#{bindings.InteractionView6.hints.Enddate.format}"/>
+        </af:inputDate>
+      </f:facet>
+      <af:outputText value="#{row.Enddate}" shortDesc="#{bindings.InteractionView6.hints.Enddate.tooltip}" id="ot6">
+        <af:convertDateTime pattern="#{bindings.InteractionView6.hints.Enddate.format}"/>
+      </af:outputText>
+    </af:column>
+  </af:table>
+  <af:button text="Add" id="b2" action="createInteraction"/>
+  <af:button text="Delete" action="OM_DeleteInteraction1" id="b1"/>
+</ui:composition>

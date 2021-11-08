@@ -135,6 +135,13 @@
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
     TableName="INTERACTION"/>
+  <Attribute
+    Name="Opportunityid"
+    ColumnName="OPPORTUNITYID"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="INTERACTION"/>
   <AccessorAttribute
     Name="Customercontacts"
     Association="sfa.model.entities.InteractionContactsFkAssoc"

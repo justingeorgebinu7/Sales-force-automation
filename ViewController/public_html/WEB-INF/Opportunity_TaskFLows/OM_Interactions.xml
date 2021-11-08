@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="OM_Interactions">
+    <default-activity>OM_Interactions_Home</default-activity>
+    <data-control-scope>
+      <shared/>
+    </data-control-scope>
+    <view id="OM_Interactions_Home">
+      <page>/OM_Interactions_Home.jsff</page>
+    </view>
+    <task-flow-call id="OM_DeleteInteraction1">
+      <task-flow-reference>
+        <document>/WEB-INF/Opportunity_TaskFLows/OM_DeleteInteraction.xml</document>
+        <id>OM_DeleteInteraction</id>
+      </task-flow-reference>
+    </task-flow-call>
+    <task-flow-call id="OM_CreateInteraction">
+      <task-flow-reference>
+        <document>/WEB-INF/Opportunity_TaskFLows/OM_CreateInteraction.xml</document>
+        <id>OM_CreateInteraction</id>
+      </task-flow-reference>
+    </task-flow-call>
+    <view id="OM_EditInteraction">
+      <page>/OM_EditInteraction.jsff</page>
+    </view>
+    <control-flow-rule id="__1">
+      <from-activity-id>OM_Interactions_Home</from-activity-id>
+      <control-flow-case id="__2">
+        <from-outcome>OM_DeleteInteraction1</from-outcome>
+        <to-activity-id>OM_DeleteInteraction1</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__3">
+        <from-outcome>createInteraction</from-outcome>
+        <to-activity-id>OM_CreateInteraction</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__4">
+        <from-outcome>editInteraction</from-outcome>
+        <to-activity-id>OM_EditInteraction</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__5">
+      <from-activity-id>OM_EditInteraction</from-activity-id>
+      <control-flow-case id="__6">
+        <from-outcome>back</from-outcome>
+        <to-activity-id>OM_Interactions_Home</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <use-page-fragments/>
+  </task-flow-definition>
+</adfc-config>

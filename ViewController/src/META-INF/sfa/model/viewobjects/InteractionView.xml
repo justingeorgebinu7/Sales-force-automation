@@ -108,9 +108,21 @@
     EntityAttrName="Accountid"
     EntityUsage="Interaction"
     AliasName="ACCOUNTID"/>
+  <ViewAttribute
+    Name="Opportunityid"
+    PrecisionRule="true"
+    EntityAttrName="Opportunityid"
+    EntityUsage="Interaction"
+    AliasName="OPPORTUNITYID"/>
   <ViewLinkAccessor
     Name="CustomeraccountView"
     ViewLink="sfa.model.entities.InteractionAccountFKLink"
+    Type="oracle.jbo.Row"
+    Reversed="true"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="OpportunityView"
+    ViewLink="sfa.model.entities.OpportunityInteractionFkLink"
     Type="oracle.jbo.Row"
     Reversed="true"
     IsUpdateable="false"/>

@@ -297,6 +297,25 @@
     <page path="/OM_CreateNewAppointment.jsff" usageId="sfa_view_OM_CreateNewAppointmentPageDef"/>
     <page path="/WEB-INF/Opportunity_TaskFLows/OM_CreateNewAppointment.xml#OM_CreateNewAppointment@CreateInsert"
           usageId="sfa_view_OM_CreateNewAppointment_OM_CreateNewAppointment_CreateInsertPageDef"/>
+    <page path="PageFlow#Delete" usageId="sfa_view_OM_delete_appointment___DeletePageDef"/>
+    <page path="PageFlow#Commit" usageId="sfa_view_OM_delete_appointment___CommitPageDef"/>
+    <page path="/WEB-INF/Opportunity_TaskFLows/OM_deleteAppoinement.xml#OM_deleteAppoinement@Commit"
+          usageId="sfa_view_OM_deleteAppoinement_OM_deleteAppoinement_CommitPageDef"/>
+    <page path="/WEB-INF/Opportunity_TaskFLows/OM_deleteAppoinement.xml#OM_deleteAppoinement@Delete"
+          usageId="sfa_view_OM_deleteAppoinement_OM_deleteAppoinement_DeletePageDef"/>
+    <page path="/OM_Interactions_Home.jsff" usageId="sfa_view_OM_Interactions_HomePageDef"/>
+    <page path="/WEB-INF/Opportunity_TaskFLows/OM_CreateInteraction.xml#OM_CreateInteraction@CreateInsert"
+          usageId="sfa_view_OM_CreateInteraction_OM_CreateInteraction_CreateInsertPageDef"/>
+    <page path="/WEB-INF/Opportunity_TaskFLows/OM_CreateInteraction.xml#OM_CreateInteraction@Delete"
+          usageId="sfa_view_OM_CreateInteraction_OM_CreateInteraction_DeletePageDef"/>
+    <page path="/WEB-INF/Opportunity_TaskFLows/OM_CreateInteraction.xml#OM_CreateInteraction@Commit"
+          usageId="sfa_view_OM_CreateInteraction_OM_CreateInteraction_CommitPageDef"/>
+    <page path="/OM_CreateInteraction.jsff" usageId="sfa_view_OM_CreateInteractionPageDef"/>
+    <page path="/WEB-INF/Opportunity_TaskFLows/OM_DeleteInteraction.xml#OM_DeleteInteraction@Commit"
+          usageId="sfa_view_OM_DeleteInteraction_OM_DeleteInteraction_CommitPageDef"/>
+    <page path="/WEB-INF/Opportunity_TaskFLows/OM_DeleteInteraction.xml#OM_DeleteInteraction@Delete"
+          usageId="sfa_view_OM_DeleteInteraction_OM_DeleteInteraction_DeletePageDef"/>
+    <page path="/OM_EditInteraction.jsff" usageId="sfa_view_OM_EditInteractionPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="sfa_view_untitled2PageDef" path="sfa.view.pageDefs.untitled2PageDef"/>
@@ -587,6 +606,27 @@
     <page id="sfa_view_OM_CreateNewAppointmentPageDef" path="sfa.view.pageDefs.OM_CreateNewAppointmentPageDef"/>
     <page id="sfa_view_OM_CreateNewAppointment_OM_CreateNewAppointment_CreateInsertPageDef"
           path="Opportunity_TaskFLows.OM_CreateNewAppointment_OM_CreateNewAppointment_CreateInsertPageDef"/>
+    <page id="sfa_view_OM_delete_appointment___DeletePageDef"
+          path="Opportunity_TaskFLows.OM_delete_appointment___DeletePageDef"/>
+    <page id="sfa_view_OM_delete_appointment___CommitPageDef"
+          path="Opportunity_TaskFLows.OM_delete_appointment___CommitPageDef"/>
+    <page id="sfa_view_OM_deleteAppoinement_OM_deleteAppoinement_CommitPageDef"
+          path="Opportunity_TaskFLows.OM_deleteAppoinement_OM_deleteAppoinement_CommitPageDef"/>
+    <page id="sfa_view_OM_deleteAppoinement_OM_deleteAppoinement_DeletePageDef"
+          path="Opportunity_TaskFLows.OM_deleteAppoinement_OM_deleteAppoinement_DeletePageDef"/>
+    <page id="sfa_view_OM_Interactions_HomePageDef" path="sfa.view.pageDefs.OM_Interactions_HomePageDef"/>
+    <page id="sfa_view_OM_CreateInteraction_OM_CreateInteraction_CreateInsertPageDef"
+          path="Opportunity_TaskFLows.OM_CreateInteraction_OM_CreateInteraction_CreateInsertPageDef"/>
+    <page id="sfa_view_OM_CreateInteraction_OM_CreateInteraction_DeletePageDef"
+          path="Opportunity_TaskFLows.OM_CreateInteraction_OM_CreateInteraction_DeletePageDef"/>
+    <page id="sfa_view_OM_CreateInteraction_OM_CreateInteraction_CommitPageDef"
+          path="Opportunity_TaskFLows.OM_CreateInteraction_OM_CreateInteraction_CommitPageDef"/>
+    <page id="sfa_view_OM_CreateInteractionPageDef" path="sfa.view.pageDefs.OM_CreateInteractionPageDef"/>
+    <page id="sfa_view_OM_DeleteInteraction_OM_DeleteInteraction_CommitPageDef"
+          path="Opportunity_TaskFLows.OM_DeleteInteraction_OM_DeleteInteraction_CommitPageDef"/>
+    <page id="sfa_view_OM_DeleteInteraction_OM_DeleteInteraction_DeletePageDef"
+          path="Opportunity_TaskFLows.OM_DeleteInteraction_OM_DeleteInteraction_DeletePageDef"/>
+    <page id="sfa_view_OM_EditInteractionPageDef" path="sfa.view.pageDefs.OM_EditInteractionPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="sfa.model.entities"
