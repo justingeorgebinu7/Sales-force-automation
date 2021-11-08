@@ -46,20 +46,6 @@
             <f:validator binding="#{bindings.Primarycontact.validator}"/>
             <af:convertNumber groupingUsed="false" pattern="#{bindings.Primarycontact.format}"/>
           </af:inputText>
-          <af:inputText value="#{bindings.Salesstage.inputValue}" label="#{bindings.Salesstage.hints.label}"
-                        required="#{bindings.Salesstage.hints.mandatory}"
-                        columns="#{bindings.Salesstage.hints.displayWidth}"
-                        maximumLength="#{bindings.Salesstage.hints.precision}"
-                        shortDesc="#{bindings.Salesstage.hints.tooltip}" id="it5">
-            <f:validator binding="#{bindings.Salesstage.validator}"/>
-          </af:inputText>
-          <af:inputText value="#{bindings.Salesmethod.inputValue}" label="#{bindings.Salesmethod.hints.label}"
-                        required="#{bindings.Salesmethod.hints.mandatory}"
-                        columns="#{bindings.Salesmethod.hints.displayWidth}"
-                        maximumLength="#{bindings.Salesmethod.hints.precision}"
-                        shortDesc="#{bindings.Salesmethod.hints.tooltip}" id="it6">
-            <f:validator binding="#{bindings.Salesmethod.validator}"/>
-          </af:inputText>
           <af:inputText value="#{bindings.Bestcaserevenue.inputValue}" label="#{bindings.Bestcaserevenue.hints.label}"
                         required="#{bindings.Bestcaserevenue.hints.mandatory}"
                         columns="#{bindings.Bestcaserevenue.hints.displayWidth}"
@@ -84,15 +70,37 @@
             <f:validator binding="#{bindings.Budgetavailable.validator}"/>
             <af:convertNumber groupingUsed="false" pattern="#{bindings.Budgetavailable.format}"/>
           </af:inputText>
-          <af:inputText value="#{bindings.Risklevel.inputValue}" label="#{bindings.Risklevel.hints.label}"
-                        required="#{bindings.Risklevel.hints.mandatory}"
-                        columns="#{bindings.Risklevel.hints.displayWidth}"
-                        maximumLength="#{bindings.Risklevel.hints.precision}"
-                        shortDesc="#{bindings.Risklevel.hints.tooltip}" id="it10">
+          <af:inputComboboxListOfValues id="risklevelId"
+                                        popupTitle="Search and Select: #{bindings.Risklevel.hints.label}"
+                                        value="#{bindings.Risklevel.inputValue}"
+                                        label="#{bindings.Risklevel.hints.label}"
+                                        model="#{bindings.Risklevel.listOfValuesModel}"
+                                        required="#{bindings.Risklevel.hints.mandatory}"
+                                        columns="#{bindings.Risklevel.hints.displayWidth}"
+                                        shortDesc="#{bindings.Risklevel.hints.tooltip}">
             <f:validator binding="#{bindings.Risklevel.validator}"/>
-          </af:inputText>
-          <af:button actionListener="#{bindings.Commit.execute}" text="Save"
-                     id="b1"/>
+          </af:inputComboboxListOfValues>
+          <af:inputComboboxListOfValues id="salesmethodId"
+                                        popupTitle="Search and Select: #{bindings.Salesmethod.hints.label}"
+                                        value="#{bindings.Salesmethod.inputValue}"
+                                        label="#{bindings.Salesmethod.hints.label}"
+                                        model="#{bindings.Salesmethod.listOfValuesModel}"
+                                        required="#{bindings.Salesmethod.hints.mandatory}"
+                                        columns="#{bindings.Salesmethod.hints.displayWidth}"
+                                        shortDesc="#{bindings.Salesmethod.hints.tooltip}">
+            <f:validator binding="#{bindings.Salesmethod.validator}"/>
+          </af:inputComboboxListOfValues>
+          <af:inputComboboxListOfValues id="salesstageId"
+                                        popupTitle="Search and Select: #{bindings.Salesstage.hints.label}"
+                                        value="#{bindings.Salesstage.inputValue}"
+                                        label="#{bindings.Salesstage.hints.label}"
+                                        model="#{bindings.Salesstage.listOfValuesModel}"
+                                        required="#{bindings.Salesstage.hints.mandatory}"
+                                        columns="#{bindings.Salesstage.hints.displayWidth}"
+                                        shortDesc="#{bindings.Salesstage.hints.tooltip}">
+            <f:validator binding="#{bindings.Salesstage.validator}"/>
+          </af:inputComboboxListOfValues>
+          <af:button actionListener="#{bindings.Commit.execute}" text="Save" id="b1"/>
         </af:panelFormLayout>
       </af:showDetailItem>
       <af:showDetailItem id="sdi2" text="Notes">

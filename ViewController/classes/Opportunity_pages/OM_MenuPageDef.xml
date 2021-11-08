@@ -40,16 +40,6 @@
         <Item Value="Primarycontact"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="OpportunityView1Iterator" id="Salesstage">
-      <AttrNames>
-        <Item Value="Salesstage"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="OpportunityView1Iterator" id="Salesmethod">
-      <AttrNames>
-        <Item Value="Salesmethod"/>
-      </AttrNames>
-    </attributeValues>
     <attributeValues IterBinding="OpportunityView1Iterator" id="Bestcaserevenue">
       <AttrNames>
         <Item Value="Bestcaserevenue"/>
@@ -65,11 +55,9 @@
         <Item Value="Budgetavailable"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="OpportunityView1Iterator" id="Risklevel">
-      <AttrNames>
-        <Item Value="Risklevel"/>
-      </AttrNames>
-    </attributeValues>
     <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+    <listOfValues IterBinding="OpportunityView1Iterator" StaticList="false" Uses="LOV_Risklevel" id="Risklevel"/>
+    <listOfValues IterBinding="OpportunityView1Iterator" StaticList="false" Uses="LOV_Salesmethod" id="Salesmethod"/>
+    <listOfValues IterBinding="OpportunityView1Iterator" StaticList="false" Uses="LOV_Salesstage" id="Salesstage"/>
   </bindings>
 </pageDefinition>

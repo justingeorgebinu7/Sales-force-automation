@@ -16,4 +16,16 @@
   <ViewUsage
     Name="Priority1"
     ViewObjectName="sfa.model.viewobjects.staticVo.Priority"/>
+  <ViewUsage
+    Name="SalesStage1"
+    ViewObjectName="sfa.model.viewobjects.staticVo.SalesStage"/>
+  <ViewUsage
+    Name="SalesMethod1"
+    ViewObjectName="sfa.model.viewobjects.staticVo.SalesMethod"/>
+  <ViewUsage
+    Name="SalesChanel1"
+    ViewObjectName="sfa.model.viewobjects.staticVo.SalesChanel"/>
+  <ViewUsage
+    Name="DecsionLevel1"
+    ViewObjectName="sfa.model.viewobjects.staticVo.DecsionLevel"/>
 </AppModule>

@@ -18,11 +18,7 @@
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
     TableName="OPPORTUNITY"
-    PrimaryKey="true">
-    <TransientExpression
-      Name="ExpressionScript"
-      CodeSourceName="OpportunityRow"/>
-  </Attribute>
+    PrimaryKey="true"/>
   <Attribute
     Name="Accountid"
     ColumnName="ACCOUNTID"
@@ -62,7 +58,14 @@
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
-    TableName="OPPORTUNITY"/>
+    TableName="OPPORTUNITY">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="sfa.model.entities.Opportunity.Primarycontact_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <Attribute
     Name="Salesstage"
     Precision="25"
@@ -208,4 +211,8 @@
       <Item Value="sfa.model.entities.Opportunity.Primarycontact"/>
     </AttrArray>
   </Key>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="sfa.model.ModelBundle"/>
+  </ResourceBundle>
 </Entity>

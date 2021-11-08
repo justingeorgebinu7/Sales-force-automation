@@ -14,6 +14,73 @@
   SelectAllAttributes="false"
   PageIterMode="Full"
   AccessMode="DEFAULT">
+  <ViewAccessor
+    Name="SalesStage1"
+    ViewObjectName="sfa.model.viewobjects.staticVo.SalesStage"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="SalesMethod1"
+    ViewObjectName="sfa.model.viewobjects.staticVo.SalesMethod"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="Priority1"
+    ViewObjectName="sfa.model.viewobjects.staticVo.Priority"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_Salesstage"
+    ListVOName="SalesStage1"
+    ComboRowCountHint="10"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Salesstage"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="SalesStageAttr"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="SalesStageAttr"/>
+    </AttrArray>
+    <DisplayCriteria
+      Hint="showAndExecute"/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_Salesmethod"
+    ListVOName="SalesMethod1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Salesmethod"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="SalesMethodAttr"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="SalesMethodAttr"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_Risklevel"
+    ListVOName="Priority1"
+    ComboRowCountHint="10"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Risklevel"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Priority"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Priority"/>
+    </AttrArray>
+    <DisplayCriteria
+      Hint="showAndExecute"/>
+  </ListBinding>
   <EntityUsage
     Name="Opportunity"
     Entity="sfa.model.entities.Opportunity"/>
@@ -48,13 +115,27 @@
     PrecisionRule="true"
     EntityAttrName="Winprobability"
     EntityUsage="Opportunity"
-    AliasName="WINPROBABILITY"/>
+    AliasName="WINPROBABILITY">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="sfa.model.viewobjects.OpportunityView.Winprobability_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Closedate"
     PrecisionRule="true"
     EntityAttrName="Closedate"
     EntityUsage="Opportunity"
-    AliasName="CLOSEDATE"/>
+    AliasName="CLOSEDATE">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="sfa.model.viewobjects.OpportunityView.Closedate_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Primarycontact"
     IsNotNull="true"
@@ -67,37 +148,88 @@
     PrecisionRule="true"
     EntityAttrName="Salesstage"
     EntityUsage="Opportunity"
-    AliasName="SALESSTAGE"/>
+    AliasName="SALESSTAGE"
+    LOVName="LOV_Salesstage">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo_lov"/>
+        <LABEL
+          ResId="sfa.model.viewobjects.OpportunityView.Salesstage_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Salesmethod"
     PrecisionRule="true"
     EntityAttrName="Salesmethod"
     EntityUsage="Opportunity"
-    AliasName="SALESMETHOD"/>
+    AliasName="SALESMETHOD"
+    LOVName="LOV_Salesmethod">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+        <LABEL
+          ResId="sfa.model.viewobjects.OpportunityView.Salesmethod_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Bestcaserevenue"
     PrecisionRule="true"
     EntityAttrName="Bestcaserevenue"
     EntityUsage="Opportunity"
-    AliasName="BESTCASEREVENUE"/>
+    AliasName="BESTCASEREVENUE">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="sfa.model.viewobjects.OpportunityView.Bestcaserevenue_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Worstcaserevenue"
     PrecisionRule="true"
     EntityAttrName="Worstcaserevenue"
     EntityUsage="Opportunity"
-    AliasName="WORSTCASEREVENUE"/>
+    AliasName="WORSTCASEREVENUE">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="sfa.model.viewobjects.OpportunityView.Worstcaserevenue_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Budgetavailable"
     PrecisionRule="true"
     EntityAttrName="Budgetavailable"
     EntityUsage="Opportunity"
-    AliasName="BUDGETAVAILABLE"/>
+    AliasName="BUDGETAVAILABLE">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="sfa.model.viewobjects.OpportunityView.Budgetavailable_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Risklevel"
     PrecisionRule="true"
     EntityAttrName="Risklevel"
     EntityUsage="Opportunity"
-    AliasName="RISKLEVEL"/>
+    AliasName="RISKLEVEL"
+    LOVName="LOV_Risklevel">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo_lov"/>
+        <LABEL
+          ResId="sfa.model.viewobjects.OpportunityView.Risklevel_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewLinkAccessor
     Name="NoteView"
     ViewLink="sfa.model.viewobjects.NoteOpportunityFkLink"
@@ -123,4 +255,8 @@
     ViewLink="sfa.model.entities.OpportunityInteractionFkLink"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="sfa.model.ModelBundle"/>
+  </ResourceBundle>
 </ViewObject>
