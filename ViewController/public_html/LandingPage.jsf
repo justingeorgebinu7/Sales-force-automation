@@ -6,7 +6,7 @@
            value="#{adfBundle['viewcontroller.CustomerAccountManagement.CustAccountHomeBundle']}"/>
     <af:document title="CustAccountHome.jsf" id="d1">
         <af:messages id="m1"/>
-        <af:form id="f1">
+        <af:form id="f1" usesUpload="true">
             <div style="z-index:20;position:fixed;overflow:hidden; top:10px;left:10px;font-size:13px;">
                 <img alt="img" src="https://i.ibb.co/HrRP1ZH/logosq.jpg" style="height:120px;float:left;"/>
             </div>

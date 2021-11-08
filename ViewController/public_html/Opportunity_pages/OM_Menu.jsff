@@ -1,6 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
                 xmlns:f="http://java.sun.com/jsf/core">
+  <!--oracle-jdev-comment:preferred-managed-bean-name:fileUpload-->
   <af:menuBar id="mb1">
     <af:commandMenuItem text="Back" id="cmi1" action="toHome"/>
   </af:menuBar>
@@ -117,6 +118,36 @@
       </af:showDetailItem>
       <af:showDetailItem id="sdi6" text="Interaction">
         <af:region value="#{bindings.OM_Interactions1.regionModel}" id="r4"/>
+      </af:showDetailItem>
+      <af:showDetailItem text="Documents" id="sdi3">
+        <af:panelSplitter id="ps1" orientation="horizontal" splitterPosition="400">
+          <f:facet name="first">
+            <af:panelSplitter id="ps2" orientation="vertical" splitterPosition="133">
+              <f:facet name="first">
+                <af:panelBox id="pb1">
+                  <f:facet name="toolbar"/>
+                  <af:spacer id="s1" height="30px"/>
+                  <af:inputFile label="Document upload" id="if1" value="#{fileUpload.file}" columns="100"/>
+                  <af:button text="Upload" id="b2" action="#{fileUpload.setFile}" partialSubmit="true"/>
+                </af:panelBox>
+              </f:facet>
+              <f:facet name="second">
+                <af:panelFormLayout id="pfl3" partialTriggers="b2">
+                  <f:facet name="footer"/>
+                  <af:inputText label="File name" id="it4" value="#{fileUpload.filename}" columns="20"/>
+                  <af:inputText label="File Size" id="it5" value="#{fileUpload.filesize}" columns="20"/>
+                  <af:inputText label="File type" id="it6" value="#{fileUpload.filetype}" columns="20"/>
+                </af:panelFormLayout>
+              </f:facet>
+            </af:panelSplitter>
+          </f:facet>
+          <f:facet name="second">
+            <af:panelFormLayout id="pfl2" partialTriggers="b2">
+              <f:facet name="footer"/>
+              <af:inputText label="File preview" id="it10" columns="220" rows="20" value="#{fileUpload.filecontents}"/>
+            </af:panelFormLayout>
+          </f:facet>
+        </af:panelSplitter>
       </af:showDetailItem>
     </af:panelTabbed>
     <af:componentDragSource/>
