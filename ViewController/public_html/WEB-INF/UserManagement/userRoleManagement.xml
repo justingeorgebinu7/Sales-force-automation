@@ -6,7 +6,7 @@
       <shared/>
     </data-control-scope>
     <view id="userRolePage">
-      <page>/userRolePage.jsff</page>
+      <page>/UserManagementPages/userRolePage.jsff</page>
     </view>
     <task-flow-call id="createUserRole">
       <task-flow-reference>

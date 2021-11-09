@@ -14,6 +14,27 @@
   SelectAllAttributes="false"
   PageIterMode="Full"
   AccessMode="DEFAULT">
+  <ViewAccessor
+    Name="RoleView1"
+    ViewObjectName="sfa.model.viewobjects.RoleView"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_Roleid"
+    ListVOName="RoleView1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Roleid"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Roleid"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <EntityUsage
     Name="Userrole"
     Entity="sfa.model.entities.Userrole"/>
@@ -68,7 +89,17 @@
     PrecisionRule="true"
     EntityAttrName="Roleid"
     EntityUsage="Userrole"
-    AliasName="ROLEID"/>
+    AliasName="ROLEID"
+    LOVName="LOV_Roleid">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+        <LABEL
+          ResId="sfa.model.viewobjects.UserroleView.Roleid_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Name"
     PrecisionRule="true"

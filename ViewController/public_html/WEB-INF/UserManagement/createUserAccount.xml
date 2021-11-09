@@ -6,7 +6,7 @@
       <shared/>
     </data-control-scope>
     <view id="createUserAccount">
-      <page>/createUserAccount.jsff</page>
+      <page>/UserManagementPages/createUserAccount.jsff</page>
     </view>
     <method-call id="Commit">
       <method>#{bindings.Commit.execute}</method>

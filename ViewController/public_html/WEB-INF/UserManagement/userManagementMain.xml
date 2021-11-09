@@ -6,10 +6,10 @@
       <shared/>
     </data-control-scope>
     <view id="userAccountView">
-      <page>/userAccountView.jsff</page>
+      <page>/UserManagementPages/userAccountView.jsff</page>
     </view>
     <view id="UserAccMenu">
-      <page>/UserAccMenu.jsff</page>
+      <page>/UserManagementPages/UserAccMenu.jsff</page>
     </view>
     <task-flow-call id="createUserAccount">
       <task-flow-reference>

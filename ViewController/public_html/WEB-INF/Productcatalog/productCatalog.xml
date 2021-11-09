@@ -21,7 +21,7 @@
       </task-flow-reference>
     </task-flow-call>
     <view id="editProduct">
-      <page>/editProduct.jsff</page>
+      <page>/ProductsCatalog/editProduct.jsff</page>
     </view>
     <control-flow-rule id="__1">
       <from-activity-id>productsCatalog</from-activity-id>

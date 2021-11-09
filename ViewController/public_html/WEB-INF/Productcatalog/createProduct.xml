@@ -12,7 +12,7 @@
       </outcome>
     </method-call>
     <view id="createProduct">
-      <page>/createProduct.jsff</page>
+      <page>/ProductsCatalog/createProduct.jsff</page>
     </view>
     <method-call id="Delete">
       <method>#{bindings.Delete.execute}</method>

@@ -23,7 +23,7 @@
       </outcome>
     </task-flow-return>
     <view id="createNewUserRole">
-      <page>/createNewUserRole.jsff</page>
+      <page>/UserManagementPages/createNewUserRole.jsff</page>
     </view>
     <method-call id="Commit">
       <method>#{bindings.Commit.execute}</method>

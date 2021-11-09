@@ -14,6 +14,27 @@
   SelectAllAttributes="false"
   PageIterMode="Full"
   AccessMode="DEFAULT">
+  <ViewAccessor
+    Name="CustomeraccountView1"
+    ViewObjectName="sfa.model.viewobjects.CustomeraccountView"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_Corporatecustomerreferenceid1"
+    ListVOName="CustomeraccountView1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Corporatecustomerreferenceid1"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Customeraccountid"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <EntityUsage
     Name="Useraccount"
     Entity="sfa.model.entities.Useraccount"/>
@@ -65,7 +86,15 @@
     PrecisionRule="true"
     EntityAttrName="Corporatecustomerreferenceid1"
     EntityUsage="Useraccount"
-    AliasName="CORPORATECUSTOMERREFERENCEID1"/>
+    AliasName="CORPORATECUSTOMERREFERENCEID1"
+    LOVName="LOV_Corporatecustomerreferenceid1">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewLinkAccessor
     Name="UserroleView"
     ViewLink="sfa.model.viewobjects.UserroleUseraccountFkLink"
