@@ -9,13 +9,13 @@
       <property
          name="pageFragment">true</property>
       <property
-         name="x">290.0</property>
+         name="x">304.0</property>
       <property
          name="start">true</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>userAccountView&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">312.1953</property>
+         name="y">346.68945</property>
       <property
          name="page">/userAccountView.jsff</property>
       <property
@@ -46,7 +46,7 @@
       <property
          name="fromOutcome">userMenu</property>
       <property
-         name="sdm:polyPoints">R50,331.0,311.84473,525.0,283.24707,L50</property>
+         name="sdm:polyPoints">R46,345.0,342.83887,523.805,279.74707,L46</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -56,6 +56,64 @@
       <property
          name="fromOutcome">backFromMenu</property>
       <property
-         name="sdm:polyPoints">L54,525.0,286.74707,331.51315,315.34473,R54</property>
+         name="sdm:polyPoints">L54,525.0,286.74707,346.19125,349.83887,R54</property>
+   </ControlFlowCase>
+   <TaskFlowCall
+      id="TaskFlowCall6">
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>createUserAccount&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
+      <property
+         name="activityId">createUserAccount</property>
+      <property
+         name="x">265.02344</property>
+      <property
+         name="y">137.44824</property>
+      <property
+         name="documentReference">/WEB-INF/UserManagement/createUserAccount.xml</property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="taskFlowId">createUserAccount</property>
+   </TaskFlowCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase9"
+      from="View2"
+      to="TaskFlowCall6">
+      <property
+         name="fromOutcome">create</property>
+      <property
+         name="sdm:polyPoints">T56,307.5,289.89816,265.02344,191.09766,B50</property>
+   </ControlFlowCase>
+   <TaskFlowCall
+      id="TaskFlowCall10">
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>deleteUserAccount1&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
+      <property
+         name="activityId">deleteUserAccount1</property>
+      <property
+         name="x">79.03223</property>
+      <property
+         name="y">70.0459</property>
+      <property
+         name="documentReference">/WEB-INF/UserManagement/deleteUserAccount.xml</property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="taskFlowId">deleteUserAccount</property>
+   </TaskFlowCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase11"
+      from="View2"
+      to="TaskFlowCall10">
+      <property
+         name="tosrcid">__9</property>
+      <property
+         name="fromOutcome">deleteUserAccount1</property>
+      <property
+         name="fromsrcid">__8</property>
+      <property
+         name="sdm:polyPoints">T44,300.5,292.33887,79.03223,124.0459,B50</property>
    </ControlFlowCase>
 </SDM>

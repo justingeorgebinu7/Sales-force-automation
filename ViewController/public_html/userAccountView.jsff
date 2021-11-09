@@ -47,4 +47,6 @@
       </af:outputText>
     </af:column>
   </af:table>
+  <af:button text="Add" id="b1" action="create"/>
+  <af:button text="Delete" action="deleteUserAccount1" id="b2"/>
 </ui:composition>

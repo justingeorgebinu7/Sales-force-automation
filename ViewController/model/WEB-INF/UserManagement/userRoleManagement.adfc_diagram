@@ -46,6 +46,52 @@
       <property
          name="fromOutcome">create</property>
       <property
-         name="sdm:polyPoints">R50,335.0,286.5459,452.6836,163.79883,L50</property>
+         name="sdm:polyPoints">R50,336.7748,286.5459,450.90878,163.79883,L50</property>
    </ControlFlowCase>
+   <TaskFlowCall
+      id="TaskFlowCall5">
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>deleteUserRole1&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
+      <property
+         name="activityId">deleteUserRole1</property>
+      <property
+         name="x">44.692383</property>
+      <property
+         name="y">59.0459</property>
+      <property
+         name="documentReference">/WEB-INF/UserManagement/deleteUserRole.xml</property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="taskFlowId">deleteUserRole</property>
+   </TaskFlowCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase6"
+      from="View2"
+      to="TaskFlowCall5">
+      <property
+         name="tosrcid">__4</property>
+      <property
+         name="fromOutcome">deleteUserRole1</property>
+      <property
+         name="fromsrcid">__3</property>
+      <property
+         name="sdm:polyPoints">L50,253.0,286.5459,44.692383,114.09766,B50</property>
+   </ControlFlowCase>
+   <View
+      id="View7">
+      <property
+         name="activityId">editUserRole</property>
+      <property
+         name="pageFragment">true</property>
+      <property
+         name="x">608.0</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>editUserRole&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">367.59766</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
 </SDM>

@@ -12,10 +12,9 @@
     <tree IterBinding="UserroleView3Iterator" id="UserroleView3">
       <nodeDefinition DefName="sfa.model.viewobjects.UserroleView" Name="UserroleView30">
         <AttrNames>
-          <Item Value="Useraccount"/>
           <Item Value="Startdate"/>
           <Item Value="Enddate"/>
-          <Item Value="Roleid"/>
+          <Item Value="Name"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

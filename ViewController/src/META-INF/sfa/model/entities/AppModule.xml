@@ -172,6 +172,9 @@
   <ViewUsage
     Name="InteractionView6"
     ViewObjectName="sfa.model.viewobjects.InteractionView"/>
+  <ViewUsage
+    Name="RoleView2"
+    ViewObjectName="sfa.model.viewobjects.RoleView"/>
   <ViewLinkUsage
     Name="AddressCustomeraccountFkLink1"
     ViewLinkObjectName="sfa.model.viewobjects.AddressCustomeraccountFkLink"
@@ -382,4 +385,10 @@
     SrcViewUsageName="sfa.model.entities.AppModule.OpportunityView1"
     DstViewUsageName="sfa.model.entities.AppModule.InteractionView6"
     Reversed="false"/>
+  <ViewLinkUsage
+    Name="RoleUserroleFkLink1"
+    ViewLinkObjectName="sfa.model.viewobjects.RoleUserroleFkLink"
+    SrcViewUsageName="sfa.model.entities.AppModule.UserroleView3"
+    DstViewUsageName="sfa.model.entities.AppModule.RoleView2"
+    Reversed="true"/>
 </AppModule>

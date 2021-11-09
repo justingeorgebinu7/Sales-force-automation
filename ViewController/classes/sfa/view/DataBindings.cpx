@@ -361,6 +361,21 @@
     <page path="/createNewUserRole.jsff" usageId="sfa_view_createNewUserRolePageDef"/>
     <page path="/UserAccMenu.jsff" usageId="sfa_view_UserAccMenuPageDef"/>
     <page path="/userRolePage.jsff" usageId="sfa_view_userRolePagePageDef"/>
+    <page path="/WEB-INF/UserManagement/deleteUserRole.xml#deleteUserRole@Delete"
+          usageId="sfa_view_deleteUserRole_deleteUserRole_DeletePageDef"/>
+    <page path="/WEB-INF/UserManagement/deleteUserRole.xml#deleteUserRole@Commit"
+          usageId="sfa_view_deleteUserRole_deleteUserRole_CommitPageDef"/>
+    <page path="/WEB-INF/UserManagement/createUserAccount.xml#createUserAccount@Commit"
+          usageId="sfa_view_createUserAccount_createUserAccount_CommitPageDef"/>
+    <page path="/WEB-INF/UserManagement/deleteUserAccount.xml#deleteUserAccount@Commit"
+          usageId="sfa_view_deleteUserAccount_deleteUserAccount_CommitPageDef"/>
+    <page path="/createUserAccount.jsff" usageId="sfa_view_createUserAccountPageDef"/>
+    <page path="/WEB-INF/UserManagement/createUserAccount.xml#createUserAccount@CreateInsert"
+          usageId="sfa_view_createUserAccount_createUserAccount_CreateInsertPageDef"/>
+    <page path="/WEB-INF/UserManagement/createUserAccount.xml#createUserAccount@Delete"
+          usageId="sfa_view_createUserAccount_createUserAccount_DeletePageDef"/>
+    <page path="/WEB-INF/UserManagement/deleteUserAccount.xml#deleteUserAccount@Delete"
+          usageId="sfa_view_deleteUserAccount_deleteUserAccount_DeletePageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="sfa_view_untitled2PageDef" path="sfa.view.pageDefs.untitled2PageDef"/>
@@ -717,6 +732,21 @@
     <page id="sfa_view_createNewUserRolePageDef" path="sfa.view.pageDefs.createNewUserRolePageDef"/>
     <page id="sfa_view_UserAccMenuPageDef" path="sfa.view.pageDefs.UserAccMenuPageDef"/>
     <page id="sfa_view_userRolePagePageDef" path="sfa.view.pageDefs.userRolePagePageDef"/>
+    <page id="sfa_view_deleteUserRole_deleteUserRole_DeletePageDef"
+          path="UserManagement.deleteUserRole_deleteUserRole_DeletePageDef"/>
+    <page id="sfa_view_deleteUserRole_deleteUserRole_CommitPageDef"
+          path="UserManagement.deleteUserRole_deleteUserRole_CommitPageDef"/>
+    <page id="sfa_view_createUserAccount_createUserAccount_CommitPageDef"
+          path="UserManagement.createUserAccount_createUserAccount_CommitPageDef"/>
+    <page id="sfa_view_deleteUserAccount_deleteUserAccount_CommitPageDef"
+          path="UserManagement.deleteUserAccount_deleteUserAccount_CommitPageDef"/>
+    <page id="sfa_view_createUserAccountPageDef" path="sfa.view.pageDefs.createUserAccountPageDef"/>
+    <page id="sfa_view_createUserAccount_createUserAccount_CreateInsertPageDef"
+          path="UserManagement.createUserAccount_createUserAccount_CreateInsertPageDef"/>
+    <page id="sfa_view_createUserAccount_createUserAccount_DeletePageDef"
+          path="UserManagement.createUserAccount_createUserAccount_DeletePageDef"/>
+    <page id="sfa_view_deleteUserAccount_deleteUserAccount_DeletePageDef"
+          path="UserManagement.deleteUserAccount_deleteUserAccount_DeletePageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="sfa.model.entities"

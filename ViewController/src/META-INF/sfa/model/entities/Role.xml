@@ -18,7 +18,12 @@
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
     TableName="ROLE"
-    PrimaryKey="true"/>
+    PrimaryKey="true">
+    <TransientExpression
+      Name="ExpressionScript"
+      trustMode="trusted"
+      CodeSourceName="RoleRow"/>
+  </Attribute>
   <Attribute
     Name="Name"
     Precision="20"
@@ -48,6 +53,13 @@
     Association="sfa.model.entities.UserroleRoleFkAssoc"
     AssociationEnd="sfa.model.entities.UserroleRoleFkAssoc.Userrole"
     AssociationOtherEnd="sfa.model.entities.UserroleRoleFkAssoc.Role"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="Userrole1"
+    Association="sfa.model.viewobjects.RoleUserroleFkAssoc"
+    AssociationEnd="sfa.model.viewobjects.RoleUserroleFkAssoc.Userrole1"
+    AssociationOtherEnd="sfa.model.viewobjects.RoleUserroleFkAssoc.Role1"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
   <Key

@@ -40,4 +40,9 @@
     ViewLink="sfa.model.viewobjects.UserroleRoleFkLink"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="UserroleView1"
+    ViewLink="sfa.model.viewobjects.RoleUserroleFkLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
 </ViewObject>

@@ -13,10 +13,22 @@
   <ViewUsage
     Name="AppointmentsView1"
     ViewObjectName="sfa.model.viewobjects.AppointmentsView"/>
+  <ViewUsage
+    Name="RoleView1"
+    ViewObjectName="sfa.model.viewobjects.RoleView"/>
+  <ViewUsage
+    Name="UserroleView1"
+    ViewObjectName="sfa.model.viewobjects.UserroleView"/>
   <ViewLinkUsage
     Name="AppointmentAccountFkLink"
     ViewLinkObjectName="sfa.model.viewobjects.AppointmentAccountFkLink"
     SrcViewUsageName="sfa.model.viewobjects.AppModule.CustomeraccountView1"
     DstViewUsageName="sfa.model.viewobjects.AppModule.AppointmentsView1"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="RoleUserroleFkLink"
+    ViewLinkObjectName="sfa.model.viewobjects.RoleUserroleFkLink"
+    SrcViewUsageName="sfa.model.viewobjects.AppModule.RoleView1"
+    DstViewUsageName="sfa.model.viewobjects.AppModule.UserroleView1"
     Reversed="false"/>
 </AppModule>

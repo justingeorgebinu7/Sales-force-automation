@@ -12,10 +12,30 @@
   BindingStyle="OracleName"
   CustomQuery="false"
   SelectAllAttributes="false"
-  PageIterMode="Full">
+  PageIterMode="Full"
+  AccessMode="DEFAULT">
   <EntityUsage
     Name="Userrole"
     Entity="sfa.model.entities.Userrole"/>
+  <EntityUsage
+    Name="Role"
+    Entity="sfa.model.entities.Role"
+    Association="sfa.model.entities.UserroleRoleFkAssoc"
+    AssociationEnd="sfa.model.entities.UserroleRoleFkAssoc.Role"
+    SourceUsage="sfa.model.viewobjects.UserroleView.Userrole"
+    ReadOnly="true"
+    Reference="true"
+    DeleteParticipant="false"
+    JoinType="INNER JOIN">
+    <DesignTime>
+      <AttrArray Name="_dstAttributes">
+        <Item Value="sfa.model.entities.Role.Roleid"/>
+      </AttrArray>
+      <AttrArray Name="_srcAttributes">
+        <Item Value="sfa.model.entities.Userrole.Roleid"/>
+      </AttrArray>
+    </DesignTime>
+  </EntityUsage>
   <ViewAttribute
     Name="Userroleid"
     IsNotNull="true"
@@ -49,4 +69,37 @@
     EntityAttrName="Roleid"
     EntityUsage="Userrole"
     AliasName="ROLEID"/>
+  <ViewAttribute
+    Name="Name"
+    PrecisionRule="true"
+    EntityAttrName="Name"
+    EntityUsage="Role"
+    AliasName="NAME">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="sfa.model.viewobjects.UserroleView.Name_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Roleid1"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Roleid"
+    EntityUsage="Role"
+    AliasName="ROLEID1"/>
+  <AttrArray Name="KeyAttributes">
+    <Item Value="Userroleid"/>
+  </AttrArray>
+  <ViewLinkAccessor
+    Name="RoleView"
+    ViewLink="sfa.model.viewobjects.RoleUserroleFkLink"
+    Type="oracle.jbo.Row"
+    Reversed="true"
+    IsUpdateable="false"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="sfa.model.ModelBundle"/>
+  </ResourceBundle>
 </ViewObject>

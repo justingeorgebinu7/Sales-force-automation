@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewLink SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewLink
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="RoleUserroleFkLink"
+  Version="12.2.1.22.48"
+  InheritPersonalization="merge">
+  <Properties>
+    <SchemaBasedProperties>
+      <LABEL
+        ResId="sfa.model.viewobjects.RoleUserroleFkLink_LABEL"/>
+    </SchemaBasedProperties>
+  </Properties>
+  <ViewLinkDefEnd
+    Name="RoleView"
+    Cardinality="1"
+    Source="true"
+    Owner="sfa.model.viewobjects.RoleView">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_accessor" Value="true"/>
+      <Attr Name="_finderName" Value="RoleView"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="sfa.model.viewobjects.RoleView.Roleid"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ViewLinkDefEnd
+    Name="UserroleView1"
+    Cardinality="-1"
+    Owner="sfa.model.viewobjects.UserroleView">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="UserroleView1"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="sfa.model.viewobjects.UserroleView.Roleid"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="sfa.model.ModelBundle"/>
+  </ResourceBundle>
+</ViewLink>
