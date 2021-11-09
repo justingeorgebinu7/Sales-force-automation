@@ -17,7 +17,7 @@
       <property
          name="y">286.89648</property>
       <property
-         name="page">/userRolePage.jsff</property>
+         name="page">/UserManagementPages/userRolePage.jsff</property>
       <property
          name="exceptionHandler">false</property>
    </View>

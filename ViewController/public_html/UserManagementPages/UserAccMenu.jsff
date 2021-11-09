@@ -2,7 +2,7 @@
 <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
                 xmlns:f="http://java.sun.com/jsf/core">
   <af:menuBar id="mb1">
-    <af:commandMenuItem text="Back" id="cmi1" action="backFromMenu"/>
+    <af:commandMenuItem id="cmi1" action="backFromMenu" icon="https://i.ibb.co/5nPsJ90/New-Project-2.png"/>
   </af:menuBar>
   <af:panelTabbed position="start" id="pt1" verticalTabMode="iconAndText">
     <af:showDetailItem id="tab1" text="Manage User">
