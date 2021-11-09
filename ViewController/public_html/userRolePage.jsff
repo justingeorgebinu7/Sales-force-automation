@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:f="http://java.sun.com/jsf/core">
+  <af:table value="#{bindings.UserroleView3.collectionModel}" var="row" rows="#{bindings.UserroleView3.rangeSize}"
+            emptyText="#{bindings.UserroleView3.viewable ? 'No data to display.' : 'Access Denied.'}"
+            rowBandingInterval="0" selectedRowKeys="#{bindings.UserroleView3.collectionModel.selectedRow}"
+            selectionListener="#{bindings.UserroleView3.collectionModel.makeCurrent}" rowSelection="single"
+            fetchSize="#{bindings.UserroleView3.rangeSize}" filterModel="#{bindings.UserroleView3Query.queryDescriptor}"
+            filterVisible="true" queryListener="#{bindings.UserroleView3Query.processQuery}" varStatus="vs" id="t1">
+    <af:column sortProperty="#{bindings.UserroleView3.hints.Startdate.name}" filterable="true" sortable="true"
+               headerText="#{bindings.UserroleView3.hints.Startdate.label}" id="c2">
+      <f:facet name="filter">
+        <af:inputDate value="#{bindings.UserroleView3Query.queryDescriptor.filterConjunctionCriterion.criterionMap.Startdate.value}"
+                      id="id1">
+          <af:convertDateTime pattern="#{bindings.UserroleView3.hints.Startdate.format}"/>
+        </af:inputDate>
+      </f:facet>
+      <af:outputText value="#{row.Startdate}" shortDesc="#{bindings.UserroleView3.hints.Startdate.tooltip}" id="ot2">
+        <af:convertDateTime pattern="#{bindings.UserroleView3.hints.Startdate.format}"/>
+      </af:outputText>
+    </af:column>
+    <af:column sortProperty="#{bindings.UserroleView3.hints.Enddate.name}" filterable="true" sortable="true"
+               headerText="#{bindings.UserroleView3.hints.Enddate.label}" id="c3">
+      <f:facet name="filter">
+        <af:inputDate value="#{bindings.UserroleView3Query.queryDescriptor.filterConjunctionCriterion.criterionMap.Enddate.value}"
+                      id="id2">
+          <af:convertDateTime pattern="#{bindings.UserroleView3.hints.Enddate.format}"/>
+        </af:inputDate>
+      </f:facet>
+      <af:outputText value="#{row.Enddate}" shortDesc="#{bindings.UserroleView3.hints.Enddate.tooltip}" id="ot3">
+        <af:convertDateTime pattern="#{bindings.UserroleView3.hints.Enddate.format}"/>
+      </af:outputText>
+    </af:column>
+    <af:column sortProperty="#{bindings.UserroleView3.hints.Roleid.name}" filterable="true" sortable="true"
+               headerText="#{bindings.UserroleView3.hints.Roleid.label}" id="c4">
+      <af:outputText value="#{row.Roleid}" shortDesc="#{bindings.UserroleView3.hints.Roleid.tooltip}" id="ot4">
+        <af:convertNumber groupingUsed="false" pattern="#{bindings.UserroleView3.hints.Roleid.format}"/>
+      </af:outputText>
+    </af:column>
+  </af:table>
+  <af:button text="Add" id="b1" action="create"/>
+</ui:composition>

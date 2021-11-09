@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.22.48" id="UserAccMenuPageDef"
+                Package="sfa.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="UseraccountView1" RangeSize="25" DataControl="AppModuleDataControl" id="UseraccountView1Iterator"/>
+    <taskFlow id="userRoleManagement1" taskFlowId="/WEB-INF/UserManagement/userRoleManagement.xml#userRoleManagement"
+              activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="UseraccountView1Iterator" id="Firstname">
+      <AttrNames>
+        <Item Value="Firstname"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="UseraccountView1Iterator" id="Middlename">
+      <AttrNames>
+        <Item Value="Middlename"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="UseraccountView1Iterator" id="Lastname">
+      <AttrNames>
+        <Item Value="Lastname"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="UseraccountView1Iterator" id="Password">
+      <AttrNames>
+        <Item Value="Password"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="UseraccountView1Iterator" id="Startdate">
+      <AttrNames>
+        <Item Value="Startdate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="UseraccountView1Iterator" id="Enddate">
+      <AttrNames>
+        <Item Value="Enddate"/>
+      </AttrNames>
+    </attributeValues>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+  </bindings>
+</pageDefinition>

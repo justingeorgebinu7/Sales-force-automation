@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="userManagementMain">
+    <default-activity>userAccountView</default-activity>
+    <data-control-scope>
+      <shared/>
+    </data-control-scope>
+    <view id="userAccountView">
+      <page>/userAccountView.jsff</page>
+    </view>
+    <view id="UserAccMenu">
+      <page>/UserAccMenu.jsff</page>
+    </view>
+    <control-flow-rule id="__3">
+      <from-activity-id>userAccountView</from-activity-id>
+      <control-flow-case id="__4">
+        <from-outcome>userMenu</from-outcome>
+        <to-activity-id>UserAccMenu</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__5">
+      <from-activity-id>UserAccMenu</from-activity-id>
+      <control-flow-case id="__6">
+        <from-outcome>backFromMenu</from-outcome>
+        <to-activity-id>userAccountView</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <use-page-fragments/>
+  </task-flow-definition>
+</adfc-config>

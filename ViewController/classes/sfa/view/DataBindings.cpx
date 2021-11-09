@@ -351,6 +351,16 @@
     <page path="/WEB-INF/Productcatalog/deleteProduct.xml#deleteProduct@Commit"
           usageId="sfa_view_deleteProduct_deleteProduct_CommitPageDef"/>
     <page path="/editProduct.jsff" usageId="sfa_view_editProductPageDef"/>
+    <page path="/userAccountView.jsff" usageId="sfa_view_userAccountViewPageDef"/>
+    <page path="/WEB-INF/UserManagement/createUserRole.xml#createUserRole@CreateInsert"
+          usageId="sfa_view_createUserRole_createUserRole_CreateInsertPageDef"/>
+    <page path="/WEB-INF/UserManagement/createUserRole.xml#createUserRole@Delete"
+          usageId="sfa_view_createUserRole_createUserRole_DeletePageDef"/>
+    <page path="/WEB-INF/UserManagement/createUserRole.xml#createUserRole@Commit"
+          usageId="sfa_view_createUserRole_createUserRole_CommitPageDef"/>
+    <page path="/createNewUserRole.jsff" usageId="sfa_view_createNewUserRolePageDef"/>
+    <page path="/UserAccMenu.jsff" usageId="sfa_view_UserAccMenuPageDef"/>
+    <page path="/userRolePage.jsff" usageId="sfa_view_userRolePagePageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="sfa_view_untitled2PageDef" path="sfa.view.pageDefs.untitled2PageDef"/>
@@ -697,6 +707,16 @@
     <page id="sfa_view_deleteProduct_deleteProduct_CommitPageDef"
           path="Productcatalog.deleteProduct_deleteProduct_CommitPageDef"/>
     <page id="sfa_view_editProductPageDef" path="sfa.view.pageDefs.editProductPageDef"/>
+    <page id="sfa_view_userAccountViewPageDef" path="sfa.view.pageDefs.userAccountViewPageDef"/>
+    <page id="sfa_view_createUserRole_createUserRole_CreateInsertPageDef"
+          path="UserManagement.createUserRole_createUserRole_CreateInsertPageDef"/>
+    <page id="sfa_view_createUserRole_createUserRole_DeletePageDef"
+          path="UserManagement.createUserRole_createUserRole_DeletePageDef"/>
+    <page id="sfa_view_createUserRole_createUserRole_CommitPageDef"
+          path="UserManagement.createUserRole_createUserRole_CommitPageDef"/>
+    <page id="sfa_view_createNewUserRolePageDef" path="sfa.view.pageDefs.createNewUserRolePageDef"/>
+    <page id="sfa_view_UserAccMenuPageDef" path="sfa.view.pageDefs.UserAccMenuPageDef"/>
+    <page id="sfa_view_userRolePagePageDef" path="sfa.view.pageDefs.userRolePagePageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="sfa.model.entities"

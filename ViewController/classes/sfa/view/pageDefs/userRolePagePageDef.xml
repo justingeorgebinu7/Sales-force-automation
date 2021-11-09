@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.22.48" id="userRolePagePageDef"
+                Package="sfa.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="UserroleView3" RangeSize="25" DataControl="AppModuleDataControl" id="UserroleView3Iterator"/>
+    <searchRegion Binds="UserroleView3Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="UserroleView3Query"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="UserroleView3Iterator" id="UserroleView3">
+      <nodeDefinition DefName="sfa.model.viewobjects.UserroleView" Name="UserroleView30">
+        <AttrNames>
+          <Item Value="Useraccount"/>
+          <Item Value="Startdate"/>
+          <Item Value="Enddate"/>
+          <Item Value="Roleid"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

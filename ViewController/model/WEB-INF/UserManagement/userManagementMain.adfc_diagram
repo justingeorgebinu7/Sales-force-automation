@@ -1,0 +1,61 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SDM>
+   <OverallProperties
+      id="OverallProperties1"/>
+   <View
+      id="View2">
+      <property
+         name="activityId">userAccountView</property>
+      <property
+         name="pageFragment">true</property>
+      <property
+         name="x">290.0</property>
+      <property
+         name="start">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>userAccountView&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">312.1953</property>
+      <property
+         name="page">/userAccountView.jsff</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <View
+      id="View5">
+      <property
+         name="activityId">UserAccMenu</property>
+      <property
+         name="pageFragment">true</property>
+      <property
+         name="x">566.0</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>UserAccMenu&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">283.59766</property>
+      <property
+         name="page">/UserAccMenu.jsff</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase6"
+      from="View2"
+      to="View5">
+      <property
+         name="fromOutcome">userMenu</property>
+      <property
+         name="sdm:polyPoints">R50,331.0,311.84473,525.0,283.24707,L50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase7"
+      from="View5"
+      to="View2">
+      <property
+         name="fromOutcome">backFromMenu</property>
+      <property
+         name="sdm:polyPoints">L54,525.0,286.74707,331.51315,315.34473,R54</property>
+   </ControlFlowCase>
+</SDM>

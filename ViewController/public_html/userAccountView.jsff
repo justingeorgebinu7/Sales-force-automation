@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:f="http://java.sun.com/jsf/core">
+  <af:table value="#{bindings.UseraccountView1.collectionModel}" var="row" rows="#{bindings.UseraccountView1.rangeSize}"
+            emptyText="#{bindings.UseraccountView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+            rowBandingInterval="0" selectedRowKeys="#{bindings.UseraccountView1.collectionModel.selectedRow}"
+            selectionListener="#{bindings.UseraccountView1.collectionModel.makeCurrent}" rowSelection="single"
+            fetchSize="#{bindings.UseraccountView1.rangeSize}"
+            filterModel="#{bindings.UseraccountView1Query.queryDescriptor}" filterVisible="true"
+            queryListener="#{bindings.UseraccountView1Query.processQuery}" varStatus="vs" id="t1">
+    <af:column sortProperty="#{bindings.UseraccountView1.hints.Firstname.name}" filterable="true" sortable="true"
+               headerText="#{bindings.UseraccountView1.hints.Firstname.label}" id="c1">
+      <af:link shortDesc="#{bindings.UseraccountView1.hints.Firstname.tooltip}" id="ot1" text="#{row.Firstname}"
+               action="userMenu"/>
+    </af:column>
+    <af:column sortProperty="#{bindings.UseraccountView1.hints.Middlename.name}" filterable="true" sortable="true"
+               headerText="#{bindings.UseraccountView1.hints.Middlename.label}" id="c2">
+      <af:outputText value="#{row.Middlename}" shortDesc="#{bindings.UseraccountView1.hints.Middlename.tooltip}"
+                     id="ot2"/>
+    </af:column>
+    <af:column sortProperty="#{bindings.UseraccountView1.hints.Lastname.name}" filterable="true" sortable="true"
+               headerText="#{bindings.UseraccountView1.hints.Lastname.label}" id="c3">
+      <af:outputText value="#{row.Lastname}" shortDesc="#{bindings.UseraccountView1.hints.Lastname.tooltip}" id="ot3"/>
+    </af:column>
+    <af:column sortProperty="#{bindings.UseraccountView1.hints.Startdate.name}" filterable="true" sortable="true"
+               headerText="#{bindings.UseraccountView1.hints.Startdate.label}" id="c4">
+      <f:facet name="filter">
+        <af:inputDate value="#{bindings.UseraccountView1Query.queryDescriptor.filterConjunctionCriterion.criterionMap.Startdate.value}"
+                      id="id1">
+          <af:convertDateTime pattern="#{bindings.UseraccountView1.hints.Startdate.format}"/>
+        </af:inputDate>
+      </f:facet>
+      <af:outputText value="#{row.Startdate}" shortDesc="#{bindings.UseraccountView1.hints.Startdate.tooltip}" id="ot4">
+        <af:convertDateTime pattern="#{bindings.UseraccountView1.hints.Startdate.format}"/>
+      </af:outputText>
+    </af:column>
+    <af:column sortProperty="#{bindings.UseraccountView1.hints.Enddate.name}" filterable="true" sortable="true"
+               headerText="#{bindings.UseraccountView1.hints.Enddate.label}" id="c5">
+      <f:facet name="filter">
+        <af:inputDate value="#{bindings.UseraccountView1Query.queryDescriptor.filterConjunctionCriterion.criterionMap.Enddate.value}"
+                      id="id2">
+          <af:convertDateTime pattern="#{bindings.UseraccountView1.hints.Enddate.format}"/>
+        </af:inputDate>
+      </f:facet>
+      <af:outputText value="#{row.Enddate}" shortDesc="#{bindings.UseraccountView1.hints.Enddate.tooltip}" id="ot5">
+        <af:convertDateTime pattern="#{bindings.UseraccountView1.hints.Enddate.format}"/>
+      </af:outputText>
+    </af:column>
+  </af:table>
+</ui:composition>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.22.48" id="userAccountViewPageDef"
+                Package="sfa.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="UseraccountView1" RangeSize="25" DataControl="AppModuleDataControl" id="UseraccountView1Iterator"/>
+    <searchRegion Binds="UseraccountView1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="UseraccountView1Query"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="UseraccountView1Iterator" id="UseraccountView1">
+      <nodeDefinition DefName="sfa.model.viewobjects.UseraccountView" Name="UseraccountView10">
+        <AttrNames>
+          <Item Value="Firstname"/>
+          <Item Value="Middlename"/>
+          <Item Value="Lastname"/>
+          <Item Value="Startdate"/>
+          <Item Value="Enddate"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

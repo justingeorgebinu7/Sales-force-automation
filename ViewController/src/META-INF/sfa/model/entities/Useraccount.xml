@@ -83,7 +83,6 @@
     TableName="USERACCOUNT"/>
   <Attribute
     Name="Corporatecustomerreferenceid1"
-    IsNotNull="true"
     ColumnName="CORPORATECUSTOMERREFERENCEID1"
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
@@ -121,8 +120,5 @@
       <Attr Name="_isForeign" Value="true"/>
       <Attr Name="_DBObjectName" Value="USERACCOUNT_ACCOUNT_FK"/>
     </DesignTime>
-    <AttrArray Name="Attributes">
-      <Item Value="sfa.model.entities.Useraccount.Corporatecustomerreferenceid1"/>
-    </AttrArray>
   </Key>
 </Entity>

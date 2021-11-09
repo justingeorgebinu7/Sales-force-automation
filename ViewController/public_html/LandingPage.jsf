@@ -49,7 +49,9 @@
                                         <af:region value="#{bindings.productCatalog1.regionModel}" id="r4"/>
                                     </af:showDetailItem>
                                     <af:showDetailItem text="User Management" id="sd15"
-                                                       icon="https://i.ibb.co/0Xfwvzk/41-410871-social-media-management-circle-social-media-marketing-icon-1.png"/>
+                                                       icon="https://i.ibb.co/0Xfwvzk/41-410871-social-media-management-circle-social-media-marketing-icon-1.png">
+                                        <af:region value="#{bindings.userManagementMain1.regionModel}" id="r5"/>
+                                    </af:showDetailItem>
                                 </af:panelSpringboard>
                             </af:panelBox>
                         </f:facet>

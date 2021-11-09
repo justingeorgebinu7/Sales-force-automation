@@ -12,7 +12,8 @@
   BindingStyle="OracleName"
   CustomQuery="false"
   SelectAllAttributes="false"
-  PageIterMode="Full">
+  PageIterMode="Full"
+  AccessMode="DEFAULT">
   <EntityUsage
     Name="Useraccount"
     Entity="sfa.model.entities.Useraccount"/>
@@ -61,7 +62,6 @@
     AliasName="ENDDATE"/>
   <ViewAttribute
     Name="Corporatecustomerreferenceid1"
-    IsNotNull="true"
     PrecisionRule="true"
     EntityAttrName="Corporatecustomerreferenceid1"
     EntityUsage="Useraccount"

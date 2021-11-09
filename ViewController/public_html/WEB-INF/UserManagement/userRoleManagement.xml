@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="userRoleManagement">
+    <default-activity>userRolePage</default-activity>
+    <data-control-scope>
+      <shared/>
+    </data-control-scope>
+    <view id="userRolePage">
+      <page>/userRolePage.jsff</page>
+    </view>
+    <task-flow-call id="createUserRole">
+      <task-flow-reference>
+        <document>/WEB-INF/UserManagement/createUserRole.xml</document>
+        <id>createUserRole</id>
+      </task-flow-reference>
+    </task-flow-call>
+    <control-flow-rule id="__1">
+      <from-activity-id>userRolePage</from-activity-id>
+      <control-flow-case id="__2">
+        <from-outcome>create</from-outcome>
+        <to-activity-id>createUserRole</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <use-page-fragments/>
+  </task-flow-definition>
+</adfc-config>
