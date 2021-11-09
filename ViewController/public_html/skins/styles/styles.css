@@ -28,7 +28,7 @@ af|button {
 af|table {
     border-radius: 0px;
     overflow: hidden;
-    background-color: white;
+    background-color: #fdfdfd;
     border: none;
 }
 
@@ -44,10 +44,10 @@ af|column::banded-data-cell {
 }
 
 af|column::column-header-cell {
-    background-color: #789;
+    /*background-color: #789;*/
     padding: 10px 5px;
     text-align: center;
-    color: #fff;
+    /*color: #fff;*/
 }
 
 af|panelSpringboard::item {
@@ -58,8 +58,7 @@ af|panelSpringboard::item {
 }
 
 af|panelSpringboard {
-    margin-top: 20px;
-    padding-left:40px;
+    margin-top: 10px;
 }
 
 af|panelSpringboard::item-text {
@@ -68,8 +67,11 @@ af|panelSpringboard::item-text {
 }
 
 af|panelSpringboard::body {
-    margin-top: 30px;
-    padding: 20px 20px;
+    margin-top: 20px;
+    padding: 20px 30px;
+    margin-left:150px;
+    border-left: 1px solid #ddd;
+    background-color:#fdfdfd;
     /*border:none;*/
 }
 

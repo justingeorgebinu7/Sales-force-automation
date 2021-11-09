@@ -3,7 +3,7 @@
                 xmlns:f="http://java.sun.com/jsf/core">
   <!--oracle-jdev-comment:preferred-managed-bean-name:fileUpload-->
   <af:menuBar id="mb1">
-    <af:commandMenuItem text="Back" id="cmi1" action="toHome"/>
+    <af:commandMenuItem id="cmi1" action="toHome" icon="https://i.ibb.co/5nPsJ90/New-Project-2.png"/>
   </af:menuBar>
   <af:panelBox id="pb2" inlineStyle="margin-right:100px;overflow:hidden; border-radius:30px 30px 30px 30px;" text="Menu"
                background="default">
