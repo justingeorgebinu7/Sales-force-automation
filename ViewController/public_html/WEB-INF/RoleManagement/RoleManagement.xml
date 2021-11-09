@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="RoleManagement">
+    <default-activity>RoleManage</default-activity>
+    <data-control-scope>
+      <shared/>
+    </data-control-scope>
+    <view id="RoleManage">
+      <page>/RoleManagementPages/RoleManage.jsff</page>
+    </view>
+    <view id="editRoles">
+      <page>/RoleManagementPages/editRoles.jsff</page>
+    </view>
+    <task-flow-call id="createRole">
+      <task-flow-reference>
+        <document>/WEB-INF/RoleManagement/createRole.xml</document>
+        <id>createRole</id>
+      </task-flow-reference>
+    </task-flow-call>
+    <task-flow-call id="deleteRole">
+      <task-flow-reference>
+        <document>/WEB-INF/RoleManagement/deleteRole.xml</document>
+        <id>deleteRole</id>
+      </task-flow-reference>
+    </task-flow-call>
+    <control-flow-rule id="__1">
+      <from-activity-id>RoleManage</from-activity-id>
+      <control-flow-case id="__2">
+        <from-outcome>editRole</from-outcome>
+        <to-activity-id>editRoles</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__5">
+        <from-outcome>addRole</from-outcome>
+        <to-activity-id>createRole</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__6">
+        <from-outcome>toDelete</from-outcome>
+        <to-activity-id>deleteRole</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__3">
+      <from-activity-id>editRoles</from-activity-id>
+      <control-flow-case id="__4">
+        <from-outcome>backFromEdit</from-outcome>
+        <to-activity-id>RoleManage</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <use-page-fragments/>
+  </task-flow-definition>
+</adfc-config>

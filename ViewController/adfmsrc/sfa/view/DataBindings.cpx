@@ -376,6 +376,17 @@
           usageId="sfa_view_createUserAccount_createUserAccount_DeletePageDef"/>
     <page path="/WEB-INF/UserManagement/deleteUserAccount.xml#deleteUserAccount@Delete"
           usageId="sfa_view_deleteUserAccount_deleteUserAccount_DeletePageDef"/>
+    <page path="/RoleManagementPages/RoleManage.jsff" usageId="sfa_view_RoleManagePageDef"/>
+    <page path="/RoleManagementPages/editRoles.jsff" usageId="sfa_view_editRolesPageDef"/>
+    <page path="/WEB-INF/RoleManagement/createRole.xml#createRole@CreateInsert"
+          usageId="sfa_view_createRole_createRole_CreateInsertPageDef"/>
+    <page path="/WEB-INF/RoleManagement/createRole.xml#createRole@Commit"
+          usageId="sfa_view_createRole_createRole_CommitPageDef"/>
+    <page path="/RoleManagementPages/createRole.jsff" usageId="sfa_view_createRolePageDef"/>
+    <page path="/WEB-INF/RoleManagement/deleteRole.xml#deleteRole@Delete"
+          usageId="sfa_view_deleteRole_deleteRole_DeletePageDef"/>
+    <page path="/WEB-INF/RoleManagement/deleteRole.xml#deleteRole@Commit"
+          usageId="sfa_view_deleteRole_deleteRole_CommitPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="sfa_view_untitled2PageDef" path="sfa.view.pageDefs.untitled2PageDef"/>
@@ -747,6 +758,14 @@
           path="UserManagement.createUserAccount_createUserAccount_DeletePageDef"/>
     <page id="sfa_view_deleteUserAccount_deleteUserAccount_DeletePageDef"
           path="UserManagement.deleteUserAccount_deleteUserAccount_DeletePageDef"/>
+    <page id="sfa_view_RoleManagePageDef" path="RoleManagementPages.RoleManagePageDef"/>
+    <page id="sfa_view_editRolesPageDef" path="RoleManagementPages.editRolesPageDef"/>
+    <page id="sfa_view_createRole_createRole_CreateInsertPageDef"
+          path="RoleManagement.createRole_createRole_CreateInsertPageDef"/>
+    <page id="sfa_view_createRole_createRole_CommitPageDef" path="RoleManagement.createRole_createRole_CommitPageDef"/>
+    <page id="sfa_view_createRolePageDef" path="RoleManagementPages.createRolePageDef"/>
+    <page id="sfa_view_deleteRole_deleteRole_DeletePageDef" path="RoleManagement.deleteRole_deleteRole_DeletePageDef"/>
+    <page id="sfa_view_deleteRole_deleteRole_CommitPageDef" path="RoleManagement.deleteRole_deleteRole_CommitPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="sfa.model.entities"

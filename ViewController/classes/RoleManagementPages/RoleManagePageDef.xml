@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.22.48" id="RoleManagePageDef"
+                Package="RoleManagementPages">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="RoleView1" RangeSize="25" DataControl="AppModuleDataControl" id="RoleView1Iterator"/>
+    <searchRegion Binds="RoleView1Iterator" Criteria="" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  id="RoleView1Query"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="RoleView1Iterator" id="RoleView1">
+      <nodeDefinition DefName="sfa.model.viewobjects.RoleView" Name="RoleView10">
+        <AttrNames>
+          <Item Value="Name"/>
+          <Item Value="Description"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.22.48"
+                id="createRole_createRole_CreateInsertPageDef" Package="RoleManagement" SkipValidation="true">
+  <parameters/>
+  <executables>
+    <iterator Binds="RoleView1" RangeSize="25" DataControl="AppModuleDataControl" id="RoleView1Iterator"/>
+  </executables>
+  <bindings>
+    <action IterBinding="RoleView1Iterator" id="CreateInsert" RequiresUpdateModel="true" Action="createInsertRow"/>
+  </bindings>
+</pageDefinition>

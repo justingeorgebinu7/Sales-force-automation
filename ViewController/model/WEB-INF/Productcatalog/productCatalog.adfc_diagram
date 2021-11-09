@@ -92,7 +92,7 @@
       <property
          name="y">336.29883</property>
       <property
-         name="page">/editProduct.jsff</property>
+         name="page">/ProductsCatalog/editProduct.jsff</property>
       <property
          name="exceptionHandler">false</property>
    </View>
