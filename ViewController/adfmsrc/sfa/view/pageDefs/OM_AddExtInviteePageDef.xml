@@ -7,11 +7,7 @@
     <iterator Binds="InviteesextView4" RangeSize="25" DataControl="AppModuleDataControl" id="InviteesextView4Iterator"/>
   </executables>
   <bindings>
-    <attributeValues IterBinding="InviteesextView4Iterator" id="Name">
-      <AttrNames>
-        <Item Value="Name"/>
-      </AttrNames>
-    </attributeValues>
     <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+    <listOfValues IterBinding="InviteesextView4Iterator" StaticList="false" Uses="LOV_Userid" id="Userid"/>
   </bindings>
 </pageDefinition>

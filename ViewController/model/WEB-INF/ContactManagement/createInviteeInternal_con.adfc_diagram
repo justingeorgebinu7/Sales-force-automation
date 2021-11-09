@@ -24,11 +24,11 @@
       <property
          name="pageFragment">true</property>
       <property
-         name="x">425.0</property>
+         name="x">415.0</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>addInvInternal_con&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">201.24707</property>
+         name="y">181.84473</property>
       <property
          name="page">/ContactManagementPages/addInvInternal_con.jsff</property>
       <property
@@ -42,7 +42,7 @@
       <property
          name="fromOutcome">CreateInsert</property>
       <property
-         name="sdm:polyPoints">R50,251.01465,224.39648,384.0,200.89648,L50</property>
+         name="sdm:polyPoints">R50,251.01465,224.39648,374.0,181.49414,L50</property>
    </ControlFlowCase>
    <MethodCall
       id="MethodCall5">
@@ -80,7 +80,7 @@
       <property
          name="fromOutcome">toCommit</property>
       <property
-         name="sdm:polyPoints">R50,466.0,200.89648,564.5,247.79883,L50</property>
+         name="sdm:polyPoints">R50,456.0,181.49414,564.5,247.79883,L50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"

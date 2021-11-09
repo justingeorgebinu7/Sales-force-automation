@@ -43,9 +43,9 @@
       </af:panelFormLayout>
     </f:facet>
     <f:facet name="second">
-      <af:panelSplitter id="ps2" splitterPosition="567">
+      <af:panelSplitter id="ps2" splitterPosition="516">
         <f:facet name="first">
-          <af:panelBox text="Invitees-Contacts" id="pb1">
+          <af:panelBox text="Invitees - Users" id="pb1">
             <f:facet name="toolbar">
               <af:menuBar id="mb2">
                 <af:commandMenuItem text="Add" id="cmi3" action="addInviteeExternal"/>
@@ -57,20 +57,17 @@
                       emptyText="#{bindings.InviteesextView3.viewable ? 'No data to display.' : 'Access Denied.'}"
                       rowBandingInterval="0" selectedRowKeys="#{bindings.InviteesextView3.collectionModel.selectedRow}"
                       selectionListener="#{bindings.InviteesextView3.collectionModel.makeCurrent}" rowSelection="single"
-                      fetchSize="#{bindings.InviteesextView3.rangeSize}"
-                      filterModel="#{bindings.InviteesextView3Query.queryDescriptor}" filterVisible="true"
-                      queryListener="#{bindings.InviteesextView3Query.processQuery}" varStatus="vs" id="t1"
-                      columnStretching="last">
-              <af:column sortProperty="#{bindings.InviteesextView3.hints.Name.name}" filterable="true" sortable="true"
-                         headerText="#{bindings.InviteesextView3.hints.Name.label}" id="c1">
-                <af:link shortDesc="#{bindings.InviteesextView3.hints.Name.tooltip}" id="ot1" text="#{row.Name}"
-                         action="editInviteeExternal"/>
+                      fetchSize="#{bindings.InviteesextView3.rangeSize}" id="t1" columnStretching="last">
+              <af:column sortProperty="#{bindings.InviteesextView3.hints.Firstname.name}" sortable="true"
+                         headerText="#{bindings.InviteesextView3.hints.Firstname.label}" id="c1">
+                <af:outputText value="#{row.Firstname}" shortDesc="#{bindings.InviteesextView3.hints.Firstname.tooltip}"
+                               id="ot1"/>
               </af:column>
             </af:table>
           </af:panelBox>
         </f:facet>
         <f:facet name="second">
-          <af:panelBox text="Invitees-Users" id="pb2">
+          <af:panelBox text="Invitees - Contacts" id="pb2">
             <f:facet name="toolbar">
               <af:menuBar id="mb1">
                 <af:commandMenuItem text="Add" id="cmi1" action="addInviteeInternal"/>

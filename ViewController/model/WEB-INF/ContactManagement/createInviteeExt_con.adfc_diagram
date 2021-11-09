@@ -43,7 +43,7 @@
       <property
          name="y">203.59766</property>
       <property
-         name="page">/addExtInvitee_con.jsff</property>
+         name="page">/AppointmentsAndInteractions/addExtInvitee_con.jsff</property>
       <property
          name="exceptionHandler">false</property>
    </View>

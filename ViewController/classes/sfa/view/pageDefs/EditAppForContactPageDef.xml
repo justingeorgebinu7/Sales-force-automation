@@ -7,11 +7,7 @@
     <iterator Binds="AppointmentsView2" RangeSize="25" DataControl="AppModuleDataControl"
               id="AppointmentsView2Iterator"/>
     <iterator Binds="InviteesextView5" RangeSize="25" DataControl="AppModuleDataControl" id="InviteesextView5Iterator"/>
-    <searchRegion Binds="InviteesextView5Iterator" Criteria=""
-                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="InviteesextView5Query"/>
     <iterator Binds="InviteesView4" RangeSize="25" DataControl="AppModuleDataControl" id="InviteesView4Iterator"/>
-    <searchRegion Binds="InviteesView4Iterator" Criteria=""
-                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="InviteesView4Query"/>
   </executables>
   <bindings>
     <attributeValues IterBinding="AppointmentsView2Iterator" id="Name">
@@ -43,14 +39,14 @@
     <tree IterBinding="InviteesextView5Iterator" id="InviteesextView5">
       <nodeDefinition DefName="sfa.model.viewobjects.InviteesextView" Name="InviteesextView50">
         <AttrNames>
-          <Item Value="Name"/>
+          <Item Value="Firstname"/>
         </AttrNames>
       </nodeDefinition>
     </tree>
     <tree IterBinding="InviteesView4Iterator" id="InviteesView4">
       <nodeDefinition DefName="sfa.model.viewobjects.InviteesView" Name="InviteesView40">
         <AttrNames>
-          <Item Value="Name"/>
+          <Item Value="Name1"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

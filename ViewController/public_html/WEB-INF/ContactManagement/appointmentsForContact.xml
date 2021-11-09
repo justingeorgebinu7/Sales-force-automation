@@ -36,18 +36,12 @@
       </task-flow-reference>
       <run-as-dialog/>
     </task-flow-call>
-    <view id="editInviteeinternal">
-      <page>/ContactManagementPages/editInviteeinternal.jsff</page>
-    </view>
     <task-flow-call id="createInviteeExt_con">
       <task-flow-reference>
         <document>/WEB-INF/ContactManagement/createInviteeExt_con.xml</document>
         <id>createInviteeExt_con</id>
       </task-flow-reference>
     </task-flow-call>
-    <view id="editExt">
-      <page>/ContactManagementPages/editExt.jsff</page>
-    </view>
     <task-flow-call id="deleteInvExt_con">
       <task-flow-reference>
         <document>/WEB-INF/ContactManagement/deleteInvExt_con.xml</document>
@@ -80,17 +74,9 @@
         <from-outcome>deleteInternal</from-outcome>
         <to-activity-id>deleteInviteeInt_con</to-activity-id>
       </control-flow-case>
-      <control-flow-case id="__9">
-        <from-outcome>toEditInternal</from-outcome>
-        <to-activity-id>editInviteeinternal</to-activity-id>
-      </control-flow-case>
       <control-flow-case id="__13">
         <from-outcome>toAddExt</from-outcome>
         <to-activity-id>createInviteeExt_con</to-activity-id>
-      </control-flow-case>
-      <control-flow-case id="__14">
-        <from-outcome>toEditExt</from-outcome>
-        <to-activity-id>editExt</to-activity-id>
       </control-flow-case>
       <control-flow-case id="__17">
         <from-outcome>toDeleteExt</from-outcome>
@@ -102,20 +88,6 @@
       <control-flow-case id="__7">
         <from-outcome>deleteAppForContacts1</from-outcome>
         <to-activity-id>deleteAppForContacts1</to-activity-id>
-      </control-flow-case>
-    </control-flow-rule>
-    <control-flow-rule id="__11">
-      <from-activity-id>editInviteeinternal</from-activity-id>
-      <control-flow-case id="__12">
-        <from-outcome>backFromEdit</from-outcome>
-        <to-activity-id>EditAppForContact</to-activity-id>
-      </control-flow-case>
-    </control-flow-rule>
-    <control-flow-rule id="__15">
-      <from-activity-id>editExt</from-activity-id>
-      <control-flow-case id="__16">
-        <from-outcome>backFromEditEx</from-outcome>
-        <to-activity-id>EditAppForContact</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <use-page-fragments/>

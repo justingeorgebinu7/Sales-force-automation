@@ -7,11 +7,7 @@
     <iterator Binds="InviteesextView5" RangeSize="25" DataControl="AppModuleDataControl" id="InviteesextView5Iterator"/>
   </executables>
   <bindings>
-    <attributeValues IterBinding="InviteesextView5Iterator" id="Name">
-      <AttrNames>
-        <Item Value="Name"/>
-      </AttrNames>
-    </attributeValues>
     <action IterBinding="InviteesextView5Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <listOfValues IterBinding="InviteesextView5Iterator" StaticList="false" Uses="LOV_Userid" id="Userid"/>
   </bindings>
 </pageDefinition>

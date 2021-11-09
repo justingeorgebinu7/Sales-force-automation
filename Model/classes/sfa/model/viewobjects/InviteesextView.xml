@@ -22,7 +22,8 @@
     Name="LOV_Userid"
     ListVOName="UseraccountView1"
     NullValueFlag="none"
-    MRUCount="0">
+    MRUCount="0"
+    ComboRowCountHint="10">
     <AttrArray Name="AttrNames">
       <Item Value="Userid"/>
     </AttrArray>
@@ -39,6 +40,25 @@
   <EntityUsage
     Name="Inviteesext"
     Entity="sfa.model.entities.Inviteesext"/>
+  <EntityUsage
+    Name="Useraccount"
+    Entity="sfa.model.entities.Useraccount"
+    Association="sfa.model.entities.Inviteesext_useraccount_Assoc"
+    AssociationEnd="sfa.model.entities.Inviteesext_useraccount_Assoc.Useraccount"
+    SourceUsage="sfa.model.viewobjects.InviteesextView.Inviteesext"
+    ReadOnly="true"
+    Reference="true"
+    DeleteParticipant="false"
+    JoinType="INNER JOIN">
+    <DesignTime>
+      <AttrArray Name="_dstAttributes">
+        <Item Value="sfa.model.entities.Useraccount.Useraccountid"/>
+      </AttrArray>
+      <AttrArray Name="_srcAttributes">
+        <Item Value="sfa.model.entities.Inviteesext.Userid"/>
+      </AttrArray>
+    </DesignTime>
+  </EntityUsage>
   <ViewAttribute
     Name="Inviteeextid"
     IsNotNull="true"
@@ -74,10 +94,32 @@
     <Properties>
       <SchemaBasedProperties>
         <CONTROLTYPE
-          Value="list"/>
+          Value="combo_lov"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
+  <ViewAttribute
+    Name="Firstname"
+    PrecisionRule="true"
+    EntityAttrName="Firstname"
+    EntityUsage="Useraccount"
+    AliasName="FIRSTNAME"/>
+  <ViewAttribute
+    Name="Useraccountid"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Useraccountid"
+    EntityUsage="Useraccount"
+    AliasName="USERACCOUNTID"/>
+  <ViewAttribute
+    Name="Lastname"
+    PrecisionRule="true"
+    EntityAttrName="Lastname"
+    EntityUsage="Useraccount"
+    AliasName="LASTNAME"/>
+  <AttrArray Name="KeyAttributes">
+    <Item Value="Inviteeextid"/>
+  </AttrArray>
   <ViewLinkAccessor
     Name="AppointmentsView"
     ViewLink="sfa.model.entities.InviteesExt_AppoinmentFK_Link"

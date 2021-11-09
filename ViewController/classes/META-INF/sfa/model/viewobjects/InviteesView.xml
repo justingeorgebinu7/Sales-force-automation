@@ -22,7 +22,8 @@
     Name="LOV_Contactid"
     ListVOName="CustomercontactsView1"
     NullValueFlag="none"
-    MRUCount="0">
+    MRUCount="0"
+    ComboRowCountHint="10">
     <AttrArray Name="AttrNames">
       <Item Value="Contactid"/>
     </AttrArray>
@@ -34,7 +35,8 @@
       <Item Value="Name"/>
       <Item Value="Title"/>
     </AttrArray>
-    <DisplayCriteria/>
+    <DisplayCriteria
+      Hint="showAndExecute"/>
   </ListBinding>
   <EntityUsage
     Name="Invitees"
@@ -94,7 +96,7 @@
     <Properties>
       <SchemaBasedProperties>
         <CONTROLTYPE
-          Value="list"/>
+          Value="combo_lov"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>

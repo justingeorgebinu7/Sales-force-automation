@@ -8,5 +8,6 @@
   </executables>
   <bindings>
     <action IterBinding="InviteesView3Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <listOfValues IterBinding="InviteesView3Iterator" StaticList="false" Uses="LOV_Contactid" id="Contactid"/>
   </bindings>
 </pageDefinition>
