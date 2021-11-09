@@ -51,6 +51,7 @@
       <nodeDefinition DefName="sfa.model.viewobjects.InviteesView" Name="InviteesView30">
         <AttrNames>
           <Item Value="Name"/>
+          <Item Value="Name1"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

@@ -100,4 +100,9 @@
     ViewLink="sfa.model.viewobjects.UserroleUseraccountFkLink"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="InviteesextView"
+    ViewLink="sfa.model.viewobjects.Inviteesext_Useraccount_FKLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
 </ViewObject>

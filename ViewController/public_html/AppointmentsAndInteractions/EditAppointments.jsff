@@ -86,10 +86,8 @@
                       filterModel="#{bindings.InviteesView3Query.queryDescriptor}" filterVisible="true"
                       queryListener="#{bindings.InviteesView3Query.processQuery}" varStatus="vs" id="t2"
                       columnStretching="last">
-              <af:column sortProperty="#{bindings.InviteesView3.hints.Name.name}" filterable="true" sortable="true"
-                         headerText="#{bindings.InviteesView3.hints.Name.label}" id="c2">
-                <af:link shortDesc="#{bindings.InviteesView3.hints.Name.tooltip}" id="ot2" text="#{row.Name}"
-                         action="editInviteeInternal"/>
+              <af:column headerText="#{bindings.InviteesView3.hints.Name1.label}" id="c3">
+                <af:outputText value="#{row.Name1}" shortDesc="#{bindings.InviteesView3.hints.Name1.tooltip}" id="ot2"/>
               </af:column>
             </af:table>
           </af:panelBox>

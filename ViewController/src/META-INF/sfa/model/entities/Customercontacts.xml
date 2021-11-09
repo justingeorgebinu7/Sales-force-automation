@@ -234,6 +234,13 @@
     AssociationOtherEnd="sfa.model.entities.TaskCustomercontactsFkAssoc.Customercontacts"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="Invitees"
+    Association="sfa.model.entities.Invitees_Contacts_Assoc"
+    AssociationEnd="sfa.model.entities.Invitees_Contacts_Assoc.Invitees"
+    AssociationOtherEnd="sfa.model.entities.Invitees_Contacts_Assoc.Customercontacts"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <Key
     Name="CustomercontactsPk"
     PrimaryKey="true">

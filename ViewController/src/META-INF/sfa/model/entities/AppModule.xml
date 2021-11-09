@@ -175,6 +175,36 @@
   <ViewUsage
     Name="RoleView2"
     ViewObjectName="sfa.model.viewobjects.RoleView"/>
+  <ViewUsage
+    Name="CustomercontactsView3"
+    ViewObjectName="sfa.model.viewobjects.CustomercontactsView"/>
+  <ViewUsage
+    Name="InviteesView6"
+    ViewObjectName="sfa.model.viewobjects.InviteesView"/>
+  <ViewUsage
+    Name="UseraccountView3"
+    ViewObjectName="sfa.model.viewobjects.UseraccountView"/>
+  <ViewUsage
+    Name="InviteesextView6"
+    ViewObjectName="sfa.model.viewobjects.InviteesextView"/>
+  <ViewUsage
+    Name="CustomercontactsView4"
+    ViewObjectName="sfa.model.viewobjects.CustomercontactsView"/>
+  <ViewUsage
+    Name="UseraccountView4"
+    ViewObjectName="sfa.model.viewobjects.UseraccountView"/>
+  <ViewUsage
+    Name="UseraccountView5"
+    ViewObjectName="sfa.model.viewobjects.UseraccountView"/>
+  <ViewUsage
+    Name="CustomercontactsView5"
+    ViewObjectName="sfa.model.viewobjects.CustomercontactsView"/>
+  <ViewUsage
+    Name="CustomercontactsView6"
+    ViewObjectName="sfa.model.viewobjects.CustomercontactsView"/>
+  <ViewUsage
+    Name="UseraccountView6"
+    ViewObjectName="sfa.model.viewobjects.UseraccountView"/>
   <ViewLinkUsage
     Name="AddressCustomeraccountFkLink1"
     ViewLinkObjectName="sfa.model.viewobjects.AddressCustomeraccountFkLink"
@@ -390,5 +420,53 @@
     ViewLinkObjectName="sfa.model.viewobjects.RoleUserroleFkLink"
     SrcViewUsageName="sfa.model.entities.AppModule.UserroleView3"
     DstViewUsageName="sfa.model.entities.AppModule.RoleView2"
+    Reversed="true"/>
+  <ViewLinkUsage
+    Name="Invitees_Contacts_FkLink"
+    ViewLinkObjectName="sfa.model.viewobjects.Invitees_Contacts_FkLink"
+    SrcViewUsageName="sfa.model.entities.AppModule.CustomercontactsView3"
+    DstViewUsageName="sfa.model.entities.AppModule.InviteesView6"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="Inviteesext_Useraccount_FKLink"
+    ViewLinkObjectName="sfa.model.viewobjects.Inviteesext_Useraccount_FKLink"
+    SrcViewUsageName="sfa.model.entities.AppModule.UseraccountView3"
+    DstViewUsageName="sfa.model.entities.AppModule.InviteesextView6"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="Invitees_Contacts_FkLink1"
+    ViewLinkObjectName="sfa.model.viewobjects.Invitees_Contacts_FkLink"
+    SrcViewUsageName="sfa.model.entities.AppModule.InviteesView3"
+    DstViewUsageName="sfa.model.entities.AppModule.CustomercontactsView4"
+    Reversed="true"/>
+  <ViewLinkUsage
+    Name="Inviteesext_Useraccount_FKLink1"
+    ViewLinkObjectName="sfa.model.viewobjects.Inviteesext_Useraccount_FKLink"
+    SrcViewUsageName="sfa.model.entities.AppModule.InviteesextView3"
+    DstViewUsageName="sfa.model.entities.AppModule.UseraccountView4"
+    Reversed="true"/>
+  <ViewLinkUsage
+    Name="Inviteesext_Useraccount_FKLink2"
+    ViewLinkObjectName="sfa.model.viewobjects.Inviteesext_Useraccount_FKLink"
+    SrcViewUsageName="sfa.model.entities.AppModule.InviteesextView5"
+    DstViewUsageName="sfa.model.entities.AppModule.UseraccountView5"
+    Reversed="true"/>
+  <ViewLinkUsage
+    Name="Invitees_Contacts_FkLink2"
+    ViewLinkObjectName="sfa.model.viewobjects.Invitees_Contacts_FkLink"
+    SrcViewUsageName="sfa.model.entities.AppModule.InviteesView4"
+    DstViewUsageName="sfa.model.entities.AppModule.CustomercontactsView5"
+    Reversed="true"/>
+  <ViewLinkUsage
+    Name="Invitees_Contacts_FkLink3"
+    ViewLinkObjectName="sfa.model.viewobjects.Invitees_Contacts_FkLink"
+    SrcViewUsageName="sfa.model.entities.AppModule.InviteesView5"
+    DstViewUsageName="sfa.model.entities.AppModule.CustomercontactsView6"
+    Reversed="true"/>
+  <ViewLinkUsage
+    Name="Inviteesext_Useraccount_FKLink3"
+    ViewLinkObjectName="sfa.model.viewobjects.Inviteesext_Useraccount_FKLink"
+    SrcViewUsageName="sfa.model.entities.AppModule.InviteesextView4"
+    DstViewUsageName="sfa.model.entities.AppModule.UseraccountView6"
     Reversed="true"/>
 </AppModule>

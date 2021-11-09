@@ -21,7 +21,6 @@
     PrimaryKey="true">
     <TransientExpression
       Name="ExpressionScript"
-      trustMode="trusted"
       CodeSourceName="UseraccountRow"/>
   </Attribute>
   <Attribute
@@ -105,6 +104,13 @@
     Association="sfa.model.entities.UserroleUseraccountFkAssoc"
     AssociationEnd="sfa.model.entities.UserroleUseraccountFkAssoc.Userrole"
     AssociationOtherEnd="sfa.model.entities.UserroleUseraccountFkAssoc.Useraccount1"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="Inviteesext"
+    Association="sfa.model.entities.Inviteesext_useraccount_Assoc"
+    AssociationEnd="sfa.model.entities.Inviteesext_useraccount_Assoc.Inviteesext"
+    AssociationOtherEnd="sfa.model.entities.Inviteesext_useraccount_Assoc.Useraccount"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
   <Key

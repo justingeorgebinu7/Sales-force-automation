@@ -14,9 +14,50 @@
   SelectAllAttributes="false"
   PageIterMode="Full"
   AccessMode="DEFAULT">
+  <ViewAccessor
+    Name="CustomercontactsView1"
+    ViewObjectName="sfa.model.viewobjects.CustomercontactsView"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_Contactid"
+    ListVOName="CustomercontactsView1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Contactid"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Contactid"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+      <Item Value="Title"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <EntityUsage
     Name="Invitees"
     Entity="sfa.model.entities.Invitees"/>
+  <EntityUsage
+    Name="Customercontacts"
+    Entity="sfa.model.entities.Customercontacts"
+    Association="sfa.model.entities.Invitees_Contacts_Assoc"
+    AssociationEnd="sfa.model.entities.Invitees_Contacts_Assoc.Customercontacts"
+    SourceUsage="sfa.model.viewobjects.InviteesView.Invitees"
+    ReadOnly="true"
+    Reference="true"
+    DeleteParticipant="false"
+    JoinType="INNER JOIN">
+    <DesignTime>
+      <AttrArray Name="_dstAttributes">
+        <Item Value="sfa.model.entities.Customercontacts.Contactid"/>
+      </AttrArray>
+      <AttrArray Name="_srcAttributes">
+        <Item Value="sfa.model.entities.Invitees.Contactid"/>
+      </AttrArray>
+    </DesignTime>
+  </EntityUsage>
   <ViewAttribute
     Name="Inviteeid"
     IsNotNull="true"
@@ -43,6 +84,33 @@
     EntityAttrName="Appoinmentid"
     EntityUsage="Invitees"
     AliasName="APPOINMENTID"/>
+  <ViewAttribute
+    Name="Contactid"
+    PrecisionRule="true"
+    EntityAttrName="Contactid"
+    EntityUsage="Invitees"
+    AliasName="CONTACTID"
+    LOVName="LOV_Contactid">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="list"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Name1"
+    PrecisionRule="true"
+    EntityAttrName="Name"
+    EntityUsage="Customercontacts"
+    AliasName="NAME1"/>
+  <ViewAttribute
+    Name="Contactid1"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Contactid"
+    EntityUsage="Customercontacts"
+    AliasName="CONTACTID1"/>
   <ViewCriteria
     Name="InviteesInternal"
     ViewObjectName="sfa.model.viewobjects.InviteesView"
@@ -116,4 +184,13 @@
         Required="Optional"/>
     </ViewCriteriaRow>
   </ViewCriteria>
+  <AttrArray Name="KeyAttributes">
+    <Item Value="Inviteeid"/>
+  </AttrArray>
+  <ViewLinkAccessor
+    Name="CustomercontactsView"
+    ViewLink="sfa.model.viewobjects.Invitees_Contacts_FkLink"
+    Type="oracle.jbo.Row"
+    Reversed="true"
+    IsUpdateable="false"/>
 </ViewObject>

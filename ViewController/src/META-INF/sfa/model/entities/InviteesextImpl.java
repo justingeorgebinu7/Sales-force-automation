@@ -22,7 +22,9 @@ public class InviteesextImpl extends EntityImpl {
         Name,
         Type,
         Appoinmentid,
-        Appointments;
+        Userid,
+        Appointments,
+        Useraccount;
         private static AttributesEnum[] vals = null;
         private static final int firstIndex = 0;
 
@@ -45,17 +47,29 @@ public class InviteesextImpl extends EntityImpl {
             return vals;
         }
     }
+
+
     public static final int INVITEEEXTID = AttributesEnum.Inviteeextid.index();
     public static final int NAME = AttributesEnum.Name.index();
     public static final int TYPE = AttributesEnum.Type.index();
     public static final int APPOINMENTID = AttributesEnum.Appoinmentid.index();
+    public static final int USERID = AttributesEnum.Userid.index();
     public static final int APPOINTMENTS = AttributesEnum.Appointments.index();
+    public static final int USERACCOUNT = AttributesEnum.Useraccount.index();
 
     /**
      * This is the default constructor (do not remove).
      */
     public InviteesextImpl() {
     }
+
+    /**
+     * @return the definition object for this instance class.
+     */
+    public static synchronized EntityDefImpl getDefinitionObject() {
+        return EntityDefImpl.findDefObject("sfa.model.entities.Inviteesext");
+    }
+
 
     /**
      * Gets the attribute value for Inviteeextid, using the alias name Inviteeextid.
@@ -122,6 +136,22 @@ public class InviteesextImpl extends EntityImpl {
     }
 
     /**
+     * Gets the attribute value for Userid, using the alias name Userid.
+     * @return the value of Userid
+     */
+    public BigDecimal getUserid() {
+        return (BigDecimal) getAttributeInternal(USERID);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for Userid.
+     * @param value value to set the Userid
+     */
+    public void setUserid(BigDecimal value) {
+        setAttributeInternal(USERID, value);
+    }
+
+    /**
      * @return the associated entity oracle.jbo.server.EntityImpl.
      */
     public EntityImpl getAppointments() {
@@ -135,6 +165,22 @@ public class InviteesextImpl extends EntityImpl {
         setAttributeInternal(APPOINTMENTS, value);
     }
 
+
+    /**
+     * @return the associated entity oracle.jbo.server.EntityImpl.
+     */
+    public EntityImpl getUseraccount() {
+        return (EntityImpl) getAttributeInternal(USERACCOUNT);
+    }
+
+    /**
+     * Sets <code>value</code> as the associated entity oracle.jbo.server.EntityImpl.
+     */
+    public void setUseraccount(EntityImpl value) {
+        setAttributeInternal(USERACCOUNT, value);
+    }
+
+
     /**
      * @param inviteeextid key constituent
 
@@ -142,13 +188,6 @@ public class InviteesextImpl extends EntityImpl {
      */
     public static Key createPrimaryKey(BigDecimal inviteeextid) {
         return new Key(new Object[] { inviteeextid });
-    }
-
-    /**
-     * @return the definition object for this instance class.
-     */
-    public static synchronized EntityDefImpl getDefinitionObject() {
-        return EntityDefImpl.findDefObject("sfa.model.entities.Inviteesext");
     }
 
     /**

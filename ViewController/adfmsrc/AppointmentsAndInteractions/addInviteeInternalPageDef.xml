@@ -8,10 +8,5 @@
   </executables>
   <bindings>
     <action IterBinding="InviteesView3Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
-    <attributeValues IterBinding="InviteesView3Iterator" id="Name">
-      <AttrNames>
-        <Item Value="Name"/>
-      </AttrNames>
-    </attributeValues>
   </bindings>
 </pageDefinition>
