@@ -70,7 +70,9 @@ af|panelSpringboard::body {
     margin-top: 20px;
     padding: 20px 30px;
     margin-left:150px;
+    margin-right:150px;
     border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
     background-color:#fdfdfd;
     /*border:none;*/
 }

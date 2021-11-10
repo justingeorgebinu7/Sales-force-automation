@@ -38,11 +38,6 @@
       <af:outputText value="#{row.Buyingrole}" shortDesc="#{bindings.CustomercontactsView2.hints.Buyingrole.tooltip}"
                      id="ot6"/>
     </af:column>
-    <af:column sortProperty="#{bindings.CustomercontactsView2.hints.Influencelevel.name}" filterable="true"
-               sortable="true" headerText="#{bindings.CustomercontactsView2.hints.Influencelevel.label}" id="c7">
-      <af:outputText value="#{row.Influencelevel}"
-                     shortDesc="#{bindings.CustomercontactsView2.hints.Influencelevel.tooltip}" id="ot7"/>
-    </af:column>
   </af:table>
   <af:button text="Add" id="b1" action="toAddCon"/>
   <af:button text="Delete" action="deleteContactTF1" id="b3"/>

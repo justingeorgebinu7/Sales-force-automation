@@ -18,6 +18,8 @@
           <Item Value="Accounturl"/>
           <Item Value="Ceo"/>
           <Item Value="Numberofemployees"/>
+          <Item Value="Email"/>
+          <Item Value="Mobilenumber"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

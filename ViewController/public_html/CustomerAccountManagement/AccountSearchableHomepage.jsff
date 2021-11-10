@@ -10,29 +10,41 @@
             filterModel="#{bindings.CustomeraccountView1Query.queryDescriptor}" filterVisible="true"
             queryListener="#{bindings.CustomeraccountView1Query.processQuery}" varStatus="vs" id="t1">
     <af:column sortProperty="#{bindings.CustomeraccountView1.hints.Name.name}" filterable="true" sortable="true"
-               headerText="#{bindings.CustomeraccountView1.hints.Name.label}" id="c1">
+               headerText="#{bindings.CustomeraccountView1.hints.Name.label}" id="c1" width="100">
       <af:link shortDesc="#{bindings.CustomeraccountView1.hints.Name.tooltip}" id="ot1" text="#{row.Name}"
                action="toMenu"/>
     </af:column>
     <af:column sortProperty="#{bindings.CustomeraccountView1.hints.Type.name}" filterable="true" sortable="true"
-               headerText="#{bindings.CustomeraccountView1.hints.Type.label}" id="c2">
+               headerText="#{bindings.CustomeraccountView1.hints.Type.label}" id="c2" width="100">
       <af:outputText value="#{row.Type}" shortDesc="#{bindings.CustomeraccountView1.hints.Type.tooltip}" id="ot2"/>
     </af:column>
     <af:column sortProperty="#{bindings.CustomeraccountView1.hints.Accounturl.name}" filterable="true" sortable="true"
-               headerText="#{bindings.CustomeraccountView1.hints.Accounturl.label}" id="c3">
+               headerText="#{bindings.CustomeraccountView1.hints.Accounturl.label}" id="c3" width="165">
       <af:outputText value="#{row.Accounturl}" shortDesc="#{bindings.CustomeraccountView1.hints.Accounturl.tooltip}"
                      id="ot3"/>
     </af:column>
     <af:column sortProperty="#{bindings.CustomeraccountView1.hints.Ceo.name}" filterable="true" sortable="true"
-               headerText="#{bindings.CustomeraccountView1.hints.Ceo.label}" id="c4">
+               headerText="#{bindings.CustomeraccountView1.hints.Ceo.label}" id="c4" width="119">
       <af:outputText value="#{row.Ceo}" shortDesc="#{bindings.CustomeraccountView1.hints.Ceo.tooltip}" id="ot4"/>
     </af:column>
     <af:column sortProperty="#{bindings.CustomeraccountView1.hints.Numberofemployees.name}" filterable="true"
-               sortable="true" headerText="#{bindings.CustomeraccountView1.hints.Numberofemployees.label}" id="c5">
+               sortable="true" headerText="#{bindings.CustomeraccountView1.hints.Numberofemployees.label}" id="c5"
+               width="106">
       <af:outputText value="#{row.Numberofemployees}"
                      shortDesc="#{bindings.CustomeraccountView1.hints.Numberofemployees.tooltip}" id="ot5">
         <af:convertNumber groupingUsed="false"
                           pattern="#{bindings.CustomeraccountView1.hints.Numberofemployees.format}"/>
+      </af:outputText>
+    </af:column>
+    <af:column sortProperty="#{bindings.CustomeraccountView1.hints.Email.name}" filterable="true" sortable="true"
+               headerText="#{bindings.CustomeraccountView1.hints.Email.label}" id="c6" width="225">
+      <af:outputText value="#{row.Email}" shortDesc="#{bindings.CustomeraccountView1.hints.Email.tooltip}" id="ot6"/>
+    </af:column>
+    <af:column sortProperty="#{bindings.CustomeraccountView1.hints.Mobilenumber.name}" filterable="true" sortable="true"
+               headerText="#{bindings.CustomeraccountView1.hints.Mobilenumber.label}" id="c7" width="160">
+      <af:outputText value="#{row.Mobilenumber}" shortDesc="#{bindings.CustomeraccountView1.hints.Mobilenumber.tooltip}"
+                     id="ot7">
+        <af:convertNumber groupingUsed="false" pattern="#{bindings.CustomeraccountView1.hints.Mobilenumber.format}"/>
       </af:outputText>
     </af:column>
   </af:table>

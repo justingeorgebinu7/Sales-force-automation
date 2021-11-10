@@ -7,13 +7,6 @@
                   maximumLength="#{bindings.Name.hints.precision}" shortDesc="#{bindings.Name.hints.tooltip}" id="it1">
       <f:validator binding="#{bindings.Name.validator}"/>
     </af:inputText>
-    <af:inputText value="#{bindings.Description.inputValue}" label="#{bindings.Description.hints.label}"
-                  required="#{bindings.Description.hints.mandatory}"
-                  columns="#{bindings.Description.hints.displayWidth}"
-                  maximumLength="#{bindings.Description.hints.precision}"
-                  shortDesc="#{bindings.Description.hints.tooltip}" id="it2">
-      <f:validator binding="#{bindings.Description.validator}"/>
-    </af:inputText>
     <af:selectOneChoice value="#{bindings.Priority.inputValue}" label="#{bindings.Priority.label}"
                         required="#{bindings.Priority.hints.mandatory}" shortDesc="#{bindings.Priority.hints.tooltip}"
                         id="soc1">
@@ -34,6 +27,13 @@
                   shortDesc="#{bindings.Percentageofcompletion.hints.tooltip}" id="it3">
       <f:validator binding="#{bindings.Percentageofcompletion.validator}"/>
       <af:convertNumber groupingUsed="false" pattern="#{bindings.Percentageofcompletion.format}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Description.inputValue}" label="#{bindings.Description.hints.label}"
+                  required="#{bindings.Description.hints.mandatory}"
+                  columns="#{bindings.Description.hints.displayWidth}"
+                  maximumLength="#{bindings.Description.hints.precision}"
+                  shortDesc="#{bindings.Description.hints.tooltip}" id="it2" rows="5">
+      <f:validator binding="#{bindings.Description.validator}"/>
     </af:inputText>
   </af:panelFormLayout>
   <af:button actionListener="#{bindings.Commit.execute}" text="Save" id="b1"

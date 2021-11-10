@@ -9,42 +9,44 @@
             filterModel="#{bindings.CustomercontactsView1Query.queryDescriptor}" filterVisible="true"
             queryListener="#{bindings.CustomercontactsView1Query.processQuery}" varStatus="vs" id="t1">
     <af:column sortProperty="#{bindings.CustomercontactsView1.hints.Name.name}" filterable="true" sortable="true"
-               headerText="#{bindings.CustomercontactsView1.hints.Name.label}" id="c1">
+               headerText="#{bindings.CustomercontactsView1.hints.Name.label}" id="c1" width="100">
       <af:link shortDesc="#{bindings.CustomercontactsView1.hints.Name.tooltip}" id="ot1" text="#{row.Name}"
                action="toContactMenu"/>
     </af:column>
     <af:column sortProperty="#{bindings.CustomercontactsView1.hints.Title.name}" filterable="true" sortable="true"
-               headerText="#{bindings.CustomercontactsView1.hints.Title.label}" id="c2">
+               headerText="#{bindings.CustomercontactsView1.hints.Title.label}" id="c2" width="119">
       <af:outputText value="#{row.Title}" shortDesc="#{bindings.CustomercontactsView1.hints.Title.tooltip}" id="ot2"/>
     </af:column>
     <af:column sortProperty="#{bindings.CustomercontactsView1.hints.Department.name}" filterable="true" sortable="true"
-               headerText="#{bindings.CustomercontactsView1.hints.Department.label}" id="c3">
+               headerText="#{bindings.CustomercontactsView1.hints.Department.label}" id="c3" width="108">
       <af:outputText value="#{row.Department}" shortDesc="#{bindings.CustomercontactsView1.hints.Department.tooltip}"
                      id="ot3"/>
     </af:column>
     <af:column sortProperty="#{bindings.CustomercontactsView1.hints.Workphone.name}" filterable="true" sortable="true"
-               headerText="#{bindings.CustomercontactsView1.hints.Workphone.label}" id="c4">
+               headerText="#{bindings.CustomercontactsView1.hints.Workphone.label}" id="c4" width="95">
       <af:outputText value="#{row.Workphone}" shortDesc="#{bindings.CustomercontactsView1.hints.Workphone.tooltip}"
                      id="ot4">
         <af:convertNumber groupingUsed="false" pattern="#{bindings.CustomercontactsView1.hints.Workphone.format}"/>
       </af:outputText>
     </af:column>
     <af:column sortProperty="#{bindings.CustomercontactsView1.hints.Email.name}" filterable="true" sortable="true"
-               headerText="#{bindings.CustomercontactsView1.hints.Email.label}" id="c5">
+               headerText="#{bindings.CustomercontactsView1.hints.Email.label}" id="c5" width="152">
       <af:outputText value="#{row.Email}" shortDesc="#{bindings.CustomercontactsView1.hints.Email.tooltip}" id="ot5"/>
     </af:column>
     <af:column sortProperty="#{bindings.CustomercontactsView1.hints.Buyingrole.name}" filterable="true" sortable="true"
-               headerText="#{bindings.CustomercontactsView1.hints.Buyingrole.label}" id="c6">
+               headerText="#{bindings.CustomercontactsView1.hints.Buyingrole.label}" id="c6" width="155">
       <af:outputText value="#{row.Buyingrole}" shortDesc="#{bindings.CustomercontactsView1.hints.Buyingrole.tooltip}"
                      id="ot6"/>
     </af:column>
     <af:column sortProperty="#{bindings.CustomercontactsView1.hints.Influencelevel.name}" filterable="true"
-               sortable="true" headerText="#{bindings.CustomercontactsView1.hints.Influencelevel.label}" id="c7">
+               sortable="true" headerText="#{bindings.CustomercontactsView1.hints.Influencelevel.label}" id="c7"
+               width="151">
       <af:outputText value="#{row.Influencelevel}"
                      shortDesc="#{bindings.CustomercontactsView1.hints.Influencelevel.tooltip}" id="ot7"/>
     </af:column>
     <af:column sortProperty="#{bindings.CustomercontactsView1.hints.Isprimarycontact.name}" filterable="true"
-               sortable="true" headerText="#{bindings.CustomercontactsView1.hints.Isprimarycontact.label}" id="c8">
+               sortable="true" headerText="#{bindings.CustomercontactsView1.hints.Isprimarycontact.label}" id="c8"
+               width="63">
       <af:outputText value="#{row.Isprimarycontact}"
                      shortDesc="#{bindings.CustomercontactsView1.hints.Isprimarycontact.tooltip}" id="ot8"/>
     </af:column>

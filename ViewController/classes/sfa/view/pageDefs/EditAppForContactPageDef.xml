@@ -35,7 +35,6 @@
         <Item Value="Location"/>
       </AttrNames>
     </attributeValues>
-    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
     <tree IterBinding="InviteesextView5Iterator" id="InviteesextView5">
       <nodeDefinition DefName="sfa.model.viewobjects.InviteesextView" Name="InviteesextView50">
         <AttrNames>
@@ -50,5 +49,6 @@
         </AttrNames>
       </nodeDefinition>
     </tree>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
   </bindings>
 </pageDefinition>

@@ -7,23 +7,24 @@
             selectionListener="#{bindings.UseraccountView1.collectionModel.makeCurrent}" rowSelection="single"
             fetchSize="#{bindings.UseraccountView1.rangeSize}"
             filterModel="#{bindings.UseraccountView1Query.queryDescriptor}" filterVisible="true"
-            queryListener="#{bindings.UseraccountView1Query.processQuery}" varStatus="vs" id="t1">
+            queryListener="#{bindings.UseraccountView1Query.processQuery}" varStatus="vs" id="t1"
+            columnStretching="blank">
     <af:column sortProperty="#{bindings.UseraccountView1.hints.Firstname.name}" filterable="true" sortable="true"
-               headerText="#{bindings.UseraccountView1.hints.Firstname.label}" id="c1">
+               headerText="#{bindings.UseraccountView1.hints.Firstname.label}" id="c1" width="130">
       <af:link shortDesc="#{bindings.UseraccountView1.hints.Firstname.tooltip}" id="ot1" text="#{row.Firstname}"
                action="userMenu"/>
     </af:column>
     <af:column sortProperty="#{bindings.UseraccountView1.hints.Middlename.name}" filterable="true" sortable="true"
-               headerText="#{bindings.UseraccountView1.hints.Middlename.label}" id="c2">
+               headerText="#{bindings.UseraccountView1.hints.Middlename.label}" id="c2" width="114">
       <af:outputText value="#{row.Middlename}" shortDesc="#{bindings.UseraccountView1.hints.Middlename.tooltip}"
                      id="ot2"/>
     </af:column>
     <af:column sortProperty="#{bindings.UseraccountView1.hints.Lastname.name}" filterable="true" sortable="true"
-               headerText="#{bindings.UseraccountView1.hints.Lastname.label}" id="c3">
+               headerText="#{bindings.UseraccountView1.hints.Lastname.label}" id="c3" width="93">
       <af:outputText value="#{row.Lastname}" shortDesc="#{bindings.UseraccountView1.hints.Lastname.tooltip}" id="ot3"/>
     </af:column>
     <af:column sortProperty="#{bindings.UseraccountView1.hints.Startdate.name}" filterable="true" sortable="true"
-               headerText="#{bindings.UseraccountView1.hints.Startdate.label}" id="c4">
+               headerText="#{bindings.UseraccountView1.hints.Startdate.label}" id="c4" width="93">
       <f:facet name="filter">
         <af:inputDate value="#{bindings.UseraccountView1Query.queryDescriptor.filterConjunctionCriterion.criterionMap.Startdate.value}"
                       id="id1">
@@ -35,7 +36,7 @@
       </af:outputText>
     </af:column>
     <af:column sortProperty="#{bindings.UseraccountView1.hints.Enddate.name}" filterable="true" sortable="true"
-               headerText="#{bindings.UseraccountView1.hints.Enddate.label}" id="c5">
+               headerText="#{bindings.UseraccountView1.hints.Enddate.label}" id="c5" width="90">
       <f:facet name="filter">
         <af:inputDate value="#{bindings.UseraccountView1Query.queryDescriptor.filterConjunctionCriterion.criterionMap.Enddate.value}"
                       id="id2">

@@ -11,7 +11,7 @@
     <af:inputText value="#{bindings.Content.inputValue}" label="#{bindings.Content.hints.label}"
                   required="#{bindings.Content.hints.mandatory}" columns="#{bindings.Content.hints.displayWidth}"
                   maximumLength="#{bindings.Content.hints.precision}" shortDesc="#{bindings.Content.hints.tooltip}"
-                  id="it2">
+                  id="it2" rows="5">
       <f:validator binding="#{bindings.Content.validator}"/>
     </af:inputText>
   </af:panelFormLayout>

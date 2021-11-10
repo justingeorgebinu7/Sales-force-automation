@@ -6,7 +6,8 @@
             selectionListener="#{bindings.OpportunityView1.collectionModel.makeCurrent}" rowSelection="single"
             fetchSize="#{bindings.OpportunityView1.rangeSize}"
             filterModel="#{bindings.OpportunityView1Query.queryDescriptor}" filterVisible="true"
-            queryListener="#{bindings.OpportunityView1Query.processQuery}" varStatus="vs" id="t1">
+            queryListener="#{bindings.OpportunityView1Query.processQuery}" varStatus="vs" id="t1"
+            columnStretching="last">
     <af:column sortProperty="#{bindings.OpportunityView1.hints.Title.name}" filterable="true" sortable="true"
                headerText="#{bindings.OpportunityView1.hints.Title.label}" id="c1" width="238">
       <af:link shortDesc="#{bindings.OpportunityView1.hints.Title.tooltip}" id="ot1" text="#{row.Title}"

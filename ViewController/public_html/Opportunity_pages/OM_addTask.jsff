@@ -19,13 +19,6 @@
       <f:selectItems value="#{bindings.Priority.items}" id="si1"/>
       <f:validator binding="#{bindings.Priority.validator}"/>
     </af:selectOneChoice>
-    <af:inputText value="#{bindings.Description.inputValue}" label="#{bindings.Description.hints.label}"
-                  required="#{bindings.Description.hints.mandatory}"
-                  columns="#{bindings.Description.hints.displayWidth}"
-                  maximumLength="#{bindings.Description.hints.precision}"
-                  shortDesc="#{bindings.Description.hints.tooltip}" id="it2">
-      <f:validator binding="#{bindings.Description.validator}"/>
-    </af:inputText>
     <af:inputText value="#{bindings.Percentageofcompletion.inputValue}"
                   label="#{bindings.Percentageofcompletion.hints.label}"
                   required="#{bindings.Percentageofcompletion.hints.mandatory}"
@@ -34,6 +27,13 @@
                   shortDesc="#{bindings.Percentageofcompletion.hints.tooltip}" id="it3">
       <f:validator binding="#{bindings.Percentageofcompletion.validator}"/>
       <af:convertNumber groupingUsed="false" pattern="#{bindings.Percentageofcompletion.format}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Description.inputValue}" label="#{bindings.Description.hints.label}"
+                  required="#{bindings.Description.hints.mandatory}"
+                  columns="#{bindings.Description.hints.displayWidth}"
+                  maximumLength="#{bindings.Description.hints.precision}"
+                  shortDesc="#{bindings.Description.hints.tooltip}" id="it2" rows="5">
+      <f:validator binding="#{bindings.Description.validator}"/>
     </af:inputText>
   </af:panelFormLayout>
   <af:button actionListener="#{bindings.Commit.execute}" text="Save" disabled="#{!bindings.Commit.enabled}" id="b1"

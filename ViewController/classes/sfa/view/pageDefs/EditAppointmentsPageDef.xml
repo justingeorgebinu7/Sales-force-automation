@@ -12,11 +12,6 @@
     <iterator Binds="InviteesextView3" RangeSize="25" DataControl="AppModuleDataControl" id="InviteesextView3Iterator"/>
   </executables>
   <bindings>
-    <attributeValues IterBinding="AppointmentsView4Iterator" id="Name">
-      <AttrNames>
-        <Item Value="Name"/>
-      </AttrNames>
-    </attributeValues>
     <attributeValues IterBinding="AppointmentsView4Iterator" id="Startdate">
       <AttrNames>
         <Item Value="Startdate"/>
@@ -37,7 +32,6 @@
         <Item Value="Location"/>
       </AttrNames>
     </attributeValues>
-    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
     <tree IterBinding="InviteesView3Iterator" id="InviteesView3">
       <nodeDefinition DefName="sfa.model.viewobjects.InviteesView" Name="InviteesView30">
         <AttrNames>
@@ -54,5 +48,11 @@
         </AttrNames>
       </nodeDefinition>
     </tree>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+    <attributeValues IterBinding="AppointmentsView4Iterator" id="Name">
+      <AttrNames>
+        <Item Value="Name"/>
+      </AttrNames>
+    </attributeValues>
   </bindings>
 </pageDefinition>
