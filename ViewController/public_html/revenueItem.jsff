@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <af:table value="#{bindings.RevenueitemView2.collectionModel}" var="row" rows="#{bindings.RevenueitemView2.rangeSize}"
+            emptyText="#{bindings.RevenueitemView2.viewable ? 'No data to display.' : 'Access Denied.'}"
+            rowBandingInterval="0" selectedRowKeys="#{bindings.RevenueitemView2.collectionModel.selectedRow}"
+            selectionListener="#{bindings.RevenueitemView2.collectionModel.makeCurrent}" rowSelection="single"
+            fetchSize="#{bindings.RevenueitemView2.rangeSize}"
+            filterModel="#{bindings.RevenueitemView2Query.queryDescriptor}" filterVisible="true"
+            queryListener="#{bindings.RevenueitemView2Query.processQuery}" varStatus="vs" id="t1">
+    <af:column sortProperty="#{bindings.RevenueitemView2.hints.Name.name}" filterable="true" sortable="true"
+               headerText="#{bindings.RevenueitemView2.hints.Name.label}" id="c6">
+      <af:link shortDesc="#{bindings.RevenueitemView2.hints.Name.tooltip}" id="ot6" text="#{row.Name}" action="edit"/>
+    </af:column>
+    <af:column sortProperty="#{bindings.RevenueitemView2.hints.Quantity.name}" filterable="true" sortable="true"
+               headerText="#{bindings.RevenueitemView2.hints.Quantity.label}" id="c1">
+      <af:outputText value="#{row.Quantity}" shortDesc="#{bindings.RevenueitemView2.hints.Quantity.tooltip}" id="ot1">
+        <af:convertNumber groupingUsed="false" pattern="#{bindings.RevenueitemView2.hints.Quantity.format}"/>
+      </af:outputText>
+    </af:column>
+    <af:column sortProperty="#{bindings.RevenueitemView2.hints.Estimatedprice.name}" filterable="true" sortable="true"
+               headerText="#{bindings.RevenueitemView2.hints.Estimatedprice.label}" id="c2">
+      <af:outputText value="#{row.Estimatedprice}" shortDesc="#{bindings.RevenueitemView2.hints.Estimatedprice.tooltip}"
+                     id="ot2">
+        <af:convertNumber groupingUsed="false" pattern="#{bindings.RevenueitemView2.hints.Estimatedprice.format}"/>
+      </af:outputText>
+    </af:column>
+    <af:column sortProperty="#{bindings.RevenueitemView2.hints.Revenue.name}" filterable="true" sortable="true"
+               headerText="#{bindings.RevenueitemView2.hints.Revenue.label}" id="c3">
+      <af:outputText value="#{row.Revenue}" shortDesc="#{bindings.RevenueitemView2.hints.Revenue.tooltip}" id="ot3">
+        <af:convertNumber groupingUsed="false" pattern="#{bindings.RevenueitemView2.hints.Revenue.format}"/>
+      </af:outputText>
+    </af:column>
+    <af:column sortProperty="#{bindings.RevenueitemView2.hints.Bestcaserevenue.name}" filterable="true" sortable="true"
+               headerText="#{bindings.RevenueitemView2.hints.Bestcaserevenue.label}" id="c4">
+      <af:outputText value="#{row.Bestcaserevenue}"
+                     shortDesc="#{bindings.RevenueitemView2.hints.Bestcaserevenue.tooltip}" id="ot4">
+        <af:convertNumber groupingUsed="false" pattern="#{bindings.RevenueitemView2.hints.Bestcaserevenue.format}"/>
+      </af:outputText>
+    </af:column>
+    <af:column sortProperty="#{bindings.RevenueitemView2.hints.Worstcaserevenue.name}" filterable="true" sortable="true"
+               headerText="#{bindings.RevenueitemView2.hints.Worstcaserevenue.label}" id="c5">
+      <af:outputText value="#{row.Worstcaserevenue}"
+                     shortDesc="#{bindings.RevenueitemView2.hints.Worstcaserevenue.tooltip}" id="ot5">
+        <af:convertNumber groupingUsed="false" pattern="#{bindings.RevenueitemView2.hints.Worstcaserevenue.format}"/>
+      </af:outputText>
+    </af:column>
+  </af:table>
+  <af:button text="Add" id="b1" action="create"/>
+  <af:button text="Delete" action="deleteRevenueItem1" id="b2"/>
+</ui:composition>

@@ -19,6 +19,12 @@
   <ViewUsage
     Name="UserroleView1"
     ViewObjectName="sfa.model.viewobjects.UserroleView"/>
+  <ViewUsage
+    Name="ProductsView1"
+    ViewObjectName="sfa.model.viewobjects.ProductsView"/>
+  <ViewUsage
+    Name="RevenueitemView1"
+    ViewObjectName="sfa.model.viewobjects.RevenueitemView"/>
   <ViewLinkUsage
     Name="AppointmentAccountFkLink"
     ViewLinkObjectName="sfa.model.viewobjects.AppointmentAccountFkLink"
@@ -30,5 +36,11 @@
     ViewLinkObjectName="sfa.model.viewobjects.RoleUserroleFkLink"
     SrcViewUsageName="sfa.model.viewobjects.AppModule.RoleView1"
     DstViewUsageName="sfa.model.viewobjects.AppModule.UserroleView1"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="RevenueitemProductFkLink"
+    ViewLinkObjectName="sfa.model.viewobjects.RevenueitemProductFkLink"
+    SrcViewUsageName="sfa.model.viewobjects.AppModule.ProductsView1"
+    DstViewUsageName="sfa.model.viewobjects.AppModule.RevenueitemView1"
     Reversed="false"/>
 </AppModule>

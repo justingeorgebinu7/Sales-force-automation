@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.22.48" id="revenueItemPageDef"
+                Package="sfa.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="RevenueitemView2" RangeSize="25" DataControl="AppModuleDataControl" id="RevenueitemView2Iterator"/>
+    <searchRegion Binds="RevenueitemView2Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="RevenueitemView2Query"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="RevenueitemView2Iterator" id="RevenueitemView2">
+      <nodeDefinition DefName="sfa.model.viewobjects.RevenueitemView" Name="RevenueitemView20">
+        <AttrNames>
+          <Item Value="Quantity"/>
+          <Item Value="Estimatedprice"/>
+          <Item Value="Revenue"/>
+          <Item Value="Bestcaserevenue"/>
+          <Item Value="Worstcaserevenue"/>
+          <Item Value="Name"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

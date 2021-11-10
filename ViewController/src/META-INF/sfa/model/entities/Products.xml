@@ -21,7 +21,6 @@
     PrimaryKey="true">
     <TransientExpression
       Name="ExpressionScript"
-      trustMode="trusted"
       CodeSourceName="ProductsRow"/>
   </Attribute>
   <Attribute
@@ -82,6 +81,13 @@
     AssociationOtherEnd="sfa.model.entities.ProductsRevenueitemFkAssoc.Products"
     Type="oracle.jbo.server.EntityImpl"
     IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="Revenueitem2"
+    Association="sfa.model.entities.RevenueitemProductFkAssoc"
+    AssociationEnd="sfa.model.entities.RevenueitemProductFkAssoc.Revenueitem2"
+    AssociationOtherEnd="sfa.model.entities.RevenueitemProductFkAssoc.Products1"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <Key
     Name="ProductsPk"
     PrimaryKey="true">

@@ -54,4 +54,9 @@
     EntityAttrName="Revenueitem"
     EntityUsage="Products"
     AliasName="REVENUEITEM"/>
+  <ViewLinkAccessor
+    Name="RevenueitemView"
+    ViewLink="sfa.model.viewobjects.RevenueitemProductFkLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
 </ViewObject>

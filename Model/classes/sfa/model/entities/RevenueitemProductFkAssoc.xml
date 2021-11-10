@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Association SYSTEM "jbo_03_01.dtd">
+<!---->
+<Association
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="RevenueitemProductFkAssoc"
+  Version="12.2.1.22.48"
+  InheritPersonalization="merge">
+  <DesignTime>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <AssociationEnd
+    Name="Products1"
+    Cardinality="1"
+    Source="true"
+    Owner="sfa.model.entities.Products"
+    CascadeDelete="true"
+    LockLevel="NONE">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="Products1"/>
+      <Attr Name="_foreignKey" Value="sfa.model.entities.Products.ProductsPk"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="sfa.model.entities.Products.Productid"/>
+    </AttrArray>
+  </AssociationEnd>
+  <AssociationEnd
+    Name="Revenueitem2"
+    Cardinality="-1"
+    Owner="sfa.model.entities.Revenueitem">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="Revenueitem2"/>
+      <Attr Name="_foreignKey" Value="sfa.model.entities.Revenueitem.fk_Revenueitem"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="sfa.model.entities.Revenueitem.Productid"/>
+    </AttrArray>
+  </AssociationEnd>
+</Association>

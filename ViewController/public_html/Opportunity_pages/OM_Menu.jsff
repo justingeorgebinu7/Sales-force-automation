@@ -106,6 +106,9 @@
         </af:panelFormLayout>
         <af:button actionListener="#{bindings.Commit.execute}" text="Save" id="b1"/>
       </af:showDetailItem>
+      <af:showDetailItem text="Revenue Item" id="sdi7">
+        <af:region value="#{bindings.revenueItem1.regionModel}" id="r5"/>
+      </af:showDetailItem>
       <af:showDetailItem id="sdi2" text="Notes">
         <af:region value="#{bindings.OM_NotesMain1.regionModel}" id="r1"/>
       </af:showDetailItem>

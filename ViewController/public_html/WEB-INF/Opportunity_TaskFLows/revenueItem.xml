@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="revenueItem">
+    <default-activity>revenueItem</default-activity>
+    <data-control-scope>
+      <shared/>
+    </data-control-scope>
+    <view id="revenueItem">
+      <page>/revenueItem.jsff</page>
+    </view>
+    <task-flow-call id="addRevenueItem">
+      <task-flow-reference>
+        <document>/WEB-INF/Opportunity_TaskFLows/addRevenueItem.xml</document>
+        <id>addRevenueItem</id>
+      </task-flow-reference>
+    </task-flow-call>
+    <view id="editRevenueItem">
+      <page>/editRevenueItem.jsff</page>
+    </view>
+    <task-flow-call id="deleteRevenueItem1">
+      <task-flow-reference>
+        <document>/WEB-INF/Opportunity_TaskFLows/deleteRevenueItem.xml</document>
+        <id>deleteRevenueItem</id>
+      </task-flow-reference>
+    </task-flow-call>
+    <control-flow-rule id="__1">
+      <from-activity-id>revenueItem</from-activity-id>
+      <control-flow-case id="__2">
+        <from-outcome>create</from-outcome>
+        <to-activity-id>addRevenueItem</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__3">
+        <from-outcome>edit</from-outcome>
+        <to-activity-id>editRevenueItem</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__4">
+      <from-activity-id>editRevenueItem</from-activity-id>
+      <control-flow-case id="__5">
+        <from-outcome>backFromEdit</from-outcome>
+        <to-activity-id>revenueItem</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__6">
+      <from-activity-id>revenueItem</from-activity-id>
+      <control-flow-case id="__7">
+        <from-outcome>deleteRevenueItem1</from-outcome>
+        <to-activity-id>deleteRevenueItem1</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <use-page-fragments/>
+  </task-flow-definition>
+</adfc-config>

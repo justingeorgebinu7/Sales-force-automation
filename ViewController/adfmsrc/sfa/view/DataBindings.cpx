@@ -387,6 +387,19 @@
           usageId="sfa_view_deleteRole_deleteRole_DeletePageDef"/>
     <page path="/WEB-INF/RoleManagement/deleteRole.xml#deleteRole@Commit"
           usageId="sfa_view_deleteRole_deleteRole_CommitPageDef"/>
+    <page path="/revenueItem.jsff" usageId="sfa_view_revenueItemPageDef"/>
+    <page path="/WEB-INF/Opportunity_TaskFLows/addRevenueItem.xml#addRevenueItem@CreateInsert"
+          usageId="sfa_view_addRevenueItem_addRevenueItem_CreateInsertPageDef"/>
+    <page path="/WEB-INF/Opportunity_TaskFLows/addRevenueItem.xml#addRevenueItem@Delete"
+          usageId="sfa_view_addRevenueItem_addRevenueItem_DeletePageDef"/>
+    <page path="/WEB-INF/Opportunity_TaskFLows/addRevenueItem.xml#addRevenueItem@Commit"
+          usageId="sfa_view_addRevenueItem_addRevenueItem_CommitPageDef"/>
+    <page path="/addRevenueItem.jsff" usageId="sfa_view_addRevenueItemPageDef"/>
+    <page path="/WEB-INF/Opportunity_TaskFLows/deleteRevenueItem.xml#deleteRevenueItem@Delete"
+          usageId="sfa_view_deleteRevenueItem_deleteRevenueItem_DeletePageDef"/>
+    <page path="/WEB-INF/Opportunity_TaskFLows/deleteRevenueItem.xml#deleteRevenueItem@Commit"
+          usageId="sfa_view_deleteRevenueItem_deleteRevenueItem_CommitPageDef"/>
+    <page path="/editRevenueItem.jsff" usageId="sfa_view_editRevenueItemPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="sfa_view_untitled2PageDef" path="sfa.view.pageDefs.untitled2PageDef"/>
@@ -766,6 +779,19 @@
     <page id="sfa_view_createRolePageDef" path="RoleManagementPages.createRolePageDef"/>
     <page id="sfa_view_deleteRole_deleteRole_DeletePageDef" path="RoleManagement.deleteRole_deleteRole_DeletePageDef"/>
     <page id="sfa_view_deleteRole_deleteRole_CommitPageDef" path="RoleManagement.deleteRole_deleteRole_CommitPageDef"/>
+    <page id="sfa_view_revenueItemPageDef" path="sfa.view.pageDefs.revenueItemPageDef"/>
+    <page id="sfa_view_addRevenueItem_addRevenueItem_CreateInsertPageDef"
+          path="Opportunity_TaskFLows.addRevenueItem_addRevenueItem_CreateInsertPageDef"/>
+    <page id="sfa_view_addRevenueItem_addRevenueItem_DeletePageDef"
+          path="Opportunity_TaskFLows.addRevenueItem_addRevenueItem_DeletePageDef"/>
+    <page id="sfa_view_addRevenueItem_addRevenueItem_CommitPageDef"
+          path="Opportunity_TaskFLows.addRevenueItem_addRevenueItem_CommitPageDef"/>
+    <page id="sfa_view_addRevenueItemPageDef" path="sfa.view.pageDefs.addRevenueItemPageDef"/>
+    <page id="sfa_view_deleteRevenueItem_deleteRevenueItem_DeletePageDef"
+          path="Opportunity_TaskFLows.deleteRevenueItem_deleteRevenueItem_DeletePageDef"/>
+    <page id="sfa_view_deleteRevenueItem_deleteRevenueItem_CommitPageDef"
+          path="Opportunity_TaskFLows.deleteRevenueItem_deleteRevenueItem_CommitPageDef"/>
+    <page id="sfa_view_editRevenueItemPageDef" path="sfa.view.pageDefs.editRevenueItemPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="sfa.model.entities"

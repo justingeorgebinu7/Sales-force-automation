@@ -12,10 +12,60 @@
   BindingStyle="OracleName"
   CustomQuery="false"
   SelectAllAttributes="false"
-  PageIterMode="Full">
+  PageIterMode="Full"
+  AccessMode="DEFAULT">
+  <ViewAccessor
+    Name="ProductsView1"
+    ViewObjectName="sfa.model.viewobjects.ProductsView"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="ProductsView2"
+    ViewObjectName="sfa.model.viewobjects.ProductsView"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="ProductsView4"
+    ViewObjectName="sfa.model.viewobjects.ProductsView"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_Productid"
+    ListVOName="ProductsView4"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Productid"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Productid"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <EntityUsage
     Name="Revenueitem"
     Entity="sfa.model.entities.Revenueitem"/>
+  <EntityUsage
+    Name="Products"
+    Entity="sfa.model.entities.Products"
+    Association="sfa.model.entities.RevenueitemProductFkAssoc"
+    AssociationEnd="sfa.model.entities.RevenueitemProductFkAssoc.Products1"
+    SourceUsage="sfa.model.viewobjects.RevenueitemView.Revenueitem"
+    ReadOnly="true"
+    Reference="true"
+    DeleteParticipant="false"
+    JoinType="INNER JOIN">
+    <DesignTime>
+      <AttrArray Name="_dstAttributes">
+        <Item Value="sfa.model.entities.Products.Productid"/>
+      </AttrArray>
+      <AttrArray Name="_srcAttributes">
+        <Item Value="sfa.model.entities.Revenueitem.Productid"/>
+      </AttrArray>
+    </DesignTime>
+  </EntityUsage>
   <ViewAttribute
     Name="Revenueitemid"
     IsNotNull="true"
@@ -59,9 +109,45 @@
     EntityAttrName="Opportunityid"
     EntityUsage="Revenueitem"
     AliasName="OPPORTUNITYID"/>
+  <ViewAttribute
+    Name="Productid"
+    PrecisionRule="true"
+    EntityAttrName="Productid"
+    EntityUsage="Revenueitem"
+    AliasName="PRODUCTID"
+    LOVName="LOV_Productid">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Name"
+    PrecisionRule="true"
+    EntityAttrName="Name"
+    EntityUsage="Products"
+    AliasName="NAME"/>
+  <ViewAttribute
+    Name="Productid1"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Productid"
+    EntityUsage="Products"
+    AliasName="PRODUCTID1"/>
+  <AttrArray Name="KeyAttributes">
+    <Item Value="Revenueitemid"/>
+  </AttrArray>
   <ViewLinkAccessor
     Name="ProductsView"
     ViewLink="sfa.model.viewobjects.ProductsRevenueitemFkLink"
     Type="oracle.jbo.Row"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="ProductsView3"
+    ViewLink="sfa.model.viewobjects.RevenueitemProductFkLink"
+    Type="oracle.jbo.Row"
+    Reversed="true"
     IsUpdateable="false"/>
 </ViewObject>

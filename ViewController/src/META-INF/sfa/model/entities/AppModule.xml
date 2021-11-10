@@ -152,9 +152,6 @@
     Name="InviteesView4"
     ViewObjectName="sfa.model.viewobjects.InviteesView"/>
   <ViewUsage
-    Name="ProductsView4"
-    ViewObjectName="sfa.model.viewobjects.ProductsView"/>
-  <ViewUsage
     Name="OpportunityView4"
     ViewObjectName="sfa.model.viewobjects.OpportunityView"/>
   <ViewUsage
@@ -205,6 +202,9 @@
   <ViewUsage
     Name="UseraccountView6"
     ViewObjectName="sfa.model.viewobjects.UseraccountView"/>
+  <ViewUsage
+    Name="ProductsView3"
+    ViewObjectName="sfa.model.viewobjects.ProductsView"/>
   <ViewLinkUsage
     Name="AddressCustomeraccountFkLink1"
     ViewLinkObjectName="sfa.model.viewobjects.AddressCustomeraccountFkLink"
@@ -380,12 +380,6 @@
     DstViewUsageName="sfa.model.entities.AppModule.InviteesView4"
     Reversed="false"/>
   <ViewLinkUsage
-    Name="ProductsRevenueitemFkLink3"
-    ViewLinkObjectName="sfa.model.viewobjects.ProductsRevenueitemFkLink"
-    SrcViewUsageName="sfa.model.entities.AppModule.RevenueitemView2"
-    DstViewUsageName="sfa.model.entities.AppModule.ProductsView4"
-    Reversed="false"/>
-  <ViewLinkUsage
     Name="OpportunityAppointmentFkLink"
     ViewLinkObjectName="sfa.model.entities.OpportunityAppointmentFkLink"
     SrcViewUsageName="sfa.model.entities.AppModule.OpportunityView4"
@@ -468,5 +462,11 @@
     ViewLinkObjectName="sfa.model.viewobjects.Inviteesext_Useraccount_FKLink"
     SrcViewUsageName="sfa.model.entities.AppModule.InviteesextView4"
     DstViewUsageName="sfa.model.entities.AppModule.UseraccountView6"
+    Reversed="true"/>
+  <ViewLinkUsage
+    Name="RevenueitemProductFkLink1"
+    ViewLinkObjectName="sfa.model.viewobjects.RevenueitemProductFkLink"
+    SrcViewUsageName="sfa.model.entities.AppModule.RevenueitemView2"
+    DstViewUsageName="sfa.model.entities.AppModule.ProductsView3"
     Reversed="true"/>
 </AppModule>

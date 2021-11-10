@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.22.48" id="editRevenueItemPageDef"
+                Package="sfa.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="RevenueitemView2" RangeSize="25" DataControl="AppModuleDataControl" id="RevenueitemView2Iterator"/>
+  </executables>
+  <bindings>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+    <attributeValues IterBinding="RevenueitemView2Iterator" id="Quantity">
+      <AttrNames>
+        <Item Value="Quantity"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="RevenueitemView2Iterator" id="Estimatedprice">
+      <AttrNames>
+        <Item Value="Estimatedprice"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="RevenueitemView2Iterator" id="Revenue">
+      <AttrNames>
+        <Item Value="Revenue"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="RevenueitemView2Iterator" id="Bestcaserevenue">
+      <AttrNames>
+        <Item Value="Bestcaserevenue"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="RevenueitemView2Iterator" id="Worstcaserevenue">
+      <AttrNames>
+        <Item Value="Worstcaserevenue"/>
+      </AttrNames>
+    </attributeValues>
+    <list IterBinding="RevenueitemView2Iterator" StaticList="false" Uses="LOV_Productid" id="Productid"
+          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
+  </bindings>
+</pageDefinition>
