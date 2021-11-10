@@ -16,6 +16,7 @@
           <Item Value="Description"/>
           <Item Value="Duedate"/>
           <Item Value="Priority"/>
+          <Item Value="Percentageofcompletion"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

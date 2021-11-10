@@ -15,6 +15,7 @@
           <Item Value="Name"/>
           <Item Value="Description"/>
           <Item Value="Priority"/>
+          <Item Value="Percentageofcompletion"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

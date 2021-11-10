@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
-                xmlns:f="http://java.sun.com/jsf/core">
+                xmlns:f="http://java.sun.com/jsf/core" xmlns:dvt="http://xmlns.oracle.com/dss/adf/faces">
   <af:table value="#{bindings.TaskView4.collectionModel}" var="row" rows="#{bindings.TaskView4.rangeSize}"
             emptyText="#{bindings.TaskView4.viewable ? 'No data to display.' : 'Access Denied.'}" rowBandingInterval="0"
             selectedRowKeys="#{bindings.TaskView4.collectionModel.selectedRow}"
@@ -35,6 +35,13 @@
         <f:selectItems value="#{row.bindings.Priority.items}" id="si1"/>
         <f:validator binding="#{row.bindings.Priority.validator}"/>
       </af:selectOneChoice>
+    </af:column>
+    <af:column headerText="#{bindings.TaskView4.hints.Percentageofcompletion.label}" id="c5">
+      <dvt:statusMeterGauge id="statusMeterGauge1" orientation="circular" inlineStyle="width:40px;height:40px"
+                            minimum="0" maximum="100" value="#{row.Percentageofcompletion}">
+        <dvt:gaugeThreshold id="thr1" color="#149"/>
+        <dvt:gaugeMetricLabel rendered="true" id="gml1"/>
+      </dvt:statusMeterGauge>
     </af:column>
   </af:table>
   <af:button text="Add" id="b1" action="toAdd"/>
