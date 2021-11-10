@@ -105,7 +105,14 @@
     PrecisionRule="true"
     EntityAttrName="Name"
     EntityUsage="Customercontacts"
-    AliasName="NAME1"/>
+    AliasName="NAME1">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="sfa.model.viewobjects.InviteesView.Name1_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Contactid1"
     IsNotNull="true"
@@ -195,4 +202,8 @@
     Type="oracle.jbo.Row"
     Reversed="true"
     IsUpdateable="false"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="sfa.model.ModelBundle"/>
+  </ResourceBundle>
 </ViewObject>

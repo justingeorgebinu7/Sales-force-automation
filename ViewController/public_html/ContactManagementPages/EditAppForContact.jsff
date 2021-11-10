@@ -3,7 +3,7 @@
                 xmlns:f="http://java.sun.com/jsf/core">
   <af:panelSplitter id="ps1" orientation="vertical" splitterPosition="222">
     <f:facet name="first">
-      <af:panelBox id="pb3">
+      <af:panelBox id="pb3" showDisclosure="false">
         <f:facet name="toolbar">
           <af:menuBar id="mb3">
             <af:commandMenuItem actionListener="#{bindings.Commit.execute}" text="Save" id="cmi5" action="exit"/>
@@ -38,7 +38,7 @@
             <f:validator binding="#{bindings.Location.validator}"/>
           </af:inputText>
           <af:inputText value="#{bindings.Description.inputValue}" label="#{bindings.Description.hints.label}"
-                        required="#{bindings.Description.hints.mandatory}" columns="80"
+                        required="#{bindings.Description.hints.mandatory}" columns="50"
                         maximumLength="#{bindings.Description.hints.precision}"
                         shortDesc="#{bindings.Description.hints.tooltip}" id="it2" rows="6">
             <f:validator binding="#{bindings.Description.validator}"/>
@@ -48,9 +48,9 @@
       </af:panelBox>
     </f:facet>
     <f:facet name="second">
-      <af:panelSplitter id="ps2" splitterPosition="459">
+      <af:panelSplitter id="ps2" splitterPosition="366">
         <f:facet name="first">
-          <af:panelBox text="Invitees-Contacts" id="pb1">
+          <af:panelBox text="Invitees-Users" id="pb1" showDisclosure="false">
             <f:facet name="toolbar">
               <af:menuBar id="mb2">
                 <af:commandMenuItem text="Add" id="cmi3" action="toAddExt"/>
@@ -71,7 +71,7 @@
           </af:panelBox>
         </f:facet>
         <f:facet name="second">
-          <af:panelBox text="Invitees-Users" id="pb2">
+          <af:panelBox text="Invitees-Contact" id="pb2" showDisclosure="false">
             <f:facet name="toolbar">
               <af:menuBar id="mb1">
                 <af:commandMenuItem text="Add" id="cmi1" action="toAddInviteeInternal"/>

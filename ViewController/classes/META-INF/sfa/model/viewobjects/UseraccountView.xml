@@ -50,37 +50,79 @@
     PrecisionRule="true"
     EntityAttrName="Firstname"
     EntityUsage="Useraccount"
-    AliasName="FIRSTNAME"/>
+    AliasName="FIRSTNAME">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="sfa.model.viewobjects.UseraccountView.Firstname_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Middlename"
     PrecisionRule="true"
     EntityAttrName="Middlename"
     EntityUsage="Useraccount"
-    AliasName="MIDDLENAME"/>
+    AliasName="MIDDLENAME">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="sfa.model.viewobjects.UseraccountView.Middlename_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Lastname"
     PrecisionRule="true"
     EntityAttrName="Lastname"
     EntityUsage="Useraccount"
-    AliasName="LASTNAME"/>
+    AliasName="LASTNAME">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="sfa.model.viewobjects.UseraccountView.Lastname_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Password"
     PrecisionRule="true"
     EntityAttrName="Password"
     EntityUsage="Useraccount"
-    AliasName="PASSWORD"/>
+    AliasName="PASSWORD">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYHINT
+          Value="Hide"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Startdate"
     PrecisionRule="true"
     EntityAttrName="Startdate"
     EntityUsage="Useraccount"
-    AliasName="STARTDATE"/>
+    AliasName="STARTDATE">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="sfa.model.viewobjects.UseraccountView.Startdate_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Enddate"
     PrecisionRule="true"
     EntityAttrName="Enddate"
     EntityUsage="Useraccount"
-    AliasName="ENDDATE"/>
+    AliasName="ENDDATE">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="sfa.model.viewobjects.UseraccountView.Enddate_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Corporatecustomerreferenceid1"
     PrecisionRule="true"
@@ -105,4 +147,8 @@
     ViewLink="sfa.model.viewobjects.Inviteesext_Useraccount_FKLink"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="sfa.model.ModelBundle"/>
+  </ResourceBundle>
 </ViewObject>

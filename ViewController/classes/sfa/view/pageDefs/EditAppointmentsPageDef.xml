@@ -6,10 +6,8 @@
     <variableIterator id="variables"/>
     <iterator Binds="AppointmentsView4" RangeSize="25" DataControl="AppModuleDataControl"
               id="AppointmentsView4Iterator"/>
-    <iterator Binds="InviteesView3" RangeSize="25" DataControl="AppModuleDataControl" id="InviteesView3Iterator"/>
-    <searchRegion Binds="InviteesView3Iterator" Criteria=""
-                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="InviteesView3Query"/>
-    <iterator Binds="InviteesextView3" RangeSize="25" DataControl="AppModuleDataControl" id="InviteesextView3Iterator"/>
+    <iterator Binds="InviteesextView4" RangeSize="25" DataControl="AppModuleDataControl" id="InviteesextView4Iterator"/>
+    <iterator Binds="InviteesView5" RangeSize="25" DataControl="AppModuleDataControl" id="InviteesView5Iterator"/>
   </executables>
   <bindings>
     <attributeValues IterBinding="AppointmentsView4Iterator" id="Startdate">
@@ -32,27 +30,25 @@
         <Item Value="Location"/>
       </AttrNames>
     </attributeValues>
-    <tree IterBinding="InviteesView3Iterator" id="InviteesView3">
-      <nodeDefinition DefName="sfa.model.viewobjects.InviteesView" Name="InviteesView30">
-        <AttrNames>
-          <Item Value="Name"/>
-          <Item Value="Name1"/>
-        </AttrNames>
-      </nodeDefinition>
-    </tree>
-    <tree IterBinding="InviteesextView3Iterator" id="InviteesextView3">
-      <nodeDefinition DefName="sfa.model.viewobjects.InviteesextView" Name="InviteesextView30">
-        <AttrNames>
-          <Item Value="Firstname"/>
-          <Item Value="Lastname"/>
-        </AttrNames>
-      </nodeDefinition>
-    </tree>
     <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
     <attributeValues IterBinding="AppointmentsView4Iterator" id="Name">
       <AttrNames>
         <Item Value="Name"/>
       </AttrNames>
     </attributeValues>
+    <tree IterBinding="InviteesextView4Iterator" id="InviteesextView4">
+      <nodeDefinition DefName="sfa.model.viewobjects.InviteesextView" Name="InviteesextView40">
+        <AttrNames>
+          <Item Value="Firstname"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="InviteesView5Iterator" id="InviteesView5">
+      <nodeDefinition DefName="sfa.model.viewobjects.InviteesView" Name="InviteesView50">
+        <AttrNames>
+          <Item Value="Name1"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
   </bindings>
 </pageDefinition>

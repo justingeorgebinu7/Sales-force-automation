@@ -24,11 +24,6 @@
         <Item Value="Lastname"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="UseraccountView1Iterator" id="Password">
-      <AttrNames>
-        <Item Value="Password"/>
-      </AttrNames>
-    </attributeValues>
     <attributeValues IterBinding="UseraccountView1Iterator" id="Startdate">
       <AttrNames>
         <Item Value="Startdate"/>

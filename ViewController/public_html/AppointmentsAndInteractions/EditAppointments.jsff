@@ -40,7 +40,7 @@
           </af:inputDate>
           <af:inputText value="#{bindings.Description.inputValue}" label="#{bindings.Description.hints.label}"
                         required="#{bindings.Description.hints.mandatory}"
-                        columns="80"
+                        columns="50"
                         maximumLength="#{bindings.Description.hints.precision}"
                         shortDesc="#{bindings.Description.hints.tooltip}" id="it2" rows="6">
             <f:validator binding="#{bindings.Description.validator}"/>
@@ -52,28 +52,6 @@
     <f:facet name="second">
       <af:panelSplitter id="ps2" splitterPosition="450">
         <f:facet name="first">
-          <af:panelBox text="Invitees - Users" id="pb1">
-            <f:facet name="toolbar">
-              <af:menuBar id="mb2">
-                <af:commandMenuItem text="Add" id="cmi3" action="addInviteeExternal"/>
-                <af:commandMenuItem text="Delete" id="cmi4" action="toDeleteExternal"/>
-              </af:menuBar>
-            </f:facet>
-            <af:table value="#{bindings.InviteesextView3.collectionModel}" var="row"
-                      rows="#{bindings.InviteesextView3.rangeSize}"
-                      emptyText="#{bindings.InviteesextView3.viewable ? 'No data to display.' : 'Access Denied.'}"
-                      rowBandingInterval="0" selectedRowKeys="#{bindings.InviteesextView3.collectionModel.selectedRow}"
-                      selectionListener="#{bindings.InviteesextView3.collectionModel.makeCurrent}" rowSelection="single"
-                      fetchSize="#{bindings.InviteesextView3.rangeSize}" id="t1" columnStretching="last">
-              <af:column sortProperty="#{bindings.InviteesextView3.hints.Firstname.name}" sortable="true"
-                         headerText="#{bindings.InviteesextView3.hints.Firstname.label}" id="c1">
-                <af:outputText value="#{row.Firstname}" shortDesc="#{bindings.InviteesextView3.hints.Firstname.tooltip}"
-                               id="ot1"/>
-              </af:column>
-            </af:table>
-          </af:panelBox>
-        </f:facet>
-        <f:facet name="second">
           <af:panelBox text="Invitees - Contacts" id="pb2">
             <f:facet name="toolbar">
               <af:menuBar id="mb1">
@@ -81,17 +59,37 @@
                 <af:commandMenuItem text="Delete" id="cmi2" action="deleteInviteeInternal"/>
               </af:menuBar>
             </f:facet>
-            <af:table value="#{bindings.InviteesView3.collectionModel}" var="row"
-                      rows="#{bindings.InviteesView3.rangeSize}"
-                      emptyText="#{bindings.InviteesView3.viewable ? 'No data to display.' : 'Access Denied.'}"
-                      rowBandingInterval="0" selectedRowKeys="#{bindings.InviteesView3.collectionModel.selectedRow}"
-                      selectionListener="#{bindings.InviteesView3.collectionModel.makeCurrent}" rowSelection="single"
-                      fetchSize="#{bindings.InviteesView3.rangeSize}"
-                      filterModel="#{bindings.InviteesView3Query.queryDescriptor}" filterVisible="true"
-                      queryListener="#{bindings.InviteesView3Query.processQuery}" varStatus="vs" id="t2"
-                      columnStretching="last">
-              <af:column headerText="#{bindings.InviteesView3.hints.Name1.label}" id="c3">
-                <af:outputText value="#{row.Name1}" shortDesc="#{bindings.InviteesView3.hints.Name1.tooltip}" id="ot2"/>
+            <af:table value="#{bindings.InviteesView5.collectionModel}" var="row"
+                      rows="#{bindings.InviteesView5.rangeSize}"
+                      emptyText="#{bindings.InviteesView5.viewable ? 'No data to display.' : 'Access Denied.'}"
+                      rowBandingInterval="0" selectedRowKeys="#{bindings.InviteesView5.collectionModel.selectedRow}"
+                      selectionListener="#{bindings.InviteesView5.collectionModel.makeCurrent}" rowSelection="single"
+                      fetchSize="#{bindings.InviteesView5.rangeSize}" id="t2" columnStretching="last">
+              <af:column sortProperty="#{bindings.InviteesView5.hints.Name1.name}" sortable="true"
+                         headerText="#{bindings.InviteesView5.hints.Name1.label}" id="c2">
+                <af:outputText value="#{row.Name1}" shortDesc="#{bindings.InviteesView5.hints.Name1.tooltip}" id="ot2"/>
+              </af:column>
+            </af:table>
+          </af:panelBox>
+        </f:facet>
+        <f:facet name="second">
+          <af:panelBox text="Invitees - Users" id="pb1">
+            <f:facet name="toolbar">
+              <af:menuBar id="mb2">
+                <af:commandMenuItem text="Add" id="cmi3" action="addInviteeExternal"/>
+                <af:commandMenuItem text="Delete" id="cmi4" action="toDeleteExternal"/>
+              </af:menuBar>
+            </f:facet>
+            <af:table value="#{bindings.InviteesextView4.collectionModel}" var="row"
+                      rows="#{bindings.InviteesextView4.rangeSize}"
+                      emptyText="#{bindings.InviteesextView4.viewable ? 'No data to display.' : 'Access Denied.'}"
+                      rowBandingInterval="0" selectedRowKeys="#{bindings.InviteesextView4.collectionModel.selectedRow}"
+                      selectionListener="#{bindings.InviteesextView4.collectionModel.makeCurrent}" rowSelection="single"
+                      fetchSize="#{bindings.InviteesextView4.rangeSize}" id="t1" columnStretching="last">
+              <af:column sortProperty="#{bindings.InviteesextView4.hints.Firstname.name}" sortable="true"
+                         headerText="#{bindings.InviteesextView4.hints.Firstname.label}" id="c1">
+                <af:outputText value="#{row.Firstname}" shortDesc="#{bindings.InviteesextView4.hints.Firstname.tooltip}"
+                               id="ot1"/>
               </af:column>
             </af:table>
           </af:panelBox>

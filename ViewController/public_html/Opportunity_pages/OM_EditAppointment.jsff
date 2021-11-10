@@ -39,7 +39,7 @@
           </af:inputDate>
           <af:inputText value="#{bindings.Description.inputValue}" label="#{bindings.Description.hints.label}"
                         required="#{bindings.Description.hints.mandatory}"
-                        columns="80"
+                        columns="50"
                         maximumLength="#{bindings.Description.hints.precision}"
                         shortDesc="#{bindings.Description.hints.tooltip}" id="it2" rows="6">
             <f:validator binding="#{bindings.Description.validator}"/>
@@ -51,7 +51,7 @@
     <f:facet name="second">
       <af:panelSplitter id="ps2" splitterPosition="442">
         <f:facet name="first">
-          <af:panelBox text="Invitees - Contacts" id="pb1">
+          <af:panelBox text="Invitees - Contact" id="pb1">
             <f:facet name="toolbar">
               <af:toolbar id="t3">
                 <af:commandMenuItem text="Add" id="cmi1" action="addInternalInvitee"/>
@@ -72,7 +72,7 @@
           </af:panelBox>
         </f:facet>
         <f:facet name="second">
-          <af:panelBox text="Invitee - Users" id="pb2">
+          <af:panelBox text="Invitee - User" id="pb2">
             <f:facet name="toolbar">
               <af:toolbar id="t4">
                 <af:commandMenuItem text="Add" id="cmi3" action="addExternalInvitee"/>

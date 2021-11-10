@@ -27,12 +27,6 @@
                       shortDesc="#{bindings.Lastname.hints.tooltip}" id="it3">
           <f:validator binding="#{bindings.Lastname.validator}"/>
         </af:inputText>
-        <af:inputText value="#{bindings.Password.inputValue}" label="#{bindings.Password.hints.label}"
-                      required="#{bindings.Password.hints.mandatory}" columns="#{bindings.Password.hints.displayWidth}"
-                      maximumLength="#{bindings.Password.hints.precision}"
-                      shortDesc="#{bindings.Password.hints.tooltip}" id="it4">
-          <f:validator binding="#{bindings.Password.validator}"/>
-        </af:inputText>
         <af:inputDate value="#{bindings.Startdate.inputValue}" label="#{bindings.Startdate.hints.label}"
                       required="#{bindings.Startdate.hints.mandatory}"
                       columns="#{bindings.Startdate.hints.displayWidth}" shortDesc="#{bindings.Startdate.hints.tooltip}"

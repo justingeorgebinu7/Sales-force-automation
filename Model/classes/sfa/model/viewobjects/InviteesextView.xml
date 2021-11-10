@@ -103,7 +103,14 @@
     PrecisionRule="true"
     EntityAttrName="Firstname"
     EntityUsage="Useraccount"
-    AliasName="FIRSTNAME"/>
+    AliasName="FIRSTNAME">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="sfa.model.viewobjects.InviteesextView.Firstname_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Useraccountid"
     IsNotNull="true"
@@ -132,4 +139,8 @@
     Type="oracle.jbo.Row"
     Reversed="true"
     IsUpdateable="false"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="sfa.model.ModelBundle"/>
+  </ResourceBundle>
 </ViewObject>

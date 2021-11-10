@@ -73,7 +73,10 @@ af|panelSpringboard::body {
     margin-right:150px;
     border-left: 1px solid #ddd;
     border-right: 1px solid #ddd;
-    background-color:#fdfdfd;
+    overflow-y:auto;
+    padding-bottom:50px;
+    
+    height:70vh;
     /*border:none;*/
 }
 
@@ -97,4 +100,8 @@ af|inputText::content {
     border-radius:5px;
     border: 0.5px solid #eee;
     box-shadow: 3px 3px 4px -2px rgba(0,0,0,0.2);
+}
+
+af|panelBox {
+    border: none; 
 }
