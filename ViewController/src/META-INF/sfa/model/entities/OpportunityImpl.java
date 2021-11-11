@@ -39,7 +39,9 @@ public class OpportunityImpl extends EntityImpl {
         Customercontacts,
         Revenueitem,
         Task,
-        Appointments;
+        Appointments,
+        Files,
+        Files1;
         private static AttributesEnum[] vals = null;
         private static final int firstIndex = 0;
 
@@ -62,6 +64,8 @@ public class OpportunityImpl extends EntityImpl {
             return vals;
         }
     }
+
+
     public static final int OPPORTUNITYID = AttributesEnum.Opportunityid.index();
     public static final int ACCOUNTID = AttributesEnum.Accountid.index();
     public static final int DESCRIPTION = AttributesEnum.Description.index();
@@ -81,12 +85,22 @@ public class OpportunityImpl extends EntityImpl {
     public static final int REVENUEITEM = AttributesEnum.Revenueitem.index();
     public static final int TASK = AttributesEnum.Task.index();
     public static final int APPOINTMENTS = AttributesEnum.Appointments.index();
+    public static final int FILES = AttributesEnum.Files.index();
+    public static final int FILES1 = AttributesEnum.Files1.index();
 
     /**
      * This is the default constructor (do not remove).
      */
     public OpportunityImpl() {
     }
+
+    /**
+     * @return the definition object for this instance class.
+     */
+    public static synchronized EntityDefImpl getDefinitionObject() {
+        return EntityDefImpl.findDefObject("sfa.model.entities.Opportunity");
+    }
+
 
     /**
      * Gets the attribute value for Opportunityid, using the alias name Opportunityid.
@@ -353,19 +367,28 @@ public class OpportunityImpl extends EntityImpl {
     }
 
     /**
+     * @return the associated entity oracle.jbo.RowIterator.
+     */
+    public RowIterator getFiles() {
+        return (RowIterator) getAttributeInternal(FILES);
+    }
+
+
+    /**
+     * @return the associated entity oracle.jbo.RowIterator.
+     */
+    public RowIterator getFiles1() {
+        return (RowIterator) getAttributeInternal(FILES1);
+    }
+
+
+    /**
      * @param opportunityid key constituent
 
      * @return a Key object based on given key constituents.
      */
     public static Key createPrimaryKey(BigDecimal opportunityid) {
         return new Key(new Object[] { opportunityid });
-    }
-
-    /**
-     * @return the definition object for this instance class.
-     */
-    public static synchronized EntityDefImpl getDefinitionObject() {
-        return EntityDefImpl.findDefObject("sfa.model.entities.Opportunity");
     }
 
     /**

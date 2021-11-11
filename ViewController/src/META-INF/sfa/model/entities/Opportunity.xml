@@ -201,6 +201,20 @@
     AssociationOtherEnd="sfa.model.entities.OpportunityAppointmentFkAssoc.Opportunity"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="Files"
+    Association="sfa.model.entities.FilesOpportunityFkAssoc"
+    AssociationEnd="sfa.model.entities.FilesOpportunityFkAssoc.Files"
+    AssociationOtherEnd="sfa.model.entities.FilesOpportunityFkAssoc.Opportunity"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="Files1"
+    Association="sfa.model.entities.Files_Opportunity_Assoc"
+    AssociationEnd="sfa.model.entities.Files_Opportunity_Assoc.Files1"
+    AssociationOtherEnd="sfa.model.entities.Files_Opportunity_Assoc.Opportunity1"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <Key
     Name="OpportunityPk"
     PrimaryKey="true">

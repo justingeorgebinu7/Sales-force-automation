@@ -205,6 +205,24 @@
   <ViewUsage
     Name="ProductsView3"
     ViewObjectName="sfa.model.viewobjects.ProductsView"/>
+  <ViewUsage
+    Name="OpportunityView5"
+    ViewObjectName="sfa.model.viewobjects.OpportunityView"/>
+  <ViewUsage
+    Name="FilesView1"
+    ViewObjectName="sfa.model.viewobjects.FilesView"/>
+  <ViewUsage
+    Name="FilesView2"
+    ViewObjectName="sfa.model.viewobjects.FilesView"/>
+  <ViewUsage
+    Name="OpportunityView6"
+    ViewObjectName="sfa.model.viewobjects.OpportunityView"/>
+  <ViewUsage
+    Name="FilesView3"
+    ViewObjectName="sfa.model.viewobjects.FilesView"/>
+  <ViewUsage
+    Name="FilesView4"
+    ViewObjectName="sfa.model.viewobjects.FilesView"/>
   <ViewLinkUsage
     Name="AddressCustomeraccountFkLink1"
     ViewLinkObjectName="sfa.model.viewobjects.AddressCustomeraccountFkLink"
@@ -469,4 +487,22 @@
     SrcViewUsageName="sfa.model.entities.AppModule.RevenueitemView2"
     DstViewUsageName="sfa.model.entities.AppModule.ProductsView3"
     Reversed="true"/>
+  <ViewLinkUsage
+    Name="FilesOpportunityFkLink"
+    ViewLinkObjectName="sfa.model.viewobjects.FilesOpportunityFkLink"
+    SrcViewUsageName="sfa.model.entities.AppModule.OpportunityView5"
+    DstViewUsageName="sfa.model.entities.AppModule.FilesView1"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="Files_Opportunity_FKLink"
+    ViewLinkObjectName="sfa.model.viewobjects.Files_Opportunity_FKLink"
+    SrcViewUsageName="sfa.model.entities.AppModule.OpportunityView6"
+    DstViewUsageName="sfa.model.entities.AppModule.FilesView3"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FilesOpportunityFkLink1"
+    ViewLinkObjectName="sfa.model.viewobjects.FilesOpportunityFkLink"
+    SrcViewUsageName="sfa.model.entities.AppModule.OpportunityView1"
+    DstViewUsageName="sfa.model.entities.AppModule.FilesView4"
+    Reversed="false"/>
 </AppModule>

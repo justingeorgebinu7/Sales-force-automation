@@ -291,6 +291,16 @@
     ViewLink="sfa.model.entities.OpportunityInteractionFkLink"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="FilesView"
+    ViewLink="sfa.model.viewobjects.FilesOpportunityFkLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="FilesView1"
+    ViewLink="sfa.model.viewobjects.Files_Opportunity_FKLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="sfa.model.ModelBundle"/>

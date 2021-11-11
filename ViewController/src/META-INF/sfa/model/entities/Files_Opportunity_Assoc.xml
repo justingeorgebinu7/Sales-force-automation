@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Association SYSTEM "jbo_03_01.dtd">
+<!---->
+<Association
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="Files_Opportunity_Assoc"
+  Version="12.2.1.22.48"
+  InheritPersonalization="merge">
+  <DesignTime>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <AssociationEnd
+    Name="Opportunity1"
+    Cardinality="1"
+    Source="true"
+    Owner="sfa.model.entities.Opportunity"
+    CascadeDelete="true"
+    LockLevel="NONE">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="Opportunity1"/>
+      <Attr Name="_foreignKey" Value="sfa.model.entities.Opportunity.OpportunityPk"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="sfa.model.entities.Opportunity.Opportunityid"/>
+    </AttrArray>
+  </AssociationEnd>
+  <AssociationEnd
+    Name="Files1"
+    Cardinality="-1"
+    Owner="sfa.model.entities.Files">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="Files1"/>
+      <Attr Name="_foreignKey" Value="sfa.model.entities.Files.fk_Files"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="sfa.model.entities.Files.Oppid"/>
+    </AttrArray>
+  </AssociationEnd>
+</Association>
