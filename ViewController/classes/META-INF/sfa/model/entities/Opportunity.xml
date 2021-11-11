@@ -114,12 +114,12 @@
     TableName="OPPORTUNITY">
     <validation:CompareValidationBean
       Name="BestcaserevenueRule0"
+      ResId="sfa.model.entities.Opportunity.Bestcaserevenue_Rule_0"
       OnAttribute="Bestcaserevenue"
       OperandType="JBO"
       Inverse="false"
       CompareType="GREATERTHANEQUALTO"
-      CompareValue="sfa.model.viewobjects.OpportunityView.Worstcaserevenue"
-      ResId="sfa.model.entities.Opportunity.Bestcaserevenue_Rule_0"/>
+      CompareValue="sfa.model.viewobjects.OpportunityView.Worstcaserevenue"/>
   </Attribute>
   <Attribute
     Name="Worstcaserevenue"

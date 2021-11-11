@@ -146,6 +146,8 @@
       <SchemaBasedProperties>
         <LABEL
           ResId="sfa.model.viewobjects.OpportunityView.Winprobability_LABEL"/>
+        <DISPLAYWIDTH
+          Value="3"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
