@@ -20,7 +20,6 @@
         <id>deleteUserRole</id>
       </task-flow-reference>
     </task-flow-call>
-    <view id="editUserRole"></view>
     <control-flow-rule id="__1">
       <from-activity-id>userRolePage</from-activity-id>
       <control-flow-case id="__2">

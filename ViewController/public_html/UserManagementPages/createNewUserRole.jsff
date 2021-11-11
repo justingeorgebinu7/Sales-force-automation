@@ -2,15 +2,12 @@
 <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
                 xmlns:f="http://java.sun.com/jsf/core">
   <af:panelFormLayout id="pfl1">
-    <af:inputComboboxListOfValues id="roleidId" popupTitle="Search and Select: #{bindings.Roleid.hints.label}"
-                                  value="#{bindings.Roleid.inputValue}" label="#{bindings.Roleid.hints.label}"
-                                  model="#{bindings.Roleid.listOfValuesModel}"
-                                  required="#{bindings.Roleid.hints.mandatory}"
-                                  columns="#{bindings.Roleid.hints.displayWidth}"
-                                  shortDesc="#{bindings.Roleid.hints.tooltip}">
+    <af:selectOneChoice value="#{bindings.Roleid.inputValue}" label="#{bindings.Roleid.label}"
+                        required="#{bindings.Roleid.hints.mandatory}" shortDesc="#{bindings.Roleid.hints.tooltip}"
+                        id="soc1">
+      <f:selectItems value="#{bindings.Roleid.items}" id="si1"/>
       <f:validator binding="#{bindings.Roleid.validator}"/>
-      <af:convertNumber groupingUsed="false" pattern="#{bindings.Roleid.format}"/>
-    </af:inputComboboxListOfValues>
+    </af:selectOneChoice>
     <af:inputDate value="#{bindings.Startdate.inputValue}" label="#{bindings.Startdate.hints.label}"
                   required="#{bindings.Startdate.hints.mandatory}" columns="#{bindings.Startdate.hints.displayWidth}"
                   shortDesc="#{bindings.Startdate.hints.tooltip}" id="id1">

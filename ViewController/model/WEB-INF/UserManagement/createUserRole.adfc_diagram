@@ -58,7 +58,7 @@
       <property
          name="y">357.59766</property>
       <property
-         name="page">/createNewUserRole.jsff</property>
+         name="page">/UserManagementPages/createNewUserRole.jsff</property>
       <property
          name="exceptionHandler">false</property>
    </View>
