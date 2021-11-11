@@ -50,7 +50,6 @@
   </Attribute>
   <Attribute
     Name="Customeraccountid"
-    IsNotNull="true"
     ColumnName="CUSTOMERACCOUNTID"
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
@@ -144,13 +143,6 @@
     <DesignTime>
       <Attr Name="_DisplaySize" Value="30"/>
     </DesignTime>
-    <validation:RegExpValidationBean
-      Name="InfluencelevelRule0"
-      ResId="sfa.model.entities.Customercontacts.Influencelevel_Rule_0"
-      OnAttribute="Influencelevel"
-      Pattern="low|mediaum|high"
-      Flags="CaseInsensitive"
-      Inverse="false"/>
     <Properties>
       <SchemaBasedProperties>
         <LABEL

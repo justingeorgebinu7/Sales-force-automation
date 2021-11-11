@@ -102,13 +102,6 @@
     </Properties>
   </ViewAttribute>
   <ViewAttribute
-    Name="Customeraccountid"
-    IsNotNull="true"
-    PrecisionRule="true"
-    EntityAttrName="Customeraccountid"
-    EntityUsage="Customercontacts"
-    AliasName="CUSTOMERACCOUNTID"/>
-  <ViewAttribute
     Name="Department"
     PrecisionRule="true"
     EntityAttrName="Department"
@@ -194,6 +187,12 @@
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
+  <ViewAttribute
+    Name="Customeraccountid"
+    PrecisionRule="true"
+    EntityAttrName="Customeraccountid"
+    EntityUsage="Customercontacts"
+    AliasName="CUSTOMERACCOUNTID"/>
   <ViewLinkAccessor
     Name="ContactaddressView"
     ViewLink="sfa.model.viewobjects.CaddressCustomercontactsFkLink"
