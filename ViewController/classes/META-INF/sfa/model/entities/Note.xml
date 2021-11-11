@@ -51,10 +51,12 @@
       <SchemaBasedProperties>
         <LABEL
           ResId="sfa.model.entities.Note.Datetime_LABEL"/>
-        <FMT_FORMAT
-          ResId="sfa.model.entities.Note.Datetime_FMT_FORMAT"/>
         <FMT_FORMATTER
           ResId="sfa.model.entities.Note.Datetime_FMT_FORMATTER"/>
+        <FMT_FORMAT
+          ResId="sfa.model.entities.Note.Datetime_FMT_FORMAT"/>
+        <TimeZoneID
+          Value="Asia/Jakarta"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>

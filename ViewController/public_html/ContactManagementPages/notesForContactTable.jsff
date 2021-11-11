@@ -6,17 +6,22 @@
             selectedRowKeys="#{bindings.NoteView3.collectionModel.selectedRow}"
             selectionListener="#{bindings.NoteView3.collectionModel.makeCurrent}" rowSelection="single"
             fetchSize="#{bindings.NoteView3.rangeSize}" filterModel="#{bindings.NoteView3Query.queryDescriptor}"
-            filterVisible="true" queryListener="#{bindings.NoteView3Query.processQuery}" varStatus="vs" id="t1">
+            filterVisible="true" queryListener="#{bindings.NoteView3Query.processQuery}" varStatus="vs" id="t1"
+            columnStretching="last">
     <af:column sortProperty="#{bindings.NoteView3.hints.Subject.name}" filterable="true" sortable="true"
-               headerText="#{bindings.NoteView3.hints.Subject.label}" id="c1">
+               headerText="#{bindings.NoteView3.hints.Subject.label}" id="c1" width="100">
       <af:link shortDesc="#{bindings.NoteView3.hints.Subject.tooltip}" id="ot1" text="#{row.Subject}" action="toEdit"/>
     </af:column>
     <af:column sortProperty="#{bindings.NoteView3.hints.Content.name}" filterable="true" sortable="true"
-               headerText="#{bindings.NoteView3.hints.Content.label}" id="c2">
+               headerText="#{bindings.NoteView3.hints.Content.label}" id="c2" width="228">
       <af:outputText value="#{row.Content}" shortDesc="#{bindings.NoteView3.hints.Content.tooltip}" id="ot2"/>
     </af:column>
+    <af:column sortProperty="#{bindings.NoteView3.hints.Createdby.name}" filterable="true" sortable="true"
+               headerText="#{bindings.NoteView3.hints.Createdby.label}" id="c4" width="139">
+      <af:outputText value="#{row.Createdby}" shortDesc="#{bindings.NoteView3.hints.Createdby.tooltip}" id="ot4"/>
+    </af:column>
     <af:column sortProperty="#{bindings.NoteView3.hints.Datetime.name}" filterable="true" sortable="true"
-               headerText="#{bindings.NoteView3.hints.Datetime.label}" id="c3">
+               headerText="#{bindings.NoteView3.hints.Datetime.label}" id="c3" width="6">
       <f:facet name="filter">
         <af:inputDate value="#{bindings.NoteView3Query.queryDescriptor.filterConjunctionCriterion.criterionMap.Datetime.value}"
                       id="id1">
@@ -26,10 +31,6 @@
       <af:outputText value="#{row.Datetime}" shortDesc="#{bindings.NoteView3.hints.Datetime.tooltip}" id="ot3">
         <af:convertDateTime pattern="#{bindings.NoteView3.hints.Datetime.format}"/>
       </af:outputText>
-    </af:column>
-    <af:column sortProperty="#{bindings.NoteView3.hints.Createdby.name}" filterable="true" sortable="true"
-               headerText="#{bindings.NoteView3.hints.Createdby.label}" id="c4">
-      <af:outputText value="#{row.Createdby}" shortDesc="#{bindings.NoteView3.hints.Createdby.tooltip}" id="ot4"/>
     </af:column>
   </af:table>
   <af:button text="Add" id="b1" action="toadd"/>
