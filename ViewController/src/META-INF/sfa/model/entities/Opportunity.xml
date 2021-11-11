@@ -10,7 +10,12 @@
   DBObjectName="OPPORTUNITY"
   AliasName="Opportunity"
   BindingStyle="OracleName"
-  xmlns:validation="http://xmlns.oracle.com/adfm/validation">
+  xmlns:validation="http://xmlns.oracle.com/adfm/validation"
+  RowClass="sfa.model.entities.OpportunityImpl">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Init|Access"/>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
   <Attribute
     Name="Opportunityid"
     IsNotNull="true"
@@ -112,7 +117,7 @@
       OnAttribute="Bestcaserevenue"
       OperandType="JBO"
       Inverse="false"
-      CompareType="GREATERTHANEQUALTO"
+      CompareType="GREATERTHAN"
       CompareValue="sfa.model.viewobjects.OpportunityView.Worstcaserevenue"
       ResId="sfa.model.entities.Opportunity.Bestcaserevenue_Rule_0"/>
   </Attribute>

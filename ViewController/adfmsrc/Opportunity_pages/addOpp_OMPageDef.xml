@@ -7,6 +7,7 @@
     <iterator Binds="OpportunityView1" RangeSize="25" DataControl="AppModuleDataControl" id="OpportunityView1Iterator"/>
   </executables>
   <bindings>
+    <action IterBinding="OpportunityView1Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
     <attributeValues IterBinding="OpportunityView1Iterator" id="Title">
       <AttrNames>
         <Item Value="Title"/>
@@ -27,16 +28,6 @@
         <Item Value="Closedate"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="OpportunityView1Iterator" id="Salesstage">
-      <AttrNames>
-        <Item Value="Salesstage"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="OpportunityView1Iterator" id="Salesmethod">
-      <AttrNames>
-        <Item Value="Salesmethod"/>
-      </AttrNames>
-    </attributeValues>
     <attributeValues IterBinding="OpportunityView1Iterator" id="Bestcaserevenue">
       <AttrNames>
         <Item Value="Bestcaserevenue"/>
@@ -52,11 +43,10 @@
         <Item Value="Budgetavailable"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="OpportunityView1Iterator" id="Risklevel">
-      <AttrNames>
-        <Item Value="Risklevel"/>
-      </AttrNames>
-    </attributeValues>
-    <action IterBinding="OpportunityView1Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <listOfValues IterBinding="OpportunityView1Iterator" StaticList="false" Uses="LOV_Primarycontact"
+                  id="Primarycontact"/>
+    <listOfValues IterBinding="OpportunityView1Iterator" StaticList="false" Uses="LOV_Salesstage" id="Salesstage"/>
+    <listOfValues IterBinding="OpportunityView1Iterator" StaticList="false" Uses="LOV_Risklevel" id="Risklevel"/>
+    <listOfValues IterBinding="OpportunityView1Iterator" StaticList="false" Uses="LOV_Salesmethod" id="Salesmethod"/>
   </bindings>
 </pageDefinition>

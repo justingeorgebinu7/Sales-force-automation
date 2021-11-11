@@ -53,7 +53,8 @@
     Name="LOV_Salesmethod"
     ListVOName="SalesMethod1"
     NullValueFlag="none"
-    MRUCount="0">
+    MRUCount="0"
+    ComboRowCountHint="10">
     <AttrArray Name="AttrNames">
       <Item Value="Salesmethod"/>
     </AttrArray>
@@ -64,7 +65,8 @@
     <AttrArray Name="ListDisplayAttrNames">
       <Item Value="SalesMethodAttr"/>
     </AttrArray>
-    <DisplayCriteria/>
+    <DisplayCriteria
+      Hint="showAndExecute"/>
   </ListBinding>
   <ListBinding
     Name="LOV_Risklevel"
@@ -200,10 +202,10 @@
     LOVName="LOV_Salesmethod">
     <Properties>
       <SchemaBasedProperties>
-        <CONTROLTYPE
-          Value="choice"/>
         <LABEL
           ResId="sfa.model.viewobjects.OpportunityView.Salesmethod_LABEL"/>
+        <CONTROLTYPE
+          Value="combo_lov"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>

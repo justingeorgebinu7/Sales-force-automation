@@ -12,14 +12,14 @@
                   required="#{bindings.Description.hints.mandatory}"
                   columns="#{bindings.Description.hints.displayWidth}"
                   maximumLength="#{bindings.Description.hints.precision}"
-                  shortDesc="#{bindings.Description.hints.tooltip}" id="it3">
+                  shortDesc="#{bindings.Description.hints.tooltip}" id="it2">
       <f:validator binding="#{bindings.Description.validator}"/>
     </af:inputText>
     <af:inputText value="#{bindings.Winprobability.inputValue}" label="#{bindings.Winprobability.hints.label}"
                   required="#{bindings.Winprobability.hints.mandatory}"
                   columns="#{bindings.Winprobability.hints.displayWidth}"
                   maximumLength="#{bindings.Winprobability.hints.precision}"
-                  shortDesc="#{bindings.Winprobability.hints.tooltip}" id="it4">
+                  shortDesc="#{bindings.Winprobability.hints.tooltip}" id="it3">
       <f:validator binding="#{bindings.Winprobability.validator}"/>
       <af:convertNumber groupingUsed="false" pattern="#{bindings.Winprobability.format}"/>
     </af:inputText>
@@ -29,24 +29,11 @@
       <f:validator binding="#{bindings.Closedate.validator}"/>
       <af:convertDateTime pattern="#{bindings.Closedate.format}"/>
     </af:inputDate>
-    <af:inputText value="#{bindings.Salesstage.inputValue}" label="#{bindings.Salesstage.hints.label}"
-                  required="#{bindings.Salesstage.hints.mandatory}" columns="#{bindings.Salesstage.hints.displayWidth}"
-                  maximumLength="#{bindings.Salesstage.hints.precision}"
-                  shortDesc="#{bindings.Salesstage.hints.tooltip}" id="it5">
-      <f:validator binding="#{bindings.Salesstage.validator}"/>
-    </af:inputText>
-    <af:inputText value="#{bindings.Salesmethod.inputValue}" label="#{bindings.Salesmethod.hints.label}"
-                  required="#{bindings.Salesmethod.hints.mandatory}"
-                  columns="#{bindings.Salesmethod.hints.displayWidth}"
-                  maximumLength="#{bindings.Salesmethod.hints.precision}"
-                  shortDesc="#{bindings.Salesmethod.hints.tooltip}" id="it6">
-      <f:validator binding="#{bindings.Salesmethod.validator}"/>
-    </af:inputText>
     <af:inputText value="#{bindings.Bestcaserevenue.inputValue}" label="#{bindings.Bestcaserevenue.hints.label}"
                   required="#{bindings.Bestcaserevenue.hints.mandatory}"
                   columns="#{bindings.Bestcaserevenue.hints.displayWidth}"
                   maximumLength="#{bindings.Bestcaserevenue.hints.precision}"
-                  shortDesc="#{bindings.Bestcaserevenue.hints.tooltip}" id="it7">
+                  shortDesc="#{bindings.Bestcaserevenue.hints.tooltip}" id="it4">
       <f:validator binding="#{bindings.Bestcaserevenue.validator}"/>
       <af:convertNumber groupingUsed="false" pattern="#{bindings.Bestcaserevenue.format}"/>
     </af:inputText>
@@ -54,7 +41,7 @@
                   required="#{bindings.Worstcaserevenue.hints.mandatory}"
                   columns="#{bindings.Worstcaserevenue.hints.displayWidth}"
                   maximumLength="#{bindings.Worstcaserevenue.hints.precision}"
-                  shortDesc="#{bindings.Worstcaserevenue.hints.tooltip}" id="it8">
+                  shortDesc="#{bindings.Worstcaserevenue.hints.tooltip}" id="it5">
       <f:validator binding="#{bindings.Worstcaserevenue.validator}"/>
       <af:convertNumber groupingUsed="false" pattern="#{bindings.Worstcaserevenue.format}"/>
     </af:inputText>
@@ -62,16 +49,45 @@
                   required="#{bindings.Budgetavailable.hints.mandatory}"
                   columns="#{bindings.Budgetavailable.hints.displayWidth}"
                   maximumLength="#{bindings.Budgetavailable.hints.precision}"
-                  shortDesc="#{bindings.Budgetavailable.hints.tooltip}" id="it9">
+                  shortDesc="#{bindings.Budgetavailable.hints.tooltip}" id="it6">
       <f:validator binding="#{bindings.Budgetavailable.validator}"/>
       <af:convertNumber groupingUsed="false" pattern="#{bindings.Budgetavailable.format}"/>
     </af:inputText>
-    <af:inputText value="#{bindings.Risklevel.inputValue}" label="#{bindings.Risklevel.hints.label}"
-                  required="#{bindings.Risklevel.hints.mandatory}" columns="#{bindings.Risklevel.hints.displayWidth}"
-                  maximumLength="#{bindings.Risklevel.hints.precision}" shortDesc="#{bindings.Risklevel.hints.tooltip}"
-                  id="it10">
+    <af:inputComboboxListOfValues id="primarycontactId"
+                                  popupTitle="Search and Select: #{bindings.Primarycontact.hints.label}"
+                                  value="#{bindings.Primarycontact.inputValue}"
+                                  label="#{bindings.Primarycontact.hints.label}"
+                                  model="#{bindings.Primarycontact.listOfValuesModel}"
+                                  required="#{bindings.Primarycontact.hints.mandatory}"
+                                  columns="#{bindings.Primarycontact.hints.displayWidth}"
+                                  shortDesc="#{bindings.Primarycontact.hints.tooltip}">
+      <f:validator binding="#{bindings.Primarycontact.validator}"/>
+      <af:convertNumber groupingUsed="false" pattern="#{bindings.Primarycontact.format}"/>
+    </af:inputComboboxListOfValues>
+    <af:inputComboboxListOfValues id="salesmethodId" popupTitle="Search and Select: #{bindings.Salesmethod.hints.label}"
+                                  value="#{bindings.Salesmethod.inputValue}" label="#{bindings.Salesmethod.hints.label}"
+                                  model="#{bindings.Salesmethod.listOfValuesModel}"
+                                  required="#{bindings.Salesmethod.hints.mandatory}"
+                                  columns="#{bindings.Salesmethod.hints.displayWidth}"
+                                  shortDesc="#{bindings.Salesmethod.hints.tooltip}">
+      <f:validator binding="#{bindings.Salesmethod.validator}"/>
+    </af:inputComboboxListOfValues>
+    <af:inputComboboxListOfValues id="salesstageId" popupTitle="Search and Select: #{bindings.Salesstage.hints.label}"
+                                  value="#{bindings.Salesstage.inputValue}" label="#{bindings.Salesstage.hints.label}"
+                                  model="#{bindings.Salesstage.listOfValuesModel}"
+                                  required="#{bindings.Salesstage.hints.mandatory}"
+                                  columns="#{bindings.Salesstage.hints.displayWidth}"
+                                  shortDesc="#{bindings.Salesstage.hints.tooltip}">
+      <f:validator binding="#{bindings.Salesstage.validator}"/>
+    </af:inputComboboxListOfValues>
+    <af:inputComboboxListOfValues id="risklevelId" popupTitle="Search and Select: #{bindings.Risklevel.hints.label}"
+                                  value="#{bindings.Risklevel.inputValue}" label="#{bindings.Risklevel.hints.label}"
+                                  model="#{bindings.Risklevel.listOfValuesModel}"
+                                  required="#{bindings.Risklevel.hints.mandatory}"
+                                  columns="#{bindings.Risklevel.hints.displayWidth}"
+                                  shortDesc="#{bindings.Risklevel.hints.tooltip}">
       <f:validator binding="#{bindings.Risklevel.validator}"/>
-    </af:inputText>
+    </af:inputComboboxListOfValues>
   </af:panelFormLayout>
   <af:button text="Save" id="b1" action="toCommit"/>
   <af:button actionListener="#{bindings.Delete.execute}" text="Cancel" disabled="#{!bindings.Delete.enabled}" id="b2"

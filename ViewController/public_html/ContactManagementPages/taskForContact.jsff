@@ -8,15 +8,15 @@
             fetchSize="#{bindings.TaskView4.rangeSize}" filterModel="#{bindings.TaskView4Query.queryDescriptor}"
             filterVisible="true" queryListener="#{bindings.TaskView4Query.processQuery}" varStatus="vs" id="t1">
     <af:column sortProperty="#{bindings.TaskView4.hints.Name.name}" filterable="true" sortable="true"
-               headerText="#{bindings.TaskView4.hints.Name.label}" id="c1">
+               headerText="#{bindings.TaskView4.hints.Name.label}" id="c1" width="127">
       <af:link shortDesc="#{bindings.TaskView4.hints.Name.tooltip}" id="ot1" text="#{row.Name}" action="toEdit"/>
     </af:column>
     <af:column sortProperty="#{bindings.TaskView4.hints.Description.name}" filterable="true" sortable="true"
-               headerText="#{bindings.TaskView4.hints.Description.label}" id="c2">
+               headerText="#{bindings.TaskView4.hints.Description.label}" id="c2" width="152">
       <af:outputText value="#{row.Description}" shortDesc="#{bindings.TaskView4.hints.Description.tooltip}" id="ot2"/>
     </af:column>
     <af:column sortProperty="#{bindings.TaskView4.hints.Duedate.name}" filterable="true" sortable="true"
-               headerText="#{bindings.TaskView4.hints.Duedate.label}" id="c3">
+               headerText="#{bindings.TaskView4.hints.Duedate.label}" id="c3" width="93">
       <f:facet name="filter">
         <af:inputDate value="#{bindings.TaskView4Query.queryDescriptor.filterConjunctionCriterion.criterionMap.Duedate.value}"
                       id="id1">
@@ -28,7 +28,7 @@
       </af:outputText>
     </af:column>
     <af:column sortProperty="#{bindings.TaskView4.hints.Priority.name}" filterable="true" sortable="true"
-               headerText="#{bindings.TaskView4.hints.Priority.label}" id="c4">
+               headerText="#{bindings.TaskView4.hints.Priority.label}" id="c4" width="107">
       <af:selectOneChoice value="#{row.bindings.Priority.inputValue}" label="#{row.bindings.Priority.label}"
                           required="#{bindings.TaskView4.hints.Priority.mandatory}"
                           shortDesc="#{bindings.TaskView4.hints.Priority.tooltip}" readOnly="true" id="soc1">
@@ -36,7 +36,7 @@
         <f:validator binding="#{row.bindings.Priority.validator}"/>
       </af:selectOneChoice>
     </af:column>
-    <af:column headerText="#{bindings.TaskView4.hints.Percentageofcompletion.label}" id="c5">
+    <af:column headerText="#{bindings.TaskView4.hints.Percentageofcompletion.label}" id="c5" width="92">
       <dvt:statusMeterGauge id="statusMeterGauge1" orientation="circular" inlineStyle="width:40px;height:40px"
                             minimum="0" maximum="100" value="#{row.Percentageofcompletion}">
         <dvt:gaugeThreshold id="thr1" color="#149"/>

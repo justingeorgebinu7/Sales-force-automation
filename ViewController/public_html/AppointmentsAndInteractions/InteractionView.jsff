@@ -52,7 +52,6 @@
                      id="ot6"/>
     </af:column>
   </af:table>
-  <af:button text="Edit" id="b2" action="editInteraction"/>
   <af:button text="Create" id="b3" action="createInteraction"/>
   <af:button text="Delete" action="deleteInteractionTF1" id="b1"/>
 </ui:composition>

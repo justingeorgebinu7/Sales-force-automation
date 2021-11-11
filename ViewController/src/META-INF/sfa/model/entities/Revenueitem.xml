@@ -9,7 +9,8 @@
   DBObjectType="table"
   DBObjectName="REVENUEITEM"
   AliasName="Revenueitem"
-  BindingStyle="OracleName">
+  BindingStyle="OracleName"
+  xmlns:validation="http://xmlns.oracle.com/adfm/validation">
   <Attribute
     Name="Revenueitemid"
     IsNotNull="true"
@@ -36,7 +37,14 @@
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
-    TableName="REVENUEITEM"/>
+    TableName="REVENUEITEM">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="sfa.model.entities.Revenueitem.Estimatedprice_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <Attribute
     Name="Revenue"
     ColumnName="REVENUE"
@@ -50,14 +58,36 @@
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
-    TableName="REVENUEITEM"/>
+    TableName="REVENUEITEM">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="sfa.model.entities.Revenueitem.Bestcaserevenue_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+    <validation:CompareValidationBean
+      Name="BestcaserevenueRule0"
+      OnAttribute="Bestcaserevenue"
+      OperandType="JBO"
+      Inverse="false"
+      CompareType="GREATERTHANEQUALTO"
+      CompareValue="sfa.model.viewobjects.RevenueitemView.Worstcaserevenue"
+      ResId="sfa.model.entities.Revenueitem.Bestcaserevenue_Rule_0"/>
+  </Attribute>
   <Attribute
     Name="Worstcaserevenue"
     ColumnName="WORSTCASEREVENUE"
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
-    TableName="REVENUEITEM"/>
+    TableName="REVENUEITEM">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="sfa.model.entities.Revenueitem.Worstcaserevenue_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <Attribute
     Name="Opportunityid"
     ColumnName="OPPORTUNITYID"
@@ -127,4 +157,8 @@
       <Item Value="sfa.model.entities.Revenueitem.Productid"/>
     </AttrArray>
   </Key>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="sfa.model.ModelBundle"/>
+  </ResourceBundle>
 </Entity>
