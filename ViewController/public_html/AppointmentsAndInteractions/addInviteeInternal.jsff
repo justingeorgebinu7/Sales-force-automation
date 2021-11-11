@@ -7,9 +7,10 @@
                                   model="#{bindings.Contactid.listOfValuesModel}"
                                   required="#{bindings.Contactid.hints.mandatory}"
                                   columns="#{bindings.Contactid.hints.displayWidth}"
-                                  shortDesc="#{bindings.Contactid.hints.tooltip}">
+                                  shortDesc="#{bindings.Contactid.hints.tooltip}"
+                                  converter="#{bindings.Contactid.converter}">
       <f:validator binding="#{bindings.Contactid.validator}"/>
-      <af:convertNumber groupingUsed="false" pattern="#{bindings.Contactid.format}"/>
+      <!--<af:convertNumber groupingUsed="false" pattern="#{bindings.Contactid.format}"/>-->
     </af:inputComboboxListOfValues>
   </af:panelFormLayout>
   <af:button text="Save" id="b1" action="tocommit"/>

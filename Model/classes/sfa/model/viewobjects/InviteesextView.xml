@@ -95,6 +95,8 @@
       <SchemaBasedProperties>
         <CONTROLTYPE
           Value="combo_lov"/>
+        <LABEL
+          ResId="sfa.model.viewobjects.InviteesextView.Userid_LABEL"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
