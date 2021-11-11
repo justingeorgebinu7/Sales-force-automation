@@ -57,15 +57,16 @@
                 <af:commandMenuItem text="Delete" id="cmi4" action="toDeleteExt"/>
               </af:menuBar>
             </f:facet>
-            <af:table value="#{bindings.InviteesView4.collectionModel}" var="row"
-                      rows="#{bindings.InviteesView4.rangeSize}"
-                      emptyText="#{bindings.InviteesView4.viewable ? 'No data to display.' : 'Access Denied.'}"
-                      rowBandingInterval="0" selectedRowKeys="#{bindings.InviteesView4.collectionModel.selectedRow}"
-                      selectionListener="#{bindings.InviteesView4.collectionModel.makeCurrent}" rowSelection="single"
-                      fetchSize="#{bindings.InviteesView4.rangeSize}" id="t2" columnStretching="last">
-              <af:column sortProperty="#{bindings.InviteesView4.hints.Name1.name}" sortable="true"
-                         headerText="#{bindings.InviteesView4.hints.Name1.label}" id="c2">
-                <af:outputText value="#{row.Name1}" shortDesc="#{bindings.InviteesView4.hints.Name1.tooltip}" id="ot2"/>
+            <af:table value="#{bindings.InviteesextView5.collectionModel}" var="row"
+                      rows="#{bindings.InviteesextView5.rangeSize}"
+                      emptyText="#{bindings.InviteesextView5.viewable ? 'No data to display.' : 'Access Denied.'}"
+                      rowBandingInterval="0" selectedRowKeys="#{bindings.InviteesextView5.collectionModel.selectedRow}"
+                      selectionListener="#{bindings.InviteesextView5.collectionModel.makeCurrent}" rowSelection="single"
+                      fetchSize="#{bindings.InviteesextView5.rangeSize}" id="t1" columnStretching="last">
+              <af:column sortProperty="#{bindings.InviteesextView5.hints.Firstname.name}" sortable="true"
+                         headerText="#{bindings.InviteesextView5.hints.Firstname.label}" id="c1">
+                <af:outputText value="#{row.Firstname}" shortDesc="#{bindings.InviteesextView5.hints.Firstname.tooltip}"
+                               id="ot1"/>
               </af:column>
             </af:table>
           </af:panelBox>
@@ -78,16 +79,15 @@
                 <af:commandMenuItem text="Delete" id="cmi2" action="deleteInternal"/>
               </af:menuBar>
             </f:facet>
-            <af:table value="#{bindings.InviteesextView5.collectionModel}" var="row"
-                      rows="#{bindings.InviteesextView5.rangeSize}"
-                      emptyText="#{bindings.InviteesextView5.viewable ? 'No data to display.' : 'Access Denied.'}"
-                      rowBandingInterval="0" selectedRowKeys="#{bindings.InviteesextView5.collectionModel.selectedRow}"
-                      selectionListener="#{bindings.InviteesextView5.collectionModel.makeCurrent}" rowSelection="single"
-                      fetchSize="#{bindings.InviteesextView5.rangeSize}" id="t1" columnStretching="last">
-              <af:column sortProperty="#{bindings.InviteesextView5.hints.Firstname.name}" sortable="true"
-                         headerText="#{bindings.InviteesextView5.hints.Firstname.label}" id="c1">
-                <af:outputText value="#{row.Firstname}" shortDesc="#{bindings.InviteesextView5.hints.Firstname.tooltip}"
-                               id="ot1"/>
+            <af:table value="#{bindings.InviteesView4.collectionModel}" var="row"
+                      rows="#{bindings.InviteesView4.rangeSize}"
+                      emptyText="#{bindings.InviteesView4.viewable ? 'No data to display.' : 'Access Denied.'}"
+                      rowBandingInterval="0" selectedRowKeys="#{bindings.InviteesView4.collectionModel.selectedRow}"
+                      selectionListener="#{bindings.InviteesView4.collectionModel.makeCurrent}" rowSelection="single"
+                      fetchSize="#{bindings.InviteesView4.rangeSize}" id="t2" columnStretching="last">
+              <af:column sortProperty="#{bindings.InviteesView4.hints.Name1.name}" sortable="true"
+                         headerText="#{bindings.InviteesView4.hints.Name1.label}" id="c2">
+                <af:outputText value="#{row.Name1}" shortDesc="#{bindings.InviteesView4.hints.Name1.tooltip}" id="ot2"/>
               </af:column>
             </af:table>
           </af:panelBox>

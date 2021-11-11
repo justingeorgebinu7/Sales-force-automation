@@ -141,7 +141,7 @@
       <property
          name="fromOutcome">addInviteeInternal</property>
       <property
-         name="sdm:polyPoints">T50,448.0,197.35132,774.9763,-33.109375,L50</property>
+         name="sdm:polyPoints">T50,448.0,198.74121,776.3662,-33.109375,L50</property>
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall15">
