@@ -53,11 +53,15 @@
         <Item Value="Influencelevel"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="CustomercontactsView1Iterator" id="Isprimarycontact">
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+    <button IterBinding="CustomercontactsView1Iterator" id="Isprimarycontact" DTSupportsMRU="false" StaticList="true">
       <AttrNames>
         <Item Value="Isprimarycontact"/>
       </AttrNames>
-    </attributeValues>
-    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+      <ValueList>
+        <Item Value="Y"/>
+        <Item Value="N"/>
+      </ValueList>
+    </button>
   </bindings>
 </pageDefinition>

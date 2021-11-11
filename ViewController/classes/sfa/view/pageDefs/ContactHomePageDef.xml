@@ -20,9 +20,18 @@
           <Item Value="Email"/>
           <Item Value="Buyingrole"/>
           <Item Value="Influencelevel"/>
-          <Item Value="Isprimarycontact"/>
+          <Item Value="Isprimarycontact" Binds="Isprimarycontact"/>
         </AttrNames>
       </nodeDefinition>
     </tree>
+    <button IterBinding="CustomercontactsView1Iterator" id="Isprimarycontact" DTSupportsMRU="false" StaticList="true">
+      <AttrNames>
+        <Item Value="Isprimarycontact"/>
+      </AttrNames>
+      <ValueList>
+        <Item Value="Y"/>
+        <Item Value="N"/>
+      </ValueList>
+    </button>
   </bindings>
 </pageDefinition>

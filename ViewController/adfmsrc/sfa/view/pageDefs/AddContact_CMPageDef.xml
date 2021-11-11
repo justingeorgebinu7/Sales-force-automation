@@ -39,10 +39,14 @@
           DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
     <list IterBinding="CustomercontactsView1Iterator" StaticList="false" Uses="LOV_Influencelevel" id="Influencelevel"
           DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
-    <attributeValues IterBinding="CustomercontactsView1Iterator" id="Isprimarycontact">
+    <button IterBinding="CustomercontactsView1Iterator" id="Isprimarycontact" DTSupportsMRU="false" StaticList="true">
       <AttrNames>
         <Item Value="Isprimarycontact"/>
       </AttrNames>
-    </attributeValues>
+      <ValueList>
+        <Item Value="Y"/>
+        <Item Value="N"/>
+      </ValueList>
+    </button>
   </bindings>
 </pageDefinition>

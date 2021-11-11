@@ -58,14 +58,10 @@
                         shortDesc="#{bindings.Influencelevel.hints.tooltip}" id="it7">
             <f:validator binding="#{bindings.Influencelevel.validator}"/>
           </af:inputText>
-          <af:inputText value="#{bindings.Isprimarycontact.inputValue}" label="#{bindings.Isprimarycontact.hints.label}"
-                        required="#{bindings.Isprimarycontact.hints.mandatory}"
-                        columns="#{bindings.Isprimarycontact.hints.displayWidth}"
-                        maximumLength="#{bindings.Isprimarycontact.hints.precision}"
-                        shortDesc="#{bindings.Isprimarycontact.hints.tooltip}" id="it8">
-            <f:validator binding="#{bindings.Isprimarycontact.validator}"/>
-          </af:inputText>
           <f:facet name="footer">
+            <af:selectBooleanCheckbox value="#{bindings.Isprimarycontact.inputValue}"
+                                      label="#{bindings.Isprimarycontact.label}"
+                                      shortDesc="#{bindings.Isprimarycontact.hints.tooltip}" id="sbc1"/>
             <af:button text="Save" id="b1" actionListener="#{bindings.Commit.execute}"
                        disabled="false"/>
           </f:facet>

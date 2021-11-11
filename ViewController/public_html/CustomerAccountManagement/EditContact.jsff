@@ -32,32 +32,21 @@
                   id="it5">
       <f:validator binding="#{bindings.Email.validator}"/>
     </af:inputText>
-    <af:inputComboboxListOfValues id="buyingroleId" popupTitle="Search and Select: #{bindings.Buyingrole.hints.label}"
-                                  value="#{bindings.Buyingrole.inputValue}" label="#{bindings.Buyingrole.hints.label}"
-                                  model="#{bindings.Buyingrole.listOfValuesModel}"
-                                  required="#{bindings.Buyingrole.hints.mandatory}"
-                                  columns="#{bindings.Buyingrole.hints.displayWidth}"
-                                  shortDesc="#{bindings.Buyingrole.hints.tooltip}">
+    <af:selectOneChoice value="#{bindings.Buyingrole.inputValue}" label="#{bindings.Buyingrole.label}"
+                        required="#{bindings.Buyingrole.hints.mandatory}"
+                        shortDesc="#{bindings.Buyingrole.hints.tooltip}" id="soc1">
+      <f:selectItems value="#{bindings.Buyingrole.items}" id="si1"/>
       <f:validator binding="#{bindings.Buyingrole.validator}"/>
-    </af:inputComboboxListOfValues>
-    <af:inputComboboxListOfValues id="influencelevelId"
-                                  popupTitle="Search and Select: #{bindings.Influencelevel.hints.label}"
-                                  value="#{bindings.Influencelevel.inputValue}"
-                                  label="#{bindings.Influencelevel.hints.label}"
-                                  model="#{bindings.Influencelevel.listOfValuesModel}"
-                                  required="#{bindings.Influencelevel.hints.mandatory}"
-                                  columns="#{bindings.Influencelevel.hints.displayWidth}"
-                                  shortDesc="#{bindings.Influencelevel.hints.tooltip}">
+    </af:selectOneChoice>
+    <af:selectOneChoice value="#{bindings.Influencelevel.inputValue}" label="#{bindings.Influencelevel.label}"
+                        required="#{bindings.Influencelevel.hints.mandatory}"
+                        shortDesc="#{bindings.Influencelevel.hints.tooltip}" id="soc2">
+      <f:selectItems value="#{bindings.Influencelevel.items}" id="si2"/>
       <f:validator binding="#{bindings.Influencelevel.validator}"/>
-    </af:inputComboboxListOfValues>
-    <af:inputText value="#{bindings.Isprimarycontact.inputValue}" label="#{bindings.Isprimarycontact.hints.label}"
-                  required="#{bindings.Isprimarycontact.hints.mandatory}"
-                  columns="#{bindings.Isprimarycontact.hints.displayWidth}"
-                  maximumLength="#{bindings.Isprimarycontact.hints.precision}"
-                  shortDesc="#{bindings.Isprimarycontact.hints.tooltip}" id="it8">
-      <f:validator binding="#{bindings.Isprimarycontact.validator}"/>
-    </af:inputText>
+    </af:selectOneChoice>
   </af:panelFormLayout>
-  <af:button actionListener="#{bindings.Commit.execute}" text="Save" id="b1"/>
-  <af:button text="Back" id="b2" action="backfromedit"/>
+  <af:selectBooleanCheckbox value="#{bindings.Isprimarycontact.inputValue}" label="#{bindings.Isprimarycontact.label}"
+                            shortDesc="#{bindings.Isprimarycontact.hints.tooltip}" id="sbc1"/>
+  <af:button actionListener="#{bindings.Commit.execute}" text="Save" id="b1" action="backFromEdit"/>
+  <af:button text="Back" id="b2" action="backFromEdit"/>
 </ui:composition>

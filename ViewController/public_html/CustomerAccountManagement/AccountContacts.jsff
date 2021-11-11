@@ -11,7 +11,7 @@
     <af:column sortProperty="#{bindings.CustomercontactsView2.hints.Name.name}" filterable="true" sortable="true"
                headerText="#{bindings.CustomercontactsView2.hints.Name.label}" id="c1">
       <af:link shortDesc="#{bindings.CustomercontactsView2.hints.Name.tooltip}" id="ot1" text="#{row.Name}"
-               action="toedit"/>
+               action="editContact"/>
     </af:column>
     <af:column sortProperty="#{bindings.CustomercontactsView2.hints.Title.name}" filterable="true" sortable="true"
                headerText="#{bindings.CustomercontactsView2.hints.Title.label}" id="c2">

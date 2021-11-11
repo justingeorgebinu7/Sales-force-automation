@@ -13,6 +13,12 @@
         <Item Value="Contactid"/>
       </AttrNames>
     </attributeValues>
+    <attributeValues IterBinding="CustomercontactsView2Iterator" id="Customeraccountid">
+      <AttrNames>
+        <Item Value="Customeraccountid"/>
+      </AttrNames>
+    </attributeValues>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
     <attributeValues IterBinding="CustomercontactsView2Iterator" id="Name">
       <AttrNames>
         <Item Value="Name"/>
@@ -21,11 +27,6 @@
     <attributeValues IterBinding="CustomercontactsView2Iterator" id="Title">
       <AttrNames>
         <Item Value="Title"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="CustomercontactsView2Iterator" id="Customeraccountid">
-      <AttrNames>
-        <Item Value="Customeraccountid"/>
       </AttrNames>
     </attributeValues>
     <attributeValues IterBinding="CustomercontactsView2Iterator" id="Department">
@@ -43,14 +44,18 @@
         <Item Value="Email"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="CustomercontactsView2Iterator" id="Isprimarycontact">
+    <list IterBinding="CustomercontactsView2Iterator" StaticList="false" Uses="LOV_Buyingrole" id="Buyingrole"
+          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
+    <list IterBinding="CustomercontactsView2Iterator" StaticList="false" Uses="LOV_Influencelevel" id="Influencelevel"
+          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
+    <button IterBinding="CustomercontactsView2Iterator" id="Isprimarycontact" DTSupportsMRU="false" StaticList="true">
       <AttrNames>
         <Item Value="Isprimarycontact"/>
       </AttrNames>
-    </attributeValues>
-    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
-    <listOfValues IterBinding="CustomercontactsView2Iterator" StaticList="false" Uses="LOV_Influencelevel"
-                  id="Influencelevel"/>
-    <listOfValues IterBinding="CustomercontactsView2Iterator" StaticList="false" Uses="LOV_Buyingrole" id="Buyingrole"/>
+      <ValueList>
+        <Item Value="Y"/>
+        <Item Value="N"/>
+      </ValueList>
+    </button>
   </bindings>
 </pageDefinition>
