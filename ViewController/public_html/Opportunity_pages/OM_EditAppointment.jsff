@@ -49,7 +49,7 @@
       </af:panelBox>
     </f:facet>
     <f:facet name="second">
-      <af:panelSplitter id="ps2" splitterPosition="442">
+      <af:panelSplitter id="ps2" splitterPosition="369">
         <f:facet name="first">
           <af:panelBox text="Invitees - Contact" id="pb1">
             <f:facet name="toolbar">

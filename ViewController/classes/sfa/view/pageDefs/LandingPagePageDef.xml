@@ -4,20 +4,18 @@
   <parameters/>
   <executables>
     <variableIterator id="variables"/>
-    <taskFlow id="CustomerAccountHomePageAddTF1"
-              taskFlowId="/WEB-INF/customerAccountTaskFlows/CustomerAccountHomePageAddTF.xml#CustomerAccountHomePageAddTF"
-              activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
-    <taskFlow id="conactManagementParent1"
-              taskFlowId="/WEB-INF/ContactManagement/conactManagementParent.xml#conactManagementParent"
-              activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
-    <taskFlow id="Opportunity_main1" taskFlowId="/WEB-INF/Opportunity_TaskFLows/Opportunity_main.xml#Opportunity_main"
-              activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
-    <taskFlow id="productCatalog1" taskFlowId="/WEB-INF/Productcatalog/productCatalog.xml#productCatalog"
-              activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
-    <taskFlow id="userManagementMain1" taskFlowId="/WEB-INF/UserManagement/userManagementMain.xml#userManagementMain"
-              activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
-    <taskFlow id="RoleManagement1" taskFlowId="/WEB-INF/RoleManagement/RoleManagement.xml#RoleManagement"
-              activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <taskFlow id="dynamicRegion1" taskFlowId="${viewScope.UserTFBean.dynamicTaskFlowId}" activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <taskFlow id="dynamicRegion2" taskFlowId="${viewScope.UserTFBean.dynamicTaskFlowId1}" activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <taskFlow id="dynamicRegion3" taskFlowId="${viewScope.UserTFBean.dynamicTaskFlowId2}" activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <taskFlow id="dynamicRegion4" taskFlowId="${viewScope.UserTFBean.dynamicTaskFlowId3}" activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <taskFlow id="dynamicRegion5" taskFlowId="${viewScope.UserTFBean.dynamicTaskFlowId4}" activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <taskFlow id="dynamicRegion6" taskFlowId="${viewScope.UserTFBean.dynamicTaskFlowId5}" activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
   </executables>
   <bindings/>
 </pageDefinition>
