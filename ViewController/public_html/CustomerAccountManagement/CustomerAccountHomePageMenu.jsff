@@ -17,6 +17,9 @@
           <af:showDetailItem id="sdi1" text="Manage Account" disclosed="true">
             <af:region value="#{bindings.ManageCusiomerAccount1.regionModel}" id="r1"/>
           </af:showDetailItem>
+          <af:showDetailItem text="Address" id="sdi7">
+            <af:region value="#{bindings.addressOfAccount1.regionModel}" id="r7"/>
+          </af:showDetailItem>
           <af:showDetailItem id="sdi3" text="Contacts">
             <af:region value="#{bindings.CustomerAccountContacts1.regionModel}" id="r3"/>
           </af:showDetailItem>

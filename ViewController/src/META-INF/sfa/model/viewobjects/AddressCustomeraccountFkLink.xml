@@ -3,10 +3,15 @@
 <!---->
 <ViewLink
   xmlns="http://xmlns.oracle.com/bc4j"
-  Name="AddressCustomeraccountFkLink"
+  Name="AddressCustomerAccountFkLink"
   Version="12.2.1.22.48"
-  InheritPersonalization="merge"
-  EntityAssociation="sfa.model.entities.AddressCustomeraccountFkAssoc">
+  InheritPersonalization="merge">
+  <Properties>
+    <SchemaBasedProperties>
+      <LABEL
+        ResId="sfa.model.viewobjects.AddressCustomerAccountFkLink_LABEL"/>
+    </SchemaBasedProperties>
+  </Properties>
   <ViewLinkDefEnd
     Name="CustomeraccountView"
     Cardinality="1"
@@ -14,7 +19,7 @@
     Owner="sfa.model.viewobjects.CustomeraccountView">
     <DesignTime>
       <Attr Name="_isUpdateable" Value="true"/>
-      <Attr Name="_minCardinality" Value="1"/>
+      <Attr Name="_accessor" Value="true"/>
       <Attr Name="_finderName" Value="CustomeraccountView"/>
     </DesignTime>
     <AttrArray Name="Attributes">
@@ -23,7 +28,7 @@
   </ViewLinkDefEnd>
   <ViewLinkDefEnd
     Name="AddressView"
-    Cardinality="1"
+    Cardinality="-1"
     Owner="sfa.model.viewobjects.AddressView">
     <DesignTime>
       <Attr Name="_isUpdateable" Value="true"/>
@@ -33,4 +38,8 @@
       <Item Value="sfa.model.viewobjects.AddressView.Accountid"/>
     </AttrArray>
   </ViewLinkDefEnd>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="sfa.model.ModelBundle"/>
+  </ResourceBundle>
 </ViewLink>

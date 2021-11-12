@@ -404,6 +404,19 @@
           usageId="sfa_view_OM_FileDelete_OM_FileDelete_DeletePageDef"/>
     <page path="/WEB-INF/Opportunity_TaskFLows/OM_FileDelete.xml#OM_FileDelete@Commit"
           usageId="sfa_view_OM_FileDelete_OM_FileDelete_CommitPageDef"/>
+    <page path="/CustomerAccountManagement/addressTable.jsff" usageId="sfa_view_addressTablePageDef"/>
+    <page path="/WEB-INF/customerAccountTaskFlows/createAddressTf.xml#createAddressTf@CreateInsert"
+          usageId="sfa_view_createAddressTf_createAddressTf_CreateInsertPageDef"/>
+    <page path="/WEB-INF/customerAccountTaskFlows/createAddressTf.xml#createAddressTf@Delete"
+          usageId="sfa_view_createAddressTf_createAddressTf_DeletePageDef"/>
+    <page path="/WEB-INF/customerAccountTaskFlows/createAddressTf.xml#createAddressTf@Commit"
+          usageId="sfa_view_createAddressTf_createAddressTf_CommitPageDef"/>
+    <page path="/WEB-INF/customerAccountTaskFlows/deleteAddressTF.xml#deleteAddressTF@Commit"
+          usageId="sfa_view_deleteAddressTF_deleteAddressTF_CommitPageDef"/>
+    <page path="/WEB-INF/customerAccountTaskFlows/deleteAddressTF.xml#deleteAddressTF@Delete"
+          usageId="sfa_view_deleteAddressTF_deleteAddressTF_DeletePageDef"/>
+    <page path="/CustomerAccountManagement/editAddress.jsff" usageId="sfa_view_editAddressPageDef"/>
+    <page path="/CustomerAccountManagement/createAddress.jsff" usageId="sfa_view_createAddressPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="sfa_view_untitled2PageDef" path="sfa.view.pageDefs.untitled2PageDef"/>
@@ -800,6 +813,19 @@
           path="Opportunity_TaskFLows.OM_FileDelete_OM_FileDelete_DeletePageDef"/>
     <page id="sfa_view_OM_FileDelete_OM_FileDelete_CommitPageDef"
           path="Opportunity_TaskFLows.OM_FileDelete_OM_FileDelete_CommitPageDef"/>
+    <page id="sfa_view_addressTablePageDef" path="CustomerAccountManagement.addressTablePageDef"/>
+    <page id="sfa_view_createAddressTf_createAddressTf_CreateInsertPageDef"
+          path="customerAccountTaskFlows.createAddressTf_createAddressTf_CreateInsertPageDef"/>
+    <page id="sfa_view_createAddressTf_createAddressTf_DeletePageDef"
+          path="customerAccountTaskFlows.createAddressTf_createAddressTf_DeletePageDef"/>
+    <page id="sfa_view_createAddressTf_createAddressTf_CommitPageDef"
+          path="customerAccountTaskFlows.createAddressTf_createAddressTf_CommitPageDef"/>
+    <page id="sfa_view_deleteAddressTF_deleteAddressTF_CommitPageDef"
+          path="customerAccountTaskFlows.deleteAddressTF_deleteAddressTF_CommitPageDef"/>
+    <page id="sfa_view_deleteAddressTF_deleteAddressTF_DeletePageDef"
+          path="customerAccountTaskFlows.deleteAddressTF_deleteAddressTF_DeletePageDef"/>
+    <page id="sfa_view_editAddressPageDef" path="CustomerAccountManagement.editAddressPageDef"/>
+    <page id="sfa_view_createAddressPageDef" path="CustomerAccountManagement.createAddressPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="sfa.model.entities"

@@ -1,0 +1,14 @@
+//Groovy Scripts for sfa.model.entities.Addresss
+
+package sfa.model.entities
+import oracle.jbo.script.annotation.TransientValueExpression;
+import oracle.jbo.server.SequenceImpl;
+import groovy.transform.TypeChecked;
+import groovy.transform.TypeCheckingMode;
+@TransientValueExpression(attributeName="Addressid")
+@TypeChecked(TypeCheckingMode.SKIP)
+def Addressid_ExpressionScript_Expression()
+{
+(new oracle.jbo.server.SequenceImpl("COMMONSEQUENCE",adf.object.getDBTransaction())).getSequenceNumber()
+}
+

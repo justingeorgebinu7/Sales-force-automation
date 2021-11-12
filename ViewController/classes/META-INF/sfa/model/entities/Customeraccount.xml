@@ -155,13 +155,6 @@
     </Properties>
   </Attribute>
   <AccessorAttribute
-    Name="Address"
-    Association="sfa.model.entities.AddressCustomeraccountFkAssoc"
-    AssociationEnd="sfa.model.entities.AddressCustomeraccountFkAssoc.Address"
-    AssociationOtherEnd="sfa.model.entities.AddressCustomeraccountFkAssoc.Customeraccount"
-    Type="oracle.jbo.server.EntityImpl"
-    IsUpdateable="true"/>
-  <AccessorAttribute
     Name="Customercontacts"
     Association="sfa.model.entities.ContactAccountFkAssoc"
     AssociationEnd="sfa.model.entities.ContactAccountFkAssoc.Customercontacts"
@@ -208,6 +201,13 @@
     Association="sfa.model.entities.InteractionAccountAssoc"
     AssociationEnd="sfa.model.entities.InteractionAccountAssoc.Interaction"
     AssociationOtherEnd="sfa.model.entities.InteractionAccountAssoc.Customeraccount"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="Address"
+    Association="sfa.model.entities.AddressCustomerAccountFkAssoc"
+    AssociationEnd="sfa.model.entities.AddressCustomerAccountFkAssoc.Address"
+    AssociationOtherEnd="sfa.model.entities.AddressCustomerAccountFkAssoc.Customeraccount"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
   <Key

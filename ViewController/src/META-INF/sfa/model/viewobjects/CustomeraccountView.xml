@@ -128,11 +128,6 @@
     </Properties>
   </ViewAttribute>
   <ViewLinkAccessor
-    Name="AddressView"
-    ViewLink="sfa.model.viewobjects.AddressCustomeraccountFkLink"
-    Type="oracle.jbo.Row"
-    IsUpdateable="false"/>
-  <ViewLinkAccessor
     Name="CustomercontactsView"
     ViewLink="sfa.model.viewobjects.ContactAccountFkLink"
     Type="oracle.jbo.RowIterator"
@@ -165,6 +160,11 @@
   <ViewLinkAccessor
     Name="InteractionView"
     ViewLink="sfa.model.entities.InteractionAccountFKLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="AddressView"
+    ViewLink="sfa.model.viewobjects.AddressCustomerAccountFkLink"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
 </ViewObject>

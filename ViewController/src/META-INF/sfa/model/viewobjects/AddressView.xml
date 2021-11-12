@@ -12,7 +12,8 @@
   BindingStyle="OracleName"
   CustomQuery="false"
   SelectAllAttributes="false"
-  PageIterMode="Full">
+  PageIterMode="Full"
+  AccessMode="DEFAULT">
   <EntityUsage
     Name="Address"
     Entity="sfa.model.entities.Address"/>
@@ -49,4 +50,22 @@
     EntityAttrName="Accountid"
     EntityUsage="Address"
     AliasName="ACCOUNTID"/>
+  <ViewAttribute
+    Name="ContactNumber"
+    PrecisionRule="true"
+    EntityAttrName="ContactNumber"
+    EntityUsage="Address"
+    AliasName="CONTACT_NUMBER"/>
+  <ViewAttribute
+    Name="Type"
+    PrecisionRule="true"
+    EntityAttrName="Type"
+    EntityUsage="Address"
+    AliasName="TYPE"/>
+  <ViewLinkAccessor
+    Name="CustomeraccountView"
+    ViewLink="sfa.model.viewobjects.AddressCustomerAccountFkLink"
+    Type="oracle.jbo.Row"
+    Reversed="true"
+    IsUpdateable="false"/>
 </ViewObject>

@@ -3,7 +3,7 @@
 <!---->
 <Association
   xmlns="http://xmlns.oracle.com/bc4j"
-  Name="AddressCustomeraccountFkAssoc"
+  Name="AddressCustomerAccountFkAssoc"
   Version="12.2.1.22.48"
   InheritPersonalization="merge">
   <DesignTime>
@@ -13,7 +13,9 @@
     Name="Customeraccount"
     Cardinality="1"
     Source="true"
-    Owner="sfa.model.entities.Customeraccount">
+    Owner="sfa.model.entities.Customeraccount"
+    CascadeDelete="true"
+    LockLevel="NONE">
     <DesignTime>
       <Attr Name="_isUpdateable" Value="true"/>
       <Attr Name="_minCardinality" Value="1"/>
@@ -27,13 +29,13 @@
   </AssociationEnd>
   <AssociationEnd
     Name="Address"
-    Cardinality="1"
+    Cardinality="-1"
     Owner="sfa.model.entities.Address">
     <DesignTime>
       <Attr Name="_isUpdateable" Value="true"/>
       <Attr Name="_aggregation" Value="0"/>
       <Attr Name="_finderName" Value="Address"/>
-      <Attr Name="_foreignKey" Value="sfa.model.entities.Address.AddressCustomeraccountFk"/>
+      <Attr Name="_foreignKey" Value="sfa.model.entities.Address.fk_Address"/>
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="sfa.model.entities.Address.Accountid"/>

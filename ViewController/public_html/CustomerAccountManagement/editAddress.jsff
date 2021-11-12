@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:f="http://java.sun.com/jsf/core">
+  <af:panelFormLayout id="pfl1">
+    <af:inputText value="#{bindings.Type.inputValue}" label="#{bindings.Type.hints.label}"
+                  required="#{bindings.Type.hints.mandatory}" columns="#{bindings.Type.hints.displayWidth}"
+                  maximumLength="#{bindings.Type.hints.precision}" shortDesc="#{bindings.Type.hints.tooltip}" id="it1">
+      <f:validator binding="#{bindings.Type.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.City.inputValue}" label="#{bindings.City.hints.label}"
+                  required="#{bindings.City.hints.mandatory}" columns="#{bindings.City.hints.displayWidth}"
+                  maximumLength="#{bindings.City.hints.precision}" shortDesc="#{bindings.City.hints.tooltip}" id="it2">
+      <f:validator binding="#{bindings.City.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.State.inputValue}" label="#{bindings.State.hints.label}"
+                  required="#{bindings.State.hints.mandatory}" columns="#{bindings.State.hints.displayWidth}"
+                  maximumLength="#{bindings.State.hints.precision}" shortDesc="#{bindings.State.hints.tooltip}"
+                  id="it3">
+      <f:validator binding="#{bindings.State.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Country.inputValue}" label="#{bindings.Country.hints.label}"
+                  required="#{bindings.Country.hints.mandatory}" columns="#{bindings.Country.hints.displayWidth}"
+                  maximumLength="#{bindings.Country.hints.precision}" shortDesc="#{bindings.Country.hints.tooltip}"
+                  id="it4">
+      <f:validator binding="#{bindings.Country.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.ContactNumber.inputValue}" label="#{bindings.ContactNumber.hints.label}"
+                  required="#{bindings.ContactNumber.hints.mandatory}"
+                  columns="#{bindings.ContactNumber.hints.displayWidth}"
+                  maximumLength="#{bindings.ContactNumber.hints.precision}"
+                  shortDesc="#{bindings.ContactNumber.hints.tooltip}" id="it5">
+      <f:validator binding="#{bindings.ContactNumber.validator}"/>
+      <af:convertNumber groupingUsed="false" pattern="#{bindings.ContactNumber.format}"/>
+    </af:inputText>
+  </af:panelFormLayout>
+  <af:button actionListener="#{bindings.Commit.execute}" text="Save" id="b1"
+             action="back"/>
+  <af:button text="Cancel" id="b2" action="back"/>
+</ui:composition>

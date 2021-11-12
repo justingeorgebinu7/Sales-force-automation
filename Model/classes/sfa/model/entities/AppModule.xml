@@ -58,9 +58,6 @@
     Name="UserroleView1"
     ViewObjectName="sfa.model.viewobjects.UserroleView"/>
   <ViewUsage
-    Name="AddressView2"
-    ViewObjectName="sfa.model.viewobjects.AddressView"/>
-  <ViewUsage
     Name="ContactaddressView2"
     ViewObjectName="sfa.model.viewobjects.ContactaddressView"/>
   <ViewUsage
@@ -228,12 +225,15 @@
   <ViewUsage
     Name="FilesView4"
     ViewObjectName="sfa.model.viewobjects.FilesView"/>
-  <ViewLinkUsage
-    Name="AddressCustomeraccountFkLink1"
-    ViewLinkObjectName="sfa.model.viewobjects.AddressCustomeraccountFkLink"
-    SrcViewUsageName="sfa.model.entities.AppModule.CustomeraccountView1"
-    DstViewUsageName="sfa.model.entities.AppModule.AddressView2"
-    Reversed="false"/>
+  <ViewUsage
+    Name="CustomeraccountView3"
+    ViewObjectName="sfa.model.viewobjects.CustomeraccountView"/>
+  <ViewUsage
+    Name="AddressView3"
+    ViewObjectName="sfa.model.viewobjects.AddressView"/>
+  <ViewUsage
+    Name="AddressView4"
+    ViewObjectName="sfa.model.viewobjects.AddressView"/>
   <ViewLinkUsage
     Name="CaddressCustomercontactsFkLink1"
     ViewLinkObjectName="sfa.model.viewobjects.CaddressCustomercontactsFkLink"
@@ -510,8 +510,36 @@
     SrcViewUsageName="sfa.model.entities.AppModule.OpportunityView1"
     DstViewUsageName="sfa.model.entities.AppModule.FilesView4"
     Reversed="false"/>
+  <ViewLinkUsage
+    Name="AddressCustomerAccountFkLink"
+    ViewLinkObjectName="sfa.model.viewobjects.AddressCustomerAccountFkLink"
+    SrcViewUsageName="sfa.model.entities.AppModule.CustomeraccountView3"
+    DstViewUsageName="sfa.model.entities.AppModule.AddressView3"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="AddressCustomerAccountFkLink2"
+    ViewLinkObjectName="sfa.model.viewobjects.AddressCustomerAccountFkLink"
+    SrcViewUsageName="sfa.model.entities.AppModule.CustomeraccountView1"
+    DstViewUsageName="sfa.model.entities.AppModule.AddressView4"
+    Reversed="false"/>
   <ClientInterface
     Name="__clientInterface">
+    <Method
+      Name="setFileData"
+      MethodName="setFileData">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+      <Parameter
+        Name="name"
+        Type="java.lang.String"/>
+      <Parameter
+        Name="path"
+        Type="java.lang.String"/>
+      <Parameter
+        Name="contTyp"
+        Type="java.lang.String"/>
+    </Method>
     <Method
       Name="setFileData"
       MethodName="setFileData">

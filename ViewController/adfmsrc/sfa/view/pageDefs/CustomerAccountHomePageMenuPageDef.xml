@@ -21,6 +21,9 @@
     <taskFlow id="ManageCusiomerAccount1"
               taskFlowId="/WEB-INF/customerAccountTaskFlows/ManageCusiomerAccount.xml#ManageCusiomerAccount"
               activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <taskFlow id="addressOfAccount1"
+              taskFlowId="/WEB-INF/customerAccountTaskFlows/addressOfAccount.xml#addressOfAccount" activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
   </executables>
   <bindings/>
 </pageDefinition>

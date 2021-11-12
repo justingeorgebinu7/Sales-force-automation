@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <af:table value="#{bindings.AddressView4.collectionModel}" var="row" rows="#{bindings.AddressView4.rangeSize}"
+            emptyText="#{bindings.AddressView4.viewable ? 'No data to display.' : 'Access Denied.'}"
+            rowBandingInterval="0" selectedRowKeys="#{bindings.AddressView4.collectionModel.selectedRow}"
+            selectionListener="#{bindings.AddressView4.collectionModel.makeCurrent}" rowSelection="single"
+            fetchSize="#{bindings.AddressView4.rangeSize}" id="t1">
+    <af:column sortProperty="#{bindings.AddressView4.hints.Type.name}" sortable="true"
+               headerText="#{bindings.AddressView4.hints.Type.label}" id="c1">
+      <af:link shortDesc="#{bindings.AddressView4.hints.Type.tooltip}" id="ot1" text="#{row.Type}"
+               action="editAddress"/>
+    </af:column>
+    <af:column sortProperty="#{bindings.AddressView4.hints.City.name}" sortable="true"
+               headerText="#{bindings.AddressView4.hints.City.label}" id="c2">
+      <af:outputText value="#{row.City}" shortDesc="#{bindings.AddressView4.hints.City.tooltip}" id="ot2"/>
+    </af:column>
+    <af:column sortProperty="#{bindings.AddressView4.hints.State.name}" sortable="true"
+               headerText="#{bindings.AddressView4.hints.State.label}" id="c3">
+      <af:outputText value="#{row.State}" shortDesc="#{bindings.AddressView4.hints.State.tooltip}" id="ot3"/>
+    </af:column>
+    <af:column sortProperty="#{bindings.AddressView4.hints.Country.name}" sortable="true"
+               headerText="#{bindings.AddressView4.hints.Country.label}" id="c4">
+      <af:outputText value="#{row.Country}" shortDesc="#{bindings.AddressView4.hints.Country.tooltip}" id="ot4"/>
+    </af:column>
+    <af:column sortProperty="#{bindings.AddressView4.hints.ContactNumber.name}" sortable="true"
+               headerText="#{bindings.AddressView4.hints.ContactNumber.label}" id="c5">
+      <af:outputText value="#{row.ContactNumber}" shortDesc="#{bindings.AddressView4.hints.ContactNumber.tooltip}"
+                     id="ot5">
+        <af:convertNumber groupingUsed="false" pattern="#{bindings.AddressView4.hints.ContactNumber.format}"/>
+      </af:outputText>
+    </af:column>
+  </af:table>
+  <af:button text="Add" id="b1" action="createAddress"/>
+  <af:button text="Delete" action="deleteAddressTF1" id="b2"/>
+</ui:composition>

@@ -4,6 +4,7 @@ import oracle.jbo.Row;
 import oracle.jbo.ViewObject;
 import oracle.jbo.server.ApplicationModuleImpl;
 import oracle.jbo.server.ViewLinkImpl;
+
 import oracle.jbo.server.ViewObjectImpl;
 
 import sfa.model.entities.common.AppModule;
@@ -142,13 +143,6 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
         return (ViewObjectImpl) findViewObject("UserroleView1");
     }
 
-    /**
-     * Container's getter for AddressView2.
-     * @return AddressView2
-     */
-    public ViewObjectImpl getAddressView2() {
-        return (ViewObjectImpl) findViewObject("AddressView2");
-    }
 
     /**
      * Container's getter for ContactaddressView2.
@@ -627,16 +621,7 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
            fileVo.executeQuery();
 
        }
-   
-    
-    
-    /**
-     * Container's getter for AddressCustomeraccountFkLink1.
-     * @return AddressCustomeraccountFkLink1
-     */
-    public ViewLinkImpl getAddressCustomeraccountFkLink1() {
-        return (ViewLinkImpl) findViewLink("AddressCustomeraccountFkLink1");
-    }
+
 
     /**
      * Container's getter for CaddressCustomercontactsFkLink1.
@@ -1004,6 +989,46 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
      */
     public ViewLinkImpl getFilesOpportunityFkLink1() {
         return (ViewLinkImpl) findViewLink("FilesOpportunityFkLink1");
+    }
+
+    /**
+     * Container's getter for CustomeraccountView3.
+     * @return CustomeraccountView3
+     */
+    public ViewObjectImpl getCustomeraccountView3() {
+        return (ViewObjectImpl) findViewObject("CustomeraccountView3");
+    }
+
+    /**
+     * Container's getter for AddressView3.
+     * @return AddressView3
+     */
+    public ViewObjectImpl getAddressView3() {
+        return (ViewObjectImpl) findViewObject("AddressView3");
+    }
+
+    /**
+     * Container's getter for AddressCustomerAccountFkLink.
+     * @return AddressCustomerAccountFkLink
+     */
+    public ViewLinkImpl getAddressCustomerAccountFkLink() {
+        return (ViewLinkImpl) findViewLink("AddressCustomerAccountFkLink");
+    }
+
+    /**
+     * Container's getter for AddressView4.
+     * @return AddressView4
+     */
+    public ViewObjectImpl getAddressView4() {
+        return (ViewObjectImpl) findViewObject("AddressView4");
+    }
+
+    /**
+     * Container's getter for AddressCustomerAccountFkLink2.
+     * @return AddressCustomerAccountFkLink2
+     */
+    public ViewLinkImpl getAddressCustomerAccountFkLink2() {
+        return (ViewLinkImpl) findViewLink("AddressCustomerAccountFkLink2");
     }
 }
 
