@@ -14,6 +14,7 @@ import java.io.OutputStream;
 
 import java.util.List;
 
+import javax.faces.application.NavigationHandler;
 import javax.faces.context.FacesContext;
 
 import javax.faces.event.ValueChangeEvent;
@@ -183,4 +184,36 @@ public class FileBean {
     }
 
 
+    
+
+    public String deleteButton() {
+        
+        FacesContext fc = FacesContext.getCurrentInstance();
+        String filepath = fc.getApplication().evaluateExpressionGet(fc, "#{row.filepath}", String.class);
+        System.out.println(filepath);
+        File f = new File(filepath);
+        if(f.delete()) {
+            System.out.println("Done");
+        }
+        else{
+            System.out.println("Unsuccesful");
+        }
+        try {
+
+        NavigationHandler nvHndlr = FacesContext.getCurrentInstance()
+
+        .getApplication()
+
+        .getNavigationHandler();
+
+        nvHndlr.handleNavigation(FacesContext.getCurrentInstance(), null, "delFile");
+
+        } catch (Exception ex) {
+
+        ex.printStackTrace();
+
+        }
+       
+        return null;
+    }
 }

@@ -400,6 +400,10 @@
     <page path="/WEB-INF/Opportunity_TaskFLows/deleteRevenueItem.xml#deleteRevenueItem@Commit"
           usageId="sfa_view_deleteRevenueItem_deleteRevenueItem_CommitPageDef"/>
     <page path="/editRevenueItem.jsff" usageId="sfa_view_editRevenueItemPageDef"/>
+    <page path="/WEB-INF/Opportunity_TaskFLows/OM_FileDelete.xml#OM_FileDelete@Delete"
+          usageId="sfa_view_OM_FileDelete_OM_FileDelete_DeletePageDef"/>
+    <page path="/WEB-INF/Opportunity_TaskFLows/OM_FileDelete.xml#OM_FileDelete@Commit"
+          usageId="sfa_view_OM_FileDelete_OM_FileDelete_CommitPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="sfa_view_untitled2PageDef" path="sfa.view.pageDefs.untitled2PageDef"/>
@@ -792,6 +796,10 @@
     <page id="sfa_view_deleteRevenueItem_deleteRevenueItem_CommitPageDef"
           path="Opportunity_TaskFLows.deleteRevenueItem_deleteRevenueItem_CommitPageDef"/>
     <page id="sfa_view_editRevenueItemPageDef" path="sfa.view.pageDefs.editRevenueItemPageDef"/>
+    <page id="sfa_view_OM_FileDelete_OM_FileDelete_DeletePageDef"
+          path="Opportunity_TaskFLows.OM_FileDelete_OM_FileDelete_DeletePageDef"/>
+    <page id="sfa_view_OM_FileDelete_OM_FileDelete_CommitPageDef"
+          path="Opportunity_TaskFLows.OM_FileDelete_OM_FileDelete_CommitPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="sfa.model.entities"

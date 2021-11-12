@@ -108,6 +108,32 @@
       <af:showDetailItem text="Revenue Item" id="sdi7">
         <af:region value="#{bindings.revenueItem1.regionModel}" id="r5"/>
       </af:showDetailItem>
+      <af:showDetailItem text="Documents" id="sdi8">
+        <af:inputFile id="if2" value="#{FileBean.myFile}"/>
+        <af:button text="Upload" id="b3" action="#{FileBean.buttonAction}" partialSubmit="true"/>
+        <af:table value="#{bindings.FilesView4.collectionModel}" var="row" rows="#{bindings.FilesView4.rangeSize}"
+                  emptyText="#{bindings.FilesView4.viewable ? 'No data to display.' : 'Access Denied.'}"
+                  rowBandingInterval="0" selectedRowKeys="#{bindings.FilesView4.collectionModel.selectedRow}"
+                  selectionListener="#{bindings.FilesView4.collectionModel.makeCurrent}" rowSelection="single"
+                  fetchSize="#{bindings.FilesView4.rangeSize}" filterModel="#{bindings.FilesView4Query.queryDescriptor}"
+                  filterVisible="true" queryListener="#{bindings.FilesView4Query.processQuery}" varStatus="vs" id="t1"
+                  partialTriggers="::b3">
+          <af:column sortProperty="#{bindings.FilesView4.hints.Filename.name}" filterable="true" sortable="true"
+                     headerText="#{bindings.FilesView4.hints.Filename.label}" id="c2">
+            <af:link shortDesc="#{bindings.FilesView4.hints.Filename.tooltip}" id="ot2" text="#{row.Filename}">
+              <af:fileDownloadActionListener method="#{FileBean.downloadFileListener}"/>
+            </af:link>
+          </af:column>
+          <af:column sortProperty="#{bindings.FilesView4.hints.Filetype.name}" filterable="true" sortable="true"
+                     headerText="#{bindings.FilesView4.hints.Filetype.label}" id="c3">
+            <af:outputText value="#{row.Filetype}" shortDesc="#{bindings.FilesView4.hints.Filetype.tooltip}" id="ot3"/>
+          </af:column>
+          <af:column id="c5">
+            <af:link shortDesc="#{bindings.FilesView4.hints.Filetype.tooltip}" id="ot5" text="Delete"
+                     action="#{FileBean.deleteButton}"/>
+          </af:column>
+        </af:table>
+      </af:showDetailItem>
       <af:showDetailItem id="sdi2" text="Notes">
         <af:region value="#{bindings.OM_NotesMain1.regionModel}" id="r1"/>
       </af:showDetailItem>
@@ -119,64 +145,6 @@
       </af:showDetailItem>
       <af:showDetailItem id="sdi6" text="Interaction">
         <af:region value="#{bindings.OM_Interactions1.regionModel}" id="r4"/>
-      </af:showDetailItem>
-      <af:showDetailItem text="Documents" id="sdi3">
-        <af:panelSplitter id="ps1" orientation="horizontal" splitterPosition="400">
-          <f:facet name="first">
-            <af:panelSplitter id="ps2" orientation="vertical" splitterPosition="133">
-              <f:facet name="first">
-                <af:panelBox id="pb1">
-                  <f:facet name="toolbar"/>
-                  <af:spacer id="s1" height="30px"/>
-                  <af:inputFile label="Document upload" id="if1" value="#{fileUpload.file}" columns="100"/>
-                  <af:button text="Upload" id="b2" action="#{fileUpload.setFile}" partialSubmit="true"/>
-                </af:panelBox>
-              </f:facet>
-              <f:facet name="second">
-                <af:panelFormLayout id="pfl3" partialTriggers="b2">
-                  <f:facet name="footer"/>
-                  <af:inputText label="File name" id="it4" value="#{fileUpload.filename}" columns="20"/>
-                  <af:inputText label="File Size" id="it5" value="#{fileUpload.filesize}" columns="20"/>
-                  <af:inputText label="File type" id="it6" value="#{fileUpload.filetype}" columns="20"/>
-                </af:panelFormLayout>
-              </f:facet>
-            </af:panelSplitter>
-          </f:facet>
-          <f:facet name="second">
-            <af:panelFormLayout id="pfl2" partialTriggers="b2">
-              <f:facet name="footer"/>
-              <af:inputText label="File preview" id="it10" columns="220" rows="20" value="#{fileUpload.filecontents}"/>
-            </af:panelFormLayout>
-          </f:facet>
-        </af:panelSplitter>
-      </af:showDetailItem>
-      <af:showDetailItem text="Files" id="sdi8">
-        <af:inputFile label="File Upload" id="if2" value="#{FileBean.myFile}"/>
-        <af:button text="Upload" id="b3" action="#{FileBean.buttonAction}" partialSubmit="true"/>
-        <af:table value="#{bindings.FilesView4.collectionModel}" var="row" rows="#{bindings.FilesView4.rangeSize}"
-                  emptyText="#{bindings.FilesView4.viewable ? 'No data to display.' : 'Access Denied.'}"
-                  rowBandingInterval="0" selectedRowKeys="#{bindings.FilesView4.collectionModel.selectedRow}"
-                  selectionListener="#{bindings.FilesView4.collectionModel.makeCurrent}" rowSelection="single"
-                  fetchSize="#{bindings.FilesView4.rangeSize}" filterModel="#{bindings.FilesView4Query.queryDescriptor}"
-                  filterVisible="true" queryListener="#{bindings.FilesView4Query.processQuery}" varStatus="vs" id="t1"
-                  partialTriggers="::b3">
-          <af:column sortProperty="#{bindings.FilesView4.hints.Filename.name}" filterable="true" sortable="true"
-                     headerText="#{bindings.FilesView4.hints.Filename.label}" id="c2">
-            <af:outputText value="#{row.Filename}" shortDesc="#{bindings.FilesView4.hints.Filename.tooltip}" id="ot2"/>
-          </af:column>
-          <af:column sortProperty="#{bindings.FilesView4.hints.Filetype.name}" filterable="true" sortable="true"
-                     headerText="#{bindings.FilesView4.hints.Filetype.label}" id="c3">
-            <af:outputText value="#{row.Filetype}" shortDesc="#{bindings.FilesView4.hints.Filetype.tooltip}" id="ot3"/>
-          </af:column>
-          <af:column headerText="#{bindings.FilesView4.hints.Filepath.label}" id="c1">
-            <af:outputText value="#{row.Filepath}" shortDesc="#{bindings.FilesView4.hints.Filepath.tooltip}" id="ot1"/>
-          </af:column>
-          <af:column headerText="Download" id="c4">
-            <af:link shortDesc="#{bindings.FilesView4.hints.Filepath.tooltip}" id="ot4" text="Download">
-              <af:fileDownloadActionListener method="#{FileBean.downloadFileListener}"/>
-            </af:link>
-          </af:column>
-        </af:table>
       </af:showDetailItem>
     </af:panelTabbed>
     <af:componentDragSource/>

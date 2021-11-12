@@ -112,4 +112,31 @@
       <property
          name="sdm:polyPoints">T56,247.5,234.39062,400.69238,53.396484,B50</property>
    </ControlFlowCase>
+   <TaskFlowCall
+      id="TaskFlowCall12">
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>OM_FileDelete&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
+      <property
+         name="activityId">OM_FileDelete</property>
+      <property
+         name="x">622.0137</property>
+      <property
+         name="y">143.14941</property>
+      <property
+         name="documentReference">/WEB-INF/Opportunity_TaskFLows/OM_FileDelete.xml</property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="taskFlowId">OM_FileDelete</property>
+   </TaskFlowCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase13"
+      from="View3"
+      to="TaskFlowCall12">
+      <property
+         name="fromOutcome">delFile</property>
+      <property
+         name="sdm:polyPoints">T50,592.0,226.39062,622.0137,196.79883,B50</property>
+   </ControlFlowCase>
 </SDM>
