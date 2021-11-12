@@ -7,7 +7,8 @@
   Version="12.2.1.22.48"
   InheritPersonalization="merge"
   ClearCacheOnRollback="true"
-  ComponentClass="sfa.model.entities.AppModuleImpl">
+  ComponentClass="sfa.model.entities.AppModuleImpl"
+  ComponentInterface="sfa.model.entities.common.AppModule">
   <DesignTime>
     <Attr Name="_isCodegen" Value="true"/>
   </DesignTime>
@@ -509,4 +510,23 @@
     SrcViewUsageName="sfa.model.entities.AppModule.OpportunityView1"
     DstViewUsageName="sfa.model.entities.AppModule.FilesView4"
     Reversed="false"/>
+  <ClientInterface
+    Name="__clientInterface">
+    <Method
+      Name="setFileData"
+      MethodName="setFileData">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+      <Parameter
+        Name="name"
+        Type="java.lang.String"/>
+      <Parameter
+        Name="path"
+        Type="java.lang.String"/>
+      <Parameter
+        Name="contTyp"
+        Type="java.lang.String"/>
+    </Method>
+  </ClientInterface>
 </AppModule>

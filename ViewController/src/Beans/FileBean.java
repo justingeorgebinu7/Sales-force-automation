@@ -20,6 +20,7 @@ import javax.faces.event.ValueChangeEvent;
 
 import oracle.adf.view.rich.component.rich.input.RichInputText;
 
+import oracle.adf.view.rich.component.rich.output.RichOutputText;
 import oracle.adf.view.rich.util.ResetUtils;
 
 import oracle.binding.BindingContainer;
@@ -32,6 +33,7 @@ import org.apache.myfaces.trinidad.model.UploadedFile;
 
 public class FileBean {
     private UploadedFile myFile;
+    private RichOutputText pathBind;
 
     public FileBean() {
     }
@@ -184,7 +186,7 @@ public class FileBean {
         UploadedFile fileVal= getMyFile();
         String path=uploadFile(fileVal);
         
-        /*
+     
         OperationBinding ob = executeOperation("setFileData");
 
                     ob.getParamsMap().put("name", fileVal.getFilename());
@@ -194,9 +196,17 @@ public class FileBean {
                     ob.getParamsMap().put("contTyp", fileVal.getContentType());
 
                     ob.execute();
-         * */
+// String str= getMyFile().getFilename();
         
         
         return null;
+    }
+
+    public void setPathBind(RichOutputText pathBind) {
+        this.pathBind = pathBind;
+    }
+
+    public RichOutputText getPathBind() {
+        return pathBind;
     }
 }

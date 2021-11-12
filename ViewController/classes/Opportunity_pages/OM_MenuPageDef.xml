@@ -15,6 +15,9 @@
               activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
     <taskFlow id="revenueItem1" taskFlowId="/WEB-INF/Opportunity_TaskFLows/revenueItem.xml#revenueItem"
               activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <iterator Binds="FilesView4" RangeSize="25" DataControl="AppModuleDataControl" id="FilesView4Iterator"/>
+    <searchRegion Binds="FilesView4Iterator" Criteria="" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  id="FilesView4Query"/>
   </executables>
   <bindings>
     <attributeValues IterBinding="OpportunityView1Iterator" id="Title">
@@ -58,5 +61,21 @@
     <listOfValues IterBinding="OpportunityView1Iterator" StaticList="false" Uses="LOV_Salesstage" id="Salesstage"/>
     <listOfValues IterBinding="OpportunityView1Iterator" StaticList="false" Uses="LOV_Primarycontact"
                   id="Primarycontact"/>
+    <tree IterBinding="FilesView4Iterator" id="FilesView4">
+      <nodeDefinition DefName="sfa.model.viewobjects.FilesView" Name="FilesView40">
+        <AttrNames>
+          <Item Value="Filepath"/>
+          <Item Value="Filename"/>
+          <Item Value="Filetype"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <methodAction id="setFileData" RequiresUpdateModel="true" Action="invokeMethod" MethodName="setFileData"
+                  IsViewObjectMethod="false" DataControl="AppModuleDataControl"
+                  InstanceName="bindings.setFileData.dataControl.dataProvider">
+      <NamedData NDName="name" NDType="java.lang.String"/>
+      <NamedData NDName="path" NDType="java.lang.String"/>
+      <NamedData NDName="contTyp" NDType="java.lang.String"/>
+    </methodAction>
   </bindings>
 </pageDefinition>
