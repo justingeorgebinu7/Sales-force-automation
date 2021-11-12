@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 import org.apache.myfaces.trinidad.model.UploadedFile;
-
+import java.io.*;
 
 public class FileUpload {
     public FileUpload() {
@@ -78,8 +78,74 @@ public class FileUpload {
         }
 
     public String setFile() {
-        // Add event code here...
+        UploadedFile f=getFile();
+        System.out.println(f.getFilename());
+        uploadFile(f);
         return null;
     }
+    
+    
+    private String uploadFile(UploadedFile file) {
+
+            UploadedFile myfile = file;
+
+            String path = null;
+
+            if (myfile == null) {
+
+            } else {
+
+                // All uploaded files will be stored in below path
+
+                path = "C:\\FileSys\\" + myfile.getFilename();
+
+                InputStream inputStream = null;
+
+                try {
+
+                    FileOutputStream out = new FileOutputStream(path);
+
+                    inputStream = myfile.getInputStream();
+
+                    byte[] buffer = new byte[8192];
+
+                    int bytesRead = 0;
+
+                    while ((bytesRead = inputStream.read(buffer, 0, 8192)) != -1) {
+
+                        out.write(buffer, 0, bytesRead);
+
+                    }
+
+                    out.flush();
+
+                    out.close();
+
+                } catch (Exception ex) {
+
+                    // handle exception
+
+                    ex.printStackTrace();
+
+                } finally {
+
+                    try {
+
+                       // inputStream.close();
+                        System.out.println("test");
+
+                    } catch (Exception e) {
+
+                    }
+
+                }
+
+            }
+
+            //Returns the path where file is stored
+
+            return path;
+
+        }
 }
 

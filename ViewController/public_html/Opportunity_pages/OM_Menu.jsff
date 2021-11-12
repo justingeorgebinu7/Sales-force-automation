@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
                 xmlns:f="http://java.sun.com/jsf/core">
-  <!--oracle-jdev-comment:preferred-managed-bean-name:fileUpload-->
   <af:menuBar id="mb1">
     <af:commandMenuItem id="cmi1" action="toHome" icon="https://i.ibb.co/5nPsJ90/New-Project-2.png"/>
   </af:menuBar>
@@ -151,7 +150,12 @@
           </f:facet>
         </af:panelSplitter>
       </af:showDetailItem>
+      <af:showDetailItem text="Files" id="sdi8">
+        <af:inputFile label="Label 1" id="if2" value="#{FileBean.myFile}"/>
+        <af:button text="button 1" id="b3" action="#{FileBean.buttonAction}"/>
+      </af:showDetailItem>
     </af:panelTabbed>
     <af:componentDragSource/>
   </af:panelBox>
+  <!--oracle-jdev-comment:preferred-managed-bean-name:FileBean-->
 </ui:composition>

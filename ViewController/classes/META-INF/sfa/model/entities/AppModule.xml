@@ -6,7 +6,11 @@
   Name="AppModule"
   Version="12.2.1.22.48"
   InheritPersonalization="merge"
-  ClearCacheOnRollback="true">
+  ClearCacheOnRollback="true"
+  ComponentClass="sfa.model.entities.AppModuleImpl">
+  <DesignTime>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
   <ViewUsage
     Name="AddressView1"
     ViewObjectName="sfa.model.viewobjects.AddressView"/>
