@@ -151,8 +151,8 @@
         </af:panelSplitter>
       </af:showDetailItem>
       <af:showDetailItem text="Files" id="sdi8">
-        <af:inputFile label="Label 1" id="if2" value="#{FileBean.myFile}"/>
-        <af:button text="button 1" id="b3" action="#{FileBean.buttonAction}" partialSubmit="true"/>
+        <af:inputFile label="File Upload" id="if2" value="#{FileBean.myFile}"/>
+        <af:button text="Upload" id="b3" action="#{FileBean.buttonAction}" partialSubmit="true"/>
         <af:table value="#{bindings.FilesView4.collectionModel}" var="row" rows="#{bindings.FilesView4.rangeSize}"
                   emptyText="#{bindings.FilesView4.viewable ? 'No data to display.' : 'Access Denied.'}"
                   rowBandingInterval="0" selectedRowKeys="#{bindings.FilesView4.collectionModel.selectedRow}"
@@ -160,11 +160,6 @@
                   fetchSize="#{bindings.FilesView4.rangeSize}" filterModel="#{bindings.FilesView4Query.queryDescriptor}"
                   filterVisible="true" queryListener="#{bindings.FilesView4Query.processQuery}" varStatus="vs" id="t1"
                   partialTriggers="::b3">
-          <af:column sortProperty="#{bindings.FilesView4.hints.Filepath.name}" filterable="true" sortable="true"
-                     headerText="#{bindings.FilesView4.hints.Filepath.label}" id="c1">
-            <af:outputText value="#{row.Filepath}" shortDesc="#{bindings.FilesView4.hints.Filepath.tooltip}" id="ot1"
-                           binding="#{FileBean.pathBind}"/>
-          </af:column>
           <af:column sortProperty="#{bindings.FilesView4.hints.Filename.name}" filterable="true" sortable="true"
                      headerText="#{bindings.FilesView4.hints.Filename.label}" id="c2">
             <af:outputText value="#{row.Filename}" shortDesc="#{bindings.FilesView4.hints.Filename.tooltip}" id="ot2"/>
@@ -172,6 +167,14 @@
           <af:column sortProperty="#{bindings.FilesView4.hints.Filetype.name}" filterable="true" sortable="true"
                      headerText="#{bindings.FilesView4.hints.Filetype.label}" id="c3">
             <af:outputText value="#{row.Filetype}" shortDesc="#{bindings.FilesView4.hints.Filetype.tooltip}" id="ot3"/>
+          </af:column>
+          <af:column headerText="#{bindings.FilesView4.hints.Filepath.label}" id="c1">
+            <af:outputText value="#{row.Filepath}" shortDesc="#{bindings.FilesView4.hints.Filepath.tooltip}" id="ot1"/>
+          </af:column>
+          <af:column headerText="Download" id="c4">
+            <af:link shortDesc="#{bindings.FilesView4.hints.Filepath.tooltip}" id="ot4" text="Download">
+              <af:fileDownloadActionListener method="#{FileBean.downloadFileListener}"/>
+            </af:link>
           </af:column>
         </af:table>
       </af:showDetailItem>

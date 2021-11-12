@@ -18,6 +18,7 @@ import javax.faces.context.FacesContext;
 
 import javax.faces.event.ValueChangeEvent;
 
+import oracle.adf.view.rich.component.rich.data.RichColumn;
 import oracle.adf.view.rich.component.rich.input.RichInputText;
 
 import oracle.adf.view.rich.component.rich.output.RichOutputText;
@@ -33,7 +34,6 @@ import org.apache.myfaces.trinidad.model.UploadedFile;
 
 public class FileBean {
     private UploadedFile myFile;
-    private RichOutputText pathBind;
 
     public FileBean() {
     }
@@ -46,167 +46,141 @@ public class FileBean {
     public UploadedFile getMyFile() {
         return myFile;
     }
-    
+
     private String uploadFile(UploadedFile file) {
-            System.out.println("inside upload");
-            UploadedFile myfile = file;
+        System.out.println("inside upload");
+        UploadedFile myfile = file;
 
-            String path = null;
+        String path = null;
 
-            if (myfile == null) {
+        if (myfile == null) {
 
-            } else {
+        } else {
 
-                // All uploaded files will be stored in below path
+            // All uploaded files will be stored in below path
 
-                path = "C:\\FileSys\\" + myfile.getFilename();
+            path = "C:\\FileSys\\" + myfile.getFilename();
 
-                InputStream inputStream = null;
+            InputStream inputStream = null;
+
+            try {
+
+                FileOutputStream out = new FileOutputStream(path);
+
+                inputStream = myfile.getInputStream();
+
+                byte[] buffer = new byte[8192];
+
+                int bytesRead = 0;
+
+                while ((bytesRead = inputStream.read(buffer, 0, 8192)) != -1) {
+
+                    out.write(buffer, 0, bytesRead);
+
+                }
+
+                out.flush();
+
+                out.close();
+
+            } catch (Exception ex) {
+
+                // handle exception
+
+                ex.printStackTrace();
+
+            } finally {
 
                 try {
 
-                    FileOutputStream out = new FileOutputStream(path);
+                    // inputStream.close();
+                    System.out.println("Inside try");
 
-                    inputStream = myfile.getInputStream();
-
-                    byte[] buffer = new byte[8192];
-
-                    int bytesRead = 0;
-
-                    while ((bytesRead = inputStream.read(buffer, 0, 8192)) != -1) {
-
-                        out.write(buffer, 0, bytesRead);
-
-                    }
-
-                    out.flush();
-
-                    out.close();
-
-                } catch (Exception ex) {
-
-                    // handle exception
-
-                    ex.printStackTrace();
-
-                } finally {
-
-                    try {
-
-                       // inputStream.close();
-                        System.out.println("Inside try");
-
-                    } catch (Exception e) {
-
-                    }
+                } catch (Exception e) {
 
                 }
 
             }
 
-            //Returns the path where file is stored
-
-            return path;
-
         }
 
+        //Returns the path where file is stored
+
+        return path;
+
+    }
 
 
-        /*****Generic Method to Get BindingContainer**/
+    /*****Generic Method to Get BindingContainer**/
 
-        public BindingContainer getBindingsCont() {
+    public BindingContainer getBindingsCont() {
 
-            return BindingContext.getCurrent().getCurrentBindingsEntry();
+        return BindingContext.getCurrent().getCurrentBindingsEntry();
 
-        }
-
-
-
-        /**
-
-         * Generic Method to execute operation
-
-         * */
-
-        public OperationBinding executeOperation(String operation) {
-
-            OperationBinding createParam = getBindingsCont().getOperationBinding(operation);
-
-            return createParam;
+    }
 
 
+    /**
 
-        }
+     * Generic Method to execute operation
 
+     * */
 
-    //        public void uploadFileVCE(ValueChangeEvent vce) {
-//
-//            if (vce.getNewValue() != null) {
-//
-//                //Get File Object from VC Event
-//                System.out.println("Vce start");
-//                List<org.apache.myfaces.trinidad.model.UploadedFile> l=(List<org.apache.myfaces.trinidad.model.UploadedFile>)vce.getNewValue();
-//               // UploadedFile fileVal = (UploadedFile) vce.getNewValue();
-//               UploadedFile fileVal=l.get(0);
-//                //Upload File to path- Return actual server path
-//
-//                System.out.println(fileVal.getFilename());
-//                String path = uploadFile(fileVal);
-//
-//               
-//
-//                //Method to insert data in table to keep track of uploaded files
-//
-////                OperationBinding ob = executeOperation("setFileData");
-////
-////                ob.getParamsMap().put("name", fileVal.getFilename());
-////
-////                ob.getParamsMap().put("path", path);
-////
-////                ob.getParamsMap().put("contTyp", fileVal.getContentType());
-////
-////                ob.execute();
-//
-//                // Reset inputFile component after upload
-//
-//                ResetUtils.reset(vce.getComponent());
-//
-///           }
-//
-//        }
+    public OperationBinding executeOperation(String operation) {
+
+        OperationBinding createParam = getBindingsCont().getOperationBinding(operation);
+
+        return createParam;
 
 
-    /**Method to Upload File ,called on ValueChangeEvent of inputFile
+    }
 
-     * @param vce
 
-     */
+
     public String buttonAction() {
         // Add event code here...
-        UploadedFile fileVal= getMyFile();
-        String path=uploadFile(fileVal);
-        
-     
+        UploadedFile fileVal = getMyFile();
+        String path = uploadFile(fileVal);
+
+
         OperationBinding ob = executeOperation("setFileData");
 
-                    ob.getParamsMap().put("name", fileVal.getFilename());
+        ob.getParamsMap().put("name", fileVal.getFilename());
 
-                    ob.getParamsMap().put("path", path);
+        ob.getParamsMap().put("path", path);
 
-                    ob.getParamsMap().put("contTyp", fileVal.getContentType());
+        ob.getParamsMap().put("contTyp", fileVal.getContentType());
 
-                    ob.execute();
-// String str= getMyFile().getFilename();
-        
-        
+        ob.execute();
+        // String str= getMyFile().getFilename();
+
+
         return null;
     }
 
-    public void setPathBind(RichOutputText pathBind) {
-        this.pathBind = pathBind;
+    public void downloadFileListener(FacesContext facesContext, OutputStream outputStream) throws IOException {
+        FacesContext fc = FacesContext.getCurrentInstance();
+        String filepath = fc.getApplication().evaluateExpressionGet(fc, "#{row.filepath}", String.class);
+        //Read file from particular path, path bind is binding of table field that contains path
+        File filed = new File(filepath);
+        FileInputStream fis;
+        byte[] b;
+        try {
+            fis = new FileInputStream(filed);
+            int n;
+            while ((n = fis.available()) > 0) {
+                b = new byte[n];
+                int result = fis.read(b);
+                System.out.println(result);
+                outputStream.write(b, 0, b.length);
+                if (result == -1)
+                    break;
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        outputStream.flush();
     }
 
-    public RichOutputText getPathBind() {
-        return pathBind;
-    }
+
 }
