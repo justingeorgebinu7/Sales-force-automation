@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding='windows-1252'?>
-<!DOCTYPE OperationDefinitions SYSTEM "jbo_03_01.dtd">
-<OperationDefinitions xmlns="http://xmlns.oracle.com/bc4j" Name="RevenueitemOperations">
-  <ExpressionCodeSource
-    Name="RevenueitemRow"
-    Type="Static"
-    Content-Type="application/x-adf-groovy"
-    URI="sfa/model/entities/Revenueitem.bcs"/>
-</OperationDefinitions>

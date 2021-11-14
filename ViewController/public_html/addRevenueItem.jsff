@@ -2,13 +2,12 @@
 <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
                 xmlns:f="http://java.sun.com/jsf/core">
   <af:panelFormLayout id="pfl1">
-    <af:inputText value="#{bindings.Quantity.inputValue}" label="#{bindings.Quantity.hints.label}"
-                  required="#{bindings.Quantity.hints.mandatory}" columns="#{bindings.Quantity.hints.displayWidth}"
-                  maximumLength="#{bindings.Quantity.hints.precision}" shortDesc="#{bindings.Quantity.hints.tooltip}"
-                  id="it1">
-      <f:validator binding="#{bindings.Quantity.validator}"/>
-      <af:convertNumber groupingUsed="false" pattern="#{bindings.Quantity.format}"/>
-    </af:inputText>
+    <af:selectOneChoice value="#{bindings.Productid.inputValue}" label="#{bindings.Productid.label}"
+                        required="#{bindings.Productid.hints.mandatory}" shortDesc="#{bindings.Productid.hints.tooltip}"
+                        id="soc1" autoSubmit="true" valueChangeListener="#{RevenueItem.productSelect}">
+      <f:selectItems value="#{bindings.Productid.items}" id="si1"/>
+      <f:validator binding="#{bindings.Productid.validator}"/>
+    </af:selectOneChoice>
     <af:inputText value="#{bindings.Estimatedprice.inputValue}" label="#{bindings.Estimatedprice.hints.label}"
                   required="#{bindings.Estimatedprice.hints.mandatory}"
                   columns="#{bindings.Estimatedprice.hints.displayWidth}"
@@ -17,10 +16,17 @@
       <f:validator binding="#{bindings.Estimatedprice.validator}"/>
       <af:convertNumber groupingUsed="false" pattern="#{bindings.Estimatedprice.format}"/>
     </af:inputText>
+    <af:inputText value="#{bindings.Quantity.inputValue}" label="#{bindings.Quantity.hints.label}"
+                  required="#{bindings.Quantity.hints.mandatory}" columns="#{bindings.Quantity.hints.displayWidth}"
+                  maximumLength="#{bindings.Quantity.hints.precision}" shortDesc="#{bindings.Quantity.hints.tooltip}"
+                  id="it1" autoSubmit="true" valueChangeListener="#{RevenueItem.quantityChange}">
+      <f:validator binding="#{bindings.Quantity.validator}"/>
+      <af:convertNumber groupingUsed="false" pattern="#{bindings.Quantity.format}"/>
+    </af:inputText>
     <af:inputText value="#{bindings.Revenue.inputValue}" label="#{bindings.Revenue.hints.label}"
                   required="#{bindings.Revenue.hints.mandatory}" columns="#{bindings.Revenue.hints.displayWidth}"
                   maximumLength="#{bindings.Revenue.hints.precision}" shortDesc="#{bindings.Revenue.hints.tooltip}"
-                  id="it3">
+                  id="it3" partialTriggers="it1">
       <f:validator binding="#{bindings.Revenue.validator}"/>
       <af:convertNumber groupingUsed="false" pattern="#{bindings.Revenue.format}"/>
     </af:inputText>
@@ -40,12 +46,6 @@
       <f:validator binding="#{bindings.Worstcaserevenue.validator}"/>
       <af:convertNumber groupingUsed="false" pattern="#{bindings.Worstcaserevenue.format}"/>
     </af:inputText>
-    <af:selectOneChoice value="#{bindings.Productid.inputValue}" label="#{bindings.Productid.label}"
-                        required="#{bindings.Productid.hints.mandatory}" shortDesc="#{bindings.Productid.hints.tooltip}"
-                        id="soc1">
-      <f:selectItems value="#{bindings.Productid.items}" id="si1"/>
-      <f:validator binding="#{bindings.Productid.validator}"/>
-    </af:selectOneChoice>
   </af:panelFormLayout>
   <af:button text="Save" id="b1" action="commit"/>
   <af:button text="Cancel" id="b2" action="discard"/>

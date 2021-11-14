@@ -12,7 +12,15 @@
   BindingStyle="OracleName"
   CustomQuery="false"
   SelectAllAttributes="false"
-  PageIterMode="Full">
+  PageIterMode="Full"
+  RowClass="sfa.model.viewobjects.ProductsViewRowImpl"
+  ComponentClass="sfa.model.viewobjects.ProductsViewImpl"
+  AccessMode="DEFAULT"
+  RowInterface="sfa.model.viewobjects.common.ProductsViewRow">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access|Coll"/>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
   <EntityUsage
     Name="Products"
     Entity="sfa.model.entities.Products"/>

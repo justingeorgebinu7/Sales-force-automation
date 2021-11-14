@@ -556,5 +556,15 @@
         Name="contTyp"
         Type="java.lang.String"/>
     </Method>
+    <Method
+      Name="estimatedPrice"
+      MethodName="estimatedPrice">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+      <Parameter
+        Name="pidStr"
+        Type="java.lang.String"/>
+    </Method>
   </ClientInterface>
 </AppModule>
