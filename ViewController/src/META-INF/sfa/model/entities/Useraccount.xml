@@ -9,7 +9,8 @@
   DBObjectType="table"
   DBObjectName="USERACCOUNT"
   AliasName="Useraccount"
-  BindingStyle="OracleName">
+  BindingStyle="OracleName"
+  xmlns:validation="http://xmlns.oracle.com/adfm/validation">
   <Attribute
     Name="Useraccountid"
     IsNotNull="true"
@@ -92,6 +93,22 @@
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
     TableName="USERACCOUNT"/>
+  <Attribute
+    Name="Supervisor"
+    ColumnName="SUPERVISOR"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="USERACCOUNT">
+    <validation:CompareValidationBean
+      Name="SupervisorRule0"
+      OnAttribute="Supervisor"
+      OperandType="JBO"
+      Inverse="true"
+      CompareType="EQUALTO"
+      CompareValue="sfa.model.viewobjects.UseraccountView.Useraccountid"
+      ResId="sfa.model.entities.Useraccount.Supervisor_Rule_0"/>
+  </Attribute>
   <AccessorAttribute
     Name="Customeraccount"
     Association="sfa.model.entities.UseraccountAccountFkAssoc"
@@ -133,4 +150,8 @@
     </DesignTime>
     <AttrArray Name="Attributes"/>
   </Key>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="sfa.model.ModelBundle"/>
+  </ResourceBundle>
 </Entity>

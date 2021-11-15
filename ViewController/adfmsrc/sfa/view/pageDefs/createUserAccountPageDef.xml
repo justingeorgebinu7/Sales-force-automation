@@ -37,5 +37,7 @@
         <Item Value="Enddate"/>
       </AttrNames>
     </attributeValues>
+    <list IterBinding="UseraccountView1Iterator" StaticList="false" Uses="LOV_Supervisor" id="Supervisor"
+          DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
   </bindings>
 </pageDefinition>

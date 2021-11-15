@@ -50,4 +50,7 @@
   </af:table>
   <af:button text="Add" id="b1" action="create"/>
   <af:button text="Delete" action="deleteUserAccount1" id="b2"/>
+  <af:button text="Export" id="b3">
+    <af:exportCollectionActionListener type="excelHTML" exportedId="t1" filename="UsersList.html"/>
+  </af:button>
 </ui:composition>

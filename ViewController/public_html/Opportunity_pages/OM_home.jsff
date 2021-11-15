@@ -37,4 +37,7 @@
   </af:table>
   <af:button text="Add" id="b1" action="addOpportunity"/>
   <af:button text="Delete" id="b2" action="deleteOpp"/>
+  <af:button text="Export" id="b3">
+    <af:exportCollectionActionListener type="excelHTML" exportedId="t1" filename="opportunityList.html"/>
+  </af:button>
 </ui:composition>

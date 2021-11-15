@@ -18,6 +18,10 @@
     Name="CustomeraccountView1"
     ViewObjectName="sfa.model.viewobjects.CustomeraccountView"
     RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="UseraccountView1"
+    ViewObjectName="sfa.model.viewobjects.UseraccountView"
+    RowLevelBinds="true"/>
   <ListBinding
     Name="LOV_Corporatecustomerreferenceid1"
     ListVOName="CustomeraccountView1"
@@ -32,6 +36,25 @@
     </AttrArray>
     <AttrArray Name="ListDisplayAttrNames">
       <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_Supervisor"
+    ListVOName="UseraccountView1"
+    NullValueFlag="start"
+    NullValueId="LOV_Supervisor_LOVUIHints_NullValueId"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Supervisor"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Useraccountid"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Firstname"/>
+      <Item Value="Lastname"/>
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
@@ -130,6 +153,20 @@
     EntityUsage="Useraccount"
     AliasName="CORPORATECUSTOMERREFERENCEID1"
     LOVName="LOV_Corporatecustomerreferenceid1">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Supervisor"
+    PrecisionRule="true"
+    EntityAttrName="Supervisor"
+    EntityUsage="Useraccount"
+    AliasName="SUPERVISOR"
+    LOVName="LOV_Supervisor">
     <Properties>
       <SchemaBasedProperties>
         <CONTROLTYPE

@@ -63,6 +63,5 @@
         <Item Value="N"/>
       </ValueList>
     </button>
-    <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl"/>
   </bindings>
 </pageDefinition>

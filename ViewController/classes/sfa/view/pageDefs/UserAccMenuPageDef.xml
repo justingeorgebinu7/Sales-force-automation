@@ -35,5 +35,7 @@
       </AttrNames>
     </attributeValues>
     <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+    <list IterBinding="UseraccountView1Iterator" StaticList="false" Uses="LOV_Supervisor" id="Supervisor"
+          DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
   </bindings>
 </pageDefinition>

@@ -53,4 +53,7 @@
   </af:panelBox>
   <af:button text="Add" id="b1" action="add"/>
   <af:button text="Delete" id="b2" action="deleteCon"/>
+  <af:button text="Export" id="b3">
+    <af:exportCollectionActionListener type="excelHTML" exportedId="t1" filename="contactsList.html"/>
+  </af:button>
 </ui:composition>

@@ -40,6 +40,12 @@
           <f:validator binding="#{bindings.Enddate.validator}"/>
           <af:convertDateTime pattern="#{bindings.Enddate.format}"/>
         </af:inputDate>
+        <af:selectOneChoice value="#{bindings.Supervisor.inputValue}" label="#{bindings.Supervisor.label}"
+                            required="#{bindings.Supervisor.hints.mandatory}"
+                            shortDesc="#{bindings.Supervisor.hints.tooltip}" id="soc1">
+          <f:selectItems value="#{bindings.Supervisor.items}" id="si1"/>
+          <f:validator binding="#{bindings.Supervisor.validator}"/>
+        </af:selectOneChoice>
         <af:button actionListener="#{bindings.Commit.execute}" text="Save" disabled="false"
                    id="b1"/>
       </af:panelFormLayout>
