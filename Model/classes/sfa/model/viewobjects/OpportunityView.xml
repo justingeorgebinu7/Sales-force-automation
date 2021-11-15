@@ -266,6 +266,19 @@
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
+  <ViewAttribute
+    Name="Totalrevenue"
+    PrecisionRule="true"
+    EntityAttrName="Totalrevenue"
+    EntityUsage="Opportunity"
+    AliasName="TOTALREVENUE">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="sfa.model.viewobjects.OpportunityView.Totalrevenue_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewLinkAccessor
     Name="NoteView"
     ViewLink="sfa.model.viewobjects.NoteOpportunityFkLink"
@@ -289,6 +302,16 @@
   <ViewLinkAccessor
     Name="InteractionView"
     ViewLink="sfa.model.entities.OpportunityInteractionFkLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="FilesView"
+    ViewLink="sfa.model.viewobjects.FilesOpportunityFkLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="FilesView1"
+    ViewLink="sfa.model.viewobjects.Files_Opportunity_FKLink"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
   <ResourceBundle>

@@ -666,6 +666,44 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
         }
     
     }
+    public void totalRevenueOppAM(String oidStr) {
+        System.out.println("Inside impl  " + oidStr);
+
+        //
+        RowSet rs = (RowSet) getRevenueitemView1();
+        rs.reset();
+        System.out.println(rs.hasNext());
+        int total=0;
+        while (rs.hasNext()) {
+            System.out.println("Inside while");
+            Row r = rs.next();
+            Object loopoid = r.getAttribute("Opportunityid");
+            String loopoidStr = loopoid.toString();
+            if (oidStr.equals(loopoidStr)) {
+                System.out.println("inside if");
+                
+            Object looprev= r.getAttribute("Revenue");
+            if(looprev!=null)
+            {
+            total+= Integer.parseInt(looprev.toString());
+            }
+            }
+        }
+        rs.closeRowSet();
+    DCIteratorBinding it = (DCIteratorBinding) BindingContext.getCurrent()
+                                                             .getCurrentBindingsEntry()
+                                                             .get("OpportunityView1Iterator");
+    RowSetIterator rsIter = it.getRowSetIterator();
+    Row rowObj = rsIter.getCurrentRow();
+    rowObj.setAttribute("Totalrevenue", total);
+    System.out.println(total);
+    double best=1.1*total;
+    double worst=0.9*total;
+    Object bestrev=(Double)best;
+    Object worstrev=(Double)worst;
+    rowObj.setAttribute("Bestcaserevenue", bestrev);
+    rowObj.setAttribute("Worstcaserevenue", worstrev);
+    }
 
 
     /**
@@ -1115,5 +1153,6 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
     public ViewLinkImpl getContact_Appointments_Via_Invitees_Link2() {
         return (ViewLinkImpl) findViewLink("Contact_Appointments_Via_Invitees_Link2");
     }
+    
 }
 

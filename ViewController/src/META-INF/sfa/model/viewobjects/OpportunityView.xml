@@ -266,6 +266,19 @@
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
+  <ViewAttribute
+    Name="Totalrevenue"
+    PrecisionRule="true"
+    EntityAttrName="Totalrevenue"
+    EntityUsage="Opportunity"
+    AliasName="TOTALREVENUE">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="sfa.model.viewobjects.OpportunityView.Totalrevenue_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewLinkAccessor
     Name="NoteView"
     ViewLink="sfa.model.viewobjects.NoteOpportunityFkLink"

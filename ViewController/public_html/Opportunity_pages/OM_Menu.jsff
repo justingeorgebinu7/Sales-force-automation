@@ -18,7 +18,8 @@
                background="default">
     <f:facet name="toolbar"/>
     <af:panelTabbed position="start" id="pt2" verticalTabMode="iconAndText">
-      <af:showDetailItem id="sdi1" text="Manage Opportunity" disclosed="true">
+      <af:showDetailItem id="sdi1" text="Manage Opportunity" disclosed="true"
+                         disclosureListener="#{OppMenuBean.totalRevenue}">
         <af:panelFormLayout id="pfl1" rows="6">
           <af:inputText value="#{bindings.Title.inputValue}" label="#{bindings.Title.hints.label}"
                         required="#{bindings.Title.hints.mandatory}" columns="#{bindings.Title.hints.displayWidth}"
@@ -33,6 +34,14 @@
                         shortDesc="#{bindings.Winprobability.hints.tooltip}" id="it3">
             <f:validator binding="#{bindings.Winprobability.validator}"/>
             <af:convertNumber groupingUsed="false" pattern="#{bindings.Winprobability.format}"/>
+          </af:inputText>
+          <af:inputText value="#{bindings.Totalrevenue.inputValue}" label="#{bindings.Totalrevenue.hints.label}"
+                        required="#{bindings.Totalrevenue.hints.mandatory}"
+                        columns="#{bindings.Totalrevenue.hints.displayWidth}"
+                        maximumLength="#{bindings.Totalrevenue.hints.precision}"
+                        shortDesc="#{bindings.Totalrevenue.hints.tooltip}" id="it4">
+            <f:validator binding="#{bindings.Totalrevenue.validator}"/>
+            <af:convertNumber groupingUsed="false" pattern="#{bindings.Totalrevenue.format}"/>
           </af:inputText>
           <af:inputText value="#{bindings.Bestcaserevenue.inputValue}" label="#{bindings.Bestcaserevenue.hints.label}"
                         required="#{bindings.Bestcaserevenue.hints.mandatory}"

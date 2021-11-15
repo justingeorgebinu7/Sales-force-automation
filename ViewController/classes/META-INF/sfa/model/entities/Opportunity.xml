@@ -159,6 +159,13 @@
       <Attr Name="_DisplaySize" Value="20"/>
     </DesignTime>
   </Attribute>
+  <Attribute
+    Name="Totalrevenue"
+    ColumnName="TOTALREVENUE"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="OPPORTUNITY"/>
   <AccessorAttribute
     Name="Note"
     Association="sfa.model.entities.NoteOpportunityFkAssoc"
@@ -199,6 +206,20 @@
     Association="sfa.model.entities.OpportunityAppointmentFkAssoc"
     AssociationEnd="sfa.model.entities.OpportunityAppointmentFkAssoc.Appointments"
     AssociationOtherEnd="sfa.model.entities.OpportunityAppointmentFkAssoc.Opportunity"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="Files"
+    Association="sfa.model.entities.FilesOpportunityFkAssoc"
+    AssociationEnd="sfa.model.entities.FilesOpportunityFkAssoc.Files"
+    AssociationOtherEnd="sfa.model.entities.FilesOpportunityFkAssoc.Opportunity"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="Files1"
+    Association="sfa.model.entities.Files_Opportunity_Assoc"
+    AssociationEnd="sfa.model.entities.Files_Opportunity_Assoc.Files1"
+    AssociationOtherEnd="sfa.model.entities.Files_Opportunity_Assoc.Opportunity1"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
   <Key

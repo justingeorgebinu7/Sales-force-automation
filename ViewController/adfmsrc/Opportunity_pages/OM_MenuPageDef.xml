@@ -77,5 +77,15 @@
       <NamedData NDName="path" NDType="java.lang.String"/>
       <NamedData NDName="contTyp" NDType="java.lang.String"/>
     </methodAction>
+    <methodAction id="totalRevenueOppAM" RequiresUpdateModel="true" Action="invokeMethod" MethodName="totalRevenueOppAM"
+                  IsViewObjectMethod="false" DataControl="AppModuleDataControl"
+                  InstanceName="bindings.totalRevenueOppAM.dataControl.dataProvider">
+      <NamedData NDName="oidStr" NDType="java.lang.String"/>
+    </methodAction>
+    <attributeValues IterBinding="OpportunityView1Iterator" id="Totalrevenue">
+      <AttrNames>
+        <Item Value="Totalrevenue"/>
+      </AttrNames>
+    </attributeValues>
   </bindings>
 </pageDefinition>

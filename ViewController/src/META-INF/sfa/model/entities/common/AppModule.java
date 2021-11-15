@@ -9,5 +9,7 @@ public interface AppModule extends ApplicationModule {
     void setFileData(String name, String path, String contTyp);
 
     void estimatedPrice(String pidStr);
+
+    void totalRevenueOppAM(String oidStr);
 }
 

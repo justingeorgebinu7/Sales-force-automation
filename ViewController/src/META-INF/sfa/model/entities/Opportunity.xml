@@ -159,6 +159,13 @@
       <Attr Name="_DisplaySize" Value="20"/>
     </DesignTime>
   </Attribute>
+  <Attribute
+    Name="Totalrevenue"
+    ColumnName="TOTALREVENUE"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="OPPORTUNITY"/>
   <AccessorAttribute
     Name="Note"
     Association="sfa.model.entities.NoteOpportunityFkAssoc"
