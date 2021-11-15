@@ -159,6 +159,13 @@
     AssociationOtherEnd="sfa.model.entities.OpportunityAppointmentFkAssoc.Appointments"
     Type="oracle.jbo.server.EntityImpl"
     IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="Customercontacts1"
+    Association="sfa.model.entities.Contact_Appointments_Via_Invitees_Assoc"
+    AssociationEnd="sfa.model.entities.Contact_Appointments_Via_Invitees_Assoc.Customercontacts1"
+    AssociationOtherEnd="sfa.model.entities.Contact_Appointments_Via_Invitees_Assoc.Appointments1"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <Key
     Name="AppointmentsPk"
     PrimaryKey="true">

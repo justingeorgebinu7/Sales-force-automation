@@ -417,6 +417,15 @@
           usageId="sfa_view_deleteAddressTF_deleteAddressTF_DeletePageDef"/>
     <page path="/CustomerAccountManagement/editAddress.jsff" usageId="sfa_view_editAddressPageDef"/>
     <page path="/CustomerAccountManagement/createAddress.jsff" usageId="sfa_view_createAddressPageDef"/>
+    <page path="/ContactManagementPages/Appointments/appForContacts.jsff" usageId="sfa_view_appForContactsPageDef"/>
+    <page path="/WEB-INF/ContactManagement/Appointments/createAppForContact.xml#createAppForContact@CreateInsert"
+          usageId="sfa_view_createAppForContact_createAppForContact_CreateInsertPageDef"/>
+    <page path="/WEB-INF/ContactManagement/Appointments/createAppForContact.xml#createAppForContact@Delete"
+          usageId="sfa_view_createAppForContact_createAppForContact_DeletePageDef"/>
+    <page path="/WEB-INF/ContactManagement/Appointments/createAppForContact.xml#createAppForContact@Commit"
+          usageId="sfa_view_createAppForContact_createAppForContact_CommitPageDef"/>
+    <page path="/ContactManagementPages/Appointments/createAppForContact.jsff"
+          usageId="sfa_view_createAppForContactPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="sfa_view_untitled2PageDef" path="sfa.view.pageDefs.untitled2PageDef"/>
@@ -826,6 +835,15 @@
           path="customerAccountTaskFlows.deleteAddressTF_deleteAddressTF_DeletePageDef"/>
     <page id="sfa_view_editAddressPageDef" path="CustomerAccountManagement.editAddressPageDef"/>
     <page id="sfa_view_createAddressPageDef" path="CustomerAccountManagement.createAddressPageDef"/>
+    <page id="sfa_view_appForContactsPageDef" path="ContactManagementPages.Appointments.appForContactsPageDef"/>
+    <page id="sfa_view_createAppForContact_createAppForContact_CreateInsertPageDef"
+          path="ContactManagement.Appointments.createAppForContact_createAppForContact_CreateInsertPageDef"/>
+    <page id="sfa_view_createAppForContact_createAppForContact_DeletePageDef"
+          path="ContactManagement.Appointments.createAppForContact_createAppForContact_DeletePageDef"/>
+    <page id="sfa_view_createAppForContact_createAppForContact_CommitPageDef"
+          path="ContactManagement.Appointments.createAppForContact_createAppForContact_CommitPageDef"/>
+    <page id="sfa_view_createAppForContactPageDef"
+          path="ContactManagementPages.Appointments.createAppForContactPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="sfa.model.entities"

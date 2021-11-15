@@ -79,6 +79,9 @@
       <af:showDetailItem id="sdi6" text="Interaction">
         <af:region value="#{bindings.interactionsForContact1.regionModel}" id="r3"/>
       </af:showDetailItem>
+      <af:showDetailItem text="showDetailItem 1" id="sdi3">
+        <af:region value="#{bindings.appForContacts1.regionModel}" id="r5"/>
+      </af:showDetailItem>
     </af:panelTabbed>
     <af:componentDragSource/>
   </af:panelBox>

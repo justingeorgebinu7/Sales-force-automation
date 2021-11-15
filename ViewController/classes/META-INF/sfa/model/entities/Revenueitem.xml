@@ -102,7 +102,14 @@
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
-    TableName="REVENUEITEM"/>
+    TableName="REVENUEITEM">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="sfa.model.entities.Revenueitem.Productid_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <AccessorAttribute
     Name="Products"
     Association="sfa.model.entities.ProductsRevenueitemFkAssoc"

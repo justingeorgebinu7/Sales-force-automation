@@ -228,6 +228,11 @@
     ViewLink="sfa.model.viewobjects.Invitees_Contacts_FkLink"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="AppointmentsView1"
+    ViewLink="sfa.model.viewobjects.Contact_Appointments_Via_Invitees_Link"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="sfa.model.ModelBundle"/>

@@ -1074,5 +1074,45 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
     public ViewLinkImpl getAddressCustomerAccountFkLink2() {
         return (ViewLinkImpl) findViewLink("AddressCustomerAccountFkLink2");
     }
+
+    /**
+     * Container's getter for CustomercontactsView7.
+     * @return CustomercontactsView7
+     */
+    public ViewObjectImpl getCustomercontactsView7() {
+        return (ViewObjectImpl) findViewObject("CustomercontactsView7");
+    }
+
+    /**
+     * Container's getter for AppointmentsView7.
+     * @return AppointmentsView7
+     */
+    public ViewObjectImpl getAppointmentsView7() {
+        return (ViewObjectImpl) findViewObject("AppointmentsView7");
+    }
+
+    /**
+     * Container's getter for Contact_Appointments_Via_Invitees_Link.
+     * @return Contact_Appointments_Via_Invitees_Link
+     */
+    public ViewLinkImpl getContact_Appointments_Via_Invitees_Link() {
+        return (ViewLinkImpl) findViewLink("Contact_Appointments_Via_Invitees_Link");
+    }
+
+    /**
+     * Container's getter for AppointmentsView10.
+     * @return AppointmentsView10
+     */
+    public ViewObjectImpl getAppointmentsView10() {
+        return (ViewObjectImpl) findViewObject("AppointmentsView10");
+    }
+
+    /**
+     * Container's getter for Contact_Appointments_Via_Invitees_Link2.
+     * @return Contact_Appointments_Via_Invitees_Link2
+     */
+    public ViewLinkImpl getContact_Appointments_Via_Invitees_Link2() {
+        return (ViewLinkImpl) findViewLink("Contact_Appointments_Via_Invitees_Link2");
+    }
 }
 

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.22.48" id="appForContactsPageDef"
+                Package="ContactManagementPages.Appointments">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="AppointmentsView10" RangeSize="25" DataControl="AppModuleDataControl"
+              id="AppointmentsView10Iterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="AppointmentsView10Iterator" id="AppointmentsView10">
+      <nodeDefinition DefName="sfa.model.viewobjects.AppointmentsView" Name="AppointmentsView100">
+        <AttrNames>
+          <Item Value="Appointmentid"/>
+          <Item Value="Name"/>
+          <Item Value="Startdate"/>
+          <Item Value="Enddate"/>
+          <Item Value="Description"/>
+          <Item Value="Location"/>
+          <Item Value="Contactid"/>
+          <Item Value="Accountid"/>
+          <Item Value="Opportunityid"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

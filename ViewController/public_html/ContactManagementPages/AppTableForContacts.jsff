@@ -1,6 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
                 xmlns:f="http://java.sun.com/jsf/core">
+  <af:outputText value="Your Appointments:" id="ot12" inlineStyle="font-weight:bold;color:black"/>
+  <af:spacer id="s2" height="10"/>
   <af:table value="#{bindings.AppointmentsView2.collectionModel}" var="row"
             rows="#{bindings.AppointmentsView2.rangeSize}"
             emptyText="#{bindings.AppointmentsView2.viewable ? 'No data to display.' : 'Access Denied.'}"
@@ -50,4 +52,33 @@
   </af:table>
   <af:button text="Add" id="b1" action="create"/>
   <af:button text="Delete" action="deleteAppForContacts1" id="b2"/>
+  <af:spacer id="s1" height="20"/>
+  <af:outputText value="Appointments you are invited to:" id="ot6" inlineStyle="font-weight:bold;color:black;"/>
+  <af:spacer id="s3" height="20"/>
+  <af:listView value="#{bindings.AppointmentsView10.collectionModel}" var="item"
+               emptyText="#{bindings.AppointmentsView10.viewable ? 'No data to display.' : 'Access Denied.'}"
+               fetchSize="#{bindings.AppointmentsView10.rangeSize}" id="lv1">
+    <af:listItem id="li1">
+      <af:panelGridLayout id="pgl1">
+        <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr1">
+          <af:gridCell marginStart="5px" width="25%" id="gc1">
+            <af:outputFormatted value="#{item.bindings.Name.inputValue}" id="of1"/>
+          </af:gridCell>
+          <af:gridCell marginStart="0px" width="25%" id="gc2">
+            <af:outputFormatted value="#{item.bindings.Startdate.inputValue}" id="of2">
+              <af:convertDateTime pattern="#{bindings.AppointmentsView10.hints.Startdate.format}"/>
+            </af:outputFormatted>
+          </af:gridCell>
+          <af:gridCell marginStart="0px" width="25%" id="gc3">
+            <af:outputFormatted value="#{item.bindings.Enddate.inputValue}" id="of3">
+              <af:convertDateTime pattern="#{bindings.AppointmentsView10.hints.Enddate.format}"/>
+            </af:outputFormatted>
+          </af:gridCell>
+          <af:gridCell marginStart="0px" width="25%" marginEnd="5px" id="gc4">
+            <af:outputFormatted value="#{item.bindings.Location.inputValue}" id="of4"/>
+          </af:gridCell>
+        </af:gridRow>
+      </af:panelGridLayout>
+    </af:listItem>
+  </af:listView>
 </ui:composition>

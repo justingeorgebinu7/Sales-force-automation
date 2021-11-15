@@ -90,7 +90,7 @@ af|panelTabbed::tab-text-link, af|panelTabbed::icon-style {
 }
 
 af|panelTabbed::access-key, af|panelTabbed::body, af|panelTabbed::body-end, af|panelTabbed::body-start, af|panelTabbed::bottom-conveyor-belt-indicator, af|panelTabbed::content, af|panelTabbed::content, af|panelTabbed::conveyor-belt-container, af|panelTabbed::disclosed-remove-disabled-icon, af|panelTabbed::disabled-remove-icon-style, af|panelTabbed::droplist-indicator, af|panelTabbed::end-conveyor-belt-indicator, af|panelTabbed::end-overflow-icon, af|panelTabbed::end-overflow-indicator, af|panelTabbed::footer, af|panelTabbed::header, af|panelTabbed::icon-style, af|panelTabbed::remove-disabled-icon, af|panelTabbed::start-conveyor-belt-indicator, af|panelTabbed::start-overflow-icon, af|panelTabbed::start-overflow-indicator, af|panelTabbed::tab, af|panelTabbed::tab-content, af|panelTabbed::tab-text-link, af|panelTabbed::tabs, af|panelTabbed::toggle, af|panelTabbed::toggle-icon-style, af|panelTabbed::top-conveyor-belt-indicator {
-    color: white;
+    /*color: white;*/
 }
 
 af|inputText::content {

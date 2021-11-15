@@ -233,6 +233,13 @@
     AssociationOtherEnd="sfa.model.entities.Invitees_Contacts_Assoc.Customercontacts"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="Appointments1"
+    Association="sfa.model.entities.Contact_Appointments_Via_Invitees_Assoc"
+    AssociationEnd="sfa.model.entities.Contact_Appointments_Via_Invitees_Assoc.Appointments1"
+    AssociationOtherEnd="sfa.model.entities.Contact_Appointments_Via_Invitees_Assoc.Customercontacts1"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <Key
     Name="CustomercontactsPk"
     PrimaryKey="true">

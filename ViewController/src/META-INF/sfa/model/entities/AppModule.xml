@@ -234,6 +234,15 @@
   <ViewUsage
     Name="AddressView4"
     ViewObjectName="sfa.model.viewobjects.AddressView"/>
+  <ViewUsage
+    Name="CustomercontactsView7"
+    ViewObjectName="sfa.model.viewobjects.CustomercontactsView"/>
+  <ViewUsage
+    Name="AppointmentsView7"
+    ViewObjectName="sfa.model.viewobjects.AppointmentsView"/>
+  <ViewUsage
+    Name="AppointmentsView10"
+    ViewObjectName="sfa.model.viewobjects.AppointmentsView"/>
   <ViewLinkUsage
     Name="CaddressCustomercontactsFkLink1"
     ViewLinkObjectName="sfa.model.viewobjects.CaddressCustomercontactsFkLink"
@@ -522,6 +531,18 @@
     SrcViewUsageName="sfa.model.entities.AppModule.CustomeraccountView1"
     DstViewUsageName="sfa.model.entities.AppModule.AddressView4"
     Reversed="false"/>
+  <ViewLinkUsage
+    Name="Contact_Appointments_Via_Invitees_Link"
+    ViewLinkObjectName="sfa.model.viewobjects.Contact_Appointments_Via_Invitees_Link"
+    SrcViewUsageName="sfa.model.entities.AppModule.CustomercontactsView7"
+    DstViewUsageName="sfa.model.entities.AppModule.AppointmentsView7"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="Contact_Appointments_Via_Invitees_Link2"
+    ViewLinkObjectName="sfa.model.viewobjects.Contact_Appointments_Via_Invitees_Link"
+    SrcViewUsageName="sfa.model.entities.AppModule.CustomercontactsView1"
+    DstViewUsageName="sfa.model.entities.AppModule.AppointmentsView10"
+    Reversed="false"/>
   <ClientInterface
     Name="__clientInterface">
     <Method
@@ -538,6 +559,32 @@
         Type="java.lang.String"/>
       <Parameter
         Name="contTyp"
+        Type="java.lang.String"/>
+    </Method>
+    <Method
+      Name="setFileData"
+      MethodName="setFileData">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+      <Parameter
+        Name="name"
+        Type="java.lang.String"/>
+      <Parameter
+        Name="path"
+        Type="java.lang.String"/>
+      <Parameter
+        Name="contTyp"
+        Type="java.lang.String"/>
+    </Method>
+    <Method
+      Name="estimatedPrice"
+      MethodName="estimatedPrice">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+      <Parameter
+        Name="pidStr"
         Type="java.lang.String"/>
     </Method>
     <Method

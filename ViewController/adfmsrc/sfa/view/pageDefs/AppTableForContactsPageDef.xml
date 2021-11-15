@@ -8,6 +8,8 @@
               id="AppointmentsView2Iterator"/>
     <searchRegion Binds="AppointmentsView2Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="AppointmentsView2Query"/>
+    <iterator Binds="AppointmentsView10" RangeSize="25" DataControl="AppModuleDataControl"
+              id="AppointmentsView10Iterator"/>
   </executables>
   <bindings>
     <tree IterBinding="AppointmentsView2Iterator" id="AppointmentsView2">
@@ -17,6 +19,16 @@
           <Item Value="Startdate"/>
           <Item Value="Enddate"/>
           <Item Value="Description"/>
+          <Item Value="Location"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="AppointmentsView10Iterator" id="AppointmentsView10">
+      <nodeDefinition DefName="sfa.model.viewobjects.AppointmentsView" Name="AppointmentsView100">
+        <AttrNames>
+          <Item Value="Name"/>
+          <Item Value="Startdate"/>
+          <Item Value="Enddate"/>
           <Item Value="Location"/>
         </AttrNames>
       </nodeDefinition>

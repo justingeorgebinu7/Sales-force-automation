@@ -125,4 +125,10 @@
     Type="oracle.jbo.Row"
     Reversed="true"
     IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="CustomercontactsView"
+    ViewLink="sfa.model.viewobjects.Contact_Appointments_Via_Invitees_Link"
+    Type="oracle.jbo.RowIterator"
+    Reversed="true"
+    IsUpdateable="false"/>
 </ViewObject>
