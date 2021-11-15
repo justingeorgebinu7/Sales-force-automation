@@ -122,7 +122,14 @@
             <f:validator binding="#{bindings.Description.validator}"/>
           </af:inputText>
         </af:panelFormLayout>
-        <af:button actionListener="#{bindings.Commit.execute}" text="Save" id="b1"/>
+        <af:panelGridLayout id="pgl2">
+          <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr2">
+            <af:gridCell marginStart="5px" width="dontCare" id="gc3">
+              <af:button actionListener="#{bindings.Commit.execute}" text="Save" id="b1"/>
+            </af:gridCell>
+            <af:gridCell marginStart="0px" width="dontCare" marginEnd="5px" id="gc4"/>
+          </af:gridRow>
+        </af:panelGridLayout>
       </af:showDetailItem>
       <af:showDetailItem text="Revenue Item" id="sdi7">
         <af:region value="#{bindings.revenueItem1.regionModel}" id="r5"/>

@@ -87,5 +87,6 @@
         <Item Value="Totalrevenue"/>
       </AttrNames>
     </attributeValues>
+    <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl"/>
   </bindings>
 </pageDefinition>

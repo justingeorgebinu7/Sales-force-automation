@@ -26,7 +26,7 @@
                                   model="#{bindings.Category1.listOfValuesModel}"
                                   required="#{bindings.Category1.hints.mandatory}"
                                   columns="#{bindings.Category1.hints.displayWidth}"
-                                  shortDesc="#{bindings.Category1.hints.tooltip}">
+                                  shortDesc="#{bindings.Category1.hints.tooltip}" styleClass="TagSearchIconHidden">
       <f:validator binding="#{bindings.Category1.validator}"/>
     </af:inputComboboxListOfValues>
   </af:panelFormLayout>

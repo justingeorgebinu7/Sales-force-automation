@@ -58,14 +58,19 @@
                         shortDesc="#{bindings.Influencelevel.hints.tooltip}" id="it7">
             <f:validator binding="#{bindings.Influencelevel.validator}"/>
           </af:inputText>
-          <f:facet name="footer">
-            <af:selectBooleanCheckbox value="#{bindings.Isprimarycontact.inputValue}"
-                                      label="#{bindings.Isprimarycontact.label}"
-                                      shortDesc="#{bindings.Isprimarycontact.hints.tooltip}" id="sbc1"/>
-            <af:button text="Save" id="b1" actionListener="#{bindings.Commit.execute}"
-                       disabled="false"/>
-          </f:facet>
+          <af:selectBooleanCheckbox value="#{bindings.Isprimarycontact.inputValue}"
+                                    label="#{bindings.Isprimarycontact.label}"
+                                    shortDesc="#{bindings.Isprimarycontact.hints.tooltip}" id="sbc1"/>
+          <f:facet name="footer"/>
         </af:panelFormLayout>
+        <af:panelGridLayout id="pgl1">
+          <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr1">
+            <af:gridCell marginStart="5px" width="dontCare" id="gc1">
+              <af:button text="Save" id="b1" actionListener="#{bindings.Commit.execute}" disabled="false"/>
+            </af:gridCell>
+            <af:gridCell marginStart="0px" width="dontCare" marginEnd="5px" id="gc2"/>
+          </af:gridRow>
+        </af:panelGridLayout>
       </af:showDetailItem>
       <af:showDetailItem id="sdi2" text="Notes">
         <af:region value="#{bindings.notesForContacts1.regionModel}" id="r1"/>
@@ -78,9 +83,6 @@
       </af:showDetailItem>
       <af:showDetailItem id="sdi6" text="Interaction">
         <af:region value="#{bindings.interactionsForContact1.regionModel}" id="r3"/>
-      </af:showDetailItem>
-      <af:showDetailItem text="showDetailItem 1" id="sdi3">
-        <af:region value="#{bindings.appForContacts1.regionModel}" id="r5"/>
       </af:showDetailItem>
     </af:panelTabbed>
     <af:componentDragSource/>

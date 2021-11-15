@@ -15,9 +15,18 @@ af|button {
     background-color: #fff;
 }
 
-af|inputFile{
-margin:30px 5px;
+af|inputFile {
+    margin: 30px 5px;
 }
+
+/*.TagSearchIconHidden af|inputListOfValues::search-icon-style {
+    display: none;
+}*/
+af|inputComboboxListOfValues::search{
+    display: none;
+}
+
+
 .navBtn {
     width: 220px;
     padding: 10px 5px;
@@ -48,6 +57,7 @@ af|column::banded-data-cell {
 
 af|column::column-header-cell {
     /*background-color: #789;*/
+
     padding: 10px 5px;
     text-align: center;
     /*color: #fff;*/
@@ -72,14 +82,13 @@ af|panelSpringboard::item-text {
 af|panelSpringboard::body {
     margin-top: 20px;
     padding: 20px 30px;
-    margin-left:150px;
-    margin-right:150px;
+    margin-left: 150px;
+    margin-right: 150px;
     border-left: 1px solid #ddd;
     border-right: 1px solid #ddd;
-    overflow-y:auto;
-    padding-bottom:50px;
-    
-    height:70vh;
+    overflow-y: auto;
+    padding-bottom: 50px;
+    height: 70vh;
     /*border:none;*/
 }
 
@@ -100,11 +109,11 @@ af|inputText::content {
     color: #555;
     background-color: white;
     padding: 18px 5px;
-    border-radius:5px;
+    border-radius: 5px;
     border: 0.5px solid #eee;
-    box-shadow: 3px 3px 4px -2px rgba(0,0,0,0.2);
+    box-shadow: 3px 3px 4px -2px rgba(0, 0, 0, 0.2);
 }
 
 af|panelBox {
-    border: none; 
+    border: none;
 }
