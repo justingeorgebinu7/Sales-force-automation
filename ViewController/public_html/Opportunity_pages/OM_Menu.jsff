@@ -145,14 +145,19 @@
                      headerText="#{bindings.FilesView4.hints.Filetype.label}" id="c3" width="173">
             <af:outputText value="#{row.Filetype}" shortDesc="#{bindings.FilesView4.hints.Filetype.tooltip}" id="ot3"/>
           </af:column>
-          <af:column id="c5" width="-47">
-            <af:link shortDesc="#{bindings.FilesView4.hints.Filetype.tooltip}" id="ot5" text="Delete"
-                     action="#{FileBean.deleteButton}"/>
-          </af:column>
         </af:table>
-        <af:button text="Add" id="b2">
-          <af:showPopupBehavior popupId="p1"/>
-        </af:button>
+        <af:panelGridLayout id="pgl1">
+          <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr1">
+            <af:gridCell marginStart="5px" width="dontCare" id="gc1">
+              <af:button text="Add" id="b2">
+                <af:showPopupBehavior popupId="p1"/>
+              </af:button>
+            </af:gridCell>
+            <af:gridCell marginStart="0px" width="dontCare" marginEnd="5px" id="gc2">
+              <af:button text="Delete" id="b4" action="#{FileBean.deleteButton}"/>
+            </af:gridCell>
+          </af:gridRow>
+        </af:panelGridLayout>
       </af:showDetailItem>
       <af:showDetailItem id="sdi2" text="Notes">
         <af:region value="#{bindings.OM_NotesMain1.regionModel}" id="r1"/>

@@ -33,7 +33,15 @@ import oracle.binding.OperationBinding;
 
 import oracle.adf.model.BindingContext;
 
+import oracle.adf.model.bean.DCDataRow;
+import oracle.adf.model.binding.DCBindingContainer;
+import oracle.adf.model.binding.DCIteratorBinding;
 import oracle.adf.view.rich.component.rich.RichPopup;
+
+import oracle.jbo.Row;
+
+import oracle.jbo.RowSetIterator;
+import oracle.jbo.server.ViewRowImpl;
 
 import org.apache.myfaces.trinidad.model.UploadedFile;
 
@@ -141,7 +149,6 @@ public class FileBean {
     }
 
 
-
     public String buttonAction() {
         // Add event code here...
         UploadedFile fileVal = getMyFile();
@@ -188,54 +195,59 @@ public class FileBean {
     }
 
 
-    
-
     public String deleteButton() {
-        
-        FacesContext fc = FacesContext.getCurrentInstance();
-        String filepath = fc.getApplication().evaluateExpressionGet(fc, "#{row.filepath}", String.class);
+
+        DCIteratorBinding it = (DCIteratorBinding) BindingContext.getCurrent()
+                                                                 .getCurrentBindingsEntry()
+                                                                 .get("FilesView4Iterator");
+        RowSetIterator rsIter = it.getRowSetIterator();
+        Row rowObj = rsIter.getCurrentRow();
+
+        String filepath = rowObj.getAttribute("Filepath").toString();
         System.out.println(filepath);
         File f = new File(filepath);
-        if(f.delete()) {
+        if (f.delete()) {
             System.out.println("Done");
-        }
-        else{
+        } else {
             System.out.println("Unsuccesful");
+            return null;
         }
         try {
 
-        NavigationHandler nvHndlr = FacesContext.getCurrentInstance()
+            NavigationHandler nvHndlr = FacesContext.getCurrentInstance()
+                                                    .
 
-        .getApplication()
+                                                    getApplication()
+                                                    .
 
-        .getNavigationHandler();
+                                                    getNavigationHandler();
 
-        nvHndlr.handleNavigation(FacesContext.getCurrentInstance(), null, "delFile");
+            nvHndlr.handleNavigation(FacesContext.getCurrentInstance(), null, "delFile");
 
         } catch (Exception ex) {
 
-        ex.printStackTrace();
+            ex.printStackTrace();
 
         }
-       
+
         return null;
     }
-    
+
     public void closePopup(ActionEvent actionEvent) {
-     
-    UIComponent tmpComponent;
-     
-    tmpComponent = actionEvent.getComponent().getParent();
-     
-    while (!(tmpComponent instanceof RichPopup)) {
-     
-    tmpComponent = tmpComponent.getParent();
-     
-    }
-     
-    RichPopup popup = (RichPopup) tmpComponent;
-     
-    popup.hide();
-     
+
+        UIComponent tmpComponent;
+
+        tmpComponent = actionEvent.getComponent().getParent();
+
+        while (!(tmpComponent instanceof RichPopup)) {
+
+            tmpComponent = tmpComponent.getParent();
+
+        }
+
+        RichPopup popup = (RichPopup) tmpComponent;
+
+        popup.hide();
+
     }
 }
