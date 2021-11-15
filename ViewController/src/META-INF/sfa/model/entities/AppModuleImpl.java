@@ -12,6 +12,7 @@ import oracle.jbo.server.ViewLinkImpl;
 import oracle.jbo.server.ViewObjectImpl;
 
 import sfa.model.entities.common.AppModule;
+import sfa.model.viewobjects.CustomercontactsViewImpl;
 import sfa.model.viewobjects.ProductsViewImpl;
 import sfa.model.viewobjects.staticVo.AccountTypeImpl;
 import oracle.jbo.*;
@@ -68,8 +69,8 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
      * Container's getter for CustomercontactsView1.
      * @return CustomercontactsView1
      */
-    public ViewObjectImpl getCustomercontactsView1() {
-        return (ViewObjectImpl) findViewObject("CustomercontactsView1");
+    public CustomercontactsViewImpl getCustomercontactsView1() {
+        return (CustomercontactsViewImpl) findViewObject("CustomercontactsView1");
     }
 
     /**
@@ -173,8 +174,8 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
      * Container's getter for CustomercontactsView2.
      * @return CustomercontactsView2
      */
-    public ViewObjectImpl getCustomercontactsView2() {
-        return (ViewObjectImpl) findViewObject("CustomercontactsView2");
+    public CustomercontactsViewImpl getCustomercontactsView2() {
+        return (CustomercontactsViewImpl) findViewObject("CustomercontactsView2");
     }
 
     /**
@@ -469,8 +470,8 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
      * Container's getter for CustomercontactsView3.
      * @return CustomercontactsView3
      */
-    public ViewObjectImpl getCustomercontactsView3() {
-        return (ViewObjectImpl) findViewObject("CustomercontactsView3");
+    public CustomercontactsViewImpl getCustomercontactsView3() {
+        return (CustomercontactsViewImpl) findViewObject("CustomercontactsView3");
     }
 
     /**
@@ -501,8 +502,8 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
      * Container's getter for CustomercontactsView4.
      * @return CustomercontactsView4
      */
-    public ViewObjectImpl getCustomercontactsView4() {
-        return (ViewObjectImpl) findViewObject("CustomercontactsView4");
+    public CustomercontactsViewImpl getCustomercontactsView4() {
+        return (CustomercontactsViewImpl) findViewObject("CustomercontactsView4");
     }
 
     /**
@@ -525,16 +526,16 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
      * Container's getter for CustomercontactsView5.
      * @return CustomercontactsView5
      */
-    public ViewObjectImpl getCustomercontactsView5() {
-        return (ViewObjectImpl) findViewObject("CustomercontactsView5");
+    public CustomercontactsViewImpl getCustomercontactsView5() {
+        return (CustomercontactsViewImpl) findViewObject("CustomercontactsView5");
     }
 
     /**
      * Container's getter for CustomercontactsView6.
      * @return CustomercontactsView6
      */
-    public ViewObjectImpl getCustomercontactsView6() {
-        return (ViewObjectImpl) findViewObject("CustomercontactsView6");
+    public CustomercontactsViewImpl getCustomercontactsView6() {
+        return (CustomercontactsViewImpl) findViewObject("CustomercontactsView6");
     }
 
     /**
@@ -1079,8 +1080,8 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
      * Container's getter for CustomercontactsView7.
      * @return CustomercontactsView7
      */
-    public ViewObjectImpl getCustomercontactsView7() {
-        return (ViewObjectImpl) findViewObject("CustomercontactsView7");
+    public CustomercontactsViewImpl getCustomercontactsView7() {
+        return (CustomercontactsViewImpl) findViewObject("CustomercontactsView7");
     }
 
     /**

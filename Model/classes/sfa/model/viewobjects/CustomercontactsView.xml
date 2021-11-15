@@ -13,7 +13,14 @@
   CustomQuery="false"
   SelectAllAttributes="false"
   PageIterMode="Full"
-  AccessMode="DEFAULT">
+  AccessMode="DEFAULT"
+  RowClass="sfa.model.viewobjects.CustomercontactsViewRowImpl"
+  ComponentClass="sfa.model.viewobjects.CustomercontactsViewImpl"
+  RowInterface="sfa.model.viewobjects.common.CustomercontactsViewRow">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access|Coll"/>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
   <ViewAccessor
     Name="BuyingRole1"
     ViewObjectName="sfa.model.viewobjects.staticVo.BuyingRole"
@@ -233,6 +240,19 @@
     ViewLink="sfa.model.viewobjects.Contact_Appointments_Via_Invitees_Link"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <ClientRowInterface
+    Name="__rowClientInterface">
+    <Method
+      Name="editPrimary"
+      MethodName="editPrimary">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+      <Parameter
+        Name="cidStr"
+        Type="java.lang.String"/>
+    </Method>
+  </ClientRowInterface>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="sfa.model.ModelBundle"/>

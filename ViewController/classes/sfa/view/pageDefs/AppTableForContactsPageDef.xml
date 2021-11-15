@@ -30,7 +30,6 @@
           <Item Value="Startdate"/>
           <Item Value="Enddate"/>
           <Item Value="Location"/>
-          <Item Value="Description"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

@@ -48,14 +48,16 @@
           DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
     <list IterBinding="CustomercontactsView2Iterator" StaticList="false" Uses="LOV_Influencelevel" id="Influencelevel"
           DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
-    <button IterBinding="CustomercontactsView2Iterator" id="Isprimarycontact" DTSupportsMRU="false" StaticList="true">
+    <attributeValues IterBinding="CustomercontactsView2Iterator" id="Isprimarycontact">
       <AttrNames>
         <Item Value="Isprimarycontact"/>
       </AttrNames>
-      <ValueList>
-        <Item Value="Y"/>
-        <Item Value="N"/>
-      </ValueList>
-    </button>
+    </attributeValues>
+    <methodAction IterBinding="CustomercontactsView2Iterator" id="editPrimary" RequiresUpdateModel="true"
+                  Action="invokeMethod" MethodName="editPrimary" IsViewObjectMethod="false"
+                  DataControl="AppModuleDataControl" InstanceName="bindings.CustomercontactsView2Iterator.currentRow"
+                  IsLocalObjectReference="true">
+      <NamedData NDName="cidStr" NDType="java.lang.String"/>
+    </methodAction>
   </bindings>
 </pageDefinition>
