@@ -21,6 +21,27 @@
     <Attr Name="_codeGenFlag2" Value="Access|Coll"/>
     <Attr Name="_isCodegen" Value="true"/>
   </DesignTime>
+  <ViewAccessor
+    Name="ProductCategory1"
+    ViewObjectName="sfa.model.viewobjects.staticVo.ProductCategory"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_Category"
+    ListVOName="ProductCategory1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Category"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="ProductCategory"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="ProductCategory"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <EntityUsage
     Name="Products"
     Entity="sfa.model.entities.Products"/>
@@ -54,7 +75,15 @@
     PrecisionRule="true"
     EntityAttrName="Category"
     EntityUsage="Products"
-    AliasName="CATEGORY"/>
+    AliasName="CATEGORY"
+    LOVName="LOV_Category">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Revenueitem"
     IsUnique="true"

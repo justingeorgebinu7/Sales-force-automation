@@ -11,7 +11,7 @@
         <fixed-outcome>CreateInsert</fixed-outcome>
       </outcome>
     </method-call>
-    <view id="createProduct">
+    <view id="createProduct2">
       <page>/ProductsCatalog/createProduct.jsff</page>
     </view>
     <method-call id="Delete">
@@ -35,11 +35,11 @@
       <from-activity-id>CreateInsert</from-activity-id>
       <control-flow-case id="__2">
         <from-outcome>CreateInsert</from-outcome>
-        <to-activity-id>createProduct</to-activity-id>
+        <to-activity-id>createProduct2</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <control-flow-rule id="__5">
-      <from-activity-id>createProduct</from-activity-id>
+      <from-activity-id>createProduct2</from-activity-id>
       <control-flow-case id="__6">
         <from-outcome>discard</from-outcome>
         <to-activity-id>Delete</to-activity-id>

@@ -40,6 +40,14 @@
       Name="ExpressionScript"
       trustMode="untrusted"
       CodeSourceName="NoteViewRow"/>
+    <Properties>
+      <SchemaBasedProperties>
+        <FMT_FORMAT
+          ResId="sfa.model.viewobjects.NoteView.Datetime_FMT_FORMAT"/>
+        <TimeZoneID
+          Value="Asia/Kolkata"/>
+      </SchemaBasedProperties>
+    </Properties>
   </ViewAttribute>
   <ViewAttribute
     Name="Accountid"
@@ -78,4 +86,8 @@
     EntityAttrName="Createdby"
     EntityUsage="Note"
     AliasName="CREATEDBY"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="sfa.model.ModelBundle"/>
+  </ResourceBundle>
 </ViewObject>

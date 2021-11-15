@@ -21,12 +21,14 @@
       <f:validator binding="#{bindings.Price.validator}"/>
       <af:convertNumber groupingUsed="false" pattern="#{bindings.Price.format}"/>
     </af:inputText>
-    <af:inputText value="#{bindings.Category.inputValue}" label="#{bindings.Category.hints.label}"
-                  required="#{bindings.Category.hints.mandatory}" columns="#{bindings.Category.hints.displayWidth}"
-                  maximumLength="#{bindings.Category.hints.precision}" shortDesc="#{bindings.Category.hints.tooltip}"
-                  id="it4">
+    <af:inputComboboxListOfValues id="categoryId" popupTitle="Search and Select: #{bindings.Category.hints.label}"
+                                  value="#{bindings.Category.inputValue}" label="#{bindings.Category.hints.label}"
+                                  model="#{bindings.Category.listOfValuesModel}"
+                                  required="#{bindings.Category.hints.mandatory}"
+                                  columns="#{bindings.Category.hints.displayWidth}"
+                                  shortDesc="#{bindings.Category.hints.tooltip}">
       <f:validator binding="#{bindings.Category.validator}"/>
-    </af:inputText>
+    </af:inputComboboxListOfValues>
   </af:panelFormLayout>
   <af:button actionListener="#{bindings.Commit.execute}" text="Save" disabled="false" id="b1"
              action="back"/>

@@ -20,17 +20,17 @@
    <View
       id="View3">
       <property
-         name="activityId">createProduct</property>
+         name="activityId">createProduct2</property>
       <property
          name="pageFragment">true</property>
       <property
          name="x">485.0</property>
       <property
-         name="description">&lt;html>&lt;p>&lt;b>createProduct&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+         name="description">&lt;html>&lt;p>&lt;b>createProduct2&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
          name="y">320.89648</property>
       <property
-         name="page">/createProduct.jsff</property>
+         name="page">/ProductsCatalog/createProduct.jsff</property>
       <property
          name="exceptionHandler">false</property>
    </View>

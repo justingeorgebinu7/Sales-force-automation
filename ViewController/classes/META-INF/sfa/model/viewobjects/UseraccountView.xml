@@ -92,8 +92,8 @@
     AliasName="PASSWORD">
     <Properties>
       <SchemaBasedProperties>
-        <DISPLAYHINT
-          Value="Hide"/>
+        <DISPLAYWIDTH
+          Value="20"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>

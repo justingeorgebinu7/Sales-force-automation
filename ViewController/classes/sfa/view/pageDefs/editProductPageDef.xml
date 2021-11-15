@@ -22,11 +22,7 @@
         <Item Value="Price"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="ProductsView1Iterator" id="Category">
-      <AttrNames>
-        <Item Value="Category"/>
-      </AttrNames>
-    </attributeValues>
     <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+    <listOfValues IterBinding="ProductsView1Iterator" StaticList="false" Uses="LOV_Category" id="Category"/>
   </bindings>
 </pageDefinition>

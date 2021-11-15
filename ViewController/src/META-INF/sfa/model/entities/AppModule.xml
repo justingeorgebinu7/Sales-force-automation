@@ -243,6 +243,9 @@
   <ViewUsage
     Name="AppointmentsView10"
     ViewObjectName="sfa.model.viewobjects.AppointmentsView"/>
+  <ViewUsage
+    Name="ProductCategory1"
+    ViewObjectName="sfa.model.viewobjects.staticVo.ProductCategory"/>
   <ViewLinkUsage
     Name="CaddressCustomercontactsFkLink1"
     ViewLinkObjectName="sfa.model.viewobjects.CaddressCustomercontactsFkLink"

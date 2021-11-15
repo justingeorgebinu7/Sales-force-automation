@@ -20,14 +20,7 @@
                headerText="#{bindings.NoteView2.hints.Createdby.label}" id="c4" width="110">
       <af:outputText value="#{row.Createdby}" shortDesc="#{bindings.NoteView2.hints.Createdby.tooltip}" id="ot4"/>
     </af:column>
-    <af:column sortProperty="#{bindings.NoteView2.hints.Datetime.name}" filterable="true" sortable="true"
-               headerText="#{bindings.NoteView2.hints.Datetime.label}" id="c3" width="23">
-      <f:facet name="filter">
-        <af:inputDate value="#{bindings.NoteView2Query.queryDescriptor.filterConjunctionCriterion.criterionMap.Datetime.value}"
-                      id="id1">
-          <af:convertDateTime pattern="#{bindings.NoteView2.hints.Datetime.format}"/>
-        </af:inputDate>
-      </f:facet>
+    <af:column headerText="#{bindings.NoteView2.hints.Datetime.label}" id="c3">
       <af:outputText value="#{row.Datetime}" shortDesc="#{bindings.NoteView2.hints.Datetime.tooltip}" id="ot3">
         <af:convertDateTime pattern="#{bindings.NoteView2.hints.Datetime.format}"/>
       </af:outputText>

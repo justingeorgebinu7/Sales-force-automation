@@ -2,13 +2,7 @@
 <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
                 xmlns:f="http://java.sun.com/jsf/core">
   <af:panelBox id="pb1" showDisclosure="false">
-    <f:facet name="toolbar">
-      <af:menuBar id="mb1">
-        <af:commandMenuItem text="Add" id="cmi1" action="add"/>
-        <af:commandMenuItem text="Delete" id="cmi2" action="deleteCon"/>
-        <af:spacer id="s1" width="20px"/>
-      </af:menuBar>
-    </f:facet>
+    <f:facet name="toolbar"/>
     <af:table value="#{bindings.CustomercontactsView1.collectionModel}" var="row"
               rows="#{bindings.CustomercontactsView1.rangeSize}"
               emptyText="#{bindings.CustomercontactsView1.viewable ? 'No data to display.' : 'Access Denied.'}"
@@ -57,4 +51,6 @@
       </af:column>
     </af:table>
   </af:panelBox>
+  <af:button text="Add" id="b1" action="add"/>
+  <af:button text="Delete" id="b2" action="deleteCon"/>
 </ui:composition>

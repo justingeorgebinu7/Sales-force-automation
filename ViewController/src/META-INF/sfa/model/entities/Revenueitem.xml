@@ -66,14 +66,6 @@
           ResId="sfa.model.entities.Revenueitem.Bestcaserevenue_LABEL"/>
       </SchemaBasedProperties>
     </Properties>
-    <validation:CompareValidationBean
-      Name="BestcaserevenueRule0"
-      OnAttribute="Bestcaserevenue"
-      OperandType="JBO"
-      Inverse="false"
-      CompareType="GREATERTHANEQUALTO"
-      CompareValue="sfa.model.viewobjects.RevenueitemView.Worstcaserevenue"
-      ResId="sfa.model.entities.Revenueitem.Bestcaserevenue_Rule_0"/>
   </Attribute>
   <Attribute
     Name="Worstcaserevenue"

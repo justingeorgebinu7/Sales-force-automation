@@ -221,6 +221,8 @@
       <SchemaBasedProperties>
         <LABEL
           ResId="sfa.model.viewobjects.OpportunityView.Bestcaserevenue_LABEL"/>
+        <DISPLAYWIDTH
+          Value="10"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
@@ -234,6 +236,8 @@
       <SchemaBasedProperties>
         <LABEL
           ResId="sfa.model.viewobjects.OpportunityView.Worstcaserevenue_LABEL"/>
+        <DISPLAYWIDTH
+          Value="10"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
@@ -247,6 +251,8 @@
       <SchemaBasedProperties>
         <LABEL
           ResId="sfa.model.viewobjects.OpportunityView.Budgetavailable_LABEL"/>
+        <DISPLAYWIDTH
+          Value="10"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
@@ -276,6 +282,8 @@
       <SchemaBasedProperties>
         <LABEL
           ResId="sfa.model.viewobjects.OpportunityView.Totalrevenue_LABEL"/>
+        <DISPLAYWIDTH
+          Value="10"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>

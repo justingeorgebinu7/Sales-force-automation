@@ -3,6 +3,7 @@ package sfa.model.viewobjects;
 import java.math.BigDecimal;
 
 import oracle.jbo.RowIterator;
+import oracle.jbo.RowSet;
 import oracle.jbo.server.EntityImpl;
 import oracle.jbo.server.ViewRowImpl;
 
@@ -14,6 +15,7 @@ import sfa.model.viewobjects.common.ProductsViewRow;
 // ---    Warning: Do not modify method signatures of generated methods.
 // ---------------------------------------------------------------------
 public class ProductsViewRowImpl extends ViewRowImpl implements ProductsViewRow {
+
 
     public static final int ENTITY_PRODUCTS = 0;
 
@@ -27,7 +29,8 @@ public class ProductsViewRowImpl extends ViewRowImpl implements ProductsViewRow 
         Price,
         Category,
         Revenueitem,
-        RevenueitemView;
+        RevenueitemView,
+        ProductCategory1;
         private static AttributesEnum[] vals = null;
         ;
         private static final int firstIndex = 0;
@@ -52,6 +55,7 @@ public class ProductsViewRowImpl extends ViewRowImpl implements ProductsViewRow 
         }
     }
 
+
     public static final int PRODUCTID = AttributesEnum.Productid.index();
     public static final int NAME = AttributesEnum.Name.index();
     public static final int DESCRIPTION = AttributesEnum.Description.index();
@@ -59,6 +63,7 @@ public class ProductsViewRowImpl extends ViewRowImpl implements ProductsViewRow 
     public static final int CATEGORY = AttributesEnum.Category.index();
     public static final int REVENUEITEM = AttributesEnum.Revenueitem.index();
     public static final int REVENUEITEMVIEW = AttributesEnum.RevenueitemView.index();
+    public static final int PRODUCTCATEGORY1 = AttributesEnum.ProductCategory1.index();
 
     /**
      * This is the default constructor (do not remove).
@@ -175,6 +180,13 @@ public class ProductsViewRowImpl extends ViewRowImpl implements ProductsViewRow 
      */
     public RowIterator getRevenueitemView() {
         return (RowIterator) getAttributeInternal(REVENUEITEMVIEW);
+    }
+
+    /**
+     * Gets the view accessor <code>RowSet</code> ProductCategory1.
+     */
+    public RowSet getProductCategory1() {
+        return (RowSet) getAttributeInternal(PRODUCTCATEGORY1);
     }
 }
 

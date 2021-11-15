@@ -91,7 +91,10 @@
     EntityUsage="Useraccount"
     AliasName="PASSWORD">
     <Properties>
-      <SchemaBasedProperties/>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
   <ViewAttribute

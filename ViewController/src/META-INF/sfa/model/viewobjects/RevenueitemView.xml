@@ -90,19 +90,40 @@
     PrecisionRule="true"
     EntityAttrName="Revenue"
     EntityUsage="Revenueitem"
-    AliasName="REVENUE"/>
+    AliasName="REVENUE">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="10"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Bestcaserevenue"
     PrecisionRule="true"
     EntityAttrName="Bestcaserevenue"
     EntityUsage="Revenueitem"
-    AliasName="BESTCASEREVENUE"/>
+    AliasName="BESTCASEREVENUE">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="10"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Worstcaserevenue"
     PrecisionRule="true"
     EntityAttrName="Worstcaserevenue"
     EntityUsage="Revenueitem"
-    AliasName="WORSTCASEREVENUE"/>
+    AliasName="WORSTCASEREVENUE">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="10"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Opportunityid"
     PrecisionRule="true"
