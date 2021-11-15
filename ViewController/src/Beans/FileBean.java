@@ -15,8 +15,10 @@ import java.io.OutputStream;
 import java.util.List;
 
 import javax.faces.application.NavigationHandler;
+import javax.faces.component.UIComponent;
 import javax.faces.context.FacesContext;
 
+import javax.faces.event.ActionEvent;
 import javax.faces.event.ValueChangeEvent;
 
 import oracle.adf.view.rich.component.rich.data.RichColumn;
@@ -30,6 +32,8 @@ import oracle.binding.BindingContainer;
 import oracle.binding.OperationBinding;
 
 import oracle.adf.model.BindingContext;
+
+import oracle.adf.view.rich.component.rich.RichPopup;
 
 import org.apache.myfaces.trinidad.model.UploadedFile;
 
@@ -215,5 +219,23 @@ public class FileBean {
         }
        
         return null;
+    }
+    
+    public void closePopup(ActionEvent actionEvent) {
+     
+    UIComponent tmpComponent;
+     
+    tmpComponent = actionEvent.getComponent().getParent();
+     
+    while (!(tmpComponent instanceof RichPopup)) {
+     
+    tmpComponent = tmpComponent.getParent();
+     
+    }
+     
+    RichPopup popup = (RichPopup) tmpComponent;
+     
+    popup.hide();
+     
     }
 }

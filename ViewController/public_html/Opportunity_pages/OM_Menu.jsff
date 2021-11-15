@@ -1,6 +1,16 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
                 xmlns:f="http://java.sun.com/jsf/core">
+  <af:popup childCreation="deferred" autoCancel="disabled" id="p1">
+    <af:panelWindow id="pw1" stretchChildren="first">
+      <af:panelBox text="Choose File" id="pb1">
+        <f:facet name="toolbar"/>
+        <af:inputFile id="if2" value="#{FileBean.myFile}"/>
+        <af:button text="Upload" id="b3" action="#{FileBean.buttonAction}" partialSubmit="true"
+                   actionListener="#{FileBean.closePopup}"/>
+      </af:panelBox>
+    </af:panelWindow>
+  </af:popup>
   <af:menuBar id="mb1">
     <af:commandMenuItem id="cmi1" action="toHome" icon="https://i.ibb.co/5nPsJ90/New-Project-2.png"/>
   </af:menuBar>
@@ -109,8 +119,6 @@
         <af:region value="#{bindings.revenueItem1.regionModel}" id="r5"/>
       </af:showDetailItem>
       <af:showDetailItem text="Documents" id="sdi8">
-        <af:inputFile id="if2" value="#{FileBean.myFile}"/>
-        <af:button text="Upload" id="b3" action="#{FileBean.buttonAction}" partialSubmit="true"/>
         <af:table value="#{bindings.FilesView4.collectionModel}" var="row" rows="#{bindings.FilesView4.rangeSize}"
                   emptyText="#{bindings.FilesView4.viewable ? 'No data to display.' : 'Access Denied.'}"
                   rowBandingInterval="0" selectedRowKeys="#{bindings.FilesView4.collectionModel.selectedRow}"
@@ -133,6 +141,9 @@
                      action="#{FileBean.deleteButton}"/>
           </af:column>
         </af:table>
+        <af:button text="Add" id="b2">
+          <af:showPopupBehavior popupId="p1"/>
+        </af:button>
       </af:showDetailItem>
       <af:showDetailItem id="sdi2" text="Notes">
         <af:region value="#{bindings.OM_NotesMain1.regionModel}" id="r1"/>

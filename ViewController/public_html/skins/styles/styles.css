@@ -15,6 +15,9 @@ af|button {
     background-color: #fff;
 }
 
+af|inputFile{
+margin:30px 5px;
+}
 .navBtn {
     width: 220px;
     padding: 10px 5px;
