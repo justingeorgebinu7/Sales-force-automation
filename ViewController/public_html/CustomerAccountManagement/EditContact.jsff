@@ -44,14 +44,9 @@
       <f:selectItems value="#{bindings.Influencelevel.items}" id="si2"/>
       <f:validator binding="#{bindings.Influencelevel.validator}"/>
     </af:selectOneChoice>
-    <af:inputText value="#{bindings.Isprimarycontact.inputValue}" label="#{bindings.Isprimarycontact.hints.label}"
-                  required="#{bindings.Isprimarycontact.hints.mandatory}"
-                  columns="#{bindings.Isprimarycontact.hints.displayWidth}"
-                  maximumLength="#{bindings.Isprimarycontact.hints.precision}"
-                  shortDesc="#{bindings.Isprimarycontact.hints.tooltip}" id="it6"
-                  valueChangeListener="#{Contact.primaryCheck}">
-      <f:validator binding="#{bindings.Isprimarycontact.validator}"/>
-    </af:inputText>
+    <af:selectBooleanCheckbox value="#{bindings.Isprimarycontact.inputValue}" label="#{bindings.Isprimarycontact.label}"
+                              shortDesc="#{bindings.Isprimarycontact.hints.tooltip}" id="sbc1"
+                              valueChangeListener="#{Contact.primaryCheck}"/>
   </af:panelFormLayout>
   <af:button actionListener="#{bindings.Commit.execute}" text="Save" id="b1" action="backFromEdit"/>
   <af:button text="Back" id="b2" action="backFromEdit"/>

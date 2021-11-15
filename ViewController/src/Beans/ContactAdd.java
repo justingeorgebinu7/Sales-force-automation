@@ -4,7 +4,6 @@ import javax.faces.event.ValueChangeEvent;
 
 import oracle.adf.model.BindingContext;
 
-import oracle.adf.model.binding.DCBindingContainer;
 import oracle.adf.model.binding.DCIteratorBinding;
 
 import oracle.binding.BindingContainer;
@@ -13,32 +12,33 @@ import oracle.binding.OperationBinding;
 import oracle.jbo.Row;
 import oracle.jbo.RowSetIterator;
 
-public class Contact {
-    public Contact() {
+public class ContactAdd {
+    public ContactAdd() {
     }
+    
     public BindingContainer getBindingsCont() {
 
-             return BindingContext.getCurrent().getCurrentBindingsEntry();
+              return BindingContext.getCurrent().getCurrentBindingsEntry();
 
-         }
-
-
-
-         /**
-
-          * Generic Method to execute operation
-
-          * */
-
-         public OperationBinding executeOperation(String operation) {
-
-             OperationBinding createParam = getBindingsCont().getOperationBinding(operation);
-
-             return createParam;
+          }
 
 
 
-         }
+          /**
+
+           * Generic Method to execute operation
+
+           * */
+
+          public OperationBinding executeOperation(String operation) {
+
+              OperationBinding createParam = getBindingsCont().getOperationBinding(operation);
+
+              return createParam;
+
+
+
+          }
 
     public void primaryCheck(ValueChangeEvent valueChangeEvent) {
         Object val= valueChangeEvent.getNewValue();
@@ -57,13 +57,5 @@ public class Contact {
                     //ob.getParamsMap().put("aidStr", aid.toString());
                     ob.execute();
     }
-    }
-
-    public void wrapper(ValueChangeEvent valueChangeEvent) {
-        primaryCheck(valueChangeEvent);
-//        DCBindingContainer bindings = (DCBindingContainer)BindingContext.getCurrent().getCurrentBindingsEntry();
-//        OperationBinding operationBinding = bindings.getOperationBinding("Commit");
-//        operationBinding.execute();
-        
-    }
+}
 }

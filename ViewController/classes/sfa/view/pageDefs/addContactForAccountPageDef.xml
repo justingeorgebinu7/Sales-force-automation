@@ -47,5 +47,11 @@
         <Item Value="N"/>
       </ValueList>
     </button>
+    <methodAction IterBinding="CustomercontactsView2Iterator" id="editPrimary" RequiresUpdateModel="true"
+                  Action="invokeMethod" MethodName="editPrimary" IsViewObjectMethod="false"
+                  DataControl="AppModuleDataControl" InstanceName="bindings.CustomercontactsView2Iterator.currentRow"
+                  IsLocalObjectReference="true">
+      <NamedData NDName="cidStr" NDType="java.lang.String"/>
+    </methodAction>
   </bindings>
 </pageDefinition>

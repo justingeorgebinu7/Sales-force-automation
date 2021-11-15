@@ -51,7 +51,8 @@
       <f:validator binding="#{bindings.Buyingrole.validator}"/>
     </af:inputComboboxListOfValues>
     <af:selectBooleanCheckbox value="#{bindings.Isprimarycontact.inputValue}" label="#{bindings.Isprimarycontact.label}"
-                              shortDesc="#{bindings.Isprimarycontact.hints.tooltip}" id="sbc1"/>
+                              shortDesc="#{bindings.Isprimarycontact.hints.tooltip}" id="sbc1"
+                              valueChangeListener="#{pageFlowScope.ContactAdd.primaryCheck}"/>
   </af:panelFormLayout>
   <af:button text="Save" id="b1" action="saveContact"/>
   <af:button actionListener="#{bindings.Delete.execute}" text="Cancel" disabled="#{!bindings.Delete.enabled}" id="b2"
