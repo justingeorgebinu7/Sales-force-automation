@@ -61,6 +61,9 @@
         <id>addNewAppointment</id>
       </task-flow-reference>
     </task-flow-call>
+    <view id="editAppointmentNew">
+      <page>/ContactManagementPages/AppointmentNew/editAppointmentNew.jsff</page>
+    </view>
     <control-flow-rule id="__1">
       <from-activity-id>AppTableForContacts</from-activity-id>
       <control-flow-case id="__3">
@@ -74,6 +77,10 @@
       <control-flow-case id="__9">
         <from-outcome>addNewAppointment</from-outcome>
         <to-activity-id>addNewAppointment</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__14">
+        <from-outcome>editAppointmentNew</from-outcome>
+        <to-activity-id>editAppointmentNew</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <control-flow-rule id="__4">
@@ -111,6 +118,13 @@
       <control-flow-case id="__12">
         <from-outcome>deleteAppointment1</from-outcome>
         <to-activity-id>deleteAppointment1</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__15">
+      <from-activity-id>editAppointmentNew</from-activity-id>
+      <control-flow-case id="__16">
+        <from-outcome>back</from-outcome>
+        <to-activity-id>AppTableForContacts</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <use-page-fragments/>

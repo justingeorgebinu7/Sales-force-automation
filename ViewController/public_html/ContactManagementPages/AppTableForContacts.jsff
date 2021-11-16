@@ -12,7 +12,8 @@
             columnStretching="last">
     <af:column sortProperty="#{bindings.AppointmentsView10.hints.Name.name}" filterable="true" sortable="true"
                headerText="#{bindings.AppointmentsView10.hints.Name.label}" id="c6">
-      <af:outputText value="#{row.Name}" shortDesc="#{bindings.AppointmentsView10.hints.Name.tooltip}" id="ot6"/>
+      <af:link shortDesc="#{bindings.AppointmentsView10.hints.Name.tooltip}" id="ot6" text="#{row.Name}"
+               action="editAppointmentNew"/>
     </af:column>
     <af:column sortProperty="#{bindings.AppointmentsView10.hints.Startdate.name}" filterable="true" sortable="true"
                headerText="#{bindings.AppointmentsView10.hints.Startdate.label}" id="c7">
@@ -52,7 +53,7 @@
   </af:table>
   <af:button text="Add" id="b3" action="addNewAppointment"/>
   <af:button text="Delete" action="deleteAppointment1" id="b4"/>
-  <af:spacer id="s1" height="10"/>
+  <af:spacer id="s1" height="40"/>
   <h:outputText value="Old table:" id="ot2"/>
   <af:table value="#{bindings.AppointmentsView2.collectionModel}" var="row"
             rows="#{bindings.AppointmentsView2.rangeSize}"

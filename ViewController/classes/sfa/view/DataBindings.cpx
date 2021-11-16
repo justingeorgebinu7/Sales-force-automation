@@ -444,6 +444,8 @@
           usageId="sfa_view_addNewAppointment_addNewAppointment_DeletePageDef"/>
     <page path="/WEB-INF/ContactManagement/AppointmentsNew/addNewAppointment.xml#addNewAppointment@Commit"
           usageId="sfa_view_addNewAppointment_addNewAppointment_CommitPageDef"/>
+    <page path="/ContactManagementPages/AppointmentNew/editAppointmentNew.jsff"
+          usageId="sfa_view_editAppointmentNewPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="sfa_view_untitled2PageDef" path="sfa.view.pageDefs.untitled2PageDef"/>
@@ -880,6 +882,8 @@
           path="ContactManagement.AppointmentsNew.addNewAppointment_addNewAppointment_DeletePageDef"/>
     <page id="sfa_view_addNewAppointment_addNewAppointment_CommitPageDef"
           path="ContactManagement.AppointmentsNew.addNewAppointment_addNewAppointment_CommitPageDef"/>
+    <page id="sfa_view_editAppointmentNewPageDef"
+          path="ContactManagementPages.AppointmentNew.editAppointmentNewPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="sfa.model.entities"

@@ -33,6 +33,7 @@
       <f:validator binding="#{bindings.Location.validator}"/>
     </af:inputText>
   </af:panelFormLayout>
-  <af:button text="Save" id="b1" action="#{AppointmentsForContact.createEntry}"/>
-  <af:button text="Cancel" id="b2" action="discard"/>
+  <af:button actionListener="#{bindings.Commit.execute}" text="Save" id="b2"
+             action="back"/>
+  <af:button text="Cancel" id="b1" action="back"/>
 </ui:composition>

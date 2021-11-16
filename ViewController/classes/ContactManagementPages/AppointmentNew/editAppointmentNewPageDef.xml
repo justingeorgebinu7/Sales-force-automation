@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.22.48" id="editAppointmentNewPageDef"
+                Package="ContactManagementPages.AppointmentNew">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="AppointmentsView10" RangeSize="25" DataControl="AppModuleDataControl"
+              id="AppointmentsView10Iterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="AppointmentsView10Iterator" id="Name">
+      <AttrNames>
+        <Item Value="Name"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AppointmentsView10Iterator" id="Startdate">
+      <AttrNames>
+        <Item Value="Startdate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AppointmentsView10Iterator" id="Enddate">
+      <AttrNames>
+        <Item Value="Enddate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AppointmentsView10Iterator" id="Description">
+      <AttrNames>
+        <Item Value="Description"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AppointmentsView10Iterator" id="Location">
+      <AttrNames>
+        <Item Value="Location"/>
+      </AttrNames>
+    </attributeValues>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+  </bindings>
+</pageDefinition>
