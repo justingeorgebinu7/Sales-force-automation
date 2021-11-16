@@ -54,11 +54,26 @@ public class RevenueItem {
         ob.getParamsMap().put("pidStr", pid.toString());
         ob.execute();
         
+        DCIteratorBinding it = (DCIteratorBinding)BindingContext.getCurrent().getCurrentBindingsEntry().get("RevenueitemView2Iterator");   
+        RowSetIterator rsIter = it .getRowSetIterator();
+        Row rowObj = rsIter .getCurrentRow();
+        Object q=rowObj.getAttribute("Quantity");
+       // String str = q.toString();
+        if(q!=null) {
+            calculate(q);
+        }
+        
     }
 
     public void quantityChange(ValueChangeEvent valueChangeEvent) {
      
         Object quant= valueChangeEvent.getNewValue();
+        calculate(quant);
+        
+    }
+    
+    public void calculate(Object quant){
+        
         DCIteratorBinding it = (DCIteratorBinding)BindingContext.getCurrent().getCurrentBindingsEntry().get("RevenueitemView2Iterator");   
         RowSetIterator rsIter = it .getRowSetIterator();
         Row rowObj = rsIter .getCurrentRow();
@@ -80,6 +95,5 @@ public class RevenueItem {
         rowObj.setAttribute("Revenue",revenue);
         rowObj.setAttribute("Bestcaserevenue",best); 
         rowObj.setAttribute("Worstcaserevenue",worst);
-        
     }
 }
