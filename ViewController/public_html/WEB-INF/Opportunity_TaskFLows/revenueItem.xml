@@ -5,6 +5,16 @@
     <data-control-scope>
       <shared/>
     </data-control-scope>
+    <managed-bean id="__8">
+      <managed-bean-name>RevenueItemEdit</managed-bean-name>
+      <managed-bean-class>Beans.RevenueItemEdit</managed-bean-class>
+      <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean id="__9">
+      <managed-bean-name>RevenueItemedit</managed-bean-name>
+      <managed-bean-class>Beans.RevenueItemedit</managed-bean-class>
+      <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
     <view id="revenueItem">
       <page>/revenueItem.jsff</page>
     </view>
