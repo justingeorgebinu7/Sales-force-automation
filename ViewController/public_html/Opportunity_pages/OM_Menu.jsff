@@ -81,9 +81,10 @@
                                         model="#{bindings.Primarycontact.listOfValuesModel}"
                                         required="#{bindings.Primarycontact.hints.mandatory}"
                                         columns="#{bindings.Primarycontact.hints.displayWidth}"
-                                        shortDesc="#{bindings.Primarycontact.hints.tooltip}">
+                                        shortDesc="#{bindings.Primarycontact.hints.tooltip}"
+                                        converter="#{bindings.Primarycontact.converter}">
             <f:validator binding="#{bindings.Primarycontact.validator}"/>
-            <af:convertNumber groupingUsed="false" pattern="#{bindings.Primarycontact.format}"/>
+            <!--<af:convertNumber groupingUsed="false" pattern="#{bindings.Primarycontact.format}"/>-->
           </af:inputComboboxListOfValues>
           <af:inputComboboxListOfValues id="risklevelId"
                                         popupTitle="Search and Select: #{bindings.Risklevel.hints.label}"
