@@ -626,5 +626,18 @@
         Name="oidStr"
         Type="java.lang.String"/>
     </Method>
+    <Method
+      Name="setInviteeData"
+      MethodName="setInviteeData">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+      <Parameter
+        Name="contactId"
+        Type="int"/>
+      <Parameter
+        Name="appointmentId"
+        Type="int"/>
+    </Method>
   </ClientInterface>
 </AppModule>

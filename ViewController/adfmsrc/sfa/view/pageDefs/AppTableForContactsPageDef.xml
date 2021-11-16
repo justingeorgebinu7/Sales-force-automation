@@ -10,6 +10,8 @@
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="AppointmentsView2Query"/>
     <iterator Binds="AppointmentsView10" RangeSize="25" DataControl="AppModuleDataControl"
               id="AppointmentsView10Iterator"/>
+    <searchRegion Binds="AppointmentsView10Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="AppointmentsView10Query"/>
   </executables>
   <bindings>
     <tree IterBinding="AppointmentsView2Iterator" id="AppointmentsView2">
@@ -30,6 +32,7 @@
           <Item Value="Startdate"/>
           <Item Value="Enddate"/>
           <Item Value="Location"/>
+          <Item Value="Description"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

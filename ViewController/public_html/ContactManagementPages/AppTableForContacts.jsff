@@ -1,37 +1,59 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
-                xmlns:f="http://java.sun.com/jsf/core">
-  <af:outputText value="Appointments you are invited to:" id="ot6" inlineStyle="font-weight:bold;color:black;"/>
-  <af:spacer id="s1" height="20"/>
-  <af:listView value="#{bindings.AppointmentsView10.collectionModel}" var="item"
-               emptyText="#{bindings.AppointmentsView10.viewable ? 'No data to display.' : 'Access Denied.'}"
-               fetchSize="#{bindings.AppointmentsView10.rangeSize}" id="lv1">
-    <af:listItem id="li1">
-      <af:panelGridLayout id="pgl1">
-        <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr1">
-          <af:gridCell marginStart="5px" width="25%" id="gc1">
-            <af:outputFormatted value="#{item.bindings.Name.inputValue}" id="of1"/>
-          </af:gridCell>
-          <af:gridCell marginStart="0px" width="25%" id="gc2">
-            <af:outputFormatted value="#{item.bindings.Startdate.inputValue}" id="of2">
-              <af:convertDateTime pattern="#{bindings.AppointmentsView10.hints.Startdate.format}"/>
-            </af:outputFormatted>
-          </af:gridCell>
-          <af:gridCell marginStart="0px" width="25%" id="gc3">
-            <af:outputFormatted value="#{item.bindings.Enddate.inputValue}" id="of3">
-              <af:convertDateTime pattern="#{bindings.AppointmentsView10.hints.Enddate.format}"/>
-            </af:outputFormatted>
-          </af:gridCell>
-          <af:gridCell marginStart="0px" width="25%" marginEnd="5px" id="gc4">
-            <af:outputFormatted value="#{item.bindings.Location.inputValue}" id="of4"/>
-          </af:gridCell>
-        </af:gridRow>
-      </af:panelGridLayout>
-    </af:listItem>
-  </af:listView>
-  <af:spacer id="s3" height="20"/>
-  <af:outputText value="Your Appointments:" id="ot12" inlineStyle="font-weight:bold;color:black"/>
-  <af:spacer id="s2" height="10"/>
+                xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html">
+  <af:table value="#{bindings.AppointmentsView10.collectionModel}" var="row"
+            rows="#{bindings.AppointmentsView10.rangeSize}"
+            emptyText="#{bindings.AppointmentsView10.viewable ? 'No data to display.' : 'Access Denied.'}"
+            rowBandingInterval="0" selectedRowKeys="#{bindings.AppointmentsView10.collectionModel.selectedRow}"
+            selectionListener="#{bindings.AppointmentsView10.collectionModel.makeCurrent}" rowSelection="single"
+            fetchSize="#{bindings.AppointmentsView10.rangeSize}"
+            filterModel="#{bindings.AppointmentsView10Query.queryDescriptor}" filterVisible="true"
+            queryListener="#{bindings.AppointmentsView10Query.processQuery}" varStatus="vs" id="t2"
+            columnStretching="last">
+    <af:column sortProperty="#{bindings.AppointmentsView10.hints.Name.name}" filterable="true" sortable="true"
+               headerText="#{bindings.AppointmentsView10.hints.Name.label}" id="c6">
+      <af:outputText value="#{row.Name}" shortDesc="#{bindings.AppointmentsView10.hints.Name.tooltip}" id="ot6"/>
+    </af:column>
+    <af:column sortProperty="#{bindings.AppointmentsView10.hints.Startdate.name}" filterable="true" sortable="true"
+               headerText="#{bindings.AppointmentsView10.hints.Startdate.label}" id="c7">
+      <f:facet name="filter">
+        <af:inputDate value="#{bindings.AppointmentsView10Query.queryDescriptor.filterConjunctionCriterion.criterionMap.Startdate.value}"
+                      id="id3">
+          <af:convertDateTime pattern="#{bindings.AppointmentsView10.hints.Startdate.format}"/>
+        </af:inputDate>
+      </f:facet>
+      <af:outputText value="#{row.Startdate}" shortDesc="#{bindings.AppointmentsView10.hints.Startdate.tooltip}"
+                     id="ot7">
+        <af:convertDateTime pattern="#{bindings.AppointmentsView10.hints.Startdate.format}"/>
+      </af:outputText>
+    </af:column>
+    <af:column sortProperty="#{bindings.AppointmentsView10.hints.Enddate.name}" filterable="true" sortable="true"
+               headerText="#{bindings.AppointmentsView10.hints.Enddate.label}" id="c8">
+      <f:facet name="filter">
+        <af:inputDate value="#{bindings.AppointmentsView10Query.queryDescriptor.filterConjunctionCriterion.criterionMap.Enddate.value}"
+                      id="id4">
+          <af:convertDateTime pattern="#{bindings.AppointmentsView10.hints.Enddate.format}"/>
+        </af:inputDate>
+      </f:facet>
+      <af:outputText value="#{row.Enddate}" shortDesc="#{bindings.AppointmentsView10.hints.Enddate.tooltip}" id="ot8">
+        <af:convertDateTime pattern="#{bindings.AppointmentsView10.hints.Enddate.format}"/>
+      </af:outputText>
+    </af:column>
+    <af:column sortProperty="#{bindings.AppointmentsView10.hints.Location.name}" filterable="true" sortable="true"
+               headerText="#{bindings.AppointmentsView10.hints.Location.label}" id="c9">
+      <af:outputText value="#{row.Location}" shortDesc="#{bindings.AppointmentsView10.hints.Location.tooltip}"
+                     id="ot9"/>
+    </af:column>
+    <af:column sortProperty="#{bindings.AppointmentsView10.hints.Description.name}" filterable="true" sortable="true"
+               headerText="#{bindings.AppointmentsView10.hints.Description.label}" id="c10">
+      <af:outputText value="#{row.Description}" shortDesc="#{bindings.AppointmentsView10.hints.Description.tooltip}"
+                     id="ot10"/>
+    </af:column>
+  </af:table>
+  <af:button text="Add" id="b3" action="addNewAppointment"/>
+  <af:button text="Delete" action="deleteAppointment1" id="b4"/>
+  <af:spacer id="s1" height="10"/>
+  <h:outputText value="Old table:" id="ot2"/>
   <af:table value="#{bindings.AppointmentsView2.collectionModel}" var="row"
             rows="#{bindings.AppointmentsView2.rangeSize}"
             emptyText="#{bindings.AppointmentsView2.viewable ? 'No data to display.' : 'Access Denied.'}"
@@ -44,41 +66,7 @@
                headerText="#{bindings.AppointmentsView2.hints.Name.label}" id="c1" width="211">
       <af:link shortDesc="#{bindings.AppointmentsView2.hints.Name.tooltip}" id="ot1" text="#{row.Name}" action="edit"/>
     </af:column>
-    <af:column sortProperty="#{bindings.AppointmentsView2.hints.Startdate.name}" filterable="true" sortable="true"
-               headerText="#{bindings.AppointmentsView2.hints.Startdate.label}" id="c2" width="-11">
-      <f:facet name="filter">
-        <af:inputDate value="#{bindings.AppointmentsView2Query.queryDescriptor.filterConjunctionCriterion.criterionMap.Startdate.value}"
-                      id="id1">
-          <af:convertDateTime pattern="#{bindings.AppointmentsView2.hints.Startdate.format}"/>
-        </af:inputDate>
-      </f:facet>
-      <af:outputText value="#{row.Startdate}" shortDesc="#{bindings.AppointmentsView2.hints.Startdate.tooltip}"
-                     id="ot2">
-        <af:convertDateTime pattern="#{bindings.AppointmentsView2.hints.Startdate.format}"/>
-      </af:outputText>
-    </af:column>
-    <af:column sortProperty="#{bindings.AppointmentsView2.hints.Enddate.name}" filterable="true" sortable="true"
-               headerText="#{bindings.AppointmentsView2.hints.Enddate.label}" id="c3" width="100">
-      <f:facet name="filter">
-        <af:inputDate value="#{bindings.AppointmentsView2Query.queryDescriptor.filterConjunctionCriterion.criterionMap.Enddate.value}"
-                      id="id2">
-          <af:convertDateTime pattern="#{bindings.AppointmentsView2.hints.Enddate.format}"/>
-        </af:inputDate>
-      </f:facet>
-      <af:outputText value="#{row.Enddate}" shortDesc="#{bindings.AppointmentsView2.hints.Enddate.tooltip}" id="ot3">
-        <af:convertDateTime pattern="#{bindings.AppointmentsView2.hints.Enddate.format}"/>
-      </af:outputText>
-    </af:column>
-    <af:column sortProperty="#{bindings.AppointmentsView2.hints.Description.name}" filterable="true" sortable="true"
-               headerText="#{bindings.AppointmentsView2.hints.Description.label}" id="c4" width="211">
-      <af:outputText value="#{row.Description}" shortDesc="#{bindings.AppointmentsView2.hints.Description.tooltip}"
-                     id="ot4"/>
-    </af:column>
-    <af:column sortProperty="#{bindings.AppointmentsView2.hints.Location.name}" filterable="true" sortable="true"
-               headerText="#{bindings.AppointmentsView2.hints.Location.label}" id="c5" width="78">
-      <af:outputText value="#{row.Location}" shortDesc="#{bindings.AppointmentsView2.hints.Location.tooltip}" id="ot5"/>
-    </af:column>
   </af:table>
-  <af:button text="Add" id="b1" action="create"/>
-  <af:button text="Delete" action="deleteAppForContacts1" id="b2"/>
+  <af:button text="Add Old" id="b1" action="create"/>
+  <af:button text="Delete Old" action="deleteAppForContacts1" id="b2"/>
 </ui:composition>

@@ -49,6 +49,18 @@
       </task-flow-reference>
       <run-as-dialog/>
     </task-flow-call>
+    <task-flow-call id="deleteAppointment1">
+      <task-flow-reference>
+        <document>/WEB-INF/ContactManagement/AppointmentsNew/deleteAppointment.xml</document>
+        <id>deleteAppointment</id>
+      </task-flow-reference>
+    </task-flow-call>
+    <task-flow-call id="addNewAppointment">
+      <task-flow-reference>
+        <document>/WEB-INF/ContactManagement/AppointmentsNew/addNewAppointment.xml</document>
+        <id>addNewAppointment</id>
+      </task-flow-reference>
+    </task-flow-call>
     <control-flow-rule id="__1">
       <from-activity-id>AppTableForContacts</from-activity-id>
       <control-flow-case id="__3">
@@ -58,6 +70,10 @@
       <control-flow-case id="__10">
         <from-outcome>create</from-outcome>
         <to-activity-id>createAppointment</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__9">
+        <from-outcome>addNewAppointment</from-outcome>
+        <to-activity-id>addNewAppointment</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <control-flow-rule id="__4">
@@ -88,6 +104,13 @@
       <control-flow-case id="__7">
         <from-outcome>deleteAppForContacts1</from-outcome>
         <to-activity-id>deleteAppForContacts1</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__11">
+      <from-activity-id>AppTableForContacts</from-activity-id>
+      <control-flow-case id="__12">
+        <from-outcome>deleteAppointment1</from-outcome>
+        <to-activity-id>deleteAppointment1</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <use-page-fragments/>

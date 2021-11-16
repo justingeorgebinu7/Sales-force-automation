@@ -605,6 +605,21 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
 
     
    
+   // Create an entry in invtee table
+    public void setInviteeData(int contactId, int appointmentId) {
+        ViewObject inviteesVo = this.getInviteesView1();
+        Row newRow = inviteesVo.createRow();
+        newRow.setAttribute("Contactid", contactId);
+        newRow.setAttribute("Appoinmentid", appointmentId);
+        inviteesVo.insertRow(newRow);
+        this.getDBTransaction().commit();
+        inviteesVo.executeQuery();
+    }class AppmoduleImpl {
+        
+    }
+
+   
+   
     /*Method to set file path and name
 
         * @param name

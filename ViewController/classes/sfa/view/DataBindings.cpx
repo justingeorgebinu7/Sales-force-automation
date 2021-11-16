@@ -426,6 +426,24 @@
           usageId="sfa_view_createAppForContact_createAppForContact_CommitPageDef"/>
     <page path="/ContactManagementPages/Appointments/createAppForContact.jsff"
           usageId="sfa_view_createAppForContactPageDef"/>
+    <page path="/WEB-INF/ContactManagement/AppointmentsNew/addAppointmentViaInvitees.xml#addAppointmentViaInvitees@CreateInsert"
+          usageId="sfa_view_addAppointmentViaInvitees_addAppointmentViaInvitees_CreateInsertPageDef"/>
+    <page path="/WEB-INF/ContactManagement/AppointmentsNew/addAppointmentViaInvitees.xml#addAppointmentViaInvitees@Delete"
+          usageId="sfa_view_addAppointmentViaInvitees_addAppointmentViaInvitees_DeletePageDef"/>
+    <page path="/WEB-INF/ContactManagement/AppointmentsNew/addAppointmentViaInvitees.xml#addAppointmentViaInvitees@Commit"
+          usageId="sfa_view_addAppointmentViaInvitees_addAppointmentViaInvitees_CommitPageDef"/>
+    <page path="/ContactManagementPages/AppointmentNew/addAppointmentViaInvitees.jsff"
+          usageId="sfa_view_addAppointmentViaContactsPageDef"/>
+    <page path="/WEB-INF/ContactManagement/AppointmentsNew/deleteAppointment.xml#deleteAppointment@Delete"
+          usageId="sfa_view_deleteAppointment_deleteAppointment_DeletePageDef"/>
+    <page path="/WEB-INF/ContactManagement/AppointmentsNew/deleteAppointment.xml#deleteAppointment@Commit"
+          usageId="sfa_view_deleteAppointment_deleteAppointment_CommitPageDef"/>
+    <page path="/WEB-INF/ContactManagement/AppointmentsNew/addNewAppointment.xml#addNewAppointment@CreateInsert"
+          usageId="sfa_view_addNewAppointment_addNewAppointment_CreateInsertPageDef"/>
+    <page path="/WEB-INF/ContactManagement/AppointmentsNew/addNewAppointment.xml#addNewAppointment@Delete"
+          usageId="sfa_view_addNewAppointment_addNewAppointment_DeletePageDef"/>
+    <page path="/WEB-INF/ContactManagement/AppointmentsNew/addNewAppointment.xml#addNewAppointment@Commit"
+          usageId="sfa_view_addNewAppointment_addNewAppointment_CommitPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="sfa_view_untitled2PageDef" path="sfa.view.pageDefs.untitled2PageDef"/>
@@ -844,6 +862,24 @@
           path="ContactManagement.Appointments.createAppForContact_createAppForContact_CommitPageDef"/>
     <page id="sfa_view_createAppForContactPageDef"
           path="ContactManagementPages.Appointments.createAppForContactPageDef"/>
+    <page id="sfa_view_addAppointmentViaInvitees_addAppointmentViaInvitees_CreateInsertPageDef"
+          path="ContactManagement.addAppointmentViaInvitees_addAppointmentViaInvitees_CreateInsertPageDef"/>
+    <page id="sfa_view_addAppointmentViaInvitees_addAppointmentViaInvitees_DeletePageDef"
+          path="ContactManagement.addAppointmentViaInvitees_addAppointmentViaInvitees_DeletePageDef"/>
+    <page id="sfa_view_addAppointmentViaInvitees_addAppointmentViaInvitees_CommitPageDef"
+          path="ContactManagement.addAppointmentViaInvitees_addAppointmentViaInvitees_CommitPageDef"/>
+    <page id="sfa_view_addAppointmentViaContactsPageDef"
+          path="ContactManagementPages.addAppointmentViaContactsPageDef"/>
+    <page id="sfa_view_deleteAppointment_deleteAppointment_DeletePageDef"
+          path="ContactManagement.AppointmentsNew.deleteAppointment_deleteAppointment_DeletePageDef"/>
+    <page id="sfa_view_deleteAppointment_deleteAppointment_CommitPageDef"
+          path="ContactManagement.AppointmentsNew.deleteAppointment_deleteAppointment_CommitPageDef"/>
+    <page id="sfa_view_addNewAppointment_addNewAppointment_CreateInsertPageDef"
+          path="ContactManagement.AppointmentsNew.addNewAppointment_addNewAppointment_CreateInsertPageDef"/>
+    <page id="sfa_view_addNewAppointment_addNewAppointment_DeletePageDef"
+          path="ContactManagement.AppointmentsNew.addNewAppointment_addNewAppointment_DeletePageDef"/>
+    <page id="sfa_view_addNewAppointment_addNewAppointment_CommitPageDef"
+          path="ContactManagement.AppointmentsNew.addNewAppointment_addNewAppointment_CommitPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="sfa.model.entities"
