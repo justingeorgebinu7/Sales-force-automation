@@ -111,16 +111,7 @@
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
-    TableName="OPPORTUNITY">
-    <validation:CompareValidationBean
-      Name="BestcaserevenueRule0"
-      ResId="sfa.model.entities.Opportunity.Bestcaserevenue_Rule_0"
-      OnAttribute="Bestcaserevenue"
-      OperandType="JBO"
-      Inverse="false"
-      CompareType="GREATERTHANEQUALTO"
-      CompareValue="sfa.model.viewobjects.OpportunityView.Worstcaserevenue"/>
-  </Attribute>
+    TableName="OPPORTUNITY"/>
   <Attribute
     Name="Worstcaserevenue"
     ColumnName="WORSTCASEREVENUE"

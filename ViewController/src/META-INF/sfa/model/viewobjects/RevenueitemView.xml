@@ -26,6 +26,10 @@
     Name="ProductsView4"
     ViewObjectName="sfa.model.viewobjects.ProductsView"
     RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="CurrencyVO1"
+    ViewObjectName="sfa.model.entities.CurrencyVO"
+    RowLevelBinds="true"/>
   <ListBinding
     Name="LOV_Productid"
     ListVOName="ProductsView4"
@@ -41,6 +45,24 @@
     </AttrArray>
     <AttrArray Name="ListDisplayAttrNames">
       <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_Currency"
+    ListVOName="CurrencyVO1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Currency"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Currency"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Currency"/>
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
@@ -157,6 +179,20 @@
     EntityAttrName="Productid"
     EntityUsage="Products"
     AliasName="PRODUCTID1"/>
+  <ViewAttribute
+    Name="Currency"
+    PrecisionRule="true"
+    EntityAttrName="Currency"
+    EntityUsage="Revenueitem"
+    AliasName="CURRENCY"
+    LOVName="LOV_Currency">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <AttrArray Name="KeyAttributes">
     <Item Value="Revenueitemid"/>
   </AttrArray>

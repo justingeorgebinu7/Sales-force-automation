@@ -102,6 +102,18 @@
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
+  <Attribute
+    Name="Currency"
+    Precision="20"
+    ColumnName="CURRENCY"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="REVENUEITEM">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+  </Attribute>
   <AccessorAttribute
     Name="Products"
     Association="sfa.model.entities.ProductsRevenueitemFkAssoc"

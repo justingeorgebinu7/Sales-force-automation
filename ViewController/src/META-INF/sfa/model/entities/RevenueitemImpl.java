@@ -37,6 +37,7 @@ public class RevenueitemImpl extends EntityImpl {
         Worstcaserevenue,
         Opportunityid,
         Productid,
+        Currency,
         Products,
         Opportunity,
         Products1;
@@ -63,6 +64,7 @@ public class RevenueitemImpl extends EntityImpl {
         }
     }
 
+
     public static final int REVENUEITEMID = AttributesEnum.Revenueitemid.index();
     public static final int QUANTITY = AttributesEnum.Quantity.index();
     public static final int ESTIMATEDPRICE = AttributesEnum.Estimatedprice.index();
@@ -71,6 +73,7 @@ public class RevenueitemImpl extends EntityImpl {
     public static final int WORSTCASEREVENUE = AttributesEnum.Worstcaserevenue.index();
     public static final int OPPORTUNITYID = AttributesEnum.Opportunityid.index();
     public static final int PRODUCTID = AttributesEnum.Productid.index();
+    public static final int CURRENCY = AttributesEnum.Currency.index();
     public static final int PRODUCTS = AttributesEnum.Products.index();
     public static final int OPPORTUNITY = AttributesEnum.Opportunity.index();
     public static final int PRODUCTS1 = AttributesEnum.Products1.index();
@@ -87,6 +90,7 @@ public class RevenueitemImpl extends EntityImpl {
     public static synchronized EntityDefImpl getDefinitionObject() {
         return EntityDefImpl.findDefObject("sfa.model.entities.Revenueitem");
     }
+
 
     /**
      * Gets the attribute value for Revenueitemid, using the alias name Revenueitemid.
@@ -214,6 +218,22 @@ public class RevenueitemImpl extends EntityImpl {
      */
     public void setProductid(BigDecimal value) {
         setAttributeInternal(PRODUCTID, value);
+    }
+
+    /**
+     * Gets the attribute value for Currency, using the alias name Currency.
+     * @return the value of Currency
+     */
+    public String getCurrency() {
+        return (String) getAttributeInternal(CURRENCY);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for Currency.
+     * @param value value to set the Currency
+     */
+    public void setCurrency(String value) {
+        setAttributeInternal(CURRENCY, value);
     }
 
     /**

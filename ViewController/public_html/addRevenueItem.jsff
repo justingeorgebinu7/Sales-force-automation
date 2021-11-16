@@ -8,6 +8,12 @@
       <f:selectItems value="#{bindings.Productid.items}" id="si1"/>
       <f:validator binding="#{bindings.Productid.validator}"/>
     </af:selectOneChoice>
+    <af:selectOneChoice value="#{bindings.Currency.inputValue}" label="#{bindings.Currency.label}"
+                        required="#{bindings.Currency.hints.mandatory}" shortDesc="#{bindings.Currency.hints.tooltip}"
+                        id="soc2" valueChangeListener="#{currencyBean.covert}" autoSubmit="true">
+      <f:selectItems value="#{bindings.Currency.items}" id="si2"/>
+      <f:validator binding="#{bindings.Currency.validator}"/>
+    </af:selectOneChoice>
     <af:inputText value="#{bindings.Estimatedprice.inputValue}" label="#{bindings.Estimatedprice.hints.label}"
                   required="#{bindings.Estimatedprice.hints.mandatory}"
                   columns="#{bindings.Estimatedprice.hints.displayWidth}"

@@ -10,6 +10,11 @@
       <managed-bean-class>Beans.RevenueItem</managed-bean-class>
       <managed-bean-scope>request</managed-bean-scope>
     </managed-bean>
+    <managed-bean id="__11">
+      <managed-bean-name>currencyBean</managed-bean-name>
+      <managed-bean-class>Beans.currencyBean</managed-bean-class>
+      <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
     <method-call id="CreateInsert">
       <method>#{bindings.CreateInsert.execute}</method>
       <outcome>

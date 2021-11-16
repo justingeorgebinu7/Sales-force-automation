@@ -28,4 +28,7 @@
   <ViewUsage
     Name="DecsionLevel1"
     ViewObjectName="sfa.model.viewobjects.staticVo.DecsionLevel"/>
+  <ViewUsage
+    Name="CurrencyVO1"
+    ViewObjectName="sfa.model.entities.CurrencyVO"/>
 </AppModule>
