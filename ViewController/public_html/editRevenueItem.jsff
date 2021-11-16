@@ -38,6 +38,12 @@
       <f:validator binding="#{bindings.Bestcaserevenue.validator}"/>
       <af:convertNumber groupingUsed="false" pattern="#{bindings.Bestcaserevenue.format}"/>
     </af:inputText>
+    <af:selectOneChoice value="#{bindings.Currency.inputValue}" label="#{bindings.Currency.label}"
+                        required="#{bindings.Currency.hints.mandatory}" shortDesc="#{bindings.Currency.hints.tooltip}"
+                        id="soc2" valueChangeListener="#{currencyBean.covert}" autoSubmit="true">
+      <f:selectItems value="#{bindings.Currency.items}" id="si2"/>
+      <f:validator binding="#{bindings.Currency.validator}"/>
+    </af:selectOneChoice>
     <af:inputText value="#{bindings.Worstcaserevenue.inputValue}" label="#{bindings.Worstcaserevenue.hints.label}"
                   required="#{bindings.Worstcaserevenue.hints.mandatory}"
                   columns="#{bindings.Worstcaserevenue.hints.displayWidth}"

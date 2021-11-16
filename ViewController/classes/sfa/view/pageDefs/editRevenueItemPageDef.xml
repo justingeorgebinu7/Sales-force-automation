@@ -40,5 +40,7 @@
                   InstanceName="bindings.estimatedPrice.dataControl.dataProvider">
       <NamedData NDName="pidStr" NDType="java.lang.String"/>
     </methodAction>
+    <list IterBinding="RevenueitemView2Iterator" StaticList="false" Uses="LOV_Currency" id="Currency"
+          DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
   </bindings>
 </pageDefinition>
