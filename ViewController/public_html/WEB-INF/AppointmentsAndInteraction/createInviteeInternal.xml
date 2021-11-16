@@ -79,11 +79,6 @@
         <fixed-outcome>Commit</fixed-outcome>
       </outcome>
     </method-call>
-    <task-flow-return id="taskFlowReturn1">
-      <outcome>
-        <name>taskFlowReturn1</name>
-      </outcome>
-    </task-flow-return>
     <method-call id="CreateInsert">
       <method>#{bindings.CreateInsert.execute}</method>
       <outcome>
@@ -95,13 +90,6 @@
       <control-flow-case id="__4">
         <from-outcome>tocommit</from-outcome>
         <to-activity-id>Commit</to-activity-id>
-      </control-flow-case>
-    </control-flow-rule>
-    <control-flow-rule id="__5">
-      <from-activity-id>Commit</from-activity-id>
-      <control-flow-case id="__6">
-        <from-outcome>Commit</from-outcome>
-        <to-activity-id>taskFlowReturn1</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <control-flow-rule id="__1">

@@ -20,18 +20,6 @@
         <fixed-outcome>Commit</fixed-outcome>
       </outcome>
     </method-call>
-    <task-flow-return id="taskFlowReturn1">
-      <outcome>
-        <name>taskFlowReturn1</name>
-      </outcome>
-    </task-flow-return>
-    <control-flow-rule id="__1">
-      <from-activity-id>Commit</from-activity-id>
-      <control-flow-case id="__2">
-        <from-outcome>Commit</from-outcome>
-        <to-activity-id>taskFlowReturn1</to-activity-id>
-      </control-flow-case>
-    </control-flow-rule>
     <control-flow-rule id="__3">
       <from-activity-id>addExternalInvitee</from-activity-id>
       <control-flow-case id="__4">

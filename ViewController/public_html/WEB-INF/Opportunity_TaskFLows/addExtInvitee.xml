@@ -20,11 +20,6 @@
     <view id="OM_AddExtInvitee">
       <page>/Opportunity_pages/OM_AddExtInvitee.jsff</page>
     </view>
-    <task-flow-return id="taskFlowReturn1">
-      <outcome>
-        <name>taskFlowReturn1</name>
-      </outcome>
-    </task-flow-return>
     <method-call id="Commit">
       <method>#{bindings.Commit.execute}</method>
       <outcome>
@@ -50,17 +45,10 @@
       </control-flow-case>
     </control-flow-rule>
     <control-flow-rule id="__6">
-      <from-activity-id>Commit</from-activity-id>
-      <control-flow-case id="__7">
-        <from-outcome>Commit</from-outcome>
-        <to-activity-id>taskFlowReturn1</to-activity-id>
-      </control-flow-case>
-    </control-flow-rule>
-    <control-flow-rule id="__8">
       <from-activity-id>Delete</from-activity-id>
-      <control-flow-case id="__9">
+      <control-flow-case id="__7">
         <from-outcome>Delete</from-outcome>
-        <to-activity-id>taskFlowReturn1</to-activity-id>
+        <to-activity-id>Commit</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <use-page-fragments/>

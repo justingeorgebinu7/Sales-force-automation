@@ -42,31 +42,6 @@
       <property
          name="sdm:polyPoints">R50,455.0,173.19531,615.5,207.79883,L50</property>
    </ControlFlowCase>
-   <TaskFlowReturn
-      id="TaskFlowReturn7">
-      <property
-         name="activityId">taskFlowReturn1</property>
-      <property
-         name="x">813.0</property>
-      <property
-         name="description">&lt;html>&lt;p>&lt;b>taskFlowReturn1&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Return&lt;/p>&lt;p>Outcome:  taskFlowReturn1&lt;/p></property>
-      <property
-         name="y">196.24707</property>
-      <property
-         name="finish">true</property>
-      <property
-         name="exceptionHandler">false</property>
-   </TaskFlowReturn>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase8"
-      from="MethodCall5"
-      to="TaskFlowReturn7">
-      <property
-         name="fromOutcome">Commit</property>
-      <property
-         name="sdm:polyPoints">R50,697.5,207.79883,772.0,195.89648,L50</property>
-   </ControlFlowCase>
    <MethodCall
       id="MethodCall9">
       <property

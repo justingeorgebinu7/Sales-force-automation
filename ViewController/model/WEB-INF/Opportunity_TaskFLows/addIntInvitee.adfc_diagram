@@ -43,21 +43,6 @@
       <property
          name="exceptionHandler">false</property>
    </MethodCall>
-   <TaskFlowReturn
-      id="TaskFlowReturn5">
-      <property
-         name="activityId">taskFlowReturn1</property>
-      <property
-         name="x">1171.0</property>
-      <property
-         name="description">&lt;html>&lt;p>&lt;b>taskFlowReturn1&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Return&lt;/p>&lt;p>Outcome:  taskFlowReturn1&lt;/p></property>
-      <property
-         name="y">194.89648</property>
-      <property
-         name="finish">true</property>
-      <property
-         name="exceptionHandler">false</property>
-   </TaskFlowReturn>
    <View
       id="View6">
       <property
@@ -93,7 +78,7 @@
       <property
          name="fromOutcome">discard</property>
       <property
-         name="sdm:polyPoints">T50,515.0,293.24707,611.5,169.79883,B50</property>
+         name="sdm:polyPoints">T50,515.0,293.24707,608.0,169.79883,B44</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -107,22 +92,12 @@
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
-      id="ControlFlowCase10"
-      from="MethodCall4"
-      to="TaskFlowReturn5">
-      <property
-         name="fromOutcome">Commit</property>
-      <property
-         name="sdm:polyPoints">R50,904.5,339.79883,1130.0,194.5459,L50</property>
-   </ControlFlowCase>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase11"
+      id="ControlFlowCase13"
       from="MethodCall3"
-      to="TaskFlowReturn5">
+      to="MethodCall4">
       <property
          name="fromOutcome">Delete</property>
       <property
-         name="sdm:polyPoints">R50,652.5,115.79883,1130.0,191.0459,L46</property>
+         name="sdm:polyPoints">B56,615.0,169.79883,822.5,336.29883,L46</property>
    </ControlFlowCase>
 </SDM>
