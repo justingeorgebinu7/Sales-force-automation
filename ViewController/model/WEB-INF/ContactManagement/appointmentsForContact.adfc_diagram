@@ -21,43 +21,6 @@
       <property
          name="exceptionHandler">false</property>
    </View>
-   <View
-      id="View6">
-      <property
-         name="activityId">EditAppForContact</property>
-      <property
-         name="pageFragment">true</property>
-      <property
-         name="x">579.0</property>
-      <property
-         name="description">&lt;html>&lt;p>&lt;b>EditAppForContact&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
-      <property
-         name="y">550.14355</property>
-      <property
-         name="page">/ContactManagementPages/EditAppForContact.jsff</property>
-      <property
-         name="exceptionHandler">false</property>
-   </View>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase7"
-      from="View3"
-      to="View6">
-      <property
-         name="fromOutcome">edit</property>
-      <property
-         name="sdm:polyPoints">B44,363.5,406.50775,535.43286,553.29297,L54</property>
-   </ControlFlowCase>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase8"
-      from="View6"
-      to="View3">
-      <property
-         name="fromOutcome">exit</property>
-      <property
-         name="sdm:polyPoints">L46,538.0,546.29297,370.5,403.2871,B56</property>
-   </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall9">
       <property
@@ -87,7 +50,7 @@
       <property
          name="fromsrcid">__6</property>
       <property
-         name="sdm:polyPoints">T39,360.0,295.2871,208.03809,163.89062,B50</property>
+         name="sdm:polyPoints">T44,363.5,295.2871,208.03809,163.89062,B50</property>
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall13">
@@ -115,118 +78,6 @@
          name="fromOutcome">create</property>
       <property
          name="sdm:polyPoints">L54,326.0,352.7871,162.36426,436.09766,T50</property>
-   </ControlFlowCase>
-   <TaskFlowCall
-      id="TaskFlowCall12">
-      <property
-         name="description">&lt;html>&lt;p>&lt;b>createInviteeInternal_con&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
-      <property
-         name="activityId">createInviteeInternal_con</property>
-      <property
-         name="x">970.37695</property>
-      <property
-         name="y">479.0459</property>
-      <property
-         name="documentReference">/WEB-INF/ContactManagement/createInviteeInternal_con.xml</property>
-      <property
-         name="exceptionHandler">false</property>
-      <property
-         name="taskFlowId">createInviteeInternal_con</property>
-   </TaskFlowCall>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase13"
-      from="View6"
-      to="TaskFlowCall12">
-      <property
-         name="fromOutcome">toAddInviteeInternal</property>
-      <property
-         name="sdm:polyPoints">R38,620.0,539.29297,929.37695,478.6953,L50</property>
-   </ControlFlowCase>
-   <TaskFlowCall
-      id="TaskFlowCall14">
-      <property
-         name="runAsDialog">true</property>
-      <property
-         name="description">&lt;html>&lt;p>&lt;b>deleteInviteeInt_con&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
-      <property
-         name="activityId">deleteInviteeInt_con</property>
-      <property
-         name="x">1054.707</property>
-      <property
-         name="y">560.64355</property>
-      <property
-         name="documentReference">/WEB-INF/ContactManagement/deleteInviteeInt_con.xml</property>
-      <property
-         name="exceptionHandler">false</property>
-      <property
-         name="taskFlowId">deleteInviteeInt_con</property>
-   </TaskFlowCall>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase15"
-      from="View6"
-      to="TaskFlowCall14">
-      <property
-         name="fromOutcome">deleteInternal</property>
-      <property
-         name="sdm:polyPoints">R46,622.45795,546.29297,1013.70703,560.29297,L50</property>
-   </ControlFlowCase>
-   <TaskFlowCall
-      id="TaskFlowCall19">
-      <property
-         name="description">&lt;html>&lt;p>&lt;b>createInviteeExt_con&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
-      <property
-         name="activityId">createInviteeExt_con</property>
-      <property
-         name="x">1035.0332</property>
-      <property
-         name="y">661.64355</property>
-      <property
-         name="documentReference">/WEB-INF/ContactManagement/createInviteeExt_con.xml</property>
-      <property
-         name="exceptionHandler">false</property>
-      <property
-         name="taskFlowId">createInviteeExt_con</property>
-   </TaskFlowCall>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase20"
-      from="View6"
-      to="TaskFlowCall19">
-      <property
-         name="fromOutcome">toAddExt</property>
-      <property
-         name="sdm:polyPoints">R54,621.9006,553.29297,994.0332,661.29297,L50</property>
-   </ControlFlowCase>
-   <TaskFlowCall
-      id="TaskFlowCall24">
-      <property
-         name="runAsDialog">true</property>
-      <property
-         name="description">&lt;html>&lt;p>&lt;b>deleteInvExt_con&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
-      <property
-         name="activityId">deleteInvExt_con</property>
-      <property
-         name="x">799.03125</property>
-      <property
-         name="y">692.7988</property>
-      <property
-         name="documentReference">/WEB-INF/ContactManagement/deleteInvExt_con.xml</property>
-      <property
-         name="exceptionHandler">false</property>
-      <property
-         name="taskFlowId">deleteInvExt_con</property>
-   </TaskFlowCall>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase25"
-      from="View6"
-      to="TaskFlowCall24">
-      <property
-         name="fromOutcome">toDeleteExt</property>
-      <property
-         name="sdm:polyPoints">R62,620.0,560.29297,758.03125,692.44824,L50</property>
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall22">
@@ -284,7 +135,7 @@
       <property
          name="fromOutcome">addNewAppointment</property>
       <property
-         name="sdm:polyPoints">T61,374.0,295.2871,582.70215,149.09766,L50</property>
+         name="sdm:polyPoints">T56,370.5,295.2871,582.70215,149.09766,L50</property>
    </ControlFlowCase>
    <View
       id="View27">
@@ -293,11 +144,11 @@
       <property
          name="pageFragment">true</property>
       <property
-         name="x">424.0</property>
+         name="x">712.0</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>editAppointmentNew&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">62.896484</property>
+         name="y">449.49414</property>
       <property
          name="page">/ContactManagementPages/AppointmentNew/editAppointmentNew.jsff</property>
       <property
@@ -311,7 +162,7 @@
       <property
          name="fromOutcome">editAppointmentNew</property>
       <property
-         name="sdm:polyPoints">T50,367.0,292.92096,424.0,116.5459,B50</property>
+         name="sdm:polyPoints">R46,409.28418,345.7871,671.0,445.64355,L46</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -321,6 +172,118 @@
       <property
          name="fromOutcome">back</property>
       <property
-         name="sdm:polyPoints">B44,420.5,116.5459,363.5,291.84952,T44</property>
+         name="sdm:polyPoints">L54,669.7129,452.64355,408.0,352.7871,R54</property>
+   </ControlFlowCase>
+   <TaskFlowCall
+      id="TaskFlowCall38">
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>CreateInternalInvitee&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
+      <property
+         name="activityId">CreateInternalInvitee</property>
+      <property
+         name="x">1003.6992</property>
+      <property
+         name="y">488.0459</property>
+      <property
+         name="documentReference">/WEB-INF/ContactManagement/AppointmentsNew/CreateInternalInvitee.xml</property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="taskFlowId">CreateInternalInvitee</property>
+   </TaskFlowCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase39"
+      from="View27"
+      to="TaskFlowCall38">
+      <property
+         name="fromOutcome">createInternalInvitee</property>
+      <property
+         name="sdm:polyPoints">R50,753.0,449.14355,962.6992,487.6953,L50</property>
+   </ControlFlowCase>
+   <TaskFlowCall
+      id="TaskFlowCall42">
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>deleteInernaltInvitee&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
+      <property
+         name="activityId">deleteInernaltInvitee</property>
+      <property
+         name="x">796.0381</property>
+      <property
+         name="y">644.7471</property>
+      <property
+         name="documentReference">/WEB-INF/ContactManagement/AppointmentsNew/deleteInernaltInvitee.xml</property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="taskFlowId">deleteInernaltInvitee</property>
+   </TaskFlowCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase43"
+      from="View27"
+      to="TaskFlowCall42">
+      <property
+         name="fromOutcome">deleteInternalInvitee</property>
+      <property
+         name="sdm:polyPoints">B50,712.0,503.14355,796.0381,590.3965,T50</property>
+   </ControlFlowCase>
+   <TaskFlowCall
+      id="TaskFlowCall44">
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>deleteExternalInvitee1&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
+      <property
+         name="activityId">deleteExternalInvitee1</property>
+      <property
+         name="x">878.37305</property>
+      <property
+         name="y">314.29297</property>
+      <property
+         name="documentReference">/WEB-INF/ContactManagement/AppointmentsNew/deleteExternalInvitee.xml</property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="taskFlowId">deleteExternalInvitee</property>
+   </TaskFlowCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase45"
+      from="View27"
+      to="TaskFlowCall44">
+      <property
+         name="tosrcid">__23</property>
+      <property
+         name="fromOutcome">deleteExternalInvitee1</property>
+      <property
+         name="fromsrcid">__22</property>
+      <property
+         name="sdm:polyPoints">T50,712.0,395.14355,837.37305,313.94238,L50</property>
+   </ControlFlowCase>
+   <TaskFlowCall
+      id="TaskFlowCall23">
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>createExternalInvitee&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
+      <property
+         name="activityId">createExternalInvitee</property>
+      <property
+         name="x">606.36426</property>
+      <property
+         name="y">695.1494</property>
+      <property
+         name="documentReference">/WEB-INF/ContactManagement/AppointmentsNew/createExternalInvitee.xml</property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="taskFlowId">createExternalInvitee</property>
+   </TaskFlowCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase24"
+      from="View27"
+      to="TaskFlowCall23">
+      <property
+         name="fromOutcome">createExternalInvitee</property>
+      <property
+         name="sdm:polyPoints">B44,708.5,503.14355,606.36426,640.7988,T50</property>
    </ControlFlowCase>
 </SDM>

@@ -1,19 +1,17 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
-                xmlns:f="http://java.sun.com/jsf/core">
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
   <af:panelFormLayout id="pfl1">
     <af:inputComboboxListOfValues id="contactidId" popupTitle="Search and Select: #{bindings.Contactid.hints.label}"
                                   value="#{bindings.Contactid.inputValue}" label="#{bindings.Contactid.hints.label}"
                                   model="#{bindings.Contactid.listOfValuesModel}"
                                   required="#{bindings.Contactid.hints.mandatory}"
                                   columns="#{bindings.Contactid.hints.displayWidth}"
-                                  shortDesc="#{bindings.Contactid.hints.tooltip}"
-                                  converter="#{bindings.Contactid.converter}">
+                                  shortDesc="#{bindings.Contactid.hints.tooltip}">
       <f:validator binding="#{bindings.Contactid.validator}"/>
-      <!--<af:convertNumber groupingUsed="false" pattern="#{bindings.Contactid.format}"/>-->
+      <af:convertNumber groupingUsed="false" pattern="#{bindings.Contactid.format}"/>
     </af:inputComboboxListOfValues>
   </af:panelFormLayout>
-  <af:button text="Save" id="b1" action="toCommit"/>
-  <af:button actionListener="#{bindings.Delete.execute}" text="Cancel" disabled="#{!bindings.Delete.enabled}" id="b2"
-             action="toCommit"/>
+  <af:button text="Save" id="b1" action="commit"/>
+  <af:button text="Cancel" id="b2" action="discard"/>
 </ui:composition>

@@ -1,39 +1,105 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
                 xmlns:f="http://java.sun.com/jsf/core">
-  <af:panelFormLayout id="pfl1">
-    <af:inputText value="#{bindings.Name.inputValue}" label="#{bindings.Name.hints.label}"
-                  required="#{bindings.Name.hints.mandatory}" columns="#{bindings.Name.hints.displayWidth}"
-                  maximumLength="#{bindings.Name.hints.precision}" shortDesc="#{bindings.Name.hints.tooltip}" id="it1">
-      <f:validator binding="#{bindings.Name.validator}"/>
-    </af:inputText>
-    <af:inputDate value="#{bindings.Startdate.inputValue}" label="#{bindings.Startdate.hints.label}"
-                  required="#{bindings.Startdate.hints.mandatory}" columns="#{bindings.Startdate.hints.displayWidth}"
-                  shortDesc="#{bindings.Startdate.hints.tooltip}" id="id1">
-      <f:validator binding="#{bindings.Startdate.validator}"/>
-      <af:convertDateTime pattern="#{bindings.Startdate.format}"/>
-    </af:inputDate>
-    <af:inputDate value="#{bindings.Enddate.inputValue}" label="#{bindings.Enddate.hints.label}"
-                  required="#{bindings.Enddate.hints.mandatory}" columns="#{bindings.Enddate.hints.displayWidth}"
-                  shortDesc="#{bindings.Enddate.hints.tooltip}" id="id2">
-      <f:validator binding="#{bindings.Enddate.validator}"/>
-      <af:convertDateTime pattern="#{bindings.Enddate.format}"/>
-    </af:inputDate>
-    <af:inputText value="#{bindings.Description.inputValue}" label="#{bindings.Description.hints.label}"
-                  required="#{bindings.Description.hints.mandatory}"
-                  columns="#{bindings.Description.hints.displayWidth}"
-                  maximumLength="#{bindings.Description.hints.precision}"
-                  shortDesc="#{bindings.Description.hints.tooltip}" id="it2" rows="5">
-      <f:validator binding="#{bindings.Description.validator}"/>
-    </af:inputText>
-    <af:inputText value="#{bindings.Location.inputValue}" label="#{bindings.Location.hints.label}"
-                  required="#{bindings.Location.hints.mandatory}" columns="#{bindings.Location.hints.displayWidth}"
-                  maximumLength="#{bindings.Location.hints.precision}" shortDesc="#{bindings.Location.hints.tooltip}"
-                  id="it3">
-      <f:validator binding="#{bindings.Location.validator}"/>
-    </af:inputText>
-  </af:panelFormLayout>
-  <af:button actionListener="#{bindings.Commit.execute}" text="Save" id="b2"
-             action="back"/>
-  <af:button text="Cancel" id="b1" action="back"/>
+  <af:panelBox showDisclosure="false" id="pb3">
+    <f:facet name="toolbar">
+      <af:toolbar id="t1">
+        <af:commandMenuItem text="Save" id="cmi1" actionListener="#{bindings.Commit.execute}"/>
+        <af:commandMenuItem text="Cancel" id="cmi2" action="back"/>
+      </af:toolbar>
+    </f:facet>
+    <af:panelFormLayout id="pfl1" rows="3">
+      <af:inputText value="#{bindings.Name.inputValue}" label="#{bindings.Name.hints.label}"
+                    required="#{bindings.Name.hints.mandatory}" columns="#{bindings.Name.hints.displayWidth}"
+                    maximumLength="#{bindings.Name.hints.precision}" shortDesc="#{bindings.Name.hints.tooltip}"
+                    id="it1">
+        <f:validator binding="#{bindings.Name.validator}"/>
+      </af:inputText>
+      <af:inputDate value="#{bindings.Startdate.inputValue}" label="#{bindings.Startdate.hints.label}"
+                    required="#{bindings.Startdate.hints.mandatory}" columns="#{bindings.Startdate.hints.displayWidth}"
+                    shortDesc="#{bindings.Startdate.hints.tooltip}" id="id1">
+        <f:validator binding="#{bindings.Startdate.validator}"/>
+        <af:convertDateTime pattern="#{bindings.Startdate.format}"/>
+      </af:inputDate>
+      <af:inputDate value="#{bindings.Enddate.inputValue}" label="#{bindings.Enddate.hints.label}"
+                    required="#{bindings.Enddate.hints.mandatory}" columns="#{bindings.Enddate.hints.displayWidth}"
+                    shortDesc="#{bindings.Enddate.hints.tooltip}" id="id2">
+        <f:validator binding="#{bindings.Enddate.validator}"/>
+        <af:convertDateTime pattern="#{bindings.Enddate.format}"/>
+      </af:inputDate>
+      <af:inputText value="#{bindings.Location.inputValue}" label="#{bindings.Location.hints.label}"
+                    required="#{bindings.Location.hints.mandatory}" columns="#{bindings.Location.hints.displayWidth}"
+                    maximumLength="#{bindings.Location.hints.precision}" shortDesc="#{bindings.Location.hints.tooltip}"
+                    id="it3">
+        <f:validator binding="#{bindings.Location.validator}"/>
+      </af:inputText>
+      <af:inputText value="#{bindings.Description.inputValue}" label="#{bindings.Description.hints.label}"
+                    required="#{bindings.Description.hints.mandatory}"
+                    columns="10"
+                    maximumLength="#{bindings.Description.hints.precision}"
+                    shortDesc="#{bindings.Description.hints.tooltip}" id="it2" rows="4">
+        <f:validator binding="#{bindings.Description.validator}"/>
+      </af:inputText>
+    </af:panelFormLayout>
+  </af:panelBox>
+  <af:panelSplitter id="ps2" inlineStyle="width:834px;" splitterPosition="382">
+    <f:facet name="first">
+      <af:panelBox text="Invitees - Contacts" id="pb1" showDisclosure="false">
+        <f:facet name="toolbar">
+          <af:menuBar id="mb1">
+            <af:commandMenuItem text="Add" id="cmi3">
+              <af:showPopupBehavior popupId="p1"/>
+            </af:commandMenuItem>
+            <af:commandMenuItem text="Delete" id="cmi4" action="deleteInternalInvitee"/>
+          </af:menuBar>
+        </f:facet>
+        <af:popup childCreation="deferred" autoCancel="disabled" id="p1">
+          <af:panelWindow id="pw1">
+            <af:region value="#{bindings.CreateInternalInvitee1.regionModel}" id="r1"/>
+          </af:panelWindow>
+        </af:popup>
+        <af:table value="#{bindings.InviteesView7.collectionModel}" var="row" rows="#{bindings.InviteesView7.rangeSize}"
+                  emptyText="#{bindings.InviteesView7.viewable ? 'No data to display.' : 'Access Denied.'}"
+                  rowBandingInterval="0" selectedRowKeys="#{bindings.InviteesView7.collectionModel.selectedRow}"
+                  selectionListener="#{bindings.InviteesView7.collectionModel.makeCurrent}" rowSelection="single"
+                  fetchSize="#{bindings.InviteesView7.rangeSize}" id="t2" columnStretching="last">
+          <af:column sortProperty="#{bindings.InviteesView7.hints.Name1.name}" sortable="true"
+                     headerText="#{bindings.InviteesView7.hints.Name1.label}" id="c1">
+            <af:outputText value="#{row.Name1}" shortDesc="#{bindings.InviteesView7.hints.Name1.tooltip}" id="ot1">
+              <af:convertNumber groupingUsed="false" pattern="#{bindings.InviteesView7.hints.Name1.format}"/>
+            </af:outputText>
+          </af:column>
+        </af:table>
+      </af:panelBox>
+    </f:facet>
+    <f:facet name="second">
+      <af:panelBox text="Invitees - Users" id="pb2" showDisclosure="false">
+        <f:facet name="toolbar">
+          <af:menuBar id="mb2">
+            <af:commandMenuItem text="Add" id="cmi5" action="createExternalInvitee">
+              <af:showPopupBehavior popupId="p2"/>
+            </af:commandMenuItem>
+            <af:commandMenuItem text="Delete" id="cmi6" action="deleteExternalInvitee1"/>
+          </af:menuBar>
+        </f:facet>
+        <af:popup childCreation="deferred" autoCancel="disabled" id="p2">
+          <af:panelWindow id="pw2">
+            <af:region value="#{bindings.createExternalInvitee1.regionModel}" id="r2"/>
+          </af:panelWindow>
+        </af:popup>
+        <af:table value="#{bindings.InviteesextView7.collectionModel}" var="row"
+                  rows="#{bindings.InviteesextView7.rangeSize}"
+                  emptyText="#{bindings.InviteesextView7.viewable ? 'No data to display.' : 'Access Denied.'}"
+                  rowBandingInterval="0" selectedRowKeys="#{bindings.InviteesextView7.collectionModel.selectedRow}"
+                  selectionListener="#{bindings.InviteesextView7.collectionModel.makeCurrent}" rowSelection="single"
+                  fetchSize="#{bindings.InviteesextView7.rangeSize}" id="t3" columnStretching="last">
+          <af:column sortProperty="#{bindings.InviteesextView7.hints.Firstname.name}" sortable="true"
+                     headerText="#{bindings.InviteesextView7.hints.Firstname.label}" id="c2">
+            <af:outputText value="#{row.Firstname}" shortDesc="#{bindings.InviteesextView7.hints.Firstname.tooltip}"
+                           id="ot2"/>
+          </af:column>
+        </af:table>
+      </af:panelBox>
+    </f:facet>
+  </af:panelSplitter>
 </ui:composition>

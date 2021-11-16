@@ -8,9 +8,6 @@
     <view id="AppTableForContacts">
       <page>/ContactManagementPages/AppTableForContacts.jsff</page>
     </view>
-    <view id="EditAppForContact">
-      <page>/ContactManagementPages/EditAppForContact.jsff</page>
-    </view>
     <task-flow-call id="deleteAppForContacts1">
       <task-flow-reference>
         <document>/WEB-INF/ContactManagement/deleteAppForContacts.xml</document>
@@ -22,32 +19,6 @@
         <document>/WEB-INF/ContactManagement/createAppointment.xml</document>
         <id>createAppointment</id>
       </task-flow-reference>
-    </task-flow-call>
-    <task-flow-call id="createInviteeInternal_con">
-      <task-flow-reference>
-        <document>/WEB-INF/ContactManagement/createInviteeInternal_con.xml</document>
-        <id>createInviteeInternal_con</id>
-      </task-flow-reference>
-    </task-flow-call>
-    <task-flow-call id="deleteInviteeInt_con">
-      <task-flow-reference>
-        <document>/WEB-INF/ContactManagement/deleteInviteeInt_con.xml</document>
-        <id>deleteInviteeInt_con</id>
-      </task-flow-reference>
-      <run-as-dialog/>
-    </task-flow-call>
-    <task-flow-call id="createInviteeExt_con">
-      <task-flow-reference>
-        <document>/WEB-INF/ContactManagement/createInviteeExt_con.xml</document>
-        <id>createInviteeExt_con</id>
-      </task-flow-reference>
-    </task-flow-call>
-    <task-flow-call id="deleteInvExt_con">
-      <task-flow-reference>
-        <document>/WEB-INF/ContactManagement/deleteInvExt_con.xml</document>
-        <id>deleteInvExt_con</id>
-      </task-flow-reference>
-      <run-as-dialog/>
     </task-flow-call>
     <task-flow-call id="deleteAppointment1">
       <task-flow-reference>
@@ -64,12 +35,32 @@
     <view id="editAppointmentNew">
       <page>/ContactManagementPages/AppointmentNew/editAppointmentNew.jsff</page>
     </view>
+    <task-flow-call id="CreateInternalInvitee">
+      <task-flow-reference>
+        <document>/WEB-INF/ContactManagement/AppointmentsNew/CreateInternalInvitee.xml</document>
+        <id>CreateInternalInvitee</id>
+      </task-flow-reference>
+    </task-flow-call>
+    <task-flow-call id="deleteInernaltInvitee">
+      <task-flow-reference>
+        <document>/WEB-INF/ContactManagement/AppointmentsNew/deleteInernaltInvitee.xml</document>
+        <id>deleteInernaltInvitee</id>
+      </task-flow-reference>
+    </task-flow-call>
+    <task-flow-call id="deleteExternalInvitee1">
+      <task-flow-reference>
+        <document>/WEB-INF/ContactManagement/AppointmentsNew/deleteExternalInvitee.xml</document>
+        <id>deleteExternalInvitee</id>
+      </task-flow-reference>
+    </task-flow-call>
+    <task-flow-call id="createExternalInvitee">
+      <task-flow-reference>
+        <document>/WEB-INF/ContactManagement/AppointmentsNew/createExternalInvitee.xml</document>
+        <id>createExternalInvitee</id>
+      </task-flow-reference>
+    </task-flow-call>
     <control-flow-rule id="__1">
       <from-activity-id>AppTableForContacts</from-activity-id>
-      <control-flow-case id="__3">
-        <from-outcome>edit</from-outcome>
-        <to-activity-id>EditAppForContact</to-activity-id>
-      </control-flow-case>
       <control-flow-case id="__10">
         <from-outcome>create</from-outcome>
         <to-activity-id>createAppointment</to-activity-id>
@@ -81,29 +72,6 @@
       <control-flow-case id="__14">
         <from-outcome>editAppointmentNew</from-outcome>
         <to-activity-id>editAppointmentNew</to-activity-id>
-      </control-flow-case>
-    </control-flow-rule>
-    <control-flow-rule id="__4">
-      <from-activity-id>EditAppForContact</from-activity-id>
-      <control-flow-case id="__5">
-        <from-outcome>exit</from-outcome>
-        <to-activity-id>AppTableForContacts</to-activity-id>
-      </control-flow-case>
-      <control-flow-case id="__2">
-        <from-outcome>toAddInviteeInternal</from-outcome>
-        <to-activity-id>createInviteeInternal_con</to-activity-id>
-      </control-flow-case>
-      <control-flow-case id="__8">
-        <from-outcome>deleteInternal</from-outcome>
-        <to-activity-id>deleteInviteeInt_con</to-activity-id>
-      </control-flow-case>
-      <control-flow-case id="__13">
-        <from-outcome>toAddExt</from-outcome>
-        <to-activity-id>createInviteeExt_con</to-activity-id>
-      </control-flow-case>
-      <control-flow-case id="__17">
-        <from-outcome>toDeleteExt</from-outcome>
-        <to-activity-id>deleteInvExt_con</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <control-flow-rule id="__6">
@@ -125,6 +93,25 @@
       <control-flow-case id="__16">
         <from-outcome>back</from-outcome>
         <to-activity-id>AppTableForContacts</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__18">
+        <from-outcome>createInternalInvitee</from-outcome>
+        <to-activity-id>CreateInternalInvitee</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__21">
+        <from-outcome>deleteInternalInvitee</from-outcome>
+        <to-activity-id>deleteInernaltInvitee</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__2">
+        <from-outcome>createExternalInvitee</from-outcome>
+        <to-activity-id>createExternalInvitee</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__22">
+      <from-activity-id>editAppointmentNew</from-activity-id>
+      <control-flow-case id="__23">
+        <from-outcome>deleteExternalInvitee1</from-outcome>
+        <to-activity-id>deleteExternalInvitee1</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <use-page-fragments/>

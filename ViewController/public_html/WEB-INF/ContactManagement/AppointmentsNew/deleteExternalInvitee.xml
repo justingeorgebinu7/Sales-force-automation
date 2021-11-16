@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="windows-1252" ?>
 <adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
-  <task-flow-definition id="deleteInviteeInt_con">
+  <task-flow-definition id="deleteExternalInvitee">
     <default-activity>Delete</default-activity>
     <data-control-scope>
       <shared/>
@@ -11,17 +11,17 @@
         <fixed-outcome>Delete</fixed-outcome>
       </outcome>
     </method-call>
+    <task-flow-return id="taskFlowReturn1">
+      <outcome>
+        <name>taskFlowReturn1</name>
+      </outcome>
+    </task-flow-return>
     <method-call id="Commit">
       <method>#{bindings.Commit.execute}</method>
       <outcome>
         <fixed-outcome>Commit</fixed-outcome>
       </outcome>
     </method-call>
-    <task-flow-return id="taskFlowReturn1">
-      <outcome>
-        <name>taskFlowReturn1</name>
-      </outcome>
-    </task-flow-return>
     <control-flow-rule id="__1">
       <from-activity-id>Delete</from-activity-id>
       <control-flow-case id="__2">

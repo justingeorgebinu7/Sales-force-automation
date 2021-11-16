@@ -446,6 +446,30 @@
           usageId="sfa_view_addNewAppointment_addNewAppointment_CommitPageDef"/>
     <page path="/ContactManagementPages/AppointmentNew/editAppointmentNew.jsff"
           usageId="sfa_view_editAppointmentNewPageDef"/>
+    <page path="/WEB-INF/ContactManagement/AppointmentsNew/CreateInternalInvitee.xml#CreateInternalInvitee@CreateInsert"
+          usageId="sfa_view_CreateInternalInvitee_CreateInternalInvitee_CreateInsertPageDef"/>
+    <page path="/WEB-INF/ContactManagement/AppointmentsNew/CreateInternalInvitee.xml#CreateInternalInvitee@Delete"
+          usageId="sfa_view_CreateInternalInvitee_CreateInternalInvitee_DeletePageDef"/>
+    <page path="/WEB-INF/ContactManagement/AppointmentsNew/CreateInternalInvitee.xml#CreateInternalInvitee@Commit"
+          usageId="sfa_view_CreateInternalInvitee_CreateInternalInvitee_CommitPageDef"/>
+    <page path="/ContactManagementPages/AppointmentNew/createInternalInvitee_CM.jsff"
+          usageId="sfa_view_createInternalInvitee_CMPageDef"/>
+    <page path="/WEB-INF/ContactManagement/AppointmentsNew/deleteInernaltInvitee.xml#deleteInernaltInvitee@Delete"
+          usageId="sfa_view_deleteInernaltInvitee_deleteInernaltInvitee_DeletePageDef"/>
+    <page path="/WEB-INF/ContactManagement/AppointmentsNew/deleteInernaltInvitee.xml#deleteInernaltInvitee@Commit"
+          usageId="sfa_view_deleteInernaltInvitee_deleteInernaltInvitee_CommitPageDef"/>
+    <page path="/WEB-INF/ContactManagement/AppointmentsNew/deleteExternalInvitee.xml#deleteExternalInvitee@Delete"
+          usageId="sfa_view_deleteExternalInvitee_deleteExternalInvitee_DeletePageDef"/>
+    <page path="/WEB-INF/ContactManagement/AppointmentsNew/deleteExternalInvitee.xml#deleteExternalInvitee@Commit"
+          usageId="sfa_view_deleteExternalInvitee_deleteExternalInvitee_CommitPageDef"/>
+    <page path="/WEB-INF/ContactManagement/AppointmentsNew/createExternalInvitee.xml#createExternalInvitee@CreateInsert"
+          usageId="sfa_view_createExternalInvitee_createExternalInvitee_CreateInsertPageDef"/>
+    <page path="/WEB-INF/ContactManagement/AppointmentsNew/createExternalInvitee.xml#createExternalInvitee@Delete"
+          usageId="sfa_view_createExternalInvitee_createExternalInvitee_DeletePageDef"/>
+    <page path="/WEB-INF/ContactManagement/AppointmentsNew/createExternalInvitee.xml#createExternalInvitee@Commit"
+          usageId="sfa_view_createExternalInvitee_createExternalInvitee_CommitPageDef"/>
+    <page path="/ContactManagementPages/AppointmentNew/CreateExternalInvitee.jsff"
+          usageId="sfa_view_CreateExternalInviteePageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="sfa_view_untitled2PageDef" path="sfa.view.pageDefs.untitled2PageDef"/>
@@ -884,6 +908,30 @@
           path="ContactManagement.AppointmentsNew.addNewAppointment_addNewAppointment_CommitPageDef"/>
     <page id="sfa_view_editAppointmentNewPageDef"
           path="ContactManagementPages.AppointmentNew.editAppointmentNewPageDef"/>
+    <page id="sfa_view_CreateInternalInvitee_CreateInternalInvitee_CreateInsertPageDef"
+          path="ContactManagement.AppointmentsNew.CreateInternalInvitee_CreateInternalInvitee_CreateInsertPageDef"/>
+    <page id="sfa_view_CreateInternalInvitee_CreateInternalInvitee_DeletePageDef"
+          path="ContactManagement.AppointmentsNew.CreateInternalInvitee_CreateInternalInvitee_DeletePageDef"/>
+    <page id="sfa_view_CreateInternalInvitee_CreateInternalInvitee_CommitPageDef"
+          path="ContactManagement.AppointmentsNew.CreateInternalInvitee_CreateInternalInvitee_CommitPageDef"/>
+    <page id="sfa_view_createInternalInvitee_CMPageDef"
+          path="ContactManagementPages.AppointmentNew.createInternalInvitee_CMPageDef"/>
+    <page id="sfa_view_deleteInernaltInvitee_deleteInernaltInvitee_DeletePageDef"
+          path="ContactManagement.AppointmentsNew.deleteInernaltInvitee_deleteInernaltInvitee_DeletePageDef"/>
+    <page id="sfa_view_deleteInernaltInvitee_deleteInernaltInvitee_CommitPageDef"
+          path="ContactManagement.AppointmentsNew.deleteInernaltInvitee_deleteInernaltInvitee_CommitPageDef"/>
+    <page id="sfa_view_deleteExternalInvitee_deleteExternalInvitee_DeletePageDef"
+          path="ContactManagement.AppointmentsNew.deleteExternalInvitee_deleteExternalInvitee_DeletePageDef"/>
+    <page id="sfa_view_deleteExternalInvitee_deleteExternalInvitee_CommitPageDef"
+          path="ContactManagement.AppointmentsNew.deleteExternalInvitee_deleteExternalInvitee_CommitPageDef"/>
+    <page id="sfa_view_createExternalInvitee_createExternalInvitee_CreateInsertPageDef"
+          path="ContactManagement.AppointmentsNew.createExternalInvitee_createExternalInvitee_CreateInsertPageDef"/>
+    <page id="sfa_view_createExternalInvitee_createExternalInvitee_DeletePageDef"
+          path="ContactManagement.AppointmentsNew.createExternalInvitee_createExternalInvitee_DeletePageDef"/>
+    <page id="sfa_view_createExternalInvitee_createExternalInvitee_CommitPageDef"
+          path="ContactManagement.AppointmentsNew.createExternalInvitee_createExternalInvitee_CommitPageDef"/>
+    <page id="sfa_view_CreateExternalInviteePageDef"
+          path="ContactManagementPages.AppointmentNew.CreateExternalInviteePageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="sfa.model.entities"

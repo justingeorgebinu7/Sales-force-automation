@@ -53,21 +53,4 @@
   </af:table>
   <af:button text="Add" id="b3" action="addNewAppointment"/>
   <af:button text="Delete" action="deleteAppointment1" id="b4"/>
-  <af:spacer id="s1" height="40"/>
-  <h:outputText value="Old table:" id="ot2"/>
-  <af:table value="#{bindings.AppointmentsView2.collectionModel}" var="row"
-            rows="#{bindings.AppointmentsView2.rangeSize}"
-            emptyText="#{bindings.AppointmentsView2.viewable ? 'No data to display.' : 'Access Denied.'}"
-            rowBandingInterval="0" selectedRowKeys="#{bindings.AppointmentsView2.collectionModel.selectedRow}"
-            selectionListener="#{bindings.AppointmentsView2.collectionModel.makeCurrent}" rowSelection="single"
-            fetchSize="#{bindings.AppointmentsView2.rangeSize}"
-            filterModel="#{bindings.AppointmentsView2Query.queryDescriptor}" filterVisible="true"
-            queryListener="#{bindings.AppointmentsView2Query.processQuery}" varStatus="vs" id="t1">
-    <af:column sortProperty="#{bindings.AppointmentsView2.hints.Name.name}" filterable="true" sortable="true"
-               headerText="#{bindings.AppointmentsView2.hints.Name.label}" id="c1" width="211">
-      <af:link shortDesc="#{bindings.AppointmentsView2.hints.Name.tooltip}" id="ot1" text="#{row.Name}" action="edit"/>
-    </af:column>
-  </af:table>
-  <af:button text="Add Old" id="b1" action="create"/>
-  <af:button text="Delete Old" action="deleteAppForContacts1" id="b2"/>
 </ui:composition>

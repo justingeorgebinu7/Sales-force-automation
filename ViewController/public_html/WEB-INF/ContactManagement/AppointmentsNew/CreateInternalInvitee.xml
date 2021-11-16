@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="windows-1252" ?>
 <adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
-  <task-flow-definition id="createInviteeInternal_con">
+  <task-flow-definition id="CreateInternalInvitee">
     <default-activity>CreateInsert</default-activity>
     <data-control-scope>
       <shared/>
@@ -11,26 +11,43 @@
         <fixed-outcome>CreateInsert</fixed-outcome>
       </outcome>
     </method-call>
-    <view id="addInvInternal_con">
-      <page>/ContactManagementPages/addInvInternal_con.jsff</page>
-    </view>
+    <method-call id="Delete">
+      <method>#{bindings.Delete.execute}</method>
+      <outcome>
+        <fixed-outcome>Delete</fixed-outcome>
+      </outcome>
+    </method-call>
     <method-call id="Commit">
       <method>#{bindings.Commit.execute}</method>
       <outcome>
         <fixed-outcome>Commit</fixed-outcome>
       </outcome>
     </method-call>
+    <view id="createInternalInvitee_CM">
+      <page>/ContactManagementPages/AppointmentNew/createInternalInvitee_CM.jsff</page>
+    </view>
     <control-flow-rule id="__1">
       <from-activity-id>CreateInsert</from-activity-id>
       <control-flow-case id="__2">
         <from-outcome>CreateInsert</from-outcome>
-        <to-activity-id>addInvInternal_con</to-activity-id>
+        <to-activity-id>createInternalInvitee_CM</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <control-flow-rule id="__3">
-      <from-activity-id>addInvInternal_con</from-activity-id>
+      <from-activity-id>createInternalInvitee_CM</from-activity-id>
       <control-flow-case id="__4">
-        <from-outcome>toCommit</from-outcome>
+        <from-outcome>discard</from-outcome>
+        <to-activity-id>Delete</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__5">
+        <from-outcome>commit</from-outcome>
+        <to-activity-id>Commit</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__6">
+      <from-activity-id>Delete</from-activity-id>
+      <control-flow-case id="__7">
+        <from-outcome>Delete</from-outcome>
         <to-activity-id>Commit</to-activity-id>
       </control-flow-case>
     </control-flow-rule>

@@ -6,6 +6,14 @@
     <variableIterator id="variables"/>
     <iterator Binds="AppointmentsView10" RangeSize="25" DataControl="AppModuleDataControl"
               id="AppointmentsView10Iterator"/>
+    <iterator Binds="InviteesView7" RangeSize="25" DataControl="AppModuleDataControl" id="InviteesView7Iterator"/>
+    <iterator Binds="InviteesextView7" RangeSize="25" DataControl="AppModuleDataControl" id="InviteesextView7Iterator"/>
+    <taskFlow id="CreateInternalInvitee1"
+              taskFlowId="/WEB-INF/ContactManagement/AppointmentsNew/CreateInternalInvitee.xml#CreateInternalInvitee"
+              activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <taskFlow id="createExternalInvitee1"
+              taskFlowId="/WEB-INF/ContactManagement/AppointmentsNew/createExternalInvitee.xml#createExternalInvitee"
+              activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
   </executables>
   <bindings>
     <attributeValues IterBinding="AppointmentsView10Iterator" id="Name">
@@ -34,5 +42,19 @@
       </AttrNames>
     </attributeValues>
     <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+    <tree IterBinding="InviteesView7Iterator" id="InviteesView7">
+      <nodeDefinition DefName="sfa.model.viewobjects.InviteesView" Name="InviteesView70">
+        <AttrNames>
+          <Item Value="Name1"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="InviteesextView7Iterator" id="InviteesextView7">
+      <nodeDefinition DefName="sfa.model.viewobjects.InviteesextView" Name="InviteesextView70">
+        <AttrNames>
+          <Item Value="Firstname"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
   </bindings>
 </pageDefinition>

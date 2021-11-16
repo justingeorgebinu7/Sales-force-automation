@@ -614,7 +614,41 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
         inviteesVo.insertRow(newRow);
         this.getDBTransaction().commit();
         inviteesVo.executeQuery();
-    }class AppmoduleImpl {
+    }
+
+    /**
+     * Container's getter for InviteesView7.
+     * @return InviteesView7
+     */
+    public ViewObjectImpl getInviteesView7() {
+        return (ViewObjectImpl) findViewObject("InviteesView7");
+    }
+
+    /**
+     * Container's getter for InviteesAppointmentsFkLink5.
+     * @return InviteesAppointmentsFkLink5
+     */
+    public ViewLinkImpl getInviteesAppointmentsFkLink5() {
+        return (ViewLinkImpl) findViewLink("InviteesAppointmentsFkLink5");
+    }
+
+    /**
+     * Container's getter for InviteesextView7.
+     * @return InviteesextView7
+     */
+    public ViewObjectImpl getInviteesextView7() {
+        return (ViewObjectImpl) findViewObject("InviteesextView7");
+    }
+
+    /**
+     * Container's getter for InviteesExt_AppoinmentFK_Link4.
+     * @return InviteesExt_AppoinmentFK_Link4
+     */
+    public ViewLinkImpl getInviteesExt_AppoinmentFK_Link4() {
+        return (ViewLinkImpl) findViewLink("InviteesExt_AppoinmentFK_Link4");
+    }
+
+    class AppmoduleImpl {
         
     }
 

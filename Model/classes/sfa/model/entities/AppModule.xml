@@ -246,6 +246,12 @@
   <ViewUsage
     Name="ProductCategory1"
     ViewObjectName="sfa.model.viewobjects.staticVo.ProductCategory"/>
+  <ViewUsage
+    Name="InviteesView7"
+    ViewObjectName="sfa.model.viewobjects.InviteesView"/>
+  <ViewUsage
+    Name="InviteesextView7"
+    ViewObjectName="sfa.model.viewobjects.InviteesextView"/>
   <ViewLinkUsage
     Name="CaddressCustomercontactsFkLink1"
     ViewLinkObjectName="sfa.model.viewobjects.CaddressCustomercontactsFkLink"
@@ -545,6 +551,18 @@
     ViewLinkObjectName="sfa.model.viewobjects.Contact_Appointments_Via_Invitees_Link"
     SrcViewUsageName="sfa.model.entities.AppModule.CustomercontactsView1"
     DstViewUsageName="sfa.model.entities.AppModule.AppointmentsView10"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="InviteesAppointmentsFkLink5"
+    ViewLinkObjectName="sfa.model.viewobjects.InviteesAppointmentsFkLink"
+    SrcViewUsageName="sfa.model.entities.AppModule.AppointmentsView10"
+    DstViewUsageName="sfa.model.entities.AppModule.InviteesView7"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="InviteesExt_AppoinmentFK_Link4"
+    ViewLinkObjectName="sfa.model.entities.InviteesExt_AppoinmentFK_Link"
+    SrcViewUsageName="sfa.model.entities.AppModule.AppointmentsView10"
+    DstViewUsageName="sfa.model.entities.AppModule.InviteesextView7"
     Reversed="false"/>
   <ClientInterface
     Name="__clientInterface">
