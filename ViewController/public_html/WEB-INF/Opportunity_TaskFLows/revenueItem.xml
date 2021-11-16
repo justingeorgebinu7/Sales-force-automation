@@ -21,7 +21,7 @@
       <managed-bean-scope>request</managed-bean-scope>
     </managed-bean>
     <view id="revenueItem">
-      <page>/revenueItem.jsff</page>
+      <page>/Opportunity_pages/revenueItem.jsff</page>
     </view>
     <task-flow-call id="addRevenueItem">
       <task-flow-reference>
@@ -30,7 +30,7 @@
       </task-flow-reference>
     </task-flow-call>
     <view id="editRevenueItem">
-      <page>/editRevenueItem.jsff</page>
+      <page>/Opportunity_pages/editRevenueItem.jsff</page>
     </view>
     <task-flow-call id="deleteRevenueItem1">
       <task-flow-reference>

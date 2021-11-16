@@ -39,7 +39,7 @@
       </outcome>
     </task-flow-return>
     <view id="addRevenueItem">
-      <page>/addRevenueItem.jsff</page>
+      <page>/Opportunity_pages/addRevenueItem.jsff</page>
     </view>
     <control-flow-rule id="__1">
       <from-activity-id>CreateInsert</from-activity-id>

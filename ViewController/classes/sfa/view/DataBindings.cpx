@@ -387,19 +387,19 @@
           usageId="sfa_view_deleteRole_deleteRole_DeletePageDef"/>
     <page path="/WEB-INF/RoleManagement/deleteRole.xml#deleteRole@Commit"
           usageId="sfa_view_deleteRole_deleteRole_CommitPageDef"/>
-    <page path="/revenueItem.jsff" usageId="sfa_view_revenueItemPageDef"/>
+    <page path="/Opportunity_pages/revenueItem.jsff" usageId="sfa_view_revenueItemPageDef"/>
     <page path="/WEB-INF/Opportunity_TaskFLows/addRevenueItem.xml#addRevenueItem@CreateInsert"
           usageId="sfa_view_addRevenueItem_addRevenueItem_CreateInsertPageDef"/>
     <page path="/WEB-INF/Opportunity_TaskFLows/addRevenueItem.xml#addRevenueItem@Delete"
           usageId="sfa_view_addRevenueItem_addRevenueItem_DeletePageDef"/>
     <page path="/WEB-INF/Opportunity_TaskFLows/addRevenueItem.xml#addRevenueItem@Commit"
           usageId="sfa_view_addRevenueItem_addRevenueItem_CommitPageDef"/>
-    <page path="/addRevenueItem.jsff" usageId="sfa_view_addRevenueItemPageDef"/>
+    <page path="/Opportunity_pages/addRevenueItem.jsff" usageId="sfa_view_addRevenueItemPageDef"/>
     <page path="/WEB-INF/Opportunity_TaskFLows/deleteRevenueItem.xml#deleteRevenueItem@Delete"
           usageId="sfa_view_deleteRevenueItem_deleteRevenueItem_DeletePageDef"/>
     <page path="/WEB-INF/Opportunity_TaskFLows/deleteRevenueItem.xml#deleteRevenueItem@Commit"
           usageId="sfa_view_deleteRevenueItem_deleteRevenueItem_CommitPageDef"/>
-    <page path="/editRevenueItem.jsff" usageId="sfa_view_editRevenueItemPageDef"/>
+    <page path="/Opportunity_pages/editRevenueItem.jsff" usageId="sfa_view_editRevenueItemPageDef"/>
     <page path="/WEB-INF/Opportunity_TaskFLows/OM_FileDelete.xml#OM_FileDelete@Delete"
           usageId="sfa_view_OM_FileDelete_OM_FileDelete_DeletePageDef"/>
     <page path="/WEB-INF/Opportunity_TaskFLows/OM_FileDelete.xml#OM_FileDelete@Commit"
