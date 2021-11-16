@@ -49,11 +49,24 @@ public class RevenueItemedit implements Serializable {
          OperationBinding ob = executeOperation("estimatedPrice");
          ob.getParamsMap().put("pidStr", pid.toString());
          ob.execute();
+        DCIteratorBinding it = (DCIteratorBinding)BindingContext.getCurrent().getCurrentBindingsEntry().get("RevenueitemView2Iterator");   
+        RowSetIterator rsIter = it .getRowSetIterator();
+        Row rowObj = rsIter .getCurrentRow();
+        Object q=rowObj.getAttribute("Quantity");
+        String str = q.toString();
+        if(str!=null) {
+            calculate(q);
+        }
          
     }
 
     public void quantity(ValueChangeEvent valueChangeEvent) {
         Object quant= valueChangeEvent.getNewValue();
+        calculate(quant);
+      
+    }
+    public void calculate(Object quant){
+        
         DCIteratorBinding it = (DCIteratorBinding)BindingContext.getCurrent().getCurrentBindingsEntry().get("RevenueitemView2Iterator");   
         RowSetIterator rsIter = it .getRowSetIterator();
         Row rowObj = rsIter .getCurrentRow();
