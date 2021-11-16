@@ -55,7 +55,9 @@
           <af:panelBox text="Invitees - Contacts" id="pb2">
             <f:facet name="toolbar">
               <af:menuBar id="mb1">
-                <af:commandMenuItem text="Add" id="cmi1" action="addInviteeInternal"/>
+                <af:commandMenuItem text="Add" id="cmi1">
+                  <af:showPopupBehavior popupId="p1"/>
+                </af:commandMenuItem>
                 <af:commandMenuItem text="Delete" id="cmi2" action="deleteInviteeInternal"/>
               </af:menuBar>
             </f:facet>
@@ -70,16 +72,28 @@
                 <af:outputText value="#{row.Name1}" shortDesc="#{bindings.InviteesView3.hints.Name1.tooltip}" id="ot1"/>
               </af:column>
             </af:table>
+            <af:popup childCreation="deferred" autoCancel="disabled" id="p1">
+              <af:panelWindow id="pw1">
+                <af:region value="#{bindings.createInviteeInternal1.regionModel}" id="r1"/>
+              </af:panelWindow>
+            </af:popup>
           </af:panelBox>
         </f:facet>
         <f:facet name="second">
           <af:panelBox text="Invitees - Users" id="pb1">
             <f:facet name="toolbar">
               <af:menuBar id="mb2">
-                <af:commandMenuItem text="Add" id="cmi3" action="addInviteeExternal"/>
+                <af:commandMenuItem text="Add" id="cmi3" action="addInviteeExternal">
+                  <af:showPopupBehavior popupId="p2"/>
+                </af:commandMenuItem>
                 <af:commandMenuItem text="Delete" id="cmi4" action="toDeleteExternal"/>
               </af:menuBar>
             </f:facet>
+            <af:popup childCreation="deferred" autoCancel="disabled" id="p2">
+              <af:panelWindow id="pw2">
+                <af:region value="#{bindings.createInviteeExternal1.regionModel}" id="r2"/>
+              </af:panelWindow>
+            </af:popup>
             <af:table value="#{bindings.InviteesextView3.collectionModel}" var="row"
                       rows="#{bindings.InviteesextView3.rangeSize}"
                       emptyText="#{bindings.InviteesextView3.viewable ? 'No data to display.' : 'Access Denied.'}"

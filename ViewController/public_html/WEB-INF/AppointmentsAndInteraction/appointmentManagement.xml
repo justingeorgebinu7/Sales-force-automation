@@ -5,6 +5,11 @@
     <data-control-scope>
       <shared/>
     </data-control-scope>
+    <managed-bean id="__10">
+      <managed-bean-name>ClosePopUp</managed-bean-name>
+      <managed-bean-class>sfa.view.ClosePopUp</managed-bean-class>
+      <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
     <view id="AppointmentTable">
       <page>/AppointmentsAndInteractions/AppointmentTable.jsff</page>
     </view>

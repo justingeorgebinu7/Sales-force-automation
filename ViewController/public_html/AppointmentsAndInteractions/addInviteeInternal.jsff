@@ -13,7 +13,7 @@
       <!--<af:convertNumber groupingUsed="false" pattern="#{bindings.Contactid.format}"/>-->
     </af:inputComboboxListOfValues>
   </af:panelFormLayout>
-  <af:button text="Save" id="b1" action="tocommit"/>
+  <af:button text="Save" id="b1" action="tocommit" actionListener="#{viewScope.ClosePopUp.close}"/>
   <af:button actionListener="#{bindings.Delete.execute}" text="Cancel" disabled="#{!bindings.Delete.enabled}" id="b2"
              action="tocommit"/>
 </ui:composition>

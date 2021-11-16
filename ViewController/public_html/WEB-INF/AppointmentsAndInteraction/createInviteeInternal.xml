@@ -5,6 +5,71 @@
     <data-control-scope>
       <shared/>
     </data-control-scope>
+    <managed-bean id="__7">
+      <managed-bean-name>ClosePopUp</managed-bean-name>
+      <managed-bean-class>sfa.view.ClosePopUp</managed-bean-class>
+      <managed-bean-scope>view</managed-bean-scope>
+    </managed-bean>
+    <managed-bean id="__8">
+      <managed-bean-name>ClosePopUp</managed-bean-name>
+      <managed-bean-class>sfa.view.ClosePopUp</managed-bean-class>
+      <managed-bean-scope>view</managed-bean-scope>
+    </managed-bean>
+    <managed-bean id="__9">
+      <managed-bean-name>ClosePopUp</managed-bean-name>
+      <managed-bean-class>Beans.ClosePopUp</managed-bean-class>
+      <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean id="__10">
+      <managed-bean-name>ClosePopUp</managed-bean-name>
+      <managed-bean-class>Beans.ClosePopUp</managed-bean-class>
+      <managed-bean-scope>view</managed-bean-scope>
+    </managed-bean>
+    <managed-bean id="__11">
+      <managed-bean-name>PopUpClose</managed-bean-name>
+      <managed-bean-class>Beans.PopUpClose</managed-bean-class>
+      <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean id="__12">
+      <managed-bean-name>ClosePopUp</managed-bean-name>
+      <managed-bean-class>Beans.ClosePopUp</managed-bean-class>
+      <managed-bean-scope>view</managed-bean-scope>
+    </managed-bean>
+    <managed-bean id="__13">
+      <managed-bean-name>cc</managed-bean-name>
+      <managed-bean-class>sfa.view.cc</managed-bean-class>
+      <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean id="__14">
+      <managed-bean-name>ClosePopUp</managed-bean-name>
+      <managed-bean-class>Beans.ClosePopUp</managed-bean-class>
+      <managed-bean-scope>pageFlow</managed-bean-scope>
+    </managed-bean>
+    <managed-bean id="__15">
+      <managed-bean-name>ClosePopUp</managed-bean-name>
+      <managed-bean-class>sfa.view.ClosePopUp</managed-bean-class>
+      <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean id="__16">
+      <managed-bean-name>ClosepopUp</managed-bean-name>
+      <managed-bean-class>Beans.ClosepopUp</managed-bean-class>
+      <managed-bean-scope>view</managed-bean-scope>
+    </managed-bean>
+    <managed-bean id="__17">
+      <managed-bean-name>ClosePopUp</managed-bean-name>
+      <managed-bean-class>Beans.ClosePopUp</managed-bean-class>
+      <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+    <managed-bean id="__18">
+      <managed-bean-name>ClosePopUp</managed-bean-name>
+      <managed-bean-class>Beans.ClosePopUp</managed-bean-class>
+      <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean id="__19">
+      <managed-bean-name>ClosePopUp</managed-bean-name>
+      <managed-bean-class>sfa.view.ClosePopUp</managed-bean-class>
+      <managed-bean-scope>backingBean</managed-bean-scope>
+    </managed-bean>
     <view id="addInviteeInternal">
       <page>/AppointmentsAndInteractions/addInviteeInternal.jsff</page>
     </view>

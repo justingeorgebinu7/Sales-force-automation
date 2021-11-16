@@ -8,6 +8,10 @@
               id="AppointmentsView8Iterator"/>
     <iterator Binds="InviteesView5" RangeSize="25" DataControl="AppModuleDataControl" id="InviteesView5Iterator"/>
     <iterator Binds="InviteesextView4" RangeSize="25" DataControl="AppModuleDataControl" id="InviteesextView4Iterator"/>
+    <taskFlow id="addIntInvitee1" taskFlowId="/WEB-INF/Opportunity_TaskFLows/addIntInvitee.xml#addIntInvitee"
+              activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <taskFlow id="addExtInvitee1" taskFlowId="/WEB-INF/Opportunity_TaskFLows/addExtInvitee.xml#addExtInvitee"
+              activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
   </executables>
   <bindings>
     <attributeValues IterBinding="AppointmentsView8Iterator" id="Name">

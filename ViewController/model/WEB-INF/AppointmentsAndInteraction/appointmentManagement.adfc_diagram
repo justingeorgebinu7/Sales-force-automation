@@ -226,6 +226,6 @@
       <property
          name="fromOutcome">toDeleteExternal</property>
       <property
-         name="sdm:polyPoints">R61,490.3899,262.52097,796.64624,454.09766,L50</property>
+         name="sdm:polyPoints">R58,489.0,259.7412,798.03613,454.09766,L50</property>
    </ControlFlowCase>
 </SDM>

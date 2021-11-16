@@ -53,10 +53,17 @@
           <af:panelBox text="Invitees-Users" id="pb1" showDisclosure="false">
             <f:facet name="toolbar">
               <af:menuBar id="mb2">
-                <af:commandMenuItem text="Add" id="cmi3" action="toAddExt"/>
+                <af:commandMenuItem text="Add" id="cmi3" action="toAddExt">
+                  <af:showPopupBehavior popupId="p1"/>
+                </af:commandMenuItem>
                 <af:commandMenuItem text="Delete" id="cmi4" action="toDeleteExt"/>
               </af:menuBar>
             </f:facet>
+            <af:popup childCreation="deferred" autoCancel="disabled" id="p1">
+              <af:panelWindow id="pw1">
+                <af:region value="#{bindings.createInviteeExt_con1.regionModel}" id="r1"/>
+              </af:panelWindow>
+            </af:popup>
             <af:table value="#{bindings.InviteesextView5.collectionModel}" var="row"
                       rows="#{bindings.InviteesextView5.rangeSize}"
                       emptyText="#{bindings.InviteesextView5.viewable ? 'No data to display.' : 'Access Denied.'}"
@@ -75,10 +82,17 @@
           <af:panelBox text="Invitees-Contact" id="pb2" showDisclosure="false">
             <f:facet name="toolbar">
               <af:menuBar id="mb1">
-                <af:commandMenuItem text="Add" id="cmi1" action="toAddInviteeInternal"/>
+                <af:commandMenuItem text="Add" id="cmi1" action="toAddInviteeInternal">
+                  <af:showPopupBehavior popupId="p2"/>
+                </af:commandMenuItem>
                 <af:commandMenuItem text="Delete" id="cmi2" action="deleteInternal"/>
               </af:menuBar>
             </f:facet>
+            <af:popup childCreation="deferred" autoCancel="disabled" id="p2">
+              <af:panelWindow id="pw2">
+                <af:region value="#{bindings.createInviteeInternal_con1.regionModel}" id="r2"/>
+              </af:panelWindow>
+            </af:popup>
             <af:table value="#{bindings.InviteesView4.collectionModel}" var="row"
                       rows="#{bindings.InviteesView4.rangeSize}"
                       emptyText="#{bindings.InviteesView4.viewable ? 'No data to display.' : 'Access Denied.'}"

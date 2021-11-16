@@ -71,6 +71,11 @@
       <string v="oracle.toplink.workbench.addin/toplinkContentSet"/>
    </list>
    <value n="defaultPackage" v="sfa.view"/>
+   <hash n="ejbModuleContainer">
+      <value n="ejbVersion" v="3.0"/>
+      <value n="ejbVersionMinor" v="0.1"/>
+      <url n="weblogicEjbJarNodeURL" path="src/META-INF/weblogic-ejb-jar.xml"/>
+   </hash>
    <value n="jbo.JpxName" v="META-INF.sfa.model.Model"/>
    <value n="JboProject" v="true"/>
    <hash n="oracle.adfdtinternal.model.ide.security.SecurityPolicies">
@@ -93,6 +98,7 @@
          <string v="ADFbc"/>
          <string v="ADFc"/>
          <string v="ADFm"/>
+         <string v="EJB"/>
          <string v="HTML"/>
          <string v="JAVASCRIPT"/>
          <string v="JSF"/>
@@ -343,6 +349,14 @@
             <value n="id" v="BC4J Oracle Domains"/>
             <value n="isJDK" v="false"/>
          </hash>
+         <hash>
+            <value n="id" v="Java EE"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="EJB"/>
+            <value n="isJDK" v="false"/>
+         </hash>
       </list>
       <list n="libraryReferences">
          <hash>
@@ -471,6 +485,14 @@
          </hash>
          <hash>
             <value n="id" v="BC4J Oracle Domains"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Java EE"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="EJB"/>
             <value n="isJDK" v="false"/>
          </hash>
       </list>
@@ -733,6 +755,11 @@
             <value n="version" v="1.2"/>
          </hash>
       </list>
+   </hash>
+   <hash n="oracle.toplink.workbench.addin">
+      <hash n="persistence-list">
+         <value n="jpa-version" v="2.0"/>
+      </hash>
    </hash>
    <hash n="ResourceBundleOptions">
       <value n="BundleCreationPolicy" v="2"/>
