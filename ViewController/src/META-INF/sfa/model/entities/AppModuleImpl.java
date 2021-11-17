@@ -656,6 +656,46 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
         return (ViewObjectImpl) findViewObject("CategoryView1");
     }
 
+    /**
+     * Container's getter for CategoryView2.
+     * @return CategoryView2
+     */
+    public ViewObjectImpl getCategoryView2() {
+        return (ViewObjectImpl) findViewObject("CategoryView2");
+    }
+
+    /**
+     * Container's getter for ProductsView4.
+     * @return ProductsView4
+     */
+    public ProductsViewImpl getProductsView4() {
+        return (ProductsViewImpl) findViewObject("ProductsView4");
+    }
+
+    /**
+     * Container's getter for ProductsCategoryFKLink.
+     * @return ProductsCategoryFKLink
+     */
+    public ViewLinkImpl getProductsCategoryFKLink() {
+        return (ViewLinkImpl) findViewLink("ProductsCategoryFKLink");
+    }
+
+    /**
+     * Container's getter for CategoryView3.
+     * @return CategoryView3
+     */
+    public ViewObjectImpl getCategoryView3() {
+        return (ViewObjectImpl) findViewObject("CategoryView3");
+    }
+
+    /**
+     * Container's getter for ProductsCategoryFKLink1.
+     * @return ProductsCategoryFKLink1
+     */
+    public ViewLinkImpl getProductsCategoryFKLink1() {
+        return (ViewLinkImpl) findViewLink("ProductsCategoryFKLink1");
+    }
+
     class AppmoduleImpl {
         
     }

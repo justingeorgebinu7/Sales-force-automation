@@ -29,4 +29,9 @@
     EntityAttrName="Name"
     EntityUsage="Category"
     AliasName="NAME"/>
+  <ViewLinkAccessor
+    Name="ProductsView"
+    ViewLink="sfa.model.viewobjects.ProductsCategoryFKLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
 </ViewObject>

@@ -2,6 +2,7 @@ package sfa.model.viewobjects;
 
 import java.math.BigDecimal;
 
+import oracle.jbo.Row;
 import oracle.jbo.RowIterator;
 import oracle.jbo.RowSet;
 import oracle.jbo.server.EntityImpl;
@@ -31,6 +32,7 @@ public class ProductsViewRowImpl extends ViewRowImpl implements ProductsViewRow 
         Revenueitem,
         Categoryid,
         RevenueitemView,
+        CategoryView,
         ProductCategory1;
         private static AttributesEnum[] vals = null;
         ;
@@ -65,6 +67,7 @@ public class ProductsViewRowImpl extends ViewRowImpl implements ProductsViewRow 
     public static final int REVENUEITEM = AttributesEnum.Revenueitem.index();
     public static final int CATEGORYID = AttributesEnum.Categoryid.index();
     public static final int REVENUEITEMVIEW = AttributesEnum.RevenueitemView.index();
+    public static final int CATEGORYVIEW = AttributesEnum.CategoryView.index();
     public static final int PRODUCTCATEGORY1 = AttributesEnum.ProductCategory1.index();
 
     /**
@@ -198,6 +201,20 @@ public class ProductsViewRowImpl extends ViewRowImpl implements ProductsViewRow 
      */
     public RowIterator getRevenueitemView() {
         return (RowIterator) getAttributeInternal(REVENUEITEMVIEW);
+    }
+
+    /**
+     * Gets the associated <code>Row</code> using master-detail link CategoryView.
+     */
+    public Row getCategoryView() {
+        return (Row) getAttributeInternal(CATEGORYVIEW);
+    }
+
+    /**
+     * Sets the master-detail link CategoryView between this object and <code>value</code>.
+     */
+    public void setCategoryView(Row value) {
+        setAttributeInternal(CATEGORYVIEW, value);
     }
 
     /**
