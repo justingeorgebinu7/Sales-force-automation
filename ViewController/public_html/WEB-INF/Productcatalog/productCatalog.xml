@@ -23,6 +23,12 @@
     <view id="editProduct">
       <page>/ProductsCatalog/editProduct.jsff</page>
     </view>
+    <task-flow-call id="productsCategory">
+      <task-flow-reference>
+        <document>/WEB-INF/Productcatalog/productsCategory.xml</document>
+        <id>productsCategory</id>
+      </task-flow-reference>
+    </task-flow-call>
     <control-flow-rule id="__1">
       <from-activity-id>productsCatalog</from-activity-id>
       <control-flow-case id="__2">
@@ -32,6 +38,10 @@
       <control-flow-case id="__5">
         <from-outcome>edit</from-outcome>
         <to-activity-id>editProduct</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__8">
+        <from-outcome>manageCategory</from-outcome>
+        <to-activity-id>productsCategory</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <control-flow-rule id="__3">

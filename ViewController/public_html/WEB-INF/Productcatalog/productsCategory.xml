@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="productsCategory">
+    <default-activity>category</default-activity>
+    <data-control-scope>
+      <shared/>
+    </data-control-scope>
+    <view id="category">
+      <page>/ProductsCatalog/category.jsff</page>
+    </view>
+    <task-flow-call id="createCategory">
+      <task-flow-reference>
+        <document>/WEB-INF/Productcatalog/createCategory.xml</document>
+        <id>createCategory</id>
+      </task-flow-reference>
+    </task-flow-call>
+    <view id="editCategory">
+      <page>/ProductsCatalog/editCategory.jsff</page>
+    </view>
+    <control-flow-rule id="__1">
+      <from-activity-id>category</from-activity-id>
+      <control-flow-case id="__2">
+        <from-outcome>addCategory</from-outcome>
+        <to-activity-id>createCategory</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__3">
+        <from-outcome>editCategory</from-outcome>
+        <to-activity-id>editCategory</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__4">
+      <from-activity-id>editCategory</from-activity-id>
+      <control-flow-case id="__5">
+        <from-outcome>backFromEdit</from-outcome>
+        <to-activity-id>category</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <use-page-fragments/>
+  </task-flow-definition>
+</adfc-config>

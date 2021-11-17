@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <af:table value="#{bindings.CategoryView3.collectionModel}" var="row" rows="#{bindings.CategoryView3.rangeSize}"
+            emptyText="#{bindings.CategoryView3.viewable ? 'No data to display.' : 'Access Denied.'}"
+            rowBandingInterval="0" selectedRowKeys="#{bindings.CategoryView3.collectionModel.selectedRow}"
+            selectionListener="#{bindings.CategoryView3.collectionModel.makeCurrent}" rowSelection="single"
+            fetchSize="#{bindings.CategoryView3.rangeSize}" filterModel="#{bindings.CategoryView3Query.queryDescriptor}"
+            filterVisible="true" queryListener="#{bindings.CategoryView3Query.processQuery}" varStatus="vs" id="t1"
+            partialTriggers="::b2">
+    <af:column sortProperty="#{bindings.CategoryView3.hints.Name.name}" filterable="true" sortable="true"
+               headerText="#{bindings.CategoryView3.hints.Name.label}" id="c1">
+      <af:outputText value="#{row.Name}" shortDesc="#{bindings.CategoryView3.hints.Name.tooltip}" id="ot1"/>
+    </af:column>
+  </af:table>
+  <af:button text="Add" id="b1" action="addCategory"/>
+</ui:composition>

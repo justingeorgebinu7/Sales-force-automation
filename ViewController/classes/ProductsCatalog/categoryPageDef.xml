@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.22.48" id="categoryPageDef"
+                Package="ProductsCatalog">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="CategoryView3" RangeSize="25" DataControl="AppModuleDataControl" id="CategoryView3Iterator"/>
+    <searchRegion Binds="CategoryView3Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="CategoryView3Query"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="CategoryView3Iterator" id="CategoryView3">
+      <nodeDefinition DefName="sfa.model.entities.CategoryView" Name="CategoryView30">
+        <AttrNames>
+          <Item Value="Name"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

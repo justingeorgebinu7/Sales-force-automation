@@ -29,6 +29,7 @@
   </af:table>
   <af:button text="Add" id="b1" action="create"/>
   <af:button text="Delete" action="deleteProduct1" id="b2"/>
+  <af:button text="Manage Category" id="b4" action="manageCategory"/>
   <af:button text="Export" id="b3">
     <af:exportCollectionActionListener type="excelHTML" exportedId="t1" filename="product_catalog.html"/>
   </af:button>
