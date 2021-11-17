@@ -7,7 +7,7 @@
             selectionListener="#{bindings.CategoryView1.collectionModel.makeCurrent}" rowSelection="single"
             fetchSize="#{bindings.CategoryView1.rangeSize}" filterModel="#{bindings.CategoryView1Query.queryDescriptor}"
             filterVisible="true" queryListener="#{bindings.CategoryView1Query.processQuery}" varStatus="vs" id="t1"
-            columnStretching="last">
+            columnStretching="last" partialTriggers="::b1">
     <af:column sortProperty="#{bindings.CategoryView1.hints.Name.name}" filterable="true" sortable="true"
                headerText="#{bindings.CategoryView1.hints.Name.label}" id="c1">
       <af:link shortDesc="#{bindings.CategoryView1.hints.Name.tooltip}" id="ot1" text="#{row.Name}">
@@ -24,9 +24,10 @@
   <af:button text="Add" id="b1">
     <af:showPopupBehavior popupId="p1"/>
   </af:button>
-  <af:popup childCreation="deferred" autoCancel="disabled" id="p1">
+  <af:popup childCreation="deferred" autoCancel="disabled" id="p1" contentDelivery="lazyUncached"
+            popupCanceledListener="#{viewScope.categoryBean.cancelled}">
     <af:dialog id="d1" type="none" title="Choose Category">
-      <af:region value="#{bindings.createCategory1.regionModel}" id="r1"/>
+      <af:region value="#{bindings.dynamicRegion1.regionModel}" id="r1" binding="#{viewScope.categoryBean.category}"/>
       <f:facet name="buttonBar"/>
     </af:dialog>
   </af:popup>

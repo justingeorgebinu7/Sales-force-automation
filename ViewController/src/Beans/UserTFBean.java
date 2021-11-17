@@ -62,7 +62,8 @@ public class UserTFBean implements Serializable {
     }
     public void startUserManTF(DisclosureEvent disclosureEvent) {
         getDynamicUserMan().refresh(FacesContext.getCurrentInstance());
-    }   
+    }
+
     public void startProdManTF(DisclosureEvent disclosureEvent) {
         getDynamicProductMan().refresh(FacesContext.getCurrentInstance());
     }
