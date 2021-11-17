@@ -4,14 +4,14 @@
   <parameters/>
   <executables>
     <variableIterator id="variables"/>
-    <iterator Binds="CategoryView3" RangeSize="25" DataControl="AppModuleDataControl" id="CategoryView3Iterator"/>
+    <iterator Binds="CategoryView1" RangeSize="25" DataControl="AppModuleDataControl" id="CategoryView1Iterator"/>
   </executables>
   <bindings>
-    <attributeValues IterBinding="CategoryView3Iterator" id="Name">
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+    <attributeValues IterBinding="CategoryView1Iterator" id="Name">
       <AttrNames>
         <Item Value="Name"/>
       </AttrNames>
     </attributeValues>
-    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
   </bindings>
 </pageDefinition>

@@ -9,11 +9,6 @@
   </executables>
   <bindings>
     <action IterBinding="CategoryView3Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
-    <attributeValues IterBinding="CategoryView1Iterator" id="Categoryid">
-      <AttrNames>
-        <Item Value="Categoryid"/>
-      </AttrNames>
-    </attributeValues>
     <attributeValues IterBinding="CategoryView1Iterator" id="Name">
       <AttrNames>
         <Item Value="Name"/>

@@ -8,6 +8,5 @@
       <f:validator binding="#{bindings.Name.validator}"/>
     </af:inputText>
   </af:panelFormLayout>
-  <af:button actionListener="#{bindings.Commit.execute}" text="Save" disabled="#{!bindings.Commit.enabled}" id="b1"
-             action="backFromEdit"/>
+  <af:button actionListener="#{bindings.Commit.execute}" text="Save" disabled="#{!bindings.Commit.enabled}" id="b1"/>
 </ui:composition>

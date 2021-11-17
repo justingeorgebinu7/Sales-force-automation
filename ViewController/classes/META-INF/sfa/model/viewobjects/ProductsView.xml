@@ -25,20 +25,47 @@
     Name="ProductCategory1"
     ViewObjectName="sfa.model.viewobjects.staticVo.ProductCategory"
     RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="CategoryView1"
+    ViewObjectName="sfa.model.entities.CategoryView"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="CategoryView2"
+    ViewObjectName="sfa.model.entities.CategoryView"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_Categoryid"
+    ListVOName="CategoryView1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Categoryid"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Categoryid"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <ListBinding
     Name="LOV_Category"
-    ListVOName="ProductCategory1"
-    NullValueFlag="none"
+    ListVOName="CategoryView2"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
     MRUCount="0">
     <AttrArray Name="AttrNames">
       <Item Value="Category"/>
     </AttrArray>
     <AttrArray Name="AttrExpressions"/>
     <AttrArray Name="ListAttrNames">
-      <Item Value="ProductCategory"/>
+      <Item Value="Name"/>
     </AttrArray>
     <AttrArray Name="ListDisplayAttrNames">
-      <Item Value="ProductCategory"/>
+      <Item Value="Name"/>
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
@@ -103,7 +130,15 @@
     PrecisionRule="true"
     EntityAttrName="Categoryid"
     EntityUsage="Products"
-    AliasName="CATEGORYID"/>
+    AliasName="CATEGORYID"
+    LOVName="LOV_Categoryid">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewLinkAccessor
     Name="RevenueitemView"
     ViewLink="sfa.model.viewobjects.RevenueitemProductFkLink"

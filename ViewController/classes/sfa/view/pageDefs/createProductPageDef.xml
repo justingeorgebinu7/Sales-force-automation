@@ -22,6 +22,6 @@
         <Item Value="Price"/>
       </AttrNames>
     </attributeValues>
-    <listOfValues IterBinding="ProductsView1Iterator" StaticList="false" Uses="LOV_Category" id="Category1"/>
+    <listOfValues IterBinding="ProductsView1Iterator" StaticList="false" Uses="LOV_Category" id="Category"/>
   </bindings>
 </pageDefinition>

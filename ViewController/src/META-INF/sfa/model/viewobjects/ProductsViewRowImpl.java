@@ -33,7 +33,9 @@ public class ProductsViewRowImpl extends ViewRowImpl implements ProductsViewRow 
         Categoryid,
         RevenueitemView,
         CategoryView,
-        ProductCategory1;
+        ProductCategory1,
+        CategoryView1,
+        CategoryView2;
         private static AttributesEnum[] vals = null;
         ;
         private static final int firstIndex = 0;
@@ -69,6 +71,8 @@ public class ProductsViewRowImpl extends ViewRowImpl implements ProductsViewRow 
     public static final int REVENUEITEMVIEW = AttributesEnum.RevenueitemView.index();
     public static final int CATEGORYVIEW = AttributesEnum.CategoryView.index();
     public static final int PRODUCTCATEGORY1 = AttributesEnum.ProductCategory1.index();
+    public static final int CATEGORYVIEW1 = AttributesEnum.CategoryView1.index();
+    public static final int CATEGORYVIEW2 = AttributesEnum.CategoryView2.index();
 
     /**
      * This is the default constructor (do not remove).
@@ -222,6 +226,20 @@ public class ProductsViewRowImpl extends ViewRowImpl implements ProductsViewRow 
      */
     public RowSet getProductCategory1() {
         return (RowSet) getAttributeInternal(PRODUCTCATEGORY1);
+    }
+
+    /**
+     * Gets the view accessor <code>RowSet</code> CategoryView1.
+     */
+    public RowSet getCategoryView1() {
+        return (RowSet) getAttributeInternal(CATEGORYVIEW1);
+    }
+
+    /**
+     * Gets the view accessor <code>RowSet</code> CategoryView2.
+     */
+    public RowSet getCategoryView2() {
+        return (RowSet) getAttributeInternal(CATEGORYVIEW2);
     }
 }
 

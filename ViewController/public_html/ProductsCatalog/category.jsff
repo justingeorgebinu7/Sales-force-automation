@@ -10,17 +10,25 @@
             columnStretching="last">
     <af:column sortProperty="#{bindings.CategoryView1.hints.Name.name}" filterable="true" sortable="true"
                headerText="#{bindings.CategoryView1.hints.Name.label}" id="c1">
-      <af:outputText value="#{row.Name}" shortDesc="#{bindings.CategoryView1.hints.Name.tooltip}" id="ot1"/>
+      <af:link shortDesc="#{bindings.CategoryView1.hints.Name.tooltip}" id="ot1" text="#{row.Name}">
+        <af:showPopupBehavior popupId="p2"/>
+      </af:link>
+      <af:popup childCreation="deferred" autoCancel="disabled" id="p2">
+        <af:dialog id="d2" type="none" title="Edit Category">
+          <af:region value="#{bindings.editCategory1.regionModel}" id="r2"/>
+          <f:facet name="buttonBar"/>
+        </af:dialog>
+      </af:popup>
     </af:column>
   </af:table>
   <af:button text="Add" id="b1">
     <af:showPopupBehavior popupId="p1"/>
   </af:button>
-  <af:button text="Delete" action="deleteCategory1" id="b2"/>
   <af:popup childCreation="deferred" autoCancel="disabled" id="p1">
     <af:dialog id="d1" type="none" title="Choose Category">
       <af:region value="#{bindings.createCategory1.regionModel}" id="r1"/>
       <f:facet name="buttonBar"/>
     </af:dialog>
   </af:popup>
+  <af:button text="Delete" action="deleteCategory1" id="b2"/>
 </ui:composition>
