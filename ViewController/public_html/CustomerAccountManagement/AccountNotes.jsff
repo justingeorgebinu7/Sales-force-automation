@@ -22,7 +22,7 @@
     </af:column>
     <af:column headerText="#{bindings.NoteView2.hints.Datetime.label}" id="c3">
       <af:outputText value="#{row.Datetime}" shortDesc="#{bindings.NoteView2.hints.Datetime.tooltip}" id="ot3">
-        <af:convertDateTime pattern="#{bindings.NoteView2.hints.Datetime.format}"/>
+        <af:convertDateTime pattern="#{bindings.NoteView2.hints.Datetime.format}" timeZone="UTC +5:30"/>
       </af:outputText>
     </af:column>
   </af:table>

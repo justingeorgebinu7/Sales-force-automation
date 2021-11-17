@@ -69,7 +69,14 @@
     PrecisionRule="true"
     EntityAttrName="Price"
     EntityUsage="Products"
-    AliasName="PRICE"/>
+    AliasName="PRICE">
+    <Properties>
+      <SchemaBasedProperties>
+        <FMT_FORMATTER
+          ResId="sfa.model.viewobjects.ProductsView.Price_FMT_FORMATTER"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Category"
     PrecisionRule="true"
@@ -96,4 +103,8 @@
     ViewLink="sfa.model.viewobjects.RevenueitemProductFkLink"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="sfa.model.ModelBundle"/>
+  </ResourceBundle>
 </ViewObject>

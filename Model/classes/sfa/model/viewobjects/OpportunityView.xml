@@ -223,6 +223,8 @@
           ResId="sfa.model.viewobjects.OpportunityView.Bestcaserevenue_LABEL"/>
         <DISPLAYWIDTH
           Value="10"/>
+        <FMT_FORMATTER
+          ResId="sfa.model.viewobjects.OpportunityView.Bestcaserevenue_FMT_FORMATTER"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
@@ -238,6 +240,8 @@
           ResId="sfa.model.viewobjects.OpportunityView.Worstcaserevenue_LABEL"/>
         <DISPLAYWIDTH
           Value="10"/>
+        <FMT_FORMATTER
+          ResId="sfa.model.viewobjects.OpportunityView.Worstcaserevenue_FMT_FORMATTER"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
@@ -253,6 +257,8 @@
           ResId="sfa.model.viewobjects.OpportunityView.Budgetavailable_LABEL"/>
         <DISPLAYWIDTH
           Value="10"/>
+        <FMT_FORMATTER
+          ResId="sfa.model.viewobjects.OpportunityView.Budgetavailable_FMT_FORMATTER"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
@@ -284,6 +290,8 @@
           ResId="sfa.model.viewobjects.OpportunityView.Totalrevenue_LABEL"/>
         <DISPLAYWIDTH
           Value="10"/>
+        <FMT_FORMATTER
+          ResId="sfa.model.viewobjects.OpportunityView.Totalrevenue_FMT_FORMATTER"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
