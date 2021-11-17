@@ -15,7 +15,7 @@
       <property
          name="description">&lt;html>&lt;p>&lt;b>userRolePage&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">286.89648</property>
+         name="y">286.1953</property>
       <property
          name="page">/UserManagementPages/userRolePage.jsff</property>
       <property
@@ -46,7 +46,7 @@
       <property
          name="fromOutcome">create</property>
       <property
-         name="sdm:polyPoints">R50,336.7748,286.5459,450.90878,163.79883,L50</property>
+         name="sdm:polyPoints">R50,335.0,285.84473,452.6836,163.79883,L50</property>
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall5">
@@ -77,6 +77,6 @@
       <property
          name="fromsrcid">__3</property>
       <property
-         name="sdm:polyPoints">L50,253.0,286.5459,44.692383,114.09766,B50</property>
+         name="sdm:polyPoints">L50,253.0,285.84473,44.692383,112.69531,B50</property>
    </ControlFlowCase>
 </SDM>

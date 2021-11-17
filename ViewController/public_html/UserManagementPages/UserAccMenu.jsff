@@ -42,7 +42,8 @@
         </af:inputDate>
         <af:selectOneChoice value="#{bindings.Supervisor.inputValue}" label="#{bindings.Supervisor.label}"
                             required="#{bindings.Supervisor.hints.mandatory}"
-                            shortDesc="#{bindings.Supervisor.hints.tooltip}" id="soc1">
+                            shortDesc="#{bindings.Supervisor.hints.tooltip}" id="soc1" autoSubmit="true"
+                            immediate="true">
           <f:selectItems value="#{bindings.Supervisor.items}" id="si1"/>
           <f:validator binding="#{bindings.Supervisor.validator}"/>
         </af:selectOneChoice>

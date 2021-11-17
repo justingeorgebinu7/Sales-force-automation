@@ -78,14 +78,36 @@
     SQLType="DATE"
     Type="java.sql.Timestamp"
     ColumnType="DATE"
-    TableName="USERACCOUNT"/>
+    TableName="USERACCOUNT">
+    <Properties>
+      <SchemaBasedProperties>
+        <FMT_FORMATTER
+          ResId="sfa.model.entities.Useraccount.Startdate_FMT_FORMATTER"/>
+        <FMT_FORMAT
+          ResId="sfa.model.entities.Useraccount.Startdate_FMT_FORMAT"/>
+        <TimeZoneID
+          Value="Asia/Colombo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <Attribute
     Name="Enddate"
     ColumnName="ENDDATE"
     SQLType="DATE"
     Type="java.sql.Timestamp"
     ColumnType="DATE"
-    TableName="USERACCOUNT"/>
+    TableName="USERACCOUNT">
+    <Properties>
+      <SchemaBasedProperties>
+        <FMT_FORMATTER
+          ResId="sfa.model.entities.Useraccount.Enddate_FMT_FORMATTER"/>
+        <TimeZoneID
+          Value="Asia/Colombo"/>
+        <FMT_FORMAT
+          ResId="sfa.model.entities.Useraccount.Enddate_FMT_FORMAT"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <Attribute
     Name="Corporatecustomerreferenceid1"
     ColumnName="CORPORATECUSTOMERREFERENCEID1"
@@ -102,12 +124,12 @@
     TableName="USERACCOUNT">
     <validation:CompareValidationBean
       Name="SupervisorRule0"
+      ResId="sfa.model.entities.Useraccount.Supervisor_Rule_0"
       OnAttribute="Supervisor"
       OperandType="JBO"
       Inverse="true"
       CompareType="EQUALTO"
-      CompareValue="sfa.model.viewobjects.UseraccountView.Useraccountid"
-      ResId="sfa.model.entities.Useraccount.Supervisor_Rule_0"/>
+      CompareValue="sfa.model.viewobjects.UseraccountView.Useraccountid"/>
   </Attribute>
   <AccessorAttribute
     Name="Customeraccount"
