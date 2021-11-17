@@ -17,6 +17,12 @@
     <view id="editCategory">
       <page>/ProductsCatalog/editCategory.jsff</page>
     </view>
+    <task-flow-call id="deleteCategory1">
+      <task-flow-reference>
+        <document>/WEB-INF/Productcatalog/deleteCategory.xml</document>
+        <id>deleteCategory</id>
+      </task-flow-reference>
+    </task-flow-call>
     <control-flow-rule id="__1">
       <from-activity-id>category</from-activity-id>
       <control-flow-case id="__2">
@@ -33,6 +39,13 @@
       <control-flow-case id="__5">
         <from-outcome>backFromEdit</from-outcome>
         <to-activity-id>category</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__6">
+      <from-activity-id>category</from-activity-id>
+      <control-flow-case id="__7">
+        <from-outcome>deleteCategory1</from-outcome>
+        <to-activity-id>deleteCategory1</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <use-page-fragments/>

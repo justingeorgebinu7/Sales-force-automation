@@ -3,9 +3,9 @@
                 id="createCategory_createCategory_CreateInsertPageDef" Package="Productcatalog" SkipValidation="true">
   <parameters/>
   <executables>
-    <iterator Binds="CategoryView3" RangeSize="25" DataControl="AppModuleDataControl" id="CategoryView3Iterator"/>
+    <iterator Binds="CategoryView1" RangeSize="25" DataControl="AppModuleDataControl" id="CategoryView1Iterator"/>
   </executables>
   <bindings>
-    <action IterBinding="CategoryView3Iterator" id="CreateInsert" RequiresUpdateModel="true" Action="createInsertRow"/>
+    <action IterBinding="CategoryView1Iterator" id="CreateInsert" RequiresUpdateModel="true" Action="createInsertRow"/>
   </bindings>
 </pageDefinition>

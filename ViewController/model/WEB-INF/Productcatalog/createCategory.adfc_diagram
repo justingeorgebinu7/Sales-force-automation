@@ -22,21 +22,6 @@
          name="exceptionHandler">false</property>
    </View>
    <MethodCall
-      id="MethodCall3">
-      <property
-         name="activityId">CreateInsert</property>
-      <property
-         name="x">162.01465</property>
-      <property
-         name="start">true</property>
-      <property
-         name="description">&lt;html>&lt;p>&lt;b>CreateInsert&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
-      <property
-         name="y">226.39648</property>
-      <property
-         name="exceptionHandler">false</property>
-   </MethodCall>
-   <MethodCall
       id="MethodCall4">
       <property
          name="activityId">Commit</property>
@@ -49,31 +34,6 @@
       <property
          name="exceptionHandler">false</property>
    </MethodCall>
-   <TaskFlowReturn
-      id="TaskFlowReturn5">
-      <property
-         name="activityId">taskFlowReturn1</property>
-      <property
-         name="x">796.0</property>
-      <property
-         name="description">&lt;html>&lt;p>&lt;b>taskFlowReturn1&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Return&lt;/p>&lt;p>Outcome:  taskFlowReturn1&lt;/p></property>
-      <property
-         name="y">236.24707</property>
-      <property
-         name="finish">true</property>
-      <property
-         name="exceptionHandler">false</property>
-   </TaskFlowReturn>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase6"
-      from="MethodCall3"
-      to="View2">
-      <property
-         name="fromOutcome">CreateInsert</property>
-      <property
-         name="sdm:polyPoints">R50,203.01465,226.0459,321.0,221.68945,L50</property>
-   </ControlFlowCase>
    <ControlFlowCase
       islink="true"
       id="ControlFlowCase7"
@@ -84,14 +44,29 @@
       <property
          name="sdm:polyPoints">R50,403.0,221.68945,550.5,231.09766,L50</property>
    </ControlFlowCase>
+   <MethodCall
+      id="MethodCall8">
+      <property
+         name="activityId">CreateInsert</property>
+      <property
+         name="x">141.01465</property>
+      <property
+         name="start">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>CreateInsert&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
+      <property
+         name="y">298.1494</property>
+      <property
+         name="exceptionHandler">false</property>
+   </MethodCall>
    <ControlFlowCase
       islink="true"
-      id="ControlFlowCase8"
-      from="MethodCall4"
-      to="TaskFlowReturn5">
+      id="ControlFlowCase9"
+      from="MethodCall8"
+      to="View2">
       <property
-         name="fromOutcome">Commit</property>
+         name="fromOutcome">CreateInsert</property>
       <property
-         name="sdm:polyPoints">R50,632.5,231.09766,755.0,235.89648,L50</property>
+         name="sdm:polyPoints">R50,182.01465,297.79883,321.0,221.68945,L50</property>
    </ControlFlowCase>
 </SDM>

@@ -85,4 +85,35 @@
       <property
          name="sdm:polyPoints">L19,R69</property>
    </ControlFlowCase>
+   <TaskFlowCall
+      id="TaskFlowCall8">
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>deleteCategory1&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
+      <property
+         name="activityId">deleteCategory1</property>
+      <property
+         name="x">69.03027</property>
+      <property
+         name="y">70.0459</property>
+      <property
+         name="documentReference">/WEB-INF/Productcatalog/deleteCategory.xml</property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="taskFlowId">deleteCategory</property>
+   </TaskFlowCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase9"
+      from="View2"
+      to="TaskFlowCall8">
+      <property
+         name="tosrcid">__7</property>
+      <property
+         name="fromOutcome">deleteCategory1</property>
+      <property
+         name="fromsrcid">__6</property>
+      <property
+         name="sdm:polyPoints">L50,209.0,203.0918,69.03027,124.0459,B50</property>
+   </ControlFlowCase>
 </SDM>

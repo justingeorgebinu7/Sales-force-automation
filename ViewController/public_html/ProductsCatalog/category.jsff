@@ -1,16 +1,26 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
-  <af:table value="#{bindings.CategoryView3.collectionModel}" var="row" rows="#{bindings.CategoryView3.rangeSize}"
-            emptyText="#{bindings.CategoryView3.viewable ? 'No data to display.' : 'Access Denied.'}"
-            rowBandingInterval="0" selectedRowKeys="#{bindings.CategoryView3.collectionModel.selectedRow}"
-            selectionListener="#{bindings.CategoryView3.collectionModel.makeCurrent}" rowSelection="single"
-            fetchSize="#{bindings.CategoryView3.rangeSize}" filterModel="#{bindings.CategoryView3Query.queryDescriptor}"
-            filterVisible="true" queryListener="#{bindings.CategoryView3Query.processQuery}" varStatus="vs" id="t1"
-            partialTriggers="::b2">
-    <af:column sortProperty="#{bindings.CategoryView3.hints.Name.name}" filterable="true" sortable="true"
-               headerText="#{bindings.CategoryView3.hints.Name.label}" id="c1">
-      <af:outputText value="#{row.Name}" shortDesc="#{bindings.CategoryView3.hints.Name.tooltip}" id="ot1"/>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:f="http://java.sun.com/jsf/core">
+  <af:table value="#{bindings.CategoryView1.collectionModel}" var="row" rows="#{bindings.CategoryView1.rangeSize}"
+            emptyText="#{bindings.CategoryView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+            rowBandingInterval="0" selectedRowKeys="#{bindings.CategoryView1.collectionModel.selectedRow}"
+            selectionListener="#{bindings.CategoryView1.collectionModel.makeCurrent}" rowSelection="single"
+            fetchSize="#{bindings.CategoryView1.rangeSize}" filterModel="#{bindings.CategoryView1Query.queryDescriptor}"
+            filterVisible="true" queryListener="#{bindings.CategoryView1Query.processQuery}" varStatus="vs" id="t1"
+            columnStretching="last">
+    <af:column sortProperty="#{bindings.CategoryView1.hints.Name.name}" filterable="true" sortable="true"
+               headerText="#{bindings.CategoryView1.hints.Name.label}" id="c1">
+      <af:outputText value="#{row.Name}" shortDesc="#{bindings.CategoryView1.hints.Name.tooltip}" id="ot1"/>
     </af:column>
   </af:table>
-  <af:button text="Add" id="b1" action="addCategory"/>
+  <af:button text="Add" id="b1">
+    <af:showPopupBehavior popupId="p1"/>
+  </af:button>
+  <af:button text="Delete" action="deleteCategory1" id="b2"/>
+  <af:popup childCreation="deferred" autoCancel="disabled" id="p1">
+    <af:dialog id="d1" type="none" title="Choose Category">
+      <af:region value="#{bindings.createCategory1.regionModel}" id="r1"/>
+      <f:facet name="buttonBar"/>
+    </af:dialog>
+  </af:popup>
 </ui:composition>

@@ -471,12 +471,16 @@
     <page path="/ContactManagementPages/AppointmentNew/CreateExternalInvitee.jsff"
           usageId="sfa_view_CreateExternalInviteePageDef"/>
     <page path="/ProductsCatalog/category.jsff" usageId="sfa_view_categoryPageDef"/>
-    <page path="/WEB-INF/Productcatalog/createCategory.xml#createCategory@CreateInsert"
-          usageId="sfa_view_createCategory_createCategory_CreateInsertPageDef"/>
     <page path="/WEB-INF/Productcatalog/createCategory.xml#createCategory@Commit"
           usageId="sfa_view_createCategory_createCategory_CommitPageDef"/>
     <page path="/ProductsCatalog/addCategory.jsff" usageId="sfa_view_addCategoryPageDef"/>
     <page path="/ProductsCatalog/editCategory.jsff" usageId="sfa_view_editCategoryPageDef"/>
+    <page path="/WEB-INF/Productcatalog/deleteCategory.xml#deleteCategory@Delete"
+          usageId="sfa_view_deleteCategory_deleteCategory_DeletePageDef"/>
+    <page path="/WEB-INF/Productcatalog/deleteCategory.xml#deleteCategory@Commit"
+          usageId="sfa_view_deleteCategory_deleteCategory_CommitPageDef"/>
+    <page path="/WEB-INF/Productcatalog/createCategory.xml#createCategory@CreateInsert"
+          usageId="sfa_view_createCategory_createCategory_CreateInsertPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="sfa_view_untitled2PageDef" path="sfa.view.pageDefs.untitled2PageDef"/>
@@ -940,12 +944,16 @@
     <page id="sfa_view_CreateExternalInviteePageDef"
           path="ContactManagementPages.AppointmentNew.CreateExternalInviteePageDef"/>
     <page id="sfa_view_categoryPageDef" path="ProductsCatalog.categoryPageDef"/>
-    <page id="sfa_view_createCategory_createCategory_CreateInsertPageDef"
-          path="Productcatalog.createCategory_createCategory_CreateInsertPageDef"/>
     <page id="sfa_view_createCategory_createCategory_CommitPageDef"
           path="Productcatalog.createCategory_createCategory_CommitPageDef"/>
     <page id="sfa_view_addCategoryPageDef" path="ProductsCatalog.addCategoryPageDef"/>
     <page id="sfa_view_editCategoryPageDef" path="ProductsCatalog.editCategoryPageDef"/>
+    <page id="sfa_view_deleteCategory_deleteCategory_DeletePageDef"
+          path="Productcatalog.deleteCategory_deleteCategory_DeletePageDef"/>
+    <page id="sfa_view_deleteCategory_deleteCategory_CommitPageDef"
+          path="Productcatalog.deleteCategory_deleteCategory_CommitPageDef"/>
+    <page id="sfa_view_createCategory_createCategory_CreateInsertPageDef"
+          path="Productcatalog.createCategory_createCategory_CreateInsertPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="sfa.model.entities"

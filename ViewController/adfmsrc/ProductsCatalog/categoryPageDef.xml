@@ -4,13 +4,15 @@
   <parameters/>
   <executables>
     <variableIterator id="variables"/>
-    <iterator Binds="CategoryView3" RangeSize="25" DataControl="AppModuleDataControl" id="CategoryView3Iterator"/>
-    <searchRegion Binds="CategoryView3Iterator" Criteria=""
-                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="CategoryView3Query"/>
+    <taskFlow id="createCategory1" taskFlowId="/WEB-INF/Productcatalog/createCategory.xml#createCategory"
+              activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <iterator Binds="CategoryView1" RangeSize="25" DataControl="AppModuleDataControl" id="CategoryView1Iterator"/>
+    <searchRegion Binds="CategoryView1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="CategoryView1Query"/>
   </executables>
   <bindings>
-    <tree IterBinding="CategoryView3Iterator" id="CategoryView3">
-      <nodeDefinition DefName="sfa.model.entities.CategoryView" Name="CategoryView30">
+    <tree IterBinding="CategoryView1Iterator" id="CategoryView1">
+      <nodeDefinition DefName="sfa.model.entities.CategoryView" Name="CategoryView10">
         <AttrNames>
           <Item Value="Name"/>
         </AttrNames>
