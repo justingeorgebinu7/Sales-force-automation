@@ -98,6 +98,12 @@
     EntityAttrName="Revenueitem"
     EntityUsage="Products"
     AliasName="REVENUEITEM"/>
+  <ViewAttribute
+    Name="Categoryid"
+    PrecisionRule="true"
+    EntityAttrName="Categoryid"
+    EntityUsage="Products"
+    AliasName="CATEGORYID"/>
   <ViewLinkAccessor
     Name="RevenueitemView"
     ViewLink="sfa.model.viewobjects.RevenueitemProductFkLink"

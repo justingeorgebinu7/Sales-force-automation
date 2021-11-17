@@ -29,6 +29,7 @@ public class ProductsViewRowImpl extends ViewRowImpl implements ProductsViewRow 
         Price,
         Category,
         Revenueitem,
+        Categoryid,
         RevenueitemView,
         ProductCategory1;
         private static AttributesEnum[] vals = null;
@@ -62,6 +63,7 @@ public class ProductsViewRowImpl extends ViewRowImpl implements ProductsViewRow 
     public static final int PRICE = AttributesEnum.Price.index();
     public static final int CATEGORY = AttributesEnum.Category.index();
     public static final int REVENUEITEM = AttributesEnum.Revenueitem.index();
+    public static final int CATEGORYID = AttributesEnum.Categoryid.index();
     public static final int REVENUEITEMVIEW = AttributesEnum.RevenueitemView.index();
     public static final int PRODUCTCATEGORY1 = AttributesEnum.ProductCategory1.index();
 
@@ -173,6 +175,22 @@ public class ProductsViewRowImpl extends ViewRowImpl implements ProductsViewRow 
      */
     public void setRevenueitem(BigDecimal value) {
         setAttributeInternal(REVENUEITEM, value);
+    }
+
+    /**
+     * Gets the attribute value for CATEGORYID using the alias name Categoryid.
+     * @return the CATEGORYID
+     */
+    public BigDecimal getCategoryid() {
+        return (BigDecimal) getAttributeInternal(CATEGORYID);
+    }
+
+    /**
+     * Sets <code>value</code> as attribute value for CATEGORYID using the alias name Categoryid.
+     * @param value value to set the CATEGORYID
+     */
+    public void setCategoryid(BigDecimal value) {
+        setAttributeInternal(CATEGORYID, value);
     }
 
     /**

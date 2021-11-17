@@ -648,6 +648,14 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
         return (ViewLinkImpl) findViewLink("InviteesExt_AppoinmentFK_Link4");
     }
 
+    /**
+     * Container's getter for CategoryView1.
+     * @return CategoryView1
+     */
+    public ViewObjectImpl getCategoryView1() {
+        return (ViewObjectImpl) findViewObject("CategoryView1");
+    }
+
     class AppmoduleImpl {
         
     }
