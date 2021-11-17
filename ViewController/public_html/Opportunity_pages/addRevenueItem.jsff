@@ -8,7 +8,7 @@
       <f:selectItems value="#{bindings.Productid.items}" id="si1"/>
       <f:validator binding="#{bindings.Productid.validator}"/>
     </af:selectOneChoice>
-    <af:selectOneChoice value="#{bindings.Currency.inputValue}" label="#{bindings.Currency.label}"
+    <af:selectOneChoice value="#{bindings.Currency.inputValue}" label="Converter"
                         required="#{bindings.Currency.hints.mandatory}" shortDesc="#{bindings.Currency.hints.tooltip}"
                         id="soc2" valueChangeListener="#{currencyBean.covert}" autoSubmit="true">
       <f:selectItems value="#{bindings.Currency.items}" id="si2"/>

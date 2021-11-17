@@ -106,14 +106,7 @@
     PrecisionRule="true"
     EntityAttrName="Estimatedprice"
     EntityUsage="Revenueitem"
-    AliasName="ESTIMATEDPRICE">
-    <Properties>
-      <SchemaBasedProperties>
-        <FMT_FORMATTER
-          ResId="sfa.model.viewobjects.RevenueitemView.Estimatedprice_FMT_FORMATTER"/>
-      </SchemaBasedProperties>
-    </Properties>
-  </ViewAttribute>
+    AliasName="ESTIMATEDPRICE"/>
   <ViewAttribute
     Name="Revenue"
     PrecisionRule="true"
@@ -124,8 +117,6 @@
       <SchemaBasedProperties>
         <DISPLAYWIDTH
           Value="10"/>
-        <FMT_FORMATTER
-          ResId="sfa.model.viewobjects.RevenueitemView.Revenue_FMT_FORMATTER"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
@@ -139,8 +130,6 @@
       <SchemaBasedProperties>
         <DISPLAYWIDTH
           Value="10"/>
-        <FMT_FORMATTER
-          ResId="sfa.model.viewobjects.RevenueitemView.Bestcaserevenue_FMT_FORMATTER"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
@@ -154,8 +143,6 @@
       <SchemaBasedProperties>
         <DISPLAYWIDTH
           Value="10"/>
-        <FMT_FORMATTER
-          ResId="sfa.model.viewobjects.RevenueitemView.Worstcaserevenue_FMT_FORMATTER"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
