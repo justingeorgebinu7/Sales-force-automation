@@ -1,57 +1,91 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:f="http://java.sun.com/jsf/core"
                 xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
-  <af:panelFormLayout id="pfl1">
-    <af:selectOneChoice value="#{bindings.Productid.inputValue}" label="#{bindings.Productid.label}"
-                        required="#{bindings.Productid.hints.mandatory}" shortDesc="#{bindings.Productid.hints.tooltip}"
-                        id="soc1" valueChangeListener="#{RevenueItemedit.productSelect}" autoSubmit="true">
-      <f:selectItems value="#{bindings.Productid.items}" id="si1"/>
-      <f:validator binding="#{bindings.Productid.validator}"/>
-    </af:selectOneChoice>
-    <af:selectOneChoice value="#{bindings.Currency.inputValue}" label="Converter"
-                        required="#{bindings.Currency.hints.mandatory}" shortDesc="#{bindings.Currency.hints.tooltip}"
-                        id="soc2" valueChangeListener="#{currencyBean.covert}" autoSubmit="true">
-      <f:selectItems value="#{bindings.Currency.items}" id="si2"/>
-      <f:validator binding="#{bindings.Currency.validator}"/>
-    </af:selectOneChoice>
-    <af:inputText value="#{bindings.Quantity.inputValue}" label="#{bindings.Quantity.hints.label}"
-                  required="#{bindings.Quantity.hints.mandatory}" columns="#{bindings.Quantity.hints.displayWidth}"
-                  maximumLength="#{bindings.Quantity.hints.precision}" shortDesc="#{bindings.Quantity.hints.tooltip}"
-                  id="it1" autoSubmit="true" valueChangeListener="#{RevenueItemedit.quantity}">
-      <f:validator binding="#{bindings.Quantity.validator}"/>
-      <af:convertNumber groupingUsed="false" pattern="#{bindings.Quantity.format}"/>
-    </af:inputText>
-    <af:inputText value="#{bindings.Estimatedprice.inputValue}" label="#{bindings.Estimatedprice.hints.label}"
-                  required="#{bindings.Estimatedprice.hints.mandatory}"
-                  columns="#{bindings.Estimatedprice.hints.displayWidth}"
-                  maximumLength="#{bindings.Estimatedprice.hints.precision}"
-                  shortDesc="#{bindings.Estimatedprice.hints.tooltip}" id="it2">
-      <f:validator binding="#{bindings.Estimatedprice.validator}"/>
-      <af:convertNumber groupingUsed="false" pattern="#{bindings.Estimatedprice.format}"/>
-    </af:inputText>
-    <af:inputText value="#{bindings.Revenue.inputValue}" label="#{bindings.Revenue.hints.label}"
-                  required="#{bindings.Revenue.hints.mandatory}" columns="#{bindings.Revenue.hints.displayWidth}"
-                  maximumLength="#{bindings.Revenue.hints.precision}" shortDesc="#{bindings.Revenue.hints.tooltip}"
-                  id="it3">
-      <f:validator binding="#{bindings.Revenue.validator}"/>
-      <af:convertNumber groupingUsed="false" pattern="#{bindings.Revenue.format}"/>
-    </af:inputText>
-    <af:inputText value="#{bindings.Bestcaserevenue.inputValue}" label="#{bindings.Bestcaserevenue.hints.label}"
-                  required="#{bindings.Bestcaserevenue.hints.mandatory}"
-                  columns="#{bindings.Bestcaserevenue.hints.displayWidth}"
-                  maximumLength="#{bindings.Bestcaserevenue.hints.precision}"
-                  shortDesc="#{bindings.Bestcaserevenue.hints.tooltip}" id="it4">
-      <f:validator binding="#{bindings.Bestcaserevenue.validator}"/>
-      <af:convertNumber groupingUsed="false" pattern="#{bindings.Bestcaserevenue.format}"/>
-    </af:inputText>
-    <af:inputText value="#{bindings.Worstcaserevenue.inputValue}" label="#{bindings.Worstcaserevenue.hints.label}"
-                  required="#{bindings.Worstcaserevenue.hints.mandatory}"
-                  columns="#{bindings.Worstcaserevenue.hints.displayWidth}"
-                  maximumLength="#{bindings.Worstcaserevenue.hints.precision}"
-                  shortDesc="#{bindings.Worstcaserevenue.hints.tooltip}" id="it5">
-      <f:validator binding="#{bindings.Worstcaserevenue.validator}"/>
-      <af:convertNumber groupingUsed="false" pattern="#{bindings.Worstcaserevenue.format}"/>
-    </af:inputText>
+  <af:panelFormLayout id="pfl1" rows="1">
+    <af:panelGridLayout id="pgl1">
+      <af:gridRow marginTop="5px" height="auto" id="gr1">
+        <af:gridCell marginStart="5px" rowSpan="2" width="auto" id="gc1">
+          <af:selectOneRadio value="#{bindings.Currency.inputValue}" label="#{bindings.Currency.label}"
+                             required="#{bindings.Currency.hints.mandatory}"
+                             shortDesc="#{bindings.Currency.hints.tooltip}" id="sor1" autoSubmit="true"
+                             valueChangeListener="#{currencyBean.covert}">
+            <f:selectItems value="#{bindings.Currency.items}" id="si2"/>
+            <f:validator binding="#{bindings.Currency.validator}"/>
+          </af:selectOneRadio>
+        </af:gridCell>
+        <af:gridCell marginStart="10px" width="auto" id="gc2">
+          <af:outputText value="#{bindings.Estimatedprice.hints.label}" id="ot1"/>
+          <af:inputText value="#{bindings.Estimatedprice.inputValue}"
+                        required="#{bindings.Estimatedprice.hints.mandatory}"
+                        columns="#{bindings.Estimatedprice.hints.displayWidth}"
+                        maximumLength="#{bindings.Estimatedprice.hints.precision}"
+                        shortDesc="#{bindings.Estimatedprice.hints.tooltip}" id="it2">
+            <f:validator binding="#{bindings.Estimatedprice.validator}"/>
+            <af:convertNumber groupingUsed="false" pattern="#{bindings.Estimatedprice.format}"/>
+          </af:inputText>
+        </af:gridCell>
+        <af:gridCell marginStart="10px" width="auto" marginEnd="5px" id="gc3">
+          <af:outputText value="#{bindings.Revenue.hints.label}" id="ot2"/>
+          <af:inputText value="#{bindings.Revenue.inputValue}" required="#{bindings.Revenue.hints.mandatory}"
+                        columns="#{bindings.Estimatedprice.hints.displayWidth}"
+                        maximumLength="#{bindings.Revenue.hints.precision}"
+                        shortDesc="#{bindings.Revenue.hints.tooltip}" id="it3">
+            <f:validator binding="#{bindings.Revenue.validator}"/>
+            <af:convertNumber groupingUsed="false" pattern="#{bindings.Revenue.format}"/>
+          </af:inputText>
+        </af:gridCell>
+      </af:gridRow>
+      <af:gridRow marginTop="10px" height="auto" marginBottom="5px" id="gr2">
+        <af:gridCell marginStart="10px" width="auto" id="gc4">
+          <af:outputText value="#{bindings.Bestcaserevenue.hints.label}" id="ot3"/>
+          <af:inputText value="#{bindings.Bestcaserevenue.inputValue}"
+                        required="#{bindings.Bestcaserevenue.hints.mandatory}"
+                        columns="#{bindings.Estimatedprice.hints.displayWidth}"
+                        maximumLength="#{bindings.Bestcaserevenue.hints.precision}"
+                        shortDesc="#{bindings.Bestcaserevenue.hints.tooltip}" id="it4">
+            <f:validator binding="#{bindings.Bestcaserevenue.validator}"/>
+            <af:convertNumber groupingUsed="false" pattern="#{bindings.Bestcaserevenue.format}"/>
+          </af:inputText>
+        </af:gridCell>
+        <af:gridCell marginStart="10px" width="auto" marginEnd="5px" id="gc5">
+          <af:outputText value="#{bindings.Worstcaserevenue.hints.label}" id="ot4"/>
+          <af:inputText value="#{bindings.Worstcaserevenue.inputValue}"
+                        required="#{bindings.Worstcaserevenue.hints.mandatory}"
+                        columns="#{bindings.Estimatedprice.hints.displayWidth}"
+                        maximumLength="#{bindings.Worstcaserevenue.hints.precision}"
+                        shortDesc="#{bindings.Worstcaserevenue.hints.tooltip}" id="it5">
+            <f:validator binding="#{bindings.Worstcaserevenue.validator}"/>
+            <af:convertNumber groupingUsed="false" pattern="#{bindings.Worstcaserevenue.format}"/>
+          </af:inputText>
+        </af:gridCell>
+      </af:gridRow>
+    </af:panelGridLayout>
+    <af:panelGridLayout id="pgl2">
+      <af:gridRow marginTop="5px" height="auto" id="gr3">
+        <af:gridCell marginStart="5px" width="auto" marginEnd="5px" id="gc6">
+          <af:selectOneChoice value="#{bindings.Productid.inputValue}" label="#{bindings.Productid.label}"
+                              required="#{bindings.Productid.hints.mandatory}"
+                              shortDesc="#{bindings.Productid.hints.tooltip}" id="soc1"
+                              valueChangeListener="#{RevenueItemedit.productSelect}" autoSubmit="true">
+            <f:selectItems value="#{bindings.Productid.items}" id="si1"/>
+            <f:validator binding="#{bindings.Productid.validator}"/>
+          </af:selectOneChoice>
+        </af:gridCell>
+      </af:gridRow>
+      <af:gridRow marginTop="10px" height="auto" marginBottom="5px" id="gr4">
+        <af:gridCell marginStart="5px" width="auto" marginEnd="5px" id="gc7">
+          <af:inputText value="#{bindings.Quantity.inputValue}" label="#{bindings.Quantity.hints.label}"
+                        required="#{bindings.Quantity.hints.mandatory}"
+                        columns="#{bindings.Quantity.hints.displayWidth}"
+                        maximumLength="#{bindings.Quantity.hints.precision}"
+                        shortDesc="#{bindings.Quantity.hints.tooltip}" id="it1" autoSubmit="true"
+                        valueChangeListener="#{RevenueItemedit.quantity}">
+            <f:validator binding="#{bindings.Quantity.validator}"/>
+            <af:convertNumber groupingUsed="false" pattern="#{bindings.Quantity.format}"/>
+          </af:inputText>
+        </af:gridCell>
+      </af:gridRow>
+    </af:panelGridLayout>
   </af:panelFormLayout>
   <af:button text="Save" id="b1" actionListener="#{bindings.Commit.execute}"
              action="backFromEdit"/>
