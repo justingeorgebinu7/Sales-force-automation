@@ -36,8 +36,7 @@
     PrecisionRule="true"
     EntityAttrName="Datetime"
     EntityUsage="Note"
-    AliasName="DATETIME"
-    IsQueriable="false">
+    AliasName="DATETIME">
     <TransientExpression
       Name="ExpressionScript"
       trustMode="untrusted"

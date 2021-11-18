@@ -175,8 +175,7 @@
     PrecisionRule="true"
     EntityAttrName="Title"
     EntityUsage="Opportunity"
-    AliasName="TITLE"
-    IsQueriable="false"/>
+    AliasName="TITLE"/>
   <ViewAttribute
     Name="Opportunityid"
     IsNotNull="true"

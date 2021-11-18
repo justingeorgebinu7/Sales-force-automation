@@ -10,7 +10,7 @@
             filterModel="#{bindings.CustomeraccountView1Query.queryDescriptor}" filterVisible="true"
             queryListener="#{bindings.CustomeraccountView1Query.processQuery}" varStatus="vs" id="t1">
     <af:column sortProperty="#{bindings.CustomeraccountView1.hints.Name.name}" filterable="true" sortable="true"
-               headerText="#{bindings.CustomeraccountView1.hints.Name.label}" id="c1" width="100">
+               headerText="#{bindings.CustomeraccountView1.hints.Name.label}" id="c1" width="100%">
       <af:link shortDesc="#{bindings.CustomeraccountView1.hints.Name.tooltip}" id="ot1" text="#{row.Name}"
                action="toMenu"/>
     </af:column>

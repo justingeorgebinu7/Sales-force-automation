@@ -8,7 +8,7 @@
             filterVisible="true" queryListener="#{bindings.ProductsView1Query.processQuery}" varStatus="vs" id="t1"
             columnStretching="last">
     <af:column sortProperty="#{bindings.ProductsView1.hints.Name.name}" filterable="true" sortable="true"
-               headerText="#{bindings.ProductsView1.hints.Name.label}" id="c1" width="173">
+               headerText="#{bindings.ProductsView1.hints.Name.label}" id="c1" width="100%">
       <af:link shortDesc="#{bindings.ProductsView1.hints.Name.tooltip}" id="ot1" text="#{row.Name}" action="edit"/>
     </af:column>
     <af:column sortProperty="#{bindings.ProductsView1.hints.Category.name}" filterable="true" sortable="true"
