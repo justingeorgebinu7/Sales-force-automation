@@ -18,6 +18,8 @@
           <Item Value="Salesmethod"/>
           <Item Value="Salesstage"/>
           <Item Value="Primarycontact"/>
+          <Item Value="Name"/>
+          <Item Value="Name1"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

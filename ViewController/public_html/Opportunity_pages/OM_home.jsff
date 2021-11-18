@@ -9,6 +9,15 @@
             filterModel="#{bindings.OpportunityView1Query.queryDescriptor}" filterVisible="true"
             queryListener="#{bindings.OpportunityView1Query.processQuery}" varStatus="vs" id="t1"
             columnStretching="none">
+    <af:column headerText="#{bindings.OpportunityView1.hints.Name.label}" id="c7">
+      <af:outputText value="#{row.Name}" shortDesc="#{bindings.OpportunityView1.hints.Name.tooltip}" id="ot6"/>
+    </af:column>
+    <af:column headerText="#{bindings.OpportunityView1.hints.Name1.label}" id="c8">
+      <af:link shortDesc="#{bindings.OpportunityView1.hints.Name1.tooltip}" id="ot7" text="#{row.Name1}"
+               action="contactDrilldown">
+        <af:setPropertyListener from="#{row.Primarycontact}" to="#{pageFlowScope.currRow}" type="action"/>
+      </af:link>
+    </af:column>
     <af:column headerText="#{bindings.OpportunityView1.hints.Primarycontact.label}" id="c6">
       <af:link shortDesc="#{bindings.OpportunityView1.hints.Primarycontact.tooltip}" id="ot3"
                text="#{row.Primarycontact}" action="contactDrilldown">

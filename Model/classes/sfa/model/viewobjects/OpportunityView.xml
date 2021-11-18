@@ -110,6 +110,44 @@
   <EntityUsage
     Name="Opportunity"
     Entity="sfa.model.entities.Opportunity"/>
+  <EntityUsage
+    Name="Customeraccount"
+    Entity="sfa.model.entities.Customeraccount"
+    Association="sfa.model.entities.OpportunityAccountFkAssoc"
+    AssociationEnd="sfa.model.entities.OpportunityAccountFkAssoc.Customeraccount"
+    SourceUsage="sfa.model.viewobjects.OpportunityView.Opportunity"
+    ReadOnly="true"
+    Reference="true"
+    DeleteParticipant="false"
+    JoinType="LEFT OUTER JOIN">
+    <DesignTime>
+      <AttrArray Name="_dstAttributes">
+        <Item Value="sfa.model.entities.Customeraccount.Customeraccountid"/>
+      </AttrArray>
+      <AttrArray Name="_srcAttributes">
+        <Item Value="sfa.model.entities.Opportunity.Accountid"/>
+      </AttrArray>
+    </DesignTime>
+  </EntityUsage>
+  <EntityUsage
+    Name="Customercontacts"
+    Entity="sfa.model.entities.Customercontacts"
+    Association="sfa.model.entities.OpportunityContactFkAssoc"
+    AssociationEnd="sfa.model.entities.OpportunityContactFkAssoc.Customercontacts"
+    SourceUsage="sfa.model.viewobjects.OpportunityView.Opportunity"
+    ReadOnly="true"
+    Reference="true"
+    DeleteParticipant="false"
+    JoinType="LEFT OUTER JOIN">
+    <DesignTime>
+      <AttrArray Name="_dstAttributes">
+        <Item Value="sfa.model.entities.Customercontacts.Contactid"/>
+      </AttrArray>
+      <AttrArray Name="_srcAttributes">
+        <Item Value="sfa.model.entities.Opportunity.Primarycontact"/>
+      </AttrArray>
+    </DesignTime>
+  </EntityUsage>
   <ViewAttribute
     Name="Title"
     PrecisionRule="true"
@@ -287,6 +325,49 @@
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
+  <ViewAttribute
+    Name="Name"
+    PrecisionRule="true"
+    EntityAttrName="Name"
+    EntityUsage="Customeraccount"
+    AliasName="NAME">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="sfa.model.viewobjects.OpportunityView.Name_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Customeraccountid"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Customeraccountid"
+    EntityUsage="Customeraccount"
+    AliasName="CUSTOMERACCOUNTID"/>
+  <ViewAttribute
+    Name="Name1"
+    PrecisionRule="true"
+    EntityAttrName="Name"
+    EntityUsage="Customercontacts"
+    AliasName="NAME1">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="sfa.model.viewobjects.OpportunityView.Name1_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Contactid"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Contactid"
+    EntityUsage="Customercontacts"
+    AliasName="CONTACTID"/>
+  <AttrArray Name="KeyAttributes">
+    <Item Value="Opportunityid"/>
+  </AttrArray>
   <ViewLinkAccessor
     Name="NoteView"
     ViewLink="sfa.model.viewobjects.NoteOpportunityFkLink"
