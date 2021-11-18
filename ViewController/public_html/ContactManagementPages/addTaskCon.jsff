@@ -7,18 +7,18 @@
                   maximumLength="#{bindings.Name.hints.precision}" shortDesc="#{bindings.Name.hints.tooltip}" id="it1">
       <f:validator binding="#{bindings.Name.validator}"/>
     </af:inputText>
-    <af:inputDate value="#{bindings.Duedate.inputValue}" label="#{bindings.Duedate.hints.label}"
-                  required="#{bindings.Duedate.hints.mandatory}" columns="#{bindings.Duedate.hints.displayWidth}"
-                  shortDesc="#{bindings.Duedate.hints.tooltip}" id="id1">
-      <f:validator binding="#{bindings.Duedate.validator}"/>
-      <af:convertDateTime pattern="#{bindings.Duedate.format}"/>
-    </af:inputDate>
     <af:selectOneChoice value="#{bindings.Priority.inputValue}" label="#{bindings.Priority.label}"
                         required="#{bindings.Priority.hints.mandatory}" shortDesc="#{bindings.Priority.hints.tooltip}"
                         id="soc1">
       <f:selectItems value="#{bindings.Priority.items}" id="si1"/>
       <f:validator binding="#{bindings.Priority.validator}"/>
     </af:selectOneChoice>
+    <af:inputDate value="#{bindings.Duedate.inputValue}" label="#{bindings.Duedate.hints.label}"
+                  required="#{bindings.Duedate.hints.mandatory}" columns="#{bindings.Duedate.hints.displayWidth}"
+                  shortDesc="#{bindings.Duedate.hints.tooltip}" id="id1">
+      <f:validator binding="#{bindings.Duedate.validator}"/>
+      <af:convertDateTime pattern="#{bindings.Duedate.format}"/>
+    </af:inputDate>
     <af:inputText value="#{bindings.Percentageofcompletion.inputValue}"
                   label="#{bindings.Percentageofcompletion.hints.label}"
                   required="#{bindings.Percentageofcompletion.hints.mandatory}"

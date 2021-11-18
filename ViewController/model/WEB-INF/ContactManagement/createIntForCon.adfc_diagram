@@ -30,7 +30,7 @@
       <property
          name="y">273.59766</property>
       <property
-         name="page">/ContactManagementPages/CreateIntForContact.jsff</property>
+         name="page">/ContactManagementPages/AppointmentNew/CreateIntForContact.jsff</property>
       <property
          name="exceptionHandler">false</property>
    </View>

@@ -485,6 +485,8 @@
           usageId="sfa_view_AccountContactDrillDown_AccountContactDrillDown_SetCurrentRowWithKeyValuePageDef"/>
     <page path="/WEB-INF/customerAccountTaskFlows/AcountDrillDown.xml#AcountDrillDown@SetCurrentRowWithKeyValue1"
           usageId="sfa_view_AcountDrillDown_AcountDrillDown_SetCurrentRowWithKeyValue1PageDef"/>
+    <page path="/ContactManagementPages/AppointmentNew/CreateIntForContact.jsff"
+          usageId="sfa_view_CreateIntForContactPageDef1"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="sfa_view_untitled2PageDef" path="sfa.view.pageDefs.untitled2PageDef"/>
@@ -962,6 +964,8 @@
           path="customerAccountTaskFlows.AccountContactDrillDown_AccountContactDrillDown_SetCurrentRowWithKeyValuePageDef"/>
     <page id="sfa_view_AcountDrillDown_AcountDrillDown_SetCurrentRowWithKeyValue1PageDef"
           path="customerAccountTaskFlows.AcountDrillDown_AcountDrillDown_SetCurrentRowWithKeyValue1PageDef"/>
+    <page id="sfa_view_CreateIntForContactPageDef1"
+          path="ContactManagementPages.AppointmentNew.CreateIntForContactPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="sfa.model.entities"

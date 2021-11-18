@@ -35,7 +35,7 @@
       </af:inputText>
       <af:inputText value="#{bindings.Description.inputValue}" label="#{bindings.Description.hints.label}"
                     required="#{bindings.Description.hints.mandatory}"
-                    columns="10"
+                    columns="50"
                     maximumLength="#{bindings.Description.hints.precision}"
                     shortDesc="#{bindings.Description.hints.tooltip}" id="it2" rows="4">
         <f:validator binding="#{bindings.Description.validator}"/>
