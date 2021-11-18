@@ -7,9 +7,9 @@
             selectionListener="#{bindings.TaskView3.collectionModel.makeCurrent}" rowSelection="single"
             fetchSize="#{bindings.TaskView3.rangeSize}" filterModel="#{bindings.TaskView3Query.queryDescriptor}"
             filterVisible="true" queryListener="#{bindings.TaskView3Query.processQuery}" varStatus="vs" id="t1"
-            columnStretching="blank">
+            columnStretching="none">
     <af:column sortProperty="#{bindings.TaskView3.hints.Name.name}" filterable="true" sortable="true"
-               headerText="#{bindings.TaskView3.hints.Name.label}" id="c1" width="136">
+               headerText="#{bindings.TaskView3.hints.Name.label}" id="c1" width="100%">
       <af:link shortDesc="#{bindings.TaskView3.hints.Name.tooltip}" id="ot1" text="#{row.Name}" action="goToEdit"/>
     </af:column>
     <af:column sortProperty="#{bindings.TaskView3.hints.Duedate.name}" filterable="true" sortable="true"

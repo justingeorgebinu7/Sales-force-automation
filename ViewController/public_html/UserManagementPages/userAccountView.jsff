@@ -9,7 +9,7 @@
             filterModel="#{bindings.UseraccountView1Query.queryDescriptor}" filterVisible="true"
             queryListener="#{bindings.UseraccountView1Query.processQuery}" varStatus="vs" id="t1" width="100%">
     <af:column sortProperty="#{bindings.UseraccountView1.hints.Firstname.name}" filterable="true" sortable="true"
-               headerText="#{bindings.UseraccountView1.hints.Firstname.label}" id="c1" width="130">
+               headerText="#{bindings.UseraccountView1.hints.Firstname.label}" id="c1" width="100%">
       <af:link shortDesc="#{bindings.UseraccountView1.hints.Firstname.tooltip}" id="ot1" text="#{row.Firstname}"
                action="userMenu"/>
     </af:column>

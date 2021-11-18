@@ -31,7 +31,8 @@
                       filterModel="#{bindings.CustomercontactsView2Query.queryDescriptor}" filterVisible="true"
                       queryListener="#{bindings.CustomercontactsView2Query.processQuery}" varStatus="vs" id="t1">
               <af:column sortProperty="#{bindings.CustomercontactsView2.hints.Name.name}" filterable="true"
-                         sortable="true" headerText="#{bindings.CustomercontactsView2.hints.Name.label}" id="c1">
+                         sortable="true" headerText="#{bindings.CustomercontactsView2.hints.Name.label}" id="c1"
+                         width="100%">
                 <af:link shortDesc="#{bindings.CustomercontactsView2.hints.Name.tooltip}" id="ot1" text="#{row.Name}"
                          action="ContactDrill">
                   <af:setPropertyListener from="#{row.Contactid}" to="#{pageFlowScope.currRow}" type="action"/>
@@ -67,8 +68,16 @@
                                shortDesc="#{bindings.CustomercontactsView2.hints.Isprimarycontact.tooltip}" id="ot6"/>
               </af:column>
             </af:table>
-            <af:button text="Add" id="b1" action="createContactDrill"/>
-            <af:button text="Delete" action="deleteContactTF1" id="b2"/>
+            <af:panelGridLayout id="pgl1">
+              <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr1">
+                <af:gridCell marginStart="5px" width="dontCare" id="gc1">
+                  <af:button text="Add" id="b1" action="createContactDrill"/>
+                </af:gridCell>
+                <af:gridCell marginStart="5px" width="dontCare" marginEnd="5px" id="gc2">
+                  <af:button text="Delete" action="deleteContactTF1" id="b2"/>
+                </af:gridCell>
+              </af:gridRow>
+            </af:panelGridLayout>
           </af:showDetailItem>
           <af:showDetailItem id="sdi4" text="Task">
             <af:region value="#{bindings.taskCustomerAccount1.regionModel}" id="r2"/>

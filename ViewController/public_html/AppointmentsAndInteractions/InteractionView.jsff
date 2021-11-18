@@ -9,7 +9,7 @@
             filterModel="#{bindings.InteractionView5Query.queryDescriptor}" filterVisible="true"
             queryListener="#{bindings.InteractionView5Query.processQuery}" varStatus="vs" id="t1">
     <af:column sortProperty="#{bindings.InteractionView5.hints.Type.name}" filterable="true" sortable="true"
-               headerText="#{bindings.InteractionView5.hints.Type.label}" id="c1">
+               headerText="#{bindings.InteractionView5.hints.Type.label}" id="c1" width="100%">
       <af:outputText value="#{row.Type}" shortDesc="#{bindings.InteractionView5.hints.Type.tooltip}" id="ot1"/>
     </af:column>
     <af:column sortProperty="#{bindings.InteractionView5.hints.Direction.name}" filterable="true" sortable="true"

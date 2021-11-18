@@ -10,7 +10,7 @@
             filterModel="#{bindings.AppointmentsView4Query.queryDescriptor}" filterVisible="true"
             queryListener="#{bindings.AppointmentsView4Query.processQuery}" varStatus="vs" id="t1">
     <af:column sortProperty="#{bindings.AppointmentsView4.hints.Name.name}" filterable="true" sortable="true"
-               headerText="#{bindings.AppointmentsView4.hints.Name.label}" id="c1">
+               headerText="#{bindings.AppointmentsView4.hints.Name.label}" id="c1" width="100%">
       <af:link shortDesc="#{bindings.AppointmentsView4.hints.Name.tooltip}" id="ot1" text="#{row.Name}"
                action="editAppointments"/>
     </af:column>

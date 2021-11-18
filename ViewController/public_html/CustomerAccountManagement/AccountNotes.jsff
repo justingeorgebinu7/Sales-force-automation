@@ -6,15 +6,10 @@
             selectedRowKeys="#{bindings.NoteView2.collectionModel.selectedRow}"
             selectionListener="#{bindings.NoteView2.collectionModel.makeCurrent}" rowSelection="single"
             fetchSize="#{bindings.NoteView2.rangeSize}" filterModel="#{bindings.NoteView2Query.queryDescriptor}"
-            filterVisible="true" queryListener="#{bindings.NoteView2Query.processQuery}" varStatus="vs" id="t1"
-            columnStretching="last">
+            filterVisible="true" queryListener="#{bindings.NoteView2Query.processQuery}" varStatus="vs" id="t1">
     <af:column sortProperty="#{bindings.NoteView2.hints.Subject.name}" filterable="true" sortable="true"
-               headerText="#{bindings.NoteView2.hints.Subject.label}" id="c1" width="100">
+               headerText="#{bindings.NoteView2.hints.Subject.label}" id="c1" width="100%">
       <af:link shortDesc="#{bindings.NoteView2.hints.Subject.tooltip}" id="ot1" text="#{row.Subject}" action="edit"/>
-    </af:column>
-    <af:column sortProperty="#{bindings.NoteView2.hints.Content.name}" filterable="true" sortable="true"
-               headerText="#{bindings.NoteView2.hints.Content.label}" id="c2" width="236">
-      <af:outputText value="#{row.Content}" shortDesc="#{bindings.NoteView2.hints.Content.tooltip}" id="ot2"/>
     </af:column>
     <af:column sortProperty="#{bindings.NoteView2.hints.Createdby.name}" filterable="true" sortable="true"
                headerText="#{bindings.NoteView2.hints.Createdby.label}" id="c4" width="110">

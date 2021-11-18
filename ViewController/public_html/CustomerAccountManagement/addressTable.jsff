@@ -6,7 +6,7 @@
             selectionListener="#{bindings.AddressView4.collectionModel.makeCurrent}" rowSelection="single"
             fetchSize="#{bindings.AddressView4.rangeSize}" id="t1">
     <af:column sortProperty="#{bindings.AddressView4.hints.Type.name}" sortable="true"
-               headerText="#{bindings.AddressView4.hints.Type.label}" id="c1">
+               headerText="#{bindings.AddressView4.hints.Type.label}" id="c1" width="100%">
       <af:link shortDesc="#{bindings.AddressView4.hints.Type.tooltip}" id="ot1" text="#{row.Type}"
                action="editAddress"/>
     </af:column>

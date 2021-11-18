@@ -130,7 +130,8 @@
       Name="EmailRule0"
       OnAttribute="Email"
       Pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}"
-      Inverse="false"/>
+      Inverse="false"
+      ResId="sfa.model.entities.Customeraccount.Email_Rule_0"/>
   </Attribute>
   <Attribute
     Name="Mobilenumber"

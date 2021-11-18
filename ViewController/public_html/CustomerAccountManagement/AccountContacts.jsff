@@ -8,9 +8,9 @@
             fetchSize="#{bindings.CustomercontactsView2.rangeSize}"
             filterModel="#{bindings.CustomercontactsView2Query.queryDescriptor}" filterVisible="true"
             queryListener="#{bindings.CustomercontactsView2Query.processQuery}" varStatus="vs" id="t1"
-            columnStretching="last">
+            columnStretching="none">
     <af:column sortProperty="#{bindings.CustomercontactsView2.hints.Name.name}" filterable="true" sortable="true"
-               headerText="#{bindings.CustomercontactsView2.hints.Name.label}" id="c1" width="100">
+               headerText="#{bindings.CustomercontactsView2.hints.Name.label}" id="c1" width="100%">
       <af:link shortDesc="#{bindings.CustomercontactsView2.hints.Name.tooltip}" id="ot1" text="#{row.Name}"
                action="editContact"/>
     </af:column>
