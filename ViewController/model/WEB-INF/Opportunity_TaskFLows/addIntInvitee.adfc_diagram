@@ -48,7 +48,7 @@
       <property
          name="activityId">OM_AddIntInvitee</property>
       <property
-         name="pageFragment">true</property>
+         name="pageFragment">false</property>
       <property
          name="x">515.0</property>
       <property
@@ -56,7 +56,7 @@
       <property
          name="y">347.59766</property>
       <property
-         name="page">/Opportunity_pages/OM_AddIntInvitee.jsff</property>
+         name="page">/Opportunity_pages/OM_AddIntInvitee.jsf</property>
       <property
          name="exceptionHandler">false</property>
    </View>
@@ -99,5 +99,30 @@
          name="fromOutcome">Delete</property>
       <property
          name="sdm:polyPoints">B56,615.0,169.79883,822.5,336.29883,L46</property>
+   </ControlFlowCase>
+   <TaskFlowReturn
+      id="TaskFlowReturn11">
+      <property
+         name="activityId">taskFlowReturn1</property>
+      <property
+         name="x">1080.0</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>taskFlowReturn1&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Return&lt;/p>&lt;p>Outcome:  taskFlowReturn1&lt;/p></property>
+      <property
+         name="y">179.24707</property>
+      <property
+         name="finish">true</property>
+      <property
+         name="exceptionHandler">false</property>
+   </TaskFlowReturn>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase12"
+      from="MethodCall4"
+      to="TaskFlowReturn11">
+      <property
+         name="fromOutcome">Commit</property>
+      <property
+         name="sdm:polyPoints">T50,863.5,285.79883,1039.0,178.89648,L50</property>
    </ControlFlowCase>
 </SDM>

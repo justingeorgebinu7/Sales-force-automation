@@ -208,7 +208,6 @@
           usageId="sfa_view_deleteNotesContact_deleteNotesContact_CommitPageDef"/>
     <page path="/WEB-INF/AppointmentsAndInteraction/createInviteeInternal.xml#createInviteeInternal@Commit"
           usageId="sfa_view_createInviteeInternal_createInviteeInternal_CommitPageDef"/>
-    <page path="/AppointmentsAndInteractions/addInviteeInternal.jsff" usageId="sfa_view_addInviteeInternalPageDef"/>
     <page path="/WEB-INF/AppointmentsAndInteraction/createInviteeInternal.xml#createInviteeInternal@CreateInsert"
           usageId="sfa_view_createInviteeInternal_createInviteeInternal_CreateInsertPageDef"/>
     <page path="/WEB-INF/AppointmentsAndInteraction/deleteInviteeInternal.xml#deleteInviteeInternal@Delete"
@@ -230,7 +229,6 @@
           usageId="sfa_view_createInviteeExternal_createInviteeExternal_CreateInsertPageDef"/>
     <page path="/WEB-INF/AppointmentsAndInteraction/createInviteeExternal.xml#createInviteeExternal@Commit"
           usageId="sfa_view_createInviteeExternal_createInviteeExternal_CommitPageDef"/>
-    <page path="/AppointmentsAndInteractions/addExternalInvitee.jsff" usageId="sfa_view_addExternalInviteePageDef"/>
     <page path="/WEB-INF/ContactManagement/createInviteeInternal_con.xml#createInviteeInternal_con@CreateInsert"
           usageId="sfa_view_createInviteeInternal_con_createInviteeInternal_con_CreateInsertPageDef"/>
     <page path="/WEB-INF/ContactManagement/createInviteeInternal_con.xml#createInviteeInternal_con@Commit"
@@ -322,7 +320,6 @@
           usageId="sfa_view_addIntInvitee_addIntInvitee_DeletePageDef"/>
     <page path="/WEB-INF/Opportunity_TaskFLows/addIntInvitee.xml#addIntInvitee@Commit"
           usageId="sfa_view_addIntInvitee_addIntInvitee_CommitPageDef"/>
-    <page path="/Opportunity_pages/OM_AddIntInvitee.jsff" usageId="sfa_view_OM_AddIntInviteePageDef"/>
     <page path="/WEB-INF/Opportunity_TaskFLows/deleteIntInvitee.xml#deleteIntInvitee@Commit"
           usageId="sfa_view_deleteIntInvitee_deleteIntInvitee_CommitPageDef"/>
     <page path="/WEB-INF/Opportunity_TaskFLows/deleteIntInvitee.xml#deleteIntInvitee@Delete"
@@ -333,7 +330,6 @@
           usageId="sfa_view_addExtInvitee_addExtInvitee_DeletePageDef"/>
     <page path="/WEB-INF/Opportunity_TaskFLows/addExtInvitee.xml#addExtInvitee@Commit"
           usageId="sfa_view_addExtInvitee_addExtInvitee_CommitPageDef"/>
-    <page path="/Opportunity_pages/OM_AddExtInvitee.jsff" usageId="sfa_view_OM_AddExtInviteePageDef"/>
     <page path="/WEB-INF/Opportunity_TaskFLows/deleteExtInvitee.xml#deleteExtInvitee@Delete"
           usageId="sfa_view_deleteExtInvitee_deleteExtInvitee_DeletePageDef"/>
     <page path="/WEB-INF/Opportunity_TaskFLows/deleteExtInvitee.xml#deleteExtInvitee@Commit"
@@ -452,8 +448,6 @@
           usageId="sfa_view_CreateInternalInvitee_CreateInternalInvitee_DeletePageDef"/>
     <page path="/WEB-INF/ContactManagement/AppointmentsNew/CreateInternalInvitee.xml#CreateInternalInvitee@Commit"
           usageId="sfa_view_CreateInternalInvitee_CreateInternalInvitee_CommitPageDef"/>
-    <page path="/ContactManagementPages/AppointmentNew/createInternalInvitee_CM.jsff"
-          usageId="sfa_view_createInternalInvitee_CMPageDef"/>
     <page path="/WEB-INF/ContactManagement/AppointmentsNew/deleteInernaltInvitee.xml#deleteInernaltInvitee@Delete"
           usageId="sfa_view_deleteInernaltInvitee_deleteInernaltInvitee_DeletePageDef"/>
     <page path="/WEB-INF/ContactManagement/AppointmentsNew/deleteInernaltInvitee.xml#deleteInernaltInvitee@Commit"
@@ -468,8 +462,6 @@
           usageId="sfa_view_createExternalInvitee_createExternalInvitee_DeletePageDef"/>
     <page path="/WEB-INF/ContactManagement/AppointmentsNew/createExternalInvitee.xml#createExternalInvitee@Commit"
           usageId="sfa_view_createExternalInvitee_createExternalInvitee_CommitPageDef"/>
-    <page path="/ContactManagementPages/AppointmentNew/CreateExternalInvitee.jsff"
-          usageId="sfa_view_CreateExternalInviteePageDef"/>
     <page path="/ProductsCatalog/category.jsff" usageId="sfa_view_categoryPageDef"/>
     <page path="/WEB-INF/Productcatalog/createCategory.xml#createCategory@Commit"
           usageId="sfa_view_createCategory_createCategory_CommitPageDef"/>
@@ -487,6 +479,14 @@
           usageId="sfa_view_AcountDrillDown_AcountDrillDown_SetCurrentRowWithKeyValue1PageDef"/>
     <page path="/ContactManagementPages/AppointmentNew/CreateIntForContact.jsff"
           usageId="sfa_view_CreateIntForContactPageDef1"/>
+    <page path="/AppointmentsAndInteractions/addInviteeInternal.jsf" usageId="sfa_view_addInviteeInternalPageDef"/>
+    <page path="/AppointmentsAndInteractions/addExternalInvitee.jsf" usageId="sfa_view_addExternalInviteePageDef"/>
+    <page path="/ContactManagementPages/AppointmentNew/createInternalInvitee_CM.jsf"
+          usageId="sfa_view_createInternalInvitee_CMPageDef"/>
+    <page path="/ContactManagementPages/AppointmentNew/CreateExternalInvitee.jsf"
+          usageId="sfa_view_CreateExternalInviteePageDef"/>
+    <page path="/Opportunity_pages/OM_AddIntInvitee.jsf" usageId="sfa_view_OM_AddIntInviteePageDef"/>
+    <page path="/Opportunity_pages/OM_AddExtInvitee.jsf" usageId="sfa_view_OM_AddExtInviteePageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="sfa_view_untitled2PageDef" path="sfa.view.pageDefs.untitled2PageDef"/>

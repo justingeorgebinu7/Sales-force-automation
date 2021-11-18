@@ -12,7 +12,7 @@
       </outcome>
     </method-call>
     <view id="addExternalInvitee">
-      <page>/AppointmentsAndInteractions/addExternalInvitee.jsff</page>
+      <page>/AppointmentsAndInteractions/addExternalInvitee.jsf</page>
     </view>
     <method-call id="Commit">
       <method>#{bindings.Commit.execute}</method>
@@ -20,6 +20,11 @@
         <fixed-outcome>Commit</fixed-outcome>
       </outcome>
     </method-call>
+    <task-flow-return id="taskFlowReturn1">
+      <outcome>
+        <name>taskFlowReturn1</name>
+      </outcome>
+    </task-flow-return>
     <control-flow-rule id="__3">
       <from-activity-id>addExternalInvitee</from-activity-id>
       <control-flow-case id="__4">
@@ -34,6 +39,12 @@
         <to-activity-id>addExternalInvitee</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
-    <use-page-fragments/>
+    <control-flow-rule id="__1">
+      <from-activity-id>Commit</from-activity-id>
+      <control-flow-case id="__2">
+        <from-outcome>Commit</from-outcome>
+        <to-activity-id>taskFlowReturn1</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
   </task-flow-definition>
 </adfc-config>

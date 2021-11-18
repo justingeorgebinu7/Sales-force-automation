@@ -119,6 +119,8 @@
    <TaskFlowCall
       id="TaskFlowCall16">
       <property
+         name="runAsDialog">true</property>
+      <property
          name="description">&lt;html>&lt;p>&lt;b>createInviteeInternal&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
       <property
          name="activityId">createInviteeInternal</property>
@@ -174,6 +176,8 @@
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall20">
+      <property
+         name="runAsDialog">true</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>createInviteeExternal&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
       <property

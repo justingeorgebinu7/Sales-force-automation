@@ -48,7 +48,7 @@
       <property
          name="activityId">createInternalInvitee_CM</property>
       <property
-         name="pageFragment">true</property>
+         name="pageFragment">false</property>
       <property
          name="x">452.0</property>
       <property
@@ -56,7 +56,7 @@
       <property
          name="y">389.59766</property>
       <property
-         name="page">/ContactManagementPages/AppointmentNew/createInternalInvitee_CM.jsff</property>
+         name="page">/ContactManagementPages/AppointmentNew/createInternalInvitee_CM.jsf</property>
       <property
          name="exceptionHandler">false</property>
    </View>
@@ -78,7 +78,7 @@
       <property
          name="fromOutcome">discard</property>
       <property
-         name="sdm:polyPoints">T50,452.0,335.24707,508.5,175.79883,B50</property>
+         name="sdm:polyPoints">T50,452.0,335.24707,505.0,175.79883,B44</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -99,5 +99,30 @@
          name="fromOutcome">Delete</property>
       <property
          name="sdm:polyPoints">B56,512.0,175.79883,756.5,325.79883,T50</property>
+   </ControlFlowCase>
+   <TaskFlowReturn
+      id="TaskFlowReturn10">
+      <property
+         name="activityId">taskFlowReturn1</property>
+      <property
+         name="x">924.0</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>taskFlowReturn1&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Return&lt;/p>&lt;p>Outcome:  taskFlowReturn1&lt;/p></property>
+      <property
+         name="y">178.19531</property>
+      <property
+         name="finish">true</property>
+      <property
+         name="exceptionHandler">false</property>
+   </TaskFlowReturn>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase11"
+      from="MethodCall4"
+      to="TaskFlowReturn10">
+      <property
+         name="fromOutcome">Commit</property>
+      <property
+         name="sdm:polyPoints">T56,760.0,325.79883,924.0,232.5459,B50</property>
    </ControlFlowCase>
 </SDM>

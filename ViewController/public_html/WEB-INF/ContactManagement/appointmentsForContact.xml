@@ -40,6 +40,11 @@
         <document>/WEB-INF/ContactManagement/AppointmentsNew/CreateInternalInvitee.xml</document>
         <id>CreateInternalInvitee</id>
       </task-flow-reference>
+      <run-as-dialog>
+        <display-type>
+          <inline-popup/>
+        </display-type>
+      </run-as-dialog>
     </task-flow-call>
     <task-flow-call id="deleteInernaltInvitee">
       <task-flow-reference>
@@ -58,6 +63,11 @@
         <document>/WEB-INF/ContactManagement/AppointmentsNew/createExternalInvitee.xml</document>
         <id>createExternalInvitee</id>
       </task-flow-reference>
+      <run-as-dialog>
+        <display-type>
+          <inline-popup/>
+        </display-type>
+      </run-as-dialog>
     </task-flow-call>
     <control-flow-rule id="__1">
       <from-activity-id>AppTableForContacts</from-activity-id>

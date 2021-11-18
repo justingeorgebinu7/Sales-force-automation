@@ -33,6 +33,11 @@
         <document>/WEB-INF/AppointmentsAndInteraction/createInviteeInternal.xml</document>
         <id>createInviteeInternal</id>
       </task-flow-reference>
+      <run-as-dialog>
+        <display-type>
+          <inline-popup/>
+        </display-type>
+      </run-as-dialog>
     </task-flow-call>
     <task-flow-call id="deleteInviteeInternal">
       <task-flow-reference>
@@ -46,6 +51,11 @@
         <document>/WEB-INF/AppointmentsAndInteraction/createInviteeExternal.xml</document>
         <id>createInviteeExternal</id>
       </task-flow-reference>
+      <run-as-dialog>
+        <display-type>
+          <inline-popup/>
+        </display-type>
+      </run-as-dialog>
     </task-flow-call>
     <task-flow-call id="deleteInviteeExternal">
       <task-flow-reference>

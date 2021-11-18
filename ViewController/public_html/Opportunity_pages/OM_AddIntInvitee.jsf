@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <af:document id="d1">
+    <af:form id="f1">
+      <af:panelFormLayout id="pfl1">
+        <af:inputComboboxListOfValues id="contactidId" popupTitle="Search and Select: #{bindings.Contactid.hints.label}"
+                                      value="#{bindings.Contactid.inputValue}" label="#{bindings.Contactid.hints.label}"
+                                      model="#{bindings.Contactid.listOfValuesModel}"
+                                      required="#{bindings.Contactid.hints.mandatory}"
+                                      columns="#{bindings.Contactid.hints.displayWidth}"
+                                      shortDesc="#{bindings.Contactid.hints.tooltip}"
+                                      converter="#{bindings.Contactid.converter}">
+          <f:validator binding="#{bindings.Contactid.validator}"/>
+          <!--<af:convertNumber groupingUsed="false" pattern="#{bindings.Contactid.format}"/>-->
+        </af:inputComboboxListOfValues>
+      </af:panelFormLayout>
+      <af:button text="Save" id="b1" actionListener="#{bindings.Commit.execute}" disabled="#{!bindings.Commit.enabled}"
+                 action="save"/>
+      <af:button text="Cancel" id="b2" action="discard"/>
+    </af:form>
+  </af:document>
+</f:view>

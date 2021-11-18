@@ -22,7 +22,7 @@
       <property
          name="activityId">addExternalInvitee</property>
       <property
-         name="pageFragment">true</property>
+         name="pageFragment">false</property>
       <property
          name="x">382.0</property>
       <property
@@ -30,7 +30,7 @@
       <property
          name="y">201.89648</property>
       <property
-         name="page">/AppointmentsAndInteractions/addExternalInvitee.jsff</property>
+         name="page">/AppointmentsAndInteractions/addExternalInvitee.jsf</property>
       <property
          name="exceptionHandler">false</property>
    </View>
@@ -66,5 +66,30 @@
          name="fromOutcome">CreateInsert</property>
       <property
          name="sdm:polyPoints">R50,203.01465,230.94238,341.0,201.5459,L50</property>
+   </ControlFlowCase>
+   <TaskFlowReturn
+      id="TaskFlowReturn7">
+      <property
+         name="activityId">taskFlowReturn1</property>
+      <property
+         name="x">918.0</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>taskFlowReturn1&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Return&lt;/p>&lt;p>Outcome:  taskFlowReturn1&lt;/p></property>
+      <property
+         name="y">188.5459</property>
+      <property
+         name="finish">true</property>
+      <property
+         name="exceptionHandler">false</property>
+   </TaskFlowReturn>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase9"
+      from="MethodCall4"
+      to="TaskFlowReturn7">
+      <property
+         name="fromOutcome">Commit</property>
+      <property
+         name="sdm:polyPoints">R50,661.5,228.79883,877.0,188.19531,L50</property>
    </ControlFlowCase>
 </SDM>

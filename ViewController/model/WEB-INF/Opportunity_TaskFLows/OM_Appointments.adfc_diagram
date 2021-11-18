@@ -123,6 +123,8 @@
    <TaskFlowCall
       id="TaskFlowCall12">
       <property
+         name="runAsDialog">true</property>
+      <property
          name="description">&lt;html>&lt;p>&lt;b>addIntInvitee&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
       <property
          name="activityId">addIntInvitee</property>
@@ -193,6 +195,8 @@
    </TaskFlowCall>
    <TaskFlowCall
       id="TaskFlowCall17">
+      <property
+         name="runAsDialog">true</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>addExtInvitee&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
       <property

@@ -54,17 +54,11 @@
           <af:panelBox text="Invitees - Contact" id="pb1">
             <f:facet name="toolbar">
               <af:toolbar id="t3">
-                <af:commandMenuItem text="Add" id="cmi1" action="addInternalInvitee">
-                  <af:showPopupBehavior popupId="p1"/>
-                </af:commandMenuItem>
+                <af:commandMenuItem text="Add" id="cmi1" action="addInternalInvitee" useWindow="true"
+                                    windowEmbedStyle="inlineDocument" windowModalityType="applicationModal"/>
                 <af:commandMenuItem text="Delete" id="cmi2" action="deleteInternalInvitee"/>
               </af:toolbar>
             </f:facet>
-            <af:popup childCreation="deferred" autoCancel="disabled" id="p1">
-              <af:panelWindow id="pw1">
-                <af:region value="#{bindings.addIntInvitee1.regionModel}" id="r1"/>
-              </af:panelWindow>
-            </af:popup>
             <af:table value="#{bindings.InviteesView5.collectionModel}" var="row"
                       rows="#{bindings.InviteesView5.rangeSize}"
                       emptyText="#{bindings.InviteesView5.viewable ? 'No data to display.' : 'Access Denied.'}"
@@ -82,17 +76,11 @@
           <af:panelBox text="Invitee - User" id="pb2">
             <f:facet name="toolbar">
               <af:toolbar id="t4">
-                <af:commandMenuItem text="Add" id="cmi3" action="addExternalInvitee">
-                  <af:showPopupBehavior popupId="p2"/>
-                </af:commandMenuItem>
+                <af:commandMenuItem text="Add" id="cmi3" action="addExternalInvitee" useWindow="true"
+                                    windowEmbedStyle="inlineDocument" windowModalityType="applicationModal"/>
                 <af:commandMenuItem text="Delete" id="cmi4" action="deleteExternalInvitee"/>
               </af:toolbar>
             </f:facet>
-            <af:popup childCreation="deferred" autoCancel="disabled" id="p2">
-              <af:panelWindow id="pw2">
-                <af:region value="#{bindings.addExtInvitee1.regionModel}" id="r2"/>
-              </af:panelWindow>
-            </af:popup>
             <af:table value="#{bindings.InviteesextView4.collectionModel}" var="row"
                       rows="#{bindings.InviteesextView4.rangeSize}"
                       emptyText="#{bindings.InviteesextView4.viewable ? 'No data to display.' : 'Access Denied.'}"
