@@ -34,41 +34,43 @@
                         required="#{bindings.Workphone.hints.mandatory}"
                         columns="#{bindings.Workphone.hints.displayWidth}"
                         maximumLength="#{bindings.Workphone.hints.precision}"
-                        shortDesc="#{bindings.Workphone.hints.tooltip}" id="it4">
+                        shortDesc="#{bindings.Workphone.hints.tooltip}" id="it4" autoSubmit="true" immediate="true">
             <f:validator binding="#{bindings.Workphone.validator}"/>
             <af:convertNumber groupingUsed="false" pattern="#{bindings.Workphone.format}"/>
           </af:inputText>
           <af:inputText value="#{bindings.Email.inputValue}" label="#{bindings.Email.hints.label}"
                         required="#{bindings.Email.hints.mandatory}" columns="#{bindings.Email.hints.displayWidth}"
                         maximumLength="#{bindings.Email.hints.precision}" shortDesc="#{bindings.Email.hints.tooltip}"
-                        id="it5">
+                        id="it5" immediate="true" autoSubmit="true">
             <f:validator binding="#{bindings.Email.validator}"/>
           </af:inputText>
-          <af:inputText value="#{bindings.Buyingrole.inputValue}" label="#{bindings.Buyingrole.hints.label}"
-                        required="#{bindings.Buyingrole.hints.mandatory}"
-                        columns="#{bindings.Buyingrole.hints.displayWidth}"
-                        maximumLength="#{bindings.Buyingrole.hints.precision}"
-                        shortDesc="#{bindings.Buyingrole.hints.tooltip}" id="it6">
+          <f:facet name="footer"/>
+          <af:selectOneChoice value="#{bindings.Buyingrole.inputValue}" label="#{bindings.Buyingrole.label}"
+                              required="#{bindings.Buyingrole.hints.mandatory}"
+                              shortDesc="#{bindings.Buyingrole.hints.tooltip}" id="soc1">
+            <f:selectItems value="#{bindings.Buyingrole.items}" id="si1"/>
             <f:validator binding="#{bindings.Buyingrole.validator}"/>
-          </af:inputText>
-          <af:inputText value="#{bindings.Influencelevel.inputValue}" label="#{bindings.Influencelevel.hints.label}"
-                        required="#{bindings.Influencelevel.hints.mandatory}"
-                        columns="#{bindings.Influencelevel.hints.displayWidth}"
-                        maximumLength="#{bindings.Influencelevel.hints.precision}"
-                        shortDesc="#{bindings.Influencelevel.hints.tooltip}" id="it7">
+          </af:selectOneChoice>
+          <af:selectOneChoice value="#{bindings.Influencelevel.inputValue}" label="#{bindings.Influencelevel.label}"
+                              required="#{bindings.Influencelevel.hints.mandatory}"
+                              shortDesc="#{bindings.Influencelevel.hints.tooltip}" id="soc2">
+            <f:selectItems value="#{bindings.Influencelevel.items}" id="si2"/>
             <f:validator binding="#{bindings.Influencelevel.validator}"/>
-          </af:inputText>
+          </af:selectOneChoice>
           <af:selectBooleanCheckbox value="#{bindings.Isprimarycontact.inputValue}"
                                     label="#{bindings.Isprimarycontact.label}"
                                     shortDesc="#{bindings.Isprimarycontact.hints.tooltip}" id="sbc1"/>
-          <f:facet name="footer"/>
         </af:panelFormLayout>
         <af:panelGridLayout id="pgl1">
           <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr1">
             <af:gridCell marginStart="5px" width="dontCare" id="gc1">
               <af:button text="Save" id="b1" actionListener="#{bindings.Commit.execute}" disabled="false"/>
             </af:gridCell>
-            <af:gridCell marginStart="0px" width="dontCare" marginEnd="5px" id="gc2"/>
+            <af:gridCell marginStart="0px" width="dontCare" marginEnd="5px" id="gc2">
+              <af:button actionListener="#{bindings.Rollback.execute}" text="Cancel" immediate="true" id="b2">
+                <af:resetActionListener/>
+              </af:button>
+            </af:gridCell>
           </af:gridRow>
         </af:panelGridLayout>
       </af:showDetailItem>

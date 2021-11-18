@@ -9,7 +9,8 @@
   DBObjectType="table"
   DBObjectName="ADDRESS"
   AliasName="Address"
-  BindingStyle="OracleName">
+  BindingStyle="OracleName"
+  xmlns:validation="http://xmlns.oracle.com/adfm/validation">
   <Attribute
     Name="Addressid"
     IsNotNull="true"
@@ -21,7 +22,6 @@
     PrimaryKey="true">
     <TransientExpression
       Name="ExpressionScript"
-      trustMode="trusted"
       CodeSourceName="AddressRow"/>
   </Attribute>
   <Attribute
@@ -74,7 +74,22 @@
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
-    TableName="ADDRESS"/>
+    TableName="ADDRESS">
+    <validation:LengthValidationBean
+      Name="ContactNumberRule0"
+      ResId="sfa.model.entities.Address.ContactNumber_Rule_0"
+      OnAttribute="ContactNumber"
+      CompareType="EQUALTO"
+      DataType="CHARACTER"
+      CompareLength="10"
+      Inverse="false"/>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="sfa.model.entities.Address.ContactNumber_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <Attribute
     Name="Type"
     Precision="30"
@@ -138,4 +153,8 @@
       <Item Value="sfa.model.entities.Address.Accountid"/>
     </AttrArray>
   </Key>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="sfa.model.ModelBundle"/>
+  </ResourceBundle>
 </Entity>

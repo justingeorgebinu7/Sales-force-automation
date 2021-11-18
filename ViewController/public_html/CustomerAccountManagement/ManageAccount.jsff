@@ -8,12 +8,13 @@
                   shortDesc="#{bindings.Name.hints.tooltip}" id="it3">
       <f:validator binding="#{bindings.Name.validator}"/>
     </af:inputText>
-    <af:inputText value="#{bindings.Type.inputValue}" label="#{bindings.Type.hints.label}"
-                  required="#{bindings.Type.hints.mandatory}" readOnly="true"
-                  columns="#{bindings.Type.hints.displayWidth}" maximumLength="#{bindings.Type.hints.precision}"
-                  shortDesc="#{bindings.Type.hints.tooltip}" id="it2">
+    <af:inputComboboxListOfValues id="typeId" popupTitle="Search and Select: #{bindings.Type.hints.label}"
+                                  value="#{bindings.Type.inputValue}" label="#{bindings.Type.hints.label}"
+                                  model="#{bindings.Type.listOfValuesModel}" required="#{bindings.Type.hints.mandatory}"
+                                  columns="#{bindings.Type.hints.displayWidth}"
+                                  shortDesc="#{bindings.Type.hints.tooltip}">
       <f:validator binding="#{bindings.Type.validator}"/>
-    </af:inputText>
+    </af:inputComboboxListOfValues>
     <af:inputText value="#{bindings.Accounturl.inputValue}" label="#{bindings.Accounturl.hints.label}"
                   required="#{bindings.Accounturl.hints.mandatory}" readOnly="true"
                   columns="#{bindings.Accounturl.hints.displayWidth}"
@@ -38,14 +39,14 @@
     <af:inputText value="#{bindings.Email.inputValue}" label="#{bindings.Email.hints.label}"
                   required="#{bindings.Email.hints.mandatory}" readOnly="true"
                   columns="#{bindings.Email.hints.displayWidth}" maximumLength="#{bindings.Email.hints.precision}"
-                  shortDesc="#{bindings.Email.hints.tooltip}" id="it7">
+                  shortDesc="#{bindings.Email.hints.tooltip}" id="it7" immediate="true" autoSubmit="true">
       <f:validator binding="#{bindings.Email.validator}"/>
     </af:inputText>
     <af:inputText value="#{bindings.Mobilenumber.inputValue}" label="#{bindings.Mobilenumber.hints.label}"
                   required="#{bindings.Mobilenumber.hints.mandatory}" readOnly="true"
                   columns="#{bindings.Mobilenumber.hints.displayWidth}"
                   maximumLength="#{bindings.Mobilenumber.hints.precision}"
-                  shortDesc="#{bindings.Mobilenumber.hints.tooltip}" id="it8">
+                  shortDesc="#{bindings.Mobilenumber.hints.tooltip}" id="it8" autoSubmit="true" immediate="true">
       <f:validator binding="#{bindings.Mobilenumber.validator}"/>
       <af:convertNumber groupingUsed="false" pattern="#{bindings.Mobilenumber.format}"/>
     </af:inputText>
