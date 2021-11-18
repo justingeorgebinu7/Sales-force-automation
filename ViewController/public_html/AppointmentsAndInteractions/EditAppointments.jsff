@@ -50,7 +50,7 @@
       </af:panelBox>
     </f:facet>
     <f:facet name="second">
-      <af:panelSplitter id="ps2" splitterPosition="450">
+      <af:panelSplitter id="ps2" splitterPosition="449">
         <f:facet name="first">
           <af:panelBox text="Invitees - Contacts" id="pb2">
             <f:facet name="toolbar">
@@ -78,9 +78,7 @@
             <f:facet name="toolbar">
               <af:menuBar id="mb2">
                 <af:commandMenuItem text="Add" id="cmi3" action="addInviteeExternal" useWindow="true"
-                                    windowEmbedStyle="inlineDocument" windowModalityType="applicationModal">
-                  <af:showPopupBehavior popupId="p2"/>
-                </af:commandMenuItem>
+                                    windowEmbedStyle="inlineDocument" windowModalityType="applicationModal"/>
                 <af:commandMenuItem text="Delete" id="cmi4" action="toDeleteExternal"/>
               </af:menuBar>
             </f:facet>

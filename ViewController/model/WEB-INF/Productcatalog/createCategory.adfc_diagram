@@ -42,7 +42,7 @@
       <property
          name="fromOutcome">toCommit</property>
       <property
-         name="sdm:polyPoints">R50,403.0,221.68945,550.5,231.09766,L50</property>
+         name="sdm:polyPoints">R50,404.49823,221.68945,549.0018,231.09766,L50</property>
    </ControlFlowCase>
    <MethodCall
       id="MethodCall8">

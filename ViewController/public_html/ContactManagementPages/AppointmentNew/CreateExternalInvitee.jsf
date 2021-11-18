@@ -8,9 +8,10 @@
                                       model="#{bindings.Userid.listOfValuesModel}"
                                       required="#{bindings.Userid.hints.mandatory}"
                                       columns="#{bindings.Userid.hints.displayWidth}"
-                                      shortDesc="#{bindings.Userid.hints.tooltip}">
+                                      shortDesc="#{bindings.Userid.hints.tooltip}"
+                                      converter="#{bindings.Userid.converter}">
           <f:validator binding="#{bindings.Userid.validator}"/>
-          <af:convertNumber groupingUsed="false" pattern="#{bindings.Userid.format}"/>
+          <!--<af:convertNumber groupingUsed="false" pattern="#{bindings.Userid.format}"/>-->
         </af:inputComboboxListOfValues>
       </af:panelFormLayout>
       <af:button text="Save" id="b1" action="commit"/>
