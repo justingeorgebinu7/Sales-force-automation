@@ -78,7 +78,8 @@
     EntityAttrName="Priority"
     EntityUsage="Task"
     AliasName="PRIORITY"
-    LOVName="LOV_Priority">
+    LOVName="LOV_Priority"
+    IsQueriable="false">
     <Properties>
       <SchemaBasedProperties>
         <DISPLAYWIDTH
@@ -93,13 +94,15 @@
     PrecisionRule="true"
     EntityAttrName="Description"
     EntityUsage="Task"
-    AliasName="DESCRIPTION"/>
+    AliasName="DESCRIPTION"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="Percentageofcompletion"
     PrecisionRule="true"
     EntityAttrName="Percentageofcompletion"
     EntityUsage="Task"
-    AliasName="PERCENTAGEOFCOMPLETION">
+    AliasName="PERCENTAGEOFCOMPLETION"
+    IsQueriable="false">
     <Properties>
       <SchemaBasedProperties>
         <DISPLAYWIDTH

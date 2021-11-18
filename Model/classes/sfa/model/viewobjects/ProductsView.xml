@@ -90,20 +90,23 @@
     PrecisionRule="true"
     EntityAttrName="Description"
     EntityUsage="Products"
-    AliasName="DESCRIPTION"/>
+    AliasName="DESCRIPTION"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="Price"
     PrecisionRule="true"
     EntityAttrName="Price"
     EntityUsage="Products"
-    AliasName="PRICE"/>
+    AliasName="PRICE"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="Category"
     PrecisionRule="true"
     EntityAttrName="Category"
     EntityUsage="Products"
     AliasName="CATEGORY"
-    LOVName="LOV_Category">
+    LOVName="LOV_Category"
+    IsQueriable="false">
     <Properties>
       <SchemaBasedProperties>
         <CONTROLTYPE
@@ -117,7 +120,8 @@
     PrecisionRule="true"
     EntityAttrName="Revenueitem"
     EntityUsage="Products"
-    AliasName="REVENUEITEM"/>
+    AliasName="REVENUEITEM"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="Categoryid"
     PrecisionRule="true"

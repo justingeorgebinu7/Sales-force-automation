@@ -100,19 +100,22 @@
     PrecisionRule="true"
     EntityAttrName="Quantity"
     EntityUsage="Revenueitem"
-    AliasName="QUANTITY"/>
+    AliasName="QUANTITY"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="Estimatedprice"
     PrecisionRule="true"
     EntityAttrName="Estimatedprice"
     EntityUsage="Revenueitem"
-    AliasName="ESTIMATEDPRICE"/>
+    AliasName="ESTIMATEDPRICE"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="Revenue"
     PrecisionRule="true"
     EntityAttrName="Revenue"
     EntityUsage="Revenueitem"
-    AliasName="REVENUE">
+    AliasName="REVENUE"
+    IsQueriable="false">
     <Properties>
       <SchemaBasedProperties>
         <DISPLAYWIDTH
@@ -125,7 +128,8 @@
     PrecisionRule="true"
     EntityAttrName="Bestcaserevenue"
     EntityUsage="Revenueitem"
-    AliasName="BESTCASEREVENUE">
+    AliasName="BESTCASEREVENUE"
+    IsQueriable="false">
     <Properties>
       <SchemaBasedProperties>
         <DISPLAYWIDTH
@@ -138,7 +142,8 @@
     PrecisionRule="true"
     EntityAttrName="Worstcaserevenue"
     EntityUsage="Revenueitem"
-    AliasName="WORSTCASEREVENUE">
+    AliasName="WORSTCASEREVENUE"
+    IsQueriable="false">
     <Properties>
       <SchemaBasedProperties>
         <DISPLAYWIDTH

@@ -68,13 +68,15 @@
     PrecisionRule="true"
     EntityAttrName="Description"
     EntityUsage="Appointments"
-    AliasName="DESCRIPTION"/>
+    AliasName="DESCRIPTION"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="Location"
     PrecisionRule="true"
     EntityAttrName="Location"
     EntityUsage="Appointments"
-    AliasName="LOCATION">
+    AliasName="LOCATION"
+    IsQueriable="false">
     <Properties>
       <SchemaBasedProperties>
         <DISPLAYWIDTH

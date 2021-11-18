@@ -29,13 +29,15 @@
     PrecisionRule="true"
     EntityAttrName="Content"
     EntityUsage="Note"
-    AliasName="CONTENT"/>
+    AliasName="CONTENT"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="Datetime"
     PrecisionRule="true"
     EntityAttrName="Datetime"
     EntityUsage="Note"
-    AliasName="DATETIME">
+    AliasName="DATETIME"
+    IsQueriable="false">
     <TransientExpression
       Name="ExpressionScript"
       trustMode="untrusted"
@@ -85,7 +87,8 @@
     PrecisionRule="true"
     EntityAttrName="Createdby"
     EntityUsage="Note"
-    AliasName="CREATEDBY"/>
+    AliasName="CREATEDBY"
+    IsQueriable="false"/>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="sfa.model.ModelBundle"/>

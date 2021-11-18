@@ -40,7 +40,8 @@
     PrecisionRule="true"
     EntityAttrName="Filetype"
     EntityUsage="Files"
-    AliasName="FILETYPE"/>
+    AliasName="FILETYPE"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="Oppid"
     PrecisionRule="true"

@@ -34,7 +34,8 @@
     PrecisionRule="true"
     EntityAttrName="Description"
     EntityUsage="Role"
-    AliasName="DESCRIPTION"/>
+    AliasName="DESCRIPTION"
+    IsQueriable="false"/>
   <ViewLinkAccessor
     Name="UserroleView"
     ViewLink="sfa.model.viewobjects.UserroleRoleFkLink"

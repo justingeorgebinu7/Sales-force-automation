@@ -205,13 +205,15 @@
     PrecisionRule="true"
     EntityAttrName="Description"
     EntityUsage="Opportunity"
-    AliasName="DESCRIPTION"/>
+    AliasName="DESCRIPTION"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="Winprobability"
     PrecisionRule="true"
     EntityAttrName="Winprobability"
     EntityUsage="Opportunity"
-    AliasName="WINPROBABILITY">
+    AliasName="WINPROBABILITY"
+    IsQueriable="false">
     <Properties>
       <SchemaBasedProperties>
         <LABEL
@@ -226,7 +228,8 @@
     PrecisionRule="true"
     EntityAttrName="Closedate"
     EntityUsage="Opportunity"
-    AliasName="CLOSEDATE">
+    AliasName="CLOSEDATE"
+    IsQueriable="false">
     <Properties>
       <SchemaBasedProperties>
         <LABEL
@@ -255,7 +258,8 @@
     EntityAttrName="Salesstage"
     EntityUsage="Opportunity"
     AliasName="SALESSTAGE"
-    LOVName="LOV_Salesstage">
+    LOVName="LOV_Salesstage"
+    IsQueriable="false">
     <Properties>
       <SchemaBasedProperties>
         <CONTROLTYPE
@@ -271,7 +275,8 @@
     EntityAttrName="Salesmethod"
     EntityUsage="Opportunity"
     AliasName="SALESMETHOD"
-    LOVName="LOV_Salesmethod">
+    LOVName="LOV_Salesmethod"
+    IsQueriable="false">
     <Properties>
       <SchemaBasedProperties>
         <LABEL
@@ -286,7 +291,8 @@
     PrecisionRule="true"
     EntityAttrName="Bestcaserevenue"
     EntityUsage="Opportunity"
-    AliasName="BESTCASEREVENUE">
+    AliasName="BESTCASEREVENUE"
+    IsQueriable="false">
     <Properties>
       <SchemaBasedProperties>
         <LABEL
@@ -301,7 +307,8 @@
     PrecisionRule="true"
     EntityAttrName="Worstcaserevenue"
     EntityUsage="Opportunity"
-    AliasName="WORSTCASEREVENUE">
+    AliasName="WORSTCASEREVENUE"
+    IsQueriable="false">
     <Properties>
       <SchemaBasedProperties>
         <LABEL
@@ -316,7 +323,8 @@
     PrecisionRule="true"
     EntityAttrName="Budgetavailable"
     EntityUsage="Opportunity"
-    AliasName="BUDGETAVAILABLE">
+    AliasName="BUDGETAVAILABLE"
+    IsQueriable="false">
     <Properties>
       <SchemaBasedProperties>
         <LABEL
@@ -332,7 +340,8 @@
     EntityAttrName="Risklevel"
     EntityUsage="Opportunity"
     AliasName="RISKLEVEL"
-    LOVName="LOV_Risklevel">
+    LOVName="LOV_Risklevel"
+    IsQueriable="false">
     <Properties>
       <SchemaBasedProperties>
         <CONTROLTYPE

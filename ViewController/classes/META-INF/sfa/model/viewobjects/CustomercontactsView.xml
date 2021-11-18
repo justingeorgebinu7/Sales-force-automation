@@ -100,7 +100,8 @@
     PrecisionRule="true"
     EntityAttrName="Title"
     EntityUsage="Customercontacts"
-    AliasName="TITLE">
+    AliasName="TITLE"
+    IsQueriable="false">
     <Properties>
       <SchemaBasedProperties>
         <DISPLAYWIDTH
@@ -113,7 +114,8 @@
     PrecisionRule="true"
     EntityAttrName="Department"
     EntityUsage="Customercontacts"
-    AliasName="DEPARTMENT">
+    AliasName="DEPARTMENT"
+    IsQueriable="false">
     <Properties>
       <SchemaBasedProperties>
         <DISPLAYWIDTH
@@ -126,7 +128,8 @@
     PrecisionRule="true"
     EntityAttrName="Workphone"
     EntityUsage="Customercontacts"
-    AliasName="WORKPHONE">
+    AliasName="WORKPHONE"
+    IsQueriable="false">
     <Properties>
       <SchemaBasedProperties>
         <DISPLAYWIDTH
@@ -139,7 +142,8 @@
     PrecisionRule="true"
     EntityAttrName="Email"
     EntityUsage="Customercontacts"
-    AliasName="EMAIL">
+    AliasName="EMAIL"
+    IsQueriable="false">
     <Properties>
       <SchemaBasedProperties>
         <DISPLAYWIDTH
@@ -153,7 +157,8 @@
     EntityAttrName="Buyingrole"
     EntityUsage="Customercontacts"
     AliasName="BUYINGROLE"
-    LOVName="LOV_Buyingrole">
+    LOVName="LOV_Buyingrole"
+    IsQueriable="false">
     <Properties>
       <SchemaBasedProperties>
         <DISPLAYWIDTH
@@ -169,7 +174,8 @@
     EntityAttrName="Influencelevel"
     EntityUsage="Customercontacts"
     AliasName="INFLUENCELEVEL"
-    LOVName="LOV_Influencelevel">
+    LOVName="LOV_Influencelevel"
+    IsQueriable="false">
     <Properties>
       <SchemaBasedProperties>
         <DISPLAYWIDTH

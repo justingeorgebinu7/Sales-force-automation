@@ -112,7 +112,8 @@
     PrecisionRule="true"
     EntityAttrName="Password"
     EntityUsage="Useraccount"
-    AliasName="PASSWORD">
+    AliasName="PASSWORD"
+    IsQueriable="false">
     <Properties>
       <SchemaBasedProperties>
         <DISPLAYWIDTH

@@ -29,7 +29,8 @@
     PrecisionRule="true"
     EntityAttrName="Type"
     EntityUsage="Interaction"
-    AliasName="TYPE">
+    AliasName="TYPE"
+    IsQueriable="false">
     <Properties>
       <SchemaBasedProperties>
         <DISPLAYWIDTH
@@ -42,7 +43,8 @@
     PrecisionRule="true"
     EntityAttrName="Direction"
     EntityUsage="Interaction"
-    AliasName="DIRECTION">
+    AliasName="DIRECTION"
+    IsQueriable="false">
     <Properties>
       <SchemaBasedProperties>
         <DISPLAYWIDTH
@@ -81,7 +83,8 @@
     PrecisionRule="true"
     EntityAttrName="Description"
     EntityUsage="Interaction"
-    AliasName="DESCRIPTION">
+    AliasName="DESCRIPTION"
+    IsQueriable="false">
     <Properties>
       <SchemaBasedProperties>
         <DISPLAYHEIGHT
@@ -94,7 +97,8 @@
     PrecisionRule="true"
     EntityAttrName="Resolution"
     EntityUsage="Interaction"
-    AliasName="RESOLUTION"/>
+    AliasName="RESOLUTION"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="Contactid"
     IsNotNull="true"

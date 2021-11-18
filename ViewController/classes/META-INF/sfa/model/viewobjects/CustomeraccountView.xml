@@ -53,7 +53,8 @@
     EntityAttrName="Type"
     EntityUsage="Customeraccount"
     AliasName="TYPE"
-    LOVName="LOV_AccountType">
+    LOVName="LOV_AccountType"
+    IsQueriable="false">
     <Properties>
       <SchemaBasedProperties>
         <DISPLAYWIDTH
@@ -74,7 +75,8 @@
     PrecisionRule="true"
     EntityAttrName="Accounturl"
     EntityUsage="Customeraccount"
-    AliasName="ACCOUNTURL">
+    AliasName="ACCOUNTURL"
+    IsQueriable="false">
     <Properties>
       <SchemaBasedProperties>
         <DISPLAYWIDTH
@@ -87,13 +89,15 @@
     PrecisionRule="true"
     EntityAttrName="Ceo"
     EntityUsage="Customeraccount"
-    AliasName="CEO"/>
+    AliasName="CEO"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="Numberofemployees"
     PrecisionRule="true"
     EntityAttrName="Numberofemployees"
     EntityUsage="Customeraccount"
-    AliasName="NUMBEROFEMPLOYEES">
+    AliasName="NUMBEROFEMPLOYEES"
+    IsQueriable="false">
     <Properties>
       <SchemaBasedProperties>
         <DISPLAYWIDTH
@@ -106,7 +110,8 @@
     PrecisionRule="true"
     EntityAttrName="Email"
     EntityUsage="Customeraccount"
-    AliasName="EMAIL">
+    AliasName="EMAIL"
+    IsQueriable="false">
     <Properties>
       <SchemaBasedProperties>
         <DISPLAYWIDTH
@@ -119,7 +124,8 @@
     PrecisionRule="true"
     EntityAttrName="Mobilenumber"
     EntityUsage="Customeraccount"
-    AliasName="MOBILENUMBER">
+    AliasName="MOBILENUMBER"
+    IsQueriable="false">
     <Properties>
       <SchemaBasedProperties>
         <DISPLAYWIDTH
