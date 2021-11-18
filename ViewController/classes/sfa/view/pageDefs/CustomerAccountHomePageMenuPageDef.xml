@@ -7,9 +7,6 @@
     <taskFlow id="taskCustomerAccount1"
               taskFlowId="/WEB-INF/customerAccountTaskFlows/taskCustomerAccount.xml#taskCustomerAccount"
               activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
-    <taskFlow id="CustomerAccountContacts1"
-              taskFlowId="/WEB-INF/customerAccountTaskFlows/CustomerAccountContacts.xml#CustomerAccountContacts"
-              activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
     <taskFlow id="appointmentManagement1"
               taskFlowId="/WEB-INF/AppointmentsAndInteraction/appointmentManagement.xml#appointmentManagement"
               activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
@@ -24,6 +21,24 @@
     <taskFlow id="addressOfAccount1"
               taskFlowId="/WEB-INF/customerAccountTaskFlows/addressOfAccount.xml#addressOfAccount" activation="deferred"
               xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <iterator Binds="CustomercontactsView2" RangeSize="25" DataControl="AppModuleDataControl"
+              id="CustomercontactsView2Iterator"/>
+    <searchRegion Binds="CustomercontactsView2Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="CustomercontactsView2Query"/>
   </executables>
-  <bindings/>
+  <bindings>
+    <tree IterBinding="CustomercontactsView2Iterator" id="CustomercontactsView2">
+      <nodeDefinition DefName="sfa.model.viewobjects.CustomercontactsView" Name="CustomercontactsView20">
+        <AttrNames>
+          <Item Value="Name"/>
+          <Item Value="Title"/>
+          <Item Value="Department"/>
+          <Item Value="Workphone"/>
+          <Item Value="Email"/>
+          <Item Value="Isprimarycontact"/>
+          <Item Value="Contactid"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
 </pageDefinition>

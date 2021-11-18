@@ -81,17 +81,6 @@
       <property
          name="sdm:polyPoints">T50,196.0,244.32715,61.692383,112.69531,B50</property>
    </ControlFlowCase>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase11"
-      from="View2">
-      <property
-         name="tosrcid">__2</property>
-      <property
-         name="fromOutcome">*</property>
-      <property
-         name="fromsrcid">__1</property>
-   </ControlFlowCase>
    <View
       id="View14">
       <property
@@ -128,5 +117,16 @@
          name="fromOutcome">backFromEdit</property>
       <property
          name="sdm:polyPoints">L54,404.1534,470.94824,237.0,305.32715,R58</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase11"
+      from="View2">
+      <property
+         name="tosrcid">__2</property>
+      <property
+         name="fromOutcome">*</property>
+      <property
+         name="fromsrcid">__1</property>
    </ControlFlowCase>
 </SDM>

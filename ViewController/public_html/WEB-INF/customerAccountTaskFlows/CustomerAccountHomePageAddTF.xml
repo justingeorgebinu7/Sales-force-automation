@@ -30,6 +30,16 @@
       </task-flow-reference>
       <run-as-dialog/>
     </task-flow-call>
+    <task-flow-call id="AccountContactDrillDown">
+      <task-flow-reference>
+        <document>/WEB-INF/customerAccountTaskFlows/AccountContactDrillDown.xml</document>
+        <id>AccountContactDrillDown</id>
+      </task-flow-reference>
+      <input-parameter id="__11">
+        <name>selectedRow</name>
+        <value>#{pageFlowScope.currRow}</value>
+      </input-parameter>
+    </task-flow-call>
     <control-flow-rule id="__5">
       <from-activity-id>AccountSearchableHomepagw</from-activity-id>
       <control-flow-case id="__6">
@@ -50,6 +60,10 @@
       <control-flow-case id="__3">
         <from-outcome>backFromMenu</from-outcome>
         <to-activity-id>AccountSearchableHomepagw</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__9">
+        <from-outcome>ContactDrill</from-outcome>
+        <to-activity-id>AccountContactDrillDown</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <control-flow-rule id="__4">

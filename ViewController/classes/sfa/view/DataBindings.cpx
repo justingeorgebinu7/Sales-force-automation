@@ -481,6 +481,8 @@
           usageId="sfa_view_deleteCategory_deleteCategory_CommitPageDef"/>
     <page path="/WEB-INF/Productcatalog/createCategory.xml#createCategory@CreateInsert"
           usageId="sfa_view_createCategory_createCategory_CreateInsertPageDef"/>
+    <page path="/WEB-INF/customerAccountTaskFlows/AccountContactDrillDown.xml#AccountContactDrillDown@SetCurrentRowWithKeyValue"
+          usageId="sfa_view_AccountContactDrillDown_AccountContactDrillDown_SetCurrentRowWithKeyValuePageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="sfa_view_untitled2PageDef" path="sfa.view.pageDefs.untitled2PageDef"/>
@@ -954,6 +956,8 @@
           path="Productcatalog.deleteCategory_deleteCategory_CommitPageDef"/>
     <page id="sfa_view_createCategory_createCategory_CreateInsertPageDef"
           path="Productcatalog.createCategory_createCategory_CreateInsertPageDef"/>
+    <page id="sfa_view_AccountContactDrillDown_AccountContactDrillDown_SetCurrentRowWithKeyValuePageDef"
+          path="customerAccountTaskFlows.AccountContactDrillDown_AccountContactDrillDown_SetCurrentRowWithKeyValuePageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="sfa.model.entities"
