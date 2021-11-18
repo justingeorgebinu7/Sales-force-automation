@@ -19,13 +19,9 @@ af|inputFile {
     margin: 30px 5px;
 }
 
-/*.TagSearchIconHidden af|inputListOfValues::search-icon-style {
-    display: none;
-}*/
-af|inputComboboxListOfValues::search{
+af|inputComboboxListOfValues::search {
     display: none;
 }
-
 
 .navBtn {
     width: 220px;
@@ -44,6 +40,12 @@ af|table {
     border: none;
 }
 
+/*th, th > *  >* , th > * > *>*{
+background-color:#357 !important;
+border:none !important;
+color: white !important;
+}*/
+
 af|column::data-cell {
     color: black;
     background-color: #fff;
@@ -51,16 +53,11 @@ af|column::data-cell {
 }
 
 af|column::banded-data-cell {
-    color: maroon;
-    background-color: red;
 }
 
 af|column::column-header-cell {
-    /*background-color: #789;*/
-
     padding: 10px 5px;
     text-align: center;
-    /*color: #fff;*/
 }
 
 af|panelSpringboard::item {
@@ -82,8 +79,6 @@ af|panelSpringboard::item-text {
 af|panelSpringboard::body {
     margin-top: 20px;
     padding: 20px 30px;
-    margin-left: 150px;
-    margin-right: 150px;
     border-left: 1px solid #ddd;
     border-right: 1px solid #ddd;
     overflow-y: auto;
@@ -92,16 +87,69 @@ af|panelSpringboard::body {
     /*border:none;*/
 }
 
+
+/*PANEL TABBED*/
+
 af|panelTabbed {
     padding-bottom: 20px;
     padding-right: 20px;
 }
 
-af|panelTabbed::tab-text-link, af|panelTabbed::icon-style {
-    /*background-color: #f5ffff;*/
+af|panelTabbed::tab-text-link {
+    background-color: #fff !important;
+    border-bottom: 1px solid #aaa;
+    border-left: 1px solid #aaa;
+    border-radius: 5px 0px 0px 8px;
+    width: 100% !important;
+    color: #149 !important;
 }
 
-af|panelTabbed::access-key, af|panelTabbed::body, af|panelTabbed::body-end, af|panelTabbed::body-start, af|panelTabbed::bottom-conveyor-belt-indicator, af|panelTabbed::content, af|panelTabbed::content, af|panelTabbed::conveyor-belt-container, af|panelTabbed::disclosed-remove-disabled-icon, af|panelTabbed::disabled-remove-icon-style, af|panelTabbed::droplist-indicator, af|panelTabbed::end-conveyor-belt-indicator, af|panelTabbed::end-overflow-icon, af|panelTabbed::end-overflow-indicator, af|panelTabbed::footer, af|panelTabbed::header, af|panelTabbed::icon-style, af|panelTabbed::remove-disabled-icon, af|panelTabbed::start-conveyor-belt-indicator, af|panelTabbed::start-overflow-icon, af|panelTabbed::start-overflow-indicator, af|panelTabbed::tab, af|panelTabbed::tab-content, af|panelTabbed::tab-text-link, af|panelTabbed::tabs, af|panelTabbed::toggle, af|panelTabbed::toggle-icon-style, af|panelTabbed::top-conveyor-belt-indicator {
+af|panelTabbed::tab-text-link {
+    /*border-bottom: 2px solid white !important;*/
+}
+
+af|panelTabbed::body{
+border-right:none !important;
+border-bottom:none !important;
+border-top:none !important;
+padding-left:30px;
+}
+
+af|panelTabbed::icon-style {
+    display: none;
+}
+af|panelTabbed::tab-content {
+    background-color: transparent !important;
+    text-align: center !important;
+    overflow: hidden;
+}
+
+af|panelTabbed::conveyor-belt-content > div > div > a > .p_AFSelected {
+    background-color: #357 !important;
+    width: 100% !important;
+    color: #fff !important;
+    border: none;
+    border-color: transparent;
+}
+
+af|showDetailItem {
+    background-color: #ffffff !important;
+    border-radius: 10px !important;
+    min-height: 50vh !important;
+}
+
+af|panelTabbed::tab {
+    margin: 7px 0px;
+}
+
+af|panelTabbed::tab, af|panelTabbed::tab-content {
+    /*border-color:transparent !important;*/
+
+    border-left: none !important;
+    box-shadow: 0 0 0 0 !important;
+}
+
+af|panelTabbed::access-key, af|panelTabbed::body, af|panelTabbed::body-end, af|panelTabbed::body-start, af|panelTabbed::bottom-conveyor-belt-indicator, af|panelTabbed::content, af|panelTabbed::content, af|panelTabbed::conveyor-belt-container, af|panelTabbed::disclosed-remove-disabled-icon, af|panelTabbed::disabled-remove-icon-style, af|panelTabbed::droplist-indicator, af|panelTabbed::end-conveyor-belt-indicator, af|panelTabbed::end-overflow-icon, af|panelTabbed::end-overflow-indicator, af|panelTabbed::footer, af|panelTabbed::header, af|panelTabbed::icon-style, af|panelTabbed::remove-disabled-icon, af|panelTabbed::start-conveyor-belt-indicator, af|panelTabbed::start-overflow-icon, af|panelTabbed::start-overflow-indicator, af|panelTabbed::tab-text-link, af|panelTabbed::tabs, af|panelTabbed::toggle, af|panelTabbed::toggle-icon-style, af|panelTabbed::top-conveyor-belt-indicator {
     /*color: white;*/
 }
 
@@ -116,4 +164,7 @@ af|inputText::content {
 
 af|panelBox {
     border: none;
+    background-color:green !important;
 }
+
+/*END OF PANEL TABBED*/
