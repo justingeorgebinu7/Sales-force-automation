@@ -40,6 +40,18 @@
         <value>#{pageFlowScope.currRow}</value>
       </input-parameter>
     </task-flow-call>
+    <task-flow-call id="createInsertContactForAccountTF">
+      <task-flow-reference>
+        <document>/WEB-INF/customerAccountTaskFlows/createInsertContactForAccountTF.xml</document>
+        <id>createInsertContactForAccountTF</id>
+      </task-flow-reference>
+    </task-flow-call>
+    <task-flow-call id="deleteContactTF1">
+      <task-flow-reference>
+        <document>/WEB-INF/customerAccountTaskFlows/deleteContactTF.xml</document>
+        <id>deleteContactTF</id>
+      </task-flow-reference>
+    </task-flow-call>
     <control-flow-rule id="__5">
       <from-activity-id>AccountSearchableHomepagw</from-activity-id>
       <control-flow-case id="__6">
@@ -65,12 +77,23 @@
         <from-outcome>ContactDrill</from-outcome>
         <to-activity-id>AccountContactDrillDown</to-activity-id>
       </control-flow-case>
+      <control-flow-case id="__12">
+        <from-outcome>createContactDrill</from-outcome>
+        <to-activity-id>createInsertContactForAccountTF</to-activity-id>
+      </control-flow-case>
     </control-flow-rule>
     <control-flow-rule id="__4">
       <from-activity-id>AccountSearchableHomepagw</from-activity-id>
       <control-flow-case id="__8">
         <from-outcome>deleteCustomerAccountTF1</from-outcome>
         <to-activity-id>deleteCustomerAccountTF1</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__13">
+      <from-activity-id>CustomerAccountHomePageMenu</from-activity-id>
+      <control-flow-case id="__14">
+        <from-outcome>deleteContactTF1</from-outcome>
+        <to-activity-id>deleteContactTF1</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <use-page-fragments/>

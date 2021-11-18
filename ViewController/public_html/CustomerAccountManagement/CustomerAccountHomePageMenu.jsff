@@ -67,6 +67,8 @@
                                shortDesc="#{bindings.CustomercontactsView2.hints.Isprimarycontact.tooltip}" id="ot6"/>
               </af:column>
             </af:table>
+            <af:button text="Add" id="b1" action="createContactDrill"/>
+            <af:button text="Delete" action="deleteContactTF1" id="b2"/>
           </af:showDetailItem>
           <af:showDetailItem id="sdi4" text="Task">
             <af:region value="#{bindings.taskCustomerAccount1.regionModel}" id="r2"/>
