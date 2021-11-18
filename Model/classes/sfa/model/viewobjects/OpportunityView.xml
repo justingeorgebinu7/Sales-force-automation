@@ -253,8 +253,6 @@
           ResId="sfa.model.viewobjects.OpportunityView.Budgetavailable_LABEL"/>
         <DISPLAYWIDTH
           Value="10"/>
-        <FMT_FORMATTER
-          ResId="sfa.model.viewobjects.OpportunityView.Budgetavailable_FMT_FORMATTER"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>

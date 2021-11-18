@@ -17,6 +17,7 @@
           <Item Value="Winprobability"/>
           <Item Value="Salesmethod"/>
           <Item Value="Salesstage"/>
+          <Item Value="Primarycontact"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

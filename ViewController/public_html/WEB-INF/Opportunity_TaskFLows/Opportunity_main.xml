@@ -44,6 +44,16 @@
         <id>OM_FileDelete</id>
       </task-flow-reference>
     </task-flow-call>
+    <task-flow-call id="AccountContactDrillDown">
+      <task-flow-reference>
+        <document>/WEB-INF/customerAccountTaskFlows/AccountContactDrillDown.xml</document>
+        <id>AccountContactDrillDown</id>
+      </task-flow-reference>
+      <input-parameter id="__12">
+        <name>selectedRow</name>
+        <value>#{pageFlowScope.currRow}</value>
+      </input-parameter>
+    </task-flow-call>
     <control-flow-rule id="__1">
       <from-activity-id>OM_home</from-activity-id>
       <control-flow-case id="__2">
@@ -57,6 +67,10 @@
       <control-flow-case id="__9">
         <from-outcome>addOpportunity</from-outcome>
         <to-activity-id>createOpportunity</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__11">
+        <from-outcome>contactDrilldown</from-outcome>
+        <to-activity-id>AccountContactDrillDown</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <control-flow-rule id="__3">
