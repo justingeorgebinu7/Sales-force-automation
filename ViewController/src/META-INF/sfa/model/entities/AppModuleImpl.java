@@ -750,11 +750,30 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
             String prodidstr=prodid.toString();
             
             if(prodidstr.equals(pidStr)) {
-               
+                           
                 Object p=r.getAttribute("Price");
+                int pr=Integer.parseInt(p.toString());
                 DCIteratorBinding it = (DCIteratorBinding)BindingContext.getCurrent().getCurrentBindingsEntry().get("RevenueitemView2Iterator");   
                 RowSetIterator rsIter = it .getRowSetIterator();
                 Row rowObj = rsIter .getCurrentRow();
+                Object c= rowObj.getAttribute("Currency");
+                if(c!=null)
+                {
+                String cStr=c.toString();
+              
+                
+                if(cStr!=null) {
+                    if(!(cStr.equals("INR"))) {
+                        if(cStr.equals("USD")) {
+                            pr*=75;
+                        }
+                        else if(cStr.equals("EUR")) {
+                            pr*=85;
+                        }
+                        p=(Integer)pr;
+                    }
+                }
+                }
                 rowObj.setAttribute("Estimatedprice", p);
                 rs.closeRowSet();
                 break;
