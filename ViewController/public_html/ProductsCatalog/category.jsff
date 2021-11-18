@@ -32,4 +32,5 @@
     </af:dialog>
   </af:popup>
   <af:button text="Delete" action="deleteCategory1" id="b2"/>
+  <af:button text="Back" id="b3" action="exitCategory"/>
 </ui:composition>

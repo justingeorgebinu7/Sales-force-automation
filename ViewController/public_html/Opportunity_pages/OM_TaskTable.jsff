@@ -8,7 +8,7 @@
             fetchSize="#{bindings.TaskView2.rangeSize}" filterModel="#{bindings.TaskView2Query.queryDescriptor}"
             filterVisible="true" queryListener="#{bindings.TaskView2Query.processQuery}" varStatus="vs" id="t1">
     <af:column sortProperty="#{bindings.TaskView2.hints.Name.name}" filterable="true" sortable="true"
-               headerText="#{bindings.TaskView2.hints.Name.label}" id="c1">
+               headerText="#{bindings.TaskView2.hints.Name.label}" id="c1" width="100%">
       <af:link shortDesc="#{bindings.TaskView2.hints.Name.tooltip}" id="ot1" text="#{row.Name}" action="editTask"/>
     </af:column>
     <af:column sortProperty="#{bindings.TaskView2.hints.Description.name}" filterable="true" sortable="true"

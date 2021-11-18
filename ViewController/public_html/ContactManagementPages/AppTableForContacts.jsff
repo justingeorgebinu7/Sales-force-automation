@@ -11,7 +11,7 @@
             queryListener="#{bindings.AppointmentsView10Query.processQuery}" varStatus="vs" id="t2"
             columnStretching="last">
     <af:column sortProperty="#{bindings.AppointmentsView10.hints.Name.name}" filterable="true" sortable="true"
-               headerText="#{bindings.AppointmentsView10.hints.Name.label}" id="c6">
+               headerText="#{bindings.AppointmentsView10.hints.Name.label}" id="c6" width="100%">
       <af:link shortDesc="#{bindings.AppointmentsView10.hints.Name.tooltip}" id="ot6" text="#{row.Name}"
                action="editAppointmentNew"/>
     </af:column>

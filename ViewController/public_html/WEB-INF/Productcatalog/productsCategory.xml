@@ -28,6 +28,11 @@
         <id>deleteCategory</id>
       </task-flow-reference>
     </task-flow-call>
+    <task-flow-return id="taskFlowReturn1">
+      <outcome>
+        <name>taskFlowReturn1</name>
+      </outcome>
+    </task-flow-return>
     <control-flow-rule id="__1">
       <from-activity-id>category</from-activity-id>
       <control-flow-case id="__2">
@@ -37,6 +42,10 @@
       <control-flow-case id="__3">
         <from-outcome>editCategory</from-outcome>
         <to-activity-id>editCategory</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__9">
+        <from-outcome>exitCategory</from-outcome>
+        <to-activity-id>taskFlowReturn1</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <control-flow-rule id="__4">

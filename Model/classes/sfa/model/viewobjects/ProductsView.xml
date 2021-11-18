@@ -96,14 +96,7 @@
     PrecisionRule="true"
     EntityAttrName="Price"
     EntityUsage="Products"
-    AliasName="PRICE">
-    <Properties>
-      <SchemaBasedProperties>
-        <FMT_FORMATTER
-          ResId="sfa.model.viewobjects.ProductsView.Price_FMT_FORMATTER"/>
-      </SchemaBasedProperties>
-    </Properties>
-  </ViewAttribute>
+    AliasName="PRICE"/>
   <ViewAttribute
     Name="Category"
     PrecisionRule="true"

@@ -12,7 +12,7 @@
               filterModel="#{bindings.CustomercontactsView1Query.queryDescriptor}" filterVisible="true"
               queryListener="#{bindings.CustomercontactsView1Query.processQuery}" varStatus="vs" id="t1">
       <af:column sortProperty="#{bindings.CustomercontactsView1.hints.Name.name}" filterable="true" sortable="true"
-                 headerText="#{bindings.CustomercontactsView1.hints.Name.label}" id="c1" width="100">
+                 headerText="#{bindings.CustomercontactsView1.hints.Name.label}" id="c1" width="100%">
         <af:link shortDesc="#{bindings.CustomercontactsView1.hints.Name.tooltip}" id="ot1" text="#{row.Name}"
                  action="toContactMenu"/>
       </af:column>

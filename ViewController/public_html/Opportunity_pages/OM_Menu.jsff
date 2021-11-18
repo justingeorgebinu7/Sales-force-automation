@@ -27,13 +27,37 @@
                         id="it1">
             <f:validator binding="#{bindings.Title.validator}"/>
           </af:inputText>
-          <af:inputText value="#{bindings.Winprobability.inputValue}" label="#{bindings.Winprobability.hints.label}"
-                        required="#{bindings.Winprobability.hints.mandatory}"
-                        columns="#{bindings.Winprobability.hints.displayWidth}"
-                        maximumLength="#{bindings.Winprobability.hints.precision}"
-                        shortDesc="#{bindings.Winprobability.hints.tooltip}" id="it3">
-            <f:validator binding="#{bindings.Winprobability.validator}"/>
-            <af:convertNumber groupingUsed="false" pattern="#{bindings.Winprobability.format}"/>
+          <af:inputComboboxListOfValues id="accountidId"
+                                        popupTitle="Search and Select: #{bindings.Accountid.hints.label}"
+                                        value="#{bindings.Accountid.inputValue}"
+                                        label="#{bindings.Accountid.hints.label}"
+                                        model="#{bindings.Accountid.listOfValuesModel}"
+                                        required="#{bindings.Accountid.hints.mandatory}"
+                                        columns="#{bindings.Accountid.hints.displayWidth}"
+                                        shortDesc="#{bindings.Accountid.hints.tooltip}"
+                                        converter="#{bindings.Accountid.converter}">
+            <f:validator binding="#{bindings.Accountid.validator}"/>
+            <!--<af:convertNumber groupingUsed="false" pattern="#{bindings.Accountid.format}"/>-->
+          </af:inputComboboxListOfValues>
+          <af:inputComboboxListOfValues id="primarycontactId"
+                                        popupTitle="Search and Select: #{bindings.Primarycontact.hints.label}"
+                                        value="#{bindings.Primarycontact.inputValue}"
+                                        label="#{bindings.Primarycontact.hints.label}"
+                                        model="#{bindings.Primarycontact.listOfValuesModel}"
+                                        required="#{bindings.Primarycontact.hints.mandatory}"
+                                        columns="#{bindings.Primarycontact.hints.displayWidth}"
+                                        shortDesc="#{bindings.Primarycontact.hints.tooltip}"
+                                        converter="#{bindings.Primarycontact.converter}">
+            <f:validator binding="#{bindings.Primarycontact.validator}"/>
+            <!--<af:convertNumber groupingUsed="false" pattern="#{bindings.Primarycontact.format}"/>-->
+          </af:inputComboboxListOfValues>
+          <af:inputText value="#{bindings.Budgetavailable.inputValue}" label="#{bindings.Budgetavailable.hints.label}"
+                        required="#{bindings.Budgetavailable.hints.mandatory}"
+                        columns="#{bindings.Budgetavailable.hints.displayWidth}"
+                        maximumLength="#{bindings.Budgetavailable.hints.precision}"
+                        shortDesc="#{bindings.Budgetavailable.hints.tooltip}" id="it9">
+            <f:validator binding="#{bindings.Budgetavailable.validator}"/>
+            <af:convertNumber groupingUsed="false" pattern="#{bindings.Budgetavailable.format}"/>
           </af:inputText>
           <af:inputText value="#{bindings.Totalrevenue.inputValue}" label="#{bindings.Totalrevenue.hints.label}"
                         required="#{bindings.Totalrevenue.hints.mandatory}"
@@ -59,13 +83,12 @@
             <f:validator binding="#{bindings.Worstcaserevenue.validator}"/>
             <af:convertNumber groupingUsed="false" pattern="#{bindings.Worstcaserevenue.format}"/>
           </af:inputText>
-          <af:inputText value="#{bindings.Budgetavailable.inputValue}" label="#{bindings.Budgetavailable.hints.label}"
-                        required="#{bindings.Budgetavailable.hints.mandatory}"
-                        columns="#{bindings.Budgetavailable.hints.displayWidth}"
-                        maximumLength="#{bindings.Budgetavailable.hints.precision}"
-                        shortDesc="#{bindings.Budgetavailable.hints.tooltip}" id="it9">
-            <f:validator binding="#{bindings.Budgetavailable.validator}"/>
-            <af:convertNumber groupingUsed="false" pattern="#{bindings.Budgetavailable.format}"/>
+          <af:inputText value="#{bindings.Winprobability.inputValue}" label="#{bindings.Winprobability.hints.label}"
+                        required="#{bindings.Winprobability.hints.mandatory}" columns="3"
+                        maximumLength="#{bindings.Winprobability.hints.precision}"
+                        shortDesc="#{bindings.Winprobability.hints.tooltip}" id="it3">
+            <f:validator binding="#{bindings.Winprobability.validator}"/>
+            <af:convertNumber groupingUsed="false" pattern="#{bindings.Winprobability.format}"/>
           </af:inputText>
           <af:inputDate value="#{bindings.Closedate.inputValue}" label="#{bindings.Closedate.hints.label}"
                         required="#{bindings.Closedate.hints.mandatory}"
@@ -74,18 +97,6 @@
             <f:validator binding="#{bindings.Closedate.validator}"/>
             <af:convertDateTime pattern="#{bindings.Closedate.format}"/>
           </af:inputDate>
-          <af:inputComboboxListOfValues id="primarycontactId"
-                                        popupTitle="Search and Select: #{bindings.Primarycontact.hints.label}"
-                                        value="#{bindings.Primarycontact.inputValue}"
-                                        label="#{bindings.Primarycontact.hints.label}"
-                                        model="#{bindings.Primarycontact.listOfValuesModel}"
-                                        required="#{bindings.Primarycontact.hints.mandatory}"
-                                        columns="#{bindings.Primarycontact.hints.displayWidth}"
-                                        shortDesc="#{bindings.Primarycontact.hints.tooltip}"
-                                        converter="#{bindings.Primarycontact.converter}">
-            <f:validator binding="#{bindings.Primarycontact.validator}"/>
-            <!--<af:convertNumber groupingUsed="false" pattern="#{bindings.Primarycontact.format}"/>-->
-          </af:inputComboboxListOfValues>
           <af:inputComboboxListOfValues id="risklevelId"
                                         popupTitle="Search and Select: #{bindings.Risklevel.hints.label}"
                                         value="#{bindings.Risklevel.inputValue}"
@@ -115,18 +126,6 @@
                                         columns="20"
                                         shortDesc="#{bindings.Salesstage.hints.tooltip}">
             <f:validator binding="#{bindings.Salesstage.validator}"/>
-          </af:inputComboboxListOfValues>
-          <af:inputComboboxListOfValues id="accountidId"
-                                        popupTitle="Search and Select: #{bindings.Accountid.hints.label}"
-                                        value="#{bindings.Accountid.inputValue}"
-                                        label="#{bindings.Accountid.hints.label}"
-                                        model="#{bindings.Accountid.listOfValuesModel}"
-                                        required="#{bindings.Accountid.hints.mandatory}"
-                                        columns="#{bindings.Accountid.hints.displayWidth}"
-                                        shortDesc="#{bindings.Accountid.hints.tooltip}"
-                                        converter="#{bindings.Accountid.converter}">
-            <f:validator binding="#{bindings.Accountid.validator}"/>
-            <!--<af:convertNumber groupingUsed="false" pattern="#{bindings.Accountid.format}"/>-->
           </af:inputComboboxListOfValues>
           <af:inputText value="#{bindings.Description.inputValue}" label="#{bindings.Description.hints.label}"
                         required="#{bindings.Description.hints.mandatory}" columns="40"

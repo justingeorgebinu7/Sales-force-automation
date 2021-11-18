@@ -116,4 +116,29 @@
       <property
          name="sdm:polyPoints">L50,209.0,203.0918,69.03027,124.0459,B50</property>
    </ControlFlowCase>
+   <TaskFlowReturn
+      id="TaskFlowReturn10">
+      <property
+         name="activityId">taskFlowReturn1</property>
+      <property
+         name="x">538.0</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>taskFlowReturn1&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Return&lt;/p>&lt;p>Outcome:  taskFlowReturn1&lt;/p></property>
+      <property
+         name="y">71.24707</property>
+      <property
+         name="finish">true</property>
+      <property
+         name="exceptionHandler">false</property>
+   </TaskFlowReturn>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase11"
+      from="View2"
+      to="TaskFlowReturn10">
+      <property
+         name="fromOutcome">exitCategory</property>
+      <property
+         name="sdm:polyPoints">R38,291.0,192.5918,497.0,70.896484,L50</property>
+   </ControlFlowCase>
 </SDM>
