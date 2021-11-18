@@ -20,6 +20,7 @@
           <Item Value="Primarycontact"/>
           <Item Value="Name"/>
           <Item Value="Name1"/>
+          <Item Value="Accountid"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

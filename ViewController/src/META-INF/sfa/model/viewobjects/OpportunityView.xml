@@ -30,6 +30,10 @@
     Name="CustomercontactsView1"
     ViewObjectName="sfa.model.viewobjects.CustomercontactsView"
     RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="CustomeraccountView1"
+    ViewObjectName="sfa.model.viewobjects.CustomeraccountView"
+    RowLevelBinds="true"/>
   <ListBinding
     Name="LOV_Salesstage"
     ListVOName="SalesStage1"
@@ -107,6 +111,24 @@
     <DisplayCriteria
       Hint="showAndExecute"/>
   </ListBinding>
+  <ListBinding
+    Name="LOV_Accountid"
+    ListVOName="CustomeraccountView1"
+    NullValueFlag="none"
+    MRUCount="0"
+    ComboRowCountHint="10">
+    <AttrArray Name="AttrNames">
+      <Item Value="Accountid"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Customeraccountid"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <EntityUsage
     Name="Opportunity"
     Entity="sfa.model.entities.Opportunity"/>
@@ -167,7 +189,17 @@
     PrecisionRule="true"
     EntityAttrName="Accountid"
     EntityUsage="Opportunity"
-    AliasName="ACCOUNTID"/>
+    AliasName="ACCOUNTID"
+    LOVName="LOV_Accountid">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo_lov"/>
+        <LABEL
+          ResId="sfa.model.viewobjects.OpportunityView.Accountid_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Description"
     PrecisionRule="true"

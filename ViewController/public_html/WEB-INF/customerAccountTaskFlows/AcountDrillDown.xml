@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="AcountDrillDown">
+    <default-activity>SetCurrentRowWithKeyValue1</default-activity>
+    <data-control-scope>
+      <shared/>
+    </data-control-scope>
+    <input-parameter-definition id="__4">
+      <name>selectedAccount</name>
+      <value>#{pageFlowScope.selectedAccount}</value>
+      <class>java.lang.String</class>
+      <required/>
+    </input-parameter-definition>
+    <view id="CustomerAccountHomePageMenu">
+      <page>/CustomerAccountManagement/CustomerAccountHomePageMenu.jsff</page>
+    </view>
+    <task-flow-call id="AccountContactDrillDown">
+      <task-flow-reference>
+        <document>/WEB-INF/customerAccountTaskFlows/AccountContactDrillDown.xml</document>
+        <id>AccountContactDrillDown</id>
+      </task-flow-reference>
+      <input-parameter id="__9">
+        <name>selectedRow</name>
+        <value>#{pageFlowScope.currRow}</value>
+      </input-parameter>
+    </task-flow-call>
+    <task-flow-return id="taskFlowReturn1">
+      <outcome>
+        <name>taskFlowReturn1</name>
+        <commit/>
+      </outcome>
+    </task-flow-return>
+    <method-call id="SetCurrentRowWithKeyValue1">
+      <method>#{bindings.setCurrentRowWithKeyValue.execute}</method>
+      <outcome>
+        <fixed-outcome>setCurrentRowWithKeyValue</fixed-outcome>
+      </outcome>
+    </method-call>
+    <control-flow-rule id="__1">
+      <from-activity-id>CustomerAccountHomePageMenu</from-activity-id>
+      <control-flow-case id="__2">
+        <from-outcome>ContactDrill</from-outcome>
+        <to-activity-id>AccountContactDrillDown</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__3">
+        <from-outcome>backFromMenu</from-outcome>
+        <to-activity-id>taskFlowReturn1</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__7">
+      <from-activity-id>SetCurrentRowWithKeyValue1</from-activity-id>
+      <control-flow-case id="__8">
+        <from-outcome>setCurrentRowWithKeyValue</from-outcome>
+        <to-activity-id>CustomerAccountHomePageMenu</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <use-page-fragments/>
+  </task-flow-definition>
+</adfc-config>

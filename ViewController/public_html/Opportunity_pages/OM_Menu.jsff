@@ -20,7 +20,7 @@
     <af:panelTabbed position="start" id="pt2" verticalTabMode="iconAndText">
       <af:showDetailItem id="sdi1" text="Manage Opportunity" disclosed="true"
                          disclosureListener="#{OppMenuBean.totalRevenue}">
-        <af:panelFormLayout id="pfl1" rows="6">
+        <af:panelFormLayout id="pfl1" rows="7">
           <af:inputText value="#{bindings.Title.inputValue}" label="#{bindings.Title.hints.label}"
                         required="#{bindings.Title.hints.mandatory}" columns="#{bindings.Title.hints.displayWidth}"
                         maximumLength="#{bindings.Title.hints.precision}" shortDesc="#{bindings.Title.hints.tooltip}"
@@ -115,6 +115,18 @@
                                         columns="20"
                                         shortDesc="#{bindings.Salesstage.hints.tooltip}">
             <f:validator binding="#{bindings.Salesstage.validator}"/>
+          </af:inputComboboxListOfValues>
+          <af:inputComboboxListOfValues id="accountidId"
+                                        popupTitle="Search and Select: #{bindings.Accountid.hints.label}"
+                                        value="#{bindings.Accountid.inputValue}"
+                                        label="#{bindings.Accountid.hints.label}"
+                                        model="#{bindings.Accountid.listOfValuesModel}"
+                                        required="#{bindings.Accountid.hints.mandatory}"
+                                        columns="#{bindings.Accountid.hints.displayWidth}"
+                                        shortDesc="#{bindings.Accountid.hints.tooltip}"
+                                        converter="#{bindings.Accountid.converter}">
+            <f:validator binding="#{bindings.Accountid.validator}"/>
+            <!--<af:convertNumber groupingUsed="false" pattern="#{bindings.Accountid.format}"/>-->
           </af:inputComboboxListOfValues>
           <af:inputText value="#{bindings.Description.inputValue}" label="#{bindings.Description.hints.label}"
                         required="#{bindings.Description.hints.mandatory}" columns="40"

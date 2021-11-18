@@ -9,25 +9,22 @@
             filterModel="#{bindings.OpportunityView1Query.queryDescriptor}" filterVisible="true"
             queryListener="#{bindings.OpportunityView1Query.processQuery}" varStatus="vs" id="t1"
             columnStretching="none">
+    <af:column sortProperty="#{bindings.OpportunityView1.hints.Title.name}" filterable="true" sortable="true"
+               headerText="#{bindings.OpportunityView1.hints.Title.label}" id="c1" width="100%">
+      <af:link shortDesc="#{bindings.OpportunityView1.hints.Title.tooltip}" id="ot1" text="#{row.Title}"
+               action="toMenu"/>
+    </af:column>
     <af:column headerText="#{bindings.OpportunityView1.hints.Name.label}" id="c7">
-      <af:outputText value="#{row.Name}" shortDesc="#{bindings.OpportunityView1.hints.Name.tooltip}" id="ot6"/>
+      <af:link shortDesc="#{bindings.OpportunityView1.hints.Name.tooltip}" id="ot6" text="#{row.Name}"
+               action="accountDrillDown">
+        <af:setPropertyListener from="#{row.Accountid}" to="#{pageFlowScope.Accountid}" type="action"/>
+      </af:link>
     </af:column>
     <af:column headerText="#{bindings.OpportunityView1.hints.Name1.label}" id="c8">
       <af:link shortDesc="#{bindings.OpportunityView1.hints.Name1.tooltip}" id="ot7" text="#{row.Name1}"
                action="contactDrilldown">
         <af:setPropertyListener from="#{row.Primarycontact}" to="#{pageFlowScope.currRow}" type="action"/>
       </af:link>
-    </af:column>
-    <af:column headerText="#{bindings.OpportunityView1.hints.Primarycontact.label}" id="c6">
-      <af:link shortDesc="#{bindings.OpportunityView1.hints.Primarycontact.tooltip}" id="ot3"
-               text="#{row.Primarycontact}" action="contactDrilldown">
-        <af:setPropertyListener to="#{pageFlowScope.currRow}" from="#{row.Primarycontact}" type="action"/>
-      </af:link>
-    </af:column>
-    <af:column sortProperty="#{bindings.OpportunityView1.hints.Title.name}" filterable="true" sortable="true"
-               headerText="#{bindings.OpportunityView1.hints.Title.label}" id="c1" width="100%">
-      <af:link shortDesc="#{bindings.OpportunityView1.hints.Title.tooltip}" id="ot1" text="#{row.Title}"
-               action="toMenu"/>
     </af:column>
     <af:column sortProperty="#{bindings.OpportunityView1.hints.Description.name}" filterable="true" sortable="true"
                headerText="#{bindings.OpportunityView1.hints.Description.label}" id="c2" width="271">

@@ -483,6 +483,8 @@
           usageId="sfa_view_createCategory_createCategory_CreateInsertPageDef"/>
     <page path="/WEB-INF/customerAccountTaskFlows/AccountContactDrillDown.xml#AccountContactDrillDown@SetCurrentRowWithKeyValue"
           usageId="sfa_view_AccountContactDrillDown_AccountContactDrillDown_SetCurrentRowWithKeyValuePageDef"/>
+    <page path="/WEB-INF/customerAccountTaskFlows/AcountDrillDown.xml#AcountDrillDown@SetCurrentRowWithKeyValue1"
+          usageId="sfa_view_AcountDrillDown_AcountDrillDown_SetCurrentRowWithKeyValue1PageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="sfa_view_untitled2PageDef" path="sfa.view.pageDefs.untitled2PageDef"/>
@@ -958,6 +960,8 @@
           path="Productcatalog.createCategory_createCategory_CreateInsertPageDef"/>
     <page id="sfa_view_AccountContactDrillDown_AccountContactDrillDown_SetCurrentRowWithKeyValuePageDef"
           path="customerAccountTaskFlows.AccountContactDrillDown_AccountContactDrillDown_SetCurrentRowWithKeyValuePageDef"/>
+    <page id="sfa_view_AcountDrillDown_AcountDrillDown_SetCurrentRowWithKeyValue1PageDef"
+          path="customerAccountTaskFlows.AcountDrillDown_AcountDrillDown_SetCurrentRowWithKeyValue1PageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="sfa.model.entities"

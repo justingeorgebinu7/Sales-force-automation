@@ -87,5 +87,6 @@
         <Item Value="Totalrevenue"/>
       </AttrNames>
     </attributeValues>
+    <listOfValues IterBinding="OpportunityView1Iterator" StaticList="false" Uses="LOV_Accountid" id="Accountid"/>
   </bindings>
 </pageDefinition>

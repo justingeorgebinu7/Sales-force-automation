@@ -48,5 +48,6 @@
     <listOfValues IterBinding="OpportunityView1Iterator" StaticList="false" Uses="LOV_Salesstage" id="Salesstage"/>
     <listOfValues IterBinding="OpportunityView1Iterator" StaticList="false" Uses="LOV_Risklevel" id="Risklevel"/>
     <listOfValues IterBinding="OpportunityView1Iterator" StaticList="false" Uses="LOV_Salesmethod" id="Salesmethod"/>
+    <listOfValues IterBinding="OpportunityView1Iterator" StaticList="false" Uses="LOV_Accountid" id="Accountid"/>
   </bindings>
 </pageDefinition>
