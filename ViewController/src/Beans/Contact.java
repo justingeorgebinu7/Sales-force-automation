@@ -51,7 +51,7 @@ public class Contact {
                     Row rowObj = rsIter .getCurrentRow();
                     Object cid=rowObj.getAttribute("Contactid");
                     Object aid=rowObj.getAttribute("Customeraccountid");
-                    
+                    System.out.println(cid.toString());
                     OperationBinding ob = executeOperation("editPrimary");
                     ob.getParamsMap().put("cidStr", cid.toString());
                     //ob.getParamsMap().put("aidStr", aid.toString());

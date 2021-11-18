@@ -61,11 +61,11 @@
                 <af:outputText value="#{row.Email}" shortDesc="#{bindings.CustomercontactsView2.hints.Email.tooltip}"
                                id="ot5"/>
               </af:column>
-              <af:column sortProperty="#{bindings.CustomercontactsView2.hints.Isprimarycontact.name}" filterable="true"
-                         sortable="true" headerText="#{bindings.CustomercontactsView2.hints.Isprimarycontact.label}"
-                         id="c6">
-                <af:outputText value="#{row.Isprimarycontact}"
-                               shortDesc="#{bindings.CustomercontactsView2.hints.Isprimarycontact.tooltip}" id="ot6"/>
+              <af:column headerText="#{bindings.CustomercontactsView2.hints.Isprimarycontact.label}" id="c6">
+                <af:selectBooleanCheckbox value="#{row.bindings.Isprimarycontact.inputValue}"
+                                          label="#{row.bindings.Isprimarycontact.label}"
+                                          shortDesc="#{bindings.CustomercontactsView2.hints.Isprimarycontact.tooltip}"
+                                          id="sbc1" valueChangeListener="#{Contact.wrapper}" autoSubmit="true"/>
               </af:column>
             </af:table>
             <af:panelGridLayout id="pgl1">

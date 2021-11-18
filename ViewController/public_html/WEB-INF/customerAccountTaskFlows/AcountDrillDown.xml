@@ -11,6 +11,11 @@
       <class>java.lang.String</class>
       <required/>
     </input-parameter-definition>
+    <managed-bean id="__11">
+      <managed-bean-name>Contact</managed-bean-name>
+      <managed-bean-class>Beans.Contact</managed-bean-class>
+      <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
     <view id="CustomerAccountHomePageMenu">
       <page>/CustomerAccountManagement/CustomerAccountHomePageMenu.jsff</page>
     </view>
