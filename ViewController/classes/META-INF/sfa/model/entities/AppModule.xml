@@ -779,5 +779,12 @@
         Name="appointmentId"
         Type="int"/>
     </Method>
+    <Method
+      Name="refresh"
+      MethodName="refresh">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+    </Method>
   </ClientInterface>
 </AppModule>

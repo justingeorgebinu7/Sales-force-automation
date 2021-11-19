@@ -487,6 +487,8 @@
           usageId="sfa_view_CreateExternalInviteePageDef"/>
     <page path="/Opportunity_pages/OM_AddIntInvitee.jsf" usageId="sfa_view_OM_AddIntInviteePageDef"/>
     <page path="/Opportunity_pages/OM_AddExtInvitee.jsf" usageId="sfa_view_OM_AddExtInviteePageDef"/>
+    <page path="/WEB-INF/Wrappers/productWrap.xml#productWrap@refresh"
+          usageId="sfa_view_productWrap_productWrap_refreshPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="sfa_view_untitled2PageDef" path="sfa.view.pageDefs.untitled2PageDef"/>
@@ -966,6 +968,7 @@
           path="customerAccountTaskFlows.AcountDrillDown_AcountDrillDown_SetCurrentRowWithKeyValue1PageDef"/>
     <page id="sfa_view_CreateIntForContactPageDef1"
           path="ContactManagementPages.AppointmentNew.CreateIntForContactPageDef"/>
+    <page id="sfa_view_productWrap_productWrap_refreshPageDef" path="Wrappers.productWrap_productWrap_refreshPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="sfa.model.entities"

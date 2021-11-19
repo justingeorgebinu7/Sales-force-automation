@@ -51,9 +51,9 @@
                                     </af:showDetailItem>
                                     <af:showDetailItem text="Product Catalog" id="sdi4"
                                                        icon="https://i.ibb.co/k5JpT8s/unnamed-1.png"
-                                                       disclosureListener="#{viewScope.UserTFBean.startProdManTF}">
+                                                       disclosureListener="#{viewScope.ProductBean.startProduct}">
                                         <af:region value="#{bindings.dynamicRegion2.regionModel}" id="r4"
-                                                   binding="#{viewScope.UserTFBean.dynamicProductMan}"/>
+                                                   binding="#{viewScope.ProductBean.dynamicProduct}"/>
                                     </af:showDetailItem>
                                     <af:showDetailItem text="User Management" id="sd15"
                                                        icon="https://i.ibb.co/0Xfwvzk/41-410871-social-media-management-circle-social-media-marketing-icon-1.png"

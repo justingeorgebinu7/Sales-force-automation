@@ -73,6 +73,7 @@
    <task-flow-descriptor path="WEB-INF/UserManagement/deleteUserRole.xml" id="deleteUserRole" type="task-flow-definition" uses-page-fragments="false" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="unspecified"/>
    <task-flow-descriptor path="WEB-INF/UserManagement/userManagementMain.xml" id="userManagementMain" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="facelets"/>
    <task-flow-descriptor path="WEB-INF/UserManagement/userRoleManagement.xml" id="userRoleManagement" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="facelets"/>
+   <task-flow-descriptor path="WEB-INF/Wrappers/productWrap.xml" id="productWrap" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="facelets"/>
    <task-flow-descriptor path="WEB-INF/customerAccountTaskFlows/AccountContactDrillDown.xml" id="AccountContactDrillDown" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="facelets">
       <input-parameter name="selectedRow"/>
    </task-flow-descriptor>
