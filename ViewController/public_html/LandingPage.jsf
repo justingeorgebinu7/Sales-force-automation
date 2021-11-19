@@ -22,7 +22,7 @@
                         <f:facet name="top"/>
                         <f:facet name="bottom"/>
                         <f:facet name="center">
-                            <af:panelBox id="pb1">
+                            <af:panelBox id="pb1" showDisclosure="false">
                                 <f:facet name="toolbar">
                                     
                                         <af:link text="Logout" id="gl2"

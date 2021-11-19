@@ -34,18 +34,29 @@ af|inputComboboxListOfValues::search {
 }
 
 af|table {
-    border-radius: 0px;
+    border-radius: 10px;
     overflow: hidden;
     background-color: #fdfdfd;
     border: none;
 }
 
-/*th, th > *  >* , th > * > *>*{
-background-color:#357 !important;
-border:none !important;
-color: white !important;
-}*/
+af|table {
+    /*border-bottom:2px solid #357 !important;
+border-right:2px solid #357 !important;
+padding-bottom:10px;*/
 
+    box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.2);
+    /*padding-bottom:15px;*/
+
+    transform: translate(0, -20px);
+    margin-top: 40px;
+    margin-bottom: -15px;
+}
+/*th {
+    background-color: #357  !important;
+    border: 0.3px solid rgba(255, 255, 255, .2) !important;
+    color: white !important;
+}*/
 af|column::data-cell {
     color: black;
     background-color: #fff;
@@ -64,7 +75,8 @@ af|panelSpringboard::item {
     background-color: #fafafa;
     border: .5px solid transparent;
     border-radius: 10px;
-    margin: 0 5px;
+    margin: 0 5px;    
+    /*box-shadow: 3px 3px 2px 0px rgba(0, 0, 0, 0.1);*/
 }
 
 af|panelSpringboard {
@@ -86,10 +98,7 @@ af|panelSpringboard::body {
     height: 70vh;
     /*border:none;*/
 }
-
-
 /*PANEL TABBED*/
-
 af|panelTabbed {
     padding-bottom: 20px;
     padding-right: 20px;
@@ -108,16 +117,18 @@ af|panelTabbed::tab-text-link {
     /*border-bottom: 2px solid white !important;*/
 }
 
-af|panelTabbed::body{
-border-right:none !important;
-border-bottom:none !important;
-border-top:none !important;
-padding-left:30px;
+af|panelTabbed::body {
+    border-right: none !important;
+    border-bottom: none !important;
+    border-top: none !important;
+    padding-left: 30px;
+    /*border-radius: 20px !important;*/
 }
 
 af|panelTabbed::icon-style {
     display: none;
 }
+
 af|panelTabbed::tab-content {
     background-color: transparent !important;
     text-align: center !important;
@@ -159,12 +170,11 @@ af|inputText::content {
     padding: 18px 5px;
     border-radius: 5px;
     border: 0.5px solid #eee;
+    border-left: 2px solid #357 !important;
     box-shadow: 3px 3px 4px -2px rgba(0, 0, 0, 0.2);
 }
 
 af|panelBox {
     border: none;
-    background-color:green !important;
 }
-
 /*END OF PANEL TABBED*/
