@@ -14,6 +14,28 @@
   SelectAllAttributes="false"
   PageIterMode="Full"
   AccessMode="DEFAULT">
+  <ViewAccessor
+    Name="AddressType1"
+    ViewObjectName="sfa.model.viewobjects.staticVo.AddressType"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_Type"
+    ListVOName="AddressType1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Type"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="AddressTypeAttr"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="AddressTypeAttr"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <EntityUsage
     Name="Address"
     Entity="sfa.model.entities.Address"/>
@@ -61,7 +83,15 @@
     PrecisionRule="true"
     EntityAttrName="Type"
     EntityUsage="Address"
-    AliasName="TYPE"/>
+    AliasName="TYPE"
+    LOVName="LOV_Type">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewLinkAccessor
     Name="CustomeraccountView"
     ViewLink="sfa.model.viewobjects.AddressCustomerAccountFkLink"

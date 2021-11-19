@@ -14,6 +14,50 @@
   SelectAllAttributes="false"
   PageIterMode="Full"
   AccessMode="DEFAULT">
+  <ViewAccessor
+    Name="InteractionType1"
+    ViewObjectName="sfa.model.viewobjects.staticVo.InteractionType"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="InteractionDirection1"
+    ViewObjectName="sfa.model.viewobjects.staticVo.InteractionDirection"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_Type"
+    ListVOName="InteractionType1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Type"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="InteractionType"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="InteractionType"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_Direction"
+    ListVOName="InteractionDirection1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Direction"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="InteractionDirection"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="InteractionDirection"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <EntityUsage
     Name="Interaction"
     Entity="sfa.model.entities.Interaction"/>
@@ -30,11 +74,14 @@
     EntityAttrName="Type"
     EntityUsage="Interaction"
     AliasName="TYPE"
-    IsQueriable="false">
+    IsQueriable="false"
+    LOVName="LOV_Type">
     <Properties>
       <SchemaBasedProperties>
         <DISPLAYWIDTH
           Value="20"/>
+        <CONTROLTYPE
+          Value="choice"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
@@ -44,11 +91,14 @@
     EntityAttrName="Direction"
     EntityUsage="Interaction"
     AliasName="DIRECTION"
-    IsQueriable="false">
+    IsQueriable="false"
+    LOVName="LOV_Direction">
     <Properties>
       <SchemaBasedProperties>
         <DISPLAYWIDTH
           Value="10"/>
+        <CONTROLTYPE
+          Value="choice"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>

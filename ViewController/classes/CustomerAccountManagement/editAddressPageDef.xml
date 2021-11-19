@@ -7,11 +7,6 @@
     <iterator Binds="AddressView4" RangeSize="25" DataControl="AppModuleDataControl" id="AddressView4Iterator"/>
   </executables>
   <bindings>
-    <attributeValues IterBinding="AddressView4Iterator" id="Type">
-      <AttrNames>
-        <Item Value="Type"/>
-      </AttrNames>
-    </attributeValues>
     <attributeValues IterBinding="AddressView4Iterator" id="City">
       <AttrNames>
         <Item Value="City"/>
@@ -33,5 +28,6 @@
       </AttrNames>
     </attributeValues>
     <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+    <listOfValues IterBinding="AddressView4Iterator" StaticList="false" Uses="LOV_Type" id="Type1"/>
   </bindings>
 </pageDefinition>

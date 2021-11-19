@@ -17,11 +17,6 @@
         <Item Value="Duedate"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="TaskView3Iterator" id="Priority">
-      <AttrNames>
-        <Item Value="Priority"/>
-      </AttrNames>
-    </attributeValues>
     <attributeValues IterBinding="TaskView3Iterator" id="Description">
       <AttrNames>
         <Item Value="Description"/>
@@ -33,5 +28,6 @@
       </AttrNames>
     </attributeValues>
     <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+    <listOfValues IterBinding="TaskView3Iterator" StaticList="false" Uses="LOV_Priority" id="Priority"/>
   </bindings>
 </pageDefinition>

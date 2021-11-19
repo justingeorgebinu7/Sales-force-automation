@@ -73,6 +73,12 @@
       <SchemaBasedProperties>
         <LABEL
           ResId="sfa.model.entities.Interaction.Startdate_LABEL"/>
+        <FMT_FORMATTER
+          ResId="sfa.model.entities.Interaction.Startdate_FMT_FORMATTER"/>
+        <FMT_FORMAT
+          ResId="sfa.model.entities.Interaction.Startdate_FMT_FORMAT"/>
+        <TimeZoneID
+          Value="Asia/Colombo"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
@@ -87,6 +93,12 @@
       <SchemaBasedProperties>
         <LABEL
           ResId="sfa.model.entities.Interaction.Enddate_LABEL"/>
+        <FMT_FORMATTER
+          ResId="sfa.model.entities.Interaction.Enddate_FMT_FORMATTER"/>
+        <FMT_FORMAT
+          ResId="sfa.model.entities.Interaction.Enddate_FMT_FORMAT"/>
+        <TimeZoneID
+          Value="Asia/Kolkata"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>

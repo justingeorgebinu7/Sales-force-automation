@@ -31,4 +31,13 @@
   <ViewUsage
     Name="CurrencyVO1"
     ViewObjectName="sfa.model.entities.CurrencyVO"/>
+  <ViewUsage
+    Name="AddressType1"
+    ViewObjectName="sfa.model.viewobjects.staticVo.AddressType"/>
+  <ViewUsage
+    Name="InteractionType1"
+    ViewObjectName="sfa.model.viewobjects.staticVo.InteractionType"/>
+  <ViewUsage
+    Name="InteractionDirection1"
+    ViewObjectName="sfa.model.viewobjects.staticVo.InteractionDirection"/>
 </AppModule>

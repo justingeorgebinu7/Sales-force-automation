@@ -13,11 +13,6 @@
         <Item Value="Name"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="CustomeraccountView1Iterator" id="Type">
-      <AttrNames>
-        <Item Value="Type"/>
-      </AttrNames>
-    </attributeValues>
     <attributeValues IterBinding="CustomeraccountView1Iterator" id="Accounturl">
       <AttrNames>
         <Item Value="Accounturl"/>
@@ -45,5 +40,6 @@
     </attributeValues>
     <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
     <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl"/>
+    <listOfValues IterBinding="CustomeraccountView1Iterator" StaticList="false" Uses="LOV_AccountType" id="Type1"/>
   </bindings>
 </pageDefinition>

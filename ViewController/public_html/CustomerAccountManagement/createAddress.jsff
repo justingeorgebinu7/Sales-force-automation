@@ -2,11 +2,14 @@
 <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
                 xmlns:f="http://java.sun.com/jsf/core">
   <af:panelFormLayout id="pfl1">
-    <af:inputText value="#{bindings.Type.inputValue}" label="#{bindings.Type.hints.label}"
-                  required="#{bindings.Type.hints.mandatory}" columns="#{bindings.Type.hints.displayWidth}"
-                  maximumLength="#{bindings.Type.hints.precision}" shortDesc="#{bindings.Type.hints.tooltip}" id="it1">
-      <f:validator binding="#{bindings.Type.validator}"/>
-    </af:inputText>
+    <af:inputComboboxListOfValues id="type1Id" popupTitle="Search and Select: #{bindings.Type1.hints.label}"
+                                  value="#{bindings.Type1.inputValue}" label="#{bindings.Type1.hints.label}"
+                                  model="#{bindings.Type1.listOfValuesModel}"
+                                  required="#{bindings.Type1.hints.mandatory}"
+                                  columns="#{bindings.Type1.hints.displayWidth}"
+                                  shortDesc="#{bindings.Type1.hints.tooltip}">
+      <f:validator binding="#{bindings.Type1.validator}"/>
+    </af:inputComboboxListOfValues>
     <af:inputText value="#{bindings.City.inputValue}" label="#{bindings.City.hints.label}"
                   required="#{bindings.City.hints.mandatory}" columns="#{bindings.City.hints.displayWidth}"
                   maximumLength="#{bindings.City.hints.precision}" shortDesc="#{bindings.City.hints.tooltip}" id="it2">

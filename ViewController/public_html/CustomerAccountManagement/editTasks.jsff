@@ -13,12 +13,14 @@
       <f:validator binding="#{bindings.Duedate.validator}"/>
       <af:convertDateTime pattern="#{bindings.Duedate.format}"/>
     </af:inputDate>
-    <af:inputText value="#{bindings.Priority.inputValue}" label="#{bindings.Priority.hints.label}"
-                  required="#{bindings.Priority.hints.mandatory}" columns="#{bindings.Priority.hints.displayWidth}"
-                  maximumLength="#{bindings.Priority.hints.precision}" shortDesc="#{bindings.Priority.hints.tooltip}"
-                  id="it3">
+    <af:inputComboboxListOfValues id="priorityId" popupTitle="Search and Select: #{bindings.Priority.hints.label}"
+                                  value="#{bindings.Priority.inputValue}" label="#{bindings.Priority.hints.label}"
+                                  model="#{bindings.Priority.listOfValuesModel}"
+                                  required="#{bindings.Priority.hints.mandatory}"
+                                  columns="#{bindings.Priority.hints.displayWidth}"
+                                  shortDesc="#{bindings.Priority.hints.tooltip}">
       <f:validator binding="#{bindings.Priority.validator}"/>
-    </af:inputText>
+    </af:inputComboboxListOfValues>
     <af:inputText value="#{bindings.Percentageofcompletion.inputValue}"
                   label="#{bindings.Percentageofcompletion.hints.label}"
                   required="#{bindings.Percentageofcompletion.hints.mandatory}"

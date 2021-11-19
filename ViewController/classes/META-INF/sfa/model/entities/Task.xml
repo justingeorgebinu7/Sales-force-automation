@@ -53,6 +53,12 @@
       <SchemaBasedProperties>
         <LABEL
           ResId="sfa.model.entities.Task.Duedate_LABEL"/>
+        <FMT_FORMATTER
+          ResId="sfa.model.entities.Task.Duedate_FMT_FORMATTER"/>
+        <FMT_FORMAT
+          ResId="sfa.model.entities.Task.Duedate_FMT_FORMAT"/>
+        <TimeZoneID
+          Value="Asia/Kolkata"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
