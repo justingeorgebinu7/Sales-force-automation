@@ -23,4 +23,9 @@
     <managed-bean-class>Beans.RoleBean</managed-bean-class>
     <managed-bean-scope>view</managed-bean-scope>
   </managed-bean>
+  <managed-bean id="__5">
+    <managed-bean-name>AccountBean</managed-bean-name>
+    <managed-bean-class>Beans.AccountBean</managed-bean-class>
+    <managed-bean-scope>view</managed-bean-scope>
+  </managed-bean>
 </adfc-config>

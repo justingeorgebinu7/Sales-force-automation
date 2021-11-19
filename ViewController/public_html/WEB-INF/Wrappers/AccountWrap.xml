@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="windows-1252" ?>
 <adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
-  <task-flow-definition id="RoleWrap">
+  <task-flow-definition id="AccountWrap">
     <default-activity>router1</default-activity>
     <data-control-scope>
       <shared/>
@@ -10,7 +10,10 @@
         <expression>#{securityContext.userInRole['admin']}</expression>
         <outcome>Y</outcome>
       </case>
-      
+      <!--<case id="__9">
+         <expression>#{securityContext.userInRole['manager']}</expression>
+        <outcome>Y</outcome>
+      </case>-->
       <default-outcome>N</default-outcome>
     </router>
     <task-flow-return id="taskFlowReturn1">
@@ -18,26 +21,26 @@
         <name>taskFlowReturn1</name>
       </outcome>
     </task-flow-return>
-    <task-flow-call id="RoleManagement">
+    <task-flow-call id="CustomerAccountHomePageAddTF">
       <task-flow-reference>
-        <document>/WEB-INF/RoleManagement/RoleManagement.xml</document>
-        <id>RoleManagement</id>
+        <document>/WEB-INF/customerAccountTaskFlows/CustomerAccountHomePageAddTF.xml</document>
+        <id>CustomerAccountHomePageAddTF</id>
       </task-flow-reference>
     </task-flow-call>
+    <view id="errorAuth">
+      <page>/errorAuth.jsff</page>
+    </view>
     <method-call id="refresh">
       <method>#{bindings.refresh.execute}</method>
       <outcome>
         <fixed-outcome>refresh</fixed-outcome>
       </outcome>
     </method-call>
-    <view id="errorAuth">
-      <page>/errorAuth.jsff</page>
-    </view>
     <control-flow-rule id="__1">
       <from-activity-id>router1</from-activity-id>
       <control-flow-case id="__2">
         <from-outcome>Y</from-outcome>
-        <to-activity-id>RoleManagement</to-activity-id>
+        <to-activity-id>CustomerAccountHomePageAddTF</to-activity-id>
       </control-flow-case>
       <control-flow-case id="__3">
         <from-outcome>N</from-outcome>

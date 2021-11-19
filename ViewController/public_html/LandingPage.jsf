@@ -33,9 +33,9 @@
                                 <af:panelSpringboard id="ps5" displayMode="grid">
                                     <af:showDetailItem text="Customer Account Management" id="sdi1"
                                                        icon="https://i.ibb.co/wJTJHKN/b512cb6c9c-1.png"
-                                                       disclosureListener="#{viewScope.UserTFBean.startAccountTF}">
+                                                       disclosureListener="#{viewScope.AccountBean.startAccount}">
                                         <af:region value="#{bindings.dynamicRegion3.regionModel}" id="r1"
-                                                   binding="#{viewScope.UserTFBean.dynamicAccount}"/>
+                                                   binding="#{viewScope.AccountBean.dynamicAccount}"/>
                                     </af:showDetailItem>
                                     <af:showDetailItem text="Contact Management" id="sdi2"
                                                        icon="https://i.ibb.co/Fs6RF3H/115-1150092-png-file-person-icon-1.png"
