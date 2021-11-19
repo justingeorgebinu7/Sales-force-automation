@@ -497,6 +497,18 @@
           usageId="sfa_view_ContactWrap_ContactWrap_refreshPageDef"/>
     <page path="/WEB-INF/Wrappers/OpportunityWrap.xml#OpportunityWrap@refresh"
           usageId="sfa_view_OpportunityWrap_OpportunityWrap_refreshPageDef"/>
+    <page path="/WEB-INF/customerAccountTaskFlows/addTaskForAccount.xml#addTaskForAccount@Delete"
+          usageId="sfa_view_addTaskForAccount_addTaskForAccount_DeletePageDef"/>
+    <page path="/WEB-INF/customerAccountTaskFlows/createInsertTF.xml#createInsertTF@Delete"
+          usageId="sfa_view_createInsertTF_createInsertTF_DeletePageDef"/>
+    <page path="/WEB-INF/ContactManagement/createTaskCon.xml#createTaskCon@Delete"
+          usageId="sfa_view_createTaskCon_createTaskCon_DeletePageDef"/>
+    <page path="/WEB-INF/ContactManagement/addNotesContact.xml#addNotesContact@Delete"
+          usageId="sfa_view_addNotesContact_addNotesContact_DeletePageDef"/>
+    <page path="/WEB-INF/Opportunity_TaskFLows/OM_AddTasks.xml#OM_AddTasks@Delete"
+          usageId="sfa_view_OM_AddTasks_OM_AddTasks_DeletePageDef"/>
+    <page path="/WEB-INF/Opportunity_TaskFLows/OM_AddNotes.xml#OM_AddNotes@Delete"
+          usageId="sfa_view_OM_AddNotes_OM_AddNotes_DeletePageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="sfa_view_untitled2PageDef" path="sfa.view.pageDefs.untitled2PageDef"/>
@@ -983,6 +995,18 @@
     <page id="sfa_view_ContactWrap_ContactWrap_refreshPageDef" path="Wrappers.ContactWrap_ContactWrap_refreshPageDef"/>
     <page id="sfa_view_OpportunityWrap_OpportunityWrap_refreshPageDef"
           path="Wrappers.OpportunityWrap_OpportunityWrap_refreshPageDef"/>
+    <page id="sfa_view_addTaskForAccount_addTaskForAccount_DeletePageDef"
+          path="customerAccountTaskFlows.addTaskForAccount_addTaskForAccount_DeletePageDef"/>
+    <page id="sfa_view_createInsertTF_createInsertTF_DeletePageDef"
+          path="customerAccountTaskFlows.createInsertTF_createInsertTF_DeletePageDef"/>
+    <page id="sfa_view_createTaskCon_createTaskCon_DeletePageDef"
+          path="ContactManagement.createTaskCon_createTaskCon_DeletePageDef"/>
+    <page id="sfa_view_addNotesContact_addNotesContact_DeletePageDef"
+          path="ContactManagement.addNotesContact_addNotesContact_DeletePageDef"/>
+    <page id="sfa_view_OM_AddTasks_OM_AddTasks_DeletePageDef"
+          path="Opportunity_TaskFLows.OM_AddTasks_OM_AddTasks_DeletePageDef"/>
+    <page id="sfa_view_OM_AddNotes_OM_AddNotes_DeletePageDef"
+          path="Opportunity_TaskFLows.OM_AddNotes_OM_AddNotes_DeletePageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="sfa.model.entities"

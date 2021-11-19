@@ -29,6 +29,5 @@
         <Item Value="Percentageofcompletion"/>
       </AttrNames>
     </attributeValues>
-    <action IterBinding="TaskView4Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
   </bindings>
 </pageDefinition>

@@ -2212,6 +2212,111 @@
                                 <name>Wrappers.OpportunityWrap_OpportunityWrap_refreshPageDef</name>
                                 <actions>view</actions>
                             </permission>
+                            <permission>
+                                <class>oracle.adf.share.security.authorization.RegionPermission</class>
+                                <name>customerAccountTaskFlows.addTaskForAccount_addTaskForAccount_DeletePageDef</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.share.security.authorization.RegionPermission</class>
+                                <name>customerAccountTaskFlows.createInsertTF_createInsertTF_DeletePageDef</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.share.security.authorization.RegionPermission</class>
+                                <name>ContactManagement.createTaskCon_createTaskCon_DeletePageDef</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.share.security.authorization.RegionPermission</class>
+                                <name>ContactManagement.addNotesContact_addNotesContact_DeletePageDef</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.share.security.authorization.RegionPermission</class>
+                                <name>Opportunity_TaskFLows.OM_AddTasks_OM_AddTasks_DeletePageDef</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.share.security.authorization.RegionPermission</class>
+                                <name>Opportunity_TaskFLows.OM_AddNotes_OM_AddNotes_DeletePageDef</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/WEB-INF/customerAccountTaskFlows/addTaskForAccount.xml#addTaskForAccount</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/WEB-INF/AppointmentsAndInteraction/appointmentManagement.xml#appointmentManagement</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/WEB-INF/AppointmentsAndInteraction/AppointmentsAndInteractionsMain.xml#AppointmentsAndInteractionsMain</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/WEB-INF/AppointmentsAndInteraction/createAppointmentTF.xml#createAppointmentTF</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/WEB-INF/customerAccountTaskFlows/createInsertAccount.xml#createInsertAccount</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/WEB-INF/customerAccountTaskFlows/createInsertContactForAccountTF.xml#createInsertContactForAccountTF</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/WEB-INF/customerAccountTaskFlows/createInsertTF.xml#createInsertTF</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/WEB-INF/AppointmentsAndInteraction/createInteractionTF.xml#createInteractionTF</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/WEB-INF/customerAccountTaskFlows/CustomerAccountContacts.xml#CustomerAccountContacts</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/WEB-INF/customerAccountTaskFlows/CustomerAccountHomePageAddTF.xml#CustomerAccountHomePageAddTF</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/WEB-INF/customerAccountTaskFlows/deleteCustomerAccountTF.xml#deleteCustomerAccountTF</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/WEB-INF/AppointmentsAndInteraction/InteractionManagement.xml#InteractionManagement</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/WEB-INF/customerAccountTaskFlows/ManageCusiomerAccount.xml#ManageCusiomerAccount</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/WEB-INF/customerAccountTaskFlows/notesTrialAddTF.xml#notesTrialAddTF</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/WEB-INF/customerAccountTaskFlows/taskCustomerAccount.xml#taskCustomerAccount</name>
+                                <actions>view</actions>
+                            </permission>
                         </permissions>
                     </grant>
                     <grant>
@@ -2427,17 +2532,37 @@
                             </permission>
                             <permission>
                                 <class>oracle.adf.controller.security.TaskFlowPermission</class>
-                                <name>/WEB-INF/customerAccountTaskFlows/CustomerAccountHomePageAddTF.xml#CustomerAccountHomePageAddTF</name>
-                                <actions>view</actions>
-                            </permission>
-                            <permission>
-                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
                                 <name>/WEB-INF/ContactManagement/conactManagementParent.xml#conactManagementParent</name>
                                 <actions>view</actions>
                             </permission>
                             <permission>
                                 <class>oracle.adf.share.security.authorization.RegionPermission</class>
                                 <name>sfa.view.pageDefs.LandingPagePageDef</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/WEB-INF/customerAccountTaskFlows/CustomerAccountHomePageAddTF.xml#CustomerAccountHomePageAddTF</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/WEB-INF/customerAccountTaskFlows/ManageCusiomerAccount.xml#ManageCusiomerAccount</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/WEB-INF/customerAccountTaskFlows/CustomerAccountContacts.xml#CustomerAccountContacts</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/WEB-INF/AppointmentsAndInteraction/appointmentManagement.xml#appointmentManagement</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/WEB-INF/customerAccountTaskFlows/addTaskForAccount.xml#addTaskForAccount</name>
                                 <actions>view</actions>
                             </permission>
                         </permissions>

@@ -27,7 +27,6 @@
         <Item Value="Percentageofcompletion"/>
       </AttrNames>
     </attributeValues>
-    <action IterBinding="TaskView3Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
     <listOfValues IterBinding="TaskView3Iterator" StaticList="false" Uses="LOV_Priority" id="Priority1"/>
   </bindings>
 </pageDefinition>

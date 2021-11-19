@@ -42,7 +42,7 @@
       <property
          name="fromOutcome">CreateInsert</property>
       <property
-         name="sdm:polyPoints">R50,226.01465,216.99414,384.0,159.49414,L50</property>
+         name="sdm:polyPoints">R50,226.01465,216.64355,384.0,159.49414,L50</property>
    </ControlFlowCase>
    <MethodCall
       id="MethodCall9">
@@ -90,6 +90,39 @@
       <property
          name="fromOutcome">Commit</property>
       <property
-         name="sdm:polyPoints">R30,L28</property>
+         name="sdm:polyPoints">R50,632.5,209.09766,721.0,217.89648,L50</property>
+   </ControlFlowCase>
+   <MethodCall
+      id="MethodCall10">
+      <property
+         name="activityId">Delete</property>
+      <property
+         name="x">482.5</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>Delete&lt;/b>&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
+      <property
+         name="y">438.1494</property>
+      <property
+         name="exceptionHandler">false</property>
+   </MethodCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase12"
+      from="View3"
+      to="MethodCall10">
+      <property
+         name="fromOutcome">discard</property>
+      <property
+         name="sdm:polyPoints">B50,425.0,213.49414,482.5,383.79883,T50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase13"
+      from="MethodCall10"
+      to="MethodCall9">
+      <property
+         name="fromOutcome">Delete</property>
+      <property
+         name="sdm:polyPoints">T56,486.0,383.79883,591.5,263.09766,B50</property>
    </ControlFlowCase>
 </SDM>

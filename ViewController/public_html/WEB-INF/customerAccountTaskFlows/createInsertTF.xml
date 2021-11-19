@@ -25,6 +25,12 @@
         <name>taskFlowReturn1</name>
       </outcome>
     </task-flow-return>
+    <method-call id="Delete">
+      <method>#{bindings.Delete.execute}</method>
+      <outcome>
+        <fixed-outcome>Delete</fixed-outcome>
+      </outcome>
+    </method-call>
     <control-flow-rule id="__1">
       <from-activity-id>CreateInsert</from-activity-id>
       <control-flow-case id="__2">
@@ -38,12 +44,23 @@
         <from-outcome>*commit</from-outcome>
         <to-activity-id>Commit</to-activity-id>
       </control-flow-case>
+      <control-flow-case id="__7">
+        <from-outcome>discard</from-outcome>
+        <to-activity-id>Delete</to-activity-id>
+      </control-flow-case>
     </control-flow-rule>
     <control-flow-rule id="__5">
       <from-activity-id>Commit</from-activity-id>
       <control-flow-case id="__6">
         <from-outcome>Commit</from-outcome>
         <to-activity-id>taskFlowReturn1</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__8">
+      <from-activity-id>Delete</from-activity-id>
+      <control-flow-case id="__9">
+        <from-outcome>Delete</from-outcome>
+        <to-activity-id>Commit</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <use-page-fragments/>

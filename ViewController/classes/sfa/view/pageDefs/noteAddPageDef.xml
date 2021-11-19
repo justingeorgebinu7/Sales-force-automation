@@ -17,6 +17,5 @@
         <Item Value="Content"/>
       </AttrNames>
     </attributeValues>
-    <action IterBinding="NoteView2Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
   </bindings>
 </pageDefinition>
