@@ -71,7 +71,7 @@
       <property
          name="y">255.59766</property>
       <property
-         name="page">/OM_CreateInteraction.jsff</property>
+         name="page">/Opportunity_pages/OM_CreateInteraction.jsff</property>
       <property
          name="exceptionHandler">false</property>
    </View>

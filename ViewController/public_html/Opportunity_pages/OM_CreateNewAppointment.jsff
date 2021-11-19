@@ -32,9 +32,8 @@
                   id="it3">
       <f:validator binding="#{bindings.Location.validator}"/>
     </af:inputText>
-    <f:facet name="footer">
-      <af:button text="Save" id="b1" action="commit"/>
-      <af:button text="Cancel" id="b2" action="discard"/>
-    </f:facet>
+    <f:facet name="footer"/>
   </af:panelFormLayout>
+  <af:button text="Save" id="b1" action="commit"/>
+  <af:button text="Cancel" id="b2" action="discard"/>
 </ui:composition>

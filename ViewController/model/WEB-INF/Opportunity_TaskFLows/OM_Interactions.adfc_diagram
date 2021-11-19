@@ -17,7 +17,7 @@
       <property
          name="y">286.89648</property>
       <property
-         name="page">/OM_Interactions_Home.jsff</property>
+         name="page">/Opportunity_pages/OM_Interactions_Home.jsff</property>
       <property
          name="exceptionHandler">false</property>
    </View>
@@ -92,7 +92,7 @@
       <property
          name="y">383.59766</property>
       <property
-         name="page">/OM_EditInteraction.jsff</property>
+         name="page">/Opportunity_pages/OM_EditInteraction.jsff</property>
       <property
          name="exceptionHandler">false</property>
    </View>

@@ -2,14 +2,15 @@
 <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
                 xmlns:f="http://java.sun.com/jsf/core">
   <af:popup childCreation="deferred" autoCancel="disabled" id="p1">
-    <af:panelWindow id="pw1" stretchChildren="first">
+    <af:dialog id="d1" title="Upload File" type="none">
+      <f:facet name="buttonBar"/>
       <af:panelBox text="Choose File" id="pb1">
         <f:facet name="toolbar"/>
         <af:inputFile id="if2" value="#{FileBean.myFile}"/>
         <af:button text="Upload" id="b3" action="#{FileBean.buttonAction}" partialSubmit="true"
                    actionListener="#{FileBean.closePopup}"/>
       </af:panelBox>
-    </af:panelWindow>
+    </af:dialog>
   </af:popup>
   <af:menuBar id="mb1">
     <af:commandMenuItem id="cmi1" action="toHome" icon="https://i.ibb.co/5nPsJ90/New-Project-2.png"/>

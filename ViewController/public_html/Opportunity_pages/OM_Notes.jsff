@@ -12,14 +12,14 @@
       <af:link shortDesc="#{bindings.NoteView4.hints.Subject.tooltip}" id="ot1" text="#{row.Subject}" action="toEdit"/>
     </af:column>
     <af:column sortProperty="#{bindings.NoteView4.hints.Content.name}" filterable="true" sortable="true"
-               headerText="#{bindings.NoteView4.hints.Content.label}" id="c2" width="192">
+               headerText="#{bindings.NoteView4.hints.Content.label}" id="c2" width="100%">
       <af:outputText value="#{row.Content}" shortDesc="#{bindings.NoteView4.hints.Content.tooltip}" id="ot2"/>
     </af:column>
     <af:column sortProperty="#{bindings.NoteView4.hints.Createdby.name}" filterable="true" sortable="true"
-               headerText="#{bindings.NoteView4.hints.Createdby.label}" id="c3" width="119">
+               headerText="#{bindings.NoteView4.hints.Createdby.label}" id="c3" width="100%">
       <af:outputText value="#{row.Createdby}" shortDesc="#{bindings.NoteView4.hints.Createdby.tooltip}" id="ot3"/>
     </af:column>
-    <af:column headerText="#{bindings.NoteView4.hints.Datetime.label}" id="c4" width="71">
+    <af:column headerText="#{bindings.NoteView4.hints.Datetime.label}" id="c4" width="100%">
       <af:outputText value="#{row.Datetime}" shortDesc="#{bindings.NoteView4.hints.Datetime.tooltip}" id="ot4">
         <af:convertDateTime pattern="#{bindings.NoteView4.hints.Datetime.format}"/>
       </af:outputText>

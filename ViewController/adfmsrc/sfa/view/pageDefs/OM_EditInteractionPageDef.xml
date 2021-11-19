@@ -7,16 +7,6 @@
     <iterator Binds="InteractionView6" RangeSize="25" DataControl="AppModuleDataControl" id="InteractionView6Iterator"/>
   </executables>
   <bindings>
-    <attributeValues IterBinding="InteractionView6Iterator" id="Type">
-      <AttrNames>
-        <Item Value="Type"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="InteractionView6Iterator" id="Direction">
-      <AttrNames>
-        <Item Value="Direction"/>
-      </AttrNames>
-    </attributeValues>
     <attributeValues IterBinding="InteractionView6Iterator" id="Startdate">
       <AttrNames>
         <Item Value="Startdate"/>
@@ -38,5 +28,7 @@
       </AttrNames>
     </attributeValues>
     <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+    <listOfValues IterBinding="InteractionView6Iterator" StaticList="false" Uses="LOV_Direction" id="Direction1"/>
+    <listOfValues IterBinding="InteractionView6Iterator" StaticList="false" Uses="LOV_Type" id="Type1"/>
   </bindings>
 </pageDefinition>

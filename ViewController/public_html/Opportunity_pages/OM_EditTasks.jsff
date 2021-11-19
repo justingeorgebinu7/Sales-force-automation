@@ -38,4 +38,5 @@
   </af:panelFormLayout>
   <af:button actionListener="#{bindings.Commit.execute}" text="Save" id="b1"
              action="backFromEdit"/>
+  <af:button text="Back" id="b2" action="backFromEdit"/>
 </ui:composition>

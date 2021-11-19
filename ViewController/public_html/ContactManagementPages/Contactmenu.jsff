@@ -61,7 +61,7 @@
           </af:selectOneChoice>
           <af:selectBooleanCheckbox value="#{bindings.Isprimarycontact.inputValue}"
                                     label="#{bindings.Isprimarycontact.label}"
-                                    shortDesc="#{bindings.Isprimarycontact.hints.tooltip}" id="sbc1"/>
+                                    shortDesc="#{bindings.Isprimarycontact.hints.tooltip}" id="sbc1" rendered="false"/>
         </af:panelFormLayout>
         <af:panelGridLayout id="pgl1">
           <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr1">

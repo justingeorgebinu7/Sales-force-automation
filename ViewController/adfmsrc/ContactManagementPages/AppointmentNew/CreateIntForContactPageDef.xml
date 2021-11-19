@@ -7,16 +7,6 @@
     <iterator Binds="InteractionView2" RangeSize="25" DataControl="AppModuleDataControl" id="InteractionView2Iterator"/>
   </executables>
   <bindings>
-    <attributeValues IterBinding="InteractionView2Iterator" id="Type">
-      <AttrNames>
-        <Item Value="Type"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="InteractionView2Iterator" id="Direction">
-      <AttrNames>
-        <Item Value="Direction"/>
-      </AttrNames>
-    </attributeValues>
     <attributeValues IterBinding="InteractionView2Iterator" id="Startdate">
       <AttrNames>
         <Item Value="Startdate"/>
@@ -37,5 +27,7 @@
         <Item Value="Resolution"/>
       </AttrNames>
     </attributeValues>
+    <listOfValues IterBinding="InteractionView2Iterator" StaticList="false" Uses="LOV_Type" id="Type1"/>
+    <listOfValues IterBinding="InteractionView2Iterator" StaticList="false" Uses="LOV_Direction" id="Direction1"/>
   </bindings>
 </pageDefinition>
