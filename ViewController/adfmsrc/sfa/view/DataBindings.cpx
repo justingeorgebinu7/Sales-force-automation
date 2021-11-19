@@ -493,6 +493,8 @@
     <page path="/WEB-INF/Wrappers/RoleWrap.xml#RoleWrap@refresh" usageId="sfa_view_RoleWrap_RoleWrap_refreshPageDef"/>
     <page path="/WEB-INF/Wrappers/AccountWrap.xml#AccountWrap@refresh"
           usageId="sfa_view_AccountWrap_AccountWrap_refreshPageDef"/>
+    <page path="/WEB-INF/Wrappers/ContactWrap.xml#ContactWrap@refresh"
+          usageId="sfa_view_ContactWrap_ContactWrap_refreshPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="sfa_view_untitled2PageDef" path="sfa.view.pageDefs.untitled2PageDef"/>
@@ -976,6 +978,7 @@
     <page id="sfa_view_UserWrap_UserWrap_refreshPageDef" path="Wrappers.UserWrap_UserWrap_refreshPageDef"/>
     <page id="sfa_view_RoleWrap_RoleWrap_refreshPageDef" path="Wrappers.RoleWrap_RoleWrap_refreshPageDef"/>
     <page id="sfa_view_AccountWrap_AccountWrap_refreshPageDef" path="Wrappers.AccountWrap_AccountWrap_refreshPageDef"/>
+    <page id="sfa_view_ContactWrap_ContactWrap_refreshPageDef" path="Wrappers.ContactWrap_ContactWrap_refreshPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="sfa.model.entities"

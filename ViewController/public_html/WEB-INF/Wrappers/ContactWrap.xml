@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="windows-1252" ?>
 <adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
-  <task-flow-definition id="AccountWrap">
+  <task-flow-definition id="ContactWrap">
     <default-activity>router1</default-activity>
     <data-control-scope>
       <shared/>
     </data-control-scope>
     <router id="router1">
-      <case id="__8">
+      <case id="__4">
         <expression>#{securityContext.userInRole['admin']}</expression>
         <outcome>Y</outcome>
       </case>
-      <case id="__9">
-         <expression>#{securityContext.userInRole['manager']}</expression>
+      <case id="__5">
+        <expression>#{securityContext.userInRole['manager']}</expression>
         <outcome>Y</outcome>
       </case>
       <default-outcome>N</default-outcome>
     </router>
-    <task-flow-return id="taskFlowReturn1">
-      <outcome>
-        <name>taskFlowReturn1</name>
-      </outcome>
-    </task-flow-return>
-    <task-flow-call id="CustomerAccountHomePageAddTF">
+    <task-flow-call id="conactManagementParent">
       <task-flow-reference>
-        <document>/WEB-INF/customerAccountTaskFlows/CustomerAccountHomePageAddTF.xml</document>
-        <id>CustomerAccountHomePageAddTF</id>
+        <document>/WEB-INF/ContactManagement/conactManagementParent.xml</document>
+        <id>conactManagementParent</id>
       </task-flow-reference>
     </task-flow-call>
     <view id="errorAuth">
       <page>/errorAuth.jsff</page>
     </view>
+    <task-flow-return id="taskFlowReturn1">
+      <outcome>
+        <name>taskFlowReturn1</name>
+      </outcome>
+    </task-flow-return>
     <method-call id="refresh">
       <method>#{bindings.refresh.execute}</method>
       <outcome>
@@ -40,23 +40,23 @@
       <from-activity-id>router1</from-activity-id>
       <control-flow-case id="__2">
         <from-outcome>Y</from-outcome>
-        <to-activity-id>CustomerAccountHomePageAddTF</to-activity-id>
+        <to-activity-id>conactManagementParent</to-activity-id>
       </control-flow-case>
       <control-flow-case id="__3">
         <from-outcome>N</from-outcome>
         <to-activity-id>errorAuth</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
-    <control-flow-rule id="__4">
+    <control-flow-rule id="__6">
       <from-activity-id>errorAuth</from-activity-id>
-      <control-flow-case id="__5">
+      <control-flow-case id="__7">
         <from-outcome>refreshPage</from-outcome>
         <to-activity-id>refresh</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
-    <control-flow-rule id="__6">
+    <control-flow-rule id="__8">
       <from-activity-id>refresh</from-activity-id>
-      <control-flow-case id="__7">
+      <control-flow-case id="__9">
         <from-outcome>refresh</from-outcome>
         <to-activity-id>taskFlowReturn1</to-activity-id>
       </control-flow-case>

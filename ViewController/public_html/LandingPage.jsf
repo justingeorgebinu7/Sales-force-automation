@@ -39,9 +39,9 @@
                                     </af:showDetailItem>
                                     <af:showDetailItem text="Contact Management" id="sdi2"
                                                        icon="https://i.ibb.co/Fs6RF3H/115-1150092-png-file-person-icon-1.png"
-                                                       disclosureListener="#{viewScope.UserTFBean.startContactTF}">
+                                                       disclosureListener="#{viewScope.ContactBean.startContact}">
                                         <af:region value="#{bindings.dynamicRegion4.regionModel}" id="r2"
-                                                   binding="#{viewScope.UserTFBean.dynamicContact}"/>
+                                                   binding="#{viewScope.ContactBean.dynamicContact}"/>
                                     </af:showDetailItem>
                                     <af:showDetailItem text="Opportunities" id="sdi3"
                                                        icon="https://i.ibb.co/30FCByC/opportunity-icon-6.png"

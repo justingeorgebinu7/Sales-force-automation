@@ -2,7 +2,7 @@
 <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:h="http://java.sun.com/jsf/html"
                 xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
   <h:outputText id="ot1"
-                value=" You are not  authorised to perform this action, login with proper credentials or go back to home page."/>
+                value="#{securityContext.userName} is not authorised to perform this action.Login with different credentials or go back to home. "/>
   <af:button text="Home" id="b1" action="refreshPage"/>
   <af:button text="Logout" id="b2"
    destination="/adfAuthentication?logout=true&amp;end_url=/faces/LandingPage"/>
