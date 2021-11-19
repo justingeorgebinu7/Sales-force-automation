@@ -17,5 +17,9 @@
     <taskFlow id="dynamicRegion6" taskFlowId="${viewScope.UserTFBean.dynamicTaskFlowId5}" activation="deferred"
               xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
   </executables>
-  <bindings/>
+  <bindings>
+    <methodAction id="refresh" RequiresUpdateModel="true" Action="invokeMethod" MethodName="refresh"
+                  IsViewObjectMethod="false" DataControl="AppModuleDataControl"
+                  InstanceName="bindings.refresh.dataControl.dataProvider"/>
+  </bindings>
 </pageDefinition>

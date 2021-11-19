@@ -13,5 +13,7 @@ public interface AppModule extends ApplicationModule {
     void totalRevenueOppAM(String oidStr);
 
     void setInviteeData(int contactId, int appointmentId);
+
+    void refresh();
 }
 

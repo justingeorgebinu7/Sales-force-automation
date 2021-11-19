@@ -1,5 +1,9 @@
 package sfa.model.entities;
 
+import javax.faces.application.ViewHandler;
+import javax.faces.component.UIViewRoot;
+import javax.faces.context.FacesContext;
+
 import oracle.adf.model.binding.DCBindingContainer;
 
 import oracle.adf.model.binding.DCIteratorBinding;
@@ -736,6 +740,17 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
         * @param path
 
         */
+       
+    public void refresh() {
+        FacesContext fc = FacesContext.getCurrentInstance();
+        String refreshpage = fc.getViewRoot().getViewId();
+        ViewHandler ViewH =
+        fc.getApplication().getViewHandler();
+        UIViewRoot UIV = ViewH.createView(fc,refreshpage);
+        UIV.setViewId(refreshpage);
+        fc.setViewRoot(UIV);
+    }
+       
        
     public void estimatedPrice(String pidStr) {
         
