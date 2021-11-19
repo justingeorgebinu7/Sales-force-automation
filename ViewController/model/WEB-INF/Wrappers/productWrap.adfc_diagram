@@ -87,7 +87,7 @@
       <property
          name="fromOutcome">Y</property>
       <property
-         name="sdm:polyPoints">R50,381.0,179.98828,634.69336,176.79883,L50</property>
+         name="sdm:polyPoints">R50,382.48062,179.98828,633.2127,176.79883,L50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -97,7 +97,7 @@
       <property
          name="fromOutcome">N</property>
       <property
-         name="sdm:polyPoints">B50,340.0,233.98828,394.5,322.44824,T50</property>
+         name="sdm:polyPoints">B50,340.0,235.46892,394.5,320.96762,T50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -107,7 +107,7 @@
       <property
          name="fromOutcome">refreshPage</property>
       <property
-         name="sdm:polyPoints">R50,435.5,376.44824,590.5,394.79883,L50</property>
+         name="sdm:polyPoints">R50,436.98062,376.44824,589.01935,394.79886,L50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -117,6 +117,6 @@
       <property
          name="fromOutcome">refresh</property>
       <property
-         name="sdm:polyPoints">R50,672.5,394.79883,863.0,386.5459,L50</property>
+         name="sdm:polyPoints">R50,673.98065,394.79886,861.51935,386.54587,L50</property>
    </ControlFlowCase>
 </SDM>

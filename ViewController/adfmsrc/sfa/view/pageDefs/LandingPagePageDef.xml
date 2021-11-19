@@ -4,8 +4,6 @@
   <parameters/>
   <executables>
     <variableIterator id="variables"/>
-    <taskFlow id="dynamicRegion5" taskFlowId="${viewScope.UserTFBean.dynamicTaskFlowId4}" activation="deferred"
-              xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
     <taskFlow id="dynamicRegion2" taskFlowId="${viewScope.ProductBean.dynamicTaskFlowId}" activation="deferred"
               xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
     <taskFlow id="dynamicRegion1" taskFlowId="${viewScope.UserBean.dynamicTaskFlowId}" activation="deferred"
@@ -15,6 +13,8 @@
     <taskFlow id="dynamicRegion3" taskFlowId="${viewScope.AccountBean.dynamicTaskFlowId}" activation="deferred"
               xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
     <taskFlow id="dynamicRegion4" taskFlowId="${viewScope.ContactBean.dynamicTaskFlowId}" activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <taskFlow id="dynamicRegion7" taskFlowId="${viewScope.OpportunityBean.dynamicTaskFlowId}" activation="deferred"
               xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
   </executables>
   <bindings>

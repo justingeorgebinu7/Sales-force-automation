@@ -10,7 +10,10 @@
         <expression>#{securityContext.userInRole['admin']}</expression>
         <outcome>Y</outcome>
       </case>
-      
+      <case id="__9">
+        <expression>#{securityContext.userInRole['sfaadmin']}</expression>
+        <outcome>Y</outcome>
+      </case>
       <default-outcome>N</default-outcome>
     </router>
     <task-flow-return id="taskFlowReturn1">

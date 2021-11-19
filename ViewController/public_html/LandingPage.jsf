@@ -45,9 +45,9 @@
                                     </af:showDetailItem>
                                     <af:showDetailItem text="Opportunities" id="sdi3"
                                                        icon="https://i.ibb.co/30FCByC/opportunity-icon-6.png"
-                                                       disclosureListener="#{viewScope.UserTFBean.startOppTF}">
-                                        <af:region value="#{bindings.dynamicRegion5.regionModel}" id="r3"
-                                                   binding="#{viewScope.UserTFBean.dynamicOpp}"/>
+                                                       disclosureListener="#{viewScope.OpportunityBean.startOpportunityTf}">
+                                        <af:region value="#{bindings.dynamicRegion7.regionModel}" id="r7"
+                                                   binding="#{viewScope.OpportunityBean.dynamicOpportunity}"/>
                                     </af:showDetailItem>
                                     <af:showDetailItem text="Product Catalog" id="sdi4"
                                                        icon="https://i.ibb.co/k5JpT8s/unnamed-1.png"

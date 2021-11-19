@@ -13,7 +13,7 @@
       <property
          name="description">&lt;html>&lt;p>&lt;b>router1&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  Router&lt;/p></property>
       <property
-         name="y">201.1836</property>
+         name="y">198.72949</property>
       <property
          name="exceptionHandler">false</property>
    </Router>
@@ -87,7 +87,7 @@
       <property
          name="fromOutcome">Y</property>
       <property
-         name="sdm:polyPoints">R50,302.0,200.83301,578.69824,130.79883,L50</property>
+         name="sdm:polyPoints">R50,302.0,198.3789,578.69824,130.79883,L50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -97,7 +97,7 @@
       <property
          name="fromOutcome">N</property>
       <property
-         name="sdm:polyPoints">B50,261.0,255.53418,392.5,351.44824,T50</property>
+         name="sdm:polyPoints">B50,261.0,253.08008,392.5,351.44824,T50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
