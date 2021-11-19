@@ -42,7 +42,7 @@
       </af:inputText>
     </af:panelFormLayout>
   </af:panelBox>
-  <af:panelSplitter id="ps2" inlineStyle="width:834px;" splitterPosition="382">
+  <af:panelSplitter id="ps2" splitterPosition="560" styleClass="AFStretchWidth">
     <f:facet name="first">
       <af:panelBox text="Invitees - Contacts" id="pb1" showDisclosure="false">
         <f:facet name="toolbar">
@@ -56,7 +56,8 @@
                   emptyText="#{bindings.InviteesView7.viewable ? 'No data to display.' : 'Access Denied.'}"
                   rowBandingInterval="0" selectedRowKeys="#{bindings.InviteesView7.collectionModel.selectedRow}"
                   selectionListener="#{bindings.InviteesView7.collectionModel.makeCurrent}" rowSelection="single"
-                  fetchSize="#{bindings.InviteesView7.rangeSize}" id="t2" columnStretching="last">
+                  fetchSize="#{bindings.InviteesView7.rangeSize}" id="t2" columnStretching="last"
+                  partialTriggers="::cmi3">
           <af:column sortProperty="#{bindings.InviteesView7.hints.Name1.name}" sortable="true"
                      headerText="#{bindings.InviteesView7.hints.Name1.label}" id="c1">
             <af:outputText value="#{row.Name1}" shortDesc="#{bindings.InviteesView7.hints.Name1.tooltip}" id="ot1">
@@ -80,7 +81,8 @@
                   emptyText="#{bindings.InviteesextView7.viewable ? 'No data to display.' : 'Access Denied.'}"
                   rowBandingInterval="0" selectedRowKeys="#{bindings.InviteesextView7.collectionModel.selectedRow}"
                   selectionListener="#{bindings.InviteesextView7.collectionModel.makeCurrent}" rowSelection="single"
-                  fetchSize="#{bindings.InviteesextView7.rangeSize}" id="t3" columnStretching="last">
+                  fetchSize="#{bindings.InviteesextView7.rangeSize}" id="t3" columnStretching="last"
+                  partialTriggers="::cmi5">
           <af:column sortProperty="#{bindings.InviteesextView7.hints.Firstname.name}" sortable="true"
                      headerText="#{bindings.InviteesextView7.hints.Firstname.label}" id="c2">
             <af:outputText value="#{row.Firstname}" shortDesc="#{bindings.InviteesextView7.hints.Firstname.tooltip}"
