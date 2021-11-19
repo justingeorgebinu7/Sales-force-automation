@@ -489,6 +489,7 @@
     <page path="/Opportunity_pages/OM_AddExtInvitee.jsf" usageId="sfa_view_OM_AddExtInviteePageDef"/>
     <page path="/WEB-INF/Wrappers/productWrap.xml#productWrap@refresh"
           usageId="sfa_view_productWrap_productWrap_refreshPageDef"/>
+    <page path="/WEB-INF/Wrappers/UserWrap.xml#UserWrap@refresh" usageId="sfa_view_UserWrap_UserWrap_refreshPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="sfa_view_untitled2PageDef" path="sfa.view.pageDefs.untitled2PageDef"/>
@@ -969,6 +970,7 @@
     <page id="sfa_view_CreateIntForContactPageDef1"
           path="ContactManagementPages.AppointmentNew.CreateIntForContactPageDef"/>
     <page id="sfa_view_productWrap_productWrap_refreshPageDef" path="Wrappers.productWrap_productWrap_refreshPageDef"/>
+    <page id="sfa_view_UserWrap_UserWrap_refreshPageDef" path="Wrappers.UserWrap_UserWrap_refreshPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="sfa.model.entities"

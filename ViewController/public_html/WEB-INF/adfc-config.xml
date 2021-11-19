@@ -13,4 +13,9 @@
     <managed-bean-class>Beans.ProductBean</managed-bean-class>
     <managed-bean-scope>view</managed-bean-scope>
   </managed-bean>
+  <managed-bean id="__3">
+    <managed-bean-name>UserBean</managed-bean-name>
+    <managed-bean-class>Beans.UserBean</managed-bean-class>
+    <managed-bean-scope>view</managed-bean-scope>
+  </managed-bean>
 </adfc-config>

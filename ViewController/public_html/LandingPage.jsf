@@ -57,9 +57,9 @@
                                     </af:showDetailItem>
                                     <af:showDetailItem text="User Management" id="sd15"
                                                        icon="https://i.ibb.co/0Xfwvzk/41-410871-social-media-management-circle-social-media-marketing-icon-1.png"
-                                                       disclosureListener="#{viewScope.UserTFBean.startUserManTF}">
+                                                       disclosureListener="#{viewScope.UserBean.startUser}">
                                         <af:region value="#{bindings.dynamicRegion1.regionModel}" id="r5"
-                                                   binding="#{viewScope.UserTFBean.dynamicUserMan}"/>
+                                                   binding="#{viewScope.UserBean.dynamicUser}"/>
                                     </af:showDetailItem>
                                     <af:showDetailItem text="Role Management" id="sdi5"
                                                        icon="https://i.ibb.co/GsyjNBj/role-icon-1.png"
