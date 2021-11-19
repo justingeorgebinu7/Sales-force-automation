@@ -63,9 +63,9 @@
                                     </af:showDetailItem>
                                     <af:showDetailItem text="Role Management" id="sdi5"
                                                        icon="https://i.ibb.co/GsyjNBj/role-icon-1.png"
-                                                       disclosureListener="#{viewScope.UserTFBean.startRoleTF}">
+                                                       disclosureListener="#{viewScope.RoleBean.startRole}">
                                         <af:region value="#{bindings.dynamicRegion6.regionModel}" id="r6"
-                                                   binding="#{viewScope.UserTFBean.dynamicRole}"/>
+                                                   binding="#{viewScope.RoleBean.dynamicRole}"/>
                                     </af:showDetailItem>
                                 </af:panelSpringboard>
                             </af:panelBox>

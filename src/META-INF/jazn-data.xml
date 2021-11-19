@@ -2171,6 +2171,16 @@
                                 <name>Wrappers.UserWrap_UserWrap_refreshPageDef</name>
                                 <actions>view</actions>
                             </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/WEB-INF/Wrappers/RoleWrap.xml#RoleWrap</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.share.security.authorization.RegionPermission</class>
+                                <name>Wrappers.RoleWrap_RoleWrap_refreshPageDef</name>
+                                <actions>view</actions>
+                            </permission>
                         </permissions>
                     </grant>
                     <grant>
