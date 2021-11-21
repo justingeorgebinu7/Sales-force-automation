@@ -66,6 +66,10 @@
           ResId="sfa.model.entities.Revenueitem.Bestcaserevenue_LABEL"/>
       </SchemaBasedProperties>
     </Properties>
+    <validation:MethodValidationBean
+      Name="BestcaserevenueRule0"
+      ResId="sfa.model.entities.Revenueitem.Bestcaserevenue_Rule_0"
+      MethodName="validateBestcaserevenue"/>
   </Attribute>
   <Attribute
     Name="Worstcaserevenue"
@@ -80,6 +84,10 @@
           ResId="sfa.model.entities.Revenueitem.Worstcaserevenue_LABEL"/>
       </SchemaBasedProperties>
     </Properties>
+    <validation:MethodValidationBean
+      Name="WorstcaserevenueRule0"
+      ResId="sfa.model.entities.Revenueitem.Worstcaserevenue_Rule_0"
+      MethodName="validateWorstcaserevenue"/>
   </Attribute>
   <Attribute
     Name="Opportunityid"
