@@ -28,7 +28,6 @@
         <Item Value="Resolution"/>
       </AttrNames>
     </attributeValues>
-    <action IterBinding="InteractionView5Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
     <listOfValues IterBinding="InteractionView5Iterator" StaticList="false" Uses="LOV_Direction" id="Direction1"/>
     <listOfValues IterBinding="InteractionView5Iterator" StaticList="false" Uses="LOV_Type" id="Type1"/>
   </bindings>

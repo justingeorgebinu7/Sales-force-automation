@@ -510,6 +510,13 @@
     <page path="/WEB-INF/Opportunity_TaskFLows/OM_AddNotes.xml#OM_AddNotes@Delete"
           usageId="sfa_view_OM_AddNotes_OM_AddNotes_DeletePageDef"/>
     <page path="/ContactManagementPages/managecontact.jsff" usageId="sfa_view_managecontactPageDef"/>
+    <page path="/WEB-INF/AppointmentsAndInteraction/createAppointmentTF.xml#createAppointmentTF@Delete"
+          usageId="sfa_view_createAppointmentTF_createAppointmentTF_DeletePageDef"/>
+    <page path="/WEB-INF/AppointmentsAndInteraction/createInteractionTF.xml#createInteractionTF@Delete"
+          usageId="sfa_view_createInteractionTF_createInteractionTF_DeletePageDef"/>
+    <page path="/WEB-INF/Opportunity_TaskFLows/createOpportunity.xml#createOpportunity@Delete"
+          usageId="sfa_view_createOpportunity_createOpportunity_DeletePageDef"/>
+    <page path="/Opportunity_pages/opportunityManage.jsff" usageId="sfa_view_opportunityManagePageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="sfa_view_untitled2PageDef" path="sfa.view.pageDefs.untitled2PageDef"/>
@@ -1009,6 +1016,13 @@
     <page id="sfa_view_OM_AddNotes_OM_AddNotes_DeletePageDef"
           path="Opportunity_TaskFLows.OM_AddNotes_OM_AddNotes_DeletePageDef"/>
     <page id="sfa_view_managecontactPageDef" path="ContactManagementPages.managecontactPageDef"/>
+    <page id="sfa_view_createAppointmentTF_createAppointmentTF_DeletePageDef"
+          path="AppointmentsAndInteraction.createAppointmentTF_createAppointmentTF_DeletePageDef"/>
+    <page id="sfa_view_createInteractionTF_createInteractionTF_DeletePageDef"
+          path="AppointmentsAndInteraction.createInteractionTF_createInteractionTF_DeletePageDef"/>
+    <page id="sfa_view_createOpportunity_createOpportunity_DeletePageDef"
+          path="Opportunity_TaskFLows.createOpportunity_createOpportunity_DeletePageDef"/>
+    <page id="sfa_view_opportunityManagePageDef" path="Opportunity_pages.opportunityManagePageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="sfa.model.entities"

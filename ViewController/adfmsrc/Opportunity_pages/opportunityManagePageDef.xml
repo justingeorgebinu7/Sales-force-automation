@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.22.48" id="addOpp_OMPageDef"
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.22.48" id="opportunityManagePageDef"
                 Package="Opportunity_pages">
   <parameters/>
   <executables>
@@ -12,6 +12,7 @@
         <Item Value="Title"/>
       </AttrNames>
     </attributeValues>
+    <listOfValues IterBinding="OpportunityView1Iterator" StaticList="false" Uses="LOV_Accountid" id="Accountid"/>
     <attributeValues IterBinding="OpportunityView1Iterator" id="Description">
       <AttrNames>
         <Item Value="Description"/>
@@ -27,6 +28,10 @@
         <Item Value="Closedate"/>
       </AttrNames>
     </attributeValues>
+    <listOfValues IterBinding="OpportunityView1Iterator" StaticList="false" Uses="LOV_Primarycontact"
+                  id="Primarycontact"/>
+    <listOfValues IterBinding="OpportunityView1Iterator" StaticList="false" Uses="LOV_Salesstage" id="Salesstage"/>
+    <listOfValues IterBinding="OpportunityView1Iterator" StaticList="false" Uses="LOV_Salesmethod" id="Salesmethod"/>
     <attributeValues IterBinding="OpportunityView1Iterator" id="Bestcaserevenue">
       <AttrNames>
         <Item Value="Bestcaserevenue"/>
@@ -42,11 +47,23 @@
         <Item Value="Budgetavailable"/>
       </AttrNames>
     </attributeValues>
-    <listOfValues IterBinding="OpportunityView1Iterator" StaticList="false" Uses="LOV_Primarycontact"
-                  id="Primarycontact"/>
-    <listOfValues IterBinding="OpportunityView1Iterator" StaticList="false" Uses="LOV_Salesstage" id="Salesstage"/>
     <listOfValues IterBinding="OpportunityView1Iterator" StaticList="false" Uses="LOV_Risklevel" id="Risklevel"/>
-    <listOfValues IterBinding="OpportunityView1Iterator" StaticList="false" Uses="LOV_Salesmethod" id="Salesmethod"/>
-    <listOfValues IterBinding="OpportunityView1Iterator" StaticList="false" Uses="LOV_Accountid" id="Accountid"/>
+    <attributeValues IterBinding="OpportunityView1Iterator" id="Totalrevenue">
+      <AttrNames>
+        <Item Value="Totalrevenue"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunityView1Iterator" id="Customeraccountid">
+      <AttrNames>
+        <Item Value="Customeraccountid"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunityView1Iterator" id="Contactid">
+      <AttrNames>
+        <Item Value="Contactid"/>
+      </AttrNames>
+    </attributeValues>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+    <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl"/>
   </bindings>
 </pageDefinition>

@@ -61,15 +61,15 @@
    <View
       id="View6">
       <property
-         name="activityId">OM_CreateInteraction</property>
+         name="activityId">OM_CreateInteraction2</property>
       <property
          name="pageFragment">true</property>
       <property
-         name="x">677.0</property>
+         name="x">675.0</property>
       <property
-         name="description">&lt;html>&lt;p>&lt;b>OM_CreateInteraction&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+         name="description">&lt;html>&lt;p>&lt;b>OM_CreateInteraction2&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">255.59766</property>
+         name="y">292.89648</property>
       <property
          name="page">/Opportunity_pages/OM_CreateInteraction.jsff</property>
       <property
@@ -83,7 +83,7 @@
       <property
          name="fromOutcome">CreateInsert</property>
       <property
-         name="sdm:polyPoints">R50,279.01465,239.5918,636.0,255.24707,L50</property>
+         name="sdm:polyPoints">R50,279.01465,239.5918,634.0,292.5459,L50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -93,17 +93,7 @@
       <property
          name="fromOutcome">Commit</property>
       <property
-         name="sdm:polyPoints">R50,934.5,368.39648,1096.0,281.34473,L54</property>
-   </ControlFlowCase>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase9"
-      from="MethodCall3"
-      to="TaskFlowReturn4">
-      <property
-         name="fromOutcome">Delete</property>
-      <property
-         name="sdm:polyPoints">R50,700.5,83.79883,1096.0,274.34473,L46</property>
+         name="sdm:polyPoints">R50,934.5,368.39648,1096.0,277.84473,L50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -113,7 +103,7 @@
       <property
          name="fromOutcome">commit</property>
       <property
-         name="sdm:polyPoints">R50,718.0,255.24707,852.5,368.39648,L50</property>
+         name="sdm:polyPoints">R50,716.0,292.5459,852.5,368.39648,L50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -123,6 +113,16 @@
       <property
          name="fromOutcome">discard</property>
       <property
-         name="sdm:polyPoints">T50,677.0,201.24707,659.5,137.79883,B50</property>
+         name="sdm:polyPoints">T50,675.0,238.5459,659.5,137.79883,B50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase12"
+      from="MethodCall3"
+      to="MethodCall5">
+      <property
+         name="fromOutcome">Delete</property>
+      <property
+         name="sdm:polyPoints">B56,663.0,137.79883,893.5,314.39648,T50</property>
    </ControlFlowCase>
 </SDM>

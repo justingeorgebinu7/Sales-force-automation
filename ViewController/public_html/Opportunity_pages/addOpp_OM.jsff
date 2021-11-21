@@ -101,6 +101,5 @@
     </af:inputComboboxListOfValues>
   </af:panelFormLayout>
   <af:button text="Save" id="b1" action="toCommit"/>
-  <af:button actionListener="#{bindings.Delete.execute}" text="Cancel" disabled="#{!bindings.Delete.enabled}" id="b2"
-             action="toCommit" immediate="true"/>
+  <af:button text="Cancel" id="b2" action="discard" immediate="true"/>
 </ui:composition>

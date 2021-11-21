@@ -110,7 +110,7 @@
       <property
          name="fromOutcome">addOpportunity</property>
       <property
-         name="sdm:polyPoints">T57,248.49303,230.9435,400.69238,54.389515,B50</property>
+         name="sdm:polyPoints">T56,247.5,231.93652,400.69238,53.396484,B50</property>
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall12">
@@ -164,7 +164,7 @@
       <property
          name="fromOutcome">contactDrilldown</property>
       <property
-         name="sdm:polyPoints">B43,239.50697,340.92957,191.03516,488.8058,T50</property>
+         name="sdm:polyPoints">B44,240.5,339.93652,191.03516,489.79883,T50</property>
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall15">

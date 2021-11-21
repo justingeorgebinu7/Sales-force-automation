@@ -101,6 +101,14 @@
           Value="Asia/Kolkata"/>
       </SchemaBasedProperties>
     </Properties>
+    <validation:CompareValidationBean
+      Name="EnddateRule0"
+      ResId="sfa.model.entities.Interaction.Enddate_Rule_0"
+      OnAttribute="Enddate"
+      OperandType="JBO"
+      Inverse="false"
+      CompareType="GREATERTHANEQUALTO"
+      CompareValue="sfa.model.viewobjects.InteractionView.Startdate"/>
   </Attribute>
   <Attribute
     Name="Description"

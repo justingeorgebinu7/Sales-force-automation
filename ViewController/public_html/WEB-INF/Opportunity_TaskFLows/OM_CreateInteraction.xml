@@ -28,14 +28,14 @@
         <fixed-outcome>Commit</fixed-outcome>
       </outcome>
     </method-call>
-    <view id="OM_CreateInteraction">
+    <view id="OM_CreateInteraction2">
       <page>/Opportunity_pages/OM_CreateInteraction.jsff</page>
     </view>
     <control-flow-rule id="__1">
       <from-activity-id>CreateInsert</from-activity-id>
       <control-flow-case id="__2">
         <from-outcome>CreateInsert</from-outcome>
-        <to-activity-id>OM_CreateInteraction</to-activity-id>
+        <to-activity-id>OM_CreateInteraction2</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <control-flow-rule id="__3">
@@ -45,15 +45,8 @@
         <to-activity-id>taskFlowReturn1</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
-    <control-flow-rule id="__5">
-      <from-activity-id>Delete</from-activity-id>
-      <control-flow-case id="__6">
-        <from-outcome>Delete</from-outcome>
-        <to-activity-id>taskFlowReturn1</to-activity-id>
-      </control-flow-case>
-    </control-flow-rule>
     <control-flow-rule id="__7">
-      <from-activity-id>OM_CreateInteraction</from-activity-id>
+      <from-activity-id>OM_CreateInteraction2</from-activity-id>
       <control-flow-case id="__8">
         <from-outcome>commit</from-outcome>
         <to-activity-id>Commit</to-activity-id>
@@ -61,6 +54,13 @@
       <control-flow-case id="__9">
         <from-outcome>discard</from-outcome>
         <to-activity-id>Delete</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__5">
+      <from-activity-id>Delete</from-activity-id>
+      <control-flow-case id="__6">
+        <from-outcome>Delete</from-outcome>
+        <to-activity-id>Commit</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <use-page-fragments/>

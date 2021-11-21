@@ -7,7 +7,6 @@
     <iterator Binds="OpportunityView1" RangeSize="25" DataControl="AppModuleDataControl" id="OpportunityView1Iterator"/>
   </executables>
   <bindings>
-    <action IterBinding="OpportunityView1Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
     <attributeValues IterBinding="OpportunityView1Iterator" id="Title">
       <AttrNames>
         <Item Value="Title"/>

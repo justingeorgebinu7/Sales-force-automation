@@ -92,4 +92,37 @@
       <property
          name="sdm:polyPoints">R50,583.5,213.09766,696.0,204.19531,L50</property>
    </ControlFlowCase>
+   <MethodCall
+      id="MethodCall10">
+      <property
+         name="activityId">Delete</property>
+      <property
+         name="x">438.5</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>Delete&lt;/b>&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
+      <property
+         name="y">448.1494</property>
+      <property
+         name="exceptionHandler">false</property>
+   </MethodCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase11"
+      from="View3"
+      to="MethodCall10">
+      <property
+         name="fromOutcome">discard</property>
+      <property
+         name="sdm:polyPoints">B50,318.0,258.49414,438.5,393.79883,T50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase12"
+      from="MethodCall10"
+      to="MethodCall4">
+      <property
+         name="fromOutcome">Delete</property>
+      <property
+         name="sdm:polyPoints">T56,442.0,393.79883,542.5,267.09766,B50</property>
+   </ControlFlowCase>
 </SDM>
