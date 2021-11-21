@@ -10,7 +10,12 @@
   DBObjectName="USERACCOUNT"
   AliasName="Useraccount"
   BindingStyle="OracleName"
-  xmlns:validation="http://xmlns.oracle.com/adfm/validation">
+  xmlns:validation="http://xmlns.oracle.com/adfm/validation"
+  RowClass="sfa.model.entities.UseraccountImpl">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access"/>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
   <Attribute
     Name="Useraccountid"
     IsNotNull="true"
@@ -122,14 +127,10 @@
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
     TableName="USERACCOUNT">
-    <validation:CompareValidationBean
+    <validation:MethodValidationBean
       Name="SupervisorRule0"
       ResId="sfa.model.entities.Useraccount.Supervisor_Rule_0"
-      OnAttribute="Supervisor"
-      OperandType="JBO"
-      Inverse="true"
-      CompareType="EQUALTO"
-      CompareValue="sfa.model.viewobjects.UseraccountView.Useraccountid"/>
+      MethodName="validateSupervisor"/>
   </Attribute>
   <AccessorAttribute
     Name="Customeraccount"

@@ -111,14 +111,24 @@
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
-    TableName="OPPORTUNITY"/>
+    TableName="OPPORTUNITY">
+    <validation:MethodValidationBean
+      Name="BestcaserevenueRule0"
+      ResId="sfa.model.entities.Opportunity.Bestcaserevenue_Rule_0"
+      MethodName="validateBestcaserevenue"/>
+  </Attribute>
   <Attribute
     Name="Worstcaserevenue"
     ColumnName="WORSTCASEREVENUE"
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
-    TableName="OPPORTUNITY"/>
+    TableName="OPPORTUNITY">
+    <validation:MethodValidationBean
+      Name="WorstcaserevenueRule0"
+      ResId="sfa.model.entities.Opportunity.Worstcaserevenue_Rule_0"
+      MethodName="validateWorstcaserevenue"/>
+  </Attribute>
   <Attribute
     Name="Budgetavailable"
     ColumnName="BUDGETAVAILABLE"

@@ -18,6 +18,29 @@ import oracle.jbo.server.*;
 // ---------------------------------------------------------------------
 public class OpportunityImpl extends EntityImpl {
     /**
+     * Validation method for Bestcaserevenue.
+     */
+    public boolean validateBestcaserevenue(BigDecimal bestcaserevenue) {
+       int val= bestcaserevenue.compareTo(getWorstcaserevenue());
+       if(val==1||val==0)
+        {
+        return true;
+        }
+        return false;
+    }
+
+    /**
+     * Validation method for Worstcaserevenue.
+     */
+    public boolean validateWorstcaserevenue(BigDecimal worstcaserevenue) {
+        int val= worstcaserevenue.compareTo(getBestcaserevenue());
+        if(val==1) {
+            return false;
+        }
+        return true;
+    }
+
+    /**
      * AttributesEnum: generated enum for identifying attributes and accessors. DO NOT MODIFY.
      */
     protected enum AttributesEnum {
