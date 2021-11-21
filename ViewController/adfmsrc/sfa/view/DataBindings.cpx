@@ -509,6 +509,7 @@
           usageId="sfa_view_OM_AddTasks_OM_AddTasks_DeletePageDef"/>
     <page path="/WEB-INF/Opportunity_TaskFLows/OM_AddNotes.xml#OM_AddNotes@Delete"
           usageId="sfa_view_OM_AddNotes_OM_AddNotes_DeletePageDef"/>
+    <page path="/ContactManagementPages/managecontact.jsff" usageId="sfa_view_managecontactPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="sfa_view_untitled2PageDef" path="sfa.view.pageDefs.untitled2PageDef"/>
@@ -1007,6 +1008,7 @@
           path="Opportunity_TaskFLows.OM_AddTasks_OM_AddTasks_DeletePageDef"/>
     <page id="sfa_view_OM_AddNotes_OM_AddNotes_DeletePageDef"
           path="Opportunity_TaskFLows.OM_AddNotes_OM_AddNotes_DeletePageDef"/>
+    <page id="sfa_view_managecontactPageDef" path="ContactManagementPages.managecontactPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="sfa.model.entities"

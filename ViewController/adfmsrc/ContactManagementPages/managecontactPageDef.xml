@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.22.48" id="managecontactPageDef"
+                Package="ContactManagementPages">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="CustomercontactsView1" RangeSize="25" DataControl="AppModuleDataControl"
+              id="CustomercontactsView1Iterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="CustomercontactsView1Iterator" id="Name">
+      <AttrNames>
+        <Item Value="Name"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomercontactsView1Iterator" id="Title">
+      <AttrNames>
+        <Item Value="Title"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomercontactsView1Iterator" id="Department">
+      <AttrNames>
+        <Item Value="Department"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomercontactsView1Iterator" id="Workphone">
+      <AttrNames>
+        <Item Value="Workphone"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CustomercontactsView1Iterator" id="Email">
+      <AttrNames>
+        <Item Value="Email"/>
+      </AttrNames>
+    </attributeValues>
+    <list IterBinding="CustomercontactsView1Iterator" StaticList="false" Uses="LOV_Buyingrole" id="Buyingrole"
+          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
+    <list IterBinding="CustomercontactsView1Iterator" StaticList="false" Uses="LOV_Influencelevel" id="Influencelevel"
+          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+    <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl"/>
+  </bindings>
+</pageDefinition>

@@ -56,7 +56,7 @@
       <property
          name="fromOutcome">backToHome</property>
       <property
-         name="sdm:polyPoints">L54,545.544,385.64355,278.0,268.99414,R54</property>
+         name="sdm:polyPoints">L54,545.5843,385.64355,278.0,272.49414,R58</property>
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall7">

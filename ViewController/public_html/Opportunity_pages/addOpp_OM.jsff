@@ -102,5 +102,5 @@
   </af:panelFormLayout>
   <af:button text="Save" id="b1" action="toCommit"/>
   <af:button actionListener="#{bindings.Delete.execute}" text="Cancel" disabled="#{!bindings.Delete.enabled}" id="b2"
-             action="toCommit"/>
+             action="toCommit" immediate="true"/>
 </ui:composition>

@@ -4,8 +4,6 @@
   <parameters/>
   <executables>
     <variableIterator id="variables"/>
-    <iterator Binds="CustomercontactsView1" RangeSize="25" DataControl="AppModuleDataControl"
-              id="CustomercontactsView1Iterator"/>
     <taskFlow id="appointmentsForContact1"
               taskFlowId="/WEB-INF/ContactManagement/appointmentsForContact.xml#appointmentsForContact"
               activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
@@ -16,47 +14,8 @@
               xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
     <taskFlow id="notesForContacts1" taskFlowId="/WEB-INF/ContactManagement/notesForContacts.xml#notesForContacts"
               activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <taskFlow id="manageconatct1" taskFlowId="/WEB-INF/ContactManagement/manageconatct.xml#manageconatct"
+              activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
   </executables>
-  <bindings>
-    <attributeValues IterBinding="CustomercontactsView1Iterator" id="Name">
-      <AttrNames>
-        <Item Value="Name"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="CustomercontactsView1Iterator" id="Title">
-      <AttrNames>
-        <Item Value="Title"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="CustomercontactsView1Iterator" id="Department">
-      <AttrNames>
-        <Item Value="Department"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="CustomercontactsView1Iterator" id="Workphone">
-      <AttrNames>
-        <Item Value="Workphone"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="CustomercontactsView1Iterator" id="Email">
-      <AttrNames>
-        <Item Value="Email"/>
-      </AttrNames>
-    </attributeValues>
-    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
-    <button IterBinding="CustomercontactsView1Iterator" id="Isprimarycontact" DTSupportsMRU="false" StaticList="true">
-      <AttrNames>
-        <Item Value="Isprimarycontact"/>
-      </AttrNames>
-      <ValueList>
-        <Item Value="Y"/>
-        <Item Value="N"/>
-      </ValueList>
-    </button>
-    <list IterBinding="CustomercontactsView1Iterator" StaticList="false" Uses="LOV_Buyingrole" id="Buyingrole"
-          DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
-    <list IterBinding="CustomercontactsView1Iterator" StaticList="false" Uses="LOV_Influencelevel" id="Influencelevel"
-          DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
-    <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl"/>
-  </bindings>
+  <bindings/>
 </pageDefinition>

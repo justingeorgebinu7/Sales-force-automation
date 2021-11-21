@@ -21,6 +21,9 @@ public class OpportunityImpl extends EntityImpl {
      * Validation method for Bestcaserevenue.
      */
     public boolean validateBestcaserevenue(BigDecimal bestcaserevenue) {
+        if(bestcaserevenue==null||this.getWorstcaserevenue()==null) {
+            return true;
+        }
        int val= bestcaserevenue.compareTo(getWorstcaserevenue());
        if(val==1||val==0)
         {
@@ -33,6 +36,9 @@ public class OpportunityImpl extends EntityImpl {
      * Validation method for Worstcaserevenue.
      */
     public boolean validateWorstcaserevenue(BigDecimal worstcaserevenue) {
+        if(worstcaserevenue==null||this.getBestcaserevenue()==null) {
+            return true;
+        }
         int val= worstcaserevenue.compareTo(getBestcaserevenue());
         if(val==1) {
             return false;

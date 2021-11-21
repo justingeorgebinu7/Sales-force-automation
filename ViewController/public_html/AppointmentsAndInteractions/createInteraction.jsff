@@ -45,7 +45,7 @@
     </af:inputText>
   </af:panelFormLayout>
   <af:button actionListener="#{bindings.Commit.execute}" text="Save" disabled="#{!bindings.Commit.enabled}" id="b1"
-             action="exit"/>
+             action="commit"/>
   <af:button actionListener="#{bindings.Delete.execute}" text="Cancel" disabled="#{!bindings.Delete.enabled}" id="b2"
              action="commit" immediate="true"/>
 </ui:composition>

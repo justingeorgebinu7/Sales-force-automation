@@ -12,69 +12,7 @@
     <af:spacer id="s1" height="10px"/>
     <af:panelTabbed position="start" id="pt2" verticalTabMode="iconAndText">
       <af:showDetailItem id="sdi1" text="Manage Contact" disclosed="true">
-        <af:panelFormLayout id="pfl1">
-          <af:inputText value="#{bindings.Name.inputValue}" label="#{bindings.Name.hints.label}"
-                        required="#{bindings.Name.hints.mandatory}" columns="#{bindings.Name.hints.displayWidth}"
-                        maximumLength="#{bindings.Name.hints.precision}" shortDesc="#{bindings.Name.hints.tooltip}"
-                        id="it1">
-            <f:validator binding="#{bindings.Name.validator}"/>
-          </af:inputText>
-          <af:inputText value="#{bindings.Title.inputValue}" label="#{bindings.Title.hints.label}"
-                        required="#{bindings.Title.hints.mandatory}" columns="#{bindings.Title.hints.displayWidth}"
-                        maximumLength="#{bindings.Title.hints.precision}" shortDesc="#{bindings.Title.hints.tooltip}"
-                        id="it2">
-            <f:validator binding="#{bindings.Title.validator}"/>
-          </af:inputText>
-          <af:inputText value="#{bindings.Department.inputValue}" label="#{bindings.Department.hints.label}"
-                        required="#{bindings.Department.hints.mandatory}"
-                        columns="#{bindings.Department.hints.displayWidth}"
-                        maximumLength="#{bindings.Department.hints.precision}"
-                        shortDesc="#{bindings.Department.hints.tooltip}" id="it3">
-            <f:validator binding="#{bindings.Department.validator}"/>
-          </af:inputText>
-          <af:inputText value="#{bindings.Workphone.inputValue}" label="#{bindings.Workphone.hints.label}"
-                        required="#{bindings.Workphone.hints.mandatory}"
-                        columns="#{bindings.Workphone.hints.displayWidth}"
-                        maximumLength="#{bindings.Workphone.hints.precision}"
-                        shortDesc="#{bindings.Workphone.hints.tooltip}" id="it4" autoSubmit="true" immediate="true">
-            <f:validator binding="#{bindings.Workphone.validator}"/>
-            <af:convertNumber groupingUsed="false" pattern="#{bindings.Workphone.format}"/>
-          </af:inputText>
-          <af:inputText value="#{bindings.Email.inputValue}" label="#{bindings.Email.hints.label}"
-                        required="#{bindings.Email.hints.mandatory}" columns="#{bindings.Email.hints.displayWidth}"
-                        maximumLength="#{bindings.Email.hints.precision}" shortDesc="#{bindings.Email.hints.tooltip}"
-                        id="it5" immediate="true" autoSubmit="true">
-            <f:validator binding="#{bindings.Email.validator}"/>
-          </af:inputText>
-          <f:facet name="footer"/>
-          <af:selectOneChoice value="#{bindings.Buyingrole.inputValue}" label="#{bindings.Buyingrole.label}"
-                              required="#{bindings.Buyingrole.hints.mandatory}"
-                              shortDesc="#{bindings.Buyingrole.hints.tooltip}" id="soc1">
-            <f:selectItems value="#{bindings.Buyingrole.items}" id="si1"/>
-            <f:validator binding="#{bindings.Buyingrole.validator}"/>
-          </af:selectOneChoice>
-          <af:selectOneChoice value="#{bindings.Influencelevel.inputValue}" label="#{bindings.Influencelevel.label}"
-                              required="#{bindings.Influencelevel.hints.mandatory}"
-                              shortDesc="#{bindings.Influencelevel.hints.tooltip}" id="soc2">
-            <f:selectItems value="#{bindings.Influencelevel.items}" id="si2"/>
-            <f:validator binding="#{bindings.Influencelevel.validator}"/>
-          </af:selectOneChoice>
-          <af:selectBooleanCheckbox value="#{bindings.Isprimarycontact.inputValue}"
-                                    label="#{bindings.Isprimarycontact.label}"
-                                    shortDesc="#{bindings.Isprimarycontact.hints.tooltip}" id="sbc1" rendered="false"/>
-        </af:panelFormLayout>
-        <af:panelGridLayout id="pgl1">
-          <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr1">
-            <af:gridCell marginStart="5px" width="dontCare" id="gc1">
-              <af:button text="Save" id="b1" actionListener="#{bindings.Commit.execute}" disabled="false"/>
-            </af:gridCell>
-            <af:gridCell marginStart="0px" width="dontCare" marginEnd="5px" id="gc2">
-              <af:button actionListener="#{bindings.Rollback.execute}" text="Cancel" immediate="true" id="b2">
-                <af:resetActionListener/>
-              </af:button>
-            </af:gridCell>
-          </af:gridRow>
-        </af:panelGridLayout>
+        <af:region value="#{bindings.manageconatct1.regionModel}" id="r5"/>
       </af:showDetailItem>
       <af:showDetailItem id="sdi2" text="Notes">
         <af:region value="#{bindings.notesForContacts1.regionModel}" id="r1"/>

@@ -39,5 +39,5 @@
     </af:inputText>
   </af:panelFormLayout>
   <af:button text="Save" id="b2" action="commit"/>
-  <af:button text="Cancel" id="b1" action="discard"/>
+  <af:button text="Cancel" id="b1" action="discard" immediate="true"/>
 </ui:composition>

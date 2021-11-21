@@ -34,5 +34,5 @@
     </af:inputText>
   </af:panelFormLayout>
   <af:button text="Save" id="b1" action="#{AppointmentsForContact.createEntry}"/>
-  <af:button text="Cancel" id="b2" action="discard"/>
+  <af:button text="Cancel" id="b2" action="discard" immediate="true"/>
 </ui:composition>
