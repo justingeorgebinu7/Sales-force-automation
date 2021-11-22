@@ -21,7 +21,6 @@
     PrimaryKey="true">
     <TransientExpression
       Name="ExpressionScript"
-      trustMode="trusted"
       CodeSourceName="UserroleRow"/>
   </Attribute>
   <Attribute
@@ -38,14 +37,36 @@
     SQLType="DATE"
     Type="java.sql.Timestamp"
     ColumnType="DATE"
-    TableName="USERROLE"/>
+    TableName="USERROLE">
+    <Properties>
+      <SchemaBasedProperties>
+        <FMT_FORMATTER
+          ResId="sfa.model.entities.Userrole.Startdate_FMT_FORMATTER"/>
+        <FMT_FORMAT
+          ResId="sfa.model.entities.Userrole.Startdate_FMT_FORMAT"/>
+        <TimeZoneID
+          Value="Asia/Kolkata"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <Attribute
     Name="Enddate"
     ColumnName="ENDDATE"
     SQLType="DATE"
     Type="java.sql.Timestamp"
     ColumnType="DATE"
-    TableName="USERROLE"/>
+    TableName="USERROLE">
+    <Properties>
+      <SchemaBasedProperties>
+        <FMT_FORMATTER
+          ResId="sfa.model.entities.Userrole.Enddate_FMT_FORMATTER"/>
+        <FMT_FORMAT
+          ResId="sfa.model.entities.Userrole.Enddate_FMT_FORMAT"/>
+        <TimeZoneID
+          Value="Asia/Kolkata"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <Attribute
     Name="Roleid"
     ColumnName="ROLEID"
@@ -120,4 +141,8 @@
       <Item Value="sfa.model.entities.Userrole.Roleid"/>
     </AttrArray>
   </Key>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="sfa.model.ModelBundle"/>
+  </ResourceBundle>
 </Entity>

@@ -76,13 +76,27 @@
     PrecisionRule="true"
     EntityAttrName="Startdate"
     EntityUsage="Userrole"
-    AliasName="STARTDATE"/>
+    AliasName="STARTDATE">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="sfa.model.viewobjects.UserroleView.Startdate_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Enddate"
     PrecisionRule="true"
     EntityAttrName="Enddate"
     EntityUsage="Userrole"
-    AliasName="ENDDATE"/>
+    AliasName="ENDDATE">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="sfa.model.viewobjects.UserroleView.Enddate_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Roleid"
     IsNotNull="true"

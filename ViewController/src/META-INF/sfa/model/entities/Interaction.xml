@@ -35,13 +35,6 @@
     <DesignTime>
       <Attr Name="_DisplaySize" Value="20"/>
     </DesignTime>
-    <validation:RegExpValidationBean
-      Name="TypeRule0"
-      ResId="sfa.model.entities.Interaction.Type_Rule_0"
-      OnAttribute="Type"
-      Pattern="email|fax|phone call|meeting"
-      Flags="CaseInsensitive"
-      Inverse="false"/>
   </Attribute>
   <Attribute
     Name="Direction"
