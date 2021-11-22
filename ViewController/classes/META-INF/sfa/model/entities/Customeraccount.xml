@@ -80,6 +80,12 @@
           ResId="sfa.model.entities.Customeraccount.Accounturl_LABEL"/>
       </SchemaBasedProperties>
     </Properties>
+    <validation:RegExpValidationBean
+      Name="AccounturlRule0"
+      ResId="sfa.model.entities.Customeraccount.Accounturl_Rule_0"
+      OnAttribute="Accounturl"
+      Pattern="[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&amp;//=]*)"
+      Inverse="false"/>
   </Attribute>
   <Attribute
     Name="Ceo"
