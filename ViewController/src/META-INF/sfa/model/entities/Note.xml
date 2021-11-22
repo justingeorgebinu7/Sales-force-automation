@@ -23,11 +23,7 @@
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
     TableName="NOTE"
-    PrimaryKey="true">
-    <TransientExpression
-      Name="ExpressionScript"
-      CodeSourceName="NoteRow"/>
-  </Attribute>
+    PrimaryKey="true"/>
   <Attribute
     Name="Content"
     Precision="100"

@@ -7,18 +7,66 @@
       <property
          name="activityId">editCategory2</property>
       <property
-         name="pageFragment">true</property>
-      <property
-         name="x">600.124</property>
+         name="x">515.0</property>
       <property
          name="start">true</property>
       <property
-         name="description">&lt;html>&lt;p>&lt;b>editCategory2&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+         name="description">&lt;html>&lt;p>&lt;b>Edit&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity ID:  editCategory2&lt;/p>&lt;p>Activity Type:  View&lt;/p>&lt;p/>&lt;p>&lt;em>Edit Category&lt;br/>&lt;/em>&lt;/p></property>
       <property
-         name="y">341.79883</property>
+         name="y">335.39062</property>
       <property
-         name="page">/ProductsCatalog/editCategory.jsff</property>
+         name="page">/ProductsCatalog/editCategory.jsf</property>
       <property
          name="exceptionHandler">false</property>
    </View>
+   <TaskFlowReturn
+      id="TaskFlowReturn4">
+      <property
+         name="activityId">taskFlowReturn1</property>
+      <property
+         name="x">847.0</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>taskFlowReturn1&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Return&lt;/p>&lt;p>Outcome:  taskFlowReturn1&lt;/p></property>
+      <property
+         name="y">157.24707</property>
+      <property
+         name="finish">true</property>
+      <property
+         name="exceptionHandler">false</property>
+   </TaskFlowReturn>
+   <TaskFlowReturn
+      id="TaskFlowReturn5">
+      <property
+         name="activityId">taskFlowReturn2</property>
+      <property
+         name="x">859.0</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>taskFlowReturn2&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Return&lt;/p>&lt;p>Outcome:  taskFlowReturn2&lt;/p></property>
+      <property
+         name="y">411.24707</property>
+      <property
+         name="finish">true</property>
+      <property
+         name="exceptionHandler">false</property>
+   </TaskFlowReturn>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase6"
+      from="View3"
+      to="TaskFlowReturn4">
+      <property
+         name="fromOutcome">commit</property>
+      <property
+         name="sdm:polyPoints">R45,556.96606,330.57397,805.034,156.89648,L50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase7"
+      from="View3"
+      to="TaskFlowReturn5">
+      <property
+         name="fromOutcome">rollback</property>
+      <property
+         name="sdm:polyPoints">R55,556.96606,339.5061,817.03394,410.8965,L50</property>
+   </ControlFlowCase>
 </SDM>

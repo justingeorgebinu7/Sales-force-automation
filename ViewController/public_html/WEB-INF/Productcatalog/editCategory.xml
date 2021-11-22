@@ -2,12 +2,39 @@
 <adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
   <task-flow-definition id="editCategory">
     <default-activity>editCategory2</default-activity>
+    <transaction>
+      <new-transaction/>
+    </transaction>
     <data-control-scope>
       <shared/>
     </data-control-scope>
     <view id="editCategory2">
-      <page>/ProductsCatalog/editCategory.jsff</page>
+      <description>Edit Category</description>
+      <display-name>Edit</display-name>
+      <page>/ProductsCatalog/editCategory.jsf</page>
     </view>
-    <use-page-fragments/>
+    <task-flow-return id="taskFlowReturn1">
+      <outcome>
+        <name>taskFlowReturn1</name>
+        <commit/>
+      </outcome>
+    </task-flow-return>
+    <task-flow-return id="taskFlowReturn2">
+      <outcome>
+        <name>taskFlowReturn2</name>
+        <rollback/>
+      </outcome>
+    </task-flow-return>
+    <control-flow-rule id="__1">
+      <from-activity-id>editCategory2</from-activity-id>
+      <control-flow-case id="__2">
+        <from-outcome>commit</from-outcome>
+        <to-activity-id>taskFlowReturn1</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__3">
+        <from-outcome>rollback</from-outcome>
+        <to-activity-id>taskFlowReturn2</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
   </task-flow-definition>
 </adfc-config>

@@ -517,6 +517,7 @@
     <page path="/WEB-INF/Opportunity_TaskFLows/createOpportunity.xml#createOpportunity@Delete"
           usageId="sfa_view_createOpportunity_createOpportunity_DeletePageDef"/>
     <page path="/Opportunity_pages/opportunityManage.jsff" usageId="sfa_view_opportunityManagePageDef"/>
+    <page path="/ProductsCatalog/editCategory.jsf" usageId="sfa_view_editCategoryPageDef1"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="sfa_view_untitled2PageDef" path="sfa.view.pageDefs.untitled2PageDef"/>
@@ -1023,6 +1024,7 @@
     <page id="sfa_view_createOpportunity_createOpportunity_DeletePageDef"
           path="Opportunity_TaskFLows.createOpportunity_createOpportunity_DeletePageDef"/>
     <page id="sfa_view_opportunityManagePageDef" path="Opportunity_pages.opportunityManagePageDef"/>
+    <page id="sfa_view_editCategoryPageDef1" path="ProductsCatalog.editCategoryPageDef1"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="sfa.model.entities"

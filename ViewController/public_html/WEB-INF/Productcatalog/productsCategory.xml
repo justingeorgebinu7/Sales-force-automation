@@ -19,9 +19,6 @@
         <id>createCategory</id>
       </task-flow-reference>
     </task-flow-call>
-    <view id="editCategory">
-      <page>/ProductsCatalog/editCategory.jsff</page>
-    </view>
     <task-flow-call id="deleteCategory1">
       <task-flow-reference>
         <document>/WEB-INF/Productcatalog/deleteCategory.xml</document>
@@ -33,26 +30,37 @@
         <name>taskFlowReturn1</name>
       </outcome>
     </task-flow-return>
+    <task-flow-call id="editCategory">
+      <task-flow-reference>
+        <document>/WEB-INF/Productcatalog/editCategory.xml</document>
+        <id>editCategory</id>
+      </task-flow-reference>
+      <run-as-dialog>
+        <display-type>
+          <inline-popup/>
+        </display-type>
+      </run-as-dialog>
+    </task-flow-call>
+    <view id="editCategory1">
+      <page>/ProductsCatalog/editCategory.jsff</page>
+    </view>
     <control-flow-rule id="__1">
       <from-activity-id>category</from-activity-id>
       <control-flow-case id="__2">
         <from-outcome>addCategory</from-outcome>
         <to-activity-id>createCategory</to-activity-id>
       </control-flow-case>
-      <control-flow-case id="__3">
-        <from-outcome>editCategory</from-outcome>
-        <to-activity-id>editCategory</to-activity-id>
-      </control-flow-case>
       <control-flow-case id="__9">
         <from-outcome>exitCategory</from-outcome>
         <to-activity-id>taskFlowReturn1</to-activity-id>
       </control-flow-case>
-    </control-flow-rule>
-    <control-flow-rule id="__4">
-      <from-activity-id>editCategory</from-activity-id>
-      <control-flow-case id="__5">
-        <from-outcome>backFromEdit</from-outcome>
-        <to-activity-id>category</to-activity-id>
+      <control-flow-case id="__3">
+        <from-outcome>goToEdit</from-outcome>
+        <to-activity-id>editCategory</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__4">
+        <from-outcome>editAsFragment</from-outcome>
+        <to-activity-id>editCategory1</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <control-flow-rule id="__6">
@@ -60,6 +68,13 @@
       <control-flow-case id="__7">
         <from-outcome>deleteCategory1</from-outcome>
         <to-activity-id>deleteCategory1</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__5">
+      <from-activity-id>editCategory1</from-activity-id>
+      <control-flow-case id="__10">
+        <from-outcome>back</from-outcome>
+        <to-activity-id>category</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <use-page-fragments/>
