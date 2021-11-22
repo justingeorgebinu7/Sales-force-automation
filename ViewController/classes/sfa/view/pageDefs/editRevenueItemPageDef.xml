@@ -23,6 +23,15 @@
         <Item Value="Revenue"/>
       </AttrNames>
     </attributeValues>
+    <list IterBinding="RevenueitemView2Iterator" StaticList="false" Uses="LOV_Productid" id="Productid"
+          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
+    <methodAction id="estimatedPrice" RequiresUpdateModel="true" Action="invokeMethod" MethodName="estimatedPrice"
+                  IsViewObjectMethod="false" DataControl="AppModuleDataControl"
+                  InstanceName="bindings.estimatedPrice.dataControl.dataProvider">
+      <NamedData NDName="pidStr" NDType="java.lang.String"/>
+    </methodAction>
+    <list IterBinding="RevenueitemView2Iterator" StaticList="false" Uses="LOV_Currency" id="Currency"
+          DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
     <attributeValues IterBinding="RevenueitemView2Iterator" id="Bestcaserevenue">
       <AttrNames>
         <Item Value="Bestcaserevenue"/>
@@ -33,14 +42,5 @@
         <Item Value="Worstcaserevenue"/>
       </AttrNames>
     </attributeValues>
-    <list IterBinding="RevenueitemView2Iterator" StaticList="false" Uses="LOV_Productid" id="Productid"
-          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
-    <methodAction id="estimatedPrice" RequiresUpdateModel="true" Action="invokeMethod" MethodName="estimatedPrice"
-                  IsViewObjectMethod="false" DataControl="AppModuleDataControl"
-                  InstanceName="bindings.estimatedPrice.dataControl.dataProvider">
-      <NamedData NDName="pidStr" NDType="java.lang.String"/>
-    </methodAction>
-    <list IterBinding="RevenueitemView2Iterator" StaticList="false" Uses="LOV_Currency" id="Currency"
-          DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
   </bindings>
 </pageDefinition>
