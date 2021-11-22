@@ -10,7 +10,8 @@
             queryListener="#{bindings.InteractionView5Query.processQuery}" varStatus="vs" id="t1">
     <af:column sortProperty="#{bindings.InteractionView5.hints.Type.name}" filterable="true" sortable="true"
                headerText="#{bindings.InteractionView5.hints.Type.label}" id="c1" width="100%">
-      <af:outputText value="#{row.Type}" shortDesc="#{bindings.InteractionView5.hints.Type.tooltip}" id="ot1"/>
+      <af:link shortDesc="#{bindings.InteractionView5.hints.Type.tooltip}" id="ot1" text="#{row.Type}"
+               action="editInteraction"/>
     </af:column>
     <af:column sortProperty="#{bindings.InteractionView5.hints.Direction.name}" filterable="true" sortable="true"
                headerText="#{bindings.InteractionView5.hints.Direction.label}" id="c2">
