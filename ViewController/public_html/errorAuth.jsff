@@ -4,7 +4,7 @@
   <af:panelBox text="PanelBox1" id="pb1" showHeader="never" inlineStyle="text-align:center;">
     <f:facet name="toolbar"/>
     <af:image source="https://aquacert.mpeda.gov.in/Content/images/error-401.png" shortDesc="Anauthorised" id="i1"
-              inlineStyle="width:600px;"/>
+              inlineStyle="width:500px;"/>
     <af:spacer id="s1" height="20px"/>
     <h:outputText id="ot1"
                   value="#{securityContext.userName} is not authorised to perform this action. Login with different credentials or go back to home. "

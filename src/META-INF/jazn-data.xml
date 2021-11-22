@@ -11,12 +11,12 @@
                     <display-name>Admin</display-name>
                 </user>
                 <user>
-                    <name>User2</name>
-                    <credentials>{903}YBOHWGdPJ1m4E7EwKqWZ4IfN4Sut0adB</credentials>
+                    <name>Justin</name>
+                    <credentials>{903}D1/Fz+TQKPmaAX1+hKXCR5wfg5U2MQ60</credentials>
                 </user>
                 <user>
-                    <name>User4</name>
-                    <credentials>{903}D1/Fz+TQKPmaAX1+hKXCR5wfg5U2MQ60</credentials>
+                    <name>Steev</name>
+                    <credentials>{903}bZGJFFEMCAv0hrmfcEuGft2ow9vT3mx+</credentials>
                 </user>
             </users>
         </realm>
@@ -56,6 +56,14 @@
                                 <class>oracle.security.jps.internal.core.principals.JpsXmlUserImpl</class>
                                 <name>User2</name>
                             </member>
+                            <member>
+                                <class>oracle.security.jps.internal.core.principals.JpsXmlUserImpl</class>
+                                <name>User1</name>
+                            </member>
+                            <member>
+                                <class>oracle.security.jps.internal.core.principals.JpsXmlUserImpl</class>
+                                <name>Steev</name>
+                            </member>
                         </members>
                     </app-role>
                     <app-role>
@@ -65,7 +73,7 @@
                         <members>
                             <member>
                                 <class>oracle.security.jps.internal.core.principals.JpsXmlUserImpl</class>
-                                <name>User4</name>
+                                <name>Justin</name>
                             </member>
                         </members>
                     </app-role>
