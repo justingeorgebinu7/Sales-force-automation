@@ -17,7 +17,7 @@
     </af:column>
     <af:column sortProperty="#{bindings.ProductsView1.hints.Price.name}" filterable="true" sortable="true"
                headerText="#{bindings.ProductsView1.hints.Price.label}" id="c3" width="100%">
-      <af:outputText value="#{row.Price}" shortDesc="#{bindings.ProductsView1.hints.Price.tooltip}" id="ot3">
+      <af:outputText value="#{row.Price} INR" shortDesc="#{bindings.ProductsView1.hints.Price.tooltip}" id="ot3">
         <af:convertNumber groupingUsed="false" pattern="#{bindings.ProductsView1.hints.Price.format}"/>
       </af:outputText>
     </af:column>

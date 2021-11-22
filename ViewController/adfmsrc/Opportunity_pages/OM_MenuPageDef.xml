@@ -50,11 +50,6 @@
         <Item Value="Worstcaserevenue"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="OpportunityView1Iterator" id="Budgetavailable">
-      <AttrNames>
-        <Item Value="Budgetavailable"/>
-      </AttrNames>
-    </attributeValues>
     <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
     <listOfValues IterBinding="OpportunityView1Iterator" StaticList="false" Uses="LOV_Risklevel" id="Risklevel"/>
     <listOfValues IterBinding="OpportunityView1Iterator" StaticList="false" Uses="LOV_Salesmethod" id="Salesmethod"/>

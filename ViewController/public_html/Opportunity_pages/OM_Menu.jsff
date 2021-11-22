@@ -52,14 +52,13 @@
             <f:validator binding="#{bindings.Primarycontact.validator}"/>
             <!--<af:convertNumber groupingUsed="false" pattern="#{bindings.Primarycontact.format}"/>-->
           </af:inputComboboxListOfValues>
-          <af:inputText value="#{bindings.Budgetavailable.inputValue}" label="#{bindings.Budgetavailable.hints.label}"
-                        required="#{bindings.Budgetavailable.hints.mandatory}"
-                        columns="#{bindings.Budgetavailable.hints.displayWidth}"
-                        maximumLength="#{bindings.Budgetavailable.hints.precision}"
-                        shortDesc="#{bindings.Budgetavailable.hints.tooltip}" id="it9">
-            <f:validator binding="#{bindings.Budgetavailable.validator}"/>
-            <af:convertNumber groupingUsed="false" pattern="#{bindings.Budgetavailable.format}"/>
-          </af:inputText>
+          <af:selectOneRadio value="#{bindings.Currency.inputValue}" label="#{bindings.Currency.label}"
+                             required="#{bindings.Currency.hints.mandatory}"
+                             shortDesc="#{bindings.Currency.hints.tooltip}" id="sor1" autoSubmit="true"
+                             valueChangeListener="#{currencyBean.convertTot}" layout="horizontal">
+            <f:selectItems value="#{bindings.Currency.items}" id="si1"/>
+            <f:validator binding="#{bindings.Currency.validator}"/>
+          </af:selectOneRadio>
           <af:inputText value="#{bindings.Totalrevenue.inputValue}" label="#{bindings.Totalrevenue.hints.label}"
                         required="#{bindings.Totalrevenue.hints.mandatory}"
                         columns="#{bindings.Totalrevenue.hints.displayWidth}"
@@ -84,13 +83,6 @@
             <f:validator binding="#{bindings.Worstcaserevenue.validator}"/>
             <af:convertNumber groupingUsed="false" pattern="#{bindings.Worstcaserevenue.format}"/>
           </af:inputText>
-          <af:selectOneRadio value="#{bindings.Currency.inputValue}" label="#{bindings.Currency.label}"
-                             required="#{bindings.Currency.hints.mandatory}"
-                             shortDesc="#{bindings.Currency.hints.tooltip}" id="sor1" autoSubmit="true"
-                             valueChangeListener="#{currencyBean.convertTot}">
-            <f:selectItems value="#{bindings.Currency.items}" id="si1"/>
-            <f:validator binding="#{bindings.Currency.validator}"/>
-          </af:selectOneRadio>
           <af:inputText value="#{bindings.Winprobability.inputValue}" label="#{bindings.Winprobability.hints.label}"
                         required="#{bindings.Winprobability.hints.mandatory}" columns="3"
                         maximumLength="#{bindings.Winprobability.hints.precision}"
