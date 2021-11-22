@@ -1,10 +1,16 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:h="http://java.sun.com/jsf/html"
-                xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
-  <h:outputText id="ot1"
-                value="#{securityContext.userName} is not authorised to perform this action.Login with different credentials or go back to home. "/>
-  <af:spacer id="s1" height="20px"/>
-  <af:button text="Home" id="b1" action="refreshPage"/>
-  <af:button text="Logout" id="b2"
-   destination="/adfAuthentication?logout=true&amp;end_url=/faces/LandingPage"/>
+                xmlns:af="http://xmlns.oracle.com/adf/faces/rich" xmlns:f="http://java.sun.com/jsf/core">
+  <af:panelBox text="PanelBox1" id="pb1" showHeader="never" inlineStyle="text-align:center;">
+    <f:facet name="toolbar"/>
+    <af:image source="https://aquacert.mpeda.gov.in/Content/images/error-401.png" shortDesc="Anauthorised" id="i1"
+              inlineStyle="width:600px;"/>
+    <af:spacer id="s1" height="20px"/>
+    <h:outputText id="ot1"
+                  value="#{securityContext.userName} is not authorised to perform this action. Login with different credentials or go back to home. "
+                  style="text-align:center; font-weight:bold;font-size:15px;color:#557"/>
+    <af:spacer id="s2" height="20"/>
+    <af:button text="Home" id="b1" action="refreshPage"/>
+    <af:button text="Logout" id="b2" destination="/adfAuthentication?logout=true&amp;end_url=/faces/LandingPage"/>
+  </af:panelBox>
 </ui:composition>
