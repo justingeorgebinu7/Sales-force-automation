@@ -71,17 +71,17 @@ public class RevenueItemedit implements Serializable {
     public void calculate(Object quant){
         
         DCIteratorBinding it = (DCIteratorBinding)BindingContext.getCurrent().getCurrentBindingsEntry().get("RevenueitemView2Iterator");   
-        RowSetIterator rsIter = it .getRowSetIterator();
+        RowSetIterator rsIter = it.getRowSetIterator();
         Row rowObj = rsIter .getCurrentRow();
         Object price=rowObj.getAttribute("Estimatedprice");
         if(price==null) {
             return;
         }
-        int q=Integer.parseInt(quant.toString());
-        int p=Integer.parseInt(price.toString());
-        int rev=p*q;
+       double q=Double.parseDouble(quant.toString());
+        double p=Double.parseDouble(price.toString());
+       double rev=p*q;
         
-        Object revenue=(Integer)rev;
+        Object revenue=(Double)rev;
         //System.out.println(rev);
         double bestcaserev= 1.1*rev;
         //System.out.println(bestcaserev);

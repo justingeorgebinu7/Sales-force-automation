@@ -111,24 +111,14 @@
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
-    TableName="OPPORTUNITY">
-    <validation:MethodValidationBean
-      Name="BestcaserevenueRule0"
-      ResId="sfa.model.entities.Opportunity.Bestcaserevenue_Rule_0"
-      MethodName="validateBestcaserevenue"/>
-  </Attribute>
+    TableName="OPPORTUNITY"/>
   <Attribute
     Name="Worstcaserevenue"
     ColumnName="WORSTCASEREVENUE"
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
-    TableName="OPPORTUNITY">
-    <validation:MethodValidationBean
-      Name="WorstcaserevenueRule0"
-      ResId="sfa.model.entities.Opportunity.Worstcaserevenue_Rule_0"
-      MethodName="validateWorstcaserevenue"/>
-  </Attribute>
+    TableName="OPPORTUNITY"/>
   <Attribute
     Name="Budgetavailable"
     ColumnName="BUDGETAVAILABLE"
@@ -167,6 +157,18 @@
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
     TableName="OPPORTUNITY"/>
+  <Attribute
+    Name="Currency"
+    Precision="20"
+    ColumnName="CURRENCY"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="OPPORTUNITY">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+  </Attribute>
   <AccessorAttribute
     Name="Note"
     Association="sfa.model.entities.NoteOpportunityFkAssoc"

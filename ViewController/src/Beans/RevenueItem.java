@@ -81,11 +81,11 @@ public class RevenueItem {
         if(price==null) {
             return;
         }
-        int q=Integer.parseInt(quant.toString());
-        int p=Integer.parseInt(price.toString());
-        int rev=p*q;
-        
-        Object revenue=(Integer)rev;
+        double q=Double.parseDouble(quant.toString());
+        double p=Double.parseDouble(price.toString());
+        double rev=p*q;
+        rev=Math.abs(rev);
+        Object revenue=(Double)rev;
         //System.out.println(rev);
         double bestcaserev= 1.1*rev;
         //System.out.println(bestcaserev);

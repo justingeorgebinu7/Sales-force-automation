@@ -34,6 +34,14 @@
     Name="CustomeraccountView1"
     ViewObjectName="sfa.model.viewobjects.CustomeraccountView"
     RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="CurrencyVO1"
+    ViewObjectName="sfa.model.entities.CurrencyVO"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="CurrencyVO2"
+    ViewObjectName="sfa.model.entities.CurrencyVO"
+    RowLevelBinds="true"/>
   <ListBinding
     Name="LOV_Salesstage"
     ListVOName="SalesStage1"
@@ -126,6 +134,23 @@
     </AttrArray>
     <AttrArray Name="ListDisplayAttrNames">
       <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_Currency"
+    ListVOName="CurrencyVO2"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Currency"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Currency"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Currency"/>
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
@@ -406,6 +431,20 @@
     EntityAttrName="Contactid"
     EntityUsage="Customercontacts"
     AliasName="CONTACTID"/>
+  <ViewAttribute
+    Name="Currency"
+    PrecisionRule="true"
+    EntityAttrName="Currency"
+    EntityUsage="Opportunity"
+    AliasName="CURRENCY"
+    LOVName="LOV_Currency">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <AttrArray Name="KeyAttributes">
     <Item Value="Opportunityid"/>
   </AttrArray>

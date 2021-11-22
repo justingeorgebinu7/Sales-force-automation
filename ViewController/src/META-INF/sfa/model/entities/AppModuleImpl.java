@@ -766,7 +766,7 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
             if (prodidstr.equals(pidStr)) {
 
                 Object p = r.getAttribute("Price");
-                int pr = Integer.parseInt(p.toString());
+                double pr = Double.parseDouble(p.toString());
                 DCIteratorBinding it = (DCIteratorBinding) BindingContext.getCurrent()
                                                                          .getCurrentBindingsEntry()
                                                                          .get("RevenueitemView2Iterator");
@@ -784,7 +784,7 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
                             } else if (cStr.equals("EUR")) {
                                 pr *= 85;
                             }
-                            p = (Integer) pr;
+                            p = (Double) pr;
                         }
                     }
                 }
@@ -806,7 +806,7 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
         RowSet rs = (RowSet) getRevenueitemView1();
         rs.reset();
         System.out.println(rs.hasNext());
-        int total = 0;
+        double total = 0;
         while (rs.hasNext()) {
             System.out.println("Inside while");
             Row r = rs.next();
@@ -817,7 +817,7 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
 
                 Object looprev = r.getAttribute("Revenue");
                 if (looprev != null) {
-                    int looprevint = Integer.parseInt(looprev.toString());
+                    double looprevint = Double.parseDouble(looprev.toString());
                     Object curr = r.getAttribute("Currency");
                     if (curr != null) {
                         String currStr = curr.toString();
@@ -826,9 +826,9 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
 
                         if (!(curr.equals("INR"))) {
                             if (curr.equals("USD")) {
-                                looprevint /= 75;
+                                looprevint *= 75;
                             } else if (curr.equals("EUR")) {
-                                looprevint /= 85;
+                                looprevint *= 85;
                             }
                         }
                     }
@@ -844,6 +844,19 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
                                                                  .get("OpportunityView1Iterator");
         RowSetIterator rsIter = it.getRowSetIterator();
         Row rowObj = rsIter.getCurrentRow();
+        Object c = rowObj.getAttribute("Currency");
+        if (c != null) {
+
+            String cstr = c.toString();
+            if (!(cstr.equals("INR"))) {
+
+                if (cstr.equals("USD")) {
+                    total /= 75;
+                } else if (cstr.equals("EUR")) {
+                    total /= 85;
+                }
+            }
+        }
         rowObj.setAttribute("Totalrevenue", total);
         System.out.println(total);
         double best = 1.1 * total;

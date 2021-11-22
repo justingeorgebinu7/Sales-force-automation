@@ -84,6 +84,13 @@
             <f:validator binding="#{bindings.Worstcaserevenue.validator}"/>
             <af:convertNumber groupingUsed="false" pattern="#{bindings.Worstcaserevenue.format}"/>
           </af:inputText>
+          <af:selectOneRadio value="#{bindings.Currency.inputValue}" label="#{bindings.Currency.label}"
+                             required="#{bindings.Currency.hints.mandatory}"
+                             shortDesc="#{bindings.Currency.hints.tooltip}" id="sor1" autoSubmit="true"
+                             valueChangeListener="#{currencyBean.convertTot}">
+            <f:selectItems value="#{bindings.Currency.items}" id="si1"/>
+            <f:validator binding="#{bindings.Currency.validator}"/>
+          </af:selectOneRadio>
           <af:inputText value="#{bindings.Winprobability.inputValue}" label="#{bindings.Winprobability.hints.label}"
                         required="#{bindings.Winprobability.hints.mandatory}" columns="3"
                         maximumLength="#{bindings.Winprobability.hints.precision}"

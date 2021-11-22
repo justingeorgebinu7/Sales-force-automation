@@ -20,6 +20,16 @@
       <managed-bean-class>Beans.OppMenuBean</managed-bean-class>
       <managed-bean-scope>session</managed-bean-scope>
     </managed-bean>
+    <managed-bean id="__15">
+      <managed-bean-name>TotalCurrency</managed-bean-name>
+      <managed-bean-class>sfa.view.TotalCurrency</managed-bean-class>
+      <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean id="__16">
+      <managed-bean-name>currencyBean</managed-bean-name>
+      <managed-bean-class>Beans.currencyBean</managed-bean-class>
+      <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
     <view id="OM_home">
       <page>/Opportunity_pages/OM_home.jsff</page>
     </view>

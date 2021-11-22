@@ -64,6 +64,7 @@ public class OpportunityImpl extends EntityImpl {
         Risklevel,
         Title,
         Totalrevenue,
+        Currency,
         Note,
         Customeraccount,
         Customercontacts,
@@ -110,6 +111,7 @@ public class OpportunityImpl extends EntityImpl {
     public static final int RISKLEVEL = AttributesEnum.Risklevel.index();
     public static final int TITLE = AttributesEnum.Title.index();
     public static final int TOTALREVENUE = AttributesEnum.Totalrevenue.index();
+    public static final int CURRENCY = AttributesEnum.Currency.index();
     public static final int NOTE = AttributesEnum.Note.index();
     public static final int CUSTOMERACCOUNT = AttributesEnum.Customeraccount.index();
     public static final int CUSTOMERCONTACTS = AttributesEnum.Customercontacts.index();
@@ -355,6 +357,23 @@ public class OpportunityImpl extends EntityImpl {
      */
     public void setTotalrevenue(BigDecimal value) {
         setAttributeInternal(TOTALREVENUE, value);
+    }
+
+
+    /**
+     * Gets the attribute value for Currency, using the alias name Currency.
+     * @return the value of Currency
+     */
+    public String getCurrency() {
+        return (String) getAttributeInternal(CURRENCY);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for Currency.
+     * @param value value to set the Currency
+     */
+    public void setCurrency(String value) {
+        setAttributeInternal(CURRENCY, value);
     }
 
     /**
