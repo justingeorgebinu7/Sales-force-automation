@@ -272,9 +272,9 @@ public class NoteImpl extends EntityImpl {
         //        String value = secCntx.getUserName();
         //        setCreatedby(value);
         super.create(attributeList);
-        SequenceImpl seq = new SequenceImpl("COMMONSEQUENCE", getDBTransaction().getRootApplicationModule());
-        BigDecimal noteid = new BigDecimal(seq.getSequenceNumber().toString());
-        setNoteid(noteid);
+//        SequenceImpl seq = new SequenceImpl("COMMONSEQUENCE", getDBTransaction().getRootApplicationModule());
+//        BigDecimal noteid = new BigDecimal(seq.getSequenceNumber().toString());
+//        setNoteid(noteid);
     }
 
     protected void initDefaultExpressionAttributes(AttributeList attributeList) {

@@ -11,13 +11,12 @@
                     <display-name>Admin</display-name>
                 </user>
                 <user>
-                    <name>user2</name>
-                    <credentials>{903}t8Mc3Ja44bSbTH+ftzTNll3FHepirhRx</credentials>
+                    <name>User2</name>
+                    <credentials>{903}YBOHWGdPJ1m4E7EwKqWZ4IfN4Sut0adB</credentials>
                 </user>
                 <user>
-                    <name>user3</name>
-                    <credentials>{903}yhDPrmsaMHG0NGruZZ0RQISqy414f14L</credentials>
-                    <display-name>User 3</display-name>
+                    <name>User4</name>
+                    <credentials>{903}D1/Fz+TQKPmaAX1+hKXCR5wfg5U2MQ60</credentials>
                 </user>
             </users>
         </realm>
@@ -55,7 +54,7 @@
                         <members>
                             <member>
                                 <class>oracle.security.jps.internal.core.principals.JpsXmlUserImpl</class>
-                                <name>user2</name>
+                                <name>User2</name>
                             </member>
                         </members>
                     </app-role>
@@ -66,7 +65,7 @@
                         <members>
                             <member>
                                 <class>oracle.security.jps.internal.core.principals.JpsXmlUserImpl</class>
-                                <name>user3</name>
+                                <name>User4</name>
                             </member>
                         </members>
                     </app-role>
