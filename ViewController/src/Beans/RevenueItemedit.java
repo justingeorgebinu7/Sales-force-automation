@@ -53,10 +53,13 @@ public class RevenueItemedit implements Serializable {
         RowSetIterator rsIter = it .getRowSetIterator();
         Row rowObj = rsIter .getCurrentRow();
         Object q=rowObj.getAttribute("Quantity");
+        if(q!=null)
+        {
         String str = q.toString();
-        if(str!=null) {
+        
             calculate(q);
         }
+     
          
     }
 

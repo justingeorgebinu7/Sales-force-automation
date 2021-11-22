@@ -19,7 +19,9 @@ import sfa.model.entities.common.AppModule;
 import sfa.model.viewobjects.CustomercontactsViewImpl;
 import sfa.model.viewobjects.ProductsViewImpl;
 import sfa.model.viewobjects.staticVo.AccountTypeImpl;
+
 import oracle.jbo.*;
+
 import oracle.adf.model.BindingContext;
 
 import sfa.model.viewobjects.ProductsViewRowImpl;
@@ -36,7 +38,7 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
      */
     public AppModuleImpl() {
     }
-    
+
 
     /**
      * Container's getter for AddressView1.
@@ -607,9 +609,8 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
         return (ViewObjectImpl) findViewObject("FilesView4");
     }
 
-    
-   
-   // Create an entry in invtee table
+
+    // Create an entry in invtee table
     public void setInviteeData(int contactId, int appointmentId) {
         ViewObject inviteesVo = this.getInviteesView1();
         Row newRow = inviteesVo.createRow();
@@ -701,11 +702,10 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
     }
 
     class AppmoduleImpl {
-        
+
     }
 
-   
-   
+
     /*Method to set file path and name
 
         * @param name
@@ -714,25 +714,25 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
 
         */
 
-       public void setFileData(String name, String path,String contTyp) {
+    public void setFileData(String name, String path, String contTyp) {
 
-           ViewObject fileVo = this.getFilesView4();
+        ViewObject fileVo = this.getFilesView4();
 
-           Row newRow = fileVo.createRow();
+        Row newRow = fileVo.createRow();
 
-           newRow.setAttribute("Filename", name);
+        newRow.setAttribute("Filename", name);
 
-           newRow.setAttribute("Filepath", path);
+        newRow.setAttribute("Filepath", path);
 
-           newRow.setAttribute("Filetype", contTyp);
+        newRow.setAttribute("Filetype", contTyp);
 
-           fileVo.insertRow(newRow);
+        fileVo.insertRow(newRow);
 
-           this.getDBTransaction().commit();
+        this.getDBTransaction().commit();
 
-           fileVo.executeQuery();
+        fileVo.executeQuery();
 
-       }
+    }
     /*Method to set file path and name
 
         * @param name
@@ -740,64 +740,65 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
         * @param path
 
         */
-       
+
     public void refresh() {
         FacesContext fc = FacesContext.getCurrentInstance();
         String refreshpage = fc.getViewRoot().getViewId();
-        ViewHandler ViewH =
-        fc.getApplication().getViewHandler();
-        UIViewRoot UIV = ViewH.createView(fc,refreshpage);
+        ViewHandler ViewH = fc.getApplication().getViewHandler();
+        UIViewRoot UIV = ViewH.createView(fc, refreshpage);
         UIV.setViewId(refreshpage);
         fc.setViewRoot(UIV);
     }
-       
-       
+
+
     public void estimatedPrice(String pidStr) {
-        
-        Object pid=pidStr;
-       RowSet rs=(RowSet)getProductsView1();
-  
-    
-        while(rs.hasNext()) {
+
+        Object pid = pidStr;
+        RowSet rs = (RowSet) getProductsView1();
+
+
+        while (rs.hasNext()) {
             System.out.println("Iinside while loop");
-            ProductsViewRowImpl r=(ProductsViewRowImpl)rs.next();
-            Object prodid=r.getAttribute("Productid");
-            String prodidstr=prodid.toString();
-            
-            if(prodidstr.equals(pidStr)) {
-                           
-                Object p=r.getAttribute("Price");
-                int pr=Integer.parseInt(p.toString());
-                DCIteratorBinding it = (DCIteratorBinding)BindingContext.getCurrent().getCurrentBindingsEntry().get("RevenueitemView2Iterator");   
-                RowSetIterator rsIter = it .getRowSetIterator();
-                Row rowObj = rsIter .getCurrentRow();
-                Object c= rowObj.getAttribute("Currency");
-                if(c!=null)
-                {
-                String cStr=c.toString();
-              
-                
-                if(cStr!=null) {
-                    if(!(cStr.equals("INR"))) {
-                        if(cStr.equals("USD")) {
-                            pr*=75;
+            ProductsViewRowImpl r = (ProductsViewRowImpl) rs.next();
+            Object prodid = r.getAttribute("Productid");
+            String prodidstr = prodid.toString();
+
+            if (prodidstr.equals(pidStr)) {
+
+                Object p = r.getAttribute("Price");
+                int pr = Integer.parseInt(p.toString());
+                DCIteratorBinding it = (DCIteratorBinding) BindingContext.getCurrent()
+                                                                         .getCurrentBindingsEntry()
+                                                                         .get("RevenueitemView2Iterator");
+                RowSetIterator rsIter = it.getRowSetIterator();
+                Row rowObj = rsIter.getCurrentRow();
+                Object c = rowObj.getAttribute("Currency");
+                if (c != null) {
+                    String cStr = c.toString();
+
+
+                    if (cStr != null) {
+                        if (!(cStr.equals("INR"))) {
+                            if (cStr.equals("USD")) {
+                                pr *= 75;
+                            } else if (cStr.equals("EUR")) {
+                                pr *= 85;
+                            }
+                            p = (Integer) pr;
                         }
-                        else if(cStr.equals("EUR")) {
-                            pr*=85;
-                        }
-                        p=(Integer)pr;
                     }
                 }
-                }
+                System.out.println(pr);
                 rowObj.setAttribute("Estimatedprice", p);
                 rs.closeRowSet();
                 break;
             }
-          
-            
+
+
         }
-    
+
     }
+
     public void totalRevenueOppAM(String oidStr) {
         System.out.println("Inside impl  " + oidStr);
 
@@ -805,7 +806,7 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
         RowSet rs = (RowSet) getRevenueitemView1();
         rs.reset();
         System.out.println(rs.hasNext());
-        int total=0;
+        int total = 0;
         while (rs.hasNext()) {
             System.out.println("Inside while");
             Row r = rs.next();
@@ -813,28 +814,44 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
             String loopoidStr = loopoid.toString();
             if (oidStr.equals(loopoidStr)) {
                 System.out.println("inside if");
-                
-            Object looprev= r.getAttribute("Revenue");
-            if(looprev!=null)
-            {
-            total+= Integer.parseInt(looprev.toString());
-            }
+
+                Object looprev = r.getAttribute("Revenue");
+                if (looprev != null) {
+                    int looprevint = Integer.parseInt(looprev.toString());
+                    Object curr = r.getAttribute("Currency");
+                    if (curr != null) {
+                        String currStr = curr.toString();
+                        System.out.println(curr);
+                        System.out.println("Unconverted loop rev int" + looprevint);
+
+                        if (!(curr.equals("INR"))) {
+                            if (curr.equals("USD")) {
+                                looprevint /= 75;
+                            } else if (curr.equals("EUR")) {
+                                looprevint /= 85;
+                            }
+                        }
+                    }
+                    System.out.println("Converted loop rev int" + looprevint);
+
+                    total += looprevint;
+                }
             }
         }
         rs.closeRowSet();
-    DCIteratorBinding it = (DCIteratorBinding) BindingContext.getCurrent()
-                                                             .getCurrentBindingsEntry()
-                                                             .get("OpportunityView1Iterator");
-    RowSetIterator rsIter = it.getRowSetIterator();
-    Row rowObj = rsIter.getCurrentRow();
-    rowObj.setAttribute("Totalrevenue", total);
-    System.out.println(total);
-    double best=1.1*total;
-    double worst=0.9*total;
-    Object bestrev=(Double)best;
-    Object worstrev=(Double)worst;
-    rowObj.setAttribute("Bestcaserevenue", bestrev);
-    rowObj.setAttribute("Worstcaserevenue", worstrev);
+        DCIteratorBinding it = (DCIteratorBinding) BindingContext.getCurrent()
+                                                                 .getCurrentBindingsEntry()
+                                                                 .get("OpportunityView1Iterator");
+        RowSetIterator rsIter = it.getRowSetIterator();
+        Row rowObj = rsIter.getCurrentRow();
+        rowObj.setAttribute("Totalrevenue", total);
+        System.out.println(total);
+        double best = 1.1 * total;
+        double worst = 0.9 * total;
+        Object bestrev = (Double) best;
+        Object worstrev = (Double) worst;
+        rowObj.setAttribute("Bestcaserevenue", bestrev);
+        rowObj.setAttribute("Worstcaserevenue", worstrev);
     }
 
 
