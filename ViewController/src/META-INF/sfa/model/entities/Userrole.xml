@@ -37,7 +37,8 @@
     SQLType="DATE"
     Type="java.sql.Timestamp"
     ColumnType="DATE"
-    TableName="USERROLE">
+    TableName="USERROLE"
+    IsNotNull="true">
     <Properties>
       <SchemaBasedProperties>
         <FMT_FORMATTER
@@ -103,6 +104,18 @@
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="sfa.model.entities.Userrole.Userroleid"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="UserroleStartdateCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"STARTDATE" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="USERROLE_STARTDATE_CHECK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="sfa.model.entities.Userrole.Startdate"/>
     </AttrArray>
   </Key>
   <Key

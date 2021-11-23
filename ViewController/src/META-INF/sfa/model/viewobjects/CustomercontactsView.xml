@@ -29,6 +29,10 @@
     Name="InfluenceLevel1"
     ViewObjectName="sfa.model.viewobjects.staticVo.InfluenceLevel"
     RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="CustomeraccountView1"
+    ViewObjectName="sfa.model.viewobjects.CustomeraccountView"
+    RowLevelBinds="true"/>
   <ListBinding
     Name="LOV_Buyingrole"
     ListVOName="BuyingRole1"
@@ -62,6 +66,24 @@
     </AttrArray>
     <AttrArray Name="ListDisplayAttrNames">
       <Item Value="InfluenceLevel"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_Customeraccountid"
+    ListVOName="CustomeraccountView1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Customeraccountid"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Customeraccountid"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
@@ -202,7 +224,15 @@
     EntityAttrName="Customeraccountid"
     EntityUsage="Customercontacts"
     AliasName="CUSTOMERACCOUNTID"
-    IsQueriable="false"/>
+    IsQueriable="false"
+    LOVName="LOV_Customeraccountid">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewLinkAccessor
     Name="ContactaddressView"
     ViewLink="sfa.model.viewobjects.CaddressCustomercontactsFkLink"

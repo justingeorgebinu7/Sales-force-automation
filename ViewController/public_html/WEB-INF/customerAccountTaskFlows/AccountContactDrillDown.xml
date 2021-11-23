@@ -26,11 +26,25 @@
         <fixed-outcome>setCurrentRowWithKeyValue</fixed-outcome>
       </outcome>
     </method-call>
+    <task-flow-call id="AcountDrillDown">
+      <task-flow-reference>
+        <document>/WEB-INF/customerAccountTaskFlows/AcountDrillDown.xml</document>
+        <id>AcountDrillDown</id>
+      </task-flow-reference>
+      <input-parameter id="__7">
+        <name>selectedAccount</name>
+        <value>#{applicationScope.currAccount}</value>
+      </input-parameter>
+    </task-flow-call>
     <control-flow-rule id="__1">
       <from-activity-id>Contactmenu</from-activity-id>
       <control-flow-case id="__2">
         <from-outcome>backToHome</from-outcome>
         <to-activity-id>taskFlowReturn1</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__6">
+        <from-outcome>AccountDrillDownForContact</from-outcome>
+        <to-activity-id>AcountDrillDown</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <control-flow-rule id="__4">

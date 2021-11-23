@@ -44,6 +44,16 @@
       <f:selectItems value="#{bindings.Influencelevel.items}" id="si2"/>
       <f:validator binding="#{bindings.Influencelevel.validator}"/>
     </af:selectOneChoice>
+    <af:selectOneChoice value="#{bindings.Customeraccountid.inputValue}" label="#{bindings.Customeraccountid.label}"
+                        required="#{bindings.Customeraccountid.hints.mandatory}"
+                        shortDesc="#{bindings.Customeraccountid.hints.tooltip}" id="soc3">
+      <f:selectItems value="#{bindings.Customeraccountid.items}" id="si3"/>
+      <f:validator binding="#{bindings.Customeraccountid.validator}"/>
+    </af:selectOneChoice>
+    <af:link text="Manage Account" id="l1" inlineStyle="color:#666;" action="accountDrillDown">
+      <af:setPropertyListener from="#{bindings.Customeraccountid.inputValue}" to="#{applicationScope.currAccount}"
+                              type="action"/>
+    </af:link>
   </af:panelFormLayout>
   <af:button text="Save" id="b1" actionListener="#{bindings.Commit.execute}"/>
   <af:button actionListener="#{bindings.Rollback.execute}" text="Cancel"

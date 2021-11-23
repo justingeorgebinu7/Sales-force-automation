@@ -39,5 +39,7 @@
           DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
     <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
     <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl"/>
+    <list IterBinding="CustomercontactsView1Iterator" StaticList="false" Uses="LOV_Customeraccountid"
+          id="Customeraccountid" DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
   </bindings>
 </pageDefinition>

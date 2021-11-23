@@ -21,6 +21,7 @@ import sfa.model.viewobjects.common.CustomercontactsViewRow;
 // ---------------------------------------------------------------------
 public class CustomercontactsViewRowImpl extends ViewRowImpl implements CustomercontactsViewRow {
 
+
     public static final int ENTITY_CUSTOMERCONTACTS = 0;
 
     /**
@@ -46,8 +47,10 @@ public class CustomercontactsViewRowImpl extends ViewRowImpl implements Customer
         InviteesView,
         AppointmentsView1,
         BuyingRole1,
-        InfluenceLevel1;
-        private static AttributesEnum[] vals = null; ;
+        InfluenceLevel1,
+        CustomeraccountView1;
+        private static AttributesEnum[] vals = null;
+        ;
         private static final int firstIndex = 0;
 
         protected int index() {
@@ -70,6 +73,7 @@ public class CustomercontactsViewRowImpl extends ViewRowImpl implements Customer
         }
     }
 
+
     public static final int CONTACTID = AttributesEnum.Contactid.index();
     public static final int NAME = AttributesEnum.Name.index();
     public static final int TITLE = AttributesEnum.Title.index();
@@ -90,6 +94,7 @@ public class CustomercontactsViewRowImpl extends ViewRowImpl implements Customer
     public static final int APPOINTMENTSVIEW1 = AttributesEnum.AppointmentsView1.index();
     public static final int BUYINGROLE1 = AttributesEnum.BuyingRole1.index();
     public static final int INFLUENCELEVEL1 = AttributesEnum.InfluenceLevel1.index();
+    public static final int CUSTOMERACCOUNTVIEW1 = AttributesEnum.CustomeraccountView1.index();
 
     /**
      * This is the default constructor (do not remove).
@@ -342,6 +347,13 @@ public class CustomercontactsViewRowImpl extends ViewRowImpl implements Customer
         return (RowSet) getAttributeInternal(INFLUENCELEVEL1);
     }
 
+
+    /**
+     * Gets the view accessor <code>RowSet</code> CustomeraccountView1.
+     */
+    public RowSet getCustomeraccountView1() {
+        return (RowSet) getAttributeInternal(CUSTOMERACCOUNTVIEW1);
+    }
 
     public void editPrimary(String cidStr) {
         System.out.println("Inside editPrimary");
