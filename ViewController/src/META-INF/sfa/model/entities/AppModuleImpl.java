@@ -18,6 +18,7 @@ import oracle.jbo.server.ViewObjectImpl;
 
 import sfa.model.entities.common.AppModule;
 import sfa.model.viewobjects.CustomercontactsViewImpl;
+import sfa.model.viewobjects.NoteViewImpl;
 import sfa.model.viewobjects.ProductsViewImpl;
 import sfa.model.viewobjects.staticVo.AccountTypeImpl;
 
@@ -101,8 +102,8 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
      * Container's getter for NoteView1.
      * @return NoteView1
      */
-    public ViewObjectImpl getNoteView1() {
-        return (ViewObjectImpl) findViewObject("NoteView1");
+    public NoteViewImpl getNoteView1() {
+        return (NoteViewImpl) findViewObject("NoteView1");
     }
 
     /**
@@ -206,24 +207,24 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
      * Container's getter for NoteView2.
      * @return NoteView2
      */
-    public ViewObjectImpl getNoteView2() {
-        return (ViewObjectImpl) findViewObject("NoteView2");
+    public NoteViewImpl getNoteView2() {
+        return (NoteViewImpl) findViewObject("NoteView2");
     }
 
     /**
      * Container's getter for NoteView3.
      * @return NoteView3
      */
-    public ViewObjectImpl getNoteView3() {
-        return (ViewObjectImpl) findViewObject("NoteView3");
+    public NoteViewImpl getNoteView3() {
+        return (NoteViewImpl) findViewObject("NoteView3");
     }
 
     /**
      * Container's getter for NoteView4.
      * @return NoteView4
      */
-    public ViewObjectImpl getNoteView4() {
-        return (ViewObjectImpl) findViewObject("NoteView4");
+    public NoteViewImpl getNoteView4() {
+        return (NoteViewImpl) findViewObject("NoteView4");
     }
 
     /**

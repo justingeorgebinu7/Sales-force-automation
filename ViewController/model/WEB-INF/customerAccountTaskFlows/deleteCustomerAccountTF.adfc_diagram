@@ -63,7 +63,7 @@
       <property
          name="fromOutcome">Commit</property>
       <property
-         name="sdm:polyPoints">R50,521.5,150.69531,657.0,153.89648,L50</property>
+         name="sdm:polyPoints">R50,521.5,150.69531,657.0,153.5459,L50</property>
    </ControlFlowCase>
    <View
       id="View7">

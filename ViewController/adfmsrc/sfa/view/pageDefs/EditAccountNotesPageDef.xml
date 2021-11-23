@@ -18,5 +18,8 @@
         <Item Value="Subject"/>
       </AttrNames>
     </attributeValues>
+    <methodAction IterBinding="NoteView2Iterator" id="update" RequiresUpdateModel="true" Action="invokeMethod"
+                  MethodName="update" IsViewObjectMethod="false" DataControl="AppModuleDataControl"
+                  InstanceName="bindings.NoteView2Iterator.currentRow" IsLocalObjectReference="true"/>
   </bindings>
 </pageDefinition>

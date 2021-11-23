@@ -17,6 +17,6 @@
     <f:facet name="footer"/>
   </af:panelFormLayout>
   <af:button actionListener="#{bindings.Commit.execute}" text="Save Changes"
-             id="b2"/>
+             id="b2" action="#{NoteUpdate.noteUpdate}"/>
   <af:button text="Back" id="b1" action="backFromEdit"/>
 </ui:composition>

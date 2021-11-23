@@ -13,7 +13,14 @@
   CustomQuery="false"
   SelectAllAttributes="false"
   PageIterMode="Full"
-  AccessMode="DEFAULT">
+  AccessMode="DEFAULT"
+  RowClass="sfa.model.viewobjects.NoteViewRowImpl"
+  ComponentClass="sfa.model.viewobjects.NoteViewImpl"
+  RowInterface="sfa.model.viewobjects.common.NoteViewRow">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access|Coll"/>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
   <EntityUsage
     Name="Note"
     Entity="sfa.model.entities.Note"/>
@@ -88,6 +95,34 @@
     EntityUsage="Note"
     AliasName="CREATEDBY"
     IsQueriable="false"/>
+  <ViewAttribute
+    Name="Updateddate"
+    PrecisionRule="true"
+    EntityAttrName="Updateddate"
+    EntityUsage="Note"
+    AliasName="UPDATEDDATE"/>
+  <ViewAttribute
+    Name="Updatedby"
+    PrecisionRule="true"
+    EntityAttrName="Updatedby"
+    EntityUsage="Note"
+    AliasName="UPDATEDBY"/>
+  <ViewAttribute
+    Name="Createddate"
+    PrecisionRule="true"
+    EntityAttrName="Createddate"
+    EntityUsage="Note"
+    AliasName="CREATEDDATE"/>
+  <ClientRowInterface
+    Name="__rowClientInterface">
+    <Method
+      Name="update"
+      MethodName="update">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+    </Method>
+  </ClientRowInterface>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="sfa.model.ModelBundle"/>

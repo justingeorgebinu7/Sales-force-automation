@@ -28,6 +28,14 @@
         <af:convertDateTime pattern="#{bindings.NoteView2.hints.Datetime.format}" timeZone="UTC +5:30"/>
       </af:outputText>
     </af:column>
+    <af:column headerText="#{bindings.NoteView2.hints.Updatedby.label}" id="c2">
+      <af:outputText value="#{row.Updatedby}" shortDesc="#{bindings.NoteView2.hints.Updatedby.tooltip}" id="ot2"/>
+    </af:column>
+    <af:column headerText="#{bindings.NoteView2.hints.Updateddate.label}" id="c5">
+      <af:outputText value="#{row.Updateddate}" shortDesc="#{bindings.NoteView2.hints.Updateddate.tooltip}" id="ot5">
+        <af:convertDateTime pattern="#{bindings.NoteView2.hints.Updateddate.format}"/>
+      </af:outputText>
+    </af:column>
   </af:table>
   <af:button text="Add" id="b1" action="addNote"/>
   <af:button text="Delete" action="deleteNotesTF1" id="b2"/>

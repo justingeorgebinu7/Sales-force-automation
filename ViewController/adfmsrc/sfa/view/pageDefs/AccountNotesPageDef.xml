@@ -19,6 +19,8 @@
           <Item Value="Content"/>
           <Item Value="Datetime"/>
           <Item Value="Createdby"/>
+          <Item Value="Updatedby"/>
+          <Item Value="Updateddate"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

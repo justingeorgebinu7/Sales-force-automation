@@ -518,6 +518,8 @@
           usageId="sfa_view_createOpportunity_createOpportunity_DeletePageDef"/>
     <page path="/Opportunity_pages/opportunityManage.jsff" usageId="sfa_view_opportunityManagePageDef"/>
     <page path="/ProductsCatalog/editCategory.jsf" usageId="sfa_view_editCategoryPageDef1"/>
+    <page path="/WEB-INF/customerAccountTaskFlows/notesTrialAddTF.xml#notesTrialAddTF@Commit"
+          usageId="sfa_view_notesTrialAddTF_notesTrialAddTF_CommitPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="sfa_view_untitled2PageDef" path="sfa.view.pageDefs.untitled2PageDef"/>
@@ -1025,6 +1027,8 @@
           path="Opportunity_TaskFLows.createOpportunity_createOpportunity_DeletePageDef"/>
     <page id="sfa_view_opportunityManagePageDef" path="Opportunity_pages.opportunityManagePageDef"/>
     <page id="sfa_view_editCategoryPageDef1" path="ProductsCatalog.editCategoryPageDef1"/>
+    <page id="sfa_view_notesTrialAddTF_notesTrialAddTF_CommitPageDef"
+          path="customerAccountTaskFlows.notesTrialAddTF_notesTrialAddTF_CommitPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="sfa.model.entities"

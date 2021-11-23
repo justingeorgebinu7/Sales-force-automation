@@ -5,6 +5,11 @@
     <data-control-scope>
       <shared/>
     </data-control-scope>
+    <managed-bean id="__8">
+      <managed-bean-name>NoteUpdate</managed-bean-name>
+      <managed-bean-class>Beans.NoteUpdate</managed-bean-class>
+      <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
     <view id="AccountNotes">
       <page>/CustomerAccountManagement/AccountNotes.jsff</page>
     </view>
@@ -24,6 +29,12 @@
       </task-flow-reference>
       <run-as-dialog/>
     </task-flow-call>
+    <method-call id="Commit">
+      <method>#{bindings.Commit.execute}</method>
+      <outcome>
+        <fixed-outcome>Commit</fixed-outcome>
+      </outcome>
+    </method-call>
     <control-flow-rule id="__1">
       <from-activity-id>AccountNotes</from-activity-id>
       <control-flow-case id="__2">
@@ -35,18 +46,25 @@
         <to-activity-id>EditAccountNotes</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
-    <control-flow-rule id="__4">
-      <from-activity-id>EditAccountNotes</from-activity-id>
-      <control-flow-case id="__5">
-        <from-outcome>backFromEdit</from-outcome>
-        <to-activity-id>AccountNotes</to-activity-id>
-      </control-flow-case>
-    </control-flow-rule>
     <control-flow-rule id="__6">
       <from-activity-id>AccountNotes</from-activity-id>
       <control-flow-case id="__7">
         <from-outcome>deleteNotesTF1</from-outcome>
         <to-activity-id>deleteNotesTF1</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__9">
+      <from-activity-id>EditAccountNotes</from-activity-id>
+      <control-flow-case id="__10">
+        <from-outcome>backFromEdit</from-outcome>
+        <to-activity-id>Commit</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__11">
+      <from-activity-id>Commit</from-activity-id>
+      <control-flow-case id="__12">
+        <from-outcome>Commit</from-outcome>
+        <to-activity-id>AccountNotes</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <use-page-fragments/>
