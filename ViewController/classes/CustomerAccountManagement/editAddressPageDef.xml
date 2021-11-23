@@ -29,5 +29,20 @@
     </attributeValues>
     <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
     <listOfValues IterBinding="AddressView4Iterator" StaticList="false" Uses="LOV_Type" id="Type1"/>
+    <attributeValues IterBinding="AddressView4Iterator" id="Line1">
+      <AttrNames>
+        <Item Value="Line1"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AddressView4Iterator" id="Line2">
+      <AttrNames>
+        <Item Value="Line2"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AddressView4Iterator" id="Pincode">
+      <AttrNames>
+        <Item Value="Pincode"/>
+      </AttrNames>
+    </attributeValues>
   </bindings>
 </pageDefinition>

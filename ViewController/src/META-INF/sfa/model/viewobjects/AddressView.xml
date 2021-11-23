@@ -92,10 +92,46 @@
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
+  <ViewAttribute
+    Name="Line2"
+    PrecisionRule="true"
+    EntityAttrName="Line2"
+    EntityUsage="Address"
+    AliasName="LINE2">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="sfa.model.viewobjects.AddressView.Line2_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Line1"
+    PrecisionRule="true"
+    EntityAttrName="Line1"
+    EntityUsage="Address"
+    AliasName="LINE1">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="sfa.model.viewobjects.AddressView.Line1_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Pincode"
+    PrecisionRule="true"
+    EntityAttrName="Pincode"
+    EntityUsage="Address"
+    AliasName="PINCODE"/>
   <ViewLinkAccessor
     Name="CustomeraccountView"
     ViewLink="sfa.model.viewobjects.AddressCustomerAccountFkLink"
     Type="oracle.jbo.Row"
     Reversed="true"
     IsUpdateable="false"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="sfa.model.ModelBundle"/>
+  </ResourceBundle>
 </ViewObject>

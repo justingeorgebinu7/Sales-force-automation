@@ -160,7 +160,8 @@
     ColumnType="CHAR"
     TableName="CUSTOMERCONTACTS"
     RetrievedOnUpdate="true"
-    RetrievedOnInsert="true">
+    RetrievedOnInsert="true"
+    IsQueriable="false">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="1"/>
     </DesignTime>

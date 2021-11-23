@@ -29,6 +29,11 @@
         <af:convertNumber groupingUsed="false" pattern="#{bindings.AddressView4.hints.ContactNumber.format}"/>
       </af:outputText>
     </af:column>
+    <af:column headerText="#{bindings.AddressView4.hints.Pincode.label}" id="c8">
+      <af:outputText value="#{row.Pincode}" shortDesc="#{bindings.AddressView4.hints.Pincode.tooltip}" id="ot8">
+        <af:convertNumber groupingUsed="false" pattern="#{bindings.AddressView4.hints.Pincode.format}"/>
+      </af:outputText>
+    </af:column>
   </af:table>
   <af:button text="Add" id="b1" action="createAddress"/>
   <af:button text="Delete" action="deleteAddressTF1" id="b2"/>

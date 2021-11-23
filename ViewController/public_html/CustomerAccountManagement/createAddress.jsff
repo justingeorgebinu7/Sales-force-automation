@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
                 xmlns:f="http://java.sun.com/jsf/core">
-  <af:panelFormLayout id="pfl1">
+  <af:panelFormLayout id="pfl1" rows="4">
     <af:inputComboboxListOfValues id="type1Id" popupTitle="Search and Select: #{bindings.Type1.hints.label}"
                                   value="#{bindings.Type1.inputValue}" label="#{bindings.Type1.hints.label}"
                                   model="#{bindings.Type1.listOfValuesModel}"
@@ -10,6 +10,18 @@
                                   shortDesc="#{bindings.Type1.hints.tooltip}">
       <f:validator binding="#{bindings.Type1.validator}"/>
     </af:inputComboboxListOfValues>
+    <af:inputText value="#{bindings.Line1.inputValue}" label="#{bindings.Line1.hints.label}"
+                  required="#{bindings.Line1.hints.mandatory}" columns="#{bindings.Line1.hints.displayWidth}"
+                  maximumLength="#{bindings.Line1.hints.precision}" shortDesc="#{bindings.Line1.hints.tooltip}"
+                  id="it1">
+      <f:validator binding="#{bindings.Line1.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Line2.inputValue}" label="#{bindings.Line2.hints.label}"
+                  required="#{bindings.Line2.hints.mandatory}" columns="#{bindings.Line2.hints.displayWidth}"
+                  maximumLength="#{bindings.Line2.hints.precision}" shortDesc="#{bindings.Line2.hints.tooltip}"
+                  id="it6">
+      <f:validator binding="#{bindings.Line2.validator}"/>
+    </af:inputText>
     <af:inputText value="#{bindings.City.inputValue}" label="#{bindings.City.hints.label}"
                   required="#{bindings.City.hints.mandatory}" columns="#{bindings.City.hints.displayWidth}"
                   maximumLength="#{bindings.City.hints.precision}" shortDesc="#{bindings.City.hints.tooltip}" id="it2">
@@ -26,6 +38,13 @@
                   maximumLength="#{bindings.Country.hints.precision}" shortDesc="#{bindings.Country.hints.tooltip}"
                   id="it4">
       <f:validator binding="#{bindings.Country.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Pincode.inputValue}" label="#{bindings.Pincode.hints.label}"
+                  required="#{bindings.Pincode.hints.mandatory}" columns="#{bindings.Pincode.hints.displayWidth}"
+                  maximumLength="#{bindings.Pincode.hints.precision}" shortDesc="#{bindings.Pincode.hints.tooltip}"
+                  id="it7">
+      <f:validator binding="#{bindings.Pincode.validator}"/>
+      <af:convertNumber groupingUsed="false" pattern="#{bindings.Pincode.format}"/>
     </af:inputText>
     <af:inputText value="#{bindings.ContactNumber.inputValue}" label="#{bindings.ContactNumber.hints.label}"
                   required="#{bindings.ContactNumber.hints.mandatory}"
