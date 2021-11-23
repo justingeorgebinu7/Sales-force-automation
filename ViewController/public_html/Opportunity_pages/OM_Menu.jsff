@@ -21,7 +21,7 @@
     <af:panelTabbed position="start" id="pt2" verticalTabMode="iconAndText">
       <af:showDetailItem id="sdi1" text="Manage Opportunity" disclosed="true"
                          disclosureListener="#{OppMenuBean.totalRevenue}">
-        <af:panelFormLayout id="pfl1" rows="7">
+        <af:panelFormLayout id="pfl1" rows="8">
           <af:inputText value="#{bindings.Title.inputValue}" label="#{bindings.Title.hints.label}"
                         required="#{bindings.Title.hints.mandatory}" columns="#{bindings.Title.hints.displayWidth}"
                         maximumLength="#{bindings.Title.hints.precision}" shortDesc="#{bindings.Title.hints.tooltip}"
@@ -40,6 +40,11 @@
             <f:validator binding="#{bindings.Accountid.validator}"/>
             <!--<af:convertNumber groupingUsed="false" pattern="#{bindings.Accountid.format}"/>-->
           </af:inputComboboxListOfValues>
+          <af:link text="Manage Account" id="l1" action="accountDrillDown"
+                   inlineStyle="color:#666;">
+            <af:setPropertyListener from="#{bindings.Accountid.inputValue}" to="#{pageFlowScope.currAccount}"
+                                    type="action"/>
+          </af:link>
           <af:inputComboboxListOfValues id="primarycontactId"
                                         popupTitle="Search and Select: #{bindings.Primarycontact.hints.label}"
                                         value="#{bindings.Primarycontact.inputValue}"
@@ -52,6 +57,11 @@
             <f:validator binding="#{bindings.Primarycontact.validator}"/>
             <!--<af:convertNumber groupingUsed="false" pattern="#{bindings.Primarycontact.format}"/>-->
           </af:inputComboboxListOfValues>
+          <af:link text="Manage Contact" id="l2" action="contactDrillDown"
+                   inlineStyle="color:#666;">
+            <af:setPropertyListener from="#{bindings.Primarycontact.inputValue}" to="#{pageFlowScope.currContact}"
+                                    type="action"/>
+          </af:link>
           <af:selectOneRadio value="#{bindings.Currency.inputValue}" label="#{bindings.Currency.label}"
                              required="#{bindings.Currency.hints.mandatory}"
                              shortDesc="#{bindings.Currency.hints.tooltip}" id="sor1" autoSubmit="true"

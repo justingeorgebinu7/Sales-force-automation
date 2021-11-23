@@ -74,6 +74,26 @@
         <value>#{pageFlowScope.Accountid}</value>
       </input-parameter>
     </task-flow-call>
+    <task-flow-call id="AcountDrillDown1">
+      <task-flow-reference>
+        <document>/WEB-INF/customerAccountTaskFlows/AcountDrillDown.xml</document>
+        <id>AcountDrillDown</id>
+      </task-flow-reference>
+      <input-parameter id="__18">
+        <name>selectedAccount</name>
+        <value>#{pageFlowScope.currAccount}</value>
+      </input-parameter>
+    </task-flow-call>
+    <task-flow-call id="AccountContactDrillDown1">
+      <task-flow-reference>
+        <document>/WEB-INF/customerAccountTaskFlows/AccountContactDrillDown.xml</document>
+        <id>AccountContactDrillDown</id>
+      </task-flow-reference>
+      <input-parameter id="__20">
+        <name>selectedRow</name>
+        <value>#{pageFlowScope.currContact}</value>
+      </input-parameter>
+    </task-flow-call>
     <control-flow-rule id="__1">
       <from-activity-id>OM_home</from-activity-id>
       <control-flow-case id="__2">
@@ -106,6 +126,14 @@
       <control-flow-case id="__10">
         <from-outcome>delFile</from-outcome>
         <to-activity-id>OM_FileDelete</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__17">
+        <from-outcome>accountDrillDown</from-outcome>
+        <to-activity-id>AcountDrillDown1</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__19">
+        <from-outcome>contactDrillDown</from-outcome>
+        <to-activity-id>AccountContactDrillDown1</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <use-page-fragments/>
