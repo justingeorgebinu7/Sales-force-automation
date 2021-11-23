@@ -1,7 +1,8 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <title>Login</title>
+        <title>Login - Sales Force Automation</title>
+        <link rel="icon" type="image/x-icon" href="https://icon-library.com/images/automation-icon/automation-icon-2.jpg">
         <style>
                 html {
                     visibility: hidden;
