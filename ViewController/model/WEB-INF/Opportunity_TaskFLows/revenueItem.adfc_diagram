@@ -17,7 +17,7 @@
       <property
          name="y">324.89648</property>
       <property
-         name="page">/revenueItem.jsff</property>
+         name="page">/Opportunity_pages/revenueItem.jsff</property>
       <property
          name="exceptionHandler">false</property>
    </View>
@@ -61,7 +61,7 @@
       <property
          name="y">462.5459</property>
       <property
-         name="page">/editRevenueItem.jsff</property>
+         name="page">/Opportunity_pages/editRevenueItem.jsff</property>
       <property
          name="exceptionHandler">false</property>
    </View>

@@ -28,11 +28,11 @@
       <property
          name="pageFragment">true</property>
       <property
-         name="x">592.0</property>
+         name="x">599.0</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>OM_Menu&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">280.7412</property>
+         name="y">294.39062</property>
       <property
          name="page">/Opportunity_pages/OM_Menu.jsff</property>
       <property
@@ -46,7 +46,7 @@
       <property
          name="fromOutcome">toMenu</property>
       <property
-         name="sdm:polyPoints">R46,285.0,282.43652,550.927,276.89062,L46</property>
+         name="sdm:polyPoints">R46,285.10837,282.43652,558.0,290.89062,L46</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -56,7 +56,7 @@
       <property
          name="fromOutcome">toHome</property>
       <property
-         name="sdm:polyPoints">L54,551.0,283.89062,285.07297,289.43652,R54</property>
+         name="sdm:polyPoints">L54,557.8916,297.89062,285.0,289.43652,R54</property>
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall9">
@@ -137,7 +137,7 @@
       <property
          name="fromOutcome">delFile</property>
       <property
-         name="sdm:polyPoints">T50,592.0,226.39062,622.0137,196.79883,B50</property>
+         name="sdm:polyPoints">T50,599.0,240.39062,622.0137,196.79883,B50</property>
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall13">
@@ -218,7 +218,7 @@
       <property
          name="fromOutcome">accountDrillDown</property>
       <property
-         name="sdm:polyPoints">R50,633.0,280.39062,795.69434,390.79883,L50</property>
+         name="sdm:polyPoints">R50,641.0,294.39062,795.69434,390.79883,L50</property>
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall19">
@@ -245,6 +245,6 @@
       <property
          name="fromOutcome">contactDrillDown</property>
       <property
-         name="sdm:polyPoints">B50,592.0,334.39062,694.3721,448.44824,T50</property>
+         name="sdm:polyPoints">B50,599.0,348.39062,694.3721,448.44824,T50</property>
    </ControlFlowCase>
 </SDM>
