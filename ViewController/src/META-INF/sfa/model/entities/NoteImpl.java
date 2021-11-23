@@ -32,6 +32,9 @@ public class NoteImpl extends EntityImpl {
         Opportunity,
         Createdby,
         Subject,
+        Createddate,
+        Updatedby,
+        Updateddate,
         Customeraccount,
         Customercontacts,
         Opportunity1;
@@ -57,6 +60,7 @@ public class NoteImpl extends EntityImpl {
             return vals;
         }
     }
+
     public static final int NOTEID = AttributesEnum.Noteid.index();
     public static final int CONTENT = AttributesEnum.Content.index();
     public static final int DATETIME = AttributesEnum.Datetime.index();
@@ -65,6 +69,9 @@ public class NoteImpl extends EntityImpl {
     public static final int OPPORTUNITY = AttributesEnum.Opportunity.index();
     public static final int CREATEDBY = AttributesEnum.Createdby.index();
     public static final int SUBJECT = AttributesEnum.Subject.index();
+    public static final int CREATEDDATE = AttributesEnum.Createddate.index();
+    public static final int UPDATEDBY = AttributesEnum.Updatedby.index();
+    public static final int UPDATEDDATE = AttributesEnum.Updateddate.index();
     public static final int CUSTOMERACCOUNT = AttributesEnum.Customeraccount.index();
     public static final int CUSTOMERCONTACTS = AttributesEnum.Customercontacts.index();
     public static final int OPPORTUNITY1 = AttributesEnum.Opportunity1.index();
@@ -73,6 +80,13 @@ public class NoteImpl extends EntityImpl {
      * This is the default constructor (do not remove).
      */
     public NoteImpl() {
+    }
+
+    /**
+     * @return the definition object for this instance class.
+     */
+    public static synchronized EntityDefImpl getDefinitionObject() {
+        return EntityDefImpl.findDefObject("sfa.model.entities.Note");
     }
 
     /**
@@ -205,6 +219,54 @@ public class NoteImpl extends EntityImpl {
     }
 
     /**
+     * Gets the attribute value for Createddate, using the alias name Createddate.
+     * @return the value of Createddate
+     */
+    public Timestamp getCreateddate() {
+        return (Timestamp) getAttributeInternal(CREATEDDATE);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for Createddate.
+     * @param value value to set the Createddate
+     */
+    public void setCreateddate(Timestamp value) {
+        setAttributeInternal(CREATEDDATE, value);
+    }
+
+    /**
+     * Gets the attribute value for Updatedby, using the alias name Updatedby.
+     * @return the value of Updatedby
+     */
+    public String getUpdatedby() {
+        return (String) getAttributeInternal(UPDATEDBY);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for Updatedby.
+     * @param value value to set the Updatedby
+     */
+    public void setUpdatedby(String value) {
+        setAttributeInternal(UPDATEDBY, value);
+    }
+
+    /**
+     * Gets the attribute value for Updateddate, using the alias name Updateddate.
+     * @return the value of Updateddate
+     */
+    public Timestamp getUpdateddate() {
+        return (Timestamp) getAttributeInternal(UPDATEDDATE);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for Updateddate.
+     * @param value value to set the Updateddate
+     */
+    public void setUpdateddate(Timestamp value) {
+        setAttributeInternal(UPDATEDDATE, value);
+    }
+
+    /**
      * @return the associated entity oracle.jbo.server.EntityImpl.
      */
     public EntityImpl getCustomeraccount() {
@@ -235,16 +297,17 @@ public class NoteImpl extends EntityImpl {
     /**
      * @return the associated entity oracle.jbo.server.EntityImpl.
      */
-    public EntityImpl getOpportunity1() {
-        return (EntityImpl) getAttributeInternal(OPPORTUNITY1);
+    public OpportunityImpl getOpportunity1() {
+        return (OpportunityImpl) getAttributeInternal(OPPORTUNITY1);
     }
 
     /**
      * Sets <code>value</code> as the associated entity oracle.jbo.server.EntityImpl.
      */
-    public void setOpportunity1(EntityImpl value) {
+    public void setOpportunity1(OpportunityImpl value) {
         setAttributeInternal(OPPORTUNITY1, value);
     }
+
 
     /**
      * @param noteid key constituent
@@ -253,13 +316,6 @@ public class NoteImpl extends EntityImpl {
      */
     public static Key createPrimaryKey(BigDecimal noteid) {
         return new Key(new Object[] { noteid });
-    }
-
-    /**
-     * @return the definition object for this instance class.
-     */
-    public static synchronized EntityDefImpl getDefinitionObject() {
-        return EntityDefImpl.findDefObject("sfa.model.entities.Note");
     }
 
     /**
@@ -283,5 +339,7 @@ public class NoteImpl extends EntityImpl {
         String value = secCntx.getUserName();
         this.setCreatedby(value);
     }
+    
+    
 }
 

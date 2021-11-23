@@ -88,6 +88,24 @@
     EntityUsage="Note"
     AliasName="CREATEDBY"
     IsQueriable="false"/>
+  <ViewAttribute
+    Name="Updateddate"
+    PrecisionRule="true"
+    EntityAttrName="Updateddate"
+    EntityUsage="Note"
+    AliasName="UPDATEDDATE"/>
+  <ViewAttribute
+    Name="Updatedby"
+    PrecisionRule="true"
+    EntityAttrName="Updatedby"
+    EntityUsage="Note"
+    AliasName="UPDATEDBY"/>
+  <ViewAttribute
+    Name="Createddate"
+    PrecisionRule="true"
+    EntityAttrName="Createddate"
+    EntityUsage="Note"
+    AliasName="CREATEDDATE"/>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="sfa.model.ModelBundle"/>

@@ -26,7 +26,6 @@
     PrimaryKey="true">
     <TransientExpression
       Name="ExpressionScript"
-      trustMode="trusted"
       CodeSourceName="NoteRow"/>
   </Attribute>
   <Attribute
@@ -133,6 +132,32 @@
       <Attr Name="_DisplaySize" Value="100"/>
     </DesignTime>
   </Attribute>
+  <Attribute
+    Name="Createddate"
+    ColumnName="CREATEDDATE"
+    SQLType="TIMESTAMP"
+    Type="java.sql.Timestamp"
+    ColumnType="TIMESTAMP"
+    TableName="NOTE"/>
+  <Attribute
+    Name="Updatedby"
+    Precision="20"
+    ColumnName="UPDATEDBY"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="NOTE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Updateddate"
+    ColumnName="UPDATEDDATE"
+    SQLType="TIMESTAMP"
+    Type="java.sql.Timestamp"
+    ColumnType="TIMESTAMP"
+    TableName="NOTE"/>
   <AccessorAttribute
     Name="Customeraccount"
     Association="sfa.model.entities.NoteAccountFkAssoc"
