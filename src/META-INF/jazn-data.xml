@@ -18,6 +18,14 @@
                     <name>Steev</name>
                     <credentials>{903}bZGJFFEMCAv0hrmfcEuGft2ow9vT3mx+</credentials>
                 </user>
+                <user>
+                    <name>testadmin</name>
+                    <credentials>{903}t9Mvcf6hf6AwlQmT4R6lsfdQPg84F8+p</credentials>
+                </user>
+                <user>
+                    <name>testmanager</name>
+                    <credentials>{903}1LHOUV0yN7vgkMzACidN/h9Fyg58JupS</credentials>
+                </user>
             </users>
         </realm>
     </jazn-realm>
@@ -54,15 +62,15 @@
                         <members>
                             <member>
                                 <class>oracle.security.jps.internal.core.principals.JpsXmlUserImpl</class>
-                                <name>User2</name>
-                            </member>
-                            <member>
-                                <class>oracle.security.jps.internal.core.principals.JpsXmlUserImpl</class>
-                                <name>User1</name>
-                            </member>
-                            <member>
-                                <class>oracle.security.jps.internal.core.principals.JpsXmlUserImpl</class>
                                 <name>Steev</name>
+                            </member>
+                            <member>
+                                <class>oracle.security.jps.internal.core.principals.JpsXmlUserImpl</class>
+                                <name>Justin</name>
+                            </member>
+                            <member>
+                                <class>oracle.security.jps.internal.core.principals.JpsXmlUserImpl</class>
+                                <name>testmanager</name>
                             </member>
                         </members>
                     </app-role>
@@ -74,6 +82,14 @@
                             <member>
                                 <class>oracle.security.jps.internal.core.principals.JpsXmlUserImpl</class>
                                 <name>Justin</name>
+                            </member>
+                            <member>
+                                <class>oracle.security.jps.internal.core.principals.JpsXmlUserImpl</class>
+                                <name>Steev</name>
+                            </member>
+                            <member>
+                                <class>oracle.security.jps.internal.core.principals.JpsXmlUserImpl</class>
+                                <name>testadmin</name>
                             </member>
                         </members>
                     </app-role>

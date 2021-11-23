@@ -1,5 +1,6 @@
 package sfa.model.entities;
 
+import javax.faces.application.FacesMessage;
 import javax.faces.application.NavigationHandler;
 import javax.faces.application.ViewHandler;
 import javax.faces.component.UIViewRoot;
@@ -956,41 +957,48 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
 
             if (s.after(starts) && s.before(ends)) {
                 System.out.println("Invalid");
-                NavigationHandler nvHndlr = FacesContext.getCurrentInstance()
-                                                        .
-
-                                                        getApplication()
-                                                        .
-
-                                                        getNavigationHandler();
-
-                nvHndlr.handleNavigation(FacesContext.getCurrentInstance(), null, "invalidRange");
+                FacesContext context = FacesContext.getCurrentInstance();
+                                context.addMessage(null, new FacesMessage("Overlapping date range"));
+//                NavigationHandler nvHndlr = FacesContext.getCurrentInstance()
+//                                                        .
+//
+//                                                        getApplication()
+//                                                        .
+//
+//                                                        getNavigationHandler();
+//
+//                nvHndlr.handleNavigation(FacesContext.getCurrentInstance(), null, "invalidRange");
                 rs.closeRowSet();
             }
 
             else if (e.after(starts) && e.before(ends)) {
                 System.out.println("Invalid");
-                NavigationHandler nvHndlr = FacesContext.getCurrentInstance()
-                                                        .
-
-                                                        getApplication()
-                                                        .
-
-                                                        getNavigationHandler();
-
-                nvHndlr.handleNavigation(FacesContext.getCurrentInstance(), null, "invalidRange");
+                FacesContext context = FacesContext.getCurrentInstance();
+                                context.addMessage(null, new FacesMessage("Overlapping date range"));
+                
+//                NavigationHandler nvHndlr = FacesContext.getCurrentInstance()
+//                                                        .
+//
+//                                                        getApplication()
+//                                                        .
+//
+//                                                        getNavigationHandler();
+//
+//                nvHndlr.handleNavigation(FacesContext.getCurrentInstance(), null, "invalidRange");
                 rs.closeRowSet();
             } else if (s.before(starts) && e.after(ends)) {
                 System.out.println("Invalid");
-                NavigationHandler nvHndlr = FacesContext.getCurrentInstance()
-                                                        .
-
-                                                        getApplication()
-                                                        .
-
-                                                        getNavigationHandler();
-
-                nvHndlr.handleNavigation(FacesContext.getCurrentInstance(), null, "invalidRange");
+                FacesContext context = FacesContext.getCurrentInstance();
+                                context.addMessage(null, new FacesMessage("Overlapping date range"));
+//                NavigationHandler nvHndlr = FacesContext.getCurrentInstance()
+//                                                        .
+//
+//                                                        getApplication()
+//                                                        .
+//
+//                                                        getNavigationHandler();
+//
+//                nvHndlr.handleNavigation(FacesContext.getCurrentInstance(), null, "invalidRange");
                 rs.closeRowSet();
             } else {
                 NavigationHandler nvHndlr = FacesContext.getCurrentInstance()

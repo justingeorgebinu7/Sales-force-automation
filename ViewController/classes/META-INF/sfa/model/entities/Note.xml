@@ -138,7 +138,18 @@
     SQLType="TIMESTAMP"
     Type="java.sql.Timestamp"
     ColumnType="TIMESTAMP"
-    TableName="NOTE"/>
+    TableName="NOTE">
+    <Properties>
+      <SchemaBasedProperties>
+        <FMT_FORMATTER
+          ResId="sfa.model.entities.Note.Createddate_FMT_FORMATTER"/>
+        <FMT_FORMAT
+          ResId="sfa.model.entities.Note.Createddate_FMT_FORMAT"/>
+        <LABEL
+          ResId="sfa.model.entities.Note.Createddate_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <Attribute
     Name="Updatedby"
     Precision="20"
@@ -150,6 +161,12 @@
     <DesignTime>
       <Attr Name="_DisplaySize" Value="20"/>
     </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="sfa.model.entities.Note.Updatedby_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
   </Attribute>
   <Attribute
     Name="Updateddate"
@@ -157,7 +174,14 @@
     SQLType="TIMESTAMP"
     Type="java.sql.Timestamp"
     ColumnType="TIMESTAMP"
-    TableName="NOTE"/>
+    TableName="NOTE">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="sfa.model.entities.Note.Updateddate_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <AccessorAttribute
     Name="Customeraccount"
     Association="sfa.model.entities.NoteAccountFkAssoc"
