@@ -7,13 +7,13 @@
       <property
          name="activityId">Delete</property>
       <property
-         name="x">184.5</property>
+         name="x">315.5</property>
       <property
-         name="start">true</property>
+         name="start">false</property>
       <property
-         name="description">&lt;html>&lt;p>&lt;b>Delete&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
+         name="description">&lt;html>&lt;p>&lt;b>Delete&lt;/b>&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
       <property
-         name="y">234.69531</property>
+         name="y">160.29297</property>
       <property
          name="exceptionHandler">false</property>
    </MethodCall>
@@ -22,11 +22,11 @@
       <property
          name="activityId">Commit</property>
       <property
-         name="x">458.5</property>
+         name="x">480.5</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>Commit&lt;/b>&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
       <property
-         name="y">199.44824</property>
+         name="y">151.0459</property>
       <property
          name="exceptionHandler">false</property>
    </MethodCall>
@@ -35,11 +35,11 @@
       <property
          name="activityId">taskFlowReturn1</property>
       <property
-         name="x">667.0</property>
+         name="x">698.0</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>taskFlowReturn1&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Return&lt;/p>&lt;p>Outcome:  taskFlowReturn1&lt;/p></property>
       <property
-         name="y">76.24707</property>
+         name="y">153.89648</property>
       <property
          name="finish">true</property>
       <property
@@ -53,7 +53,7 @@
       <property
          name="fromOutcome">Delete</property>
       <property
-         name="sdm:polyPoints">R50,225.5,234.34473,417.5,199.09766,L50</property>
+         name="sdm:polyPoints">R50,356.5,159.94238,439.5,150.69531,L50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -63,6 +63,58 @@
       <property
          name="fromOutcome">Commit</property>
       <property
-         name="sdm:polyPoints">R50,499.5,199.09766,626.0,75.896484,L50</property>
+         name="sdm:polyPoints">R50,521.5,150.69531,657.0,153.89648,L50</property>
+   </ControlFlowCase>
+   <View
+      id="View7">
+      <property
+         name="activityId">deleteWarning</property>
+      <property
+         name="x">139.0</property>
+      <property
+         name="start">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>deleteWarning&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">269.59766</property>
+      <property
+         name="page">/deleteWarning.jsf</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase8"
+      from="View7"
+      to="MethodCall2">
+      <property
+         name="fromOutcome">proceed</property>
+      <property
+         name="sdm:polyPoints">R46,180.0,265.74707,274.5,159.94238,L50</property>
+   </ControlFlowCase>
+   <TaskFlowReturn
+      id="TaskFlowReturn9">
+      <property
+         name="activityId">taskFlowReturn2</property>
+      <property
+         name="x">484.0</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>taskFlowReturn2&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Return&lt;/p>&lt;p>Outcome:  taskFlowReturn2&lt;/p></property>
+      <property
+         name="y">367.24707</property>
+      <property
+         name="finish">true</property>
+      <property
+         name="exceptionHandler">false</property>
+   </TaskFlowReturn>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase11"
+      from="View7"
+      to="TaskFlowReturn9">
+      <property
+         name="fromOutcome">cancel</property>
+      <property
+         name="sdm:polyPoints">R54,180.0,272.74707,443.0,366.89648,L50</property>
    </ControlFlowCase>
 </SDM>
