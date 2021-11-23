@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:f="http://java.sun.com/jsf/core">
+  <af:panelFormLayout id="pfl1">
+    <af:selectOneChoice value="#{bindings.Roleid.inputValue}" label="#{bindings.Roleid.label}"
+                        required="#{bindings.Roleid.hints.mandatory}" shortDesc="#{bindings.Roleid.hints.tooltip}"
+                        id="soc1">
+      <f:selectItems value="#{bindings.Roleid.items}" id="si1"/>
+      <f:validator binding="#{bindings.Roleid.validator}"/>
+    </af:selectOneChoice>
+    <af:inputDate value="#{bindings.Startdate.inputValue}" label="#{bindings.Startdate.hints.label}"
+                  required="#{bindings.Startdate.hints.mandatory}" columns="#{bindings.Startdate.hints.displayWidth}"
+                  shortDesc="#{bindings.Startdate.hints.tooltip}" id="id1">
+      <f:validator binding="#{bindings.Startdate.validator}"/>
+      <af:convertDateTime pattern="#{bindings.Startdate.format}"/>
+    </af:inputDate>
+    <af:inputDate value="#{bindings.Enddate.inputValue}" label="#{bindings.Enddate.hints.label}"
+                  required="#{bindings.Enddate.hints.mandatory}" columns="#{bindings.Enddate.hints.displayWidth}"
+                  shortDesc="#{bindings.Enddate.hints.tooltip}" id="id2">
+      <f:validator binding="#{bindings.Enddate.validator}"/>
+      <af:convertDateTime pattern="#{bindings.Enddate.format}"/>
+    </af:inputDate>
+  </af:panelFormLayout>
+  <af:button actionListener="#{bindings.Commit.execute}" text="Save" disabled="#{!bindings.Commit.enabled}" id="b1"
+             action="back"/>
+  <af:button text="Cancel" id="b2" action="back"/>
+</ui:composition>

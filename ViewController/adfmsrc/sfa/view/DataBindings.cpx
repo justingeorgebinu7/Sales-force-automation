@@ -524,6 +524,7 @@
           usageId="sfa_view_notesForContacts_notesForContacts_CommitPageDef"/>
     <page path="/WEB-INF/Opportunity_TaskFLows/OM_NotesMain.xml#OM_NotesMain@Commit"
           usageId="sfa_view_OM_NotesMain_OM_NotesMain_CommitPageDef"/>
+    <page path="/UserManagementPages/editUserRole.jsff" usageId="sfa_view_editUserRolePageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="sfa_view_untitled2PageDef" path="sfa.view.pageDefs.untitled2PageDef"/>
@@ -1037,6 +1038,7 @@
           path="ContactManagement.notesForContacts_notesForContacts_CommitPageDef"/>
     <page id="sfa_view_OM_NotesMain_OM_NotesMain_CommitPageDef"
           path="Opportunity_TaskFLows.OM_NotesMain_OM_NotesMain_CommitPageDef"/>
+    <page id="sfa_view_editUserRolePageDef" path="UserManagementPages.editUserRolePageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="sfa.model.entities"

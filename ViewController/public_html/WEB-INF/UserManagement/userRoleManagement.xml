@@ -20,11 +20,18 @@
         <id>deleteUserRole</id>
       </task-flow-reference>
     </task-flow-call>
+    <view id="editUserRole">
+      <page>/UserManagementPages/editUserRole.jsff</page>
+    </view>
     <control-flow-rule id="__1">
       <from-activity-id>userRolePage</from-activity-id>
       <control-flow-case id="__2">
         <from-outcome>create</from-outcome>
         <to-activity-id>createUserRole</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__5">
+        <from-outcome>editUserRole</from-outcome>
+        <to-activity-id>editUserRole</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <control-flow-rule id="__3">
