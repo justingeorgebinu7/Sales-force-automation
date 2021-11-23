@@ -7,6 +7,9 @@
     <iterator Binds="OpportunityView1" RangeSize="25" DataControl="AppModuleDataControl" id="OpportunityView1Iterator"/>
     <searchRegion Binds="OpportunityView1Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="OpportunityView1Query"/>
+    <searchRegion Criteria="__ImplicitViewCriteria__" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  Binds="OpportunityView1Iterator" id="ImplicitViewCriteriaQuery" InitialQueryOverridden="true"
+                  DefaultQuickSearchAttrName="Title"/>
   </executables>
   <bindings>
     <tree IterBinding="OpportunityView1Iterator" id="OpportunityView1">

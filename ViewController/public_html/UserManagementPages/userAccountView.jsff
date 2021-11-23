@@ -1,12 +1,20 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
                 xmlns:f="http://java.sun.com/jsf/core">
+  <af:quickQuery label="Search" searchDesc="Search" id="qryId1"
+                 value="#{bindings.ImplicitViewCriteriaQuery.quickQueryDescriptor}"
+                 model="#{bindings.ImplicitViewCriteriaQuery.queryModel}"
+                 queryListener="#{bindings.ImplicitViewCriteriaQuery.processQuery}">
+    <f:facet name="end">
+      <af:commandLink text="Advanced" rendered="false" id="cl1"/>
+    </f:facet>
+  </af:quickQuery>
   <af:table value="#{bindings.UseraccountView1.collectionModel}" var="row" rows="#{bindings.UseraccountView1.rangeSize}"
             emptyText="#{bindings.UseraccountView1.viewable ? 'No data to display.' : 'Access Denied.'}"
             rowBandingInterval="0" selectedRowKeys="#{bindings.UseraccountView1.collectionModel.selectedRow}"
             selectionListener="#{bindings.UseraccountView1.collectionModel.makeCurrent}" rowSelection="single"
             fetchSize="#{bindings.UseraccountView1.rangeSize}"
-            filterModel="#{bindings.UseraccountView1Query.queryDescriptor}" filterVisible="true"
+            filterModel="#{bindings.UseraccountView1Query.queryDescriptor}"
             queryListener="#{bindings.UseraccountView1Query.processQuery}" varStatus="vs" id="t1" width="100%">
     <af:column sortProperty="#{bindings.UseraccountView1.hints.Firstname.name}" filterable="true" sortable="true"
                headerText="#{bindings.UseraccountView1.hints.Firstname.label}" id="c1" width="100%">

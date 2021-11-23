@@ -74,7 +74,8 @@
     PrecisionRule="true"
     EntityAttrName="Contactid"
     EntityUsage="Customercontacts"
-    AliasName="CONTACTID">
+    AliasName="CONTACTID"
+    IsQueriable="false">
     <Properties>
       <SchemaBasedProperties>
         <TOOLTIP
@@ -100,8 +101,7 @@
     PrecisionRule="true"
     EntityAttrName="Title"
     EntityUsage="Customercontacts"
-    AliasName="TITLE"
-    IsQueriable="false">
+    AliasName="TITLE">
     <Properties>
       <SchemaBasedProperties>
         <DISPLAYWIDTH
@@ -114,8 +114,7 @@
     PrecisionRule="true"
     EntityAttrName="Department"
     EntityUsage="Customercontacts"
-    AliasName="DEPARTMENT"
-    IsQueriable="false">
+    AliasName="DEPARTMENT">
     <Properties>
       <SchemaBasedProperties>
         <DISPLAYWIDTH
@@ -128,8 +127,7 @@
     PrecisionRule="true"
     EntityAttrName="Workphone"
     EntityUsage="Customercontacts"
-    AliasName="WORKPHONE"
-    IsQueriable="false">
+    AliasName="WORKPHONE">
     <Properties>
       <SchemaBasedProperties>
         <DISPLAYWIDTH
@@ -142,8 +140,7 @@
     PrecisionRule="true"
     EntityAttrName="Email"
     EntityUsage="Customercontacts"
-    AliasName="EMAIL"
-    IsQueriable="false">
+    AliasName="EMAIL">
     <Properties>
       <SchemaBasedProperties>
         <DISPLAYWIDTH
@@ -157,8 +154,7 @@
     EntityAttrName="Buyingrole"
     EntityUsage="Customercontacts"
     AliasName="BUYINGROLE"
-    LOVName="LOV_Buyingrole"
-    IsQueriable="false">
+    LOVName="LOV_Buyingrole">
     <Properties>
       <SchemaBasedProperties>
         <DISPLAYWIDTH
@@ -205,7 +201,8 @@
     PrecisionRule="true"
     EntityAttrName="Customeraccountid"
     EntityUsage="Customercontacts"
-    AliasName="CUSTOMERACCOUNTID"/>
+    AliasName="CUSTOMERACCOUNTID"
+    IsQueriable="false"/>
   <ViewLinkAccessor
     Name="ContactaddressView"
     ViewLink="sfa.model.viewobjects.CaddressCustomercontactsFkLink"

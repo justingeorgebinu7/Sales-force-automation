@@ -46,7 +46,7 @@
       <property
          name="fromOutcome">toAdd</property>
       <property
-         name="sdm:polyPoints">R56,240.36139,219.43968,501.9158,225.79883,L50</property>
+         name="sdm:polyPoints">R54,238.37288,217.99414,503.36133,225.79883,L50</property>
    </ControlFlowCase>
    <View
       id="View5">
@@ -73,7 +73,7 @@
       <property
          name="fromOutcome">toMenu</property>
       <property
-         name="sdm:polyPoints">R33,238.44553,199.65753,477.08463,71.89646,L50</property>
+         name="sdm:polyPoints">R38,237.0,203.99414,479.22104,71.896484,L50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -83,7 +83,7 @@
       <property
          name="fromOutcome">backFromMenu</property>
       <property
-         name="sdm:polyPoints">L61,479.55447,81.78754,240.90419,209.54861,R44</property>
+         name="sdm:polyPoints">L58,481.0,78.896484,238.77325,210.99414,R46</property>
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall11">
@@ -110,7 +110,7 @@
       <property
          name="fromOutcome">toDelete</property>
       <property
-         name="sdm:polyPoints">R67,238.44553,229.33076,491.91873,450.79883,L50</property>
+         name="sdm:polyPoints">R62,237.0,224.99414,493.36426,450.79883,L50</property>
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall12">
@@ -143,7 +143,7 @@
       <property
          name="fromsrcid">__4</property>
       <property
-         name="sdm:polyPoints">L50,153.55444,214.49414,44.70117,113.79027,B50</property>
+         name="sdm:polyPoints">L50,155.0,214.49414,44.70117,112.34473,B50</property>
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall14">
@@ -170,7 +170,7 @@
       <property
          name="fromOutcome">ContactDrill</property>
       <property
-         name="sdm:polyPoints">R56,564.44556,76.841995,733.5896,119.79883,L50</property>
+         name="sdm:polyPoints">R54,563.0,75.396484,735.03516,119.79883,L50</property>
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall16">
@@ -197,7 +197,7 @@
       <property
          name="fromOutcome">createContactDrill</property>
       <property
-         name="sdm:polyPoints">R44,564.44556,66.95092,742.9236,-63.201164,L50</property>
+         name="sdm:polyPoints">R46,563.0,68.396484,744.36914,-63.20117,L50</property>
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall18">
@@ -228,6 +228,6 @@
       <property
          name="fromsrcid">__13</property>
       <property
-         name="sdm:polyPoints">L39,479.55447,62.005386,61.137917,-42.304688,R50</property>
+         name="sdm:polyPoints">L42,481.0,64.896484,59.692383,-42.304688,R50</property>
    </ControlFlowCase>
 </SDM>

@@ -22,7 +22,8 @@
     PrecisionRule="true"
     EntityAttrName="Roleid"
     EntityUsage="Role"
-    AliasName="ROLEID"/>
+    AliasName="ROLEID"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="Name"
     PrecisionRule="true"

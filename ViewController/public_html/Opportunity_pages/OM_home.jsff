@@ -1,12 +1,20 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
-                xmlns:dvt="http://xmlns.oracle.com/dss/adf/faces">
+                xmlns:dvt="http://xmlns.oracle.com/dss/adf/faces" xmlns:f="http://java.sun.com/jsf/core">
+  <af:quickQuery label="Search" searchDesc="Search" id="qryId1"
+                 value="#{bindings.ImplicitViewCriteriaQuery.quickQueryDescriptor}"
+                 model="#{bindings.ImplicitViewCriteriaQuery.queryModel}"
+                 queryListener="#{bindings.ImplicitViewCriteriaQuery.processQuery}">
+    <f:facet name="end">
+      <af:commandLink text="Advanced" rendered="false" id="cl1"/>
+    </f:facet>
+  </af:quickQuery>
   <af:table value="#{bindings.OpportunityView1.collectionModel}" var="row" rows="#{bindings.OpportunityView1.rangeSize}"
             emptyText="#{bindings.OpportunityView1.viewable ? 'No data to display.' : 'Access Denied.'}"
             rowBandingInterval="0" selectedRowKeys="#{bindings.OpportunityView1.collectionModel.selectedRow}"
             selectionListener="#{bindings.OpportunityView1.collectionModel.makeCurrent}" rowSelection="single"
             fetchSize="#{bindings.OpportunityView1.rangeSize}"
-            filterModel="#{bindings.OpportunityView1Query.queryDescriptor}" filterVisible="true"
+            filterModel="#{bindings.OpportunityView1Query.queryDescriptor}"
             queryListener="#{bindings.OpportunityView1Query.processQuery}" varStatus="vs" id="t1"
             columnStretching="none">
     <af:column sortProperty="#{bindings.OpportunityView1.hints.Title.name}" filterable="true" sortable="true"

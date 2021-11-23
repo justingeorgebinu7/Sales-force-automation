@@ -1,11 +1,19 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:f="http://java.sun.com/jsf/core">
+  <af:quickQuery label="Search" searchDesc="Search" id="qryId1"
+                 value="#{bindings.ImplicitViewCriteriaQuery.quickQueryDescriptor}"
+                 model="#{bindings.ImplicitViewCriteriaQuery.queryModel}"
+                 queryListener="#{bindings.ImplicitViewCriteriaQuery.processQuery}">
+    <f:facet name="end">
+      <af:commandLink text="Advanced" rendered="false" id="cl1"/>
+    </f:facet>
+  </af:quickQuery>
   <af:table value="#{bindings.RoleView1.collectionModel}" var="row" rows="#{bindings.RoleView1.rangeSize}"
             emptyText="#{bindings.RoleView1.viewable ? 'No data to display.' : 'Access Denied.'}" rowBandingInterval="0"
             selectedRowKeys="#{bindings.RoleView1.collectionModel.selectedRow}"
             selectionListener="#{bindings.RoleView1.collectionModel.makeCurrent}" rowSelection="single"
-            fetchSize="#{bindings.RoleView1.rangeSize}" filterModel="#{bindings.RoleView1Query.queryDescriptor}"
-            filterVisible="true" queryListener="#{bindings.RoleView1Query.processQuery}" varStatus="vs" id="t1"
+            fetchSize="#{bindings.RoleView1.rangeSize}" filterModel="#{bindings.RoleView1Query.queryDescriptor}" queryListener="#{bindings.RoleView1Query.processQuery}" varStatus="vs" id="t1"
             columnStretching="none">
     <af:column sortProperty="#{bindings.RoleView1.hints.Name.name}" filterable="true" sortable="true"
                headerText="#{bindings.RoleView1.hints.Name.label}" id="c1" width="100%">

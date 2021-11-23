@@ -67,7 +67,8 @@
     PrecisionRule="true"
     EntityAttrName="Useraccountid"
     EntityUsage="Useraccount"
-    AliasName="USERACCOUNTID"/>
+    AliasName="USERACCOUNTID"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="Firstname"
     PrecisionRule="true"
@@ -153,7 +154,8 @@
     EntityAttrName="Corporatecustomerreferenceid1"
     EntityUsage="Useraccount"
     AliasName="CORPORATECUSTOMERREFERENCEID1"
-    LOVName="LOV_Corporatecustomerreferenceid1">
+    LOVName="LOV_Corporatecustomerreferenceid1"
+    IsQueriable="false">
     <Properties>
       <SchemaBasedProperties>
         <CONTROLTYPE
@@ -167,7 +169,8 @@
     EntityAttrName="Supervisor"
     EntityUsage="Useraccount"
     AliasName="SUPERVISOR"
-    LOVName="LOV_Supervisor">
+    LOVName="LOV_Supervisor"
+    IsQueriable="false">
     <Properties>
       <SchemaBasedProperties>
         <CONTROLTYPE

@@ -46,7 +46,7 @@
       <property
          name="fromOutcome">toContactMenu</property>
       <property
-         name="sdm:polyPoints">R46,279.4524,261.99414,547.0,378.64355,L46</property>
+         name="sdm:polyPoints">R50,279.4123,265.49414,547.0,378.64355,L46</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -83,7 +83,7 @@
       <property
          name="fromOutcome">deleteCon</property>
       <property
-         name="sdm:polyPoints">T50,237.0,211.49414,372.69336,131.79883,B50</property>
+         name="sdm:polyPoints">T50,237.0,210.57507,372.69336,132.7179,B50</property>
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall9">
