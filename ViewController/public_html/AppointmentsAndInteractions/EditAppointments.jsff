@@ -55,7 +55,8 @@
             <f:facet name="toolbar">
               <af:menuBar id="mb1">
                 <af:commandMenuItem text="Add" id="cmi1" action="addInviteeInternal" windowEmbedStyle="inlineDocument"
-                                    windowModalityType="applicationModal" useWindow="true"/>
+                                    windowModalityType="applicationModal" useWindow="true" windowHeight="700"
+                                    windowWidth="700"/>
                 <af:commandMenuItem text="Delete" id="cmi2" action="deleteInviteeInternal"/>
               </af:menuBar>
             </f:facet>
@@ -78,7 +79,8 @@
             <f:facet name="toolbar">
               <af:menuBar id="mb2">
                 <af:commandMenuItem text="Add" id="cmi3" action="addInviteeExternal" useWindow="true"
-                                    windowEmbedStyle="inlineDocument" windowModalityType="applicationModal"/>
+                                    windowEmbedStyle="inlineDocument" windowModalityType="applicationModal"
+                                    windowHeight="700" windowWidth="700"/>
                 <af:commandMenuItem text="Delete" id="cmi4" action="toDeleteExternal"/>
               </af:menuBar>
             </f:facet>
@@ -87,10 +89,11 @@
                       emptyText="#{bindings.InviteesextView3.viewable ? 'No data to display.' : 'Access Denied.'}"
                       rowBandingInterval="0" selectedRowKeys="#{bindings.InviteesextView3.collectionModel.selectedRow}"
                       selectionListener="#{bindings.InviteesextView3.collectionModel.makeCurrent}" rowSelection="single"
-                      fetchSize="#{bindings.InviteesextView3.rangeSize}" id="t2" columnStretching="last"
+                      fetchSize="#{bindings.InviteesextView3.rangeSize}" id="t2" columnStretching="none"
                       partialTriggers="::cmi3">
               <af:column sortProperty="#{bindings.InviteesextView3.hints.Firstname.name}" sortable="true"
-                         headerText="#{bindings.InviteesextView3.hints.Firstname.label}" id="c2">
+                         headerText="#{bindings.InviteesextView3.hints.Firstname.label}" id="c2" width="100%"
+                         minimumWidth="12">
                 <af:outputText value="#{row.Firstname}" shortDesc="#{bindings.InviteesextView3.hints.Firstname.tooltip}"
                                id="ot2"/>
               </af:column>

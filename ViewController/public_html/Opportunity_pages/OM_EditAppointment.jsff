@@ -55,7 +55,8 @@
             <f:facet name="toolbar">
               <af:toolbar id="t3">
                 <af:commandMenuItem text="Add" id="cmi1" action="addInternalInvitee" useWindow="true"
-                                    windowEmbedStyle="inlineDocument" windowModalityType="applicationModal"/>
+                                    windowEmbedStyle="inlineDocument" windowModalityType="applicationModal"
+                                    windowHeight="700" windowWidth="700"/>
                 <af:commandMenuItem text="Delete" id="cmi2" action="deleteInternalInvitee"/>
               </af:toolbar>
             </f:facet>
@@ -78,7 +79,8 @@
             <f:facet name="toolbar">
               <af:toolbar id="t4">
                 <af:commandMenuItem text="Add" id="cmi3" action="addExternalInvitee" useWindow="true"
-                                    windowEmbedStyle="inlineDocument" windowModalityType="applicationModal"/>
+                                    windowEmbedStyle="inlineDocument" windowModalityType="applicationModal"
+                                    windowHeight="700" windowWidth="700"/>
                 <af:commandMenuItem text="Delete" id="cmi4" action="deleteExternalInvitee"/>
               </af:toolbar>
             </f:facet>
