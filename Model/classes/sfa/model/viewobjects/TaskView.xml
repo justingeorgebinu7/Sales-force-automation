@@ -68,7 +68,9 @@
     <Properties>
       <SchemaBasedProperties>
         <DISPLAYWIDTH
-          Value="10"/>
+          Value="30"/>
+        <TimeZoneID
+          Value="Asia/Kolkata"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>

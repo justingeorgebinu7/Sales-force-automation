@@ -259,6 +259,10 @@
       <SchemaBasedProperties>
         <LABEL
           ResId="sfa.model.viewobjects.OpportunityView.Closedate_LABEL"/>
+        <DISPLAYWIDTH
+          Value="30"/>
+        <TimeZoneID
+          Value="Asia/Kolkata"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>

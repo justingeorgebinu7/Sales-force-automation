@@ -49,6 +49,6 @@
       <af:outputText value="#{row.Location}" shortDesc="#{bindings.AppointmentsView4.hints.Location.tooltip}" id="ot5"/>
     </af:column>
   </af:table>
-  <af:button text="Create" id="b3" action="createAppointment"/>
+  <af:button text="Add" id="b3" action="createAppointment"/>
   <af:button text="Delete" action="deleteAppointmentTF1" id="b1"/>
 </ui:composition>

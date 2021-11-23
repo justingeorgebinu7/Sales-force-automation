@@ -46,7 +46,7 @@
     <Properties>
       <SchemaBasedProperties>
         <DISPLAYWIDTH
-          Value="10"/>
+          Value="30"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
@@ -59,7 +59,7 @@
     <Properties>
       <SchemaBasedProperties>
         <DISPLAYWIDTH
-          Value="10"/>
+          Value="30"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>

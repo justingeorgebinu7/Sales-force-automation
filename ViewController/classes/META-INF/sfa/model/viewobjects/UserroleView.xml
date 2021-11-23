@@ -81,6 +81,8 @@
       <SchemaBasedProperties>
         <LABEL
           ResId="sfa.model.viewobjects.UserroleView.Startdate_LABEL"/>
+        <DISPLAYWIDTH
+          Value="30"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
@@ -94,6 +96,8 @@
       <SchemaBasedProperties>
         <LABEL
           ResId="sfa.model.viewobjects.UserroleView.Enddate_LABEL"/>
+        <DISPLAYWIDTH
+          Value="30"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>

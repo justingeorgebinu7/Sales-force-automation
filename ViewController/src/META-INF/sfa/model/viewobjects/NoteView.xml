@@ -54,6 +54,8 @@
           ResId="sfa.model.viewobjects.NoteView.Datetime_FMT_FORMAT"/>
         <TimeZoneID
           Value="Asia/Kolkata"/>
+        <DISPLAYWIDTH
+          Value="30"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
@@ -105,8 +107,12 @@
       <SchemaBasedProperties>
         <FMT_FORMATTER
           ResId="sfa.model.viewobjects.NoteView.Updateddate_FMT_FORMATTER"/>
+        <DISPLAYWIDTH
+          Value="30"/>
         <FMT_FORMAT
           ResId="sfa.model.viewobjects.NoteView.Updateddate_FMT_FORMAT"/>
+        <TimeZoneID
+          Value="Asia/Kolkata"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
@@ -128,6 +134,8 @@
           ResId="sfa.model.viewobjects.NoteView.Createddate_FMT_FORMAT"/>
         <FMT_FORMATTER
           ResId="sfa.model.viewobjects.NoteView.Createddate_FMT_FORMATTER"/>
+        <TimeZoneID
+          Value="Asia/Colombo"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
