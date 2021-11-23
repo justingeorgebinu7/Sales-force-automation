@@ -920,6 +920,18 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
                     }
                 }
         }
+        if(flag){
+            NavigationHandler nvHndlr = FacesContext.getCurrentInstance()
+                                                    .
+
+                                                    getApplication()
+                                                    .
+
+                                                    getNavigationHandler();
+
+            nvHndlr.handleNavigation(FacesContext.getCurrentInstance(), null, "save");
+            rs.closeRowSet();
+        }
     
         if (!flag) {
           
