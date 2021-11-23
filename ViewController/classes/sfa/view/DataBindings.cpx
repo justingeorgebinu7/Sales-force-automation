@@ -520,6 +520,10 @@
     <page path="/ProductsCatalog/editCategory.jsf" usageId="sfa_view_editCategoryPageDef1"/>
     <page path="/WEB-INF/customerAccountTaskFlows/notesTrialAddTF.xml#notesTrialAddTF@Commit"
           usageId="sfa_view_notesTrialAddTF_notesTrialAddTF_CommitPageDef"/>
+    <page path="/WEB-INF/ContactManagement/notesForContacts.xml#notesForContacts@Commit"
+          usageId="sfa_view_notesForContacts_notesForContacts_CommitPageDef"/>
+    <page path="/WEB-INF/Opportunity_TaskFLows/OM_NotesMain.xml#OM_NotesMain@Commit"
+          usageId="sfa_view_OM_NotesMain_OM_NotesMain_CommitPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="sfa_view_untitled2PageDef" path="sfa.view.pageDefs.untitled2PageDef"/>
@@ -1029,6 +1033,10 @@
     <page id="sfa_view_editCategoryPageDef1" path="ProductsCatalog.editCategoryPageDef1"/>
     <page id="sfa_view_notesTrialAddTF_notesTrialAddTF_CommitPageDef"
           path="customerAccountTaskFlows.notesTrialAddTF_notesTrialAddTF_CommitPageDef"/>
+    <page id="sfa_view_notesForContacts_notesForContacts_CommitPageDef"
+          path="ContactManagement.notesForContacts_notesForContacts_CommitPageDef"/>
+    <page id="sfa_view_OM_NotesMain_OM_NotesMain_CommitPageDef"
+          path="Opportunity_TaskFLows.OM_NotesMain_OM_NotesMain_CommitPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="sfa.model.entities"

@@ -5,6 +5,11 @@
     <data-control-scope>
       <shared/>
     </data-control-scope>
+    <managed-bean id="__9">
+      <managed-bean-name>NoteUpdate</managed-bean-name>
+      <managed-bean-class>Beans.NoteUpdate</managed-bean-class>
+      <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
     <view id="notesForContactTable">
       <page>/ContactManagementPages/notesForContactTable.jsff</page>
     </view>
@@ -24,6 +29,12 @@
       </task-flow-reference>
       <run-as-dialog/>
     </task-flow-call>
+    <method-call id="Commit">
+      <method>#{bindings.Commit.execute}</method>
+      <outcome>
+        <fixed-outcome>Commit</fixed-outcome>
+      </outcome>
+    </method-call>
     <control-flow-rule id="__1">
       <from-activity-id>notesForContactTable</from-activity-id>
       <control-flow-case id="__2">
@@ -43,6 +54,13 @@
       <from-activity-id>editNotes</from-activity-id>
       <control-flow-case id="__4">
         <from-outcome>backFromEdit</from-outcome>
+        <to-activity-id>Commit</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__7">
+      <from-activity-id>Commit</from-activity-id>
+      <control-flow-case id="__8">
+        <from-outcome>Commit</from-outcome>
         <to-activity-id>notesForContactTable</to-activity-id>
       </control-flow-case>
     </control-flow-rule>

@@ -28,11 +28,11 @@
       <property
          name="pageFragment">true</property>
       <property
-         name="x">548.0</property>
+         name="x">584.0</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>OM_EditNotes&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">321.59766</property>
+         name="y">305.89648</property>
       <property
          name="page">/Opportunity_pages/OM_EditNotes.jsff</property>
       <property
@@ -46,17 +46,7 @@
       <property
          name="fromOutcome">toEdit</property>
       <property
-         name="sdm:polyPoints">R50,333.55096,236.19531,507.0,317.74707,L46</property>
-   </ControlFlowCase>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase5"
-      from="View3"
-      to="View2">
-      <property
-         name="fromOutcome">backFromEdit</property>
-      <property
-         name="sdm:polyPoints">L54,505.44275,324.74707,332.0,243.19531,R58</property>
+         name="sdm:polyPoints">R54,332.0,239.69531,543.0,305.5459,L50</property>
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall6">
@@ -110,6 +100,39 @@
       <property
          name="fromOutcome">addNote</property>
       <property
-         name="sdm:polyPoints">R42,332.0,229.19531,554.35156,203.79883,L50</property>
+         name="sdm:polyPoints">R46,332.0,232.69531,554.35156,203.79883,L50</property>
+   </ControlFlowCase>
+   <MethodCall
+      id="MethodCall10">
+      <property
+         name="activityId">Commit</property>
+      <property
+         name="x">354.5</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>Commit&lt;/b>&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
+      <property
+         name="y">426.1494</property>
+      <property
+         name="exceptionHandler">false</property>
+   </MethodCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase11"
+      from="View3"
+      to="MethodCall10">
+      <property
+         name="fromOutcome">backFromEdit</property>
+      <property
+         name="sdm:polyPoints">L54,543.0,309.0459,395.5,425.79883,R50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase12"
+      from="MethodCall10"
+      to="View2">
+      <property
+         name="fromOutcome">Commit</property>
+      <property
+         name="sdm:polyPoints">T51,R99</property>
    </ControlFlowCase>
 </SDM>

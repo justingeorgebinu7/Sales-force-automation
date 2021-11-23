@@ -17,6 +17,8 @@
         <Item Value="Content"/>
       </AttrNames>
     </attributeValues>
-    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+    <methodAction IterBinding="NoteView3Iterator" id="update" RequiresUpdateModel="true" Action="invokeMethod"
+                  MethodName="update" IsViewObjectMethod="false" DataControl="AppModuleDataControl"
+                  InstanceName="bindings.NoteView3Iterator.currentRow" IsLocalObjectReference="true"/>
   </bindings>
 </pageDefinition>

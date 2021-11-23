@@ -19,9 +19,17 @@
                headerText="#{bindings.NoteView4.hints.Createdby.label}" id="c3" width="100%">
       <af:outputText value="#{row.Createdby}" shortDesc="#{bindings.NoteView4.hints.Createdby.tooltip}" id="ot3"/>
     </af:column>
-    <af:column headerText="#{bindings.NoteView4.hints.Datetime.label}" id="c4" width="100%">
-      <af:outputText value="#{row.Datetime}" shortDesc="#{bindings.NoteView4.hints.Datetime.tooltip}" id="ot4">
-        <af:convertDateTime pattern="#{bindings.NoteView4.hints.Datetime.format}"/>
+    <af:column headerText="#{bindings.NoteView4.hints.Createddate.label}" id="c4">
+      <af:outputText value="#{row.Createddate}" shortDesc="#{bindings.NoteView4.hints.Createddate.tooltip}" id="ot4">
+        <af:convertDateTime pattern="#{bindings.NoteView4.hints.Createddate.format}"/>
+      </af:outputText>
+    </af:column>
+    <af:column headerText="#{bindings.NoteView4.hints.Updatedby.label}" id="c5">
+      <af:outputText value="#{row.Updatedby}" shortDesc="#{bindings.NoteView4.hints.Updatedby.tooltip}" id="ot5"/>
+    </af:column>
+    <af:column headerText="#{bindings.NoteView4.hints.Updateddate.label}" id="c6">
+      <af:outputText value="#{row.Updateddate}" shortDesc="#{bindings.NoteView4.hints.Updateddate.tooltip}" id="ot6">
+        <af:convertDateTime pattern="#{bindings.NoteView4.hints.Updateddate.format}"/>
       </af:outputText>
     </af:column>
   </af:table>

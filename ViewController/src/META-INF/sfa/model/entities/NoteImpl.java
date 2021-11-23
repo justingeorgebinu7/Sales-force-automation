@@ -4,6 +4,8 @@ import java.math.BigDecimal;
 
 import java.sql.Timestamp;
 
+import java.util.Date;
+
 import oracle.adf.share.ADFContext;
 
 import oracle.adf.share.security.SecurityContext;
@@ -323,14 +325,15 @@ public class NoteImpl extends EntityImpl {
      * @param attributeList list of attribute names/values to initialize the row
      */
     protected void create(AttributeList attributeList) {
-        //        ADFContext adfCtx = ADFContext.getCurrent();
-        //        SecurityContext secCntx = adfCtx.getSecurityContext();
-        //        String value = secCntx.getUserName();
-        //        setCreatedby(value);
         super.create(attributeList);
-//        SequenceImpl seq = new SequenceImpl("COMMONSEQUENCE", getDBTransaction().getRootApplicationModule());
-//        BigDecimal noteid = new BigDecimal(seq.getSequenceNumber().toString());
-//        setNoteid(noteid);
+//                ADFContext adfCtx = ADFContext.getCurrent();
+//                SecurityContext secCntx = adfCtx.getSecurityContext();
+//                String value = secCntx.getUserName();
+//                setCreatedby(value);
+       
+        SequenceImpl seq = new SequenceImpl("COMMONSEQUENCE", getDBTransaction().getRootApplicationModule());
+        BigDecimal noteid = new BigDecimal(seq.getSequenceNumber().toString());
+        setNoteid(noteid);
     }
 
     protected void initDefaultExpressionAttributes(AttributeList attributeList) {
@@ -338,6 +341,9 @@ public class NoteImpl extends EntityImpl {
         SecurityContext secCntx = adfCtx.getSecurityContext();
         String value = secCntx.getUserName();
         this.setCreatedby(value);
+        Date date=new Date();
+        Timestamp ts = new Timestamp(date.getTime());
+        setCreateddate(ts);
     }
     
     

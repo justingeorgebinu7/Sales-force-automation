@@ -23,9 +23,9 @@
                headerText="#{bindings.NoteView2.hints.Createdby.label}" id="c4" width="110">
       <af:outputText value="#{row.Createdby}" shortDesc="#{bindings.NoteView2.hints.Createdby.tooltip}" id="ot4"/>
     </af:column>
-    <af:column headerText="#{bindings.NoteView2.hints.Datetime.label}" id="c3">
-      <af:outputText value="#{row.Datetime}" shortDesc="#{bindings.NoteView2.hints.Datetime.tooltip}" id="ot3">
-        <af:convertDateTime pattern="#{bindings.NoteView2.hints.Datetime.format}" timeZone="UTC +5:30"/>
+    <af:column headerText="#{bindings.NoteView2.hints.Createddate.label}" id="c6">
+      <af:outputText value="#{row.Createddate}" shortDesc="#{bindings.NoteView2.hints.Createddate.tooltip}" id="ot6">
+        <af:convertDateTime pattern="#{bindings.NoteView2.hints.Createddate.format}"/>
       </af:outputText>
     </af:column>
     <af:column headerText="#{bindings.NoteView2.hints.Updatedby.label}" id="c2">

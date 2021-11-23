@@ -100,7 +100,16 @@
     PrecisionRule="true"
     EntityAttrName="Updateddate"
     EntityUsage="Note"
-    AliasName="UPDATEDDATE"/>
+    AliasName="UPDATEDDATE">
+    <Properties>
+      <SchemaBasedProperties>
+        <FMT_FORMATTER
+          ResId="sfa.model.viewobjects.NoteView.Updateddate_FMT_FORMATTER"/>
+        <FMT_FORMAT
+          ResId="sfa.model.viewobjects.NoteView.Updateddate_FMT_FORMAT"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Updatedby"
     PrecisionRule="true"
@@ -112,7 +121,16 @@
     PrecisionRule="true"
     EntityAttrName="Createddate"
     EntityUsage="Note"
-    AliasName="CREATEDDATE"/>
+    AliasName="CREATEDDATE">
+    <Properties>
+      <SchemaBasedProperties>
+        <FMT_FORMAT
+          ResId="sfa.model.viewobjects.NoteView.Createddate_FMT_FORMAT"/>
+        <FMT_FORMATTER
+          ResId="sfa.model.viewobjects.NoteView.Createddate_FMT_FORMATTER"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ClientRowInterface
     Name="__rowClientInterface">
     <Method

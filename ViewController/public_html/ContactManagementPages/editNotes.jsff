@@ -15,6 +15,6 @@
       <f:validator binding="#{bindings.Content.validator}"/>
     </af:inputText>
   </af:panelFormLayout>
-  <af:button actionListener="#{bindings.Commit.execute}" text="Save" id="b1"
-             action="backFromEdit"/>
+  <af:button text="Save" id="b1"
+             action="#{NoteUpdate.noteUpdate}"/>
 </ui:composition>
