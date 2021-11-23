@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="InvalidUserPopup.jsf" id="d1">
+        <af:form id="f1" inlineStyle="text-align:center;">
+            <af:spacer id="s3" height="5px"/>
+            <af:image source="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/OOjs_UI_icon_error-destructive.svg/1200px-OOjs_UI_icon_error-destructive.svg.png"
+                      shortDesc="." id="i1" inlineStyle="width:60px;"/>
+            <af:spacer id="s1" height="10px"/>
+            <af:outputText value="The same role already exists for this user in an overlapping date range" id="ot1"
+                           inlineStyle="font-size:medium;"/>
+            <af:spacer id="s2" height="10px"/>
+            <af:button text="Close" id="b1" action="close"/>
+        </af:form>
+    </af:document>
+</f:view>
