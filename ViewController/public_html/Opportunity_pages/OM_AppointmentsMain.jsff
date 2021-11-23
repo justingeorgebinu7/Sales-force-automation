@@ -7,7 +7,7 @@
             rowBandingInterval="0" selectedRowKeys="#{bindings.AppointmentsView8.collectionModel.selectedRow}"
             selectionListener="#{bindings.AppointmentsView8.collectionModel.makeCurrent}" rowSelection="single"
             fetchSize="#{bindings.AppointmentsView8.rangeSize}"
-            filterModel="#{bindings.AppointmentsView8Query.queryDescriptor}" filterVisible="true"
+            filterModel="#{bindings.AppointmentsView8Query.queryDescriptor}" filterVisible="false"
             queryListener="#{bindings.AppointmentsView8Query.processQuery}" varStatus="vs" id="t1">
     <af:column sortProperty="#{bindings.AppointmentsView8.hints.Name.name}" filterable="true" sortable="true"
                headerText="#{bindings.AppointmentsView8.hints.Name.label}" id="c1" width="100%">

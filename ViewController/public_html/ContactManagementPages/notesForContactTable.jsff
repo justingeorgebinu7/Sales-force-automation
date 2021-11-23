@@ -6,7 +6,7 @@
             selectedRowKeys="#{bindings.NoteView3.collectionModel.selectedRow}"
             selectionListener="#{bindings.NoteView3.collectionModel.makeCurrent}" rowSelection="single"
             fetchSize="#{bindings.NoteView3.rangeSize}" filterModel="#{bindings.NoteView3Query.queryDescriptor}"
-            filterVisible="true" queryListener="#{bindings.NoteView3Query.processQuery}" varStatus="vs" id="t1"
+            filterVisible="false" queryListener="#{bindings.NoteView3Query.processQuery}" varStatus="vs" id="t1"
             columnStretching="none">
     <af:column sortProperty="#{bindings.NoteView3.hints.Subject.name}" filterable="true" sortable="true"
                headerText="#{bindings.NoteView3.hints.Subject.label}" id="c1" width="100%">

@@ -6,7 +6,7 @@
             selectedRowKeys="#{bindings.TaskView4.collectionModel.selectedRow}"
             selectionListener="#{bindings.TaskView4.collectionModel.makeCurrent}" rowSelection="single"
             fetchSize="#{bindings.TaskView4.rangeSize}" filterModel="#{bindings.TaskView4Query.queryDescriptor}"
-            filterVisible="true" queryListener="#{bindings.TaskView4Query.processQuery}" varStatus="vs" id="t1">
+            filterVisible="false" queryListener="#{bindings.TaskView4Query.processQuery}" varStatus="vs" id="t1">
     <af:column sortProperty="#{bindings.TaskView4.hints.Name.name}" filterable="true" sortable="true"
                headerText="#{bindings.TaskView4.hints.Name.label}" id="c1" width="100%">
       <af:link shortDesc="#{bindings.TaskView4.hints.Name.tooltip}" id="ot1" text="#{row.Name}" action="toEdit"/>
