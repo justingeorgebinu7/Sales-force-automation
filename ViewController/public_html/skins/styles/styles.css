@@ -19,8 +19,9 @@ af|inputFile {
     margin: 30px 5px;
 }
 
-af|inputComboboxListOfValues::search {
-    display: none;
+af|inputComboboxListOfValues::content, af|inputDate::content, af|selectOneChoice::content{
+    border-left: 2px solid #357 !important;
+    border-radius:5px !important;
 }
 
 .navBtn {
