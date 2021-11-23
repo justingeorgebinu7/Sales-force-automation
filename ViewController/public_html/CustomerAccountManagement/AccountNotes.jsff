@@ -1,12 +1,20 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
                 xmlns:f="http://java.sun.com/jsf/core">
+  <af:quickQuery label="Search" searchDesc="Search" id="qryId1"
+                 value="#{bindings.ImplicitViewCriteriaQuery.quickQueryDescriptor}"
+                 model="#{bindings.ImplicitViewCriteriaQuery.queryModel}"
+                 queryListener="#{bindings.ImplicitViewCriteriaQuery.processQuery}">
+    <f:facet name="end">
+      <af:commandLink text="Advanced" rendered="false" id="cl1"/>
+    </f:facet>
+  </af:quickQuery>
   <af:table value="#{bindings.NoteView2.collectionModel}" var="row" rows="#{bindings.NoteView2.rangeSize}"
             emptyText="#{bindings.NoteView2.viewable ? 'No data to display.' : 'Access Denied.'}" rowBandingInterval="0"
             selectedRowKeys="#{bindings.NoteView2.collectionModel.selectedRow}"
             selectionListener="#{bindings.NoteView2.collectionModel.makeCurrent}" rowSelection="single"
             fetchSize="#{bindings.NoteView2.rangeSize}" filterModel="#{bindings.NoteView2Query.queryDescriptor}"
-            filterVisible="true" queryListener="#{bindings.NoteView2Query.processQuery}" varStatus="vs" id="t1">
+            filterVisible="false" queryListener="#{bindings.NoteView2Query.processQuery}" varStatus="vs" id="t1">
     <af:column sortProperty="#{bindings.NoteView2.hints.Subject.name}" filterable="true" sortable="true"
                headerText="#{bindings.NoteView2.hints.Subject.label}" id="c1" width="100%">
       <af:link shortDesc="#{bindings.NoteView2.hints.Subject.tooltip}" id="ot1" text="#{row.Subject}" action="edit"/>

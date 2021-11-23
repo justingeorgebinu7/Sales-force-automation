@@ -7,6 +7,9 @@
     <iterator Binds="NoteView2" RangeSize="25" DataControl="AppModuleDataControl" id="NoteView2Iterator"/>
     <searchRegion Binds="NoteView2Iterator" Criteria="" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
                   id="NoteView2Query"/>
+    <searchRegion Criteria="__ImplicitViewCriteria__" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  Binds="NoteView2Iterator" id="ImplicitViewCriteriaQuery" InitialQueryOverridden="true"
+                  DefaultQuickSearchAttrName="Subject"/>
   </executables>
   <bindings>
     <tree IterBinding="NoteView2Iterator" id="NoteView2">
