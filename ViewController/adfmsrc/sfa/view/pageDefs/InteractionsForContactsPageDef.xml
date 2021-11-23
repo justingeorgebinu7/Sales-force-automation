@@ -7,6 +7,9 @@
     <iterator Binds="InteractionView2" RangeSize="25" DataControl="AppModuleDataControl" id="InteractionView2Iterator"/>
     <searchRegion Binds="InteractionView2Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="InteractionView2Query"/>
+    <searchRegion Criteria="__ImplicitViewCriteria__" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  Binds="InteractionView2Iterator" id="ImplicitViewCriteriaQuery" DefaultQuickSearchAttrName="Type"
+                  InitialQueryOverridden="true"/>
   </executables>
   <bindings>
     <tree IterBinding="InteractionView2Iterator" id="InteractionView2">
