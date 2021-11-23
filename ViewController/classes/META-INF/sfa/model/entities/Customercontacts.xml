@@ -31,7 +31,8 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="CUSTOMERCONTACTS">
+    TableName="CUSTOMERCONTACTS"
+    IsNotNull="true">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="20"/>
     </DesignTime>
@@ -233,6 +234,18 @@
     AssociationOtherEnd="sfa.model.entities.Contact_Appointments_Via_Invitees_Assoc.Customercontacts1"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <Key
+    Name="CustomercontactsNameCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"NAME" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="CUSTOMERCONTACTS_NAME_CHECK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="sfa.model.entities.Customercontacts.Name"/>
+    </AttrArray>
+  </Key>
   <Key
     Name="CustomercontactsPk"
     PrimaryKey="true">

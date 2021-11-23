@@ -50,7 +50,8 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="CUSTOMERACCOUNT">
+    TableName="CUSTOMERACCOUNT"
+    IsNotNull="true">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="20"/>
     </DesignTime>
@@ -217,6 +218,18 @@
     AssociationOtherEnd="sfa.model.entities.AddressCustomerAccountFkAssoc.Customeraccount"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <Key
+    Name="CustomeraccountNameCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"NAME" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="CUSTOMERACCOUNT_NAME_CHECK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="sfa.model.entities.Customeraccount.Name"/>
+    </AttrArray>
+  </Key>
   <Key
     Name="CustomeraccountPk"
     PrimaryKey="true">

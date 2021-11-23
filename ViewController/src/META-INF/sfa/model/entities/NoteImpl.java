@@ -63,6 +63,7 @@ public class NoteImpl extends EntityImpl {
         }
     }
 
+
     public static final int NOTEID = AttributesEnum.Noteid.index();
     public static final int CONTENT = AttributesEnum.Content.index();
     public static final int DATETIME = AttributesEnum.Datetime.index();
@@ -90,6 +91,7 @@ public class NoteImpl extends EntityImpl {
     public static synchronized EntityDefImpl getDefinitionObject() {
         return EntityDefImpl.findDefObject("sfa.model.entities.Note");
     }
+
 
     /**
      * Gets the attribute value for Noteid, using the alias name Noteid.

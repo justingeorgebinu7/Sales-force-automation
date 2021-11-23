@@ -7,7 +7,7 @@
         <f:facet name="toolbar">
           <af:menuBar id="mb3">
             <af:commandMenuItem actionListener="#{bindings.Commit.execute}" text="Save" id="cmi5"/>
-            <af:commandMenuItem text="Cancel" id="cmi6" action="backFromEdit"/>
+            <af:commandMenuItem text="Cancel" id="cmi6" action="backFromEdit" immediate="true"/>
           </af:menuBar>
         </f:facet>
         <af:panelFormLayout id="pfl1" rows="4">

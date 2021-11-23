@@ -65,6 +65,7 @@ public class UseraccountImpl extends EntityImpl {
         }
     }
 
+
     public static final int USERACCOUNTID = AttributesEnum.Useraccountid.index();
     public static final int FIRSTNAME = AttributesEnum.Firstname.index();
     public static final int MIDDLENAME = AttributesEnum.Middlename.index();
@@ -90,6 +91,7 @@ public class UseraccountImpl extends EntityImpl {
     public static synchronized EntityDefImpl getDefinitionObject() {
         return EntityDefImpl.findDefObject("sfa.model.entities.Useraccount");
     }
+
 
     /**
      * Gets the attribute value for Useraccountid, using the alias name Useraccountid.

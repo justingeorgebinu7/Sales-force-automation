@@ -127,7 +127,8 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="NOTE">
+    TableName="NOTE"
+    IsNotNull="true">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="100"/>
     </DesignTime>
@@ -211,6 +212,18 @@
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="sfa.model.entities.Note.Noteid"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="NoteSubjectCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"SUBJECT" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="NOTE_SUBJECT_CHECK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="sfa.model.entities.Note.Subject"/>
     </AttrArray>
   </Key>
   <Key

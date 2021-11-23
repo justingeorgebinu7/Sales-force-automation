@@ -13,7 +13,7 @@
         </af:inputText>
       </af:panelFormLayout>
       <af:button text="Save" id="b1"/>
-      <af:button text="Cancel" id="b2"/>
+      <af:button text="Cancel" id="b2" immediate="true"/>
     </af:form>
   </af:document>
 </f:view>

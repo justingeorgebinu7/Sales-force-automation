@@ -145,7 +145,8 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="OPPORTUNITY">
+    TableName="OPPORTUNITY"
+    IsNotNull="true">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="20"/>
     </DesignTime>
@@ -233,6 +234,18 @@
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="sfa.model.entities.Opportunity.Opportunityid"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="OpportunityTitleCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"TITLE" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="OPPORTUNITY_TITLE_CHECK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="sfa.model.entities.Opportunity.Title"/>
     </AttrArray>
   </Key>
   <Key

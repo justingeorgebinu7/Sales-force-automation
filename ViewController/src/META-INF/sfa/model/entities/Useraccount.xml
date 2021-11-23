@@ -36,7 +36,8 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="USERACCOUNT">
+    TableName="USERACCOUNT"
+    IsNotNull="true">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="20"/>
     </DesignTime>
@@ -153,6 +154,18 @@
     AssociationOtherEnd="sfa.model.entities.Inviteesext_useraccount_Assoc.Useraccount"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <Key
+    Name="UseraccountFirstnameCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"FIRSTNAME" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="USERACCOUNT_FIRSTNAME_CHECK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="sfa.model.entities.Useraccount.Firstname"/>
+    </AttrArray>
+  </Key>
   <Key
     Name="UseraccountPk"
     PrimaryKey="true">

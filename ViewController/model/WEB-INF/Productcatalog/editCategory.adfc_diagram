@@ -13,7 +13,7 @@
       <property
          name="description">&lt;html>&lt;p>&lt;b>Edit&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity ID:  editCategory2&lt;/p>&lt;p>Activity Type:  View&lt;/p>&lt;p/>&lt;p>&lt;em>Edit Category&lt;br/>&lt;/em>&lt;/p></property>
       <property
-         name="y">335.39062</property>
+         name="y">334.68945</property>
       <property
          name="page">/ProductsCatalog/editCategory.jsf</property>
       <property
@@ -57,7 +57,7 @@
       <property
          name="fromOutcome">commit</property>
       <property
-         name="sdm:polyPoints">R45,556.96606,330.57397,805.034,156.89648,L50</property>
+         name="sdm:polyPoints">R46,556.0,330.83887,806.0,156.89648,L50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -67,6 +67,6 @@
       <property
          name="fromOutcome">rollback</property>
       <property
-         name="sdm:polyPoints">R55,556.96606,339.5061,817.03394,410.8965,L50</property>
+         name="sdm:polyPoints">R54,556.0,337.83887,818.0,410.89648,L50</property>
    </ControlFlowCase>
 </SDM>

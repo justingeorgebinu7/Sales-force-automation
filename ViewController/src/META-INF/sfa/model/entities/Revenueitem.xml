@@ -94,7 +94,8 @@
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
-    TableName="REVENUEITEM">
+    TableName="REVENUEITEM"
+    IsNotNull="true">
     <Properties>
       <SchemaBasedProperties>
         <LABEL
@@ -143,6 +144,18 @@
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="sfa.model.entities.Revenueitem.Revenueitemid"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="RevenueitemProductidCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"PRODUCTID" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="REVENUEITEM_PRODUCTID_CHECK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="sfa.model.entities.Revenueitem.Productid"/>
     </AttrArray>
   </Key>
   <Key
