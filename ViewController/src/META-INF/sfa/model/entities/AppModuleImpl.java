@@ -1,5 +1,6 @@
 package sfa.model.entities;
 
+import javax.faces.application.NavigationHandler;
 import javax.faces.application.ViewHandler;
 import javax.faces.component.UIViewRoot;
 import javax.faces.context.FacesContext;
@@ -866,6 +867,109 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
         rowObj.setAttribute("Bestcaserevenue", bestrev);
         rowObj.setAttribute("Worstcaserevenue", worstrev);
     }
+    
+    
+    public void roleDate(String a) {
+
+        System.out.println("Inside roleDatete" + a);
+        RowSet rs = (RowSet) getUserroleView1();
+        rs.reset();
+        System.out.println(rs.hasNext());
+        String looprolestr = null;
+        String loopaccstr = null;
+
+        boolean flag = true;
+
+        DCIteratorBinding it = (DCIteratorBinding) BindingContext.getCurrent()
+                                                                 .getCurrentBindingsEntry()
+                                                                 .get("UserroleView3Iterator");
+        RowSetIterator rsIter = it.getRowSetIterator();
+        Row rowObj = rsIter.getCurrentRow();
+        Object role = rowObj.getAttribute("Roleid");
+        String rolestr = role.toString();
+
+        Object u = rowObj.getAttribute("Userroleid");
+        String ustr = u.toString();
+        Object start = null;
+        Object end = null;
+
+        while (rs.hasNext()) {
+            System.out.println("Inside while");
+            Row rw = rs.next();
+            Object looproleid = rw.getAttribute("Userroleid");
+            String loopidstr = looproleid.toString();
+            Object loopacc = rw.getAttribute("Useraccount");
+            loopaccstr = loopacc.toString();
+            Object looprole = rw.getAttribute("Roleid");
+            looprolestr = looprole.toString();
+            System.out.println(loopidstr);
+            System.out.println(ustr);
+            System.out.println(rolestr);
+            System.out.println(looprolestr);
+            if (a.equals(loopaccstr))
+            
+                if (!(loopidstr.equals(ustr))) {
+                    start = rw.getAttribute("Startdate");
+                    end = rw.getAttribute("Enddate");
+                    if (rolestr.equals(looprolestr)) {
+                        System.out.println("Inside if");
+                        flag = false;
+                        break;
+                    }
+                }
+        }
+    
+        if (!flag) {
+          
+            System.out.println(start.getClass().getName());
+
+            if (end != null && start != null) {
+                System.out.println(start.toString());
+                System.out.println(end.toString());
+            }
+         
+            Object sdate = rowObj.getAttribute("Startdate");
+            Object edate = rowObj.getAttribute("Enddate");
+            if (edate != null && sdate != null) {
+                System.out.println(sdate.toString());
+                System.out.println(edate.toString());
+            }
+            java.sql.Timestamp s = (java.sql.Timestamp) sdate;
+            java.sql.Timestamp e = (java.sql.Timestamp) edate;
+            java.sql.Timestamp starts = (java.sql.Timestamp) start;
+            java.sql.Timestamp ends = (java.sql.Timestamp) end;
+
+            if (s.after(starts) && s.before(ends)) {
+                System.out.println("Invalid");
+                rs.closeRowSet();
+            }
+
+            else if (e.after(starts) && e.before(ends)) {
+                System.out.println("Invalid");
+                rs.closeRowSet();
+            } else if (s.before(starts) && e.after(ends)) {
+                System.out.println("Invalid");
+                rs.closeRowSet();
+            } else {
+                NavigationHandler nvHndlr = FacesContext.getCurrentInstance()
+                                                        .
+
+                                                        getApplication()
+                                                        .
+
+                                                        getNavigationHandler();
+
+                nvHndlr.handleNavigation(FacesContext.getCurrentInstance(), null, "save");
+                System.out.println("Valid");
+                rs.closeRowSet();
+            }
+
+        }
+
+
+    }
+
+
 
 
     /**

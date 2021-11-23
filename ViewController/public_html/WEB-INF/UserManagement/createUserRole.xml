@@ -5,6 +5,11 @@
     <data-control-scope>
       <shared/>
     </data-control-scope>
+    <managed-bean id="__11">
+      <managed-bean-name>RoleRange</managed-bean-name>
+      <managed-bean-class>Beans.RoleRange</managed-bean-class>
+      <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
     <method-call id="CreateInsert">
       <method>#{bindings.CreateInsert.execute}</method>
       <outcome>

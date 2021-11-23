@@ -19,5 +19,10 @@
         <Item Value="Enddate"/>
       </AttrNames>
     </attributeValues>
+    <methodAction id="roleDate" RequiresUpdateModel="true" Action="invokeMethod" MethodName="roleDate"
+                  IsViewObjectMethod="false" DataControl="AppModuleDataControl"
+                  InstanceName="bindings.roleDate.dataControl.dataProvider">
+      <NamedData NDName="a" NDType="java.lang.String"/>
+    </methodAction>
   </bindings>
 </pageDefinition>

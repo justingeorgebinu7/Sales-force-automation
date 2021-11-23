@@ -786,5 +786,15 @@
         Name="_return_type_"
         Type="void"/>
     </Method>
+    <Method
+      Name="roleDate"
+      MethodName="roleDate">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+      <Parameter
+        Name="a"
+        Type="java.lang.String"/>
+    </Method>
   </ClientInterface>
 </AppModule>

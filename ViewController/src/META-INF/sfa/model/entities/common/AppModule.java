@@ -15,5 +15,7 @@ public interface AppModule extends ApplicationModule {
     void setInviteeData(int contactId, int appointmentId);
 
     void refresh();
+
+    void roleDate(String a);
 }
 
