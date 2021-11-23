@@ -121,9 +121,9 @@
       id="ControlFlowCase14"
       from="View2">
       <property
-         name="tosrcid">__3</property>
+         name="tosrcid">__2</property>
       <property
-         name="fromOutcome">goToAdd</property>
+         name="fromOutcome">goToAddTask</property>
       <property
          name="fromsrcid">__1</property>
    </ControlFlowCase>
@@ -132,9 +132,9 @@
       id="ControlFlowCase17"
       from="View2">
       <property
-         name="tosrcid">__2</property>
+         name="tosrcid">__3</property>
       <property
-         name="fromOutcome">goToAddTask</property>
+         name="fromOutcome">goToAdd</property>
       <property
          name="fromsrcid">__1</property>
    </ControlFlowCase>

@@ -25,6 +25,9 @@
               id="CustomercontactsView2Iterator"/>
     <searchRegion Binds="CustomercontactsView2Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="CustomercontactsView2Query"/>
+    <searchRegion Criteria="__ImplicitViewCriteria__" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  Binds="CustomercontactsView2Iterator" id="ImplicitViewCriteriaQuery"
+                  DefaultQuickSearchAttrName="Name" InitialQueryOverridden="true"/>
   </executables>
   <bindings>
     <tree IterBinding="CustomercontactsView2Iterator" id="CustomercontactsView2">
