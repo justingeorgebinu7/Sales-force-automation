@@ -858,7 +858,9 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
                 }
             }
         }
+        total=Math.ceil(total);
         rowObj.setAttribute("Totalrevenue", total);
+        
         System.out.println(total);
         double best = 1.1 * total;
         double worst = 0.9 * total;
@@ -941,14 +943,41 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
 
             if (s.after(starts) && s.before(ends)) {
                 System.out.println("Invalid");
+                NavigationHandler nvHndlr = FacesContext.getCurrentInstance()
+                                                        .
+
+                                                        getApplication()
+                                                        .
+
+                                                        getNavigationHandler();
+
+                nvHndlr.handleNavigation(FacesContext.getCurrentInstance(), null, "invalidRange");
                 rs.closeRowSet();
             }
 
             else if (e.after(starts) && e.before(ends)) {
                 System.out.println("Invalid");
+                NavigationHandler nvHndlr = FacesContext.getCurrentInstance()
+                                                        .
+
+                                                        getApplication()
+                                                        .
+
+                                                        getNavigationHandler();
+
+                nvHndlr.handleNavigation(FacesContext.getCurrentInstance(), null, "invalidRange");
                 rs.closeRowSet();
             } else if (s.before(starts) && e.after(ends)) {
                 System.out.println("Invalid");
+                NavigationHandler nvHndlr = FacesContext.getCurrentInstance()
+                                                        .
+
+                                                        getApplication()
+                                                        .
+
+                                                        getNavigationHandler();
+
+                nvHndlr.handleNavigation(FacesContext.getCurrentInstance(), null, "invalidRange");
                 rs.closeRowSet();
             } else {
                 NavigationHandler nvHndlr = FacesContext.getCurrentInstance()

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <h:outputText value="A user cannot have duplicate roles within the same date range." id="ot1"
+                style="font-weight:bold;font-size:20px;"/>
+  <af:button text="Back" id="b1" action="back"/>
+</ui:composition>
