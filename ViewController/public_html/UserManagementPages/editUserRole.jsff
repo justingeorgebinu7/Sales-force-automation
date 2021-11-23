@@ -21,7 +21,7 @@
       <af:convertDateTime pattern="#{bindings.Enddate.format}"/>
     </af:inputDate>
   </af:panelFormLayout>
-  <af:button actionListener="#{bindings.Commit.execute}" text="Save" disabled="#{!bindings.Commit.enabled}" id="b1"
-             action="back"/>
-  <af:button text="Cancel" id="b2" action="back"/>
+  <af:button text="Save" id="b1"
+             action="#{RoleRange.roleRange}" actionListener="di"/>
+  <af:button text="Cancel" id="b2" action="cancel"/>
 </ui:composition>

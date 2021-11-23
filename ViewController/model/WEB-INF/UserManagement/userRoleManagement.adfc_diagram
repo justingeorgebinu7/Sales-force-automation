@@ -9,13 +9,13 @@
       <property
          name="pageFragment">true</property>
       <property
-         name="x">294.0</property>
+         name="x">184.0</property>
       <property
          name="start">true</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>userRolePage&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">286.1953</property>
+         name="y">294.49414</property>
       <property
          name="page">/UserManagementPages/userRolePage.jsff</property>
       <property
@@ -46,7 +46,7 @@
       <property
          name="fromOutcome">create</property>
       <property
-         name="sdm:polyPoints">R50,335.0,285.84473,452.6836,163.79883,L50</property>
+         name="sdm:polyPoints">R42,225.0,287.14355,452.6836,163.79883,L50</property>
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall5">
@@ -77,7 +77,7 @@
       <property
          name="fromsrcid">__3</property>
       <property
-         name="sdm:polyPoints">L50,253.0,285.84473,44.692383,112.69531,B50</property>
+         name="sdm:polyPoints">T50,184.0,240.14355,44.692383,112.69531,B50</property>
    </ControlFlowCase>
    <View
       id="View7">
@@ -86,11 +86,11 @@
       <property
          name="pageFragment">true</property>
       <property
-         name="x">477.0</property>
+         name="x">731.0</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>editUserRole&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">501.59766</property>
+         name="y">253.49414</property>
       <property
          name="page">/UserManagementPages/editUserRole.jsff</property>
       <property
@@ -104,6 +104,72 @@
       <property
          name="fromOutcome">editUserRole</property>
       <property
-         name="sdm:polyPoints">B50,294.0,339.84473,477.0,447.24707,T50</property>
+         name="sdm:polyPoints">R50,226.04114,294.14355,690.0,253.14355,L50</property>
+   </ControlFlowCase>
+   <MethodCall
+      id="MethodCall9">
+      <property
+         name="activityId">Commit</property>
+      <property
+         name="x">664.5</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>Commit&lt;/b>&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
+      <property
+         name="y">419.44824</property>
+      <property
+         name="exceptionHandler">false</property>
+   </MethodCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase10"
+      from="View7"
+      to="MethodCall9">
+      <property
+         name="fromOutcome">save</property>
+      <property
+         name="sdm:polyPoints">B50,731.0,307.14355,664.5,365.79883,T50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase11"
+      from="MethodCall9"
+      to="View2">
+      <property
+         name="fromOutcome">Commit</property>
+      <property
+         name="sdm:polyPoints">L50,623.5,419.09766,225.0,301.14355,R58</property>
+   </ControlFlowCase>
+   <MethodCall
+      id="MethodCall12">
+      <property
+         name="activityId">Rollback</property>
+      <property
+         name="x">444.5</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>Rollback&lt;/b>&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
+      <property
+         name="y">504.1494</property>
+      <property
+         name="exceptionHandler">false</property>
+   </MethodCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase13"
+      from="View7"
+      to="MethodCall12">
+      <property
+         name="fromOutcome">cancel</property>
+      <property
+         name="sdm:polyPoints">L54,690.0,256.64355,444.5,449.79883,T50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase14"
+      from="MethodCall12"
+      to="View2">
+      <property
+         name="fromOutcome">Rollback</property>
+      <property
+         name="sdm:polyPoints">T14,R60</property>
    </ControlFlowCase>
 </SDM>

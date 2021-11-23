@@ -525,6 +525,10 @@
     <page path="/WEB-INF/Opportunity_TaskFLows/OM_NotesMain.xml#OM_NotesMain@Commit"
           usageId="sfa_view_OM_NotesMain_OM_NotesMain_CommitPageDef"/>
     <page path="/UserManagementPages/editUserRole.jsff" usageId="sfa_view_editUserRolePageDef"/>
+    <page path="/WEB-INF/UserManagement/userRoleManagement.xml#userRoleManagement@Commit"
+          usageId="sfa_view_userRoleManagement_userRoleManagement_CommitPageDef"/>
+    <page path="/WEB-INF/UserManagement/userRoleManagement.xml#userRoleManagement@Rollback"
+          usageId="sfa_view_userRoleManagement_userRoleManagement_RollbackPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="sfa_view_untitled2PageDef" path="sfa.view.pageDefs.untitled2PageDef"/>
@@ -1039,6 +1043,10 @@
     <page id="sfa_view_OM_NotesMain_OM_NotesMain_CommitPageDef"
           path="Opportunity_TaskFLows.OM_NotesMain_OM_NotesMain_CommitPageDef"/>
     <page id="sfa_view_editUserRolePageDef" path="UserManagementPages.editUserRolePageDef"/>
+    <page id="sfa_view_userRoleManagement_userRoleManagement_CommitPageDef"
+          path="UserManagement.userRoleManagement_userRoleManagement_CommitPageDef"/>
+    <page id="sfa_view_userRoleManagement_userRoleManagement_RollbackPageDef"
+          path="UserManagement.userRoleManagement_userRoleManagement_RollbackPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="sfa.model.entities"

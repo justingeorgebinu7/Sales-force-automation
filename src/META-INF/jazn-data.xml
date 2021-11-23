@@ -2415,6 +2415,16 @@
                                 <name>UserManagementPages.editUserRolePageDef</name>
                                 <actions>view</actions>
                             </permission>
+                            <permission>
+                                <class>oracle.adf.share.security.authorization.RegionPermission</class>
+                                <name>UserManagement.userRoleManagement_userRoleManagement_CommitPageDef</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.share.security.authorization.RegionPermission</class>
+                                <name>UserManagement.userRoleManagement_userRoleManagement_RollbackPageDef</name>
+                                <actions>view</actions>
+                            </permission>
                         </permissions>
                     </grant>
                     <grant>

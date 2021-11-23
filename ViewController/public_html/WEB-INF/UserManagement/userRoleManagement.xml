@@ -5,6 +5,11 @@
     <data-control-scope>
       <shared/>
     </data-control-scope>
+    <managed-bean id="__10">
+      <managed-bean-name>RoleRange</managed-bean-name>
+      <managed-bean-class>Beans.RoleRange</managed-bean-class>
+      <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
     <view id="userRolePage">
       <page>/UserManagementPages/userRolePage.jsff</page>
     </view>
@@ -23,6 +28,18 @@
     <view id="editUserRole">
       <page>/UserManagementPages/editUserRole.jsff</page>
     </view>
+    <method-call id="Commit">
+      <method>#{bindings.Commit.execute}</method>
+      <outcome>
+        <fixed-outcome>Commit</fixed-outcome>
+      </outcome>
+    </method-call>
+    <method-call id="Rollback">
+      <method>#{bindings.Rollback.execute}</method>
+      <outcome>
+        <fixed-outcome>Rollback</fixed-outcome>
+      </outcome>
+    </method-call>
     <control-flow-rule id="__1">
       <from-activity-id>userRolePage</from-activity-id>
       <control-flow-case id="__2">
@@ -39,6 +56,31 @@
       <control-flow-case id="__4">
         <from-outcome>deleteUserRole1</from-outcome>
         <to-activity-id>deleteUserRole1</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__6">
+      <from-activity-id>editUserRole</from-activity-id>
+      <control-flow-case id="__7">
+        <from-outcome>save</from-outcome>
+        <to-activity-id>Commit</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__11">
+        <from-outcome>cancel</from-outcome>
+        <to-activity-id>Rollback</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__8">
+      <from-activity-id>Commit</from-activity-id>
+      <control-flow-case id="__9">
+        <from-outcome>Commit</from-outcome>
+        <to-activity-id>userRolePage</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__12">
+      <from-activity-id>Rollback</from-activity-id>
+      <control-flow-case id="__13">
+        <from-outcome>Rollback</from-outcome>
+        <to-activity-id>userRolePage</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <use-page-fragments/>
