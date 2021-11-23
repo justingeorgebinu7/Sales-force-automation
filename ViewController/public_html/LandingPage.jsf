@@ -33,37 +33,43 @@
                                 <af:panelSpringboard id="ps5" displayMode="grid">
                                     <af:showDetailItem text="Customer Account Management" id="sdi1"
                                                        icon="https://i.ibb.co/wJTJHKN/b512cb6c9c-1.png"
-                                                       disclosureListener="#{viewScope.AccountBean.startAccount}">
+                                                       disclosureListener="#{viewScope.AccountBean.startAccount}"
+                                                       rendered="#{securityContext.userInRole['manager'] || securityContext.userInRole['admin']}">
                                         <af:region value="#{bindings.dynamicRegion3.regionModel}" id="r1"
                                                    binding="#{viewScope.AccountBean.dynamicAccount}"/>
                                     </af:showDetailItem>
                                     <af:showDetailItem text="Contact Management" id="sdi2"
                                                        icon="https://i.ibb.co/Fs6RF3H/115-1150092-png-file-person-icon-1.png"
-                                                       disclosureListener="#{viewScope.ContactBean.startContact}">
+                                                       disclosureListener="#{viewScope.ContactBean.startContact}"
+                                                       rendered="#{securityContext.userInRole['manager'] || securityContext.userInRole['admin']}">
                                         <af:region value="#{bindings.dynamicRegion4.regionModel}" id="r2"
                                                    binding="#{viewScope.ContactBean.dynamicContact}"/>
                                     </af:showDetailItem>
                                     <af:showDetailItem text="Opportunities" id="sdi3"
                                                        icon="https://i.ibb.co/30FCByC/opportunity-icon-6.png"
-                                                       disclosureListener="#{viewScope.OpportunityBean.startOpportunityTf}">
+                                                       disclosureListener="#{viewScope.OpportunityBean.startOpportunityTf}"
+                                                       rendered="#{securityContext.userInRole['manager'] || securityContext.userInRole['admin']}">
                                         <af:region value="#{bindings.dynamicRegion7.regionModel}" id="r7"
                                                    binding="#{viewScope.OpportunityBean.dynamicOpportunity}"/>
                                     </af:showDetailItem>
                                     <af:showDetailItem text="Product Catalog" id="sdi4"
                                                        icon="https://i.ibb.co/k5JpT8s/unnamed-1.png"
-                                                       disclosureListener="#{viewScope.ProductBean.startProduct}">
+                                                       disclosureListener="#{viewScope.ProductBean.startProduct}"
+                                                       rendered="#{securityContext.userInRole['sfaadmin'] || securityContext.userInRole['admin']}">
                                         <af:region value="#{bindings.dynamicRegion2.regionModel}" id="r4"
                                                    binding="#{viewScope.ProductBean.dynamicProduct}"/>
                                     </af:showDetailItem>
                                     <af:showDetailItem text="User Management" id="sd15"
                                                        icon="https://i.ibb.co/0Xfwvzk/41-410871-social-media-management-circle-social-media-marketing-icon-1.png"
-                                                       disclosureListener="#{viewScope.UserBean.startUser}">
+                                                       disclosureListener="#{viewScope.UserBean.startUser}"
+                                                       rendered="#{securityContext.userInRole['sfaadmin'] || securityContext.userInRole['admin']}">
                                         <af:region value="#{bindings.dynamicRegion1.regionModel}" id="r5"
                                                    binding="#{viewScope.UserBean.dynamicUser}"/>
                                     </af:showDetailItem>
                                     <af:showDetailItem text="Role Management" id="sdi5"
                                                        icon="https://i.ibb.co/GsyjNBj/role-icon-1.png"
-                                                       disclosureListener="#{viewScope.RoleBean.startRole}">
+                                                       disclosureListener="#{viewScope.RoleBean.startRole}"
+                                                       rendered="#{securityContext.userInRole['sfaadmin'] || securityContext.userInRole['admin']}">
                                         <af:region value="#{bindings.dynamicRegion6.regionModel}" id="r6"
                                                    binding="#{viewScope.RoleBean.dynamicRole}"/>
                                     </af:showDetailItem>
