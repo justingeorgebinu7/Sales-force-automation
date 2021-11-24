@@ -22,7 +22,8 @@
     </af:column>
     <af:column sortProperty="#{bindings.NoteView4.hints.Content.name}" filterable="true" sortable="true"
                headerText="#{bindings.NoteView4.hints.Content.label}" id="c2" width="100%">
-      <af:outputText value="#{row.Content}" shortDesc="#{bindings.NoteView4.hints.Content.tooltip}" id="ot2"/>
+      <af:outputText value="#{row.Content}" shortDesc="#{bindings.NoteView4.hints.Content.tooltip}" id="ot2"
+                     truncateAt="30"/>
     </af:column>
     <af:column sortProperty="#{bindings.NoteView4.hints.Createdby.name}" filterable="true" sortable="true"
                headerText="#{bindings.NoteView4.hints.Createdby.label}" id="c3" width="100%">

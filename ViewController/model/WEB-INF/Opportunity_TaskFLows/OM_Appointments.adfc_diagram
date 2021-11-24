@@ -46,7 +46,7 @@
       <property
          name="fromOutcome">editAppointment</property>
       <property
-         name="sdm:polyPoints">R44,375.47598,324.76523,584.55536,238.27106,L44</property>
+         name="sdm:polyPoints">R45,374.8001,325.4411,585.5097,238.94695,L45</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -56,7 +56,7 @@
       <property
          name="fromOutcome">back</property>
       <property
-         name="sdm:polyPoints">L56,586.52405,248.22302,377.4362,334.7172,R56</property>
+         name="sdm:polyPoints">L55,587.1999,247.54718,376.48407,334.04132,R55</property>
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall9">
@@ -87,7 +87,7 @@
       <property
          name="fromsrcid">__6</property>
       <property
-         name="sdm:polyPoints">T42,328.02402,274.26523,94.03906,113.82071,B50</property>
+         name="sdm:polyPoints">T43,328.6999,274.9411,94.03906,113.14487,B50</property>
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall11">
@@ -118,7 +118,7 @@
       <property
          name="fromsrcid">__8</property>
       <property
-         name="sdm:polyPoints">T58,337.97598,274.26523,453.04492,125.1713,B50</property>
+         name="sdm:polyPoints">T57,337.3001,274.9411,453.04492,124.49545,B50</property>
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall12">
@@ -164,7 +164,7 @@
       <property
          name="fromOutcome">addInternalInvitee</property>
       <property
-         name="sdm:polyPoints">R44,671.47595,238.27106,851.8834,107.79883,L50</property>
+         name="sdm:polyPoints">R45,670.8001,238.94695,852.55927,107.79881,L50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -174,7 +174,7 @@
       <property
          name="fromOutcome">deleteInternalInvitee</property>
       <property
-         name="sdm:polyPoints">R56,671.47595,248.22302,902.22034,279.79883,L50</property>
+         name="sdm:polyPoints">R55,670.8001,247.54718,902.8962,279.79883,L50</property>
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall16">
@@ -220,7 +220,7 @@
       <property
          name="fromOutcome">addExternalInvitee</property>
       <property
-         name="sdm:polyPoints">B58,633.97595,298.72302,837.8815,451.79883,L50</property>
+         name="sdm:polyPoints">B57,633.3001,298.04718,838.5573,451.79886,L50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -230,6 +230,6 @@
       <property
          name="fromOutcome">deleteExternalInvitee</property>
       <property
-         name="sdm:polyPoints">B42,624.02405,302.61234,670.69434,374.9205,T50</property>
+         name="sdm:polyPoints">B43,624.6999,301.37814,670.69434,375.59634,T50</property>
    </ControlFlowCase>
 </SDM>

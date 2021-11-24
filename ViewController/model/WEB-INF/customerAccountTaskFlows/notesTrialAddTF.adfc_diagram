@@ -50,7 +50,7 @@
       <property
          name="fromsrcid">__1</property>
       <property
-         name="sdm:polyPoints">R46,193.36133,242.5459,390.68164,88.18945,L50</property>
+         name="sdm:polyPoints">R45,194.13939,241.76782,389.90356,88.18945,L50</property>
    </ControlFlowCase>
    <View
       id="View6">
@@ -77,7 +77,7 @@
       <property
          name="fromOutcome">edit</property>
       <property
-         name="sdm:polyPoints">R54,194.74104,249.5459,432.0,225.84473,L50</property>
+         name="sdm:polyPoints">R55,195.87573,250.32396,429.01443,221.56667,L45</property>
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall8">
@@ -110,7 +110,7 @@
       <property
          name="fromsrcid">__6</property>
       <property
-         name="sdm:polyPoints">T50,152.36133,192.0459,67.68848,123.69531,B50</property>
+         name="sdm:polyPoints">T50,152.36133,191.26782,67.68848,124.473366,B50</property>
    </ControlFlowCase>
    <MethodCall
       id="MethodCall12">
@@ -133,7 +133,7 @@
       <property
          name="fromOutcome">backFromEdit</property>
       <property
-         name="sdm:polyPoints">L54,432.0,229.34473,335.5,340.79883,T50</property>
+         name="sdm:polyPoints">L55,431.22192,230.1228,335.5,340.02078,T50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -143,6 +143,6 @@
       <property
          name="fromOutcome">Commit</property>
       <property
-         name="sdm:polyPoints">L50,294.5,394.79883,152.36133,300.0459,B50</property>
+         name="sdm:polyPoints">L50,293.72192,394.79886,152.36133,300.82397,B50</property>
    </ControlFlowCase>
 </SDM>

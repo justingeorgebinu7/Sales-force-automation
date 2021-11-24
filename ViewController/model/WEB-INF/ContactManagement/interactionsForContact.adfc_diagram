@@ -15,7 +15,7 @@
       <property
          name="description">&lt;html>&lt;p>&lt;b>InteractionsForContacts&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">358.89648</property>
+         name="y">358.1953</property>
       <property
          name="page">/ContactManagementPages/InteractionsForContacts.jsff</property>
       <property
@@ -46,7 +46,7 @@
       <property
          name="fromOutcome">edit</property>
       <property
-         name="sdm:polyPoints">R46,326.0,355.0459,604.6081,239.39648,L46</property>
+         name="sdm:polyPoints">R45,326.77808,353.56665,603.52045,238.61842,L45</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -56,7 +56,7 @@
       <property
          name="fromOutcome">back</property>
       <property
-         name="sdm:polyPoints">L54,606.0,246.39648,327.38873,362.0459,R54</property>
+         name="sdm:polyPoints">L55,605.2219,247.17456,328.47473,362.1228,R55</property>
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall7">
@@ -83,7 +83,7 @@
       <property
          name="fromOutcome">createInteraction</property>
       <property
-         name="sdm:polyPoints">T56,288.5,304.5459,471.35352,172.79883,B50</property>
+         name="sdm:polyPoints">T57,289.27808,303.06665,471.35352,173.2263,B50</property>
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall9">
@@ -114,6 +114,6 @@
       <property
          name="fromsrcid">__6</property>
       <property
-         name="sdm:polyPoints">T44,281.5,304.5459,93.37891,124.0459,B50</property>
+         name="sdm:polyPoints">T43,280.72192,303.06665,93.37891,124.4734,B50</property>
    </ControlFlowCase>
 </SDM>
