@@ -15,7 +15,8 @@
             selectionListener="#{bindings.InteractionView2.collectionModel.makeCurrent}" rowSelection="single"
             fetchSize="#{bindings.InteractionView2.rangeSize}"
             filterModel="#{bindings.InteractionView2Query.queryDescriptor}" filterVisible="false"
-            queryListener="#{bindings.InteractionView2Query.processQuery}" varStatus="vs" id="t1" partialTriggers="b2">
+            queryListener="#{bindings.InteractionView2Query.processQuery}" varStatus="vs" id="t1"
+            partialTriggers="::b2">
     <af:column sortProperty="#{bindings.InteractionView2.hints.Type.name}" filterable="true" sortable="true"
                headerText="#{bindings.InteractionView2.hints.Type.label}" id="c1" width="100%">
       <af:link shortDesc="#{bindings.InteractionView2.hints.Type.tooltip}" id="ot1" text="#{row.Type}" action="edit"/>

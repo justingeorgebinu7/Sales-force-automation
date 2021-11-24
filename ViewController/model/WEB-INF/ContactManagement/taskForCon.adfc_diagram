@@ -46,7 +46,7 @@
       <property
          name="fromOutcome">toEdit</property>
       <property
-         name="sdm:polyPoints">R50,316.18552,268.79297,557.6137,242.0459,L46</property>
+         name="sdm:polyPoints">R50,317.2313,268.79297,556.73236,241.26782,L45</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -56,7 +56,7 @@
       <property
          name="fromOutcome">backFromEdit</property>
       <property
-         name="sdm:polyPoints">L54,558.0,249.0459,316.5696,275.79297,R58</property>
+         name="sdm:polyPoints">L55,557.2219,249.82397,317.71744,277.34912,R60</property>
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall6">
@@ -112,6 +112,6 @@
       <property
          name="fromOutcome">toAdd</property>
       <property
-         name="sdm:polyPoints">R42,315.0,261.79297,554.6846,113.79883,L50</property>
+         name="sdm:polyPoints">R40,315.77808,260.23685,553.9065,113.79881,L50</property>
    </ControlFlowCase>
 </SDM>
