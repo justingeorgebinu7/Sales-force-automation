@@ -64,6 +64,8 @@
       <SchemaBasedProperties>
         <LABEL
           ResId="sfa.model.entities.Revenueitem.Bestcaserevenue_LABEL"/>
+        <TOOLTIP
+          ResId="sfa.model.entities.Revenueitem.Bestcaserevenue_TOOLTIP"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
@@ -78,6 +80,8 @@
       <SchemaBasedProperties>
         <LABEL
           ResId="sfa.model.entities.Revenueitem.Worstcaserevenue_LABEL"/>
+        <LABEL_PLURAL
+          ResId="sfa.model.entities.Revenueitem.Worstcaserevenue_LABEL_PLURAL"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>

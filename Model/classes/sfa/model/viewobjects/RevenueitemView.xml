@@ -51,8 +51,7 @@
   <ListBinding
     Name="LOV_Currency"
     ListVOName="CurrencyVO1"
-    NullValueFlag="start"
-    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    NullValueFlag="none"
     MRUCount="0">
     <AttrArray Name="AttrNames">
       <Item Value="Currency"/>

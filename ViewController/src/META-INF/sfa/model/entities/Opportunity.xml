@@ -111,14 +111,28 @@
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
-    TableName="OPPORTUNITY"/>
+    TableName="OPPORTUNITY">
+    <Properties>
+      <SchemaBasedProperties>
+        <TOOLTIP
+          ResId="sfa.model.entities.Opportunity.Bestcaserevenue_TOOLTIP"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <Attribute
     Name="Worstcaserevenue"
     ColumnName="WORSTCASEREVENUE"
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
-    TableName="OPPORTUNITY"/>
+    TableName="OPPORTUNITY">
+    <Properties>
+      <SchemaBasedProperties>
+        <TOOLTIP
+          ResId="sfa.model.entities.Opportunity.Worstcaserevenue_TOOLTIP"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <Attribute
     Name="Budgetavailable"
     ColumnName="BUDGETAVAILABLE"
@@ -169,6 +183,12 @@
     <DesignTime>
       <Attr Name="_DisplaySize" Value="20"/>
     </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <TOOLTIP
+          ResId="sfa.model.entities.Opportunity.Currency_TOOLTIP"/>
+      </SchemaBasedProperties>
+    </Properties>
   </Attribute>
   <AccessorAttribute
     Name="Note"
