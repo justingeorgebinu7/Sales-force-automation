@@ -7,6 +7,8 @@
     <iterator Binds="UseraccountView1" RangeSize="25" DataControl="AppModuleDataControl" id="UseraccountView1Iterator"/>
     <taskFlow id="userRoleManagement1" taskFlowId="/WEB-INF/UserManagement/userRoleManagement.xml#userRoleManagement"
               activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <taskFlow id="dashboard1" taskFlowId="/WEB-INF/UserManagement/dashboard.xml#dashboard" activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
   </executables>
   <bindings>
     <attributeValues IterBinding="UseraccountView1Iterator" id="Firstname">

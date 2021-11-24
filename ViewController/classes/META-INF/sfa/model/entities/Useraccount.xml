@@ -154,6 +154,13 @@
     AssociationOtherEnd="sfa.model.entities.Inviteesext_useraccount_Assoc.Useraccount"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="Sales"
+    Association="sfa.model.entities.SalesUserFKAssoc"
+    AssociationEnd="sfa.model.entities.SalesUserFKAssoc.Sales"
+    AssociationOtherEnd="sfa.model.entities.SalesUserFKAssoc.Useraccount"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <Key
     Name="UseraccountFirstnameCheck">
     <DesignTime>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.22.48" id="dashboardPageDef"
+                Package="UserManagementPages">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="SalesView3" RangeSize="25" DataControl="AppModuleDataControl" id="SalesView3Iterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="SalesView3Iterator" id="SalesView3">
+      <nodeDefinition DefName="sfa.model.viewobjects.SalesView" Name="SalesView30">
+        <AttrNames>
+          <Item Value="Saleid"/>
+          <Item Value="Managerid"/>
+          <Item Value="Qname"/>
+          <Item Value="Revenue"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

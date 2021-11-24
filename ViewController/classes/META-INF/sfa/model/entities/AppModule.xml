@@ -264,6 +264,18 @@
   <ViewUsage
     Name="CategoryView3"
     ViewObjectName="sfa.model.entities.CategoryView"/>
+  <ViewUsage
+    Name="SalesView1"
+    ViewObjectName="sfa.model.viewobjects.SalesView"/>
+  <ViewUsage
+    Name="UseraccountView7"
+    ViewObjectName="sfa.model.viewobjects.UseraccountView"/>
+  <ViewUsage
+    Name="SalesView2"
+    ViewObjectName="sfa.model.viewobjects.SalesView"/>
+  <ViewUsage
+    Name="SalesView3"
+    ViewObjectName="sfa.model.viewobjects.SalesView"/>
   <ViewLinkUsage
     Name="CaddressCustomercontactsFkLink1"
     ViewLinkObjectName="sfa.model.viewobjects.CaddressCustomercontactsFkLink"
@@ -588,6 +600,18 @@
     SrcViewUsageName="sfa.model.entities.AppModule.ProductsView1"
     DstViewUsageName="sfa.model.entities.AppModule.CategoryView3"
     Reversed="true"/>
+  <ViewLinkUsage
+    Name="SalesUserFKLink"
+    ViewLinkObjectName="sfa.model.viewobjects.SalesUserFKLink"
+    SrcViewUsageName="sfa.model.entities.AppModule.UseraccountView7"
+    DstViewUsageName="sfa.model.entities.AppModule.SalesView2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="SalesUserFKLink1"
+    ViewLinkObjectName="sfa.model.viewobjects.SalesUserFKLink"
+    SrcViewUsageName="sfa.model.entities.AppModule.UseraccountView1"
+    DstViewUsageName="sfa.model.entities.AppModule.SalesView3"
+    Reversed="false"/>
   <ClientInterface
     Name="__clientInterface">
     <Method
@@ -729,6 +753,72 @@
       <Parameter
         Name="appointmentId"
         Type="int"/>
+    </Method>
+    <Method
+      Name="setFileData"
+      MethodName="setFileData">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+      <Parameter
+        Name="name"
+        Type="java.lang.String"/>
+      <Parameter
+        Name="path"
+        Type="java.lang.String"/>
+      <Parameter
+        Name="contTyp"
+        Type="java.lang.String"/>
+    </Method>
+    <Method
+      Name="estimatedPrice"
+      MethodName="estimatedPrice">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+      <Parameter
+        Name="pidStr"
+        Type="java.lang.String"/>
+    </Method>
+    <Method
+      Name="totalRevenueOppAM"
+      MethodName="totalRevenueOppAM">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+      <Parameter
+        Name="oidStr"
+        Type="java.lang.String"/>
+    </Method>
+    <Method
+      Name="setInviteeData"
+      MethodName="setInviteeData">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+      <Parameter
+        Name="contactId"
+        Type="int"/>
+      <Parameter
+        Name="appointmentId"
+        Type="int"/>
+    </Method>
+    <Method
+      Name="refresh"
+      MethodName="refresh">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+    </Method>
+    <Method
+      Name="roleDate"
+      MethodName="roleDate">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+      <Parameter
+        Name="a"
+        Type="java.lang.String"/>
     </Method>
     <Method
       Name="setFileData"

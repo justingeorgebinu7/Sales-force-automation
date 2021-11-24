@@ -188,6 +188,11 @@
     ViewLink="sfa.model.viewobjects.Inviteesext_Useraccount_FKLink"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="SalesView"
+    ViewLink="sfa.model.viewobjects.SalesUserFKLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="sfa.model.ModelBundle"/>

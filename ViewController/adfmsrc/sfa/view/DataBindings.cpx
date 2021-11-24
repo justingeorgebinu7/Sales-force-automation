@@ -529,6 +529,7 @@
           usageId="sfa_view_userRoleManagement_userRoleManagement_CommitPageDef"/>
     <page path="/WEB-INF/UserManagement/userRoleManagement.xml#userRoleManagement@Rollback"
           usageId="sfa_view_userRoleManagement_userRoleManagement_RollbackPageDef"/>
+    <page path="/UserManagementPages/dashboard.jsff" usageId="sfa_view_dashboardPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="sfa_view_untitled2PageDef" path="sfa.view.pageDefs.untitled2PageDef"/>
@@ -1047,6 +1048,7 @@
           path="UserManagement.userRoleManagement_userRoleManagement_CommitPageDef"/>
     <page id="sfa_view_userRoleManagement_userRoleManagement_RollbackPageDef"
           path="UserManagement.userRoleManagement_userRoleManagement_RollbackPageDef"/>
+    <page id="sfa_view_dashboardPageDef" path="UserManagementPages.dashboardPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="sfa.model.entities"
