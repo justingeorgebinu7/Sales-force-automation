@@ -3,9 +3,12 @@
 <f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
         xmlns:h="http://java.sun.com/jsf/html">
     <af:document title="Delete confirmation" id="d1">
-        <af:form id="f1">
+        <af:form id="f1" inlineStyle="text-align:center;">
+            <af:spacer id="s2" height="20px"/>
+            <af:image source="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Blue_question_mark_icon.svg/1200px-Blue_question_mark_icon.svg.png"
+                      altSource="." id="i1" inlineStyle="width:70px;"/>
             <af:spacer id="s3" height="30px"/>
-            <h:outputText value="This item will be deleted,are you sure you want to proceed?" id="ot1"
+            <h:outputText value="This item will be deleted, are you sure you want to proceed?" id="ot1"
                           style="font-weight:bold;font-size:14px;"/>
             <af:spacer id="s1" height="20px"/>
             <af:button text="Proceed" id="b1" action="proceed"/>
