@@ -8,6 +8,16 @@
     <view id="editAccount">
       <page>/CustomerAccountManagement/editAccount.jsff</page>
     </view>
+    <parent-action id="backFromMenu">
+      <parent-outcome>backFromMenu</parent-outcome>
+    </parent-action>
+    <control-flow-rule id="__1">
+      <from-activity-id>editAccount</from-activity-id>
+      <control-flow-case id="__2">
+        <from-outcome>backFromMenu</from-outcome>
+        <to-activity-id>backFromMenu</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
     <use-page-fragments/>
   </task-flow-definition>
 </adfc-config>

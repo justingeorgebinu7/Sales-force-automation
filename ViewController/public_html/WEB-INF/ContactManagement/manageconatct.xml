@@ -11,11 +11,18 @@
     <parent-action id="AccountDrillDownForContact">
       <parent-outcome>AccountDrillDownForContact</parent-outcome>
     </parent-action>
+    <parent-action id="backToHome">
+      <parent-outcome>backToHome</parent-outcome>
+    </parent-action>
     <control-flow-rule id="__1">
       <from-activity-id>view1</from-activity-id>
       <control-flow-case id="__2">
         <from-outcome>accountDrillDown</from-outcome>
         <to-activity-id>AccountDrillDownForContact</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__3">
+        <from-outcome>backToHome</from-outcome>
+        <to-activity-id>backToHome</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <use-page-fragments/>

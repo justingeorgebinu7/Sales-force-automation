@@ -46,7 +46,7 @@
       <property
          name="fromOutcome">editRole</property>
       <property
-         name="sdm:polyPoints">R50,278.25708,219.49414,555.08093,240.72449,L45</property>
+         name="sdm:polyPoints">R50,277.27744,219.49414,556.0,241.64355,L46</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -56,7 +56,7 @@
       <property
          name="fromOutcome">backFromEdit</property>
       <property
-         name="sdm:polyPoints">L55,554.74274,249.56262,277.91907,228.33228,R60</property>
+         name="sdm:polyPoints">L54,555.7224,248.64355,277.0,226.49414,R58</property>
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall6">
@@ -83,7 +83,7 @@
       <property
          name="fromOutcome">addRole</property>
       <property
-         name="sdm:polyPoints">R40,277.91907,210.65604,500.58093,104.09766,L50</property>
+         name="sdm:polyPoints">R42,277.0,212.49414,501.5,104.09766,L50</property>
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall8">
@@ -112,6 +112,6 @@
       <property
          name="fromOutcome">toDelete</property>
       <property
-         name="sdm:polyPoints">T50,236.0,164.5751,340.5,125.71787,B50</property>
+         name="sdm:polyPoints">T50,236.0,164.70235,340.5,125.59061,B50</property>
    </ControlFlowCase>
 </SDM>

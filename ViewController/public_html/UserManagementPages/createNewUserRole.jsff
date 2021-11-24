@@ -23,6 +23,4 @@
   </af:panelFormLayout>
   <af:button text="Save" id="b1" action="#{RoleRange.roleRange}"/>
   <af:button text="Cancel" id="b2" action="discard"/>
-  <af:button text="Show popup" id="b3" action="invalidUserPopUp" useWindow="true" windowEmbedStyle="inlineDocument"
-             windowModalityType="applicationModal"/>
 </ui:composition>

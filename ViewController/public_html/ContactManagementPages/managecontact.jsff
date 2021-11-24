@@ -56,6 +56,8 @@
     </af:link>
   </af:panelFormLayout>
   <af:button text="Save" id="b1" actionListener="#{bindings.Commit.execute}"/>
+  <af:button text="Save and Exit" id="b3" actionListener="#{bindings.Commit.execute}" disabled="false"
+             action="backToHome"/>
   <af:button actionListener="#{bindings.Rollback.execute}" text="Cancel"
              immediate="true" id="b2">
     <af:resetActionListener/>

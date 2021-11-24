@@ -37,8 +37,7 @@
                       selectionListener="#{bindings.CustomercontactsView2.collectionModel.makeCurrent}"
                       rowSelection="single" fetchSize="#{bindings.CustomercontactsView2.rangeSize}"
                       filterModel="#{bindings.CustomercontactsView2Query.queryDescriptor}" filterVisible="false"
-                      queryListener="#{bindings.CustomercontactsView2Query.processQuery}" varStatus="vs" id="t1"
-                      partialTriggers="b2">
+                      queryListener="#{bindings.CustomercontactsView2Query.processQuery}" varStatus="vs" id="t1">
               <af:column sortProperty="#{bindings.CustomercontactsView2.hints.Name.name}" filterable="true"
                          sortable="true" headerText="#{bindings.CustomercontactsView2.hints.Name.label}" id="c1"
                          width="100%">

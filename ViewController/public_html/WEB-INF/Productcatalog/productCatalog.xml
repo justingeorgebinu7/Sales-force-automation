@@ -34,6 +34,12 @@
         <id>productsCategory</id>
       </task-flow-reference>
     </task-flow-call>
+    <task-flow-call id="__productCatalog1">
+      <task-flow-reference>
+        <document>/WEB-INF/Productcatalog/productCatalog.xml</document>
+        <id>productCatalog</id>
+      </task-flow-reference>
+    </task-flow-call>
     <control-flow-rule id="__1">
       <from-activity-id>productsCatalog</from-activity-id>
       <control-flow-case id="__2">
