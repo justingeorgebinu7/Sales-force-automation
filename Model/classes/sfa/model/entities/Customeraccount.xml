@@ -79,6 +79,8 @@
       <SchemaBasedProperties>
         <LABEL
           ResId="sfa.model.entities.Customeraccount.Accounturl_LABEL"/>
+        <TOOLTIP
+          ResId="sfa.model.entities.Customeraccount.Accounturl_TOOLTIP"/>
       </SchemaBasedProperties>
     </Properties>
     <validation:RegExpValidationBean
@@ -139,6 +141,12 @@
       Pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}"
       Inverse="false"
       ResId="sfa.model.entities.Customeraccount.Email_Rule_0"/>
+    <Properties>
+      <SchemaBasedProperties>
+        <TOOLTIP
+          ResId="sfa.model.entities.Customeraccount.Email_TOOLTIP"/>
+      </SchemaBasedProperties>
+    </Properties>
   </Attribute>
   <Attribute
     Name="Mobilenumber"
@@ -159,6 +167,8 @@
       <SchemaBasedProperties>
         <LABEL
           ResId="sfa.model.entities.Customeraccount.Mobilenumber_LABEL"/>
+        <TOOLTIP
+          ResId="sfa.model.entities.Customeraccount.Mobilenumber_TOOLTIP"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>

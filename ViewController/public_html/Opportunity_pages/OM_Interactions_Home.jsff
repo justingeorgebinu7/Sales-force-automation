@@ -31,11 +31,6 @@
       <af:outputText value="#{row.Direction}" shortDesc="#{bindings.InteractionView6.hints.Direction.tooltip}"
                      id="ot2"/>
     </af:column>
-    <af:column sortProperty="#{bindings.InteractionView6.hints.Resolution.name}" filterable="true" sortable="true"
-               headerText="#{bindings.InteractionView6.hints.Resolution.label}" id="c4">
-      <af:outputText value="#{row.Resolution}" shortDesc="#{bindings.InteractionView6.hints.Resolution.tooltip}"
-                     id="ot4"/>
-    </af:column>
     <af:column sortProperty="#{bindings.InteractionView6.hints.Startdate.name}" filterable="true" sortable="true"
                headerText="#{bindings.InteractionView6.hints.Startdate.label}" id="c5">
       <f:facet name="filter">

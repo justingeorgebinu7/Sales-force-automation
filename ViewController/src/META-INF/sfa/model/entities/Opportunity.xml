@@ -31,7 +31,14 @@
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
-    TableName="OPPORTUNITY"/>
+    TableName="OPPORTUNITY">
+    <Properties>
+      <SchemaBasedProperties>
+        <TOOLTIP
+          ResId="sfa.model.entities.Opportunity.Accountid_TOOLTIP"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <Attribute
     Name="Description"
     Precision="100"
@@ -43,6 +50,12 @@
     <DesignTime>
       <Attr Name="_DisplaySize" Value="100"/>
     </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <TOOLTIP
+          ResId="sfa.model.entities.Opportunity.Description_TOOLTIP"/>
+      </SchemaBasedProperties>
+    </Properties>
   </Attribute>
   <Attribute
     Name="Winprobability"
@@ -78,6 +91,8 @@
       <SchemaBasedProperties>
         <LABEL
           ResId="sfa.model.entities.Opportunity.Primarycontact_LABEL"/>
+        <TOOLTIP
+          ResId="sfa.model.entities.Opportunity.Primarycontact_TOOLTIP"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
@@ -164,6 +179,12 @@
     <DesignTime>
       <Attr Name="_DisplaySize" Value="20"/>
     </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <TOOLTIP
+          ResId="sfa.model.entities.Opportunity.Title_TOOLTIP"/>
+      </SchemaBasedProperties>
+    </Properties>
   </Attribute>
   <Attribute
     Name="Totalrevenue"
@@ -171,7 +192,14 @@
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
-    TableName="OPPORTUNITY"/>
+    TableName="OPPORTUNITY">
+    <Properties>
+      <SchemaBasedProperties>
+        <TOOLTIP
+          ResId="sfa.model.entities.Opportunity.Totalrevenue_TOOLTIP"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <Attribute
     Name="Currency"
     Precision="20"

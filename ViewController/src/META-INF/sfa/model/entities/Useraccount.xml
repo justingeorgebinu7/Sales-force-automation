@@ -77,6 +77,20 @@
     <DesignTime>
       <Attr Name="_DisplaySize" Value="50"/>
     </DesignTime>
+    <validation:LengthValidationBean
+      Name="PasswordRule0"
+      ResId="sfa.model.entities.Useraccount.Password_Rule_0"
+      OnAttribute="Password"
+      CompareType="GREATERTHAN"
+      DataType="CHARACTER"
+      CompareLength="8"
+      Inverse="false"/>
+    <Properties>
+      <SchemaBasedProperties>
+        <TOOLTIP
+          ResId="sfa.model.entities.Useraccount.Password_TOOLTIP"/>
+      </SchemaBasedProperties>
+    </Properties>
   </Attribute>
   <Attribute
     Name="Startdate"
@@ -132,6 +146,12 @@
       Name="SupervisorRule0"
       ResId="sfa.model.entities.Useraccount.Supervisor_Rule_0"
       MethodName="validateSupervisor"/>
+    <Properties>
+      <SchemaBasedProperties>
+        <TOOLTIP
+          ResId="sfa.model.entities.Useraccount.Supervisor_TOOLTIP"/>
+      </SchemaBasedProperties>
+    </Properties>
   </Attribute>
   <AccessorAttribute
     Name="Customeraccount"
