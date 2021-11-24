@@ -42,9 +42,9 @@
   <ListBinding
     Name="LOV_Supervisor"
     ListVOName="UseraccountView1"
-    NullValueFlag="start"
-    NullValueId="LOV_Supervisor_LOVUIHints_NullValueId"
-    MRUCount="0">
+    NullValueFlag="none"
+    MRUCount="0"
+    ComboRowCountHint="10">
     <AttrArray Name="AttrNames">
       <Item Value="Supervisor"/>
     </AttrArray>
@@ -174,7 +174,7 @@
     <Properties>
       <SchemaBasedProperties>
         <CONTROLTYPE
-          Value="choice"/>
+          Value="combo_lov"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>

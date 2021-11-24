@@ -26,12 +26,15 @@
                   id="it4" secret="true">
       <f:validator binding="#{bindings.Password.validator}"/>
     </af:inputText>
-    <af:selectOneChoice value="#{bindings.Supervisor.inputValue}" label="#{bindings.Supervisor.label}"
-                        required="#{bindings.Supervisor.hints.mandatory}"
-                        shortDesc="#{bindings.Supervisor.hints.tooltip}" id="soc1">
-      <f:selectItems value="#{bindings.Supervisor.items}" id="si1"/>
-      <f:validator binding="#{bindings.Supervisor.validator}"/>
-    </af:selectOneChoice>
+    <af:inputComboboxListOfValues id="supervisor1Id" popupTitle="Search and Select: #{bindings.Supervisor1.hints.label}"
+                                  value="#{bindings.Supervisor1.inputValue}" label="#{bindings.Supervisor1.hints.label}"
+                                  model="#{bindings.Supervisor1.listOfValuesModel}"
+                                  required="#{bindings.Supervisor1.hints.mandatory}"
+                                  columns="#{bindings.Supervisor1.hints.displayWidth}"
+                                  shortDesc="#{bindings.Supervisor1.hints.tooltip}">
+      <f:validator binding="#{bindings.Supervisor1.validator}"/>
+      <af:convertNumber groupingUsed="false" pattern="#{bindings.Supervisor1.format}"/>
+    </af:inputComboboxListOfValues>
     <af:inputDate value="#{bindings.Startdate.inputValue}" label="#{bindings.Startdate.hints.label}"
                   required="#{bindings.Startdate.hints.mandatory}" columns="#{bindings.Startdate.hints.displayWidth}"
                   shortDesc="#{bindings.Startdate.hints.tooltip}" id="id1">

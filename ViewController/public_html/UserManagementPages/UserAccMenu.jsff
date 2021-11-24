@@ -40,13 +40,17 @@
           <f:validator binding="#{bindings.Enddate.validator}"/>
           <af:convertDateTime pattern="#{bindings.Enddate.format}"/>
         </af:inputDate>
-        <af:selectOneChoice value="#{bindings.Supervisor.inputValue}" label="#{bindings.Supervisor.label}"
-                            required="#{bindings.Supervisor.hints.mandatory}"
-                            shortDesc="#{bindings.Supervisor.hints.tooltip}" id="soc1" autoSubmit="true"
-                            immediate="true">
-          <f:selectItems value="#{bindings.Supervisor.items}" id="si1"/>
-          <f:validator binding="#{bindings.Supervisor.validator}"/>
-        </af:selectOneChoice>
+        <af:inputComboboxListOfValues id="supervisor1Id"
+                                      popupTitle="Search and Select: #{bindings.Supervisor1.hints.label}"
+                                      value="#{bindings.Supervisor1.inputValue}"
+                                      label="#{bindings.Supervisor1.hints.label}"
+                                      model="#{bindings.Supervisor1.listOfValuesModel}"
+                                      required="#{bindings.Supervisor1.hints.mandatory}"
+                                      columns="#{bindings.Supervisor1.hints.displayWidth}"
+                                      shortDesc="#{bindings.Supervisor1.hints.tooltip}">
+          <f:validator binding="#{bindings.Supervisor1.validator}"/>
+          <af:convertNumber groupingUsed="false" pattern="#{bindings.Supervisor1.format}"/>
+        </af:inputComboboxListOfValues>
         <af:button actionListener="#{bindings.Commit.execute}" text="Save" disabled="false"
                    id="b1"/>
       </af:panelFormLayout>

@@ -70,7 +70,7 @@
       <property
          name="fromOutcome">CreateInsert</property>
       <property
-         name="sdm:polyPoints">R50,332.01465,292.99414,595.0,357.24707,L50</property>
+         name="sdm:polyPoints">R50,333.02576,292.99414,593.9889,357.24707,L50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -80,7 +80,7 @@
       <property
          name="fromOutcome">discard</property>
       <property
-         name="sdm:polyPoints">T44,632.5,303.24707,616.5,237.79883,B50</property>
+         name="sdm:polyPoints">T43,631.4889,302.23596,616.5,238.80994,B50</property>
    </ControlFlowCase>
    <MethodCall
       id="MethodCall9">
@@ -103,7 +103,7 @@
       <property
          name="fromOutcome">Delete</property>
       <property
-         name="sdm:polyPoints">R50,657.5,183.79883,802.13605,169.59766,L46</property>
+         name="sdm:polyPoints">R50,658.5111,183.79884,800.7166,168.58658,L45</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -123,7 +123,7 @@
       <property
          name="fromOutcome">save</property>
       <property
-         name="sdm:polyPoints">T57,640.43274,302.31427,802.5672,177.53044,L55</property>
+         name="sdm:polyPoints">T57,640.5111,302.23596,802.4889,177.60876,L55</property>
    </ControlFlowCase>
    <View
       id="View15">
@@ -150,7 +150,7 @@
       <property
          name="fromOutcome">invalidRange</property>
       <property
-         name="sdm:polyPoints">R50,677.0,357.24707,868.0,501.24707,L50</property>
+         name="sdm:polyPoints">R45,681.0568,352.73596,866.9889,496.73596,L45</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -160,6 +160,6 @@
       <property
          name="fromOutcome">back</property>
       <property
-         name="sdm:polyPoints">L54,865.6453,504.74707,677.0,360.74707,R54</property>
+         name="sdm:polyPoints">L55,863.92346,505.75815,678.0111,361.75818,R55</property>
    </ControlFlowCase>
 </SDM>

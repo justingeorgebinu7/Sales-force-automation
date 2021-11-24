@@ -46,7 +46,7 @@
       <property
          name="fromOutcome">userMenu</property>
       <property
-         name="sdm:polyPoints">R46,345.0,342.83887,523.805,279.74707,L46</property>
+         name="sdm:polyPoints">R45,345.77808,342.0608,522.7481,278.969,L45</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -56,7 +56,7 @@
       <property
          name="fromOutcome">backFromMenu</property>
       <property
-         name="sdm:polyPoints">L54,525.0,286.74707,346.19125,349.83887,R54</property>
+         name="sdm:polyPoints">L55,524.2219,287.52515,347.24612,350.61694,R55</property>
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall6">
@@ -83,7 +83,7 @@
       <property
          name="fromOutcome">create</property>
       <property
-         name="sdm:polyPoints">T56,307.5,289.89816,265.02344,191.09766,B50</property>
+         name="sdm:polyPoints">T57,308.27808,288.54572,265.02344,191.87573,B50</property>
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall10">
@@ -116,6 +116,6 @@
       <property
          name="fromsrcid">__8</property>
       <property
-         name="sdm:polyPoints">T44,300.5,292.33887,79.03223,124.0459,B50</property>
+         name="sdm:polyPoints">T43,299.72192,291.5608,79.03223,124.47338,B50</property>
    </ControlFlowCase>
 </SDM>
