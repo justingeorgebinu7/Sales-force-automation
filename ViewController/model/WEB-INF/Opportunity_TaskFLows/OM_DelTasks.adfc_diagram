@@ -7,13 +7,13 @@
       <property
          name="activityId">Delete</property>
       <property
-         name="x">165.5</property>
+         name="x">282.5</property>
       <property
-         name="start">true</property>
+         name="start">false</property>
       <property
-         name="description">&lt;html>&lt;p>&lt;b>Delete&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
+         name="description">&lt;html>&lt;p>&lt;b>Delete&lt;/b>&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
       <property
-         name="y">241.29297</property>
+         name="y">165.18945</property>
       <property
          name="exceptionHandler">false</property>
    </MethodCall>
@@ -22,11 +22,11 @@
       <property
          name="activityId">Commit</property>
       <property
-         name="x">487.5</property>
+         name="x">486.5</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>Commit&lt;/b>&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
       <property
-         name="y">278.1494</property>
+         name="y">163.44824</property>
       <property
          name="exceptionHandler">false</property>
    </MethodCall>
@@ -35,11 +35,11 @@
       <property
          name="activityId">taskFlowReturn1</property>
       <property
-         name="x">782.0</property>
+         name="x">718.0</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>taskFlowReturn1&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Return&lt;/p>&lt;p>Outcome:  taskFlowReturn1&lt;/p></property>
       <property
-         name="y">187.24707</property>
+         name="y">209.5459</property>
       <property
          name="finish">true</property>
       <property
@@ -53,7 +53,7 @@
       <property
          name="fromOutcome">Delete</property>
       <property
-         name="sdm:polyPoints">R50,206.5,240.94238,446.5,277.79883,L50</property>
+         name="sdm:polyPoints">R50,323.5,164.83887,445.5,163.09766,L50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -63,6 +63,43 @@
       <property
          name="fromOutcome">Commit</property>
       <property
-         name="sdm:polyPoints">R31,L50</property>
+         name="sdm:polyPoints">R50,527.5,163.09766,677.0,205.69531,L46</property>
+   </ControlFlowCase>
+   <View
+      id="View7">
+      <property
+         name="activityId">deleteWarning</property>
+      <property
+         name="x">108.68945</property>
+      <property
+         name="start">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>deleteWarning&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">290.44824</property>
+      <property
+         name="page">/deleteWarning.jsf</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase8"
+      from="View7"
+      to="MethodCall2">
+      <property
+         name="fromOutcome">proceed</property>
+      <property
+         name="sdm:polyPoints">T50,108.68945,236.44824,241.5,164.83887,L50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase9"
+      from="View7"
+      to="TaskFlowReturn4">
+      <property
+         name="fromOutcome">cancel</property>
+      <property
+         name="sdm:polyPoints">R50,149.68945,290.44824,677.0,212.69531,L54</property>
    </ControlFlowCase>
 </SDM>
