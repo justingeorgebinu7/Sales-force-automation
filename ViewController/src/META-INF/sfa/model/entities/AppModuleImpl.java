@@ -704,6 +704,14 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
         return (ViewLinkImpl) findViewLink("ProductsCategoryFKLink1");
     }
 
+    /**
+     * Container's getter for SalesView1.
+     * @return SalesView1
+     */
+    public ViewObjectImpl getSalesView1() {
+        return (ViewObjectImpl) findViewObject("SalesView1");
+    }
+
     class AppmoduleImpl {
 
     }
