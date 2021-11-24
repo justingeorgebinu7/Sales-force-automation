@@ -39,12 +39,22 @@
         <document>/WEB-INF/Opportunity_TaskFLows/deleteIntInvitee.xml</document>
         <id>deleteIntInvitee</id>
       </task-flow-reference>
+      <run-as-dialog>
+        <display-type>
+          <inline-popup/>
+        </display-type>
+      </run-as-dialog>
     </task-flow-call>
     <task-flow-call id="deleteExtInvitee">
       <task-flow-reference>
         <document>/WEB-INF/Opportunity_TaskFLows/deleteExtInvitee.xml</document>
         <id>deleteExtInvitee</id>
       </task-flow-reference>
+      <run-as-dialog>
+        <display-type>
+          <inline-popup/>
+        </display-type>
+      </run-as-dialog>
     </task-flow-call>
     <task-flow-call id="addExtInvitee">
       <task-flow-reference>

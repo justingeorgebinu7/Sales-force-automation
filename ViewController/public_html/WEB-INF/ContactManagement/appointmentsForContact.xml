@@ -51,12 +51,22 @@
         <document>/WEB-INF/ContactManagement/AppointmentsNew/deleteInernaltInvitee.xml</document>
         <id>deleteInernaltInvitee</id>
       </task-flow-reference>
+      <run-as-dialog>
+        <display-type>
+          <inline-popup/>
+        </display-type>
+      </run-as-dialog>
     </task-flow-call>
     <task-flow-call id="deleteExternalInvitee1">
       <task-flow-reference>
         <document>/WEB-INF/ContactManagement/AppointmentsNew/deleteExternalInvitee.xml</document>
         <id>deleteExternalInvitee</id>
       </task-flow-reference>
+      <run-as-dialog>
+        <display-type>
+          <inline-popup/>
+        </display-type>
+      </run-as-dialog>
     </task-flow-call>
     <task-flow-call id="createExternalInvitee">
       <task-flow-reference>

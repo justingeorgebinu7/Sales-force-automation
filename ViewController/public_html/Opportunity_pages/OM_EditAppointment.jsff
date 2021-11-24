@@ -5,7 +5,7 @@
     <f:facet name="first">
       <af:panelBox id="pb3">
         <f:facet name="toolbar">
-          <af:menuBar id="mb1">
+          <af:menuBar id="mb1" rendered="false">
             <af:commandMenuItem text="Save" id="cmi6" actionListener="#{bindings.Commit.execute}"/>
             <af:commandMenuItem text="Cancel" id="cmi5" action="back" immediate="true"/>
           </af:menuBar>
@@ -45,6 +45,16 @@
             <f:validator binding="#{bindings.Description.validator}"/>
           </af:inputText>
           <f:facet name="footer"/>
+          <af:panelGridLayout id="pgl1">
+            <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr1">
+              <af:gridCell marginStart="5px" width="dontCare" id="gc1">
+                <af:button text="Save" id="b1" actionListener="#{bindings.Commit.execute}"/>
+              </af:gridCell>
+              <af:gridCell marginStart="5px" width="dontCare" marginEnd="5px" id="gc2">
+                <af:button text="Cancel" id="b2" action="back"/>
+              </af:gridCell>
+            </af:gridRow>
+          </af:panelGridLayout>
         </af:panelFormLayout>
       </af:panelBox>
     </f:facet>
@@ -53,7 +63,7 @@
         <f:facet name="first">
           <af:panelBox text="Invitees - Contact" id="pb1">
             <f:facet name="toolbar">
-              <af:toolbar id="t3">
+              <af:toolbar id="t3" rendered="false">
                 <af:commandMenuItem text="Add" id="cmi1" action="addInternalInvitee" useWindow="true"
                                     windowEmbedStyle="inlineDocument" windowModalityType="applicationModal"
                                     windowHeight="700" windowWidth="700"/>
@@ -66,18 +76,31 @@
                       rowBandingInterval="0" selectedRowKeys="#{bindings.InviteesView5.collectionModel.selectedRow}"
                       selectionListener="#{bindings.InviteesView5.collectionModel.makeCurrent}" rowSelection="single"
                       fetchSize="#{bindings.InviteesView5.rangeSize}" id="t2" columnStretching="last"
-                      partialTriggers="::cmi1">
+                      partialTriggers="::b3 ::b4">
               <af:column sortProperty="#{bindings.InviteesView5.hints.Name1.name}" sortable="true"
                          headerText="#{bindings.InviteesView5.hints.Name1.label}" id="c2">
                 <af:outputText value="#{row.Name1}" shortDesc="#{bindings.InviteesView5.hints.Name1.tooltip}" id="ot2"/>
               </af:column>
             </af:table>
+            <af:panelGridLayout id="pgl2">
+              <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr2">
+                <af:gridCell marginStart="5px" width="dontCare" id="gc3">
+                  <af:button text="Add" id="b3" action="addInternalInvitee" useWindow="true"
+                             windowEmbedStyle="inlineDocument" windowModalityType="applicationModal"
+                             windowHeight="700" windowWidth="700"/>
+                </af:gridCell>
+                <af:gridCell marginStart="5px" width="dontCare" marginEnd="5px" id="gc4">
+                  <af:button text="Delete" id="b4" action="deleteInternalInvitee" useWindow="true"
+                             windowEmbedStyle="inlineDocument" windowModalityType="applicationModal"/>
+                </af:gridCell>
+              </af:gridRow>
+            </af:panelGridLayout>
           </af:panelBox>
         </f:facet>
         <f:facet name="second">
           <af:panelBox text="Invitee - User" id="pb2">
             <f:facet name="toolbar">
-              <af:toolbar id="t4">
+              <af:toolbar id="t4" rendered="false">
                 <af:commandMenuItem text="Add" id="cmi3" action="addExternalInvitee" useWindow="true"
                                     windowEmbedStyle="inlineDocument" windowModalityType="applicationModal"
                                     windowHeight="700" windowWidth="700"/>
@@ -90,13 +113,26 @@
                       rowBandingInterval="0" selectedRowKeys="#{bindings.InviteesextView4.collectionModel.selectedRow}"
                       selectionListener="#{bindings.InviteesextView4.collectionModel.makeCurrent}" rowSelection="single"
                       fetchSize="#{bindings.InviteesextView4.rangeSize}" id="t1" columnStretching="last"
-                      partialTriggers="::cmi3">
+                      partialTriggers="::b5 ::b6">
               <af:column sortProperty="#{bindings.InviteesextView4.hints.Firstname.name}" sortable="true"
                          headerText="#{bindings.InviteesextView4.hints.Firstname.label}" id="c1">
                 <af:outputText value="#{row.Firstname}" shortDesc="#{bindings.InviteesextView4.hints.Firstname.tooltip}"
                                id="ot1"/>
               </af:column>
             </af:table>
+            <af:panelGridLayout id="pgl3">
+              <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr3">
+                <af:gridCell marginStart="5px" width="dontCare" id="gc5">
+                  <af:button text="Add" id="b5" action="addExternalInvitee" useWindow="true"
+                             windowEmbedStyle="inlineDocument" windowModalityType="applicationModal"
+                             windowHeight="700" windowWidth="700"/>
+                </af:gridCell>
+                <af:gridCell marginStart="5px" width="dontCare" marginEnd="5px" id="gc6">
+                  <af:button text="Delete" id="b6" action="deleteExternalInvitee" useWindow="true"
+                             windowEmbedStyle="inlineDocument" windowModalityType="applicationModal"/>
+                </af:gridCell>
+              </af:gridRow>
+            </af:panelGridLayout>
           </af:panelBox>
         </f:facet>
       </af:panelSplitter>
