@@ -41,7 +41,8 @@ public class UseraccountImpl extends EntityImpl {
         Supervisor,
         Customeraccount,
         Userrole,
-        Inviteesext;
+        Inviteesext,
+        Sales;
         private static AttributesEnum[] vals = null;
         private static final int firstIndex = 0;
 
@@ -78,6 +79,7 @@ public class UseraccountImpl extends EntityImpl {
     public static final int CUSTOMERACCOUNT = AttributesEnum.Customeraccount.index();
     public static final int USERROLE = AttributesEnum.Userrole.index();
     public static final int INVITEESEXT = AttributesEnum.Inviteesext.index();
+    public static final int SALES = AttributesEnum.Sales.index();
 
     /**
      * This is the default constructor (do not remove).
@@ -263,6 +265,13 @@ public class UseraccountImpl extends EntityImpl {
      */
     public RowIterator getInviteesext() {
         return (RowIterator) getAttributeInternal(INVITEESEXT);
+    }
+
+    /**
+     * @return the associated entity oracle.jbo.RowIterator.
+     */
+    public RowIterator getSales() {
+        return (RowIterator) getAttributeInternal(SALES);
     }
 
     /**

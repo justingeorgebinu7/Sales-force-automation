@@ -267,6 +267,15 @@
   <ViewUsage
     Name="SalesView1"
     ViewObjectName="sfa.model.viewobjects.SalesView"/>
+  <ViewUsage
+    Name="UseraccountView7"
+    ViewObjectName="sfa.model.viewobjects.UseraccountView"/>
+  <ViewUsage
+    Name="SalesView2"
+    ViewObjectName="sfa.model.viewobjects.SalesView"/>
+  <ViewUsage
+    Name="SalesView3"
+    ViewObjectName="sfa.model.viewobjects.SalesView"/>
   <ViewLinkUsage
     Name="CaddressCustomercontactsFkLink1"
     ViewLinkObjectName="sfa.model.viewobjects.CaddressCustomercontactsFkLink"
@@ -591,6 +600,18 @@
     SrcViewUsageName="sfa.model.entities.AppModule.ProductsView1"
     DstViewUsageName="sfa.model.entities.AppModule.CategoryView3"
     Reversed="true"/>
+  <ViewLinkUsage
+    Name="SalesUserFKLink"
+    ViewLinkObjectName="sfa.model.viewobjects.SalesUserFKLink"
+    SrcViewUsageName="sfa.model.entities.AppModule.UseraccountView7"
+    DstViewUsageName="sfa.model.entities.AppModule.SalesView2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="SalesUserFKLink1"
+    ViewLinkObjectName="sfa.model.viewobjects.SalesUserFKLink"
+    SrcViewUsageName="sfa.model.entities.AppModule.UseraccountView1"
+    DstViewUsageName="sfa.model.entities.AppModule.SalesView3"
+    Reversed="false"/>
   <ClientInterface
     Name="__clientInterface">
     <Method

@@ -712,6 +712,46 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
         return (ViewObjectImpl) findViewObject("SalesView1");
     }
 
+    /**
+     * Container's getter for UseraccountView7.
+     * @return UseraccountView7
+     */
+    public ViewObjectImpl getUseraccountView7() {
+        return (ViewObjectImpl) findViewObject("UseraccountView7");
+    }
+
+    /**
+     * Container's getter for SalesView2.
+     * @return SalesView2
+     */
+    public ViewObjectImpl getSalesView2() {
+        return (ViewObjectImpl) findViewObject("SalesView2");
+    }
+
+    /**
+     * Container's getter for SalesUserFKLink.
+     * @return SalesUserFKLink
+     */
+    public ViewLinkImpl getSalesUserFKLink() {
+        return (ViewLinkImpl) findViewLink("SalesUserFKLink");
+    }
+
+    /**
+     * Container's getter for SalesView3.
+     * @return SalesView3
+     */
+    public ViewObjectImpl getSalesView3() {
+        return (ViewObjectImpl) findViewObject("SalesView3");
+    }
+
+    /**
+     * Container's getter for SalesUserFKLink1.
+     * @return SalesUserFKLink1
+     */
+    public ViewLinkImpl getSalesUserFKLink1() {
+        return (ViewLinkImpl) findViewLink("SalesUserFKLink1");
+    }
+
     class AppmoduleImpl {
 
     }

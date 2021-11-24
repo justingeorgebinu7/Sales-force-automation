@@ -41,4 +41,10 @@
     EntityAttrName="Revenue"
     EntityUsage="Sales"
     AliasName="REVENUE"/>
+  <ViewLinkAccessor
+    Name="UseraccountView"
+    ViewLink="sfa.model.viewobjects.SalesUserFKLink"
+    Type="oracle.jbo.Row"
+    Reversed="true"
+    IsUpdateable="false"/>
 </ViewObject>
