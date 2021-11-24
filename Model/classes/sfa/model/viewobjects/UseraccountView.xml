@@ -119,6 +119,8 @@
       <SchemaBasedProperties>
         <DISPLAYWIDTH
           Value="20"/>
+        <TOOLTIP
+          ResId="sfa.model.viewobjects.UseraccountView.Password_TOOLTIP"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>

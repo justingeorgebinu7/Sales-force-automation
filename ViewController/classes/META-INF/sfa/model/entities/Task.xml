@@ -40,6 +40,8 @@
       <SchemaBasedProperties>
         <LABEL
           ResId="sfa.model.entities.Task.Name_LABEL"/>
+        <TOOLTIP
+          ResId="sfa.model.entities.Task.Name_TOOLTIP"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
@@ -86,6 +88,12 @@
     <DesignTime>
       <Attr Name="_DisplaySize" Value="100"/>
     </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <TOOLTIP
+          ResId="sfa.model.entities.Task.Description_TOOLTIP"/>
+      </SchemaBasedProperties>
+    </Properties>
   </Attribute>
   <Attribute
     Name="Percentageofcompletion"
