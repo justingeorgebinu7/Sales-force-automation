@@ -51,7 +51,7 @@
                 <af:button text="Save" id="b1" actionListener="#{bindings.Commit.execute}"/>
               </af:gridCell>
               <af:gridCell marginStart="5px" width="dontCare" marginEnd="5px" id="gc2">
-                <af:button text="Cancel" id="b2" action="back"/>
+                <af:button text="Back" id="b2" action="back"/>
               </af:gridCell>
             </af:gridRow>
           </af:panelGridLayout>
