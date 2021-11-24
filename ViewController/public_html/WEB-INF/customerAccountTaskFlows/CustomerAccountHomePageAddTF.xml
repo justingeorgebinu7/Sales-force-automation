@@ -10,6 +10,11 @@
       <managed-bean-class>Beans.Contact</managed-bean-class>
       <managed-bean-scope>request</managed-bean-scope>
     </managed-bean>
+    <managed-bean id="__15">
+      <managed-bean-name>DeleteAccountContact</managed-bean-name>
+      <managed-bean-class>Beans.DeleteAccountContact</managed-bean-class>
+      <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
     <view id="AccountSearchableHomepagw">
       <page>/CustomerAccountManagement/AccountSearchableHomepage.jsff</page>
     </view>
