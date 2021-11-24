@@ -15,7 +15,8 @@
             selectionListener="#{bindings.UseraccountView1.collectionModel.makeCurrent}" rowSelection="single"
             fetchSize="#{bindings.UseraccountView1.rangeSize}"
             filterModel="#{bindings.UseraccountView1Query.queryDescriptor}"
-            queryListener="#{bindings.UseraccountView1Query.processQuery}" varStatus="vs" id="t1" width="100%">
+            queryListener="#{bindings.UseraccountView1Query.processQuery}" varStatus="vs" id="t1" width="100%"
+            partialTriggers="b2">
     <af:column sortProperty="#{bindings.UseraccountView1.hints.Firstname.name}" filterable="true" sortable="true"
                headerText="#{bindings.UseraccountView1.hints.Firstname.label}" id="c1" width="100%">
       <af:link shortDesc="#{bindings.UseraccountView1.hints.Firstname.tooltip}" id="ot1" text="#{row.Firstname}"
@@ -56,7 +57,8 @@
     </af:column>
   </af:table>
   <af:button text="Add" id="b1" action="create"/>
-  <af:button text="Delete" action="deleteUserAccount1" id="b2"/>
+  <af:button text="Delete" action="deleteUserAccount1" id="b2" useWindow="true" windowEmbedStyle="inlineDocument"
+             windowModalityType="applicationModal"/>
   <af:button text="Export" id="b3">
     <af:exportCollectionActionListener type="excelHTML" exportedId="t1" filename="UsersList.html"/>
   </af:button>

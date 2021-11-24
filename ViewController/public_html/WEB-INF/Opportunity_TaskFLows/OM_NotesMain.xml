@@ -21,6 +21,11 @@
         <document>/WEB-INF/Opportunity_TaskFLows/OM_DeleteNotes.xml</document>
         <id>OM_DeleteNotes</id>
       </task-flow-reference>
+      <run-as-dialog>
+        <display-type>
+          <inline-popup/>
+        </display-type>
+      </run-as-dialog>
     </task-flow-call>
     <task-flow-call id="OM_AddNotes">
       <task-flow-reference>

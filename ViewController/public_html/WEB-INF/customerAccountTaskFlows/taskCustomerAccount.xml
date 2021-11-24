@@ -22,6 +22,11 @@
         <document>/WEB-INF/customerAccountTaskFlows/deleteTasksTF.xml</document>
         <id>deleteTasksTF</id>
       </task-flow-reference>
+      <run-as-dialog>
+        <display-type>
+          <inline-popup/>
+        </display-type>
+      </run-as-dialog>
     </task-flow-call>
     <control-flow-rule id="__1">
       <from-activity-id>AccountTasks</from-activity-id>

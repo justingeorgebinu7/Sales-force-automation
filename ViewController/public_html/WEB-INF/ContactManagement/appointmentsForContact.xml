@@ -13,6 +13,11 @@
         <document>/WEB-INF/ContactManagement/deleteAppForContacts.xml</document>
         <id>deleteAppForContacts</id>
       </task-flow-reference>
+      <run-as-dialog>
+        <display-type>
+          <inline-popup/>
+        </display-type>
+      </run-as-dialog>
     </task-flow-call>
     <task-flow-call id="createAppointment">
       <task-flow-reference>
@@ -25,6 +30,11 @@
         <document>/WEB-INF/ContactManagement/AppointmentsNew/deleteAppointment.xml</document>
         <id>deleteAppointment</id>
       </task-flow-reference>
+      <run-as-dialog>
+        <display-type>
+          <inline-popup/>
+        </display-type>
+      </run-as-dialog>
     </task-flow-call>
     <task-flow-call id="addNewAppointment">
       <task-flow-reference>

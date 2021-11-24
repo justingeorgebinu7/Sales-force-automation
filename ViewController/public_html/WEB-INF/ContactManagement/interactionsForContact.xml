@@ -22,6 +22,11 @@
         <document>/WEB-INF/ContactManagement/deleteInteractionContact.xml</document>
         <id>deleteInteractionContact</id>
       </task-flow-reference>
+      <run-as-dialog>
+        <display-type>
+          <inline-popup/>
+        </display-type>
+      </run-as-dialog>
     </task-flow-call>
     <control-flow-rule id="__1">
       <from-activity-id>InteractionsForContacts</from-activity-id>

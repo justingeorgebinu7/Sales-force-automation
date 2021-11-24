@@ -37,6 +37,11 @@
         <document>/WEB-INF/Opportunity_TaskFLows/deleteRevenueItem.xml</document>
         <id>deleteRevenueItem</id>
       </task-flow-reference>
+      <run-as-dialog>
+        <display-type>
+          <inline-popup/>
+        </display-type>
+      </run-as-dialog>
     </task-flow-call>
     <control-flow-rule id="__1">
       <from-activity-id>revenueItem</from-activity-id>

@@ -4,7 +4,7 @@
             emptyText="#{bindings.AddressView4.viewable ? 'No data to display.' : 'Access Denied.'}"
             rowBandingInterval="0" selectedRowKeys="#{bindings.AddressView4.collectionModel.selectedRow}"
             selectionListener="#{bindings.AddressView4.collectionModel.makeCurrent}" rowSelection="single"
-            fetchSize="#{bindings.AddressView4.rangeSize}" id="t1">
+            fetchSize="#{bindings.AddressView4.rangeSize}" id="t1" partialTriggers="b2">
     <af:column sortProperty="#{bindings.AddressView4.hints.Type.name}" sortable="true"
                headerText="#{bindings.AddressView4.hints.Type.label}" id="c1" width="100%">
       <af:link shortDesc="#{bindings.AddressView4.hints.Type.tooltip}" id="ot1" text="#{row.Type}"
@@ -36,5 +36,6 @@
     </af:column>
   </af:table>
   <af:button text="Add" id="b1" action="createAddress"/>
-  <af:button text="Delete" action="deleteAddressTF1" id="b2"/>
+  <af:button text="Delete" action="deleteAddressTF1" id="b2" useWindow="true" windowEmbedStyle="inlineDocument"
+             windowModalityType="applicationModal"/>
 </ui:composition>

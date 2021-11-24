@@ -14,7 +14,8 @@
             selectedRowKeys="#{bindings.NoteView2.collectionModel.selectedRow}"
             selectionListener="#{bindings.NoteView2.collectionModel.makeCurrent}" rowSelection="single"
             fetchSize="#{bindings.NoteView2.rangeSize}" filterModel="#{bindings.NoteView2Query.queryDescriptor}"
-            filterVisible="false" queryListener="#{bindings.NoteView2Query.processQuery}" varStatus="vs" id="t1">
+            filterVisible="false" queryListener="#{bindings.NoteView2Query.processQuery}" varStatus="vs" id="t1"
+            partialTriggers="b2">
     <af:column sortProperty="#{bindings.NoteView2.hints.Subject.name}" filterable="true" sortable="true"
                headerText="#{bindings.NoteView2.hints.Subject.label}" id="c1" width="100%">
       <af:link shortDesc="#{bindings.NoteView2.hints.Subject.tooltip}" id="ot1" text="#{row.Subject}" action="edit"/>
@@ -38,5 +39,6 @@
     </af:column>
   </af:table>
   <af:button text="Add" id="b1" action="addNote"/>
-  <af:button text="Delete" action="deleteNotesTF1" id="b2"/>
+  <af:button text="Delete" action="deleteNotesTF1" id="b2" useWindow="true" windowEmbedStyle="inlineDocument"
+             windowModalityType="applicationModal"/>
 </ui:composition>

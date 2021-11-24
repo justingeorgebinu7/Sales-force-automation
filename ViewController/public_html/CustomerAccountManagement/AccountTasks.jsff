@@ -7,7 +7,7 @@
             selectionListener="#{bindings.TaskView3.collectionModel.makeCurrent}" rowSelection="single"
             fetchSize="#{bindings.TaskView3.rangeSize}" filterModel="#{bindings.TaskView3Query.queryDescriptor}"
             filterVisible="false" queryListener="#{bindings.TaskView3Query.processQuery}" varStatus="vs" id="t1"
-            columnStretching="none">
+            columnStretching="none" partialTriggers="b3">
     <af:column sortProperty="#{bindings.TaskView3.hints.Name.name}" filterable="true" sortable="true"
                headerText="#{bindings.TaskView3.hints.Name.label}" id="c1" width="100%">
       <af:link shortDesc="#{bindings.TaskView3.hints.Name.tooltip}" id="ot1" text="#{row.Name}" action="goToEdit"/>
@@ -43,5 +43,6 @@
     </af:column>
   </af:table>
   <af:button text="Add" id="b1" action="goToAddTask"/>
-  <af:button text="Delete" action="deleteTasksTF1" id="b3"/>
+  <af:button text="Delete" action="deleteTasksTF1" id="b3" useWindow="true" windowEmbedStyle="inlineDocument"
+             windowModalityType="applicationModal"/>
 </ui:composition>

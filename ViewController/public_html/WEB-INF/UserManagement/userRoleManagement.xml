@@ -24,6 +24,11 @@
         <document>/WEB-INF/UserManagement/deleteUserRole.xml</document>
         <id>deleteUserRole</id>
       </task-flow-reference>
+      <run-as-dialog>
+        <display-type>
+          <inline-popup/>
+        </display-type>
+      </run-as-dialog>
     </task-flow-call>
     <view id="editUserRole">
       <page>/UserManagementPages/editUserRole.jsff</page>

@@ -24,6 +24,11 @@
         <document>/WEB-INF/Productcatalog/deleteCategory.xml</document>
         <id>deleteCategory</id>
       </task-flow-reference>
+      <run-as-dialog>
+        <display-type>
+          <inline-popup/>
+        </display-type>
+      </run-as-dialog>
     </task-flow-call>
     <task-flow-return id="taskFlowReturn1">
       <outcome>

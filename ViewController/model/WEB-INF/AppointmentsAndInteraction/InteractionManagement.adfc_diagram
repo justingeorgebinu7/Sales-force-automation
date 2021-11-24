@@ -88,6 +88,8 @@
    <TaskFlowCall
       id="TaskFlowCall12">
       <property
+         name="runAsDialog">true</property>
+      <property
          name="description">&lt;html>&lt;p>&lt;b>deleteInteractionTF1&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
       <property
          name="activityId">deleteInteractionTF1</property>

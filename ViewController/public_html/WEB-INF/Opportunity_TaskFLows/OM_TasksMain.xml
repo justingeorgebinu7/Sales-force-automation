@@ -16,6 +16,11 @@
         <document>/WEB-INF/Opportunity_TaskFLows/OM_DelTasks.xml</document>
         <id>OM_DelTasks</id>
       </task-flow-reference>
+      <run-as-dialog>
+        <display-type>
+          <inline-popup/>
+        </display-type>
+      </run-as-dialog>
     </task-flow-call>
     <task-flow-call id="OM_AddTasks">
       <task-flow-reference>

@@ -15,7 +15,7 @@
             selectionListener="#{bindings.NoteView4.collectionModel.makeCurrent}" rowSelection="single"
             fetchSize="#{bindings.NoteView4.rangeSize}" filterModel="#{bindings.NoteView4Query.queryDescriptor}"
             filterVisible="true" queryListener="#{bindings.NoteView4Query.processQuery}" varStatus="vs" id="t1"
-            columnStretching="none">
+            columnStretching="none" partialTriggers="b2">
     <af:column sortProperty="#{bindings.NoteView4.hints.Subject.name}" filterable="true" sortable="true"
                headerText="#{bindings.NoteView4.hints.Subject.label}" id="c1" width="100%">
       <af:link shortDesc="#{bindings.NoteView4.hints.Subject.tooltip}" id="ot1" text="#{row.Subject}" action="toEdit"/>
@@ -44,5 +44,6 @@
     </af:column>
   </af:table>
   <af:button text="Add" id="b1" action="addNote"/>
-  <af:button text="Delete" id="b2" action="deleteNotes"/>
+  <af:button text="Delete" id="b2" action="deleteNotes" useWindow="true" windowEmbedStyle="inlineDocument"
+             windowModalityType="applicationModal"/>
 </ui:composition>

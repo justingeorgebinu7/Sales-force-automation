@@ -16,6 +16,11 @@
         <document>/WEB-INF/ContactManagement/deleteTaskCon.xml</document>
         <id>deleteTaskCon</id>
       </task-flow-reference>
+      <run-as-dialog>
+        <display-type>
+          <inline-popup/>
+        </display-type>
+      </run-as-dialog>
     </task-flow-call>
     <task-flow-call id="createTaskCon">
       <task-flow-reference>

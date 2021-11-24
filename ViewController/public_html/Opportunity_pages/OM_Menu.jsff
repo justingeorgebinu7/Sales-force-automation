@@ -163,7 +163,7 @@
                   selectionListener="#{bindings.FilesView4.collectionModel.makeCurrent}" rowSelection="single"
                   fetchSize="#{bindings.FilesView4.rangeSize}" filterModel="#{bindings.FilesView4Query.queryDescriptor}"
                   filterVisible="true" queryListener="#{bindings.FilesView4Query.processQuery}" varStatus="vs" id="t1"
-                  partialTriggers="::b3" columnStretching="last">
+                  partialTriggers="::b3 ::b4" columnStretching="last">
           <af:column sortProperty="#{bindings.FilesView4.hints.Filename.name}" filterable="true" sortable="true"
                      headerText="#{bindings.FilesView4.hints.Filename.label}" id="c2" width="226">
             <af:link shortDesc="#{bindings.FilesView4.hints.Filename.tooltip}" id="ot2" text="#{row.Filename}">
@@ -183,7 +183,8 @@
               </af:button>
             </af:gridCell>
             <af:gridCell marginStart="0px" width="dontCare" marginEnd="5px" id="gc2">
-              <af:button text="Delete" id="b4" action="#{FileBean.deleteButton}"/>
+              <af:button text="Delete" id="b4" action="#{FileBean.deleteButton}" useWindow="true"
+                         windowEmbedStyle="inlineDocument" windowModalityType="applicationModal"/>
             </af:gridCell>
           </af:gridRow>
         </af:panelGridLayout>

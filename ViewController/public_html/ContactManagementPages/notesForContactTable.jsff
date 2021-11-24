@@ -39,5 +39,6 @@
     </af:column>
   </af:table>
   <af:button text="Add" id="b1" action="toadd"/>
-  <af:button text="Delete" id="b2" action="delete"/>
+  <af:button text="Delete" id="b2" action="delete" useWindow="true" windowEmbedStyle="inlineDocument"
+             windowModalityType="applicationModal"/>
 </ui:composition>

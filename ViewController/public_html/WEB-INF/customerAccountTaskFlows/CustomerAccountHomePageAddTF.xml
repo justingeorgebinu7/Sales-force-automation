@@ -61,6 +61,11 @@
         <document>/WEB-INF/customerAccountTaskFlows/deleteContactTF.xml</document>
         <id>deleteContactTF</id>
       </task-flow-reference>
+      <run-as-dialog>
+        <display-type>
+          <inline-popup/>
+        </display-type>
+      </run-as-dialog>
     </task-flow-call>
     <control-flow-rule id="__5">
       <from-activity-id>AccountSearchableHomepagw</from-activity-id>

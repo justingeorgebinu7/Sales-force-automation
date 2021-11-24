@@ -22,6 +22,11 @@
         <document>/WEB-INF/customerAccountTaskFlows/deleteAddressTF.xml</document>
         <id>deleteAddressTF</id>
       </task-flow-reference>
+      <run-as-dialog>
+        <display-type>
+          <inline-popup/>
+        </display-type>
+      </run-as-dialog>
     </task-flow-call>
     <control-flow-rule id="__1">
       <from-activity-id>addressTable</from-activity-id>

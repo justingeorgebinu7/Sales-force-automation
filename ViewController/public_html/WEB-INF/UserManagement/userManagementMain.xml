@@ -22,6 +22,11 @@
         <document>/WEB-INF/UserManagement/deleteUserAccount.xml</document>
         <id>deleteUserAccount</id>
       </task-flow-reference>
+      <run-as-dialog>
+        <display-type>
+          <inline-popup/>
+        </display-type>
+      </run-as-dialog>
     </task-flow-call>
     <control-flow-rule id="__3">
       <from-activity-id>userAccountView</from-activity-id>

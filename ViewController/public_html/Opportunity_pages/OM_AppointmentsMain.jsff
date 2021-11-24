@@ -8,7 +8,7 @@
             selectionListener="#{bindings.AppointmentsView8.collectionModel.makeCurrent}" rowSelection="single"
             fetchSize="#{bindings.AppointmentsView8.rangeSize}"
             filterModel="#{bindings.AppointmentsView8Query.queryDescriptor}" filterVisible="false"
-            queryListener="#{bindings.AppointmentsView8Query.processQuery}" varStatus="vs" id="t1">
+            queryListener="#{bindings.AppointmentsView8Query.processQuery}" varStatus="vs" id="t1" partialTriggers="b1">
     <af:column sortProperty="#{bindings.AppointmentsView8.hints.Name.name}" filterable="true" sortable="true"
                headerText="#{bindings.AppointmentsView8.hints.Name.label}" id="c1" width="100%">
       <af:link shortDesc="#{bindings.AppointmentsView8.hints.Name.tooltip}" id="ot1" text="#{row.Name}"
@@ -50,5 +50,6 @@
     </af:column>
   </af:table>
   <af:button text="Add" action="OM_CreateNewAppointment1" id="b2"/>
-  <af:button text="Delete" action="OM_deleteAppoinement1" id="b1"/>
+  <af:button text="Delete" action="OM_deleteAppoinement1" id="b1" useWindow="true" windowEmbedStyle="inlineDocument"
+             windowModalityType="applicationModal"/>
 </ui:composition>

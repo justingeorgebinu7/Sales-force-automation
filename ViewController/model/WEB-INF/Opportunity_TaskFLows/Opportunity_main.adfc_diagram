@@ -46,7 +46,7 @@
       <property
          name="fromOutcome">toMenu</property>
       <property
-         name="sdm:polyPoints">R46,285.10837,282.43652,558.0,290.89062,L46</property>
+         name="sdm:polyPoints">R46,285.10388,282.43652,558.0,290.54004,L46</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -56,10 +56,12 @@
       <property
          name="fromOutcome">toHome</property>
       <property
-         name="sdm:polyPoints">L54,557.8916,297.89062,285.0,289.43652,R54</property>
+         name="sdm:polyPoints">L54,557.8961,297.54004,285.0,289.43652,R54</property>
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall9">
+      <property
+         name="runAsDialog">true</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>deleteOpportunity&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
       <property
@@ -114,6 +116,8 @@
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall12">
+      <property
+         name="runAsDialog">true</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>OM_FileDelete&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
       <property

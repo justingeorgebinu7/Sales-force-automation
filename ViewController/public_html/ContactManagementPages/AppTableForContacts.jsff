@@ -9,7 +9,7 @@
             fetchSize="#{bindings.AppointmentsView10.rangeSize}"
             filterModel="#{bindings.AppointmentsView10Query.queryDescriptor}" filterVisible="false"
             queryListener="#{bindings.AppointmentsView10Query.processQuery}" varStatus="vs" id="t2"
-            columnStretching="none">
+            columnStretching="none" partialTriggers="b4">
     <af:column sortProperty="#{bindings.AppointmentsView10.hints.Name.name}" filterable="true" sortable="true"
                headerText="#{bindings.AppointmentsView10.hints.Name.label}" id="c6" width="100%">
       <af:link shortDesc="#{bindings.AppointmentsView10.hints.Name.tooltip}" id="ot6" text="#{row.Name}"
@@ -52,5 +52,6 @@
     </af:column>
   </af:table>
   <af:button text="Add" id="b3" action="addNewAppointment"/>
-  <af:button text="Delete" action="deleteAppointment1" id="b4"/>
+  <af:button text="Delete" action="deleteAppointment1" id="b4" useWindow="true" windowEmbedStyle="inlineDocument"
+             windowModalityType="applicationModal"/>
 </ui:composition>

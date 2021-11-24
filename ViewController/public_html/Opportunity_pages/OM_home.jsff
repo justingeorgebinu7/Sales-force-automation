@@ -16,7 +16,7 @@
             fetchSize="#{bindings.OpportunityView1.rangeSize}"
             filterModel="#{bindings.OpportunityView1Query.queryDescriptor}"
             queryListener="#{bindings.OpportunityView1Query.processQuery}" varStatus="vs" id="t1"
-            columnStretching="none">
+            columnStretching="none" partialTriggers="b2">
     <af:column sortProperty="#{bindings.OpportunityView1.hints.Title.name}" filterable="true" sortable="true"
                headerText="#{bindings.OpportunityView1.hints.Title.label}" id="c1" width="100%">
       <af:link shortDesc="#{bindings.OpportunityView1.hints.Title.tooltip}" id="ot1" text="#{row.Title}"
@@ -56,7 +56,8 @@
     </af:column>
   </af:table>
   <af:button text="Add" id="b1" action="addOpportunity"/>
-  <af:button text="Delete" id="b2" action="deleteOpp"/>
+  <af:button text="Delete" id="b2" action="deleteOpp" useWindow="true" windowEmbedStyle="inlineDocument"
+             windowModalityType="applicationModal"/>
   <af:button text="Export" id="b3">
     <af:exportCollectionActionListener type="excelHTML" exportedId="t1" filename="opportunityList.html"/>
   </af:button>

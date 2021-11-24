@@ -7,13 +7,13 @@
       <property
          name="activityId">Delete</property>
       <property
-         name="x">306.5</property>
+         name="x">311.5</property>
       <property
-         name="start">true</property>
+         name="start">false</property>
       <property
-         name="description">&lt;html>&lt;p>&lt;b>Delete&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
+         name="description">&lt;html>&lt;p>&lt;b>Delete&lt;/b>&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
       <property
-         name="y">379.34473</property>
+         name="y">173.64355</property>
       <property
          name="exceptionHandler">false</property>
    </MethodCall>
@@ -22,11 +22,11 @@
       <property
          name="activityId">Commit</property>
       <property
-         name="x">558.5</property>
+         name="x">550.5</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>Commit&lt;/b>&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
       <property
-         name="y">290.1494</property>
+         name="y">152.74707</property>
       <property
          name="exceptionHandler">false</property>
    </MethodCall>
@@ -53,7 +53,7 @@
       <property
          name="fromOutcome">Delete</property>
       <property
-         name="sdm:polyPoints">R50,348.23584,378.99414,516.76416,289.79883,L50</property>
+         name="sdm:polyPoints">R50,352.5,173.29297,509.5,152.39648,L50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -63,6 +63,43 @@
       <property
          name="fromOutcome">Commit</property>
       <property
-         name="sdm:polyPoints">R50,600.23584,289.79883,706.26416,176.89648,L50</property>
+         name="sdm:polyPoints">R50,591.5,152.39648,707.0,176.89648,L50</property>
+   </ControlFlowCase>
+   <View
+      id="View7">
+      <property
+         name="activityId">deleteWarning</property>
+      <property
+         name="x">154.68945</property>
+      <property
+         name="start">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>deleteWarning&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">305.79883</property>
+      <property
+         name="page">/deleteWarning.jsf</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase8"
+      from="View7"
+      to="MethodCall2">
+      <property
+         name="fromOutcome">proceed</property>
+      <property
+         name="sdm:polyPoints">T50,154.68945,251.44824,270.5,173.29297,L50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase9"
+      from="View7"
+      to="TaskFlowReturn4">
+      <property
+         name="fromOutcome">cancel</property>
+      <property
+         name="sdm:polyPoints">R55,L61</property>
    </ControlFlowCase>
 </SDM>

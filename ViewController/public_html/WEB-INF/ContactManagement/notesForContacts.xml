@@ -27,7 +27,11 @@
         <document>/WEB-INF/ContactManagement/deleteNotesContact.xml</document>
         <id>deleteNotesContact</id>
       </task-flow-reference>
-      <run-as-dialog/>
+      <run-as-dialog>
+        <display-type>
+          <inline-popup/>
+        </display-type>
+      </run-as-dialog>
     </task-flow-call>
     <method-call id="Commit">
       <method>#{bindings.Commit.execute}</method>

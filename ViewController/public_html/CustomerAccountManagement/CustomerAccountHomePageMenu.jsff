@@ -37,7 +37,8 @@
                       selectionListener="#{bindings.CustomercontactsView2.collectionModel.makeCurrent}"
                       rowSelection="single" fetchSize="#{bindings.CustomercontactsView2.rangeSize}"
                       filterModel="#{bindings.CustomercontactsView2Query.queryDescriptor}" filterVisible="false"
-                      queryListener="#{bindings.CustomercontactsView2Query.processQuery}" varStatus="vs" id="t1">
+                      queryListener="#{bindings.CustomercontactsView2Query.processQuery}" varStatus="vs" id="t1"
+                      partialTriggers="b2">
               <af:column sortProperty="#{bindings.CustomercontactsView2.hints.Name.name}" filterable="true"
                          sortable="true" headerText="#{bindings.CustomercontactsView2.hints.Name.label}" id="c1"
                          width="100%">
@@ -82,7 +83,8 @@
                   <af:button text="Add" id="b1" action="createContactDrill"/>
                 </af:gridCell>
                 <af:gridCell marginStart="5px" width="dontCare" marginEnd="5px" id="gc2">
-                  <af:button text="Delete" action="deleteContactTF1" id="b2"/>
+                  <af:button text="Delete" action="deleteContactTF1" id="b2" useWindow="true"
+                             windowEmbedStyle="inlineDocument" windowModalityType="applicationModal"/>
                 </af:gridCell>
               </af:gridRow>
             </af:panelGridLayout>

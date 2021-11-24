@@ -16,7 +16,8 @@
             selectionListener="#{bindings.CustomercontactsView1.collectionModel.makeCurrent}" rowSelection="single"
             fetchSize="#{bindings.CustomercontactsView1.rangeSize}"
             filterModel="#{bindings.CustomercontactsView1Query.queryDescriptor}"
-            queryListener="#{bindings.CustomercontactsView1Query.processQuery}" varStatus="vs" id="t1">
+            queryListener="#{bindings.CustomercontactsView1Query.processQuery}" varStatus="vs" id="t1"
+            partialTriggers="b2">
     <af:column sortProperty="#{bindings.CustomercontactsView1.hints.Name.name}" filterable="true" sortable="true"
                headerText="#{bindings.CustomercontactsView1.hints.Name.label}" id="c1" width="100%">
       <af:link shortDesc="#{bindings.CustomercontactsView1.hints.Name.tooltip}" id="ot1" text="#{row.Name}"
@@ -55,7 +56,8 @@
     </af:column>
   </af:table>
   <af:button text="Add" id="b1" action="add"/>
-  <af:button text="Delete" id="b2" action="deleteCon"/>
+  <af:button text="Delete" id="b2" action="deleteCon" useWindow="true" windowEmbedStyle="inlineDocument"
+             windowModalityType="applicationModal"/>
   <af:button text="Export" id="b3">
     <af:exportCollectionActionListener type="excelHTML" exportedId="t1" filename="contactsList.html"/>
   </af:button>

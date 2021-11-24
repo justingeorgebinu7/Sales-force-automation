@@ -7,7 +7,7 @@
             selectionListener="#{bindings.InteractionView5.collectionModel.makeCurrent}" rowSelection="single"
             fetchSize="#{bindings.InteractionView5.rangeSize}"
             filterModel="#{bindings.InteractionView5Query.queryDescriptor}" filterVisible="false"
-            queryListener="#{bindings.InteractionView5Query.processQuery}" varStatus="vs" id="t1">
+            queryListener="#{bindings.InteractionView5Query.processQuery}" varStatus="vs" id="t1" partialTriggers="b1">
     <af:column sortProperty="#{bindings.InteractionView5.hints.Type.name}" filterable="true" sortable="true"
                headerText="#{bindings.InteractionView5.hints.Type.label}" id="c1" width="100%">
       <af:link shortDesc="#{bindings.InteractionView5.hints.Type.tooltip}" id="ot1" text="#{row.Type}"
@@ -54,5 +54,6 @@
     </af:column>
   </af:table>
   <af:button text="Add" id="b3" action="createInteraction"/>
-  <af:button text="Delete" action="deleteInteractionTF1" id="b1"/>
+  <af:button text="Delete" action="deleteInteractionTF1" id="b1" useWindow="true" windowEmbedStyle="inlineDocument"
+             windowModalityType="applicationModal"/>
 </ui:composition>

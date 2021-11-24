@@ -19,6 +19,11 @@
         <document>/WEB-INF/Productcatalog/deleteProduct.xml</document>
         <id>deleteProduct</id>
       </task-flow-reference>
+      <run-as-dialog>
+        <display-type>
+          <inline-popup/>
+        </display-type>
+      </run-as-dialog>
     </task-flow-call>
     <view id="editProduct">
       <page>/ProductsCatalog/editProduct.jsff</page>

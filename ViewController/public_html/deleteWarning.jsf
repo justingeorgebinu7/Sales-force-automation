@@ -1,8 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE html>
-<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
-    <af:document title="deleteWarning.jsf" id="d1">
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+        xmlns:h="http://java.sun.com/jsf/html">
+    <af:document title="Delete confirmation" id="d1">
         <af:form id="f1">
+            <af:spacer id="s3" height="30px"/>
+            <h:outputText value="This item will be deleted,are you sure you want to proceed?" id="ot1"
+                          style="font-weight:bold;font-size:14px;"/>
+            <af:spacer id="s1" height="20px"/>
             <af:button text="Proceed" id="b1" action="proceed"/>
             <af:button text="Cancel" id="b2" action="cancel"/>
         </af:form>

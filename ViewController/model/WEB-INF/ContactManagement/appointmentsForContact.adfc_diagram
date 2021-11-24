@@ -24,6 +24,8 @@
    <TaskFlowCall
       id="TaskFlowCall9">
       <property
+         name="runAsDialog">true</property>
+      <property
          name="description">&lt;html>&lt;p>&lt;b>deleteAppForContacts1&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
       <property
          name="activityId">deleteAppForContacts1</property>
@@ -81,6 +83,8 @@
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall22">
+      <property
+         name="runAsDialog">true</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>deleteAppointment1&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
       <property

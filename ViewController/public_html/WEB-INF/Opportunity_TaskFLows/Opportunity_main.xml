@@ -41,6 +41,11 @@
         <document>/WEB-INF/Opportunity_TaskFLows/deleteOpportunity.xml</document>
         <id>deleteOpportunity</id>
       </task-flow-reference>
+      <run-as-dialog>
+        <display-type>
+          <inline-popup/>
+        </display-type>
+      </run-as-dialog>
     </task-flow-call>
     <task-flow-call id="createOpportunity">
       <task-flow-reference>
@@ -53,6 +58,11 @@
         <document>/WEB-INF/Opportunity_TaskFLows/OM_FileDelete.xml</document>
         <id>OM_FileDelete</id>
       </task-flow-reference>
+      <run-as-dialog>
+        <display-type>
+          <inline-popup/>
+        </display-type>
+      </run-as-dialog>
     </task-flow-call>
     <task-flow-call id="AccountContactDrillDown">
       <task-flow-reference>

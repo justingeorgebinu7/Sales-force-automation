@@ -16,6 +16,11 @@
         <document>/WEB-INF/ContactManagement/deleteContact_CM.xml</document>
         <id>deleteContact_CM</id>
       </task-flow-reference>
+      <run-as-dialog>
+        <display-type>
+          <inline-popup/>
+        </display-type>
+      </run-as-dialog>
     </task-flow-call>
     <task-flow-call id="createContact_cm">
       <task-flow-reference>
