@@ -67,14 +67,14 @@
     PrecisionRule="true"
     EntityAttrName="Interactionid"
     EntityUsage="Interaction"
-    AliasName="INTERACTIONID"/>
+    AliasName="INTERACTIONID"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="Type"
     PrecisionRule="true"
     EntityAttrName="Type"
     EntityUsage="Interaction"
     AliasName="TYPE"
-    IsQueriable="false"
     LOVName="LOV_Type">
     <Properties>
       <SchemaBasedProperties>

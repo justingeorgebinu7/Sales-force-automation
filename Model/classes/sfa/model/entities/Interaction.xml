@@ -19,7 +19,8 @@
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
     TableName="INTERACTION"
-    PrimaryKey="true">
+    PrimaryKey="true"
+    IsQueriable="false">
     <TransientExpression
       Name="ExpressionScript"
       CodeSourceName="InteractionRow"/>

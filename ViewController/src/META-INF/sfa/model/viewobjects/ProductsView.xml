@@ -78,7 +78,8 @@
     PrecisionRule="true"
     EntityAttrName="Productid"
     EntityUsage="Products"
-    AliasName="PRODUCTID"/>
+    AliasName="PRODUCTID"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="Name"
     PrecisionRule="true"
@@ -128,7 +129,8 @@
     EntityAttrName="Categoryid"
     EntityUsage="Products"
     AliasName="CATEGORYID"
-    LOVName="LOV_Categoryid">
+    LOVName="LOV_Categoryid"
+    IsQueriable="false">
     <Properties>
       <SchemaBasedProperties>
         <CONTROLTYPE

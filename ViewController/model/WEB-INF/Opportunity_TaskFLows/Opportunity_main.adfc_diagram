@@ -46,7 +46,7 @@
       <property
          name="fromOutcome">toMenu</property>
       <property
-         name="sdm:polyPoints">R46,285.10388,282.43652,558.0,290.54004,L46</property>
+         name="sdm:polyPoints">R45,285.90576,281.65845,557.2219,289.76196,L45</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -56,7 +56,7 @@
       <property
          name="fromOutcome">toHome</property>
       <property
-         name="sdm:polyPoints">L54,557.8961,297.54004,285.0,289.43652,R54</property>
+         name="sdm:polyPoints">L55,557.0942,298.3181,285.77808,290.2146,R55</property>
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall9">
@@ -85,7 +85,7 @@
       <property
          name="fromOutcome">deleteOpp</property>
       <property
-         name="sdm:polyPoints">T44,240.5,231.93652,106.36426,43.695312,B50</property>
+         name="sdm:polyPoints">T43,239.72194,231.15846,106.36426,44.473377,B50</property>
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall11">
@@ -112,7 +112,7 @@
       <property
          name="fromOutcome">addOpportunity</property>
       <property
-         name="sdm:polyPoints">T56,247.5,231.93652,400.69238,53.396484,B50</property>
+         name="sdm:polyPoints">T57,248.27808,231.15846,400.69238,54.17455,B50</property>
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall12">
@@ -141,7 +141,7 @@
       <property
          name="fromOutcome">delFile</property>
       <property
-         name="sdm:polyPoints">T50,599.0,240.39062,622.0137,196.79883,B50</property>
+         name="sdm:polyPoints">T50,599.0,239.26196,622.0137,197.57687,B50</property>
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall13">
@@ -168,7 +168,7 @@
       <property
          name="fromOutcome">contactDrilldown</property>
       <property
-         name="sdm:polyPoints">B44,240.5,339.93652,191.03516,489.79883,T50</property>
+         name="sdm:polyPoints">B43,239.72194,340.7146,191.03516,489.02078,T50</property>
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall15">
@@ -195,7 +195,7 @@
       <property
          name="fromOutcome">accountDrillDown</property>
       <property
-         name="sdm:polyPoints">B56,247.5,339.93652,446.35742,543.7988,T50</property>
+         name="sdm:polyPoints">B57,248.27808,340.7146,446.35742,543.0208,T50</property>
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall17">
@@ -249,6 +249,6 @@
       <property
          name="fromOutcome">contactDrillDown</property>
       <property
-         name="sdm:polyPoints">B50,599.0,348.39062,694.3721,448.44824,T50</property>
+         name="sdm:polyPoints">B50,599.0,348.8181,694.3721,447.67017,T50</property>
    </ControlFlowCase>
 </SDM>

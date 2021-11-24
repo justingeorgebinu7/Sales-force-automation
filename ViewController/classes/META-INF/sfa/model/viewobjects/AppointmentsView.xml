@@ -23,7 +23,8 @@
     PrecisionRule="true"
     EntityAttrName="Appointmentid"
     EntityUsage="Appointments"
-    AliasName="APPOINTMENTID"/>
+    AliasName="APPOINTMENTID"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="Name"
     PrecisionRule="true"
@@ -92,19 +93,22 @@
     PrecisionRule="true"
     EntityAttrName="Contactid"
     EntityUsage="Appointments"
-    AliasName="CONTACTID"/>
+    AliasName="CONTACTID"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="Accountid"
     PrecisionRule="true"
     EntityAttrName="Accountid"
     EntityUsage="Appointments"
-    AliasName="ACCOUNTID"/>
+    AliasName="ACCOUNTID"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="Opportunityid"
     PrecisionRule="true"
     EntityAttrName="Opportunityid"
     EntityUsage="Appointments"
-    AliasName="OPPORTUNITYID"/>
+    AliasName="OPPORTUNITYID"
+    IsQueriable="false"/>
   <ViewLinkAccessor
     Name="InviteesView"
     ViewLink="sfa.model.viewobjects.InviteesAppointmentsFkLink"

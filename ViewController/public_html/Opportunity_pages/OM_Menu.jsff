@@ -157,12 +157,19 @@
         <af:region value="#{bindings.revenueItem1.regionModel}" id="r5"/>
       </af:showDetailItem>
       <af:showDetailItem text="Documents" id="sdi8">
+        <af:quickQuery label="Search" searchDesc="Search" id="qryId1"
+                       value="#{bindings.ImplicitViewCriteriaQuery.quickQueryDescriptor}"
+                       model="#{bindings.ImplicitViewCriteriaQuery.queryModel}"
+                       queryListener="#{bindings.ImplicitViewCriteriaQuery.processQuery}">
+          <f:facet name="end">
+            <af:commandLink text="Advanced" rendered="false" id="cl1"/>
+          </f:facet>
+        </af:quickQuery>
         <af:table value="#{bindings.FilesView4.collectionModel}" var="row" rows="#{bindings.FilesView4.rangeSize}"
                   emptyText="#{bindings.FilesView4.viewable ? 'No data to display.' : 'Access Denied.'}"
                   rowBandingInterval="0" selectedRowKeys="#{bindings.FilesView4.collectionModel.selectedRow}"
                   selectionListener="#{bindings.FilesView4.collectionModel.makeCurrent}" rowSelection="single"
-                  fetchSize="#{bindings.FilesView4.rangeSize}" filterModel="#{bindings.FilesView4Query.queryDescriptor}"
-                  filterVisible="true" queryListener="#{bindings.FilesView4Query.processQuery}" varStatus="vs" id="t1"
+                  fetchSize="#{bindings.FilesView4.rangeSize}" filterModel="#{bindings.FilesView4Query.queryDescriptor}" queryListener="#{bindings.FilesView4Query.processQuery}" varStatus="vs" id="t1"
                   partialTriggers="::b3 ::b4" columnStretching="last">
           <af:column sortProperty="#{bindings.FilesView4.hints.Filename.name}" filterable="true" sortable="true"
                      headerText="#{bindings.FilesView4.hints.Filename.label}" id="c2" width="226">

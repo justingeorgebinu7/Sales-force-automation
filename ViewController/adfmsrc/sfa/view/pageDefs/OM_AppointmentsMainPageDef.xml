@@ -8,6 +8,9 @@
               id="AppointmentsView8Iterator"/>
     <searchRegion Binds="AppointmentsView8Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="AppointmentsView8Query"/>
+    <searchRegion Criteria="__ImplicitViewCriteria__" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  Binds="AppointmentsView8Iterator" id="ImplicitViewCriteriaQuery" DefaultQuickSearchAttrName="Name"
+                  InitialQueryOverridden="true"/>
   </executables>
   <bindings>
     <tree IterBinding="AppointmentsView8Iterator" id="AppointmentsView8">

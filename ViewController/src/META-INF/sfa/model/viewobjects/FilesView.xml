@@ -22,13 +22,15 @@
     PrecisionRule="true"
     EntityAttrName="Fileid"
     EntityUsage="Files"
-    AliasName="FILEID"/>
+    AliasName="FILEID"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="Filepath"
     PrecisionRule="true"
     EntityAttrName="Filepath"
     EntityUsage="Files"
-    AliasName="FILEPATH"/>
+    AliasName="FILEPATH"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="Filename"
     PrecisionRule="true"
@@ -47,7 +49,8 @@
     PrecisionRule="true"
     EntityAttrName="Oppid"
     EntityUsage="Files"
-    AliasName="OPPID"/>
+    AliasName="OPPID"
+    IsQueriable="false"/>
   <ViewLinkAccessor
     Name="OpportunityView"
     ViewLink="sfa.model.viewobjects.Files_Opportunity_FKLink"

@@ -5,8 +5,7 @@
             emptyText="#{bindings.UserroleView3.viewable ? 'No data to display.' : 'Access Denied.'}"
             rowBandingInterval="0" selectedRowKeys="#{bindings.UserroleView3.collectionModel.selectedRow}"
             selectionListener="#{bindings.UserroleView3.collectionModel.makeCurrent}" rowSelection="single"
-            fetchSize="#{bindings.UserroleView3.rangeSize}" filterModel="#{bindings.UserroleView3Query.queryDescriptor}"
-            filterVisible="true" queryListener="#{bindings.UserroleView3Query.processQuery}" varStatus="vs" id="t1"
+            fetchSize="#{bindings.UserroleView3.rangeSize}" filterModel="#{bindings.UserroleView3Query.queryDescriptor}" queryListener="#{bindings.UserroleView3Query.processQuery}" varStatus="vs" id="t1"
             columnStretching="&lt;default> (none)" partialTriggers="b2">
     <af:column sortProperty="#{bindings.UserroleView3.hints.Name.name}" filterable="true" sortable="true"
                headerText="#{bindings.UserroleView3.hints.Name.label}" id="c3" width="100%">

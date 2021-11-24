@@ -45,7 +45,8 @@
     PrecisionRule="true"
     EntityAttrName="Taskid"
     EntityUsage="Task"
-    AliasName="TASKID"/>
+    AliasName="TASKID"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="Name"
     PrecisionRule="true"
@@ -117,17 +118,20 @@
     PrecisionRule="true"
     EntityAttrName="Opportunityid"
     EntityUsage="Task"
-    AliasName="OPPORTUNITYID"/>
+    AliasName="OPPORTUNITYID"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="Contactid"
     PrecisionRule="true"
     EntityAttrName="Contactid"
     EntityUsage="Task"
-    AliasName="CONTACTID"/>
+    AliasName="CONTACTID"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="Customeraccount"
     PrecisionRule="true"
     EntityAttrName="Customeraccount"
     EntityUsage="Task"
-    AliasName="CUSTOMERACCOUNT"/>
+    AliasName="CUSTOMERACCOUNT"
+    IsQueriable="false"/>
 </ViewObject>

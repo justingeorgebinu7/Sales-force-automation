@@ -30,7 +30,8 @@
     PrecisionRule="true"
     EntityAttrName="Noteid"
     EntityUsage="Note"
-    AliasName="NOTEID"/>
+    AliasName="NOTEID"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="Content"
     PrecisionRule="true"
@@ -64,19 +65,22 @@
     PrecisionRule="true"
     EntityAttrName="Accountid"
     EntityUsage="Note"
-    AliasName="ACCOUNTID"/>
+    AliasName="ACCOUNTID"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="Contactid"
     PrecisionRule="true"
     EntityAttrName="Contactid"
     EntityUsage="Note"
-    AliasName="CONTACTID"/>
+    AliasName="CONTACTID"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="Opportunity"
     PrecisionRule="true"
     EntityAttrName="Opportunity"
     EntityUsage="Note"
-    AliasName="OPPORTUNITY"/>
+    AliasName="OPPORTUNITY"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="Subject"
     PrecisionRule="true"
@@ -95,14 +99,14 @@
     PrecisionRule="true"
     EntityAttrName="Createdby"
     EntityUsage="Note"
-    AliasName="CREATEDBY"
-    IsQueriable="false"/>
+    AliasName="CREATEDBY"/>
   <ViewAttribute
     Name="Updateddate"
     PrecisionRule="true"
     EntityAttrName="Updateddate"
     EntityUsage="Note"
-    AliasName="UPDATEDDATE">
+    AliasName="UPDATEDDATE"
+    IsQueriable="false">
     <Properties>
       <SchemaBasedProperties>
         <FMT_FORMATTER
@@ -121,13 +125,15 @@
     PrecisionRule="true"
     EntityAttrName="Updatedby"
     EntityUsage="Note"
-    AliasName="UPDATEDBY"/>
+    AliasName="UPDATEDBY"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="Createddate"
     PrecisionRule="true"
     EntityAttrName="Createddate"
     EntityUsage="Note"
-    AliasName="CREATEDDATE">
+    AliasName="CREATEDDATE"
+    IsQueriable="false">
     <Properties>
       <SchemaBasedProperties>
         <FMT_FORMAT

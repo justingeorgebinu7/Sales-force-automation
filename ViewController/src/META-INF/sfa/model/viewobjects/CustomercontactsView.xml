@@ -208,7 +208,8 @@
     PrecisionRule="true"
     EntityAttrName="Isprimarycontact"
     EntityUsage="Customercontacts"
-    AliasName="ISPRIMARYCONTACT">
+    AliasName="ISPRIMARYCONTACT"
+    IsQueriable="false">
     <Properties>
       <SchemaBasedProperties>
         <DISPLAYWIDTH
