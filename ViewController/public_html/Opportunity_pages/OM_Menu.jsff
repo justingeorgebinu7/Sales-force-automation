@@ -41,7 +41,7 @@
             <!--<af:convertNumber groupingUsed="false" pattern="#{bindings.Accountid.format}"/>-->
           </af:inputComboboxListOfValues>
           <af:link text="Manage Account" id="l1" action="accountDrillDown"
-                   inlineStyle="color:#666;">
+                   inlineStyle="color:#666;" disabled="#{bindings.Accountid.inputValue==null}">
             <af:setPropertyListener from="#{bindings.Accountid.inputValue}" to="#{pageFlowScope.currAccount}"
                                     type="action"/>
           </af:link>
@@ -58,7 +58,7 @@
             <!--<af:convertNumber groupingUsed="false" pattern="#{bindings.Primarycontact.format}"/>-->
           </af:inputComboboxListOfValues>
           <af:link text="Manage Contact" id="l2" action="contactDrillDown"
-                   inlineStyle="color:#666;">
+                   inlineStyle="color:#666;" disabled="#{bindings.Primarycontact.inputValue==null}">
             <af:setPropertyListener from="#{bindings.Primarycontact.inputValue}" to="#{pageFlowScope.currContact}"
                                     type="action"/>
           </af:link>
