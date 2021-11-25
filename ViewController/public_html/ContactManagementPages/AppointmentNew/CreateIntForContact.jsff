@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
                 xmlns:f="http://java.sun.com/jsf/core">
-  <af:panelFormLayout id="pfl1">
+  <af:panelFormLayout id="pfl1" rows="4">
     <af:inputComboboxListOfValues id="type1Id" popupTitle="Search and Select: #{bindings.Type1.hints.label}"
                                   value="#{bindings.Type1.inputValue}" label="#{bindings.Type1.hints.label}"
                                   model="#{bindings.Type1.listOfValuesModel}"
@@ -30,18 +30,18 @@
       <f:validator binding="#{bindings.Enddate.validator}"/>
       <af:convertDateTime pattern="#{bindings.Enddate.format}"/>
     </af:inputDate>
-    <af:inputText value="#{bindings.Resolution.inputValue}" label="#{bindings.Resolution.hints.label}"
-                  required="#{bindings.Resolution.hints.mandatory}" columns="#{bindings.Resolution.hints.displayWidth}"
-                  maximumLength="#{bindings.Resolution.hints.precision}"
-                  shortDesc="#{bindings.Resolution.hints.tooltip}" id="it4">
-      <f:validator binding="#{bindings.Resolution.validator}"/>
-    </af:inputText>
     <af:inputText value="#{bindings.Description.inputValue}" label="#{bindings.Description.hints.label}"
                   required="#{bindings.Description.hints.mandatory}"
                   columns="#{bindings.Description.hints.displayWidth}"
                   maximumLength="#{bindings.Description.hints.precision}"
                   shortDesc="#{bindings.Description.hints.tooltip}" id="it3" rows="5">
       <f:validator binding="#{bindings.Description.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Resolution.inputValue}" label="#{bindings.Resolution.hints.label}"
+                  required="#{bindings.Resolution.hints.mandatory}" columns="#{bindings.Resolution.hints.displayWidth}"
+                  maximumLength="#{bindings.Resolution.hints.precision}"
+                  shortDesc="#{bindings.Resolution.hints.tooltip}" id="it4">
+      <f:validator binding="#{bindings.Resolution.validator}"/>
     </af:inputText>
   </af:panelFormLayout>
   <af:button text="Save" id="b2" action="commit"/>
