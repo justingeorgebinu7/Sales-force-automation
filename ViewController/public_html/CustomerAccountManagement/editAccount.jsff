@@ -50,11 +50,7 @@
     </af:inputText>
     <f:facet name="footer"/>
   </af:panelFormLayout>
-  <af:button text="Save" id="b1" actionListener="#{bindings.Commit.execute}"/>
-  <af:button actionListener="#{bindings.Commit.execute}" text="Save and Exit" disabled="false"
+  <af:button text="Save &amp; Continue" id="b1" actionListener="#{bindings.Commit.execute}"/>
+  <af:button actionListener="#{bindings.Commit.execute}" text="Save and Close" disabled="false"
              id="b3" action="backFromMenu"/>
-  <af:button actionListener="#{bindings.Rollback.execute}" text="Cancel"
-             immediate="true" id="b2">
-    <af:resetActionListener/>
-  </af:button>
 </ui:composition>

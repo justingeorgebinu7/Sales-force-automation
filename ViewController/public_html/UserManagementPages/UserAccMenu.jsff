@@ -57,10 +57,10 @@
       <af:panelGridLayout id="pgl1">
         <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr1">
           <af:gridCell marginStart="5px" width="dontCare" id="gc1">
-            <af:button actionListener="#{bindings.Commit.execute}" text="Save" disabled="false" id="b1"/>
+            <af:button actionListener="#{bindings.Commit.execute}" text="Save &amp;  Continue" disabled="false" id="b1"/>
           </af:gridCell>
           <af:gridCell marginStart="0px" width="dontCare" id="gc2">
-            <af:button actionListener="#{bindings.Commit.execute}" text="Save and Exit" disabled="false" id="b3"
+            <af:button actionListener="#{bindings.Commit.execute}" text="Save and Close" disabled="false" id="b3"
                        action="backFromMenu"/>
           </af:gridCell>
           <af:gridCell marginStart="0px" width="dontCare" marginEnd="5px" id="gc3">

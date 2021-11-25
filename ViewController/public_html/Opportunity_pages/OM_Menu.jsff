@@ -144,16 +144,10 @@
         <af:panelGridLayout id="pgl2">
           <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr2">
             <af:gridCell marginStart="5px" width="dontCare" id="gc3">
-              <af:button actionListener="#{bindings.Commit.execute}" text="Save" id="b1"/>
+              <af:button actionListener="#{bindings.Commit.execute}" text="Save &amp; Continue" id="b1"/>
             </af:gridCell>
             <af:gridCell marginStart="5px" width="dontCare" id="gc5">
-              <af:button actionListener="#{bindings.Commit.execute}" text="Save and Exit" id="b6" action="toHome"/>
-            </af:gridCell>
-            <af:gridCell marginStart="0px" width="dontCare" marginEnd="5px" id="gc4">
-              <af:button actionListener="#{bindings.Rollback.execute}" text="Cancel"
-                         disabled="false" immediate="true" id="b5">
-                <af:resetActionListener/>
-              </af:button>
+              <af:button actionListener="#{bindings.Commit.execute}" text="Save &amp;  Close" id="b6" action="toHome"/>
             </af:gridCell>
           </af:gridRow>
         </af:panelGridLayout>

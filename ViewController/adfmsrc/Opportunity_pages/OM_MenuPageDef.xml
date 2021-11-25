@@ -88,6 +88,5 @@
     <listOfValues IterBinding="OpportunityView1Iterator" StaticList="false" Uses="LOV_Accountid" id="Accountid"/>
     <list IterBinding="OpportunityView1Iterator" StaticList="false" Uses="LOV_Currency" id="Currency"
           DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
-    <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl"/>
   </bindings>
 </pageDefinition>
