@@ -46,12 +46,12 @@
       <property
          name="fromOutcome">toAddCon</property>
       <property
-         name="sdm:polyPoints">R50,237.0,298.32715,495.36914,214.79883,L50</property>
+         name="sdm:polyPoints">R42,237.0,291.32715,495.36914,214.79883,L50</property>
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall15">
       <property
-         name="runAsDialog">false</property>
+         name="runAsDialog">true</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>deleteContactTF1&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
       <property
@@ -106,7 +106,7 @@
       <property
          name="fromOutcome">editContact</property>
       <property
-         name="sdm:polyPoints">R54,237.0,301.82715,407.0166,467.44824,L50</property>
+         name="sdm:polyPoints">R50,239.84595,298.32715,407.0166,463.94824,L46</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -120,7 +120,7 @@
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
-      id="ControlFlowCase11"
+      id="ControlFlowCase13"
       from="View2">
       <property
          name="tosrcid">__2</property>
@@ -128,5 +128,28 @@
          name="fromOutcome">*</property>
       <property
          name="fromsrcid">__1</property>
+   </ControlFlowCase>
+   <ParentAction
+      id="ParentAction11">
+      <property
+         name="activityId">parentAction1</property>
+      <property
+         name="x">94.0</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>parentAction1&lt;/b>&lt;/p>&lt;p>Activity Type:  Parent Action&lt;/p></property>
+      <property
+         name="y">479.29883</property>
+      <property
+         name="exceptionHandler">false</property>
+   </ParentAction>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase12"
+      from="View2"
+      to="ParentAction11">
+      <property
+         name="fromOutcome">contact</property>
+      <property
+         name="sdm:polyPoints">B50,196.0,352.32715,94.0,424.94824,T50</property>
    </ControlFlowCase>
 </SDM>

@@ -52,7 +52,7 @@
       </task-flow-reference>
       <input-parameter id="__11">
         <name>selectedRow</name>
-        <value>#{pageFlowScope.currRow}</value>
+        <value>#{applicationScope.currContact}</value>
       </input-parameter>
     </task-flow-call>
     <task-flow-call id="createInsertContactForAccountTF">

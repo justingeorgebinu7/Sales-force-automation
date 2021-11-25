@@ -29,10 +29,18 @@
         <document>/WEB-INF/customerAccountTaskFlows/deleteContactTF.xml</document>
         <id>deleteContactTF</id>
       </task-flow-reference>
+      <run-as-dialog>
+        <display-type>
+          <inline-popup/>
+        </display-type>
+      </run-as-dialog>
     </task-flow-call>
     <view id="EditContact">
       <page>/CustomerAccountManagement/EditContact.jsff</page>
     </view>
+    <parent-action id="parentAction1">
+      <parent-outcome>ContactDrill</parent-outcome>
+    </parent-action>
     <control-flow-rule id="__1">
       <from-activity-id>AccountContacts</from-activity-id>
       <control-flow-case id="__2">
@@ -45,6 +53,10 @@
       <control-flow-case id="__7">
         <from-outcome>editContact</from-outcome>
         <to-activity-id>EditContact</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__6">
+        <from-outcome>contact</from-outcome>
+        <to-activity-id>parentAction1</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <control-flow-rule id="__11">

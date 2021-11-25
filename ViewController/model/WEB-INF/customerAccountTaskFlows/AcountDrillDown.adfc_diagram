@@ -127,7 +127,7 @@
       <property
          name="fromsrcid">__5</property>
       <property
-         name="sdm:polyPoints">L46,499.7129,314.0918,85.69238,56.24121,R50</property>
+         name="sdm:polyPoints">L46,499.7129,314.0918,85.69238,55.890625,R50</property>
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall11">

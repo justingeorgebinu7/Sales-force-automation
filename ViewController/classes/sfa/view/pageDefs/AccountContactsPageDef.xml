@@ -24,6 +24,7 @@
           <Item Value="Buyingrole"/>
           <Item Value="Influencelevel"/>
           <Item Value="Isprimarycontact" Binds="Isprimarycontact"/>
+          <Item Value="Contactid"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

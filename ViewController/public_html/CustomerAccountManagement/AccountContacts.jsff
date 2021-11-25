@@ -17,11 +17,13 @@
             fetchSize="#{bindings.CustomercontactsView2.rangeSize}"
             filterModel="#{bindings.CustomercontactsView2Query.queryDescriptor}" filterVisible="false"
             queryListener="#{bindings.CustomercontactsView2Query.processQuery}" varStatus="vs" id="t1"
-            columnStretching="none">
+            columnStretching="none" partialTriggers="::b3">
     <af:column sortProperty="#{bindings.CustomercontactsView2.hints.Name.name}" filterable="true" sortable="true"
                headerText="#{bindings.CustomercontactsView2.hints.Name.label}" id="c1" width="100%">
       <af:link shortDesc="#{bindings.CustomercontactsView2.hints.Name.tooltip}" id="ot1" text="#{row.Name}"
-               action="editContact"/>
+               action="contact">
+        <af:setPropertyListener from="#{row.Contactid}" to="#{applicationScope.currContact}" type="action"/>
+      </af:link>
     </af:column>
     <af:column sortProperty="#{bindings.CustomercontactsView2.hints.Title.name}" filterable="true" sortable="true"
                headerText="#{bindings.CustomercontactsView2.hints.Title.label}" id="c2" width="100">
@@ -49,5 +51,6 @@
     </af:column>
   </af:table>
   <af:button text="Add" id="b1" action="toAddCon"/>
-  <af:button text="Delete" action="deleteContactTF1" id="b3"/>
+  <af:button text="Delete" action="deleteContactTF1" id="b3" useWindow="true" windowEmbedStyle="inlineDocument"
+             windowModalityType="applicationModal"/>
 </ui:composition>
