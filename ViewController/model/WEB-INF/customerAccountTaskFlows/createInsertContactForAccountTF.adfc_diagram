@@ -42,7 +42,7 @@
       <property
          name="fromOutcome">CreateInsert</property>
       <property
-         name="sdm:polyPoints">R50,231.01465,185.39648,350.0,191.5459,L50</property>
+         name="sdm:polyPoints">R50,231.79271,185.39648,349.22195,191.5459,L50</property>
    </ControlFlowCase>
    <MethodCall
       id="MethodCall7">
@@ -65,7 +65,7 @@
       <property
          name="fromOutcome">saveContact</property>
       <property
-         name="sdm:polyPoints">R50,432.0,191.5459,539.5,207.09766,L50</property>
+         name="sdm:polyPoints">R50,432.7781,191.5459,538.7219,207.09767,L50</property>
    </ControlFlowCase>
    <TaskFlowReturn
       id="TaskFlowReturn9">
@@ -90,6 +90,6 @@
       <property
          name="fromOutcome">Commit</property>
       <property
-         name="sdm:polyPoints">L40,L42</property>
+         name="sdm:polyPoints">R50,622.2781,207.09767,739.22186,200.8965,L50</property>
    </ControlFlowCase>
 </SDM>

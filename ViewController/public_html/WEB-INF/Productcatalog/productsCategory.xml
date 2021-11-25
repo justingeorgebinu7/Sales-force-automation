@@ -18,6 +18,11 @@
         <document>/WEB-INF/Productcatalog/createCategory.xml</document>
         <id>createCategory</id>
       </task-flow-reference>
+      <run-as-dialog>
+        <display-type>
+          <inline-popup/>
+        </display-type>
+      </run-as-dialog>
     </task-flow-call>
     <task-flow-call id="deleteCategory1">
       <task-flow-reference>
@@ -46,9 +51,6 @@
         </display-type>
       </run-as-dialog>
     </task-flow-call>
-    <view id="editCategory1">
-      <page>/ProductsCatalog/editCategory.jsff</page>
-    </view>
     <control-flow-rule id="__1">
       <from-activity-id>category</from-activity-id>
       <control-flow-case id="__2">
@@ -63,23 +65,12 @@
         <from-outcome>goToEdit</from-outcome>
         <to-activity-id>editCategory</to-activity-id>
       </control-flow-case>
-      <control-flow-case id="__4">
-        <from-outcome>editAsFragment</from-outcome>
-        <to-activity-id>editCategory1</to-activity-id>
-      </control-flow-case>
     </control-flow-rule>
     <control-flow-rule id="__6">
       <from-activity-id>category</from-activity-id>
       <control-flow-case id="__7">
         <from-outcome>deleteCategory1</from-outcome>
         <to-activity-id>deleteCategory1</to-activity-id>
-      </control-flow-case>
-    </control-flow-rule>
-    <control-flow-rule id="__5">
-      <from-activity-id>editCategory1</from-activity-id>
-      <control-flow-case id="__10">
-        <from-outcome>back</from-outcome>
-        <to-activity-id>category</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <use-page-fragments/>

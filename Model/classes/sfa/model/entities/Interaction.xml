@@ -32,7 +32,8 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="INTERACTION">
+    TableName="INTERACTION"
+    IsNotNull="true">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="20"/>
     </DesignTime>
@@ -190,6 +191,18 @@
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="sfa.model.entities.Interaction.Interactionid"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="InteractionTypeCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"TYPE" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="INTERACTION_TYPE_CHECK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="sfa.model.entities.Interaction.Type"/>
     </AttrArray>
   </Key>
   <Key

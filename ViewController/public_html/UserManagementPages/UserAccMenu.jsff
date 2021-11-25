@@ -47,12 +47,28 @@
                                       model="#{bindings.Supervisor1.listOfValuesModel}"
                                       required="#{bindings.Supervisor1.hints.mandatory}"
                                       columns="#{bindings.Supervisor1.hints.displayWidth}"
-                                      shortDesc="#{bindings.Supervisor1.hints.tooltip}">
+                                      shortDesc="#{bindings.Supervisor1.hints.tooltip}"
+                                      converter="#{bindings.Supervisor1.converter}">
           <f:validator binding="#{bindings.Supervisor1.validator}"/>
-          <af:convertNumber groupingUsed="false" pattern="#{bindings.Supervisor1.format}"/>
+          <!--<af:convertNumber groupingUsed="false" pattern="#{bindings.Supervisor1.format}"/>-->
         </af:inputComboboxListOfValues>
-        <af:button actionListener="#{bindings.Commit.execute}" text="Save" disabled="false"
-                   id="b1"/>
+        <af:panelGridLayout id="pgl1">
+          <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr1">
+            <af:gridCell marginStart="5px" width="dontCare" id="gc1">
+              <af:button actionListener="#{bindings.Commit.execute}" text="Save" disabled="false" id="b1"/>
+            </af:gridCell>
+            <af:gridCell marginStart="0px" width="dontCare" id="gc2">
+              <af:button actionListener="#{bindings.Commit.execute}" text="Save and Exit"
+                         disabled="false" id="b3" action="backFromMenu"/>
+            </af:gridCell>
+            <af:gridCell marginStart="0px" width="dontCare" marginEnd="5px" id="gc3">
+              <af:button actionListener="#{bindings.Rollback.execute}" text="Cancel"
+                         disabled="false" immediate="true" id="b2">
+                <af:resetActionListener/>
+              </af:button>
+            </af:gridCell>
+          </af:gridRow>
+        </af:panelGridLayout>
       </af:panelFormLayout>
     </af:showDetailItem>
     <af:showDetailItem id="tab2" text="Roles">

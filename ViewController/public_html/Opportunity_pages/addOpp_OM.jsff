@@ -1,19 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
                 xmlns:f="http://java.sun.com/jsf/core">
-  <af:panelFormLayout id="pfl1">
+  <af:panelFormLayout id="pfl1" rows="7">
     <af:inputText value="#{bindings.Title.inputValue}" label="#{bindings.Title.hints.label}"
                   required="#{bindings.Title.hints.mandatory}" columns="#{bindings.Title.hints.displayWidth}"
                   maximumLength="#{bindings.Title.hints.precision}" shortDesc="#{bindings.Title.hints.tooltip}"
                   id="it1">
       <f:validator binding="#{bindings.Title.validator}"/>
-    </af:inputText>
-    <af:inputText value="#{bindings.Description.inputValue}" label="#{bindings.Description.hints.label}"
-                  required="#{bindings.Description.hints.mandatory}"
-                  columns="#{bindings.Description.hints.displayWidth}"
-                  maximumLength="#{bindings.Description.hints.precision}"
-                  shortDesc="#{bindings.Description.hints.tooltip}" id="it2" rows="4">
-      <f:validator binding="#{bindings.Description.validator}"/>
     </af:inputText>
     <af:inputText value="#{bindings.Winprobability.inputValue}" label="#{bindings.Winprobability.hints.label}"
                   required="#{bindings.Winprobability.hints.mandatory}"
@@ -99,6 +92,13 @@
                                   shortDesc="#{bindings.Risklevel.hints.tooltip}">
       <f:validator binding="#{bindings.Risklevel.validator}"/>
     </af:inputComboboxListOfValues>
+    <af:inputText value="#{bindings.Description.inputValue}" label="#{bindings.Description.hints.label}"
+                  required="#{bindings.Description.hints.mandatory}"
+                  columns="60"
+                  maximumLength="#{bindings.Description.hints.precision}"
+                  shortDesc="#{bindings.Description.hints.tooltip}" id="it2" rows="6">
+      <f:validator binding="#{bindings.Description.validator}"/>
+    </af:inputText>
   </af:panelFormLayout>
   <af:button text="Save" id="b1" action="toCommit"/>
   <af:button text="Cancel" id="b2" action="discard" immediate="true"/>

@@ -14,7 +14,7 @@
             rowBandingInterval="0" selectedRowKeys="#{bindings.RevenueitemView2.collectionModel.selectedRow}"
             selectionListener="#{bindings.RevenueitemView2.collectionModel.makeCurrent}" rowSelection="single"
             fetchSize="#{bindings.RevenueitemView2.rangeSize}"
-            filterModel="#{bindings.RevenueitemView2Query.queryDescriptor}" filterVisible="true"
+            filterModel="#{bindings.RevenueitemView2Query.queryDescriptor}"
             queryListener="#{bindings.RevenueitemView2Query.processQuery}" varStatus="vs" id="t1" partialTriggers="b2">
     <af:column sortProperty="#{bindings.RevenueitemView2.hints.Name.name}" filterable="true" sortable="true"
                headerText="#{bindings.RevenueitemView2.hints.Name.label}" id="c6" width="100%">

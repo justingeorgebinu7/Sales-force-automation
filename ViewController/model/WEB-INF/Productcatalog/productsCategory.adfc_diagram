@@ -24,6 +24,8 @@
    <TaskFlowCall
       id="TaskFlowCall3">
       <property
+         name="runAsDialog">true</property>
+      <property
          name="description">&lt;html>&lt;p>&lt;b>createCategory&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
       <property
          name="activityId">createCategory</property>
@@ -46,7 +48,7 @@
       <property
          name="fromOutcome">addCategory</property>
       <property
-         name="sdm:polyPoints">R55,293.39288,207.55783,418.05542,199.39648,L50</property>
+         name="sdm:polyPoints">R55,293.14087,207.36984,418.2434,199.39647,L50</property>
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall8">
@@ -79,7 +81,7 @@
       <property
          name="fromsrcid">__6</property>
       <property
-         name="sdm:polyPoints">L50,208.03394,203.09178,69.03027,124.661385,B50</property>
+         name="sdm:polyPoints">L50,208.22194,203.09178,69.03027,124.4734,B50</property>
    </ControlFlowCase>
    <TaskFlowReturn
       id="TaskFlowReturn10">
@@ -104,7 +106,7 @@
       <property
          name="fromOutcome">exitCategory</property>
       <property
-         name="sdm:polyPoints">R45,291.96606,198.62573,496.0339,70.89648,L50</property>
+         name="sdm:polyPoints">R45,291.77808,198.81372,496.22192,70.89648,L50</property>
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall12">
@@ -133,43 +135,6 @@
       <property
          name="fromOutcome">goToEdit</property>
       <property
-         name="sdm:polyPoints">B65,258.93213,258.05783,379.01953,404.83276,T50</property>
-   </ControlFlowCase>
-   <View
-      id="View14">
-      <property
-         name="activityId">editCategory1</property>
-      <property
-         name="pageFragment">true</property>
-      <property
-         name="x">164.35645</property>
-      <property
-         name="description">&lt;html>&lt;p>&lt;b>editCategory1&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
-      <property
-         name="y">463.79883</property>
-      <property
-         name="page">/ProductsCatalog/editCategory.jsff</property>
-      <property
-         name="exceptionHandler">false</property>
-   </View>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase15"
-      from="View2"
-      to="View14">
-      <property
-         name="fromOutcome">editAsFragment</property>
-      <property
-         name="sdm:polyPoints">B35,241.06789,258.05783,159.89038,406.21072,T43</property>
-   </ControlFlowCase>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase16"
-      from="View14"
-      to="View2">
-      <property
-         name="fromOutcome">back</property>
-      <property
-         name="sdm:polyPoints">T57,168.82251,408.48215,250.0,260.31418,B50</property>
+         name="sdm:polyPoints">B50,250.0,257.0918,379.01953,405.79883,T50</property>
    </ControlFlowCase>
 </SDM>

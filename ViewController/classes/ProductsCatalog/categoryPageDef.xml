@@ -4,8 +4,6 @@
   <parameters/>
   <executables>
     <variableIterator id="variables"/>
-    <taskFlow id="dynamicRegion1" taskFlowId="${viewScope.categoryBean.dynamicTaskFlowId}" activation="deferred"
-              xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
     <iterator Binds="CategoryView1" RangeSize="25" DataControl="AppModuleDataControl" id="CategoryView1Iterator"/>
     <searchRegion Binds="CategoryView1Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="CategoryView1Query"/>

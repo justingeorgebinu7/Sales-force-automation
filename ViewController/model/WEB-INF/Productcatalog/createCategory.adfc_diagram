@@ -7,7 +7,7 @@
       <property
          name="activityId">addCategory</property>
       <property
-         name="pageFragment">true</property>
+         name="pageFragment">false</property>
       <property
          name="x">362.0</property>
       <property
@@ -17,7 +17,7 @@
       <property
          name="y">222.04004</property>
       <property
-         name="page">/ProductsCatalog/addCategory.jsff</property>
+         name="page">/ProductsCatalog/addCategory.jsf</property>
       <property
          name="exceptionHandler">false</property>
    </View>
@@ -42,7 +42,7 @@
       <property
          name="fromOutcome">toCommit</property>
       <property
-         name="sdm:polyPoints">R50,404.49823,221.68945,549.0018,231.09766,L50</property>
+         name="sdm:polyPoints">R50,403.77808,221.68945,549.7219,231.09766,L50</property>
    </ControlFlowCase>
    <MethodCall
       id="MethodCall8">
@@ -67,6 +67,64 @@
       <property
          name="fromOutcome">CreateInsert</property>
       <property
-         name="sdm:polyPoints">R50,182.01465,297.79883,321.0,221.68945,L50</property>
+         name="sdm:polyPoints">R50,182.79271,297.79883,320.22192,221.68945,L50</property>
+   </ControlFlowCase>
+   <TaskFlowReturn
+      id="TaskFlowReturn7">
+      <property
+         name="activityId">taskFlowReturn1</property>
+      <property
+         name="x">761.0</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>taskFlowReturn1&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Return&lt;/p>&lt;p>Outcome:  taskFlowReturn1&lt;/p></property>
+      <property
+         name="y">170.89648</property>
+      <property
+         name="finish">true</property>
+      <property
+         name="exceptionHandler">false</property>
+   </TaskFlowReturn>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase8"
+      from="MethodCall4"
+      to="TaskFlowReturn7">
+      <property
+         name="fromOutcome">Commit</property>
+      <property
+         name="sdm:polyPoints">R50,633.2781,231.09766,719.22186,170.54591,L50</property>
+   </ControlFlowCase>
+   <MethodCall
+      id="MethodCall9">
+      <property
+         name="activityId">Delete</property>
+      <property
+         name="x">489.5</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>Delete&lt;/b>&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
+      <property
+         name="y">409.44824</property>
+      <property
+         name="exceptionHandler">false</property>
+   </MethodCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase10"
+      from="View2"
+      to="MethodCall9">
+      <property
+         name="fromOutcome">discard</property>
+      <property
+         name="sdm:polyPoints">B50,362.0,276.46753,485.22192,354.31955,T43</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase11"
+      from="MethodCall9"
+      to="MethodCall4">
+      <property
+         name="fromOutcome">Delete</property>
+      <property
+         name="sdm:polyPoints">T57,493.77808,354.31955,591.5,285.87573,B50</property>
    </ControlFlowCase>
 </SDM>

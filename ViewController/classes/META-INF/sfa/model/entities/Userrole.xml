@@ -74,7 +74,8 @@
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
-    TableName="USERROLE"/>
+    TableName="USERROLE"
+    IsNotNull="true"/>
   <AccessorAttribute
     Name="Role"
     Association="sfa.model.entities.UserroleRoleFkAssoc"
@@ -104,6 +105,18 @@
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="sfa.model.entities.Userrole.Userroleid"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="UserroleRoleidCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"ROLEID" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="USERROLE_ROLEID_CHECK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="sfa.model.entities.Userrole.Roleid"/>
     </AttrArray>
   </Key>
   <Key

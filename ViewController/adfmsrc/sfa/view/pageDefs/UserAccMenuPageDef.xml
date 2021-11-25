@@ -38,5 +38,6 @@
     </attributeValues>
     <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
     <listOfValues IterBinding="UseraccountView1Iterator" StaticList="false" Uses="LOV_Supervisor" id="Supervisor1"/>
+    <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl"/>
   </bindings>
 </pageDefinition>

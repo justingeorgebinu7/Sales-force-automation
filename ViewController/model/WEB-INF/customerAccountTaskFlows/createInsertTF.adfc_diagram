@@ -59,7 +59,7 @@
       <property
          name="fromsrcid">__1</property>
       <property
-         name="sdm:polyPoints">R50,191.01465,277.0459,255.5,283.34473,L50</property>
+         name="sdm:polyPoints">R50,191.79271,277.0459,254.72194,283.34473,L50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -98,7 +98,7 @@
       <property
          name="fromOutcome">Commit</property>
       <property
-         name="sdm:polyPoints">R50,544.5,250.29297,667.0,240.89648,L50</property>
+         name="sdm:polyPoints">R50,545.2781,250.29297,666.2219,240.89648,L50</property>
    </ControlFlowCase>
    <MethodCall
       id="MethodCall9">
@@ -121,7 +121,7 @@
       <property
          name="fromOutcome">discard</property>
       <property
-         name="sdm:polyPoints">B50,296.5,337.34473,428.5,463.79883,T50</property>
+         name="sdm:polyPoints">B50,296.5,338.1228,424.22192,463.02072,T43</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -131,6 +131,6 @@
       <property
          name="fromOutcome">Delete</property>
       <property
-         name="sdm:polyPoints">T56,432.0,463.79883,503.5,304.29297,B50</property>
+         name="sdm:polyPoints">T57,432.77808,463.02072,503.5,305.07104,B50</property>
    </ControlFlowCase>
 </SDM>

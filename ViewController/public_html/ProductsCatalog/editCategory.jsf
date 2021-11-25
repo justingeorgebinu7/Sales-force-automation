@@ -4,6 +4,7 @@
   <af:document title="Edit category" id="d1">
     <af:messages id="m1"/>
     <af:form id="f1">
+      <af:spacer id="s1" height="30px"/>
       <af:panelFormLayout id="pfl1">
         <af:inputText value="#{bindings.Name.inputValue}" label="#{bindings.Name.hints.label}"
                       required="#{bindings.Name.hints.mandatory}" columns="#{bindings.Name.hints.displayWidth}"
@@ -12,8 +13,8 @@
           <f:validator binding="#{bindings.Name.validator}"/>
         </af:inputText>
       </af:panelFormLayout>
-      <af:button text="Save" id="b1"/>
-      <af:button text="Cancel" id="b2" immediate="true"/>
+      <af:button text="Save" id="b1" action="commit"/>
+      <af:button text="Cancel" id="b2" immediate="true" action="rollback"/>
     </af:form>
   </af:document>
 </f:view>

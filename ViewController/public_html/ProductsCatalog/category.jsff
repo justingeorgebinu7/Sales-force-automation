@@ -5,25 +5,17 @@
             emptyText="#{bindings.CategoryView1.viewable ? 'No data to display.' : 'Access Denied.'}"
             rowBandingInterval="0" selectedRowKeys="#{bindings.CategoryView1.collectionModel.selectedRow}"
             selectionListener="#{bindings.CategoryView1.collectionModel.makeCurrent}" rowSelection="single"
-            fetchSize="#{bindings.CategoryView1.rangeSize}" filterModel="#{bindings.CategoryView1Query.queryDescriptor}"
-            filterVisible="true" queryListener="#{bindings.CategoryView1Query.processQuery}" varStatus="vs" id="t1"
-            columnStretching="last" partialTriggers="b2">
+            fetchSize="#{bindings.CategoryView1.rangeSize}" filterModel="#{bindings.CategoryView1Query.queryDescriptor}" queryListener="#{bindings.CategoryView1Query.processQuery}" varStatus="vs" id="t1"
+            columnStretching="last" partialTriggers="::b2 ::b1">
     <af:column sortProperty="#{bindings.CategoryView1.hints.Name.name}" filterable="true" sortable="true"
                headerText="#{bindings.CategoryView1.hints.Name.label}" id="c1" width="100%">
       <af:link shortDesc="#{bindings.CategoryView1.hints.Name.tooltip}" id="ot1" text="#{row.Name}"
-               action="editAsFragment"/>
+               action="goToEdit" useWindow="true" windowEmbedStyle="inlineDocument"
+               windowModalityType="applicationModal" windowHeight="300" windowWidth="600"/>
     </af:column>
   </af:table>
-  <af:button text="Add" id="b1">
-    <af:showPopupBehavior popupId="p1"/>
-  </af:button>
-  <af:popup childCreation="deferred" autoCancel="disabled" id="p1" contentDelivery="lazyUncached"
-            popupCanceledListener="#{viewScope.categoryBean.cancelled}">
-    <af:dialog id="d1" type="none" title="Choose Category">
-      <af:region value="#{bindings.dynamicRegion1.regionModel}" id="r1" binding="#{viewScope.categoryBean.category}"/>
-      <f:facet name="buttonBar"/>
-    </af:dialog>
-  </af:popup>
+  <af:button text="Add" id="b1" useWindow="true" windowEmbedStyle="inlineDocument"
+             windowModalityType="applicationModal" action="addCategory" windowHeight="300" windowWidth="600"/>
   <af:button text="Delete" action="deleteCategory1" id="b2" useWindow="true" windowEmbedStyle="inlineDocument"
              windowModalityType="applicationModal"/>
   <af:button text="Back" id="b3" action="exitCategory"/>

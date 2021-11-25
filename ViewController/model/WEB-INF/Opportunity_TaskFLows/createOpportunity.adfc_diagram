@@ -70,7 +70,7 @@
       <property
          name="fromOutcome">CreateInsert</property>
       <property
-         name="sdm:polyPoints">R50,110.01465,205.48828,277.0,204.49414,L50</property>
+         name="sdm:polyPoints">R50,110.79272,205.48827,276.22192,204.49414,L50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -80,7 +80,7 @@
       <property
          name="fromOutcome">toCommit</property>
       <property
-         name="sdm:polyPoints">R50,359.0,204.49414,501.5,213.09766,L50</property>
+         name="sdm:polyPoints">R50,359.77808,204.49414,500.72192,213.09766,L50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -90,7 +90,7 @@
       <property
          name="fromOutcome">Commit</property>
       <property
-         name="sdm:polyPoints">R50,583.5,213.09766,696.0,204.19531,L50</property>
+         name="sdm:polyPoints">R50,584.2781,213.09766,695.2219,204.1953,L50</property>
    </ControlFlowCase>
    <MethodCall
       id="MethodCall10">
@@ -113,7 +113,7 @@
       <property
          name="fromOutcome">discard</property>
       <property
-         name="sdm:polyPoints">B50,318.0,258.49414,438.5,393.79883,T50</property>
+         name="sdm:polyPoints">B50,318.0,259.27222,434.22192,393.02075,T43</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -123,6 +123,6 @@
       <property
          name="fromOutcome">Delete</property>
       <property
-         name="sdm:polyPoints">T56,442.0,393.79883,542.5,267.09766,B50</property>
+         name="sdm:polyPoints">T57,442.77808,393.02075,542.5,267.87573,B50</property>
    </ControlFlowCase>
 </SDM>

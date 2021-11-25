@@ -7,13 +7,13 @@
       <property
          name="activityId">editCategory2</property>
       <property
-         name="x">515.0</property>
+         name="x">415.0</property>
       <property
          name="start">true</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>Edit&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity ID:  editCategory2&lt;/p>&lt;p>Activity Type:  View&lt;/p>&lt;p/>&lt;p>&lt;em>Edit Category&lt;br/>&lt;/em>&lt;/p></property>
       <property
-         name="y">334.68945</property>
+         name="y">321.08008</property>
       <property
          name="page">/ProductsCatalog/editCategory.jsf</property>
       <property
@@ -28,7 +28,7 @@
       <property
          name="description">&lt;html>&lt;p>&lt;b>taskFlowReturn1&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Return&lt;/p>&lt;p>Outcome:  taskFlowReturn1&lt;/p></property>
       <property
-         name="y">157.24707</property>
+         name="y">154.44238</property>
       <property
          name="finish">true</property>
       <property
@@ -49,24 +49,70 @@
       <property
          name="exceptionHandler">false</property>
    </TaskFlowReturn>
+   <MethodCall
+      id="MethodCall8">
+      <property
+         name="activityId">Commit</property>
+      <property
+         name="x">637.5</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>Commit&lt;/b>&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
+      <property
+         name="y">214.14941</property>
+      <property
+         name="exceptionHandler">false</property>
+   </MethodCall>
+   <MethodCall
+      id="MethodCall9">
+      <property
+         name="activityId">Rollback</property>
+      <property
+         name="x">655.5</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>Rollback&lt;/b>&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
+      <property
+         name="y">508.1494</property>
+      <property
+         name="exceptionHandler">false</property>
+   </MethodCall>
    <ControlFlowCase
       islink="true"
-      id="ControlFlowCase6"
+      id="ControlFlowCase10"
       from="View3"
-      to="TaskFlowReturn4">
+      to="MethodCall8">
       <property
          name="fromOutcome">commit</property>
       <property
-         name="sdm:polyPoints">R46,556.0,330.83887,806.0,156.89648,L50</property>
+         name="sdm:polyPoints">R50,456.77805,320.7295,595.7219,213.79883,L50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
-      id="ControlFlowCase7"
+      id="ControlFlowCase11"
+      from="MethodCall8"
+      to="TaskFlowReturn4">
+      <property
+         name="fromOutcome">Commit</property>
+      <property
+         name="sdm:polyPoints">R50,678.5,213.79883,806.0,154.0918,L50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase12"
       from="View3"
-      to="TaskFlowReturn5">
+      to="MethodCall9">
       <property
          name="fromOutcome">rollback</property>
       <property
-         name="sdm:polyPoints">R54,556.0,337.83887,818.0,410.89648,L50</property>
+         name="sdm:polyPoints">B50,415.0,374.7295,614.5,507.79883,L50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase13"
+      from="MethodCall9"
+      to="TaskFlowReturn5">
+      <property
+         name="fromOutcome">Rollback</property>
+      <property
+         name="sdm:polyPoints">R50,696.5,507.79883,818.0,410.89648,L50</property>
    </ControlFlowCase>
 </SDM>

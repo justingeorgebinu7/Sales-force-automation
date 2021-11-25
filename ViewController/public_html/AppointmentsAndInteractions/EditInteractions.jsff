@@ -42,5 +42,5 @@
   </af:panelFormLayout>
   <af:button text="Save" id="b1" actionListener="#{bindings.Commit.execute}"
              action="backFromEdit"/>
-  <af:button text="Cancel" id="b2" action="backFromEdit"/>
+  <af:button text="Cancel" id="b2" action="backFromEdit" immediate="true"/>
 </ui:composition>

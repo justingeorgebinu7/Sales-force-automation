@@ -104,8 +104,7 @@
     PrecisionRule="true"
     EntityAttrName="Percentageofcompletion"
     EntityUsage="Task"
-    AliasName="PERCENTAGEOFCOMPLETION"
-    IsQueriable="false">
+    AliasName="PERCENTAGEOFCOMPLETION">
     <Properties>
       <SchemaBasedProperties>
         <DISPLAYWIDTH

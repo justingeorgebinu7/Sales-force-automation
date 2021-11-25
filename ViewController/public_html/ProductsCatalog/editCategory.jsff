@@ -9,5 +9,5 @@
     </af:inputText>
   </af:panelFormLayout>
   <af:button actionListener="#{bindings.Commit.execute}" text="Save" disabled="false" id="b1" action="back"/>
-  <af:button text="Cancel" id="b2" action="back"/>
+  <af:button text="Cancel" id="b2" action="back" immediate="true"/>
 </ui:composition>

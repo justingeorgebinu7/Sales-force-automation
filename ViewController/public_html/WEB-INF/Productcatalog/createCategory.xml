@@ -6,7 +6,7 @@
       <shared/>
     </data-control-scope>
     <view id="addCategory">
-      <page>/ProductsCatalog/addCategory.jsff</page>
+      <page>/ProductsCatalog/addCategory.jsf</page>
     </view>
     <method-call id="Commit">
       <method>#{bindings.Commit.execute}</method>
@@ -20,11 +20,26 @@
         <fixed-outcome>CreateInsert</fixed-outcome>
       </outcome>
     </method-call>
+    <task-flow-return id="taskFlowReturn1">
+      <outcome>
+        <name>taskFlowReturn1</name>
+      </outcome>
+    </task-flow-return>
+    <method-call id="Delete">
+      <method>#{bindings.Delete.execute}</method>
+      <outcome>
+        <fixed-outcome>Delete</fixed-outcome>
+      </outcome>
+    </method-call>
     <control-flow-rule id="__3">
       <from-activity-id>addCategory</from-activity-id>
       <control-flow-case id="__4">
         <from-outcome>toCommit</from-outcome>
         <to-activity-id>Commit</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__7">
+        <from-outcome>discard</from-outcome>
+        <to-activity-id>Delete</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <control-flow-rule id="__1">
@@ -34,6 +49,19 @@
         <to-activity-id>addCategory</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
-    <use-page-fragments/>
+    <control-flow-rule id="__5">
+      <from-activity-id>Commit</from-activity-id>
+      <control-flow-case id="__6">
+        <from-outcome>Commit</from-outcome>
+        <to-activity-id>taskFlowReturn1</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__8">
+      <from-activity-id>Delete</from-activity-id>
+      <control-flow-case id="__9">
+        <from-outcome>Delete</from-outcome>
+        <to-activity-id>Commit</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
   </task-flow-definition>
 </adfc-config>

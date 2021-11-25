@@ -4,11 +4,9 @@
   <parameters/>
   <executables>
     <variableIterator id="variables"/>
-    <iterator Binds="CategoryView3" RangeSize="25" DataControl="AppModuleDataControl" id="CategoryView3Iterator"/>
     <iterator Binds="CategoryView1" RangeSize="25" DataControl="AppModuleDataControl" id="CategoryView1Iterator"/>
   </executables>
   <bindings>
-    <action IterBinding="CategoryView3Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
     <attributeValues IterBinding="CategoryView1Iterator" id="Name">
       <AttrNames>
         <Item Value="Name"/>

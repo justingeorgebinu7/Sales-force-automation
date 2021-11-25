@@ -465,7 +465,6 @@
     <page path="/ProductsCatalog/category.jsff" usageId="sfa_view_categoryPageDef"/>
     <page path="/WEB-INF/Productcatalog/createCategory.xml#createCategory@Commit"
           usageId="sfa_view_createCategory_createCategory_CommitPageDef"/>
-    <page path="/ProductsCatalog/addCategory.jsff" usageId="sfa_view_addCategoryPageDef"/>
     <page path="/ProductsCatalog/editCategory.jsff" usageId="sfa_view_editCategoryPageDef"/>
     <page path="/WEB-INF/Productcatalog/deleteCategory.xml#deleteCategory@Delete"
           usageId="sfa_view_deleteCategory_deleteCategory_DeletePageDef"/>
@@ -530,6 +529,15 @@
     <page path="/WEB-INF/UserManagement/userRoleManagement.xml#userRoleManagement@Rollback"
           usageId="sfa_view_userRoleManagement_userRoleManagement_RollbackPageDef"/>
     <page path="/UserManagementPages/dashboard.jsff" usageId="sfa_view_dashboardPageDef"/>
+    <page path="/WEB-INF/customerAccountTaskFlows/createInsertAccount.xml#createInsertAccount@Delete"
+          usageId="sfa_view_createInsertAccount_createInsertAccount_DeletePageDef"/>
+    <page path="/ProductsCatalog/addCategory.jsf" usageId="sfa_view_addCategoryPageDef"/>
+    <page path="/WEB-INF/Productcatalog/createCategory.xml#createCategory@Delete"
+          usageId="sfa_view_createCategory_createCategory_DeletePageDef"/>
+    <page path="/WEB-INF/Productcatalog/editCategory.xml#editCategory@Commit"
+          usageId="sfa_view_editCategory_editCategory_CommitPageDef"/>
+    <page path="/WEB-INF/Productcatalog/editCategory.xml#editCategory@Rollback"
+          usageId="sfa_view_editCategory_editCategory_RollbackPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="sfa_view_untitled2PageDef" path="sfa.view.pageDefs.untitled2PageDef"/>
@@ -1049,6 +1057,14 @@
     <page id="sfa_view_userRoleManagement_userRoleManagement_RollbackPageDef"
           path="UserManagement.userRoleManagement_userRoleManagement_RollbackPageDef"/>
     <page id="sfa_view_dashboardPageDef" path="UserManagementPages.dashboardPageDef"/>
+    <page id="sfa_view_createInsertAccount_createInsertAccount_DeletePageDef"
+          path="customerAccountTaskFlows.createInsertAccount_createInsertAccount_DeletePageDef"/>
+    <page id="sfa_view_createCategory_createCategory_DeletePageDef"
+          path="Productcatalog.createCategory_createCategory_DeletePageDef"/>
+    <page id="sfa_view_editCategory_editCategory_CommitPageDef"
+          path="Productcatalog.editCategory_editCategory_CommitPageDef"/>
+    <page id="sfa_view_editCategory_editCategory_RollbackPageDef"
+          path="Productcatalog.editCategory_editCategory_RollbackPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="sfa.model.entities"

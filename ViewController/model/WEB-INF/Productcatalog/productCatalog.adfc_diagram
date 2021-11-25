@@ -46,7 +46,7 @@
       <property
          name="fromOutcome">create</property>
       <property
-         name="sdm:polyPoints">T50,414.99997,231.76782,524.3535,176.57687,B50</property>
+         name="sdm:polyPoints">T50,414.99997,231.76782,524.3535,176.5769,B50</property>
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall5">
@@ -79,7 +79,7 @@
       <property
          name="fromsrcid">__3</property>
       <property
-         name="sdm:polyPoints">L50,374.0,286.5459,106.362305,66.890625,R50</property>
+         name="sdm:polyPoints">L50,373.2219,286.5459,107.14037,66.89064,R50</property>
    </ControlFlowCase>
    <View
       id="View7">
@@ -143,23 +143,6 @@
       <property
          name="fromOutcome">manageCategory</property>
       <property
-         name="sdm:polyPoints">B50,414.99997,341.32397,498.3584,402.02078,T50</property>
+         name="sdm:polyPoints">B50,414.99997,341.32397,498.3584,402.02075,T50</property>
    </ControlFlowCase>
-   <TaskFlowCall
-      id="TaskFlowCall12">
-      <property
-         name="description">&lt;html>&lt;p>&lt;b>__productCatalog1&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
-      <property
-         name="activityId">__productCatalog1</property>
-      <property
-         name="x">167.79785</property>
-      <property
-         name="y">240.14941</property>
-      <property
-         name="documentReference">/WEB-INF/Productcatalog/productCatalog.xml</property>
-      <property
-         name="exceptionHandler">false</property>
-      <property
-         name="taskFlowId">productCatalog</property>
-   </TaskFlowCall>
 </SDM>
