@@ -21,7 +21,7 @@
     <af:column sortProperty="#{bindings.CustomercontactsView2.hints.Name.name}" filterable="true" sortable="true"
                headerText="#{bindings.CustomercontactsView2.hints.Name.label}" id="c1" width="100%">
       <af:link shortDesc="#{bindings.CustomercontactsView2.hints.Name.tooltip}" id="ot1" text="#{row.Name}"
-               action="contact">
+               action="ContactDrill">
         <af:setPropertyListener from="#{row.Contactid}" to="#{applicationScope.currContact}" type="action"/>
       </af:link>
     </af:column>

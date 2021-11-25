@@ -118,17 +118,6 @@
       <property
          name="sdm:polyPoints">L54,404.1534,470.94824,237.0,305.32715,R58</property>
    </ControlFlowCase>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase13"
-      from="View2">
-      <property
-         name="tosrcid">__2</property>
-      <property
-         name="fromOutcome">*</property>
-      <property
-         name="fromsrcid">__1</property>
-   </ControlFlowCase>
    <ParentAction
       id="ParentAction11">
       <property
@@ -148,8 +137,19 @@
       from="View2"
       to="ParentAction11">
       <property
-         name="fromOutcome">contact</property>
+         name="fromOutcome">ContactDrill</property>
       <property
          name="sdm:polyPoints">B50,196.0,352.32715,94.0,424.94824,T50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase13"
+      from="View2">
+      <property
+         name="tosrcid">__2</property>
+      <property
+         name="fromOutcome">*</property>
+      <property
+         name="fromsrcid">__1</property>
    </ControlFlowCase>
 </SDM>

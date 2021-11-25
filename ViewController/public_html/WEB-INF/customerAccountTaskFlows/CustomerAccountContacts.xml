@@ -55,7 +55,7 @@
         <to-activity-id>EditContact</to-activity-id>
       </control-flow-case>
       <control-flow-case id="__6">
-        <from-outcome>contact</from-outcome>
+        <from-outcome>ContactDrill</from-outcome>
         <to-activity-id>parentAction1</to-activity-id>
       </control-flow-case>
     </control-flow-rule>

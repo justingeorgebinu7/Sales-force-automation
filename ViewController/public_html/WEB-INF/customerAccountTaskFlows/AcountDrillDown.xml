@@ -31,7 +31,7 @@
       </task-flow-reference>
       <input-parameter id="__9">
         <name>selectedRow</name>
-        <value>#{pageFlowScope.currRow}</value>
+        <value>#{applicationScope.currContact}</value>
       </input-parameter>
     </task-flow-call>
     <task-flow-return id="taskFlowReturn1">
