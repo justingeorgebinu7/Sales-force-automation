@@ -1,13 +1,19 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
                 xmlns:f="http://java.sun.com/jsf/core">
-  <af:panelFormLayout id="pfl1">
+  <af:panelFormLayout id="pfl1" rows="4">
     <af:selectOneChoice value="#{bindings.Productid.inputValue}" label="#{bindings.Productid.label}"
                         required="#{bindings.Productid.hints.mandatory}" shortDesc="#{bindings.Productid.hints.tooltip}"
                         id="soc1" autoSubmit="true" valueChangeListener="#{RevenueItem.productSelect}">
       <f:selectItems value="#{bindings.Productid.items}" id="si1"/>
       <f:validator binding="#{bindings.Productid.validator}"/>
     </af:selectOneChoice>
+    <af:selectOneRadio value="#{bindings.Currency.inputValue}" label="#{bindings.Currency.label}"
+                       required="#{bindings.Currency.hints.mandatory}" shortDesc="#{bindings.Currency.hints.tooltip}"
+                       id="sor1" layout="horizontal" autoSubmit="true" valueChangeListener="#{currencyBean.covert}">
+      <f:selectItems value="#{bindings.Currency.items}" id="si2"/>
+      <f:validator binding="#{bindings.Currency.validator}"/>
+    </af:selectOneRadio>
     <af:inputText value="#{bindings.Quantity.inputValue}" label="#{bindings.Quantity.hints.label}"
                   required="#{bindings.Quantity.hints.mandatory}" columns="#{bindings.Quantity.hints.displayWidth}"
                   maximumLength="#{bindings.Quantity.hints.precision}" shortDesc="#{bindings.Quantity.hints.tooltip}"
@@ -15,12 +21,6 @@
       <f:validator binding="#{bindings.Quantity.validator}"/>
       <af:convertNumber groupingUsed="false" pattern="#{bindings.Quantity.format}"/>
     </af:inputText>
-    <af:selectOneRadio value="#{bindings.Currency.inputValue}" label="#{bindings.Currency.label}"
-                       required="#{bindings.Currency.hints.mandatory}" shortDesc="#{bindings.Currency.hints.tooltip}"
-                       id="sor1" layout="horizontal" autoSubmit="true" valueChangeListener="#{currencyBean.covert}">
-      <f:selectItems value="#{bindings.Currency.items}" id="si2"/>
-      <f:validator binding="#{bindings.Currency.validator}"/>
-    </af:selectOneRadio>
     <af:inputText value="#{bindings.Estimatedprice.inputValue}" label="#{bindings.Estimatedprice.hints.label}"
                   required="#{bindings.Estimatedprice.hints.mandatory}"
                   columns="#{bindings.Estimatedprice.hints.displayWidth}"

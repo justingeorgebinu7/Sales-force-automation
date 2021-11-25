@@ -6,7 +6,7 @@
   </af:menuBar>
   <af:panelTabbed position="start" id="pt1" verticalTabMode="iconAndText">
     <af:showDetailItem id="tab1" text="Manage User">
-      <af:panelFormLayout id="pfl1">
+      <af:panelFormLayout id="pfl1" rows="3">
         <af:inputText value="#{bindings.Firstname.inputValue}" label="#{bindings.Firstname.hints.label}"
                       required="#{bindings.Firstname.hints.mandatory}"
                       columns="#{bindings.Firstname.hints.displayWidth}"
@@ -52,24 +52,25 @@
           <f:validator binding="#{bindings.Supervisor1.validator}"/>
           <!--<af:convertNumber groupingUsed="false" pattern="#{bindings.Supervisor1.format}"/>-->
         </af:inputComboboxListOfValues>
-        <af:panelGridLayout id="pgl1">
-          <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr1">
-            <af:gridCell marginStart="5px" width="dontCare" id="gc1">
-              <af:button actionListener="#{bindings.Commit.execute}" text="Save" disabled="false" id="b1"/>
-            </af:gridCell>
-            <af:gridCell marginStart="0px" width="dontCare" id="gc2">
-              <af:button actionListener="#{bindings.Commit.execute}" text="Save and Exit"
-                         disabled="false" id="b3" action="backFromMenu"/>
-            </af:gridCell>
-            <af:gridCell marginStart="0px" width="dontCare" marginEnd="5px" id="gc3">
-              <af:button actionListener="#{bindings.Rollback.execute}" text="Cancel"
-                         disabled="false" immediate="true" id="b2">
-                <af:resetActionListener/>
-              </af:button>
-            </af:gridCell>
-          </af:gridRow>
-        </af:panelGridLayout>
       </af:panelFormLayout>
+      <af:spacer id="s1" height="20px"/>
+      <af:panelGridLayout id="pgl1">
+        <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr1">
+          <af:gridCell marginStart="5px" width="dontCare" id="gc1">
+            <af:button actionListener="#{bindings.Commit.execute}" text="Save" disabled="false" id="b1"/>
+          </af:gridCell>
+          <af:gridCell marginStart="0px" width="dontCare" id="gc2">
+            <af:button actionListener="#{bindings.Commit.execute}" text="Save and Exit" disabled="false" id="b3"
+                       action="backFromMenu"/>
+          </af:gridCell>
+          <af:gridCell marginStart="0px" width="dontCare" marginEnd="5px" id="gc3">
+            <af:button actionListener="#{bindings.Rollback.execute}" text="Cancel" disabled="false" immediate="true"
+                       id="b2">
+              <af:resetActionListener/>
+            </af:button>
+          </af:gridCell>
+        </af:gridRow>
+      </af:panelGridLayout>
     </af:showDetailItem>
     <af:showDetailItem id="tab2" text="Roles">
       <af:region value="#{bindings.userRoleManagement1.regionModel}" id="r1"/>
