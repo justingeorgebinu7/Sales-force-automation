@@ -1006,7 +1006,7 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
             if (s.after(starts) && s.before(ends)) {
                 System.out.println("Invalid");
                 FacesContext context = FacesContext.getCurrentInstance();
-                                context.addMessage(null, new FacesMessage("Overlapping date range"));
+                                context.addMessage(null, new FacesMessage("Duplicate role found"));
 //                NavigationHandler nvHndlr = FacesContext.getCurrentInstance()
 //                                                        .
 //
@@ -1022,7 +1022,7 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
             else if (e.after(starts) && e.before(ends)) {
                 System.out.println("Invalid");
                 FacesContext context = FacesContext.getCurrentInstance();
-                                context.addMessage(null, new FacesMessage("Overlapping date range"));
+                                context.addMessage(null, new FacesMessage("Duplicate role found"));
                 
 //                NavigationHandler nvHndlr = FacesContext.getCurrentInstance()
 //                                                        .
@@ -1037,7 +1037,7 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
             } else if (s.before(starts) && e.after(ends)) {
                 System.out.println("Invalid");
                 FacesContext context = FacesContext.getCurrentInstance();
-                                context.addMessage(null, new FacesMessage("Overlapping date range"));
+                                context.addMessage(null, new FacesMessage("Duplicate role found"));
 //                NavigationHandler nvHndlr = FacesContext.getCurrentInstance()
 //                                                        .
 //

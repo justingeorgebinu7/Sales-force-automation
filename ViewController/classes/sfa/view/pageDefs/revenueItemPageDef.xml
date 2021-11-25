@@ -21,6 +21,7 @@
           <Item Value="Bestcaserevenue"/>
           <Item Value="Worstcaserevenue"/>
           <Item Value="Name"/>
+          <Item Value="Currency"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

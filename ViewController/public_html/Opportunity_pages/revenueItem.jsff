@@ -53,6 +53,14 @@
         <af:convertNumber groupingUsed="false" pattern="#{bindings.RevenueitemView2.hints.Worstcaserevenue.format}"/>
       </af:outputText>
     </af:column>
+    <af:column headerText="#{bindings.RevenueitemView2.hints.Currency.label}" id="c7">
+      <af:selectOneChoice value="#{row.bindings.Currency.inputValue}" label="#{row.bindings.Currency.label}"
+                          required="#{bindings.RevenueitemView2.hints.Currency.mandatory}"
+                          shortDesc="#{bindings.RevenueitemView2.hints.Currency.tooltip}" readOnly="true" id="soc1">
+        <f:selectItems value="#{row.bindings.Currency.items}" id="si1"/>
+        <f:validator binding="#{row.bindings.Currency.validator}"/>
+      </af:selectOneChoice>
+    </af:column>
   </af:table>
   <af:button text="Add" id="b1" action="create"/>
   <af:button text="Delete" action="deleteRevenueItem1" id="b2" useWindow="true" windowEmbedStyle="inlineDocument"

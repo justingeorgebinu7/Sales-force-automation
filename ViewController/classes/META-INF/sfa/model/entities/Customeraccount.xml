@@ -123,6 +123,12 @@
           ResId="sfa.model.entities.Customeraccount.Numberofemployees_LABEL"/>
       </SchemaBasedProperties>
     </Properties>
+    <validation:RegExpValidationBean
+      Name="NumberofemployeesRule1"
+      ResId="sfa.model.entities.Customeraccount.Numberofemployees_Rule_1"
+      OnAttribute="Numberofemployees"
+      Pattern="[0-9]*"
+      Inverse="false"/>
   </Attribute>
   <Attribute
     Name="Email"

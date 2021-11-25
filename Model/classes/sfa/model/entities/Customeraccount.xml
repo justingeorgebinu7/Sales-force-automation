@@ -55,14 +55,6 @@
     <DesignTime>
       <Attr Name="_DisplaySize" Value="20"/>
     </DesignTime>
-    <validation:LengthValidationBean
-      Name="NameRule0"
-      ResId="sfa.model.entities.Customeraccount.Name_Rule_0"
-      OnAttribute="Name"
-      CompareType="GREATERTHAN"
-      DataType="CHARACTER"
-      CompareLength="4"
-      Inverse="false"/>
   </Attribute>
   <Attribute
     Name="Accounturl"
@@ -123,6 +115,12 @@
           ResId="sfa.model.entities.Customeraccount.Numberofemployees_LABEL"/>
       </SchemaBasedProperties>
     </Properties>
+    <validation:RegExpValidationBean
+      Name="NumberofemployeesRule1"
+      ResId="sfa.model.entities.Customeraccount.Numberofemployees_Rule_1"
+      OnAttribute="Numberofemployees"
+      Pattern="[0-9]*"
+      Inverse="false"/>
   </Attribute>
   <Attribute
     Name="Email"
