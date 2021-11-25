@@ -15,7 +15,7 @@
       <property
          name="description">&lt;html>&lt;p>&lt;b>dashboard&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">175.79297</property>
+         name="y">174.39062</property>
       <property
          name="page">/UserManagementPages/dashboard.jsff</property>
       <property
@@ -44,6 +44,6 @@
       <property
          name="fromOutcome">exit</property>
       <property
-         name="sdm:polyPoints">R50,420.0,175.44238,594.0,185.5459,L50</property>
+         name="sdm:polyPoints">R50,420.77808,174.04002,593.2219,185.54591,L50</property>
    </ControlFlowCase>
 </SDM>

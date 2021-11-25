@@ -75,8 +75,5 @@
     <af:showDetailItem id="tab2" text="Roles">
       <af:region value="#{bindings.userRoleManagement1.regionModel}" id="r1"/>
     </af:showDetailItem>
-    <af:showDetailItem text="Sales Dashboard" id="sdi1">
-      <af:region value="#{bindings.dashboard1.regionModel}" id="r2"/>
-    </af:showDetailItem>
   </af:panelTabbed>
 </ui:composition>

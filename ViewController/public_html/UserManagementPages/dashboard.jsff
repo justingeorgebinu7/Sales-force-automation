@@ -9,74 +9,54 @@
         <f:facet name="bottom"/>
         <f:facet name="center">
           <af:panelGroupLayout id="pgl1" layout="horizontal">
-            <dvt:barChart id="barChart1" var="row" value="#{bindings.SalesView3.collectionModel}">
+            <af:spacer id="s2" width="100px"/>
+            <dvt:barChart id="barChart1" var="row" value="#{bindings.SalesView11.collectionModel}">
               <dvt:chartLegend id="cl1"/>
               <f:facet name="dataStamp">
                 <dvt:chartDataItem id="di1" value="#{row.Revenue}" group="#{row.Qname}"
-                                   series="#{bindings.SalesView3.hints.Revenue.label}"/>
+                                   series="#{bindings.SalesView11.hints.Revenue.label}"/>
               </f:facet>
             </dvt:barChart>
             <af:spacer width="40" height="10" id="s1"/>
-            <dvt:pieChart id="pieChart1" var="row" value="#{bindings.SalesView3.collectionModel}">
+            <dvt:pieChart id="pieChart1" var="row" value="#{bindings.SalesView11.collectionModel}">
               <dvt:chartLegend id="cl2"/>
               <dvt:pieDataItem id="di2" value="#{row.Revenue}" label="#{row.Qname}"/>
             </dvt:pieChart>
           </af:panelGroupLayout>
         </f:facet>
         <f:facet name="start">
-          <af:spacer width="10" height="10" id="s2"/>
+          <af:spacer id="s3"/>
         </f:facet>
         <f:facet name="end">
           
         </f:facet>
         <f:facet name="top">
-          <af:outputLabel value="Sales dashboard" id="ol1" inlineStyle="font-size:large; text-align:left;"/>
+          <af:outputLabel value="Sales dashboard" id="ol1"
+                          inlineStyle="font-size:large; text-align:left;margin-left:150px;"/>
         </f:facet>
       </af:panelStretchLayout>
     </f:facet>
     <f:facet name="second">
-      <af:table value="#{bindings.SalesView3.collectionModel}" var="row" rows="#{bindings.SalesView3.rangeSize}"
-                emptyText="#{bindings.SalesView3.viewable ? 'No data to display.' : 'Access Denied.'}"
-                rowBandingInterval="0" fetchSize="#{bindings.SalesView3.rangeSize}" id="t1" rendered="false">
-        <af:column headerText="#{bindings.SalesView3.hints.Saleid.label}" id="c1">
-          <af:inputText value="#{row.bindings.Saleid.inputValue}" label="#{bindings.SalesView3.hints.Saleid.label}"
-                        required="#{bindings.SalesView3.hints.Saleid.mandatory}"
-                        columns="#{bindings.SalesView3.hints.Saleid.displayWidth}"
-                        maximumLength="#{bindings.SalesView3.hints.Saleid.precision}"
-                        shortDesc="#{bindings.SalesView3.hints.Saleid.tooltip}" id="it1">
-            <f:validator binding="#{row.bindings.Saleid.validator}"/>
-            <af:convertNumber groupingUsed="false" pattern="#{bindings.SalesView3.hints.Saleid.format}"/>
-          </af:inputText>
+      <af:table value="#{bindings.SalesView11.collectionModel}" var="row" rows="#{bindings.SalesView11.rangeSize}"
+                emptyText="#{bindings.SalesView11.viewable ? 'No data to display.' : 'Access Denied.'}"
+                rowBandingInterval="0" fetchSize="#{bindings.SalesView11.rangeSize}" id="t1" rendered="false">
+        <af:column headerText="#{bindings.SalesView11.hints.Saleid.label}" id="c1">
+          <af:outputText value="#{row.Saleid}" shortDesc="#{bindings.SalesView11.hints.Saleid.tooltip}" id="ot1">
+            <af:convertNumber groupingUsed="false" pattern="#{bindings.SalesView11.hints.Saleid.format}"/>
+          </af:outputText>
         </af:column>
-        <af:column headerText="#{bindings.SalesView3.hints.Managerid.label}" id="c2">
-          <af:inputText value="#{row.bindings.Managerid.inputValue}"
-                        label="#{bindings.SalesView3.hints.Managerid.label}"
-                        required="#{bindings.SalesView3.hints.Managerid.mandatory}"
-                        columns="#{bindings.SalesView3.hints.Managerid.displayWidth}"
-                        maximumLength="#{bindings.SalesView3.hints.Managerid.precision}"
-                        shortDesc="#{bindings.SalesView3.hints.Managerid.tooltip}" id="it2">
-            <f:validator binding="#{row.bindings.Managerid.validator}"/>
-            <af:convertNumber groupingUsed="false" pattern="#{bindings.SalesView3.hints.Managerid.format}"/>
-          </af:inputText>
+        <af:column headerText="#{bindings.SalesView11.hints.Managerid.label}" id="c2">
+          <af:outputText value="#{row.Managerid}" shortDesc="#{bindings.SalesView11.hints.Managerid.tooltip}" id="ot2">
+            <af:convertNumber groupingUsed="false" pattern="#{bindings.SalesView11.hints.Managerid.format}"/>
+          </af:outputText>
         </af:column>
-        <af:column headerText="#{bindings.SalesView3.hints.Qname.label}" id="c3">
-          <af:inputText value="#{row.bindings.Qname.inputValue}" label="#{bindings.SalesView3.hints.Qname.label}"
-                        required="#{bindings.SalesView3.hints.Qname.mandatory}"
-                        columns="#{bindings.SalesView3.hints.Qname.displayWidth}"
-                        maximumLength="#{bindings.SalesView3.hints.Qname.precision}"
-                        shortDesc="#{bindings.SalesView3.hints.Qname.tooltip}" id="it3">
-            <f:validator binding="#{row.bindings.Qname.validator}"/>
-          </af:inputText>
+        <af:column headerText="#{bindings.SalesView11.hints.Qname.label}" id="c3">
+          <af:outputText value="#{row.Qname}" shortDesc="#{bindings.SalesView11.hints.Qname.tooltip}" id="ot3"/>
         </af:column>
-        <af:column headerText="#{bindings.SalesView3.hints.Revenue.label}" id="c4">
-          <af:inputText value="#{row.bindings.Revenue.inputValue}" label="#{bindings.SalesView3.hints.Revenue.label}"
-                        required="#{bindings.SalesView3.hints.Revenue.mandatory}"
-                        columns="#{bindings.SalesView3.hints.Revenue.displayWidth}"
-                        maximumLength="#{bindings.SalesView3.hints.Revenue.precision}"
-                        shortDesc="#{bindings.SalesView3.hints.Revenue.tooltip}" id="it4">
-            <f:validator binding="#{row.bindings.Revenue.validator}"/>
-            <af:convertNumber groupingUsed="false" pattern="#{bindings.SalesView3.hints.Revenue.format}"/>
-          </af:inputText>
+        <af:column headerText="#{bindings.SalesView11.hints.Revenue.label}" id="c4">
+          <af:outputText value="#{row.Revenue}" shortDesc="#{bindings.SalesView11.hints.Revenue.tooltip}" id="ot4">
+            <af:convertNumber groupingUsed="false" pattern="#{bindings.SalesView11.hints.Revenue.format}"/>
+          </af:outputText>
         </af:column>
       </af:table>
     </f:facet>

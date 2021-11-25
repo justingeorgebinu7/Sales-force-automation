@@ -5,10 +5,31 @@
   <executables>
     <variableIterator id="variables"/>
     <iterator Binds="SalesView3" RangeSize="25" DataControl="AppModuleDataControl" id="SalesView3Iterator"/>
+    <iterator Binds="SalesView1" RangeSize="25" DataControl="AppModuleDataControl" id="SalesView1Iterator"/>
   </executables>
   <bindings>
     <tree IterBinding="SalesView3Iterator" id="SalesView3">
       <nodeDefinition DefName="sfa.model.viewobjects.SalesView" Name="SalesView30">
+        <AttrNames>
+          <Item Value="Saleid"/>
+          <Item Value="Managerid"/>
+          <Item Value="Qname"/>
+          <Item Value="Revenue"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="SalesView1Iterator" id="SalesView1">
+      <nodeDefinition DefName="sfa.model.viewobjects.SalesView" Name="SalesView10">
+        <AttrNames>
+          <Item Value="Saleid"/>
+          <Item Value="Managerid"/>
+          <Item Value="Qname"/>
+          <Item Value="Revenue"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="SalesView1Iterator" id="SalesView11">
+      <nodeDefinition DefName="sfa.model.viewobjects.SalesView" Name="SalesView110">
         <AttrNames>
           <Item Value="Saleid"/>
           <Item Value="Managerid"/>

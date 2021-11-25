@@ -73,6 +73,11 @@
                                         <af:region value="#{bindings.dynamicRegion6.regionModel}" id="r6"
                                                    binding="#{viewScope.RoleBean.dynamicRole}"/>
                                     </af:showDetailItem>
+                                    <af:showDetailItem text="Dashboard" id="sdi6"
+                                                       icon="https://i.ibb.co/1d09c2b/677777-1.png"
+                                                       rendered='#{securityContext.userName=="testmanager"}'>
+                                        <af:region value="#{bindings.dashboard1.regionModel}" id="r3"/>
+                                    </af:showDetailItem>
                                 </af:panelSpringboard>
                             </af:panelBox>
                         </f:facet>
