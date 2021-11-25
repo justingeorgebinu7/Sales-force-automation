@@ -1,8 +1,13 @@
 package Beans;
 
+import javax.faces.component.UIComponent;
+import javax.faces.event.ActionEvent;
+
 import oracle.adf.model.BindingContext;
 import oracle.adf.model.binding.DCBindingContainer;
 import oracle.adf.model.binding.DCIteratorBinding;
+
+import oracle.adf.view.rich.component.rich.RichPopup;
 
 import oracle.binding.BindingContainer;
 import oracle.binding.OperationBinding;
@@ -35,4 +40,16 @@ public class DeleteAccountContact {
         operationBinding.execute();
         return null;
     }
+    
+    
+    public void closePopup(ActionEvent actionEvent) {
+        UIComponent tmpComponent;
+        tmpComponent = actionEvent.getComponent().getParent();
+        while (!(tmpComponent instanceof RichPopup)) {
+            tmpComponent = tmpComponent.getParent();
+        }
+        RichPopup popup = (RichPopup) tmpComponent;
+        popup.hide();
+    }
+    
 }

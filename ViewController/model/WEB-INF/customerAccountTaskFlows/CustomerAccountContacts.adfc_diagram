@@ -46,7 +46,7 @@
       <property
          name="fromOutcome">toAddCon</property>
       <property
-         name="sdm:polyPoints">R42,237.0,291.32715,495.36914,214.79883,L50</property>
+         name="sdm:polyPoints">R40,237.77806,289.771,494.59103,214.79883,L50</property>
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall15">
@@ -79,7 +79,7 @@
       <property
          name="fromsrcid">__11</property>
       <property
-         name="sdm:polyPoints">T50,196.0,244.32715,61.692383,112.69531,B50</property>
+         name="sdm:polyPoints">T50,196.0,243.54907,61.692383,113.473366,B50</property>
    </ControlFlowCase>
    <View
       id="View14">
@@ -106,7 +106,7 @@
       <property
          name="fromOutcome">editContact</property>
       <property
-         name="sdm:polyPoints">R50,239.84595,298.32715,407.0166,463.94824,L46</property>
+         name="sdm:polyPoints">R50,241.26785,298.32715,406.23853,463.1702,L45</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -116,7 +116,7 @@
       <property
          name="fromOutcome">backFromEdit</property>
       <property
-         name="sdm:polyPoints">L54,404.1534,470.94824,237.0,305.32715,R58</property>
+         name="sdm:polyPoints">L55,402.72256,471.72635,237.77806,306.88327,R60</property>
    </ControlFlowCase>
    <ParentAction
       id="ParentAction11">
@@ -139,17 +139,6 @@
       <property
          name="fromOutcome">ContactDrill</property>
       <property
-         name="sdm:polyPoints">B50,196.0,352.32715,94.0,424.94824,T50</property>
-   </ControlFlowCase>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase13"
-      from="View2">
-      <property
-         name="tosrcid">__2</property>
-      <property
-         name="fromOutcome">*</property>
-      <property
-         name="fromsrcid">__1</property>
+         name="sdm:polyPoints">B50,196.0,353.10522,94.0,424.17014,T50</property>
    </ControlFlowCase>
 </SDM>

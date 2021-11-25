@@ -43,5 +43,6 @@
                   IsLocalObjectReference="true">
       <NamedData NDName="cidStr" NDType="java.lang.String"/>
     </methodAction>
+    <action id="Commit" DataControl="AppModuleDataControl" RequiresUpdateModel="true" Action="commitTransaction"/>
   </bindings>
 </pageDefinition>

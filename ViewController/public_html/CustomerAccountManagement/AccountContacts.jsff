@@ -53,4 +53,20 @@
   <af:button text="Add" id="b1" action="toAddCon"/>
   <af:button text="Delete" action="deleteContactTF1" id="b3" useWindow="true" windowEmbedStyle="inlineDocument"
              windowModalityType="applicationModal"/>
+  <af:popup childCreation="deferred" autoCancel="disabled" id="p1">
+    <af:dialog id="d1" title="Confirm Removal" type="none" inlineStyle="text-align:center;">
+      <af:image source="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Blue_question_mark_icon.svg/1200px-Blue_question_mark_icon.svg.png"
+                shortDesc="..." id="i1" inlineStyle="width:70px;"/>
+      <af:spacer id="s1" height="30px"/>
+      <af:activeOutputText value="This item will be deleted, are you sure you want to proceed?" id="aot1"
+                           inlineStyle="font-weight:bold;font-size:14px;"/>
+      <af:spacer id="s2" height="20px"/>
+      <af:button text="Proceed" id="b4" action="#{DeleteAccountContact.delContact}"
+                 actionListener="#{DeleteAccountContact.closePopup}"/>
+      <f:facet name="buttonBar"/>
+    </af:dialog>
+  </af:popup>
+  <af:button text="Remove" id="b2">
+    <af:showPopupBehavior popupId="p1"/>
+  </af:button>
 </ui:composition>
