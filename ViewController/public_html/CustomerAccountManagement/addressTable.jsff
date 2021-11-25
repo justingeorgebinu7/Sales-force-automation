@@ -10,6 +10,12 @@
       <af:link shortDesc="#{bindings.AddressView4.hints.Type.tooltip}" id="ot1" text="#{row.Type}"
                action="editAddress"/>
     </af:column>
+    <af:column headerText="#{bindings.AddressView4.hints.Line1.label}" id="c6">
+      <af:outputText value="#{row.Line1}" shortDesc="#{bindings.AddressView4.hints.Line1.tooltip}" id="ot6"/>
+    </af:column>
+    <af:column headerText="#{bindings.AddressView4.hints.Line2.label}" id="c7">
+      <af:outputText value="#{row.Line2}" shortDesc="#{bindings.AddressView4.hints.Line2.tooltip}" id="ot7"/>
+    </af:column>
     <af:column sortProperty="#{bindings.AddressView4.hints.City.name}" sortable="true"
                headerText="#{bindings.AddressView4.hints.City.label}" id="c2">
       <af:outputText value="#{row.City}" shortDesc="#{bindings.AddressView4.hints.City.tooltip}" id="ot2"/>

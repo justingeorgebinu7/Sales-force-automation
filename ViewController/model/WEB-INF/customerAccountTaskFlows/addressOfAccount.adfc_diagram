@@ -73,7 +73,7 @@
       <property
          name="fromOutcome">editAddress</property>
       <property
-         name="sdm:polyPoints">R46,410.04114,324.6953,610.0,327.0459,L46</property>
+         name="sdm:polyPoints">R45,410.82874,323.91727,609.2219,326.26785,L45</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -83,7 +83,7 @@
       <property
          name="fromOutcome">back</property>
       <property
-         name="sdm:polyPoints">L54,609.95886,334.0459,410.0,331.6953,R54</property>
+         name="sdm:polyPoints">L55,609.17126,334.824,410.77808,332.47342,R55</property>
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall8">
@@ -116,6 +116,6 @@
       <property
          name="fromsrcid">__6</property>
       <property
-         name="sdm:polyPoints">L50,328.0,328.1953,74.02539,124.0459,B50</property>
+         name="sdm:polyPoints">L50,327.22192,328.19534,74.02539,124.47337,B50</property>
    </ControlFlowCase>
 </SDM>
