@@ -806,7 +806,7 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
 
         Object pid = pidStr;
         RowSet rs = (RowSet) getProductsView1();
-
+        rs.reset();
 
         while (rs.hasNext()) {
             System.out.println("Iinside while loop");
