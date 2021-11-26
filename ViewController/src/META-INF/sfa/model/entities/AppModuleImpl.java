@@ -970,6 +970,19 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
                     }
                 }
         }
+        Object sdate = rowObj.getAttribute("Startdate");
+        Object edate = rowObj.getAttribute("Enddate");
+        java.sql.Timestamp s = (java.sql.Timestamp) sdate;
+        java.sql.Timestamp e = (java.sql.Timestamp) edate;
+        java.sql.Timestamp starts = (java.sql.Timestamp) start;
+        java.sql.Timestamp ends = (java.sql.Timestamp) end;
+     
+        if(end==null) {
+            FacesContext context = FacesContext.getCurrentInstance();
+                            context.addMessage(null, new FacesMessage("Duplicate role found"));
+        }
+        else
+        {
         if(flag){
             NavigationHandler nvHndlr = FacesContext.getCurrentInstance()
                                                     .
@@ -992,16 +1005,13 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
                 System.out.println(end.toString());
             }
          
-            Object sdate = rowObj.getAttribute("Startdate");
-            Object edate = rowObj.getAttribute("Enddate");
+        
             if (edate != null && sdate != null) {
                 System.out.println(sdate.toString());
                 System.out.println(edate.toString());
             }
-            java.sql.Timestamp s = (java.sql.Timestamp) sdate;
-            java.sql.Timestamp e = (java.sql.Timestamp) edate;
-            java.sql.Timestamp starts = (java.sql.Timestamp) start;
-            java.sql.Timestamp ends = (java.sql.Timestamp) end;
+            
+           
 
             if (s.after(starts) && s.before(ends)) {
                 System.out.println("Invalid");
@@ -1063,7 +1073,8 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
             }
 
         }
-
+        }
+        
 
     }
 
