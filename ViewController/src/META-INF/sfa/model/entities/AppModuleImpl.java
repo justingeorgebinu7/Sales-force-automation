@@ -976,10 +976,28 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
         java.sql.Timestamp e = (java.sql.Timestamp) edate;
         java.sql.Timestamp starts = (java.sql.Timestamp) start;
         java.sql.Timestamp ends = (java.sql.Timestamp) end;
-     
+        System.out.println(starts);
+        System.out.println(s);
+        System.out.println(e);
         if(end==null) {
+            if(s.after(starts))
+            {
             FacesContext context = FacesContext.getCurrentInstance();
                             context.addMessage(null, new FacesMessage("Duplicate role found"));
+            }
+            else if(s.before(starts)&&e.before(starts)){
+                NavigationHandler nvHndlr = FacesContext.getCurrentInstance()
+                                                        .
+
+                                                        getApplication()
+                                                        .
+
+                                                        getNavigationHandler();
+
+                nvHndlr.handleNavigation(FacesContext.getCurrentInstance(), null, "save");
+                System.out.println("Valid");
+                rs.closeRowSet();
+            }
         }
         else
         {
