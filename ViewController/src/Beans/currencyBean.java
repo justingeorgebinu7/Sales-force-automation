@@ -136,7 +136,8 @@ public class currencyBean {
         RowSetIterator rsIter = it.getRowSetIterator();
         Row rowObj = rsIter.getCurrentRow();
         Object rev = rowObj.getAttribute("Totalrevenue");
-        System.out.println(rev.toString());
+       // System.out.println(rev.toString());
+        if(rev!=null){
        double revenue = 0;
         
         
@@ -175,5 +176,6 @@ public class currencyBean {
 //        int estimated = revenue / q;
 //        /Object estPrice = (Integer) estimated;
 //        rowObj.setAttribute("Estimatedprice", revenue);
+    }
     }
 }
