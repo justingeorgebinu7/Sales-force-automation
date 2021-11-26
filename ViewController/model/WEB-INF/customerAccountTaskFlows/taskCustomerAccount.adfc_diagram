@@ -120,7 +120,7 @@
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
-      id="ControlFlowCase29"
+      id="ControlFlowCase14"
       from="View2">
       <property
          name="tosrcid">__2</property>
@@ -131,7 +131,7 @@
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
-      id="ControlFlowCase30"
+      id="ControlFlowCase17"
       from="View2">
       <property
          name="tosrcid">__3</property>

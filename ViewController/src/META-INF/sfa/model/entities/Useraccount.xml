@@ -109,12 +109,6 @@
       OnAttribute="Password"
       Pattern=".*[A-Z].*"
       Inverse="false"/>
-    <Properties>
-      <SchemaBasedProperties>
-        <TOOLTIP
-          ResId="sfa.model.entities.Useraccount.Password_TOOLTIP"/>
-      </SchemaBasedProperties>
-    </Properties>
   </Attribute>
   <Attribute
     Name="Startdate"
